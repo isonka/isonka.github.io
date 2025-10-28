@@ -293,6 +293,18 @@
   box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
 }
 
+/* Ensure healcode widget links are fully clickable */
+.buy-button a,
+.buy-button healcode-widget,
+.buy-button .healcode-pricing-option-text-link {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
 /* Info Section (What to Bring) */
 .info-section {
   max-width: 1200px;

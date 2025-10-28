@@ -18,6 +18,19 @@ export const Pricing: React.FC = () => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
   };
 
+  const handleTabChange = (tabName: string) => {
+    setActiveTab(tabName);
+    
+    // Scroll to tab content on mobile
+    setTimeout(() => {
+      const tabContent = document.querySelector('.tab-content');
+      if (tabContent) {
+        const offsetTop = tabContent.getBoundingClientRect().top + window.scrollY - 20; // 20px offset from top
+        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
   useEffect(() => {
     // Adjust content height for animations
     const faqContents = document.querySelectorAll('.faq-content');
@@ -85,31 +98,31 @@ export const Pricing: React.FC = () => {
         <div className="pricing-tabs">
           <button
             className={`pricing-tab ${activeTab === 'membership' ? 'active' : ''}`}
-            onClick={() => setActiveTab('membership')}
+            onClick={() => handleTabChange('membership')}
           >
             Membership
           </button>
           <button
             className={`pricing-tab ${activeTab === 'group' ? 'active' : ''}`}
-            onClick={() => setActiveTab('group')}
+            onClick={() => handleTabChange('group')}
           >
             Group Classes
           </button>
           <button
             className={`pricing-tab ${activeTab === 'private' ? 'active' : ''}`}
-            onClick={() => setActiveTab('private')}
+            onClick={() => handleTabChange('private')}
           >
             Private Lessons
           </button>
           <button
             className={`pricing-tab ${activeTab === 'couple' ? 'active' : ''}`}
-            onClick={() => setActiveTab('couple')}
+            onClick={() => handleTabChange('couple')}
           >
             Couple Sessions
           </button>
           <button
             className={`pricing-tab ${activeTab === 'trio' ? 'active' : ''}`}
-            onClick={() => setActiveTab('trio')}
+            onClick={() => handleTabChange('trio')}
           >
             Trio Classes
           </button>
@@ -220,8 +233,7 @@ export const Pricing: React.FC = () => {
                   <span className="package-name">Single Class</span>
                 </div>
                 <p className="validity">Valid for 1 week</p>
-                <a 
-                  href="#" 
+                <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
                     __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100002" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
@@ -236,8 +248,7 @@ export const Pricing: React.FC = () => {
                 </div>
                 <p className="total-price">€175 in total</p>
                 <p className="validity">Valid for 5 weeks</p>
-                <a 
-                  href="#" 
+                <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
                     __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100003" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
@@ -253,8 +264,7 @@ export const Pricing: React.FC = () => {
                 </div>
                 <p className="total-price">€300 in total</p>
                 <p className="validity">Valid for 10 weeks</p>
-                <a 
-                  href="#" 
+                <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
                     __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100004" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
@@ -269,8 +279,7 @@ export const Pricing: React.FC = () => {
                 </div>
                 <p className="total-price">€560 in total</p>
                 <p className="validity">Valid for 20 weeks</p>
-                <a 
-                  href="#" 
+                <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
                     __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100005" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
@@ -294,8 +303,7 @@ export const Pricing: React.FC = () => {
                   <span className="package-name">Single Class</span>
                 </div>
                 <p className="validity">Valid for 1 week</p>
-                <a 
-                  href="#" 
+                <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
                     __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100012" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
@@ -310,8 +318,7 @@ export const Pricing: React.FC = () => {
                 </div>
                 <p className="total-price">€375 in total</p>
                 <p className="validity">Valid for 5 weeks</p>
-                <a 
-                  href="#" 
+                <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
                     __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100013" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
@@ -327,8 +334,7 @@ export const Pricing: React.FC = () => {
                 </div>
                 <p className="total-price">€725 in total</p>
                 <p className="validity">Valid for 10 weeks</p>
-                <a 
-                  href="#" 
+                <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
                     __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100014" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
@@ -343,8 +349,7 @@ export const Pricing: React.FC = () => {
                 </div>
                 <p className="total-price">€1,400 in total</p>
                 <p className="validity">Valid for 20 weeks</p>
-                <a 
-                  href="#" 
+                <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
                     __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100015" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
@@ -368,8 +373,7 @@ export const Pricing: React.FC = () => {
                   <span className="package-name">Single Class</span>
                 </div>
                 <p className="validity">Valid for 1 week</p>
-                <a 
-                  href="#" 
+                <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
                     __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100033" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
@@ -384,8 +388,7 @@ export const Pricing: React.FC = () => {
                 </div>
                 <p className="total-price">€225 in total</p>
                 <p className="validity">Valid for 5 weeks</p>
-                <a 
-                  href="#" 
+                <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
                     __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100034" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
@@ -401,8 +404,7 @@ export const Pricing: React.FC = () => {
                 </div>
                 <p className="total-price">€430 in total</p>
                 <p className="validity">Valid for 10 weeks</p>
-                <a 
-                  href="#" 
+                <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
                     __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100035" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
@@ -417,8 +419,7 @@ export const Pricing: React.FC = () => {
                 </div>
                 <p className="total-price">€800 in total</p>
                 <p className="validity">Valid for 20 weeks</p>
-                <a 
-                  href="#" 
+                <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
                     __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100036" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
@@ -442,8 +443,7 @@ export const Pricing: React.FC = () => {
                   <span className="package-name">Single Class</span>
                 </div>
                 <p className="validity">Valid for 1 week</p>
-                <a 
-                  href="#" 
+                <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
                     __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100037" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
@@ -458,8 +458,7 @@ export const Pricing: React.FC = () => {
                 </div>
                 <p className="total-price">€210 in total</p>
                 <p className="validity">Valid for 5 weeks</p>
-                <a 
-                  href="#" 
+                <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
                     __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100038" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
@@ -475,8 +474,7 @@ export const Pricing: React.FC = () => {
                 </div>
                 <p className="total-price">€400 in total</p>
                 <p className="validity">Valid for 10 weeks</p>
-                <a 
-                  href="#" 
+                <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
                     __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100039" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
@@ -491,8 +489,7 @@ export const Pricing: React.FC = () => {
                 </div>
                 <p className="total-price">€760 in total</p>
                 <p className="validity">Valid for 20 weeks</p>
-                <a 
-                  href="#" 
+                <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
                     __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100040" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
