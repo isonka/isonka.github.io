@@ -23,9 +23,9 @@ export const Pricing: React.FC = () => {
     
     // Scroll to tab content on mobile
     setTimeout(() => {
-      const tabContent = document.querySelector('.tab-content');
+      const tabContent = document.querySelector('.pricing-content');
       if (tabContent) {
-        const offsetTop = tabContent.getBoundingClientRect().top + window.scrollY - 20; // 20px offset from top
+        const offsetTop = tabContent.getBoundingClientRect().top + window.scrollY - 80; // 80px offset for navbar
         window.scrollTo({ top: offsetTop, behavior: 'smooth' });
       }
     }, 100);
