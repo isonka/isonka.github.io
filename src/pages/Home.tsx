@@ -22,32 +22,10 @@ export const Home: React.FC = () => {
         <div className="hero-overlay">
           <div className="hero-content-wrapper">
             <h1 className="hero-title">PT Studio 7 Amsterdam</h1>
-            <h2 className="hero-tagline">Reformer Pilates Studio at Museumplein</h2>
-            <p className="hero-description">
-              <strong>Small Group Pilates Classes (Max 4 People)</strong> • Expert Certified Instructors • Premium Location<br/>
-              Reformer Pilates • Tower Reformer • Mat Pilates • Complementary EMS & TRX Training
-            </p>
+            <p className="hero-tagline">We are not just a sport studio, we are a community</p>
             <div className="hero-buttons">
               <Link to="/schedule" className="hero-btn-primary">Book a Class</Link>
               <Link to="/pricing" className="hero-btn-secondary">View Pricing</Link>
-            </div>
-            <div className="hero-features">
-              <div className="feature-item">
-                <span className="feature-icon">✓</span>
-                <span>Reformer Pilates</span>
-              </div>
-              <div className="feature-item">
-                <span className="feature-icon">✓</span>
-                <span>Private Training</span>
-              </div>
-              <div className="feature-item">
-                <span className="feature-icon">✓</span>
-                <span>Group Classes</span>
-              </div>
-              <div className="feature-item">
-                <span className="feature-icon">✓</span>
-                <span>Nutrition Coaching</span>
-              </div>
             </div>
           </div>
         </div>
@@ -57,28 +35,19 @@ export const Home: React.FC = () => {
       <section id="about" className="about-section">
         <div className="about-container">
           <div className="about-content">
-            <h2>Amsterdam's Premier Reformer Pilates Studio at Museumplein</h2>
+            <h2>Let me share what you can expect from us</h2>
             <p>
-              <strong>Prime Museumplein Location:</strong> Located in Amsterdam's most prestigious cultural district, 
-              directly across from the Stedelijk Museum with breathtaking Rijksmuseum views. Our exclusive boutique studio 
-              specializes in Reformer Pilates, offering world-class instruction in an intimate, luxury setting with 
-              state-of-the-art equipment.
+              For the past 14 years, we've dedicated ourselves to improving every day, always striving to serve you better. 
+              Our passion and commitment to helping you sets us apart. What truly distinguishes us from other studios is our 
+              genuine attention to your needs. You are important to us!
             </p>
-            <p>
-              <strong>Small Group Pilates Excellence (Max 4 People):</strong> Unlike large, impersonal Pilates classes, 
-              we limit every group session to just 4 participants. This intimate setting ensures each client receives 
-              individualized attention, proper form correction, and a truly personalized Pilates experience with 
-              meticulous focus on alignment, breath work, and mindful movement.
-            </p>
-            <p>
-              <strong>Certified Pilates Instructors with Extensive Experience:</strong> Our highly qualified instructors bring 
-              years of specialized Reformer Pilates training and certifications. Each instructor is passionate about the 
-              transformative power of Pilates and dedicated to helping you achieve your goals—whether it's strength, flexibility, 
-              rehabilitation, or overall wellness. We also offer complementary EMS, TRX, and functional training to support your Pilates practice.
+            <p className="about-signature">
+              <strong>Elif Arzu Ogan</strong><br/>
+              Owner & Trainer of PT Studio 7
             </p>
           </div>
           <div className="about-image">
-            <img src="/assets/images/about-us-web.jpg" alt="PT Studio 7 Museumplein Location - Small Group Pilates Studio" />
+            <img src="/assets/images/about-us-web.jpg" alt="PT Studio 7 Amsterdam" />
           </div>
         </div>
       </section>
