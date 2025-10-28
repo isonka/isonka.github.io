@@ -24,8 +24,8 @@ export const Home: React.FC = () => {
             <h1 className="hero-title">PT Studio 7 Amsterdam</h1>
               <h2 className="hero-tagline">Pilates Studio at Museumplein</h2>
               <p className="hero-description">
-                <strong>Small Group Pilates Classes (Max 4 People)</strong> • Expert Certified Instructors • Premium Location<br/>
-                Pilates • Tower Reformer • Mat Pilates • Complementary EMS & TRX Training
+                 • Expert Certified Instructors • Tailored Private Classes • Premium Location<br/>
+                One-on-One Sessions • Small Groups (Max 4) • Complementary EMS & TRX
               </p>
             <div className="hero-buttons">
               <Link to="/schedule" className="hero-btn-primary">Book a Class</Link>
@@ -34,19 +34,19 @@ export const Home: React.FC = () => {
             <div className="hero-features">
               <div className="feature-item">
                 <span className="feature-icon">✓</span>
-                <span>Pilates</span>
+                <span>Private Sessions</span>
               </div>
               <div className="feature-item">
                 <span className="feature-icon">✓</span>
-                <span>Private Training</span>
+                <span>Tailored Programs</span>
               </div>
               <div className="feature-item">
                 <span className="feature-icon">✓</span>
-                <span>Group Classes</span>
+                <span>Small Groups (Max 4)</span>
               </div>
               <div className="feature-item">
                 <span className="feature-icon">✓</span>
-                <span>Nutrition Coaching</span>
+                <span>Expert Instructors</span>
               </div>
             </div>
           </div>
@@ -59,18 +59,19 @@ export const Home: React.FC = () => {
           <div className="about-content">
             <h2>Welcome to PT Studio 7</h2>
             <p>
-              For the past 15 years, we've been dedicated to transforming lives through personalized Pilates, 
-              EMS training, TRX, and functional fitness. Located in the heart of Amsterdam at Museumplein, our boutique 
-              studio offers an intimate training environment where every client receives individual attention.
+              For the past 15 years, we've been dedicated to transforming lives through private, personalized Pilates 
+              training at our boutique studio in the heart of Amsterdam at Museumplein. Every session is tailored 
+              specifically to your body, your goals, and your unique needs.
             </p>
             <p>
-              What sets us apart is our commitment to small group classes—maximum 4 people—ensuring you get the focused 
-              guidance and form correction you deserve. Our expert instructors don't just train you; they understand your 
-              goals, adapt to your needs, and celebrate your progress every step of the way.
+              Our specialty is one-on-one private training where you receive 100% of your instructor's attention. We also 
+              offer intimate small group sessions (maximum 4 people) for those who enjoy training with friends while still 
+              receiving individualized guidance. Each program is customized to help you build strength, improve flexibility, 
+              rehabilitate from injury, or achieve any wellness goal you have.
             </p>
             <p>
-              Whether you're looking to build strength, improve flexibility, rehabilitate from injury, or simply feel your 
-              best, we're here to support your journey with personalized programs designed specifically for you.
+              Our expert instructors don't just follow a routine—they design a personalized roadmap for your success, 
+              adapting every session to your progress and celebrating each milestone with you.
             </p>
             <p className="about-signature">
               <strong>Elif Arzu Ogan</strong><br/>
