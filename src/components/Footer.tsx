@@ -13,16 +13,8 @@ export const Footer: React.FC = () => {
 
   const handleCookieSettings = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    console.log('Cookie Settings clicked');
-    console.log('Cookiebot available:', !!window.Cookiebot);
-    
-    // Check if Cookiebot is loaded
     if (window.Cookiebot) {
-      console.log('Opening Cookiebot dialog...');
       window.Cookiebot.renew();
-    } else {
-      console.warn('Cookiebot not yet loaded. Please wait a moment and try again.');
-      alert('Cookie settings are loading. Please try again in a moment.');
     }
   };
 

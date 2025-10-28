@@ -11,11 +11,8 @@ export const CookieConsent: React.FC = () => {
     // Check if script already exists
     const existingScript = document.getElementById('Cookiebot');
     if (existingScript) {
-      console.log('Cookiebot script already loaded');
       return;
     }
-
-    console.log('Loading Cookiebot script...');
     
     // Load Cookiebot script dynamically
     const script = document.createElement('script');
@@ -24,15 +21,6 @@ export const CookieConsent: React.FC = () => {
     script.setAttribute('data-cbid', 'b7046d56-8fa7-4aff-9789-7c95656f78f5');
     script.setAttribute('data-blockingmode', 'auto');
     script.type = 'text/javascript';
-    
-    script.onload = () => {
-      console.log('Cookiebot script loaded successfully');
-      console.log('Cookiebot object:', window.Cookiebot);
-    };
-    
-    script.onerror = () => {
-      console.error('Failed to load Cookiebot script');
-    };
 
     // Add script to document head
     document.head.appendChild(script);
