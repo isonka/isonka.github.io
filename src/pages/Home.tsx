@@ -35,15 +35,24 @@ export const Home: React.FC = () => {
       <section id="about" className="about-section">
         <div className="about-container">
           <div className="about-content">
-            <h2>Let me share what you can expect from us</h2>
+            <h2>Welcome to PT Studio 7</h2>
             <p>
-              For the past 15 years, we've dedicated ourselves to improving every day, always striving to serve you better. 
-              Our passion and commitment to helping you sets us apart. What truly distinguishes us from other studios is our 
-              genuine attention to your needs. You are important to us!
+              For the past 15 years, we've been dedicated to transforming lives through personalized Reformer Pilates, 
+              EMS training, TRX, and functional fitness. Located in the heart of Amsterdam at Museumplein, our boutique 
+              studio offers an intimate training environment where every client receives individual attention.
+            </p>
+            <p>
+              What sets us apart is our commitment to small group classes—maximum 4 people—ensuring you get the focused 
+              guidance and form correction you deserve. Our expert instructors don't just train you; they understand your 
+              goals, adapt to your needs, and celebrate your progress every step of the way.
+            </p>
+            <p>
+              Whether you're looking to build strength, improve flexibility, rehabilitate from injury, or simply feel your 
+              best, we're here to support your journey with personalized programs designed specifically for you.
             </p>
             <p className="about-signature">
               <strong>Elif Arzu Ogan</strong><br/>
-              Owner & Trainer of PT Studio 7
+              Owner & Head Trainer, PT Studio 7
             </p>
           </div>
           <div className="about-image">
