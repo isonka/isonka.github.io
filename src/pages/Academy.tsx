@@ -159,7 +159,7 @@ export const Academy: React.FC = () => {
               <div className="benefit-card">
                 <div className="benefit-icon">👥</div>
                 <h3>Small Class Sizes</h3>
-                <p>Maximum 4-6 students per course for personalized attention and hands-on guidance</p>
+                <p>4-8 participants per course for personalized attention and hands-on guidance</p>
               </div>
               
               <div className="benefit-card">
@@ -175,9 +175,9 @@ export const Academy: React.FC = () => {
               </div>
               
               <div className="benefit-card">
-                <div className="benefit-icon">🤝</div>
-                <h3>Ongoing Support</h3>
-                <p>Join our community of instructors with continued mentorship and guidance</p>
+                <div className="benefit-icon">💼</div>
+                <h3>Work Opportunities</h3>
+                <p>Optional work opportunities at our studio for successful graduates</p>
               </div>
             </div>
           </div>
