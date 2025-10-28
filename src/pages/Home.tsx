@@ -22,10 +22,32 @@ export const Home: React.FC = () => {
         <div className="hero-overlay">
           <div className="hero-content-wrapper">
             <h1 className="hero-title">PT Studio 7 Amsterdam</h1>
-            <p className="hero-tagline">Reformer Pilates, EMS, TRX & Personal Training at Museumplein</p>
+              <h2 className="hero-tagline">Pilates Studio at Museumplein</h2>
+              <p className="hero-description">
+                <strong>Small Group Pilates Classes (Max 4 People)</strong> • Expert Certified Instructors • Premium Location<br/>
+                Pilates • Tower Reformer • Mat Pilates • Complementary EMS & TRX Training
+              </p>
             <div className="hero-buttons">
               <Link to="/schedule" className="hero-btn-primary">Book a Class</Link>
               <Link to="/pricing" className="hero-btn-secondary">View Pricing</Link>
+            </div>
+            <div className="hero-features">
+              <div className="feature-item">
+                <span className="feature-icon">✓</span>
+                <span>Pilates</span>
+              </div>
+              <div className="feature-item">
+                <span className="feature-icon">✓</span>
+                <span>Private Training</span>
+              </div>
+              <div className="feature-item">
+                <span className="feature-icon">✓</span>
+                <span>Group Classes</span>
+              </div>
+              <div className="feature-item">
+                <span className="feature-icon">✓</span>
+                <span>Nutrition Coaching</span>
+              </div>
             </div>
           </div>
         </div>
@@ -37,7 +59,7 @@ export const Home: React.FC = () => {
           <div className="about-content">
             <h2>Welcome to PT Studio 7</h2>
             <p>
-              For the past 15 years, we've been dedicated to transforming lives through personalized Reformer Pilates, 
+              For the past 15 years, we've been dedicated to transforming lives through personalized Pilates, 
               EMS training, TRX, and functional fitness. Located in the heart of Amsterdam at Museumplein, our boutique 
               studio offers an intimate training environment where every client receives individual attention.
             </p>
@@ -56,7 +78,7 @@ export const Home: React.FC = () => {
             </p>
           </div>
           <div className="about-image">
-            <img src="/assets/images/about-us-web.jpg" alt="PT Studio 7 Amsterdam" />
+            <img src="/assets/images/about-us-web.jpg" alt="PT Studio 7 Museumplein Location - Small Group Pilates Studio" />
           </div>
         </div>
       </section>

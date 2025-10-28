@@ -43,18 +43,26 @@
 }
 
 .hero-tagline {
-  font-size: 1.5rem;
-  color: #fff;
-  font-weight: 400;
-  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #ffd700;
+  font-weight: 600;
+  margin-bottom: 24px;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-  line-height: 1.6;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  color: #fff;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
 }
 
 .hero-buttons {
   display: flex;
   gap: 16px;
   justify-content: center;
+  margin-bottom: 40px;
   flex-wrap: wrap;
 }
 
@@ -134,24 +142,16 @@
 }
 
 .about-content h2 {
-  font-size: 2rem;
-  margin-bottom: 32px;
+  font-size: 2.5rem;
+  margin-bottom: 24px;
   color: #222;
-  line-height: 1.4;
 }
 
 .about-content p {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   line-height: 1.8;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   color: #555;
-}
-
-.about-signature {
-  margin-top: 40px;
-  font-size: 1rem;
-  color: #888;
-  font-style: italic;
 }
 
 .about-image img {
@@ -448,7 +448,11 @@
   }
 
   .hero-tagline {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
   }
 
   .hero-buttons {
