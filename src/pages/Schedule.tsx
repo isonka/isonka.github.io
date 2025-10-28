@@ -20,18 +20,21 @@ export const Schedule: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Schedule & Book - PT Studio 7 Amsterdam"
-        description="Book Pilates classes at PT Studio 7 Amsterdam - premium studio at Museumplein, across from Stedelijk Museum with Rijksmuseum views. Small group classes (max 4 people) and private sessions. 45-minute classes with expert trainers."
-        keywords="Pilates Amsterdam, Pilates Museumplein, book Pilates class Amsterdam, small group Pilates, private Pilates lessons, reformer Pilates Amsterdam, PT Studio 7, Pilates schedule Amsterdam, Pilates near Rijksmuseum, Pilates Stedelijk Museum, boutique Pilates studio Amsterdam, personalized Pilates, Pilates near me"
-        canonical="https://www.ptstudio7amsterdam.nl/schedule.html"
+        title="Book Classes - Pilates, EMS, TRX & Training | PT Studio 7 Museumplein Amsterdam"
+        description="Book Reformer Pilates, EMS, TRX, Functional Training at PT Studio 7 Museumplein. Small group classes (max 4) & private sessions with expert trainers. 45-min classes. Premium location across from Stedelijk Museum."
+        keywords="book Pilates Amsterdam, book EMS training Amsterdam, book TRX Amsterdam, Pilates Museumplein, EMS Museumplein, small group fitness Amsterdam, private training booking Amsterdam, reformer Pilates schedule, boutique gym booking Amsterdam, Pilates near Rijksmuseum, intimate fitness classes Amsterdam"
+        canonical="https://www.ptstudio7amsterdam.nl/schedule"
+        ogTitle="Book Your Class | Pilates, EMS, TRX at PT Studio 7 Museumplein"
+        ogDescription="Reserve your spot in small group classes (max 4) or private sessions. Reformer Pilates, EMS, TRX, Functional Training. Expert trainers. Premium Museumplein location."
       />
 
       <div className="schedule-page">
         {/* Hero Section */}
         <section className="schedule-hero">
           <div className="schedule-hero-content">
-            <h1>Schedule & Book</h1>
-            <p>Choose between group classes or private sessions. Select your preferred time and trainer to reserve your spot.</p>
+            <h1>Schedule & Book Your Session</h1>
+            <p>Reformer Pilates • EMS Training • TRX • Functional Training • Cardio<br/>
+            Small group classes (max 4) or private sessions with expert trainers</p>
             <div className="location-highlight">
               <span className="location-icon">📍</span>
               <span>Premium location at <strong>Museumplein</strong> - across from Stedelijk Museum with stunning Rijksmuseum views</span>

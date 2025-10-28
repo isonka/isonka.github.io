@@ -52,10 +52,12 @@ export const Equipment: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Equipment - PT Studio 7 Amsterdam"
-        description="State-of-the-art Pilates equipment at PT Studio 7 Amsterdam. Reformers, Cadillac, Tower, Wunda Chair, and more premium apparatus for your training."
-        keywords="Pilates equipment Amsterdam, reformer Pilates, Cadillac Pilates, Wunda Chair, PT Studio 7 equipment, professional Pilates apparatus"
-        canonical="https://www.ptstudio7amsterdam.nl/equipment.html"
+        title="Professional Pilates Equipment | PT Studio 7 Museumplein Amsterdam"
+        description="State-of-the-art Pilates equipment at PT Studio 7 Museumplein: Reformers, Tower Reformer, Cadillac, Wunda Chair, Ladder Barrel. Professional-grade apparatus for sale. Expert trainers. Premium Amsterdam location."
+        keywords="Pilates equipment Amsterdam, reformer Pilates Amsterdam, Cadillac Pilates, Wunda Chair, Tower Reformer, Ladder Barrel, professional Pilates apparatus, Pilates equipment for sale Amsterdam, studio equipment Museumplein"
+        canonical="https://www.ptstudio7amsterdam.nl/equipment"
+        ogTitle="Professional Pilates Equipment | PT Studio 7 Museumplein"
+        ogDescription="Experience and purchase professional-grade Pilates equipment. Reformers, Towers, Cadillac, Wunda Chair. Studio-quality apparatus in Amsterdam's premier Museumplein location."
       />
 
       <div className="equipment-page">
