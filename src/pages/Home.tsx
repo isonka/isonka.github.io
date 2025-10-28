@@ -22,7 +22,7 @@ export const Home: React.FC = () => {
         <div className="hero-overlay">
           <div className="hero-content-wrapper">
             <h1 className="hero-title">PT Studio 7 Amsterdam</h1>
-            <p className="hero-tagline">We are not just a sport studio, we are a community</p>
+            <p className="hero-tagline">Reformer Pilates, EMS, TRX & Personal Training at Museumplein</p>
             <div className="hero-buttons">
               <Link to="/schedule" className="hero-btn-primary">Book a Class</Link>
               <Link to="/pricing" className="hero-btn-secondary">View Pricing</Link>
