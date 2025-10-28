@@ -19,7 +19,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename="/ptstudio7">
+    <Router>
       <ScrollToTop />
       <div className="app">
         <Navbar />
