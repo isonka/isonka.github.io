@@ -1,0 +1,266 @@
+/* Trainer Page */
+.trainer-page {
+  min-height: 100vh;
+  background: #fff;
+}
+
+/* Hero */
+.trainer-hero {
+  background: linear-gradient(135deg, #222 0%, #111 100%);
+  padding: 80px 20px 60px;
+}
+
+.trainer-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.trainer-hero-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ffd700;
+  flex-shrink: 0;
+}
+
+.trainer-hero-text h1 {
+  font-size: 3rem;
+  color: #ffd700;
+  margin-bottom: 12px;
+}
+
+.trainer-title {
+  font-size: 1.3rem;
+  color: #ccc;
+  margin: 0;
+}
+
+/* Content */
+.trainer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.trainer-bio {
+  margin-bottom: 60px;
+}
+
+.trainer-bio h2 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 24px;
+}
+
+.trainer-bio p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Specialties */
+.trainer-specialties {
+  margin-bottom: 60px;
+}
+
+.trainer-specialties h2 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.specialty-card {
+  background: #f8f8f8;
+  padding: 28px;
+  border-radius: 12px;
+  border-left: 4px solid #ffd700;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.specialty-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.specialty-card h3 {
+  font-size: 1.3rem;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.specialty-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Training Approach */
+.trainer-approach {
+  background: linear-gradient(135deg, #ffd700 0%, #e5c100 100%);
+  padding: 48px;
+  border-radius: 12px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.trainer-approach h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 24px;
+}
+
+.trainer-approach p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #222;
+  font-style: italic;
+  margin: 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* CTA Section */
+.trainer-cta {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.trainer-cta h2 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 16px;
+}
+
+.trainer-cta p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 32px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 16px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #ffd700;
+  color: #222;
+}
+
+.btn-primary:hover {
+  background: #e5c100;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #222;
+  border: 2px solid #ddd;
+}
+
+.btn-secondary:hover {
+  border-color: #ffd700;
+  background: #fffef0;
+}
+
+/* Back Link */
+.back-link {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.back-link a {
+  color: #666;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.back-link a:hover {
+  color: #222;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .trainer-hero {
+    padding: 60px 20px 40px;
+  }
+
+  .trainer-hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .trainer-hero-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .trainer-hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .trainer-title {
+    font-size: 1.1rem;
+  }
+
+  .trainer-bio h2,
+  .trainer-specialties h2,
+  .trainer-cta h2 {
+    font-size: 2rem;
+  }
+
+  .specialties-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trainer-approach {
+    padding: 32px 24px;
+  }
+
+  .trainer-approach p {
+    font-size: 1.1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}
+

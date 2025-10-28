@@ -1,0 +1,619 @@
+/* Pricing Page */
+.pricing-page {
+  min-height: 100vh;
+  background: #f8f8f8;
+}
+
+.pricing-hero {
+  background: linear-gradient(135deg, #222 0%, #111 100%);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.pricing-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  color: #ffd700;
+}
+
+.pricing-hero p {
+  font-size: 1.3rem;
+  color: #ccc;
+}
+
+/* Special Offer (Introduction Package) */
+.special-offer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px 30px;
+}
+
+.special-offer {
+  background: linear-gradient(135deg, #222 0%, #2a2a2a 100%);
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto;
+  border: 3px solid #ffd700;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.offer-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #ffd700 0%, #ffeb3b 100%);
+  color: #222;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  box-shadow: 
+    0 4px 15px rgba(255, 215, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+}
+
+.offer-badge::before {
+  content: '✨';
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-50%) scale(1.2);
+  }
+}
+
+.offer-badge::after {
+  content: '✨';
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  animation: sparkle 1.5s ease-in-out infinite 0.75s;
+}
+
+.special-offer h3 {
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.special-offer p {
+  color: #fff;
+  opacity: 0.9;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.special-price {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffd700;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.special-offer .buy-button {
+  max-width: 200px;
+  margin: 0 auto;
+  font-size: 1rem;
+  padding: 12px 24px;
+  background: #ffd700;
+  color: #222;
+  border: none;
+}
+
+.special-offer .buy-button:hover {
+  background: #ffdf33;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Tabs */
+.pricing-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 40px 20px 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing-tab {
+  padding: 16px 32px;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.pricing-tab:hover {
+  border-color: #ffd700;
+  background: #fffef0;
+}
+
+.pricing-tab.active {
+  background: #ffd700;
+  border-color: #ffd700;
+  color: #222;
+}
+
+/* Content */
+.pricing-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+.pricing-section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.pricing-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 48px;
+}
+
+/* Packages Grid */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.package-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.package-card.featured {
+  border: 3px solid #ffd700;
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: #ffd700;
+  color: #222;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.price-display {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.price-per-class {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.per-person {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 400;
+}
+
+.package-name {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.total-price {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.validity {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.buy-button {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background: #ffd700;
+  color: #222;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.buy-button:hover {
+  background: #e5c100;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+/* Info Section (What to Bring) */
+.info-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.info-container {
+  background: #fff;
+  border-radius: 16px;
+  padding: 60px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.info-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 48px;
+  color: #222;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+}
+
+.info-card {
+  text-align: center;
+  padding: 24px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  background: #fffef0;
+}
+
+.info-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #222;
+  font-weight: 600;
+}
+
+.info-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* FAQ Section */
+.faq-section {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.faq-container {
+  background: #fff;
+  border-radius: 16px;
+  padding: 60px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.faq-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #222;
+  text-align: center;
+}
+
+.faq-item {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 0;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-header {
+  padding: 24px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.faq-header:hover {
+  color: #ffd700;
+}
+
+.faq-header h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.faq-header:hover h3 {
+  color: #ffd700;
+}
+
+.faq-icon {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #ffd700;
+  min-width: 30px;
+  text-align: center;
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0;
+}
+
+.faq-item.active .faq-content {
+  padding-bottom: 24px;
+}
+
+.faq-content p {
+  margin-bottom: 12px;
+  line-height: 1.7;
+  color: #555;
+  font-size: 1rem;
+}
+
+.faq-content p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-content a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.faq-content a:hover {
+  text-decoration: underline;
+}
+
+/* Contact CTA */
+.contact-cta {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #222 0%, #111 100%);
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.contact-cta h2 {
+  font-size: 2.5rem;
+  color: #ffd700;
+  margin-bottom: 16px;
+}
+
+.contact-cta p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 32px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  padding: 16px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.cta-button.primary {
+  background: #ffd700;
+  color: #222;
+}
+
+.cta-button.primary:hover {
+  background: #e5c100;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: #ffd700;
+  border: 2px solid #ffd700;
+}
+
+.cta-button.secondary:hover {
+  background: rgba(255, 215, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pricing-hero h1 {
+    font-size: 2rem;
+  }
+
+  .pricing-hero p {
+    font-size: 1.1rem;
+  }
+
+  .pricing-tabs {
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .pricing-tab {
+    padding: 14px 24px;
+  }
+
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-container {
+    padding: 40px 24px;
+  }
+
+  .info-title {
+    font-size: 2rem;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .faq-container {
+    padding: 40px 24px;
+  }
+
+  .faq-container h2 {
+    font-size: 2rem;
+  }
+
+  .faq-header {
+    padding: 20px 0;
+  }
+
+  .faq-header h3 {
+    font-size: 1.05rem;
+    padding-right: 12px;
+  }
+
+  .contact-cta {
+    padding: 40px 24px;
+    margin: 60px 20px;
+  }
+
+  .contact-cta h2 {
+    font-size: 2rem;
+  }
+
+  .contact-cta p {
+    font-size: 1.05rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+
+  .special-offer-container {
+    padding: 30px 20px 20px;
+  }
+
+  .special-offer {
+    padding: 30px 20px;
+  }
+
+  .special-offer h3 {
+    font-size: 1.5rem;
+  }
+
+  .special-price {
+    font-size: 2.2rem;
+  }
+
+  .offer-badge {
+    right: 15px;
+    top: 15px;
+    padding: 6px 16px;
+    font-size: 0.65rem;
+  }
+
+  .offer-badge::before,
+  .offer-badge::after {
+    font-size: 0.85rem;
+  }
+
+  .offer-badge::before {
+    left: -10px;
+  }
+
+  .offer-badge::after {
+    right: -10px;
+  }
+}
+
