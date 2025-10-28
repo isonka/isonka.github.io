@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
 import '../styles/Schedule.css';
 
@@ -144,7 +145,7 @@ export const Schedule: React.FC = () => {
           <div className="cta-section">
             <h2>Need Help Choosing?</h2>
             <p>Not sure whether group classes or private classes are right for you? Check out our pricing or contact us for guidance.</p>
-            <a href="/pricing" className="cta-button">View Pricing & Packages</a>
+            <Link to="/pricing" className="cta-button">View Pricing & Packages</Link>
           </div>
         </section>
       </div>
