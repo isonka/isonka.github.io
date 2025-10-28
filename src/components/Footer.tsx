@@ -1,9 +1,30 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import '../styles/Footer.css';
 
+declare global {
+  interface Window {
+    Cookiebot?: any;
+  }
+}
+
 export const Footer: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
+
+  const handleCookieSettings = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    console.log('Cookie Settings clicked');
+    console.log('Cookiebot available:', !!window.Cookiebot);
+    
+    // Check if Cookiebot is loaded
+    if (window.Cookiebot) {
+      console.log('Opening Cookiebot dialog...');
+      window.Cookiebot.renew();
+    } else {
+      console.warn('Cookiebot not yet loaded. Please wait a moment and try again.');
+      alert('Cookie settings are loading. Please try again in a moment.');
+    }
+  };
 
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -35,6 +56,7 @@ export const Footer: React.FC = () => {
           <li><Link to="/schedule">Book</Link></li>
           <li><Link to="/pricing">Pricing</Link></li>
           <li><a href="#contact" onClick={handleContactClick}>Contact</a></li>
+          <li><a href="#" onClick={handleCookieSettings}>Cookie Settings</a></li>
         </ul>
       </div>
     </footer>

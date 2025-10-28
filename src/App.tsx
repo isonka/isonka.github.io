@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
+import { CookieConsent } from './components/CookieConsent';
 import { Home } from './pages/Home';
 import { Pricing } from './pages/Pricing';
 import { Schedule } from './pages/Schedule';
@@ -21,6 +22,7 @@ import './App.css';
 function App() {
   return (
     <Router>
+      <CookieConsent />
       <ScrollToTop />
       <div className="app">
         <Navbar />
