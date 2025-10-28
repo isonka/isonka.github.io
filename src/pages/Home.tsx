@@ -6,12 +6,12 @@ export const Home: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="PT Studio 7 Amsterdam | Pilates, EMS, TRX & Personal Training at Museumplein"
-        description="Premium boutique fitness studio at Museumplein, Amsterdam. Small group classes (max 4): Reformer Pilates, EMS Training, TRX, Functional Training & Cardio. Expert certified trainers. Private & group sessions. Located at Stedelijk Museum."
-        keywords="Pilates Amsterdam Museumplein, EMS training Amsterdam, TRX Amsterdam, small group fitness Amsterdam, reformer Pilates Museumplein, boutique fitness studio Amsterdam, personal training Museumplein, functional training Amsterdam, private Pilates Amsterdam, EMS Museumplein, intimate fitness classes Amsterdam, luxury gym Museumplein"
+        title="PT Studio 7 Amsterdam | Reformer Pilates Studio at Museumplein"
+        description="Amsterdam's premier Reformer Pilates boutique studio at Museumplein. Small group classes (max 4). Expert certified instructors. Private & group sessions. Complementary EMS, TRX & Functional Training. Located at Stedelijk Museum."
+        keywords="Reformer Pilates Amsterdam, Pilates Museumplein, boutique Pilates studio Amsterdam, small group Pilates Amsterdam, private Pilates Amsterdam, Pilates studio Stedelijk Museum, luxury Pilates Amsterdam, Pilates Rijksmuseum, intimate Pilates classes Amsterdam, premium Pilates Museumplein"
         canonical="https://www.ptstudio7amsterdam.nl"
-        ogTitle="PT Studio 7 Museumplein | Pilates, EMS, TRX & Personal Training | Max 4 People"
-        ogDescription="Amsterdam's most exclusive boutique fitness studio. Reformer Pilates, EMS, TRX, Functional Training. Small groups (max 4). Expert trainers. Premium Museumplein location."
+        ogTitle="PT Studio 7 | Reformer Pilates Studio at Museumplein Amsterdam"
+        ogDescription="Amsterdam's premier Reformer Pilates boutique studio. Small groups (max 4). Expert instructors. Premium Museumplein location. Private & group Pilates sessions available."
       />
       
       {/* Video Hero Section */}
@@ -22,10 +22,10 @@ export const Home: React.FC = () => {
         <div className="hero-overlay">
           <div className="hero-content-wrapper">
             <h1 className="hero-title">PT Studio 7 Amsterdam</h1>
-            <h2 className="hero-tagline">Pilates, EMS, TRX & Personal Training at Museumplein</h2>
+            <h2 className="hero-tagline">Reformer Pilates Studio at Museumplein</h2>
             <p className="hero-description">
-              <strong>Small Group Classes (Max 4 People)</strong> • Expert Certified Trainers • Premium Location<br/>
-              Reformer Pilates • EMS Training • TRX • Functional Training • Cardio
+              <strong>Small Group Pilates Classes (Max 4 People)</strong> • Expert Certified Instructors • Premium Location<br/>
+              Reformer Pilates • Tower Reformer • Mat Pilates • Complementary EMS & TRX Training
             </p>
             <div className="hero-buttons">
               <Link to="/schedule" className="hero-btn-primary">Book a Class</Link>
@@ -57,23 +57,24 @@ export const Home: React.FC = () => {
       <section id="about" className="about-section">
         <div className="about-container">
           <div className="about-content">
-            <h2>Amsterdam's Premier Boutique Fitness Studio at Museumplein</h2>
+            <h2>Amsterdam's Premier Reformer Pilates Studio at Museumplein</h2>
             <p>
               <strong>Prime Museumplein Location:</strong> Located in Amsterdam's most prestigious cultural district, 
               directly across from the Stedelijk Museum with breathtaking Rijksmuseum views. Our exclusive boutique studio 
-              combines luxury surroundings with world-class training in Reformer Pilates, EMS, TRX, and Functional Training.
+              specializes in Reformer Pilates, offering world-class instruction in an intimate, luxury setting with 
+              state-of-the-art equipment.
             </p>
             <p>
-              <strong>Small Group Excellence (Max 4 People):</strong> Unlike large, impersonal fitness classes, 
+              <strong>Small Group Pilates Excellence (Max 4 People):</strong> Unlike large, impersonal Pilates classes, 
               we limit every group session to just 4 participants. This intimate setting ensures each client receives 
-              individualized attention, proper form correction, and a truly personalized workout experience—whether 
-              you're doing Pilates, EMS training, TRX, or functional training.
+              individualized attention, proper form correction, and a truly personalized Pilates experience with 
+              meticulous focus on alignment, breath work, and mindful movement.
             </p>
             <p>
-              <strong>Certified Expert Trainers with Extensive Experience:</strong> Our highly qualified instructors bring 
-              years of specialized training and certifications in Reformer Pilates, EMS technology, TRX suspension training, 
-              functional fitness, and rehabilitation. Each trainer is passionate about helping you achieve your fitness goals 
-              safely and effectively with fully personalized programs tailored to your needs.
+              <strong>Certified Pilates Instructors with Extensive Experience:</strong> Our highly qualified instructors bring 
+              years of specialized Reformer Pilates training and certifications. Each instructor is passionate about the 
+              transformative power of Pilates and dedicated to helping you achieve your goals—whether it's strength, flexibility, 
+              rehabilitation, or overall wellness. We also offer complementary EMS, TRX, and functional training to support your Pilates practice.
             </p>
           </div>
           <div className="about-image">

@@ -62,18 +62,18 @@ export const Pricing: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Pricing - Pilates, EMS, TRX & Personal Training | PT Studio 7 Museumplein"
-        description="Flexible pricing for small group fitness (max 4): Pilates, EMS, TRX, Functional Training at Museumplein. Memberships, group classes, private & couple sessions. Expert trainers. Premium location. From €28/class."
-        keywords="Pilates prices Amsterdam, EMS training cost Amsterdam, TRX prices Museumplein, small group fitness rates, boutique gym membership Amsterdam, personal training rates Museumplein, couple training Amsterdam, functional training prices, intimate fitness classes pricing Amsterdam"
+        title="Pricing - Reformer Pilates Classes & Memberships | PT Studio 7 Museumplein"
+        description="Flexible Reformer Pilates pricing at Museumplein. Small group classes (max 4), memberships, private sessions. Expert instructors. Premium location. Complementary EMS & TRX. From €28/class."
+        keywords="Reformer Pilates prices Amsterdam, Pilates membership Amsterdam, Pilates class rates Museumplein, small group Pilates pricing, boutique Pilates studio membership Amsterdam, private Pilates rates Museumplein, couple Pilates Amsterdam, Pilates packages Amsterdam, intimate Pilates classes pricing Amsterdam"
         canonical="https://www.ptstudio7amsterdam.nl/pricing"
-        ogTitle="PT Studio 7 Pricing | Pilates, EMS, TRX & Training Packages at Museumplein"
-        ogDescription="Small group classes (max 4) from €28/class. Reformer Pilates, EMS, TRX, Functional Training. Private sessions available. Expert trainers at Amsterdam's most exclusive Museumplein studio."
+        ogTitle="PT Studio 7 Pricing | Reformer Pilates Packages at Museumplein"
+        ogDescription="Small group Reformer Pilates (max 4) from €28/class. Memberships & private sessions available. Expert instructors at Amsterdam's most exclusive Museumplein Pilates studio."
       />
 
       <div className="pricing-page">
         <div className="pricing-hero">
           <h1>Pricing & Membership</h1>
-          <p>Pilates, EMS, TRX & Personal Training - Small groups (max 4) at Museumplein</p>
+          <p>Reformer Pilates Classes - Small groups (max 4) at Museumplein</p>
         </div>
 
         {/* Introduction Package - Special Offer */}
