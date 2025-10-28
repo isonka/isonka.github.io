@@ -21,11 +21,11 @@ export const Schedule: React.FC = () => {
     <>
       <SEOHead
         title="Book Classes - Pilates, EMS, TRX & Training | PT Studio 7 Museumplein Amsterdam"
-        description="Book Reformer Pilates, EMS, TRX, Functional Training at PT Studio 7 Museumplein. Small group classes (max 4) & private sessions with expert trainers. 45-min classes. Premium location across from Stedelijk Museum."
-        keywords="book Pilates Amsterdam, book EMS training Amsterdam, book TRX Amsterdam, Pilates Museumplein, EMS Museumplein, small group fitness Amsterdam, private training booking Amsterdam, reformer Pilates schedule, boutique gym booking Amsterdam, Pilates near Rijksmuseum, intimate fitness classes Amsterdam"
+        description="Book Pilates, EMS, TRX, Functional Training at PT Studio 7 Museumplein. Small group classes (max 4) & private classes with expert trainers. 45-min classes. Premium location across from Stedelijk Museum."
+        keywords="book Pilates Amsterdam, book EMS training Amsterdam, book TRX Amsterdam, Pilates Museumplein, EMS Museumplein, small group fitness Amsterdam, private training booking Amsterdam, Pilates schedule, boutique gym booking Amsterdam, Pilates near Rijksmuseum, intimate fitness classes Amsterdam"
         canonical="https://www.ptstudio7amsterdam.nl/schedule"
         ogTitle="Book Your Class | Pilates, EMS, TRX at PT Studio 7 Museumplein"
-        ogDescription="Reserve your spot in small group classes (max 4) or private sessions. Reformer Pilates, EMS, TRX, Functional Training. Expert trainers. Premium Museumplein location."
+        ogDescription="Reserve your spot in small group classes (max 4) or private classes. Pilates, EMS, TRX, Functional Training. Expert trainers. Premium Museumplein location."
       />
 
       <div className="schedule-page">
@@ -33,8 +33,8 @@ export const Schedule: React.FC = () => {
         <section className="schedule-hero">
           <div className="schedule-hero-content">
             <h1>Schedule & Book Your Session</h1>
-            <p>Reformer Pilates • EMS Training • TRX • Functional Training • Cardio<br/>
-            Small group classes (max 4) or private sessions with expert trainers</p>
+            <p>Pilates • EMS Training • TRX • Functional Training • Cardio<br/>
+            Small group classes (max 4) or private classes with expert trainers</p>
             <div className="location-highlight">
               <span className="location-icon">📍</span>
               <span>Premium location at <strong>Museumplein</strong> - across from Stedelijk Museum with stunning Rijksmuseum views</span>
@@ -58,8 +58,8 @@ export const Schedule: React.FC = () => {
                 className={`tab-button ${activeTab === 'private' ? 'active' : ''}`}
                 onClick={() => setActiveTab('private')}
               >
-                <span className="label">One-on-One</span>
-                Private Lessons
+                <span className="label">Private Training</span>
+                Private Classes
               </button>
             </div>
 
@@ -99,32 +99,36 @@ export const Schedule: React.FC = () => {
               </div>
             </div>
 
-            {/* Private Lessons Tab */}
+            {/* Private Classes Tab */}
             <div className={`tab-content ${activeTab === 'private' ? 'active' : ''}`}>
-              <h2>Private Lessons</h2>
-              <p className="subtitle">One-on-one personalized training tailored to your specific goals and fitness level.</p>
+              <h2>Private Classes</h2>
+              <p className="subtitle">Personalized training tailored to your specific goals and fitness level. Available as one-on-one, couple, or trio classes.</p>
 
               <div className="info-banner">
                 <span className="icon">ℹ</span>
-                <p><strong>Personalized attention guaranteed!</strong> Private sessions are customized to your goals, injuries, or specific needs.</p>
+                <p><strong>Personalized attention guaranteed!</strong> Private classes are customized to your goals, injuries, or specific needs. Train solo, with a partner, or with two friends.</p>
               </div>
 
               <div className="quick-info">
                 <div className="info-card">
-                  <h3>Session Duration</h3>
+                  <h3>Class Duration</h3>
                   <p>45 minutes of focused, personalized training</p>
+                </div>
+                <div className="info-card">
+                  <h3>Class Options</h3>
+                  <p>One-on-One, Couple, or Trio (3 people)</p>
                 </div>
                 <div className="info-card">
                   <h3>Customized Program</h3>
                   <p>Workout adapted to your goals and level</p>
                 </div>
                 <div className="info-card">
-                  <h3>Flexible Scheduling</h3>
-                  <p>Choose your preferred time and trainer</p>
+                  <h3>What to Bring</h3>
+                  <p>Comfortable fitted clothing, socks (grip socks recommended), water bottle, towel (recommended)</p>
                 </div>
               </div>
 
-              {/* MindBody Widget for Private Lessons */}
+              {/* MindBody Widget for Private Classes */}
               <div className="widget-container">
                 <div 
                   className="mindbody-widget" 
@@ -139,7 +143,7 @@ export const Schedule: React.FC = () => {
           {/* CTA Section */}
           <div className="cta-section">
             <h2>Need Help Choosing?</h2>
-            <p>Not sure whether group classes or private lessons are right for you? Check out our pricing or contact us for guidance.</p>
+            <p>Not sure whether group classes or private classes are right for you? Check out our pricing or contact us for guidance.</p>
             <a href="/pricing" className="cta-button">View Pricing & Packages</a>
           </div>
         </section>

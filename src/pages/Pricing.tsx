@@ -62,18 +62,18 @@ export const Pricing: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Pricing - Reformer Pilates Classes & Memberships | PT Studio 7 Museumplein"
-        description="Flexible Reformer Pilates pricing at Museumplein. Small group classes (max 4), memberships, private sessions. Expert instructors. Premium location. Complementary EMS & TRX. From €28/class."
-        keywords="Reformer Pilates prices Amsterdam, Pilates membership Amsterdam, Pilates class rates Museumplein, small group Pilates pricing, boutique Pilates studio membership Amsterdam, private Pilates rates Museumplein, couple Pilates Amsterdam, Pilates packages Amsterdam, intimate Pilates classes pricing Amsterdam"
+        title="Pricing - Pilates Classes & Memberships | PT Studio 7 Museumplein"
+        description="Flexible Pilates pricing at Museumplein. Small group classes (max 4), memberships, private classes. Expert instructors. Premium location. EMS & TRX. From €28/class."
+        keywords="Pilates prices Amsterdam, Pilates membership Amsterdam, Pilates class rates Museumplein, small group Pilates pricing, boutique Pilates studio membership Amsterdam, private Pilates rates Museumplein, couple Pilates Amsterdam, Pilates packages Amsterdam, intimate Pilates classes pricing Amsterdam"
         canonical="https://www.ptstudio7amsterdam.nl/pricing"
-        ogTitle="PT Studio 7 Pricing | Reformer Pilates Packages at Museumplein"
-        ogDescription="Small group Reformer Pilates (max 4) from €28/class. Memberships & private sessions available. Expert instructors at Amsterdam's most exclusive Museumplein Pilates studio."
+        ogTitle="PT Studio 7 Pricing | Pilates Packages at Museumplein"
+        ogDescription="Small group Pilates (max 4) from €28/class. Memberships & private classes available. Expert instructors at Amsterdam's most exclusive Museumplein Pilates studio."
       />
 
       <div className="pricing-page">
         <div className="pricing-hero">
           <h1>Pricing & Membership</h1>
-          <p>Reformer Pilates Classes - Small groups (max 4) at Museumplein</p>
+          <p>Pilates Classes - Small groups (max 4) at Museumplein</p>
         </div>
 
         {/* Introduction Package - Special Offer */}
@@ -112,13 +112,13 @@ export const Pricing: React.FC = () => {
             className={`pricing-tab ${activeTab === 'private' ? 'active' : ''}`}
             onClick={() => handleTabChange('private')}
           >
-            Private Lessons
+            Private Classes
           </button>
           <button
             className={`pricing-tab ${activeTab === 'couple' ? 'active' : ''}`}
             onClick={() => handleTabChange('couple')}
           >
-            Couple Sessions
+            Couple Classes
           </button>
           <button
             className={`pricing-tab ${activeTab === 'trio' ? 'active' : ''}`}
@@ -290,11 +290,11 @@ export const Pricing: React.FC = () => {
           </div>
         )}
 
-        {/* Private Lessons Content */}
+        {/* Private Classes Content */}
         {activeTab === 'private' && (
           <div className="pricing-content">
-            <h2 className="pricing-section-title">One-on-One Private Sessions</h2>
-            <p className="pricing-subtitle">One-on-one personalized training tailored to your specific goals and fitness level. 45-minute sessions.</p>
+            <h2 className="pricing-section-title">Private Classes</h2>
+            <p className="pricing-subtitle">Personalized one-on-one training tailored to your specific goals and fitness level. Also available as couple or trio classes. 45-minute classes.</p>
             
             <div className="packages-grid">
               <div className="package-card">
@@ -360,11 +360,11 @@ export const Pricing: React.FC = () => {
           </div>
         )}
 
-        {/* Couple Sessions Content */}
+        {/* Couple Classes Content */}
         {activeTab === 'couple' && (
           <div className="pricing-content">
-            <h2 className="pricing-section-title">Couple Sessions</h2>
-            <p className="pricing-subtitle">Train together with your partner. Share the experience and motivate each other. Price shown per person. 45-minute sessions.</p>
+            <h2 className="pricing-section-title">Couple Classes</h2>
+            <p className="pricing-subtitle">Train together with your partner. Share the experience and motivate each other. Price shown per person. 45-minute classes.</p>
             
             <div className="packages-grid">
               <div className="package-card">
@@ -434,7 +434,7 @@ export const Pricing: React.FC = () => {
         {activeTab === 'trio' && (
           <div className="pricing-content">
             <h2 className="pricing-section-title">Trio Classes</h2>
-            <p className="pricing-subtitle">Train with two friends or family members. Perfect for small groups who want personalized attention. Price shown per person. 45-minute sessions.</p>
+            <p className="pricing-subtitle">Train with two friends or family members. Perfect for small groups who want personalized attention. Price shown per person. 45-minute classes.</p>
             
             <div className="packages-grid">
               <div className="package-card">
@@ -521,8 +521,8 @@ export const Pricing: React.FC = () => {
               </div>
 
               <div className="info-card">
-                <h3>Towel (Optional)</h3>
-                <p>While we provide everything else, you're welcome to bring a small towel if you prefer.</p>
+                <h3>Towel (Recommended)</h3>
+                <p>We recommend bringing a small towel for your comfort, though it's not mandatory.</p>
               </div>
             </div>
           </div>

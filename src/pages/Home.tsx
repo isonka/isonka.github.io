@@ -6,12 +6,12 @@ export const Home: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="PT Studio 7 Amsterdam | Reformer Pilates Studio at Museumplein"
-        description="Amsterdam's premier Reformer Pilates boutique studio at Museumplein. Small group classes (max 4). Expert certified instructors. Private & group sessions. Complementary EMS, TRX & Functional Training. Located at Stedelijk Museum."
-        keywords="Reformer Pilates Amsterdam, Pilates Museumplein, boutique Pilates studio Amsterdam, small group Pilates Amsterdam, private Pilates Amsterdam, Pilates studio Stedelijk Museum, luxury Pilates Amsterdam, Pilates Rijksmuseum, intimate Pilates classes Amsterdam, premium Pilates Museumplein"
+        title="PT Studio 7 Amsterdam | Pilates Studio at Museumplein"
+        description="Amsterdam's premier Pilates boutique studio at Museumplein. Small group classes (max 4). Expert certified instructors. Private & group classes. EMS, TRX & Functional Training. Located at Stedelijk Museum."
+        keywords="Pilates Amsterdam, Pilates Museumplein, boutique Pilates studio Amsterdam, small group Pilates Amsterdam, private Pilates Amsterdam, Pilates studio Stedelijk Museum, luxury Pilates Amsterdam, Pilates Rijksmuseum, intimate Pilates classes Amsterdam, premium Pilates Museumplein"
         canonical="https://www.ptstudio7amsterdam.nl"
-        ogTitle="PT Studio 7 | Reformer Pilates Studio at Museumplein Amsterdam"
-        ogDescription="Amsterdam's premier Reformer Pilates boutique studio. Small groups (max 4). Expert instructors. Premium Museumplein location. Private & group Pilates sessions available."
+        ogTitle="PT Studio 7 | Pilates Studio at Museumplein Amsterdam"
+        ogDescription="Amsterdam's premier Pilates boutique studio. Small groups (max 4). Expert instructors. Premium Museumplein location. Private & group Pilates classes available."
       />
       
       {/* Video Hero Section */}
@@ -24,8 +24,8 @@ export const Home: React.FC = () => {
             <h1 className="hero-title">PT Studio 7 Amsterdam</h1>
               <h2 className="hero-tagline">Pilates Studio at Museumplein</h2>
               <p className="hero-description">
-                 • Expert Certified Instructors • Tailored Private Classes • Premium Location<br/>
-                One-on-One Sessions • Small Groups (Max 4) • Complementary EMS & TRX
+                  • Expert Certified Instructors • Tailored Private Classes • Premium Location<br/>
+                  Pilates • EMS • TRX • One-on-One & Small Groups (Max 4)
               </p>
             <div className="hero-buttons">
               <Link to="/schedule" className="hero-btn-primary">Book a Class</Link>
