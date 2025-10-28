@@ -34,6 +34,55 @@
     
     <!-- MindBody Healcode Widget Script -->
     <script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script>
+    
+    <!-- Structured Data - LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "PT Studio 7",
+      "image": "https://www.ptstudio7amsterdam.nl/assets/images/pt7logo.png",
+      "@id": "https://www.ptstudio7amsterdam.nl",
+      "url": "https://www.ptstudio7amsterdam.nl",
+      "telephone": "+31685162693",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Van Baerlestraat 76C",
+        "addressLocality": "Amsterdam",
+        "postalCode": "1071BB",
+        "addressCountry": "NL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 52.3572909720188,
+        "longitude": 4.876257777138345
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday", "Sunday"],
+          "opens": "10:00",
+          "closes": "18:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/ptstudio7amsterdam"
+      ],
+      "description": "Amsterdam's premier Pilates boutique studio at Museumplein. Small group classes (max 4). Expert certified instructors. Private & group classes. EMS, TRX & Functional Training.",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "150"
+      }
+    }
+    </script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
