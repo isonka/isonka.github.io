@@ -17,56 +17,43 @@ export const TrainerGoknur: React.FC = () => {
           <div className="trainer-hero-content">
             <img src="/assets/images/goknur.jpeg" alt="Göknur Dipli" className="trainer-hero-photo" />
             <div className="trainer-hero-text">
-              <h1>Göknur Dipli</h1>
-              <p className="trainer-title">Personal Trainer & Nutrition Coach</p>
+              <h1>Goknur Dipli</h1>
+              <p className="trainer-title">Senior Pilates & EMS Trainer</p>
+              <ul className="trainer-languages">
+                <li>English</li>
+                <li>Turkish</li>
+              </ul>
             </div>
           </div>
         </div>
 
         <div className="trainer-content">
           <section className="trainer-bio">
-            <h2>About Göknur</h2>
             <p>
-              Göknur Dipli is a comprehensive fitness and wellness expert who combines personal training expertise 
-              with nutrition coaching to help clients achieve sustainable, long-term results. Her holistic approach 
-              recognizes that true fitness comes from balancing exercise, nutrition, and lifestyle.
-            </p>
-            <p>
-              With a background in both fitness training and nutritional science, Göknur creates personalized programs 
-              that address not just how you move, but also how you fuel your body. She believes in empowering clients 
-              with knowledge and skills they can use for life, not just quick fixes.
+              Goknur is a Senior Polestar Pilates Instructor and Miha BodyTec EMS Advance Trainer. She brings a wealth of experience in functional training and is dedicated to helping clients achieve their best through expert guidance and motivation. She graduated in 2016 from Balıkesir University, Department of Physical Education and Sports, majoring in Coaching.
             </p>
           </section>
 
-          <section className="trainer-specialties">
-            <h2>Specializations</h2>
-            <div className="specialties-grid">
-              <div className="specialty-card">
-                <h3>Personal Training</h3>
-                <p>Customized workout programs tailored to your goals and fitness level</p>
-              </div>
-              <div className="specialty-card">
-                <h3>Nutrition Coaching</h3>
-                <p>Science-based nutrition guidance for optimal performance and health</p>
-              </div>
-              <div className="specialty-card">
-                <h3>Weight Management</h3>
-                <p>Sustainable approaches to achieving and maintaining healthy weight</p>
-              </div>
-              <div className="specialty-card">
-                <h3>Lifestyle Coaching</h3>
-                <p>Holistic wellness strategies for lasting health transformations</p>
-              </div>
-            </div>
-          </section>
-
-          <section className="trainer-approach">
-            <h2>Training Philosophy</h2>
-            <p>
-              "True transformation happens when we address both fitness and nutrition together. My goal is to help 
-              you build habits that last, not just programs you follow temporarily. Together, we'll create a lifestyle 
-              that makes you feel strong, energized, and confident every single day."
-            </p>
+          <section className="trainer-qualifications">
+            <h2>Qualifications & Experience</h2>
+            <ul>
+              <li>Senior Polestar Pilates Instructor</li>
+              <li>Miha BodyTec EMS Advance Trainer</li>
+              <li>TRX & Functional Training Instructor</li>
+              <li>12+ years of experience in personal training and Pilates</li>
+              <li>Specializes in individualized programs for all ages and fitness levels</li>
+              <li>Polestar Pilates Certified Pilates Trainer – Polestar Pilates, İstanbul</li>
+              <li>The science of healthy spine movement – Polestar Pilates with Brent Anderson, İstanbul</li>
+              <li>Pilates for low back care – Polestar Pilates and Brent Anderson, İstanbul</li>
+              <li>4dpro Bungee Fitness Trainer – 4dpro Bungee Fitness, İzmir</li>
+              <li>Miha bodytec Advance EMS Trainer – Miha bodytec, İstanbul</li>
+              <li>Reformer Pilates Trainer – Seam Academy, İstanbul</li>
+              <li>Pliometric Training and muscle contraction workshop – Seam Academy, İstanbul</li>
+              <li>Pilates during pregnancy workshop – Pilatesystem, Ankara</li>
+              <li>Pilates Instructor – Turkish Gymnastic Federation, İzmir</li>
+              <li>Zumba basic trainer – Zumba, İstanbul</li>
+              <li>3rd Level Fitness Trainer Certificate</li>
+            </ul>
           </section>
 
           <section className="trainer-cta">

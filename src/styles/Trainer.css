@@ -36,7 +36,27 @@
 .trainer-title {
   font-size: 1.3rem;
   color: #ccc;
+  margin: 0 0 16px 0;
+}
+
+.trainer-languages {
+  list-style: none;
+  padding: 0;
   margin: 0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.trainer-languages li {
+  color: #ffd700;
+  font-size: 0.95rem;
+  padding: 6px 16px;
+  background: rgba(255, 215, 0, 0.15);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 /* Content */
@@ -61,6 +81,44 @@
   line-height: 1.8;
   color: #555;
   margin-bottom: 20px;
+}
+
+/* Qualifications */
+.trainer-qualifications {
+  margin-bottom: 60px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.trainer-qualifications h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 24px;
+}
+
+.trainer-qualifications ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.trainer-qualifications li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+}
+
+.trainer-qualifications li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ffd700;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 /* Specialties */

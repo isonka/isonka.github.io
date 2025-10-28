@@ -37,7 +37,7 @@ export const Home: React.FC = () => {
           <div className="about-content">
             <h2>Let me share what you can expect from us</h2>
             <p>
-              For the past 14 years, we've dedicated ourselves to improving every day, always striving to serve you better. 
+              For the past 15 years, we've dedicated ourselves to improving every day, always striving to serve you better. 
               Our passion and commitment to helping you sets us apart. What truly distinguishes us from other studios is our 
               genuine attention to your needs. You are important to us!
             </p>

@@ -17,56 +17,30 @@ export const TrainerGokben: React.FC = () => {
           <div className="trainer-hero-content">
             <img src="/assets/images/gokben.jpeg" alt="Gökben Öztekin" className="trainer-hero-photo" />
             <div className="trainer-hero-text">
-              <h1>Gökben Öztekin</h1>
-              <p className="trainer-title">Reformer Pilates Expert</p>
+              <h1>Gokben Oztekin</h1>
+              <p className="trainer-title">Basi Pilates Instructor</p>
+              <ul className="trainer-languages">
+                <li>English</li>
+                <li>Turkish</li>
+              </ul>
             </div>
           </div>
         </div>
 
         <div className="trainer-content">
           <section className="trainer-bio">
-            <h2>About Gökben</h2>
             <p>
-              Gökben Öztekin is a dedicated Reformer Pilates expert who brings precision, grace, and deep anatomical 
-              knowledge to every session. Her passion for Pilates is evident in her meticulous attention to form and 
-              her ability to guide students through challenging movements with clarity and encouragement.
-            </p>
-            <p>
-              With extensive training in classical and contemporary Pilates methods, Gökben has helped countless clients 
-              discover the transformative power of mindful movement. She believes in creating a supportive environment 
-              where students can explore their capabilities while building strength, flexibility, and body awareness.
+              Gokben is a certified Basi Pilates Instructor with a passion for helping clients improve their strength, flexibility, and overall well-being. She creates a welcoming and motivating environment for everyone.
             </p>
           </section>
 
-          <section className="trainer-specialties">
-            <h2>Specializations</h2>
-            <div className="specialties-grid">
-              <div className="specialty-card">
-                <h3>Reformer Technique</h3>
-                <p>Expert guidance on all reformer exercises with emphasis on precision and control</p>
-              </div>
-              <div className="specialty-card">
-                <h3>Flexibility Training</h3>
-                <p>Programs designed to improve range of motion and prevent injuries</p>
-              </div>
-              <div className="specialty-card">
-                <h3>Mind-Body Connection</h3>
-                <p>Integrating breath work and mindfulness into physical practice</p>
-              </div>
-              <div className="specialty-card">
-                <h3>Beginner Programs</h3>
-                <p>Patient, thorough instruction for those new to Pilates</p>
-              </div>
-            </div>
-          </section>
-
-          <section className="trainer-approach">
-            <h2>Training Philosophy</h2>
-            <p>
-              "Pilates is more than exercise—it's a practice of self-discovery. Every movement is an opportunity 
-              to connect with your body, understand its needs, and celebrate its capabilities. I'm here to guide 
-              you on that journey with patience and expertise."
-            </p>
+          <section className="trainer-qualifications">
+            <h2>Qualifications & Experience</h2>
+            <ul>
+              <li>Basi Pilates Instructor</li>
+              <li>Specializes in Pilates for all ages and abilities</li>
+              <li>Focuses on mindful movement and personal growth</li>
+            </ul>
           </section>
 
           <section className="trainer-cta">

@@ -18,56 +18,46 @@ export const TrainerElif: React.FC = () => {
             <img src="/assets/images/elif.jpeg" alt="Elif Arzu Ogan" className="trainer-hero-photo" />
             <div className="trainer-hero-text">
               <h1>Elif Arzu Ogan</h1>
-              <p className="trainer-title">Pilates & Functional Training Specialist</p>
+              <p className="trainer-title">Owner & Head Trainer</p>
+              <ul className="trainer-languages">
+                <li>English</li>
+                <li>Turkish</li>
+              </ul>
             </div>
           </div>
         </div>
 
         <div className="trainer-content">
           <section className="trainer-bio">
-            <h2>About Elif</h2>
             <p>
-              Elif Arzu Ogan is a highly skilled Pilates and functional training specialist with years of experience 
-              helping clients achieve their fitness goals. Her approach combines classical Pilates techniques with 
-              modern functional training methods to create personalized programs that deliver real results.
-            </p>
-            <p>
-              With a deep understanding of body mechanics and movement patterns, Elif specializes in helping clients 
-              improve their posture, build core strength, and enhance overall body awareness. Whether you're recovering 
-              from an injury, looking to improve athletic performance, or simply want to feel stronger and more confident, 
-              Elif creates customized programs tailored to your unique needs.
+              Elif is the founder and head trainer of PT Studio 7, which she established in 2010. Since founding the studio, she has continued her career as both a trainer and business owner. With over 15 years of experience, she is a Senior Polestar Pilates Instructor, Miha BodyTec EMS Advance Trainer, and TRX & Functional Training Instructor. Elif holds a bachelor's degree in Business Administration from Hacettepe University. She started her sports career with athletics, continued with swimming, and played basketball in various clubs. She is passionate about helping clients reach their goals through personalized, attentive training and a holistic approach to health and fitness.
             </p>
           </section>
 
-          <section className="trainer-specialties">
-            <h2>Specializations</h2>
-            <div className="specialties-grid">
-              <div className="specialty-card">
-                <h3>Reformer Pilates</h3>
-                <p>Expert instruction on all Pilates apparatus with focus on proper form and technique</p>
-              </div>
-              <div className="specialty-card">
-                <h3>Functional Training</h3>
-                <p>Movement-based exercises to improve everyday activities and athletic performance</p>
-              </div>
-              <div className="specialty-card">
-                <h3>Posture Correction</h3>
-                <p>Specialized programs to address postural imbalances and chronic pain</p>
-              </div>
-              <div className="specialty-card">
-                <h3>Core Strengthening</h3>
-                <p>Deep core work for stability, strength, and injury prevention</p>
-              </div>
-            </div>
-          </section>
-
-          <section className="trainer-approach">
-            <h2>Training Philosophy</h2>
-            <p>
-              "I believe that fitness is not just about physical strength, but about building a sustainable, 
-              healthy relationship with your body. My goal is to help you move better, feel better, and enjoy 
-              the process of becoming stronger every day."
-            </p>
+          <section className="trainer-qualifications">
+            <h2>Qualifications & Experience</h2>
+            <ul>
+              <li>Senior Polestar Pilates Instructor</li>
+              <li>Miha BodyTec EMS Advance Trainer</li>
+              <li>TRX & Functional Training Instructor</li>
+              <li>15+ years of experience in personal training and Pilates</li>
+              <li>Specializes in individualized programs for all ages and fitness levels</li>
+              <li>Pilates for scoliosis and spinal disorders – Polestar Pilates, Online</li>
+              <li>Pilates during and post pregnancy workshop – Polestar Pilates, Online</li>
+              <li>Polestar Pilates Certified Pilates Trainer – Polestar Pilates, İstanbul</li>
+              <li>The science of healthy spine movement – Polestar Pilates with Brent Anderson, İstanbul</li>
+              <li>Pilates for low back care – Polestar Pilates and Brent Anderson, İstanbul</li>
+              <li>4dpro Bungee Fitness Trainer – 4dpro Bungee Fitness, İzmir</li>
+              <li>Miha bodytec Advance EMS Trainer – Miha bodytec, İstanbul</li>
+              <li>Reformer Pilates Trainer – Seam Academy, İstanbul</li>
+              <li>Pliometric Training and muscle contraction workshop – Seam Academy, İstanbul</li>
+              <li>Kinesis Trainer – Technogym Wellness Institute, İstanbul</li>
+              <li>Pilates during pregnancy workshop – Pilatesystem, Ankara</li>
+              <li>Pilates Instructor – Turkish Gymnastic Federation, İzmir</li>
+              <li>Zumba basic trainer – Zumba, İstanbul</li>
+              <li>TRX Suspension Training Trainer – TRX, İstanbul</li>
+              <li>Wellness Trainer – Turkish Sport for Everyone Federation, İzmir</li>
+            </ul>
           </section>
 
           <section className="trainer-cta">
