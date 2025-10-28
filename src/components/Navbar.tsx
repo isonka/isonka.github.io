@@ -74,6 +74,7 @@ export const Navbar: React.FC = () => {
           <li><a href="#workouts" aria-label="Explore workouts" onClick={(e) => { e.preventDefault(); scrollToSection('workouts'); }}>Workouts</a></li>
           <li><Link to="/pricing" aria-label="View pricing" onClick={closeMenu}>Prices</Link></li>
           <li><Link to="/equipment" aria-label="Explore equipment" onClick={closeMenu}>Equipment</Link></li>
+          <li><Link to="/academy" aria-label="PT 7 Academy" onClick={closeMenu}>Academy</Link></li>
           <li><a href="#contact" aria-label="Contact us" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</a></li>
           <li className="navbar-booknow-desktop-wrapper">
             <Link to="/schedule" className="navbar-booknow-desktop" aria-label="Book a class" onClick={closeMenu}>

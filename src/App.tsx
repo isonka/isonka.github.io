@@ -15,6 +15,7 @@ import { Congrats } from './pages/Congrats';
 import { TrainerElif } from './pages/TrainerElif';
 import { TrainerGokben } from './pages/TrainerGokben';
 import { TrainerGoknur } from './pages/TrainerGoknur';
+import { Academy } from './pages/Academy';
 import './App.css';
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
             <Route path="/trainer-elif" element={<TrainerElif />} />
             <Route path="/trainer-gokben" element={<TrainerGokben />} />
             <Route path="/trainer-goknur" element={<TrainerGoknur />} />
+            <Route path="/academy" element={<Academy />} />
           </Routes>
         </main>
         <Footer />

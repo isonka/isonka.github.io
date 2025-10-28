@@ -1,0 +1,466 @@
+/* Academy Page */
+.academy-page {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.academy-hero {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 120px 20px 80px;
+  text-align: center;
+  color: #fff;
+}
+
+.academy-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.academy-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 16px;
+  color: #ffd700;
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Container */
+.academy-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* About Section */
+.academy-about {
+  padding: 80px 20px;
+  background: #f8f8f8;
+}
+
+.academy-about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 32px;
+  color: #222;
+  text-align: center;
+}
+
+.academy-about p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.start-date {
+  font-size: 1.3rem;
+  color: #ffd700;
+  background: #f0f0f0;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* Courses Section */
+.academy-courses {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.academy-courses h2 {
+  font-size: 2.5rem;
+  margin-bottom: 48px;
+  color: #222;
+  text-align: center;
+}
+
+/* Program Overview */
+.program-overview {
+  background: linear-gradient(135deg, #ffd700 0%, #e5c100 100%);
+  padding: 40px;
+  border-radius: 12px;
+  margin-bottom: 48px;
+}
+
+.program-overview h3 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.knowledge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.knowledge-item {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.course-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e5e5e5;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.course-card.featured {
+  border-color: #ffd700;
+  background: linear-gradient(to bottom, #fffef8 0%, #fff 100%);
+}
+
+.course-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #ffd700;
+  color: #222;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.course-card h3 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #222;
+  line-height: 1.3;
+}
+
+.course-price {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.vat-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #888;
+}
+
+.savings {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #00a651;
+  margin-top: 8px;
+}
+
+.combo-note {
+  background: #fff9e6;
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  color: #222;
+  margin-bottom: 24px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.special-package {
+  background: linear-gradient(to bottom, #fffef8 0%, #fff9e6 100%);
+  border-color: #ffd700;
+}
+
+.course-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #666;
+  margin-bottom: 32px;
+}
+
+.course-details {
+  margin-bottom: 32px;
+}
+
+.course-details h4 {
+  font-size: 1.3rem;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+.course-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.course-details li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  padding: 8px 0 8px 28px;
+  position: relative;
+}
+
+.course-details li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ffd700;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.course-cta {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.course-btn {
+  display: inline-block;
+  padding: 16px 40px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.course-btn.primary {
+  background: #ffd700;
+  color: #222;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+.course-btn.primary:hover {
+  background: #e5c100;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 215, 0, 0.6);
+}
+
+/* Payment Information */
+.payment-info {
+  background: #f8f8f8;
+  padding: 32px;
+  border-radius: 12px;
+  margin-top: 48px;
+  text-align: center;
+  border-left: 4px solid #ffd700;
+}
+
+.payment-info h3 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 16px;
+}
+
+.payment-info p {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 0;
+}
+
+/* Benefits Section */
+.academy-benefits {
+  padding: 80px 20px;
+  background: #f8f8f8;
+}
+
+.academy-benefits h2 {
+  font-size: 2.5rem;
+  margin-bottom: 48px;
+  color: #222;
+  text-align: center;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.benefit-card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.benefit-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.benefit-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* CTA Section */
+.academy-cta {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #222 0%, #1a1a1a 100%);
+  text-align: center;
+  color: #fff;
+}
+
+.academy-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 24px;
+  color: #ffd700;
+}
+
+.academy-cta p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 18px 40px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cta-btn.primary {
+  background: #ffd700;
+  color: #222;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+.cta-btn.primary:hover {
+  background: #e5c100;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 215, 0, 0.6);
+}
+
+.cta-btn.secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.cta-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .academy-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .academy-about h2,
+  .academy-courses h2,
+  .academy-benefits h2,
+  .academy-cta h2 {
+    font-size: 2rem;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-card {
+    padding: 28px;
+  }
+
+  .course-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .cta-btn {
+    width: 100%;
+  }
+}
+
