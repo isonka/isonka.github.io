@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
@@ -19,11 +20,29 @@ import { TrainerGoknur } from './pages/TrainerGoknur';
 import { Academy } from './pages/Academy';
 import './App.css';
 
+// Component to handle 404.html redirects
+function RedirectHandler() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const redirect = params.get('redirect');
+    
+    if (redirect) {
+      // Remove the redirect parameter and navigate to the intended path
+      navigate(redirect, { replace: true });
+    }
+  }, [navigate]);
+
+  return null;
+}
+
 function App() {
   return (
     <Router>
       <CookieConsent />
       <ScrollToTop />
+      <RedirectHandler />
       <div className="app">
         <Navbar />
         <main className="main-content">

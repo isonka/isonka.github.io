@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redirecting...</title>
     <script>
-      // GitHub Pages SPA redirect solution
+      // SPA redirect solution for custom domain
       // This script takes the current URL and redirects to the root with the path as a query parameter
       // The main app will then handle the routing
-      const path = window.location.pathname.replace(/^\/ptstudio7/, '');
+      const path = window.location.pathname;
       const query = window.location.search;
       const hash = window.location.hash;
       
       if (path && path !== '/') {
-        window.location.replace('/ptstudio7/' + '?redirect=' + encodeURIComponent(path + query + hash));
+        window.location.replace('/' + '?redirect=' + encodeURIComponent(path + query + hash));
       } else {
-        window.location.replace('/ptstudio7/');
+        window.location.replace('/');
       }
     </script>
   </head>
