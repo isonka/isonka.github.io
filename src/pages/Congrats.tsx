@@ -1,8 +1,25 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
 import '../styles/Congrats.css';
 
+// Declare gtag function for TypeScript
+declare global {
+  interface Window {
+    gtag?: (command: string, eventName: string, params?: Record<string, unknown>) => void;
+  }
+}
+
 export const Congrats: React.FC = () => {
+  useEffect(() => {
+    // Fire Google Ads conversion event when page loads
+    if (window.gtag) {
+      window.gtag('event', 'ads_conversion_Book_appointment_1', {
+        // event_parameters can be added here if needed
+      });
+    }
+  }, []);
+
   return (
     <>
       <SEOHead
