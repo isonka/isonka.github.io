@@ -42,12 +42,13 @@ export const Home: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="PT Studio 7 Amsterdam | Pilates Studio at Museumplein"
-        description="Amsterdam's premier Pilates boutique studio at Museumplein. Small group classes (max 4). Expert certified instructors. Private & group classes. EMS, TRX & Functional Training. Located at Stedelijk Museum."
-        keywords="Pilates Amsterdam, Pilates Museumplein, boutique Pilates studio Amsterdam, small group Pilates Amsterdam, private Pilates Amsterdam, Pilates studio Stedelijk Museum, luxury Pilates Amsterdam, Pilates Rijksmuseum, intimate Pilates classes Amsterdam, premium Pilates Museumplein"
+        title="Pilates Amsterdam Museumplein | PT Studio 7 - Small Group Classes (Max 4)"
+        description="Pilates Amsterdam at Museumplein - Premium Pilates studio with small group classes (max 4 people). Expert instructors, private sessions & group classes. EMS, TRX, Functional Training. Located at Van Baerlestraat 76C, across from Stedelijk Museum."
+        keywords="Pilates Amsterdam, Pilates Museumplein, Pilates classes Amsterdam, private Pilates Amsterdam, small group Pilates, Pilates studio Amsterdam, best Pilates Amsterdam, Pilates near me, boutique Pilates Amsterdam, Pilates Zuid Amsterdam, Pilates Amsterdam centrum"
         canonical="https://www.ptstudio7amsterdam.nl"
-        ogTitle="PT Studio 7 | Pilates Studio at Museumplein Amsterdam"
-        ogDescription="Amsterdam's premier Pilates boutique studio. Small groups (max 4). Expert instructors. Premium Museumplein location. Private & group Pilates classes available."
+        ogTitle="Pilates Amsterdam Museumplein | PT Studio 7"
+        ogDescription="Premium Pilates studio at Museumplein Amsterdam. Small groups (max 4), expert Pilates instructors, private & group classes. Book your session today!"
+        ogImage="/assets/images/about-us-web.jpg"
       />
       
       {/* Video Hero Section - Desktop only, lazy loaded */}
@@ -66,11 +67,11 @@ export const Home: React.FC = () => {
         </video>
         <div className="hero-overlay">
           <div className="hero-content-wrapper">
-            <h1 className="hero-title">PT Studio 7 Amsterdam</h1>
-              <h2 className="hero-tagline">Pilates Studio at Museumplein</h2>
+            <h1 className="hero-title">Pilates Amsterdam Museumplein</h1>
+              <h2 className="hero-tagline">Premium Pilates Studio | Small Group Classes (Max 4)</h2>
               <p className="hero-description">
-                  • Expert Certified Instructors • Tailored Private Classes • Premium Location<br/>
-                  Pilates • EMS • TRX • One-on-One & Small Groups (Max 4)
+                  • Expert Certified Instructors • Private & Group Pilates Classes • Museumplein Location<br/>
+                  Pilates • EMS Training • TRX • Functional Training
               </p>
             <div className="hero-buttons">
               <Link to="/schedule" className="hero-btn-primary">Book a Class</Link>
@@ -104,19 +105,18 @@ export const Home: React.FC = () => {
           <div className="about-content">
             <h2>Welcome to PT Studio 7</h2>
             <p>
-              For the past 15 years, we've been dedicated to transforming lives through private, personalized Pilates 
-              training at our boutique studio in the heart of Amsterdam at Museumplein. Every session is tailored 
-              specifically to your body, your goals, and your unique needs.
+              With 15 years of Pilates expertise at our Museumplein location, we offer Amsterdam's premier boutique 
+              studio experience. Located at Van Baerlestraat 76C, across from Stedelijk Museum, we provide personalized 
+              training tailored to your body and goals.
             </p>
             <p>
-              Our specialty is one-on-one private training where you receive 100% of your instructor's attention. We also 
-              offer intimate small group sessions (maximum 4 people) for those who enjoy training with friends while still 
-              receiving individualized guidance. Each program is customized to help you build strength, improve flexibility, 
-              rehabilitate from injury, or achieve any wellness goal you have.
+              We specialize in one-on-one private Pilates where you receive 100% of your instructor's attention. 
+              We also offer intimate small group classes (maximum 4 people) for those who enjoy training with friends. 
+              Each program is customized to build strength, improve flexibility, or achieve your wellness goals.
             </p>
             <p>
-              Our expert instructors don't just follow a routine—they design a personalized roadmap for your success, 
-              adapting every session to your progress and celebrating each milestone with you.
+              Our expert instructors design a personalized roadmap for your success, adapting every session 
+              to your progress and celebrating each milestone with you.
             </p>
             <p className="about-signature">
               <strong>Elif Arzu Ogan</strong><br/>
