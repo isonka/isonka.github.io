@@ -12,10 +12,15 @@ declare global {
 
 export const Congrats: React.FC = () => {
   useEffect(() => {
-    // Fire Google Ads conversion event when page loads
+    // Fire Google Ads conversion events when page loads
     if (window.gtag) {
-      window.gtag('event', 'ads_conversion_Book_appointment_1', {
-        // event_parameters can be added here if needed
+      // Primary conversion event (original)
+      window.gtag('event', 'ads_conversion_Book_appointment_1', {});
+      
+      // Purchase conversion tracking (new)
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-17684932205/G4r3CKjwirkbEO3M6vBB',
+        'transaction_id': '' // Optional: can add unique booking ID if available
       });
     }
   }, []);
