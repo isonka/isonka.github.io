@@ -1,8 +1,44 @@
+import { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
 import '../styles/Home.css';
 
 export const Home: React.FC = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+  useEffect(() => {
+    // Only load video on desktop (not on mobile to save bandwidth)
+    const isMobile = window.innerWidth < 768;
+    
+    if (!isMobile && videoRef.current) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !isVideoLoaded) {
+              const video = videoRef.current;
+              if (video) {
+                // Load video only when in viewport
+                video.src = '/assets/video/landing.mp4';
+                video.load();
+                setIsVideoLoaded(true);
+              }
+            }
+          });
+        },
+        { threshold: 0.25 } // Load when 25% visible
+      );
+
+      observer.observe(videoRef.current);
+
+      return () => {
+        if (videoRef.current) {
+          observer.unobserve(videoRef.current);
+        }
+      };
+    }
+  }, [isVideoLoaded]);
+
   return (
     <>
       <SEOHead
@@ -14,10 +50,19 @@ export const Home: React.FC = () => {
         ogDescription="Amsterdam's premier Pilates boutique studio. Small groups (max 4). Expert instructors. Premium Museumplein location. Private & group Pilates classes available."
       />
       
-      {/* Video Hero Section */}
+      {/* Video Hero Section - Desktop only, lazy loaded */}
       <section className="hero-video">
-        <video autoPlay muted loop playsInline className="hero-video-bg">
-          <source src="/assets/video/landing.mp4" type="video/mp4" />
+        <video 
+          ref={videoRef}
+          autoPlay 
+          muted 
+          loop 
+          playsInline 
+          poster="/assets/images/about-us-web.jpg"
+          className="hero-video-bg"
+          aria-label="PT Studio 7 background video"
+        >
+          {/* Source loaded dynamically via IntersectionObserver */}
         </video>
         <div className="hero-overlay">
           <div className="hero-content-wrapper">
@@ -92,27 +137,27 @@ export const Home: React.FC = () => {
         </div>
         <div className="workouts-grid">
           <div className="workout-card">
-            <img src="/assets/images/pilates.jpg" alt="Pilates" />
+            <img src="/assets/images/pilates.jpg" alt="Reformer Pilates" loading="lazy" decoding="async" />
             <h3>Reformer Pilates</h3>
             <p>Full-body workout focusing on core strength, flexibility, and posture</p>
           </div>
           <div className="workout-card">
-            <img src="/assets/images/trx.jpg" alt="TRX" />
+            <img src="/assets/images/trx.jpg" alt="TRX Training" loading="lazy" decoding="async" />
             <h3>TRX Training</h3>
             <p>Suspension training for strength, balance, and functional fitness</p>
           </div>
           <div className="workout-card">
-            <img src="/assets/images/free.jpg" alt="Free Weights" />
+            <img src="/assets/images/free.jpg" alt="Functional Training" loading="lazy" decoding="async" />
             <h3>Functional Training</h3>
             <p>Build strength and improve movement patterns with free weights</p>
           </div>
           <div className="workout-card">
-            <img src="/assets/images/cardio.jpg" alt="Cardio" />
+            <img src="/assets/images/cardio.jpg" alt="Cardio Training" loading="lazy" decoding="async" />
             <h3>Cardio</h3>
             <p>High-intensity cardio workouts to boost endurance and burn calories</p>
           </div>
           <div className="workout-card">
-            <img src="/assets/images/ems.jpg" alt="EMS" />
+            <img src="/assets/images/ems.jpg" alt="EMS Training" loading="lazy" decoding="async" />
             <h3>EMS Training</h3>
             <p>Electro Muscle Stimulation for efficient full-body activation</p>
           </div>
@@ -127,19 +172,40 @@ export const Home: React.FC = () => {
         </div>
         <div className="trainers-grid">
           <Link to="/trainer-elif" className="trainer-card">
-            <img src="/assets/images/elif.jpeg" alt="Elif Arzu Ogan" />
+            <img 
+              src="/assets/images/elif.jpeg" 
+              alt="Elif Arzu Ogan - Pilates Instructor" 
+              loading="lazy"
+              decoding="async"
+              width="400"
+              height="500"
+            />
             <h3>Elif Arzu Ogan</h3>
             <p>Pilates & Functional Training Specialist</p>
             <span className="learn-more">Learn More →</span>
           </Link>
           <Link to="/trainer-gokben" className="trainer-card">
-            <img src="/assets/images/gokben.jpeg" alt="Gökben Öztekin" />
+            <img 
+              src="/assets/images/gokben.jpeg" 
+              alt="Gökben Öztekin - Reformer Pilates Expert" 
+              loading="lazy"
+              decoding="async"
+              width="400"
+              height="500"
+            />
             <h3>Gökben Öztekin</h3>
             <p>Reformer Pilates Expert</p>
             <span className="learn-more">Learn More →</span>
           </Link>
           <Link to="/trainer-goknur" className="trainer-card">
-            <img src="/assets/images/goknur.jpeg" alt="Göknur Dipli" />
+            <img 
+              src="/assets/images/goknur.jpeg" 
+              alt="Göknur Dipli - Personal Trainer" 
+              loading="lazy"
+              decoding="async"
+              width="400"
+              height="500"
+            />
             <h3>Göknur Dipli</h3>
             <p>Personal Trainer & Nutrition Coach</p>
             <span className="learn-more">Learn More →</span>
@@ -155,7 +221,7 @@ export const Home: React.FC = () => {
         </div>
         <div className="reviews-container">
           <div className="review-card">
-            <img src="/assets/images/cansu.png" alt="Cansu" className="reviewer-photo" />
+            <img src="/assets/images/cansu.png" alt="Cansu review" className="reviewer-photo" loading="lazy" decoding="async" />
             <div className="stars">★★★★★</div>
             <p className="review-text">
               "Amazing studio with top-notch equipment and incredibly knowledgeable trainers. 
@@ -164,7 +230,7 @@ export const Home: React.FC = () => {
             <p className="review-author">- Cansu</p>
           </div>
           <div className="review-card">
-            <img src="/assets/images/su.png" alt="Su" className="reviewer-photo" />
+            <img src="/assets/images/su.png" alt="Su review" className="reviewer-photo" loading="lazy" decoding="async" />
             <div className="stars">★★★★★</div>
             <p className="review-text">
               "The location is unbeatable - right at Museumplein! The trainers are professional 
@@ -173,7 +239,7 @@ export const Home: React.FC = () => {
             <p className="review-author">- Su</p>
           </div>
           <div className="review-card">
-            <img src="/assets/images/yesim.png" alt="Yeşim" className="reviewer-photo" />
+            <img src="/assets/images/yesim.png" alt="Yeşim review" className="reviewer-photo" loading="lazy" decoding="async" />
             <div className="stars">★★★★★</div>
             <p className="review-text">
               "I've been coming here for 6 months and the results are incredible. The atmosphere 
@@ -182,7 +248,7 @@ export const Home: React.FC = () => {
             <p className="review-author">- Yeşim</p>
           </div>
           <div className="review-card">
-            <img src="/assets/images/tugce.png" alt="Tuğçe" className="reviewer-photo" />
+            <img src="/assets/images/tugce.png" alt="Tuğçe review" className="reviewer-photo" loading="lazy" decoding="async" />
             <div className="stars">★★★★★</div>
             <p className="review-text">
               "Professional trainers, clean studio, and great energy. I feel stronger and more 
