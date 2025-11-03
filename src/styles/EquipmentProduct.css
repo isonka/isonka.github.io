@@ -221,7 +221,7 @@
 .faq-question::after {
   content: '+';
   font-size: 1.8rem;
-  font-weight: 300;
+  font-weight: 400;
   color: #bfa100;
   min-width: 30px;
   text-align: center;

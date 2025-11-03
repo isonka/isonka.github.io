@@ -1,25 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7K4DF0N40"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-J7K4DF0N40');
-    </script>
-
-    <!-- Google tag (gtag.js) - Google Ads -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17684932205"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-17684932205');
-    </script>
-
-    <!-- Google Tag Manager -->
+    <!-- Google Tag Manager (Primary - handles all tracking) -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -27,27 +9,40 @@
     })(window,document,'script','dataLayer','GTM-KB25PGXB');</script>
     <!-- End Google Tag Manager -->
 
+    <!-- Unified Google Analytics & Ads (single gtag.js load) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7K4DF0N40"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      // Google Analytics
+      gtag('config', 'G-J7K4DF0N40', {'send_page_view': false});
+      // Google Ads (using same gtag.js instance)
+      gtag('config', 'AW-17684932205');
+    </script>
+
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/assets/images/pt7logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="PT Studio 7" />
     <title>PT Studio 7 Amsterdam - Premium Pilates & Personal Training Studio</title>
     
-    <!-- DNS Prefetch & Preconnect for faster external resource loading -->
+    <!-- DNS Prefetch for faster external resource loading -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://widgets.mindbodyonline.com">
+    
+    <!-- Preconnect to critical origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://www.googletagmanager.com">
     
     <!-- Preload critical assets for better LCP -->
-    <link rel="preload" as="video" href="/assets/video/landing.mp4" type="video/mp4">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" crossorigin>
     <link rel="preload" as="image" href="/assets/images/pt7logo.png">
     
-    <!-- Google Fonts - Poppins (async loaded to not block render) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <!-- Optimized Google Fonts - Reduced weight variants (400,600,700 instead of 300,400,500,600,700) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
     
     <!-- MindBody Healcode Widget Script - Deferred to not block rendering -->
     <script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript" defer></script>

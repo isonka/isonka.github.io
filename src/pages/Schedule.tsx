@@ -7,15 +7,22 @@ export const Schedule: React.FC = () => {
   const [activeTab, setActiveTab] = useState('group');
 
   useEffect(() => {
-    // Load MindBody widget script
-    const script = document.createElement('script');
-    script.src = 'https://brandedweb.mindbodyonline.com/embed/widget.js';
-    script.async = true;
-    document.body.appendChild(script);
+    // Load MindBody widget script only if not already loaded
+    const existingScript = document.querySelector('script[src*="mindbodyonline.com"]');
+    
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.src = 'https://brandedweb.mindbodyonline.com/embed/widget.js';
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
 
-    return () => {
-      document.body.removeChild(script);
-    };
+      return () => {
+        if (document.body.contains(script)) {
+          document.body.removeChild(script);
+        }
+      };
+    }
   }, []);
 
   return (

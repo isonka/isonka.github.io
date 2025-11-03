@@ -1,5 +1,5 @@
-/* Google Fonts - must be first */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+/* Google Fonts removed from CSS - loaded in HTML head for better performance */
+/* Using Poppins font weights: 400, 600, 700 (loaded in index.html) */
 
 :root {
   --primary-color: #ffd700;
