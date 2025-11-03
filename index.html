@@ -33,13 +33,24 @@
     <meta name="author" content="PT Studio 7" />
     <title>PT Studio 7 Amsterdam - Premium Pilates & Personal Training Studio</title>
     
-    <!-- Google Fonts - Poppins -->
+    <!-- DNS Prefetch & Preconnect for faster external resource loading -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://widgets.mindbodyonline.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
     
-    <!-- MindBody Healcode Widget Script -->
-    <script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script>
+    <!-- Preload critical assets for better LCP -->
+    <link rel="preload" as="video" href="/assets/video/landing.mp4" type="video/mp4">
+    <link rel="preload" as="image" href="/assets/images/pt7logo.png">
+    
+    <!-- Google Fonts - Poppins (async loaded to not block render) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- MindBody Healcode Widget Script - Deferred to not block rendering -->
+    <script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript" defer></script>
     
     <!-- Structured Data - LocalBusiness Schema -->
     <script type="application/ld+json">
