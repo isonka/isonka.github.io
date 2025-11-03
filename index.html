@@ -45,25 +45,33 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "PT Studio 7",
-      "image": "https://www.ptstudio7amsterdam.nl/assets/images/pt7logo.png",
+      "@type": ["LocalBusiness", "HealthAndBeautyBusiness", "SportsActivityLocation"],
+      "name": "PT Studio 7 Amsterdam",
+      "alternateName": "PT Studio 7",
+      "image": [
+        "https://www.ptstudio7amsterdam.nl/assets/images/pt7logo.png",
+        "https://www.ptstudio7amsterdam.nl/assets/images/reformer.jpg",
+        "https://www.ptstudio7amsterdam.nl/assets/images/tower_reformer.jpg"
+      ],
       "@id": "https://www.ptstudio7amsterdam.nl",
       "url": "https://www.ptstudio7amsterdam.nl",
       "telephone": "+31685162693",
+      "email": "info@ptstudio7amsterdam.nl",
       "priceRange": "€€",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Van Baerlestraat 76C",
         "addressLocality": "Amsterdam",
         "postalCode": "1071BB",
-        "addressCountry": "NL"
+        "addressCountry": "NL",
+        "addressRegion": "Noord-Holland"
       },
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": 52.3572909720188,
         "longitude": 4.876257777138345
       },
+      "hasMap": "https://maps.google.com/?q=Van+Baerlestraat+76C,+Amsterdam",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -81,12 +89,71 @@
       "sameAs": [
         "https://www.instagram.com/ptstudio7amsterdam"
       ],
-      "description": "Amsterdam's premier Pilates boutique studio at Museumplein. Small group classes (max 4). Expert certified instructors. Private & group classes. EMS, TRX & Functional Training.",
+      "description": "Amsterdam's premier Pilates boutique studio at Museumplein. Small group classes (max 4). Expert certified instructors. Private & group Pilates classes. EMS, TRX & Functional Training.",
+      "knowsAbout": ["Pilates", "Personal Training", "EMS Training", "TRX", "Functional Training", "Reformer Pilates", "Tower Reformer", "Cadillac Pilates", "Small Group Training"],
+      "areaServed": {
+        "@type": "City",
+        "name": "Amsterdam"
+      },
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
         "reviewCount": "150"
-      }
+      },
+      "paymentAccepted": "Credit Card, Cash, Bank Transfer",
+      "currenciesAccepted": "EUR"
+    }
+    </script>
+    
+    <!-- Structured Data - FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is PT Studio 7 located in Amsterdam?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PT Studio 7 is located at Van Baerlestraat 76C, 1071BB Amsterdam, right at Museumplein, across from the Stedelijk Museum with stunning views of the Rijksmuseum."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of Pilates classes does PT Studio 7 offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer both small group Pilates classes (maximum 4 participants) and private Pilates sessions. Classes include Reformer Pilates, Tower Reformer, Cadillac, and mat Pilates, along with EMS training, TRX, and functional training."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many people are in PT Studio 7 group classes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our small group classes have a maximum of 4 participants, ensuring personalized attention from our expert instructors in an intimate boutique setting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I book private Pilates sessions at PT Studio 7?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! We offer private Pilates sessions for individuals, couples, or groups of three. Private sessions are fully customized to your specific goals, fitness level, and any injuries or special needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What equipment does PT Studio 7 have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We have professional Pilates equipment including Reformers, Tower Reformers, Cadillac, Wunda Chair, Ladder Barrel, Spine Corrector, and accessories. We also offer EMS training and TRX equipment."
+          }
+        }
+      ]
     }
     </script>
   </head>
