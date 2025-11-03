@@ -42,12 +42,12 @@ export const Home: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Pilates Amsterdam Museumplein | PT Studio 7 - Small Group Classes (Max 4)"
-        description="Pilates Amsterdam at Museumplein - Premium Pilates studio with small group classes (max 4 people). Expert instructors, private sessions & group classes. EMS, TRX, Functional Training. Located at Van Baerlestraat 76C, across from Stedelijk Museum."
-        keywords="Pilates Amsterdam, Pilates Museumplein, Pilates classes Amsterdam, private Pilates Amsterdam, small group Pilates, Pilates studio Amsterdam, best Pilates Amsterdam, Pilates near me, boutique Pilates Amsterdam, Pilates Zuid Amsterdam, Pilates Amsterdam centrum"
+        title="Reformer Pilates Amsterdam Museumplein | PT Studio 7 - Small Group Classes"
+        description="Reformer Pilates Amsterdam at Museumplein - Premium Reformer Pilates studio with small group classes (max 4 people). Expert instructors, private sessions & group Reformer classes. EMS, TRX, Functional Training. Van Baerlestraat 76C, across from Stedelijk Museum."
+        keywords="Reformer Pilates Amsterdam, Pilates Amsterdam, Reformer Pilates Museumplein, Pilates classes Amsterdam, private Reformer Pilates Amsterdam, small group Pilates, Pilates studio Amsterdam, best Pilates Amsterdam, Reformer Pilates near me, boutique Pilates Amsterdam, Pilates Zuid Amsterdam"
         canonical="https://www.ptstudio7amsterdam.nl"
-        ogTitle="Pilates Amsterdam Museumplein | PT Studio 7"
-        ogDescription="Premium Pilates studio at Museumplein Amsterdam. Small groups (max 4), expert Pilates instructors, private & group classes. Book your session today!"
+        ogTitle="Reformer Pilates Amsterdam Museumplein | PT Studio 7"
+        ogDescription="Premium Reformer Pilates studio at Museumplein Amsterdam. Small groups (max 4), expert instructors, private & group classes. Book your Reformer Pilates session!"
         ogImage="/assets/images/about-us-web.jpg"
       />
       
@@ -67,11 +67,11 @@ export const Home: React.FC = () => {
         </video>
         <div className="hero-overlay">
           <div className="hero-content-wrapper">
-            <h1 className="hero-title">Pilates Amsterdam Museumplein</h1>
-              <h2 className="hero-tagline">Premium Pilates Studio | Small Group Classes (Max 4)</h2>
+            <h1 className="hero-title">Reformer Pilates Amsterdam Museumplein</h1>
+              <h2 className="hero-tagline">Premium Reformer Pilates Studio | Small Group Classes (Max 4)</h2>
               <p className="hero-description">
-                  • Expert Certified Instructors • Private & Group Pilates Classes • Museumplein Location<br/>
-                  Pilates • EMS Training • TRX • Functional Training
+                  • Expert Certified Instructors • Private & Group Reformer Pilates • Museumplein Location<br/>
+                  Reformer Pilates • EMS Training • TRX • Functional Training
               </p>
             <div className="hero-buttons">
               <Link to="/schedule" className="hero-btn-primary">Book a Class</Link>
@@ -105,14 +105,14 @@ export const Home: React.FC = () => {
           <div className="about-content">
             <h2>Welcome to PT Studio 7</h2>
             <p>
-              With 15 years of Pilates expertise at our Museumplein location, we offer Amsterdam's premier boutique 
-              studio experience. Located at Van Baerlestraat 76C, across from Stedelijk Museum, we provide personalized 
-              training tailored to your body and goals.
+              With 15 years of Reformer Pilates expertise at our Museumplein location, we offer Amsterdam's premier 
+              boutique Reformer Pilates studio experience. Located at Van Baerlestraat 76C, across from Stedelijk Museum, 
+              we provide personalized Reformer Pilates training tailored to your body and goals.
             </p>
             <p>
-              We specialize in one-on-one private Pilates where you receive 100% of your instructor's attention. 
-              We also offer intimate small group classes (maximum 4 people) for those who enjoy training with friends. 
-              Each program is customized to build strength, improve flexibility, or achieve your wellness goals.
+              We specialize in one-on-one private Reformer Pilates where you receive 100% of your instructor's attention. 
+              We also offer intimate small group Reformer Pilates classes (maximum 4 people) for those who enjoy training 
+              with friends. Each program is customized to build strength, improve flexibility, or achieve your wellness goals.
             </p>
             <p>
               Our expert instructors design a personalized roadmap for your success, adapting every session 
