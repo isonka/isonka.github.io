@@ -7,13 +7,23 @@ export const Schedule: React.FC = () => {
   const [activeTab, setActiveTab] = useState('group');
 
   useEffect(() => {
-    // Load MindBody Branded Web widget script (different from healcode.js used in Pricing)
+    // Load MindBody Branded Web widget script once on mount
     const existingScript = document.querySelector('script[src*="brandedweb.mindbodyonline.com"]');
     
     if (!existingScript) {
       const script = document.createElement('script');
       script.src = 'https://brandedweb.mindbodyonline.com/embed/widget.js';
       script.async = true;
+      
+      // Add script and wait for it to load
+      script.onload = () => {
+        console.log('MindBody widget script loaded');
+      };
+      
+      script.onerror = () => {
+        console.error('Failed to load MindBody widget script');
+      };
+      
       document.body.appendChild(script);
 
       return () => {
@@ -23,29 +33,6 @@ export const Schedule: React.FC = () => {
       };
     }
   }, []);
-
-  useEffect(() => {
-    // Re-initialize widgets when tab changes
-    // MindBody widgets don't load properly when hidden (display: none)
-    const timer = setTimeout(() => {
-      const script = document.querySelector('script[src*="brandedweb.mindbodyonline.com"]');
-      
-      if (script) {
-        // Force widget re-scan by cloning and re-appending the script
-        const newScript = document.createElement('script');
-        newScript.src = 'https://brandedweb.mindbodyonline.com/embed/widget.js';
-        newScript.async = true;
-        
-        // Remove old script
-        script.remove();
-        
-        // Add new script to trigger re-initialization
-        document.body.appendChild(newScript);
-      }
-    }, 200);
-
-    return () => clearTimeout(timer);
-  }, [activeTab]);
 
   return (
     <>

@@ -113,7 +113,6 @@
 
 /* Tab Content */
 .tab-content {
-  display: none;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -121,10 +120,22 @@
   width: 100%;
   clear: both;
   margin-top: 16px;
+  /* Use visibility instead of display:none so MindBody widgets can initialize */
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
 .tab-content.active {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  position: relative;
+  pointer-events: auto;
 }
 
 .tab-content h2 {
