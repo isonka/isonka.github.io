@@ -8,6 +8,11 @@ declare global {
       'healcode-widget': any;
     }
   }
+  interface Window {
+    HealcodeWidget?: {
+      init: () => void;
+    };
+  }
 }
 
 export const Pricing: React.FC = () => {
@@ -45,18 +50,8 @@ export const Pricing: React.FC = () => {
   }, [openFaqIndex]);
 
   useEffect(() => {
-    // Trigger healcode widget initialization after tab change
-    const timer = setTimeout(() => {
-      if ((window as any).HealcodeWidget && typeof (window as any).HealcodeWidget.init === 'function') {
-        try {
-          (window as any).HealcodeWidget.init();
-        } catch (e) {
-          console.log('HealcodeWidget init error:', e);
-        }
-      }
-    }, 100);
-    
-    return () => clearTimeout(timer);
+    // Healcode widgets auto-initialize when they detect healcode-widget elements in DOM
+    // No manual initialization needed - the script in index.html handles this automatically
   }, [activeTab]);
 
   return (

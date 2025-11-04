@@ -7,14 +7,13 @@ export const Schedule: React.FC = () => {
   const [activeTab, setActiveTab] = useState('group');
 
   useEffect(() => {
-    // Load MindBody widget script only if not already loaded
-    const existingScript = document.querySelector('script[src*="mindbodyonline.com"]');
+    // Load MindBody Branded Web widget script (different from healcode.js used in Pricing)
+    const existingScript = document.querySelector('script[src*="brandedweb.mindbodyonline.com"]');
     
     if (!existingScript) {
       const script = document.createElement('script');
       script.src = 'https://brandedweb.mindbodyonline.com/embed/widget.js';
       script.async = true;
-      script.defer = true;
       document.body.appendChild(script);
 
       return () => {
