@@ -24,6 +24,29 @@ export const Schedule: React.FC = () => {
     }
   }, []);
 
+  useEffect(() => {
+    // Re-initialize widgets when tab changes
+    // MindBody widgets don't load properly when hidden (display: none)
+    const timer = setTimeout(() => {
+      const script = document.querySelector('script[src*="brandedweb.mindbodyonline.com"]');
+      
+      if (script) {
+        // Force widget re-scan by cloning and re-appending the script
+        const newScript = document.createElement('script');
+        newScript.src = 'https://brandedweb.mindbodyonline.com/embed/widget.js';
+        newScript.async = true;
+        
+        // Remove old script
+        script.remove();
+        
+        // Add new script to trigger re-initialization
+        document.body.appendChild(newScript);
+      }
+    }, 200);
+
+    return () => clearTimeout(timer);
+  }, [activeTab]);
+
   return (
     <>
       <SEOHead
