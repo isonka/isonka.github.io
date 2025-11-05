@@ -18,6 +18,8 @@ import { TrainerElif } from './pages/TrainerElif';
 import { TrainerGokben } from './pages/TrainerGokben';
 import { TrainerGoknur } from './pages/TrainerGoknur';
 import { Academy } from './pages/Academy';
+import { Blog } from './pages/Blog';
+import { BlogPost } from './pages/BlogPost';
 import './App.css';
 
 // Component to handle GitHub Pages redirects
@@ -62,6 +64,8 @@ function App() {
             <Route path="/trainer-gokben" element={<TrainerGokben />} />
             <Route path="/trainer-goknur" element={<TrainerGoknur />} />
             <Route path="/academy" element={<Academy />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
           </Routes>
         </main>
         <Footer />
