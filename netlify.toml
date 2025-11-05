@@ -5,7 +5,7 @@
   publish = "dist"
   command = "npm run build"
 
-# SPA redirect for React Router
+# SPA redirect for React Router - MUST come before any other redirects
 [[redirects]]
   from = "/*"
   to = "/index.html"
