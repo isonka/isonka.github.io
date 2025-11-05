@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
@@ -20,22 +20,30 @@ import { TrainerGoknur } from './pages/TrainerGoknur';
 import { Academy } from './pages/Academy';
 import './App.css';
 
-function App() {
+// Component to handle GitHub Pages redirects
+function RedirectHandler() {
+  const navigate = useNavigate();
+
   useEffect(() => {
     // Handle GitHub Pages SPA routing
     // The 404.html stores the intended path in sessionStorage
     const redirect = sessionStorage.getItem('ghPagesRedirect');
     if (redirect && redirect !== '/') {
       sessionStorage.removeItem('ghPagesRedirect');
-      // Use replaceState to update the URL without page reload
-      window.history.replaceState(null, '', redirect);
+      // Navigate to the stored path
+      navigate(redirect, { replace: true });
     }
-  }, []);
+  }, [navigate]);
 
+  return null;
+}
+
+function App() {
   return (
     <Router>
       <CookieConsent />
       <ScrollToTop />
+      <RedirectHandler />
       <div className="app">
         <Navbar />
         <main className="main-content">
