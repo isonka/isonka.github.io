@@ -32,7 +32,7 @@ export const blogPosts: BlogPost[] = [
       <p>As we move into the second trimester, the goal is to maintain mobility, improve posture, and start preparing the body for birth by strengthening the pelvic floor and back muscles. Your body is changing rapidly, and Pilates helps you adapt with grace and strength.</p>
 
       <div style="text-align: center; margin: 40px 0;">
-        <img src="/assets/images/pregnancy2.jpg" alt="Prenatal Reformer Pilates exercises" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
+        <img src="/assets/images/pregnancy2.jpeg" alt="Prenatal Reformer Pilates exercises" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
       </div>
 
       <h2>Third Trimester: Breathwork and Preparation</h2>
@@ -48,7 +48,7 @@ export const blogPosts: BlogPost[] = [
     `,
     author: 'PT Studio 7 Team',
     date: '2025-11-05',
-    image: '/assets/images/pregnancy1.jpg',
+    image: '/assets/images/pregnancy2.jpeg',
     tags: ['Prenatal', 'Pilates', 'Pregnancy', 'Women\'s Health', 'Pelvic Floor'],
     metaDescription: 'Learn how Prenatal Reformer Pilates at PT Studio 7 Amsterdam supports expecting mothers through every trimester with safe, effective exercises for pregnancy and postpartum recovery.',
     keywords: [
