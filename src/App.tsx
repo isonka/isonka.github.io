@@ -23,15 +23,12 @@ import './App.css';
 function App() {
   useEffect(() => {
     // Handle GitHub Pages SPA routing
-    // The 404.html stores the original URL in sessionStorage
-    const redirect = sessionStorage.getItem('redirect');
-    if (redirect) {
-      sessionStorage.removeItem('redirect');
-      const url = new URL(redirect);
-      if (url.pathname !== '/') {
-        // Use replaceState to update the URL without triggering navigation
-        window.history.replaceState(null, '', url.pathname + url.search + url.hash);
-      }
+    // The 404.html stores the intended path in sessionStorage
+    const redirect = sessionStorage.getItem('ghPagesRedirect');
+    if (redirect && redirect !== '/') {
+      sessionStorage.removeItem('ghPagesRedirect');
+      // Use replaceState to update the URL without page reload
+      window.history.replaceState(null, '', redirect);
     }
   }, []);
 
