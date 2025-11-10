@@ -85,9 +85,11 @@ export const BookingGuide: React.FC = () => {
     },
     {
       title: 'Step 5: Enter Payment Information',
-      description: 'Securely enter your credit card details. MindBody uses bank-level encryption.',
+      description: 'Choose your payment method. We accept credit cards and iDEAL. MindBody uses bank-level encryption.',
       instructions: [
-        '💳 Enter card number (no spaces or dashes)',
+        '💳 Select payment method: Credit Card or iDEAL',
+        '🏦 For iDEAL: Choose your bank from the dropdown',
+        '💳 For Credit Card: Enter card number (no spaces)',
         '📅 Expiration date: MM/YY format',
         '🔐 CVV: 3 digits on back of card',
         '📍 Billing address must match your card',
@@ -95,10 +97,10 @@ export const BookingGuide: React.FC = () => {
       ],
       screenshot: 'payment-form.jpeg',
       tips: [
-        '⚠️ Error message? Check card number and expiration date',
+        '🇳🇱 iDEAL is available for Dutch bank accounts',
+        '⚠️ Error message? Check card details or try iDEAL',
         '🔒 Look for lock icon - connection is secure',
-        '💾 Check "Save card" for faster future bookings',
-        '🚫 Using VPN? Try disabling it if payment fails'
+        '💾 Check "Save card" for faster future bookings'
       ]
     },
     {
