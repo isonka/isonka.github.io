@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { trackBookNowClick, trackNavClick } from '../utils/gtmTracking';
 import '../styles/Navbar.css';
 
 export const Navbar: React.FC = () => {
@@ -17,6 +18,7 @@ export const Navbar: React.FC = () => {
 
   const scrollToSection = (sectionId: string) => {
     closeMenu();
+    trackNavClick(sectionId);
     
     // If we're not on the home page, navigate there first
     if (location.pathname !== '/') {
@@ -54,6 +56,7 @@ export const Navbar: React.FC = () => {
           to="/schedule" 
           className="navbar-booknow-mobile" 
           aria-label="Book a session"
+          onClick={() => trackBookNowClick('navbar-mobile')}
         >
           Book Now
         </Link>
@@ -78,7 +81,7 @@ export const Navbar: React.FC = () => {
           <li><Link to="/blog" aria-label="Read our blog" onClick={closeMenu}>Blog</Link></li>
           <li><a href="#contact" aria-label="Contact us" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</a></li>
           <li className="navbar-booknow-desktop-wrapper">
-            <Link to="/schedule" className="navbar-booknow-desktop" aria-label="Book a class" onClick={closeMenu}>
+            <Link to="/schedule" className="navbar-booknow-desktop" aria-label="Book a class" onClick={() => { closeMenu(); trackBookNowClick('navbar-desktop'); }}>
               Book Now
             </Link>
           </li>

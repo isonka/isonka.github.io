@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { SEOHead } from '../components/SEOHead';
+import { trackPricingView, trackPageView } from '../utils/gtmTracking';
 import '../styles/Pricing.css';
 
 declare global {
@@ -37,6 +38,10 @@ export const Pricing: React.FC = () => {
   };
 
   useEffect(() => {
+    // Track page view
+    trackPageView('/pricing', 'Pricing & Packages');
+    trackPricingView();
+
     // Adjust content height for animations
     const faqContents = document.querySelectorAll('.faq-content');
     faqContents.forEach((content) => {

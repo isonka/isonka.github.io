@@ -1,12 +1,44 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { SEOHead } from '../components/SEOHead';
 import { getBlogPostBySlug, getRecentPosts } from '../data/blogPosts';
+import { trackBlogPostView, trackBlogPostRead, trackPageView } from '../utils/gtmTracking';
 import '../styles/BlogPost.css';
 
 export const BlogPost: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getBlogPostBySlug(slug) : undefined;
   const recentPosts = getRecentPosts(3).filter(p => p.slug !== slug);
+  const [readStartTime] = useState(Date.now());
+
+  useEffect(() => {
+    if (post) {
+      trackPageView(`/blog/${post.slug}`, post.title);
+      trackBlogPostView(post.title, post.slug);
+    }
+  }, [post]);
+
+  useEffect(() => {
+    if (!post) return;
+
+    // Track when user scrolls to bottom (indicates they read the post)
+    const handleScroll = () => {
+      const scrolled = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      
+      // If user scrolled to 80% of the page
+      if (scrolled + windowHeight >= documentHeight * 0.8) {
+        const readTime = Math.floor((Date.now() - readStartTime) / 1000);
+        trackBlogPostRead(post.title, readTime);
+        // Remove listener after tracking once
+        window.removeEventListener('scroll', handleScroll);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [post, readStartTime]);
 
   // If post not found, redirect to blog page
   if (!post) {

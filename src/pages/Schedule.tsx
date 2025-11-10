@@ -1,12 +1,17 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
+import { trackScheduleVisit, trackPageView } from '../utils/gtmTracking';
 import '../styles/Schedule.css';
 
 export const Schedule: React.FC = () => {
   const [activeTab, setActiveTab] = useState('group');
 
   useEffect(() => {
+    // Track page view
+    trackPageView('/schedule', 'Schedule & Book Your Session');
+    trackScheduleVisit();
+
     // Load MindBody Branded Web widget script once on mount
     const existingScript = document.querySelector('script[src*="brandedweb.mindbodyonline.com"]');
     

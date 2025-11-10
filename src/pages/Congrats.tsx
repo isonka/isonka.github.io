@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
+import { trackBookingConfirmation, trackPageView } from '../utils/gtmTracking';
 import '../styles/Congrats.css';
 
 // Declare gtag function for TypeScript
@@ -12,6 +13,12 @@ declare global {
 
 export const Congrats: React.FC = () => {
   useEffect(() => {
+    // Track page view
+    trackPageView('/congrats', 'Booking Confirmed');
+    
+    // Track booking confirmation in GTM
+    trackBookingConfirmation();
+
     // Fire Google Ads conversion events when page loads
     if (window.gtag) {
       // Primary conversion event (original)
