@@ -18,7 +18,7 @@ export const BookingGuide: React.FC = () => {
       screenshot: 'tabs-selection.jpeg',
       tips: [
         '⚠️ Common mistake: Don\'t scroll past the tabs - they\'re at the very top',
-        '💡 First time? We recommend starting with a group class',
+        '💡 First time? We recommend starting with a private class',
         '🎯 Private classes require selecting a specific instructor'
       ]
     },
