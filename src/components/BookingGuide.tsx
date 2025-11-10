@@ -53,7 +53,7 @@ export const BookingGuide: React.FC = () => {
         '   • First Name',
         '   • Last Name (Surname)',
         '   • Password (create a new one)',
-        '   • Country/Phone Number',
+        '   • Country',
         '✅ Click checkbox to agree to terms',
         '🚀 Click "Continue" or "Create Account"'
       ],
@@ -61,7 +61,7 @@ export const BookingGuide: React.FC = () => {
       tips: [
         '⚠️ Start with email first - MindBody uses this to check if you exist',
         '🔐 New password? Write it down! You\'ll need it for future bookings',
-        '📱 Phone format: +31 6... (include country code)',
+        '✉️ Use an email you check regularly - confirmations are sent here',
         '❌ Pop-up blocked? Check your browser and allow pop-ups for this site'
       ]
     },
