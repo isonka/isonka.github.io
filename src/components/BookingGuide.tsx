@@ -42,21 +42,27 @@ export const BookingGuide: React.FC = () => {
       ]
     },
     {
-      title: 'Step 3: Create Account or Sign In',
-      description: 'If you\'re new, you\'ll be asked to create an account. Existing members should click "Sign In".',
+      title: 'Step 3: Enter Email & Create Account',
+      description: 'MindBody will ask for your email first. If you have an account, you\'ll sign in. If not, you\'ll create a new account.',
       instructions: [
-        '🆕 New customers: Click "Create Account" or "Sign Up"',
-        '✍️ Fill in: First Name, Last Name, Email, Phone Number',
-        '🔐 Create a password (write it down!)',
+        '📧 First, enter your EMAIL address',
+        '🔍 MindBody checks if you have an account:',
+        '   ✅ Have account? → You\'ll be asked for your PASSWORD (go to sign in)',
+        '   🆕 New customer? → Continue to create account',
+        '✍️ For NEW accounts, fill in:',
+        '   • First Name',
+        '   • Last Name (Surname)',
+        '   • Password (create a new one)',
+        '   • Country/Phone Number',
         '✅ Click checkbox to agree to terms',
-        '👤 Returning: Click "Already have an account? Sign In"'
+        '🚀 Click "Continue" or "Create Account"'
       ],
       screenshot: 'signup-form.jpeg',
       tips: [
-        '⚠️ Use a real email - you\'ll need it for confirmations!',
-        '📱 Include country code for phone: +31 6...',
-        '🔑 Password must be at least 8 characters',
-        '❌ Pop-up blocked? Allow pop-ups for this site'
+        '⚠️ Start with email first - MindBody uses this to check if you exist',
+        '🔐 New password? Write it down! You\'ll need it for future bookings',
+        '📱 Phone format: +31 6... (include country code)',
+        '❌ Pop-up blocked? Check your browser and allow pop-ups for this site'
       ]
     },
     {
