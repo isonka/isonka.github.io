@@ -15,7 +15,7 @@ export const BookingGuide: React.FC = () => {
         '👤 "Private Classes" tab shows one-on-one appointments',
         '✨ The active tab will be highlighted in gold/yellow'
       ],
-      screenshot: 'tabs-selection.jpg',
+      screenshot: 'tabs-selection.jpeg',
       tips: [
         '⚠️ Common mistake: Don\'t scroll past the tabs - they\'re at the very top',
         '💡 First time? We recommend starting with a group class',
@@ -33,7 +33,7 @@ export const BookingGuide: React.FC = () => {
         '🚫 "UNAVAILABLE" = Class is not bookable (past date or cancelled)',
         '📝 Each slot shows: Time, Instructor Name, Duration, Spots Available'
       ],
-      screenshot: 'calendar-selection.jpg',
+      screenshot: 'calendar-selection.jpeg',
       tips: [
         '⚠️ Don\'t see your preferred time? Check the BOOK button - it means there ARE spots',
         '💡 Waitlist: You\'ll get notified by email if someone cancels',
@@ -51,7 +51,7 @@ export const BookingGuide: React.FC = () => {
         '✅ Click checkbox to agree to terms',
         '👤 Returning: Click "Already have an account? Sign In"'
       ],
-      screenshot: 'signup-form.jpg',
+      screenshot: 'signup-form.jpeg',
       tips: [
         '⚠️ Use a real email - you\'ll need it for confirmations!',
         '📱 Include country code for phone: +31 6...',
@@ -69,7 +69,7 @@ export const BookingGuide: React.FC = () => {
         '🔄 Membership: Unlimited monthly (best for regulars)',
         '✅ Click the "Select" or "Purchase" button next to your choice'
       ],
-      screenshot: 'pricing-selection.jpg',
+      screenshot: 'pricing-selection.jpeg',
       tips: [
         '⚠️ First time? Look for "Intro Offer" or "Trial Class"',
         '💰 Class packs save 15-30% vs single classes',
@@ -87,7 +87,7 @@ export const BookingGuide: React.FC = () => {
         '📍 Billing address must match your card',
         '✅ Click "Complete Purchase" or "Book Now"'
       ],
-      screenshot: 'payment-form.jpg',
+      screenshot: 'payment-form.jpeg',
       tips: [
         '⚠️ Error message? Check card number and expiration date',
         '🔒 Look for lock icon - connection is secure',
@@ -105,7 +105,7 @@ export const BookingGuide: React.FC = () => {
         '🔔 You\'ll get a reminder 24 hours before class',
         '📲 Download MindBody app for easy future bookings'
       ],
-      screenshot: 'confirmation.jpg',
+      screenshot: 'confirmation.jpeg',
       tips: [
         '⚠️ No email? Check spam/junk folder first',
         '🕐 Arrive 10 minutes early for your first visit',
