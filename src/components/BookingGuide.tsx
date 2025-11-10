@@ -107,7 +107,7 @@ export const BookingGuide: React.FC = () => {
       title: 'Step 6: Confirmation & What\'s Next',
       description: 'You\'re booked! You should see a confirmation screen and receive an email within minutes.',
       instructions: [
-        '✅ Green checkmark = successful booking',
+        '✅ Yellow checkmark = successful booking',
         '📧 Check your email for confirmation (arrives in 1-5 minutes)',
         '📱 Add to calendar using the link in the email',
         '🔔 You\'ll get a reminder 24 hours before class',
