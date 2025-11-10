@@ -13,6 +13,7 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  /* TEMPORARILY HIDDEN - TO BE REVIEWED BEFORE PUBLISHING
   {
     id: '4',
     slug: 'pilates-for-men-strength-flexibility-athletic-performance',
@@ -275,6 +276,7 @@ export const blogPosts: BlogPost[] = [
       'pregnancy workout amsterdam'
     ]
   }
+  END OF HIDDEN BLOG POSTS */
 ];
 
 // Helper function to get a blog post by slug
