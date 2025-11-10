@@ -7,57 +7,109 @@ export const BookingGuide: React.FC = () => {
 
   const steps = [
     {
-      title: 'Step 1: Choose Your Class Type',
-      description: 'Select "Group Classes" for small group sessions (max 4 people) or "Private Classes" for one-on-one training.',
+      title: 'Step 1: Choose Group or Private Classes',
+      description: 'Click on either the "Group Classes" or "Private Classes" tab at the top of the booking widget.',
+      instructions: [
+        '📍 Look for the two tabs right above the calendar',
+        '👥 "Group Classes" tab shows small group sessions (4 people max)',
+        '👤 "Private Classes" tab shows one-on-one appointments',
+        '✨ The active tab will be highlighted in gold/yellow'
+      ],
+      screenshot: 'tabs-selection.jpg',
       tips: [
-        'Group classes are great for motivation and meeting others',
-        'Private classes offer personalized attention and custom programs',
-        'Not sure? Start with a group class to experience the studio'
+        '⚠️ Common mistake: Don\'t scroll past the tabs - they\'re at the very top',
+        '💡 First time? We recommend starting with a group class',
+        '🎯 Private classes require selecting a specific instructor'
       ]
     },
     {
-      title: 'Step 2: Browse the Schedule',
-      description: 'Look through available dates and times. You\'ll see the instructor name, class type, and available spots.',
+      title: 'Step 2: Pick Your Date and Time',
+      description: 'Use the calendar to select a date, then choose an available time slot from the list.',
+      instructions: [
+        '📅 Click on any date in the calendar (highlighted dates have availability)',
+        '⏰ Available time slots appear below the calendar',
+        '👀 Look for green buttons - these are available classes',
+        '🚫 Gray/disabled buttons mean the class is full',
+        '📝 Each time slot shows: Time, Instructor Name, Available Spots'
+      ],
+      screenshot: 'calendar-selection.jpg',
       tips: [
-        'Green = Available spots',
-        'Classes show as "Full" when all 4 spots are taken',
-        'Book in advance - popular times fill up quickly!'
+        '⚠️ Important: Grey dates = no classes that day',
+        '💡 Click the class time button to proceed (don\'t just look at it!)',
+        '⏱️ Popular morning slots fill up fast - book early in the week'
       ]
     },
     {
-      title: 'Step 3: Create Your Account',
-      description: 'Click "Sign Up" if you\'re new, or "Sign In" if you have an account. You\'ll need to provide your name, email, and phone number.',
+      title: 'Step 3: Create Account or Sign In',
+      description: 'If you\'re new, you\'ll be asked to create an account. Existing members should click "Sign In".',
+      instructions: [
+        '🆕 New customers: Click "Create Account" or "Sign Up"',
+        '✍️ Fill in: First Name, Last Name, Email, Phone Number',
+        '🔐 Create a password (write it down!)',
+        '✅ Click checkbox to agree to terms',
+        '👤 Returning: Click "Already have an account? Sign In"'
+      ],
+      screenshot: 'signup-form.jpg',
       tips: [
-        'Use an email you check regularly for booking confirmations',
-        'Save your password - you\'ll use it for future bookings',
-        'Your account saves your booking history and preferences'
+        '⚠️ Use a real email - you\'ll need it for confirmations!',
+        '📱 Include country code for phone: +31 6...',
+        '🔑 Password must be at least 8 characters',
+        '❌ Pop-up blocked? Allow pop-ups for this site'
       ]
     },
     {
-      title: 'Step 4: Select Your Package',
-      description: 'Choose a package or drop-in class. Packages offer better value if you plan to attend regularly.',
+      title: 'Step 4: Choose Your Pricing Option',
+      description: 'Select how you want to pay: single class, class pack, or membership.',
+      instructions: [
+        '💳 You\'ll see a list of pricing options',
+        '🎫 Single Class: Pay per session (good for trying us out)',
+        '📦 Class Packs: 5, 10, or 20 classes (better value)',
+        '🔄 Membership: Unlimited monthly (best for regulars)',
+        '✅ Click the "Select" or "Purchase" button next to your choice'
+      ],
+      screenshot: 'pricing-selection.jpg',
       tips: [
-        'First time? Try a single class or intro package',
-        'Regular attendees save with monthly packages',
-        'Packages have expiration dates - plan accordingly'
+        '⚠️ First time? Look for "Intro Offer" or "Trial Class"',
+        '💰 Class packs save 15-30% vs single classes',
+        '⏳ Packages expire after 6-12 months (check details)',
+        '🎁 Ask about student/senior discounts via email'
       ]
     },
     {
-      title: 'Step 5: Complete Payment',
-      description: 'Enter your payment details securely through MindBody\'s system. You\'ll receive a confirmation email immediately.',
+      title: 'Step 5: Enter Payment Information',
+      description: 'Securely enter your credit card details. MindBody uses bank-level encryption.',
+      instructions: [
+        '💳 Enter card number (no spaces or dashes)',
+        '📅 Expiration date: MM/YY format',
+        '🔐 CVV: 3 digits on back of card',
+        '📍 Billing address must match your card',
+        '✅ Click "Complete Purchase" or "Book Now"'
+      ],
+      screenshot: 'payment-form.jpg',
       tips: [
-        'We accept all major credit cards',
-        'Payment is secure through MindBody',
-        'Save payment info for faster future bookings'
+        '⚠️ Error message? Check card number and expiration date',
+        '🔒 Look for lock icon - connection is secure',
+        '💾 Check "Save card" for faster future bookings',
+        '🚫 Using VPN? Try disabling it if payment fails'
       ]
     },
     {
-      title: 'Step 6: You\'re Booked!',
-      description: 'Check your email for confirmation. Add the class to your calendar and arrive 10 minutes early for your first visit.',
+      title: 'Step 6: Confirmation & What\'s Next',
+      description: 'You\'re booked! You should see a confirmation screen and receive an email within minutes.',
+      instructions: [
+        '✅ Green checkmark = successful booking',
+        '📧 Check your email for confirmation (arrives in 1-5 minutes)',
+        '📱 Add to calendar using the link in the email',
+        '🔔 You\'ll get a reminder 24 hours before class',
+        '📲 Download MindBody app for easy future bookings'
+      ],
+      screenshot: 'confirmation.jpg',
       tips: [
-        'Bring water, a towel, and grip socks (or buy at studio)',
-        'Arrive 10 minutes early if it\'s your first time',
-        'Check your spam folder if you don\'t see the confirmation'
+        '⚠️ No email? Check spam/junk folder first',
+        '🕐 Arrive 10 minutes early for your first visit',
+        '👟 What to bring: Water, towel, grip socks',
+        '🎽 Wear comfortable fitted clothing (no loose shirts)',
+        '📞 Still having issues? Call us: +31 6 8516 2693'
       ]
     }
   ];
@@ -104,8 +156,27 @@ export const BookingGuide: React.FC = () => {
                 <h4>{steps[activeStep].title}</h4>
                 <p className="step-description">{steps[activeStep].description}</p>
                 
+                {/* Screenshot placeholder */}
+                <div className="screenshot-placeholder">
+                  📸 Screenshot placeholder: {steps[activeStep].screenshot}
+                  <div className="screenshot-note">
+                    (You can add actual MindBody screenshots here)
+                  </div>
+                </div>
+
+                {/* Detailed Instructions */}
+                <div className="step-instructions">
+                  <strong>📋 What to do:</strong>
+                  <ul>
+                    {steps[activeStep].instructions.map((instruction, index) => (
+                      <li key={index}>{instruction}</li>
+                    ))}
+                  </ul>
+                </div>
+                
+                {/* Tips */}
                 <div className="step-tips">
-                  <strong>💡 Tips:</strong>
+                  <strong>💡 Important Tips:</strong>
                   <ul>
                     {steps[activeStep].tips.map((tip, index) => (
                       <li key={index}>{tip}</li>
