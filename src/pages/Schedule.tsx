@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
+import { BookingGuide } from '../components/BookingGuide';
 import { trackScheduleVisit, trackPageView } from '../utils/gtmTracking';
 import '../styles/Schedule.css';
 
@@ -170,6 +171,9 @@ export const Schedule: React.FC = () => {
           </div>
         </section>
       </div>
+
+      {/* Floating Booking Help */}
+      <BookingGuide />
     </>
   );
 };
