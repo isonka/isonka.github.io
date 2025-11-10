@@ -1,9 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import '../styles/BookingGuide.css';
 
 export const BookingGuide: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeStep, setActiveStep] = useState(0);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  // Scroll to top when step changes
+  useEffect(() => {
+    if (contentRef.current) {
+      contentRef.current.scrollTop = 0;
+    }
+  }, [activeStep]);
 
   const steps = [
     {
@@ -136,7 +144,7 @@ export const BookingGuide: React.FC = () => {
 
       {isOpen && (
         <div className="booking-guide-modal">
-          <div className="booking-guide-content">
+          <div className="booking-guide-content" ref={contentRef}>
             <div className="booking-guide-header">
               <h3>How to Book Your Class</h3>
               <button 
