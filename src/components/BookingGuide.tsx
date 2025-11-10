@@ -78,9 +78,9 @@ export const BookingGuide: React.FC = () => {
       screenshot: 'pricing-selection.jpeg',
       tips: [
         '⚠️ First time? Look for "Intro Offer" or "Trial Class"',
-        '💰 Class packs save 15-30% vs single classes',
-        '⏳ Packages expire after 6-12 months (check details)',
-        '🎁 Ask about student/senior discounts via email'
+        '💰 Class packs offer better value than single classes',
+        '⏳ Check package expiration dates on our Pricing page',
+        '❓ Questions? Contact us via phone or email'
       ]
     },
     {
