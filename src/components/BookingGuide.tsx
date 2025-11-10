@@ -158,12 +158,13 @@ export const BookingGuide: React.FC = () => {
                 <h4>{steps[activeStep].title}</h4>
                 <p className="step-description">{steps[activeStep].description}</p>
                 
-                {/* Screenshot placeholder */}
-                <div className="screenshot-placeholder">
-                  📸 Screenshot placeholder: {steps[activeStep].screenshot}
-                  <div className="screenshot-note">
-                    (You can add actual MindBody screenshots here)
-                  </div>
+                {/* Screenshot */}
+                <div className="screenshot-container">
+                  <img 
+                    src={`/assets/images/booking-guide/${steps[activeStep].screenshot}`}
+                    alt={steps[activeStep].title}
+                    className="booking-screenshot"
+                  />
                 </div>
 
                 {/* Detailed Instructions */}
