@@ -24,19 +24,21 @@ export const BookingGuide: React.FC = () => {
     },
     {
       title: 'Step 2: Pick Your Date and Time',
-      description: 'Use the calendar to select a date, then choose an available time slot from the list.',
+      description: 'Use the calendar to select a date, then choose from the available time slots below.',
       instructions: [
-        '📅 Click on any date in the calendar (highlighted dates have availability)',
+        '📅 Click on any date in the calendar (dates with classes are highlighted)',
         '⏰ Available time slots appear below the calendar',
-        '👀 Look for green buttons - these are available classes',
-        '🚫 Gray/disabled buttons mean the class is full',
-        '📝 Each time slot shows: Time, Instructor Name, Available Spots'
+        '✅ "BOOK" button = Class has available spots - click to book!',
+        '⏳ "JOIN WAITLIST" button = Class is full but you can join waitlist',
+        '🚫 "UNAVAILABLE" = Class is not bookable (past date or cancelled)',
+        '📝 Each slot shows: Time, Instructor Name, Duration, Spots Available'
       ],
       screenshot: 'calendar-selection.jpg',
       tips: [
-        '⚠️ Important: Grey dates = no classes that day',
-        '💡 Click the class time button to proceed (don\'t just look at it!)',
-        '⏱️ Popular morning slots fill up fast - book early in the week'
+        '⚠️ Don\'t see your preferred time? Check the BOOK button - it means there ARE spots',
+        '💡 Waitlist: You\'ll get notified by email if someone cancels',
+        '⏱️ Popular times (morning 9-10am, evening 6-7pm) fill up first',
+        '📱 Tip: Book for the whole week in advance to secure your favorite times'
       ]
     },
     {
