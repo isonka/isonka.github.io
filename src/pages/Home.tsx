@@ -140,31 +140,36 @@ export const Home: React.FC = () => {
           <p>Explore our variety of training programs</p>
         </div>
         <div className="workouts-grid">
-          <div className="workout-card">
+          <Link to="/workouts/reformer-pilates" className="workout-card">
             <img src="/assets/images/pilates.jpg" alt="Reformer Pilates" loading="lazy" decoding="async" />
             <h3>Reformer Pilates</h3>
             <p>Full-body workout focusing on core strength, flexibility, and posture</p>
-          </div>
-          <div className="workout-card">
+            <span className="learn-more">Learn More →</span>
+          </Link>
+          <Link to="/workouts/trx" className="workout-card">
             <img src="/assets/images/trx.jpg" alt="TRX Training" loading="lazy" decoding="async" />
             <h3>TRX Training</h3>
             <p>Suspension training for strength, balance, and functional fitness</p>
-          </div>
-          <div className="workout-card">
+            <span className="learn-more">Learn More →</span>
+          </Link>
+          <Link to="/workouts/functional-training" className="workout-card">
             <img src="/assets/images/free.jpg" alt="Functional Training" loading="lazy" decoding="async" />
             <h3>Functional Training</h3>
             <p>Build strength and improve movement patterns with free weights</p>
-          </div>
-          <div className="workout-card">
+            <span className="learn-more">Learn More →</span>
+          </Link>
+          <Link to="/workouts/cardio" className="workout-card">
             <img src="/assets/images/cardio.jpg" alt="Cardio Training" loading="lazy" decoding="async" />
             <h3>Cardio</h3>
             <p>High-intensity cardio workouts to boost endurance and burn calories</p>
-          </div>
-          <div className="workout-card">
+            <span className="learn-more">Learn More →</span>
+          </Link>
+          <Link to="/workouts/ems" className="workout-card">
             <img src="/assets/images/ems.jpg" alt="EMS Training" loading="lazy" decoding="async" />
             <h3>EMS Training</h3>
             <p>Electro Muscle Stimulation for efficient full-body activation</p>
-          </div>
+            <span className="learn-more">Learn More →</span>
+          </Link>
         </div>
       </section>
 

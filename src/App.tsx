@@ -4,6 +4,7 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
 import { CookieConsent } from './components/CookieConsent';
+import { Chatbot } from './components/Chatbot';
 import { Home } from './pages/Home';
 import { Pricing } from './pages/Pricing';
 import { Schedule } from './pages/Schedule';
@@ -20,6 +21,11 @@ import { TrainerGoknur } from './pages/TrainerGoknur';
 import { Academy } from './pages/Academy';
 import { Blog } from './pages/Blog';
 import { BlogPost } from './pages/BlogPost';
+import { WorkoutReformerPilates } from './pages/WorkoutReformerPilates';
+import { WorkoutTRX } from './pages/WorkoutTRX';
+import { WorkoutFunctional } from './pages/WorkoutFunctional';
+import { WorkoutCardio } from './pages/WorkoutCardio';
+import { WorkoutEMS } from './pages/WorkoutEMS';
 import './App.css';
 
 // Component to handle GitHub Pages redirects
@@ -59,6 +65,11 @@ function App() {
             <Route path="/equipment/cadillac" element={<EquipmentCadillac />} />
             <Route path="/equipment/wunda-chair" element={<EquipmentWundaChair />} />
             <Route path="/equipment/ladder-barrel" element={<EquipmentLadderBarrel />} />
+            <Route path="/workouts/reformer-pilates" element={<WorkoutReformerPilates />} />
+            <Route path="/workouts/trx" element={<WorkoutTRX />} />
+            <Route path="/workouts/functional-training" element={<WorkoutFunctional />} />
+            <Route path="/workouts/cardio" element={<WorkoutCardio />} />
+            <Route path="/workouts/ems" element={<WorkoutEMS />} />
             <Route path="/congrats" element={<Congrats />} />
             <Route path="/trainer-elif" element={<TrainerElif />} />
             <Route path="/trainer-gokben" element={<TrainerGokben />} />
@@ -69,6 +80,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <Chatbot />
       </div>
     </Router>
   );
