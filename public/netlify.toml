@@ -5,6 +5,9 @@
   publish = "dist"
   command = "npm run build"
 
+[build.environment]
+  NODE_VERSION = "20.19.1"
+
 # SPA redirect for React Router - MUST come before any other redirects
 [[redirects]]
   from = "/*"
