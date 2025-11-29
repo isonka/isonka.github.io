@@ -35,7 +35,15 @@ export const EquipmentCadillac: React.FC = () => {
       <main className="product-detail-main">
         <section className="product-hero">
           <div className="product-gallery">
-            <img src="/assets/images/cadillac_2.jpg" alt="Combo Cadillac" className="main-image" />
+            <img 
+              src="/assets/images/cadillac_2.jpg" 
+              alt="Combo Cadillac Pilates Equipment" 
+              className="main-image" 
+              width="800" 
+              height="600" 
+              loading="eager" 
+              decoding="async" 
+            />
           </div>
           <div className="product-info">
             <h1>Combo Cadillac</h1>

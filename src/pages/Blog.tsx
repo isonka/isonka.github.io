@@ -31,7 +31,14 @@ export const Blog: React.FC = () => {
               <article key={post.id} className="blog-card">
                 <Link to={`/blog/${post.slug}`} className="blog-card-link">
                   <div className="blog-card-image">
-                    <img src={post.image} alt={post.title} loading="lazy" />
+                    <img 
+                      src={post.image} 
+                      alt={post.title} 
+                      width="400" 
+                      height="240" 
+                      loading="lazy" 
+                      decoding="async" 
+                    />
                   </div>
                   <div className="blog-card-content">
                     <div className="blog-card-meta">

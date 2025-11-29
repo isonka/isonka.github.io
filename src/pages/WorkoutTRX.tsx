@@ -141,14 +141,28 @@ export const WorkoutTRX: React.FC = () => {
             <h2>Expert TRX Instructors</h2>
             <div className="trainers-grid">
               <div className="trainer-mini-card">
-                <img src="/assets/images/elif.jpeg" alt="Elif Arzu Ogan" />
+                <img 
+                  src="/assets/images/elif.jpeg" 
+                  alt="Elif Arzu Ogan - TRX Instructor" 
+                  width="400" 
+                  height="280" 
+                  loading="lazy" 
+                  decoding="async" 
+                />
                 <h3>Elif Arzu Ogan</h3>
                 <p className="trainer-cert">Certified TRX Instructor</p>
                 <p>15+ years functional training experience, TRX certified expert</p>
                 <Link to="/trainer-elif" className="trainer-link">View Profile →</Link>
               </div>
               <div className="trainer-mini-card">
-                <img src="/assets/images/goknur.jpeg" alt="Göknur Dipli" />
+                <img 
+                  src="/assets/images/goknur.jpeg" 
+                  alt="Göknur Dipli - TRX Specialist" 
+                  width="400" 
+                  height="280" 
+                  loading="lazy" 
+                  decoding="async" 
+                />
                 <h3>Göknur Dipli</h3>
                 <p className="trainer-cert">TRX & Functional Training Specialist</p>
                 <p>12+ years experience in suspension training and functional fitness</p>

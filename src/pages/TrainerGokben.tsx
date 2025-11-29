@@ -15,7 +15,15 @@ export const TrainerGokben: React.FC = () => {
       <div className="trainer-page">
         <div className="trainer-hero">
           <div className="trainer-hero-content">
-            <img src="/assets/images/gokben.jpeg" alt="Gökben Öztekin" className="trainer-hero-photo" />
+            <img 
+              src="/assets/images/gokben.jpeg" 
+              alt="Gökben Öztekin - Basi Pilates Instructor" 
+              className="trainer-hero-photo" 
+              width="180" 
+              height="180" 
+              loading="eager" 
+              decoding="async" 
+            />
             <div className="trainer-hero-text">
               <h1>Gokben Oztekin</h1>
               <p className="trainer-title">Basi Pilates Instructor</p>

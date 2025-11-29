@@ -15,7 +15,15 @@ export const TrainerElif: React.FC = () => {
       <div className="trainer-page">
         <div className="trainer-hero">
           <div className="trainer-hero-content">
-            <img src="/assets/images/elif.jpeg" alt="Elif Arzu Ogan" className="trainer-hero-photo" />
+            <img 
+              src="/assets/images/elif.jpeg" 
+              alt="Elif Arzu Ogan - Owner & Head Trainer" 
+              className="trainer-hero-photo" 
+              width="180" 
+              height="180" 
+              loading="eager" 
+              decoding="async" 
+            />
             <div className="trainer-hero-text">
               <h1>Elif Arzu Ogan</h1>
               <p className="trainer-title">Owner & Head Trainer</p>

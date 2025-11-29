@@ -141,14 +141,28 @@ export const WorkoutFunctional: React.FC = () => {
             <h2>Your Functional Training Experts</h2>
             <div className="trainers-grid">
               <div className="trainer-mini-card">
-                <img src="/assets/images/elif.jpeg" alt="Elif Arzu Ogan" />
+                <img 
+                  src="/assets/images/elif.jpeg" 
+                  alt="Elif Arzu Ogan - Functional Training Specialist" 
+                  width="400" 
+                  height="280" 
+                  loading="lazy" 
+                  decoding="async" 
+                />
                 <h3>Elif Arzu Ogan</h3>
                 <p className="trainer-cert">Functional Training Specialist</p>
                 <p>15+ years experience in strength training and functional movement</p>
                 <Link to="/trainer-elif" className="trainer-link">View Profile →</Link>
               </div>
               <div className="trainer-mini-card">
-                <img src="/assets/images/goknur.jpeg" alt="Göknur Dipli" />
+                <img 
+                  src="/assets/images/goknur.jpeg" 
+                  alt="Göknur Dipli - Functional Training Expert" 
+                  width="400" 
+                  height="280" 
+                  loading="lazy" 
+                  decoding="async" 
+                />
                 <h3>Göknur Dipli</h3>
                 <p className="trainer-cert">Functional Training Expert</p>
                 <p>Certified coach with 12+ years in functional fitness and strength training</p>

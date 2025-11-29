@@ -1,53 +1,20 @@
-import { useRef, useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
 import { trackPageView, trackPhoneClick, trackEmailClick, trackSocialClick } from '../utils/gtmTracking';
 import '../styles/Home.css';
 
 export const Home: React.FC = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-
   useEffect(() => {
     // Track page view
     trackPageView('/', 'Home - PT Studio 7 Amsterdam');
-
-    // Only load video on desktop (not on mobile to save bandwidth)
-    const isMobile = window.innerWidth < 768;
-    
-    if (!isMobile && videoRef.current) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting && !isVideoLoaded) {
-              const video = videoRef.current;
-              if (video) {
-                // Load video only when in viewport
-                video.src = '/assets/video/landing.mp4';
-                video.load();
-                setIsVideoLoaded(true);
-              }
-            }
-          });
-        },
-        { threshold: 0.25 } // Load when 25% visible
-      );
-
-      observer.observe(videoRef.current);
-
-      return () => {
-        if (videoRef.current) {
-          observer.unobserve(videoRef.current);
-        }
-      };
-    }
-  }, [isVideoLoaded]);
+  }, []);
 
   return (
     <>
       <SEOHead
-        title="Reformer Pilates Amsterdam Museumplein | PT Studio 7 - Small Group Classes"
-        description="Reformer Pilates Amsterdam at Museumplein - Premium Reformer Pilates studio with small group classes (max 4 people). Expert instructors, private sessions & group Reformer classes. EMS, TRX, Functional Training. Van Baerlestraat 76C, across from Stedelijk Museum."
+        title="Reformer Pilates Amsterdam | PT Studio 7 Museumplein"
+        description="Reformer Pilates Amsterdam at Museumplein. Small group classes (max 4), private sessions, expert instructors. EMS, TRX, Functional Training. Book now!"
         keywords="Reformer Pilates Amsterdam, Pilates Amsterdam, Reformer Pilates Museumplein, Pilates classes Amsterdam, private Reformer Pilates Amsterdam, small group Pilates, Pilates studio Amsterdam, best Pilates Amsterdam, Reformer Pilates near me, boutique Pilates Amsterdam, Pilates Zuid Amsterdam"
         canonical="https://www.ptstudio7amsterdam.nl"
         ogTitle="Reformer Pilates Amsterdam Museumplein | PT Studio 7"
@@ -55,20 +22,18 @@ export const Home: React.FC = () => {
         ogImage="/assets/images/about-us-web.jpg"
       />
       
-      {/* Video Hero Section - Desktop only, lazy loaded */}
+      {/* Hero Section with Background Image */}
       <section className="hero-video">
-        <video 
-          ref={videoRef}
-          autoPlay 
-          muted 
-          loop 
-          playsInline 
-          poster="/assets/images/about-us-web.jpg"
+        <img 
+          src="/assets/images/studio.jpg"
+          alt="PT Studio 7 Amsterdam - Premium Reformer Pilates Studio at Museumplein"
           className="hero-video-bg"
-          aria-label="PT Studio 7 background video"
-        >
-          {/* Source loaded dynamically via IntersectionObserver */}
-        </video>
+          width="2304"
+          height="1536"
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+        />
         <div className="hero-overlay">
           <div className="hero-content-wrapper">
             <h1 className="hero-title">Reformer Pilates Amsterdam Museumplein</h1>
@@ -107,7 +72,7 @@ export const Home: React.FC = () => {
       <section id="about" className="about-section">
         <div className="about-container">
           <div className="about-content">
-            <h2>Welcome to PT Studio 7</h2>
+            <h2>Reformer Pilates Amsterdam at Museumplein</h2>
             <p>
               With 15 years of Reformer Pilates expertise at our Museumplein location, we offer Amsterdam's premier 
               boutique Reformer Pilates studio experience. Located at Van Baerlestraat 76C, across from Stedelijk Museum, 
@@ -128,7 +93,14 @@ export const Home: React.FC = () => {
             </p>
           </div>
           <div className="about-image">
-            <img src="/assets/images/about-us-web.jpg" alt="PT Studio 7 Museumplein Location - Small Group Pilates Studio" />
+            <img 
+              src="/assets/images/about-us-web.jpg" 
+              alt="PT Studio 7 Museumplein Location - Small Group Pilates Studio"
+              width="700"
+              height="447"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
       </section>
@@ -136,36 +108,71 @@ export const Home: React.FC = () => {
       {/* Workouts Section */}
       <section id="workouts" className="workouts-section">
         <div className="section-header">
-          <h2>Our Workouts</h2>
+          <h2>Reformer Pilates & Training Programs Amsterdam</h2>
           <p>Explore our variety of training programs</p>
         </div>
         <div className="workouts-grid">
           <Link to="/workouts/reformer-pilates" className="workout-card">
-            <img src="/assets/images/pilates.jpg" alt="Reformer Pilates" loading="lazy" decoding="async" />
+            <img 
+              src="/assets/images/pilates.jpg" 
+              alt="Reformer Pilates" 
+              width="400" 
+              height="220" 
+              loading="lazy" 
+              decoding="async" 
+            />
             <h3>Reformer Pilates</h3>
             <p>Full-body workout focusing on core strength, flexibility, and posture</p>
             <span className="learn-more">Learn More →</span>
           </Link>
           <Link to="/workouts/trx" className="workout-card">
-            <img src="/assets/images/trx.jpg" alt="TRX Training" loading="lazy" decoding="async" />
+            <img 
+              src="/assets/images/trx.jpg" 
+              alt="TRX Training" 
+              width="400" 
+              height="220" 
+              loading="lazy" 
+              decoding="async" 
+            />
             <h3>TRX Training</h3>
             <p>Suspension training for strength, balance, and functional fitness</p>
             <span className="learn-more">Learn More →</span>
           </Link>
           <Link to="/workouts/functional-training" className="workout-card">
-            <img src="/assets/images/free.jpg" alt="Functional Training" loading="lazy" decoding="async" />
+            <img 
+              src="/assets/images/free.jpg" 
+              alt="Functional Training" 
+              width="400" 
+              height="220" 
+              loading="lazy" 
+              decoding="async" 
+            />
             <h3>Functional Training</h3>
             <p>Build strength and improve movement patterns with free weights</p>
             <span className="learn-more">Learn More →</span>
           </Link>
           <Link to="/workouts/cardio" className="workout-card">
-            <img src="/assets/images/cardio.jpg" alt="Cardio Training" loading="lazy" decoding="async" />
+            <img 
+              src="/assets/images/cardio.jpg" 
+              alt="Cardio Training" 
+              width="400" 
+              height="220" 
+              loading="lazy" 
+              decoding="async" 
+            />
             <h3>Cardio</h3>
             <p>High-intensity cardio workouts to boost endurance and burn calories</p>
             <span className="learn-more">Learn More →</span>
           </Link>
           <Link to="/workouts/ems" className="workout-card">
-            <img src="/assets/images/ems.jpg" alt="EMS Training" loading="lazy" decoding="async" />
+            <img 
+              src="/assets/images/ems.jpg" 
+              alt="EMS Training" 
+              width="400" 
+              height="220" 
+              loading="lazy" 
+              decoding="async" 
+            />
             <h3>EMS Training</h3>
             <p>Electro Muscle Stimulation for efficient full-body activation</p>
             <span className="learn-more">Learn More →</span>
@@ -176,7 +183,7 @@ export const Home: React.FC = () => {
       {/* Trainers Section */}
       <section id="trainers" className="trainers-section">
         <div className="section-header">
-          <h2>Meet Our Expert Trainers</h2>
+          <h2>Expert Reformer Pilates Instructors Amsterdam</h2>
           <p>Certified professionals dedicated to your success</p>
         </div>
         <div className="trainers-grid">
@@ -186,8 +193,8 @@ export const Home: React.FC = () => {
               alt="Elif Arzu Ogan - Pilates Instructor" 
               loading="lazy"
               decoding="async"
-              width="400"
-              height="500"
+              width="140"
+              height="140"
             />
             <h3>Elif Arzu Ogan</h3>
             <p>Pilates & Functional Training Specialist</p>
@@ -199,8 +206,8 @@ export const Home: React.FC = () => {
               alt="Gökben Öztekin - Reformer Pilates Expert" 
               loading="lazy"
               decoding="async"
-              width="400"
-              height="500"
+              width="140"
+              height="140"
             />
             <h3>Gökben Öztekin</h3>
             <p>Reformer Pilates Expert</p>
@@ -212,8 +219,8 @@ export const Home: React.FC = () => {
               alt="Göknur Dipli - Personal Trainer" 
               loading="lazy"
               decoding="async"
-              width="400"
-              height="500"
+              width="140"
+              height="140"
             />
             <h3>Göknur Dipli</h3>
             <p>Personal Trainer & Nutrition Coach</p>
@@ -225,12 +232,36 @@ export const Home: React.FC = () => {
       {/* Reviews Section */}
       <section id="reviews" className="reviews-section">
         <div className="section-header">
-          <h2>What Our Clients Say</h2>
+          <h2>Reformer Pilates Amsterdam Reviews</h2>
           <p>Real experiences from our community</p>
         </div>
         <div className="reviews-container">
           <div className="review-card">
-            <img src="/assets/images/cansu.png" alt="Cansu review" className="reviewer-photo" loading="lazy" decoding="async" />
+            <img 
+              src="/assets/images/lot.png" 
+              alt="Lot Canter Cremers review" 
+              className="reviewer-photo" 
+              width="80" 
+              height="80" 
+              loading="lazy" 
+              decoding="async" 
+            />
+            <div className="stars">★★★★★</div>
+            <p className="review-text">
+              "Through a neighbor in my building I was introduced to PT Studio 7. I have been going to this studio for the past 18 months, of which I have been pregnant for 9. During my pregnancy Elif trained me until the very end (38.5 weeks). Her training gave me and my body an extremely comfortable pregnancy and smooth delivery of birth! Her experience and knowledge about the human body, pregnant or not, makes all the difference. Of course I continued after my pregnancy and I really enjoy and recommend this studio to everyone who is looking for a Pilates studio with qualified and experienced trainers. Since the Pilates sport is getting so popular there are a lot of places where you can go but most of the instructors don't have enough knowledge to be able to teach and train you like they do at PT Studio 7!"
+            </p>
+            <p className="review-author">- Lot Canter Cremers</p>
+          </div>
+          <div className="review-card">
+            <img 
+              src="/assets/images/cansu.png" 
+              alt="Cansu review" 
+              className="reviewer-photo" 
+              width="80" 
+              height="80" 
+              loading="lazy" 
+              decoding="async" 
+            />
             <div className="stars">★★★★★</div>
             <p className="review-text">
               "Amazing studio with top-notch equipment and incredibly knowledgeable trainers. 
@@ -239,7 +270,15 @@ export const Home: React.FC = () => {
             <p className="review-author">- Cansu</p>
           </div>
           <div className="review-card">
-            <img src="/assets/images/su.png" alt="Su review" className="reviewer-photo" loading="lazy" decoding="async" />
+            <img 
+              src="/assets/images/su.png" 
+              alt="Su review" 
+              className="reviewer-photo" 
+              width="80" 
+              height="80" 
+              loading="lazy" 
+              decoding="async" 
+            />
             <div className="stars">★★★★★</div>
             <p className="review-text">
               "The location is unbeatable - right at Museumplein! The trainers are professional 
@@ -248,7 +287,15 @@ export const Home: React.FC = () => {
             <p className="review-author">- Su</p>
           </div>
           <div className="review-card">
-            <img src="/assets/images/yesim.png" alt="Yeşim review" className="reviewer-photo" loading="lazy" decoding="async" />
+            <img 
+              src="/assets/images/yesim.png" 
+              alt="Yeşim review" 
+              className="reviewer-photo" 
+              width="80" 
+              height="80" 
+              loading="lazy" 
+              decoding="async" 
+            />
             <div className="stars">★★★★★</div>
             <p className="review-text">
               "I've been coming here for 6 months and the results are incredible. The atmosphere 
@@ -257,7 +304,15 @@ export const Home: React.FC = () => {
             <p className="review-author">- Yeşim</p>
           </div>
           <div className="review-card">
-            <img src="/assets/images/tugce.png" alt="Tuğçe review" className="reviewer-photo" loading="lazy" decoding="async" />
+            <img 
+              src="/assets/images/tugce.png" 
+              alt="Tuğçe review" 
+              className="reviewer-photo" 
+              width="80" 
+              height="80" 
+              loading="lazy" 
+              decoding="async" 
+            />
             <div className="stars">★★★★★</div>
             <p className="review-text">
               "Professional trainers, clean studio, and great energy. I feel stronger and more 
@@ -272,7 +327,7 @@ export const Home: React.FC = () => {
       <section id="contact" className="contact-section">
         <div className="contact-container">
           <div className="contact-info">
-            <h2>Visit Us</h2>
+            <h2>Visit Our Reformer Pilates Studio Museumplein</h2>
             <p className="address">
               Van Baerlestraat 76C<br />
               1071BB Amsterdam<br />

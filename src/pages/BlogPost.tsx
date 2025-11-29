@@ -89,7 +89,14 @@ export const BlogPost: React.FC = () => {
           </header>
 
           <div className="blog-post-image">
-            <img src={post.image} alt={post.title} />
+            <img 
+              src={post.image} 
+              alt={post.title} 
+              width="800" 
+              height="450" 
+              loading="eager" 
+              decoding="async" 
+            />
           </div>
 
           <div 
@@ -119,7 +126,14 @@ export const BlogPost: React.FC = () => {
                     className="recent-post-card"
                   >
                     <div className="recent-post-image">
-                      <img src={recentPost.image} alt={recentPost.title} loading="lazy" />
+                      <img 
+                        src={recentPost.image} 
+                        alt={recentPost.title} 
+                        width="80" 
+                        height="80" 
+                        loading="lazy" 
+                        decoding="async" 
+                      />
                     </div>
                     <div className="recent-post-content">
                       <h4>{recentPost.title}</h4>

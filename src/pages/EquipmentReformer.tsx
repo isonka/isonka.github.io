@@ -47,7 +47,15 @@ export const EquipmentReformer: React.FC = () => {
       <main className="product-detail-main">
         <section className="product-hero">
           <div className="product-gallery">
-            <img src="/assets/images/reformer.jpg" alt="Pilates Reformer" className="main-image" />
+            <img 
+              src="/assets/images/reformer.jpg" 
+              alt="Pilates Reformer Equipment" 
+              className="main-image" 
+              width="800" 
+              height="600" 
+              loading="eager" 
+              decoding="async" 
+            />
           </div>
           <div className="product-info">
             <h1>Pilates Reformer</h1>

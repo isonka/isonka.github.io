@@ -47,7 +47,15 @@ export const EquipmentTowerReformer: React.FC = () => {
       <main className="product-detail-main">
         <section className="product-hero">
           <div className="product-gallery">
-            <img src="/assets/images/tower_reformer.jpg" alt="Tower Reformer" className="main-image" />
+            <img 
+              src="/assets/images/tower_reformer.jpg" 
+              alt="Tower Reformer Pilates Equipment" 
+              className="main-image" 
+              width="800" 
+              height="600" 
+              loading="eager" 
+              decoding="async" 
+            />
           </div>
           <div className="product-info">
             <h1>Tower Reformer</h1>

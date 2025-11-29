@@ -160,14 +160,28 @@ export const WorkoutEMS: React.FC = () => {
             <h2>Miha Bodytec Certified Trainers</h2>
             <div className="trainers-grid">
               <div className="trainer-mini-card">
-                <img src="/assets/images/elif.jpeg" alt="Elif Arzu Ogan" />
+                <img 
+                  src="/assets/images/elif.jpeg" 
+                  alt="Elif Arzu Ogan - EMS Specialist" 
+                  width="400" 
+                  height="280" 
+                  loading="lazy" 
+                  decoding="async" 
+                />
                 <h3>Elif Arzu Ogan</h3>
                 <p className="trainer-cert">Miha Bodytec EMS Advance Trainer</p>
                 <p>Certified EMS specialist with 15+ years training experience</p>
                 <Link to="/trainer-elif" className="trainer-link">View Profile →</Link>
               </div>
               <div className="trainer-mini-card">
-                <img src="/assets/images/goknur.jpeg" alt="Göknur Dipli" />
+                <img 
+                  src="/assets/images/goknur.jpeg" 
+                  alt="Göknur Dipli - EMS Trainer" 
+                  width="400" 
+                  height="280" 
+                  loading="lazy" 
+                  decoding="async" 
+                />
                 <h3>Göknur Dipli</h3>
                 <p className="trainer-cert">Miha Bodytec EMS Advance Trainer</p>
                 <p>Certified EMS expert with 12+ years in functional training</p>

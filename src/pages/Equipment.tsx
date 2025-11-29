@@ -76,7 +76,14 @@ export const Equipment: React.FC = () => {
                 style={{ textDecoration: 'none', color: 'inherit' }}
               >
                 {item.tag && <div className="equipment-tag">{item.tag}</div>}
-                <img src={item.image} alt={item.name} />
+                <img 
+                  src={item.image} 
+                  alt={`${item.name} Pilates Equipment`} 
+                  width="400" 
+                  height="280" 
+                  loading="lazy" 
+                  decoding="async" 
+                />
                 <div className="equipment-info">
                   <h3>{item.name}</h3>
                   <p>{item.description}</p>

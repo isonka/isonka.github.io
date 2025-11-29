@@ -167,21 +167,42 @@ export const WorkoutReformerPilates: React.FC = () => {
             <h2>Meet Your Expert Instructors</h2>
             <div className="trainers-grid">
               <div className="trainer-mini-card">
-                <img src="/assets/images/elif.jpeg" alt="Elif Arzu Ogan" />
+                <img 
+                  src="/assets/images/elif.jpeg" 
+                  alt="Elif Arzu Ogan - Reformer Pilates Instructor" 
+                  width="400" 
+                  height="280" 
+                  loading="lazy" 
+                  decoding="async" 
+                />
                 <h3>Elif Arzu Ogan</h3>
                 <p className="trainer-cert">Senior Polestar Pilates Instructor</p>
                 <p>15+ years experience, specializing in injury recovery and spinal health</p>
                 <Link to="/trainer-elif" className="trainer-link">View Profile →</Link>
               </div>
               <div className="trainer-mini-card">
-                <img src="/assets/images/gokben.jpeg" alt="Gökben Öztekin" />
+                <img 
+                  src="/assets/images/gokben.jpeg" 
+                  alt="Gökben Öztekin - Basi Pilates Instructor" 
+                  width="400" 
+                  height="280" 
+                  loading="lazy" 
+                  decoding="async" 
+                />
                 <h3>Gökben Öztekin</h3>
                 <p className="trainer-cert">Basi Pilates Instructor</p>
                 <p>Expert in mindful movement and technique perfection</p>
                 <Link to="/trainer-gokben" className="trainer-link">View Profile →</Link>
               </div>
               <div className="trainer-mini-card">
-                <img src="/assets/images/goknur.jpeg" alt="Göknur Dipli" />
+                <img 
+                  src="/assets/images/goknur.jpeg" 
+                  alt="Göknur Dipli - Reformer Pilates Instructor" 
+                  width="400" 
+                  height="280" 
+                  loading="lazy" 
+                  decoding="async" 
+                />
                 <h3>Göknur Dipli</h3>
                 <p className="trainer-cert">Senior Polestar Pilates Instructor</p>
                 <p>12+ years experience in Reformer Pilates and functional training</p>

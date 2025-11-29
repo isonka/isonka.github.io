@@ -9,22 +9,31 @@
     })(window,document,'script','dataLayer','GTM-KB25PGXB');</script>
     <!-- End Google Tag Manager -->
 
-    <!-- Google tag (gtag.js) - Google Ads Conversion Tracking -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17684932205"></script>
+    <!-- Google Analytics & Ads - Deferred to not block rendering -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-17684932205');
-    </script>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7K4DF0N40"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-J7K4DF0N40', {'send_page_view': false});
+      // Defer analytics initialization until page is interactive
+      window.addEventListener('load', function() {
+        // Google Ads
+        var gtagScript1 = document.createElement('script');
+        gtagScript1.async = true;
+        gtagScript1.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17684932205';
+        document.head.appendChild(gtagScript1);
+        
+        // Google Analytics
+        var gtagScript2 = document.createElement('script');
+        gtagScript2.async = true;
+        gtagScript2.src = 'https://www.googletagmanager.com/gtag/js?id=G-J7K4DF0N40';
+        document.head.appendChild(gtagScript2);
+        
+        // Initialize when scripts load
+        gtagScript1.onload = function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-17684932205');
+          gtag('config', 'G-J7K4DF0N40', {'send_page_view': false});
+        };
+      });
     </script>
 
     <meta charset="UTF-8" />
@@ -70,12 +79,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Preload critical assets for better LCP -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" crossorigin>
-    <link rel="preload" as="image" href="/assets/images/pt7logo.png">
-    <link rel="preload" as="image" href="/assets/images/about-us-web.jpg">
+    <!-- Critical CSS for immediate text rendering -->
+    <style>
+      /* Fallback fonts to prevent FOIT (Flash of Invisible Text) */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+      }
+    </style>
     
-    <!-- Optimized Google Fonts - Reduced weight variants (400,600,700 instead of 300,400,500,600,700) -->
+    <!-- Preload critical assets for better LCP -->
+    <link rel="preload" as="image" href="/assets/images/studio.jpg" fetchpriority="high">
+    
+    <!-- Optimized Google Fonts - Non-blocking with font-display swap -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
     

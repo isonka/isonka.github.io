@@ -133,10 +133,10 @@
 }
 
 .about-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 60px;
   align-items: center;
 }
@@ -145,7 +145,7 @@
   font-size: 2.5rem;
   margin-bottom: 24px;
   color: #222;
-  white-space: nowrap;
+  line-height: 1.2;
 }
 
 .about-content p {
@@ -157,6 +157,7 @@
 
 .about-image img {
   width: 100%;
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
@@ -459,6 +460,26 @@
 }
 
 /* Responsive Design */
+
+/* Tablets and Medium Screens (iPad, etc) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .about-container {
+    max-width: 100%;
+    padding: 0 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .about-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile and Small Tablets */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;

@@ -35,7 +35,15 @@ export const EquipmentWundaChair: React.FC = () => {
       <main className="product-detail-main">
         <section className="product-hero">
           <div className="product-gallery">
-            <img src="/assets/images/wunda_chair.jpg" alt="Wunda Chair" className="main-image" />
+            <img 
+              src="/assets/images/wunda_chair.jpg" 
+              alt="Wunda Chair Pilates Equipment" 
+              className="main-image" 
+              width="800" 
+              height="600" 
+              loading="eager" 
+              decoding="async" 
+            />
           </div>
           <div className="product-info">
             <h1>Wunda Chair</h1>

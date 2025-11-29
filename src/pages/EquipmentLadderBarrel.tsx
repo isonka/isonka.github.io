@@ -35,7 +35,15 @@ export const EquipmentLadderBarrel: React.FC = () => {
       <main className="product-detail-main">
         <section className="product-hero">
           <div className="product-gallery">
-            <img src="/assets/images/ladder_barrel.jpg" alt="Ladder Barrel" className="main-image" />
+            <img 
+              src="/assets/images/ladder_barrel.jpg" 
+              alt="Ladder Barrel Pilates Equipment" 
+              className="main-image" 
+              width="800" 
+              height="600" 
+              loading="eager" 
+              decoding="async" 
+            />
           </div>
           <div className="product-info">
             <h1>Ladder Barrel</h1>
