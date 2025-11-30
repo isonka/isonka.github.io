@@ -1,6 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1197758608916828');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+    
     <!-- Google Tag Manager (Primary - handles all tracking) -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -84,8 +99,53 @@
       /* Fallback fonts to prevent FOIT (Flash of Invisible Text) */
       body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      /* Hide static fallback content from visual users but keep for LLMs/crawlers */
+      #static-fallback {
+        display: none;
+        visibility: hidden;
+      }
+      
+      /* Show fallback content only if JavaScript fails to load */
+      .no-js #static-fallback {
+        display: block !important;
+        visibility: visible !important;
+      }
+      
+      /* Loading indicator for better UX */
+      #root:empty::before {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin: 100px auto;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #ffd700;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
       }
     </style>
+    
+    <!-- Detect if JavaScript is disabled -->
+    <script>
+      document.documentElement.classList.remove('no-js');
+    </script>
+    <noscript>
+      <style>
+        #static-fallback {
+          display: block !important;
+          visibility: visible !important;
+        }
+      </style>
+    </noscript>
     
     <!-- Preload critical assets for better LCP -->
     <link rel="preload" as="image" href="/assets/images/studio.jpg" fetchpriority="high">
@@ -96,6 +156,78 @@
     
     <!-- MindBody Healcode Widget Script - Deferred to not block rendering -->
     <script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript" defer></script>
+    
+    <!-- Structured Data - Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://www.ptstudio7amsterdam.nl/#organization",
+      "name": "PT Studio 7 Amsterdam",
+      "alternateName": "PT Studio 7",
+      "url": "https://www.ptstudio7amsterdam.nl",
+      "logo": "https://www.ptstudio7amsterdam.nl/assets/images/pt7logo.png",
+      "image": "https://www.ptstudio7amsterdam.nl/assets/images/studio.jpg",
+      "description": "Boutique Reformer Pilates studio in Amsterdam Museumplein offering small group classes (max 4), private sessions, EMS training, TRX, and functional training with 15+ years of expertise",
+      "founder": {
+        "@type": "Person",
+        "@id": "https://www.ptstudio7amsterdam.nl/#founder"
+      },
+      "foundingDate": "2009",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Van Baerlestraat 76C",
+        "addressLocality": "Amsterdam",
+        "postalCode": "1071BB",
+        "addressCountry": "NL"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+31685162693",
+        "contactType": "customer service",
+        "email": "info@ptstudio7amsterdam.nl",
+        "availableLanguage": ["English", "Turkish", "Dutch"]
+      },
+      "sameAs": [
+        "https://www.instagram.com/ptstudio7amsterdam",
+        "https://www.facebook.com/ptstudio7",
+        "https://www.linkedin.com/company/pt-studio-7"
+      ]
+    }
+    </script>
+    
+    <!-- Structured Data - Person Schema (Founder/Owner) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://www.ptstudio7amsterdam.nl/#founder",
+      "name": "Elif Arzu Ogan",
+      "givenName": "Elif",
+      "familyName": "Ogan",
+      "jobTitle": "Owner & Head Trainer",
+      "worksFor": {
+        "@type": "Organization",
+        "@id": "https://www.ptstudio7amsterdam.nl/#organization"
+      },
+      "description": "Certified Pilates instructor with 15+ years of experience, specializing in Reformer Pilates, functional training, and pregnancy Pilates",
+      "knowsAbout": ["Reformer Pilates", "Polestar Pilates", "Functional Training", "EMS Training", "Pregnancy Pilates", "Postnatal Fitness"],
+      "url": "https://www.ptstudio7amsterdam.nl/trainer-elif",
+      "image": "https://www.ptstudio7amsterdam.nl/assets/images/elif.jpeg",
+      "email": "info@ptstudio7amsterdam.nl",
+      "telephone": "+31685162693",
+      "sameAs": [
+        "https://www.instagram.com/ptstudio7amsterdam",
+        "https://www.facebook.com/ptstudio7",
+        "https://www.linkedin.com/company/pt-studio-7"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Amsterdam",
+        "addressCountry": "NL"
+      }
+    }
+    </script>
     
     <!-- Structured Data - LocalBusiness Schema -->
     <script type="application/ld+json">
@@ -114,6 +246,10 @@
       "telephone": "+31685162693",
       "email": "info@ptstudio7amsterdam.nl",
       "priceRange": "€€",
+      "founder": {
+        "@type": "Person",
+        "@id": "https://www.ptstudio7amsterdam.nl/#founder"
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Van Baerlestraat 76C",
@@ -143,7 +279,9 @@
         }
       ],
       "sameAs": [
-        "https://www.instagram.com/ptstudio7amsterdam"
+        "https://www.instagram.com/ptstudio7amsterdam",
+        "https://www.facebook.com/ptstudio7",
+        "https://www.linkedin.com/company/pt-studio-7"
       ],
       "description": "Amsterdam's premier Pilates boutique studio at Museumplein. Small group classes (max 4). Expert certified instructors. Private & group Pilates classes. EMS, TRX & Functional Training.",
       "knowsAbout": ["Pilates", "Personal Training", "EMS Training", "TRX", "Functional Training", "Reformer Pilates", "Tower Reformer", "Cadillac Pilates", "Small Group Training"],
@@ -218,8 +356,82 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KB25PGXB"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Meta Pixel (noscript) -->
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1197758608916828&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel (noscript) -->
 
-    <div id="root"></div>
+    <div id="root">
+      <!-- Static Content Fallback for LLMs and No-JS Users - Hidden from visual users -->
+      <main id="static-fallback" style="max-width: 1200px; margin: 0 auto; padding: 20px; font-family: system-ui;">
+        <header>
+          <h1>PT Studio 7 Amsterdam - Reformer Pilates Museumplein</h1>
+          <p><strong>Premium Boutique Pilates Studio | Small Group Classes (Max 4 People)</strong></p>
+        </header>
+        
+        <section>
+          <h2>Reformer Pilates Amsterdam at Museumplein</h2>
+          <p>With 15 years of Reformer Pilates expertise at our Museumplein location, we offer Amsterdam's premier boutique Reformer Pilates studio experience. Located at Van Baerlestraat 76C, across from Stedelijk Museum, we provide personalized Reformer Pilates training tailored to your body and goals.</p>
+          
+          <p>We specialize in one-on-one private Reformer Pilates where you receive 100% of your instructor's attention. We also offer intimate small group Reformer Pilates classes (maximum 4 people) for those who enjoy training with friends.</p>
+          
+          <h3>Our Services</h3>
+          <ul>
+            <li><strong>Reformer Pilates</strong> - Small group classes and private sessions</li>
+            <li><strong>EMS Training</strong> - Electro Muscle Stimulation with Miha Bodytec certified trainers</li>
+            <li><strong>TRX Training</strong> - Suspension training for functional fitness</li>
+            <li><strong>Functional Training</strong> - Build strength and improve movement patterns</li>
+            <li><strong>Cardio Training</strong> - High-intensity workouts for endurance</li>
+          </ul>
+          
+          <h3>Our Expert Trainers</h3>
+          <ul>
+            <li><strong>Elif Arzu Ogan</strong> - Owner & Head Trainer, 15+ years experience, Polestar Pilates certified</li>
+            <li><strong>Gökben Öztekin</strong> - Basi Pilates Instructor, Reformer Pilates expert</li>
+            <li><strong>Göknur Dipli</strong> - Senior Polestar Pilates Instructor, EMS specialist</li>
+          </ul>
+          
+          <h3>Why Choose PT Studio 7?</h3>
+          <ul>
+            <li>Small Group Classes - Maximum 4 participants for personalized attention</li>
+            <li>Premium Location - Museumplein, across from Stedelijk Museum</li>
+            <li>Expert Instructors - All trainers certified with 10+ years experience</li>
+            <li>Pregnancy Pilates Expertise - Specialized training for prenatal and postnatal clients</li>
+            <li>Multiple Training Methods - Reformer Pilates, EMS, TRX, Functional Training</li>
+          </ul>
+          
+          <h3>Contact Information</h3>
+          <p>
+            <strong>Address:</strong> Van Baerlestraat 76C, 1071BB Amsterdam, Netherlands<br>
+            <strong>Phone:</strong> <a href="tel:+31685162693">+31 6 8516 2693</a><br>
+            <strong>Email:</strong> <a href="mailto:info@ptstudio7amsterdam.nl">info@ptstudio7amsterdam.nl</a><br>
+            <strong>Instagram:</strong> <a href="https://www.instagram.com/ptstudio7amsterdam">@ptstudio7amsterdam</a><br>
+            <strong>Facebook:</strong> <a href="https://www.facebook.com/ptstudio7">PT Studio 7</a><br>
+            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/company/pt-studio-7">PT Studio 7</a>
+          </p>
+          
+          <h3>Operating Hours</h3>
+          <p>
+            Monday-Friday: 09:00-21:00<br>
+            Saturday-Sunday: 10:00-18:00
+          </p>
+          
+          <p><strong>Languages:</strong> English, Turkish, Dutch</p>
+          
+          <p style="margin-top: 30px;">
+            <a href="/schedule" style="background: #ffd700; color: #222; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold;">Book a Class</a>
+          </p>
+        </section>
+        
+        <noscript>
+          <p style="background: #fff3cd; padding: 15px; border-left: 4px solid #ffd700; margin-top: 20px;">
+            <strong>Note:</strong> For the full experience with online booking, please enable JavaScript in your browser.
+          </p>
+        </noscript>
+      </main>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

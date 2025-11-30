@@ -1,6 +1,34 @@
 # https://www.robotstxt.org/robotstxt.html
+
+# All robots
 User-agent: *
 Allow: /
 
+# AI/LLM Crawlers - Welcome!
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Sitemaps
 Sitemap: https://www.ptstudio7amsterdam.nl/sitemap.xml
+
+# LLM Context File (for AI understanding)
+# https://www.ptstudio7amsterdam.nl/llms.txt
 
