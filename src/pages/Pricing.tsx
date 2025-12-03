@@ -145,14 +145,12 @@ export const Pricing: React.FC = () => {
                 <p className="validity" style={{ color: '#888', fontSize: '13px' }}>
                   1-month period • You can cancel after first month • Auto-renews monthly unless cancelled
                 </p>
-                <a
-                  href="https://clients.mindbodyonline.com/classic/ws?studioid=5741736&stype=43&prodid=100043"
-                  className="buy-button"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Buy Now
-                </a>
+                <div 
+                  className="buy-button healcode-contract-text-link"
+                  dangerouslySetInnerHTML={{
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-contract-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="104" data-bw-identity-site="true" data-type="contract-link" data-inner-html="Buy Now"></healcode-widget>'
+                  }}
+                />
               </div>
 
               <div className="package-card">
@@ -165,14 +163,12 @@ export const Pricing: React.FC = () => {
                 <p className="validity" style={{ color: '#888', fontSize: '13px' }}>
                   1-month period • You can cancel after first month • Auto-renews monthly unless cancelled
                 </p>
-                <a
-                  href="https://clients.mindbodyonline.com/classic/ws?studioid=5741736&stype=43&prodid=100044"
-                  className="buy-button"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Buy Now
-                </a>
+                <div 
+                  className="buy-button healcode-contract-text-link"
+                  dangerouslySetInnerHTML={{
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-contract-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="107" data-bw-identity-site="true" data-type="contract-link" data-inner-html="Buy Now"></healcode-widget>'
+                  }}
+                />
               </div>
 
               <div className="package-card featured">
