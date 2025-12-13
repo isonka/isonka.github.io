@@ -124,7 +124,7 @@ export const Chatbot: React.FC = () => {
         addBotMessage(
           "Would you like to train alone or with others?",
           1000,
-          ["Private (just me)", "With a partner (couple)", "Small group (3 people)", "Group class (max 4)"]
+          ["Private (just me)", "With a partner (couple)", "Small group (3 people)", "Group class (max 5)"]
         );
       }
     } else if (field === 'groupSize') {
@@ -178,7 +178,7 @@ export const Chatbot: React.FC = () => {
         classType = '**Trio Classes**';
         pricing = '• Single class: €45/person\n• 10-class pack: €40/person (€400 total) - Best Value\n• 20-class pack: €38/person (€760 total)';
       } else {
-        classType = '**Small Group Classes** (max 4 people)';
+        classType = '**Small Group Classes** (max 5 people)';
         pricing = '• Single class: €37/person\n• 10-class pack: €30/person (€300 total) - Most Popular\n• 20-class pack: €28/person (€560 total) - Best Value\n\n💡 **Or try our Weekday Membership** (Mon-Fri 9am-5pm):\n• 4 classes/month: €21.50/class (€86/month)\n• Unlimited 3 months: €350/month';
       }
 
@@ -260,7 +260,7 @@ ${pricing}
     // Determine which field this option belongs to
     const goalOptions = ["Improve strength & fitness", "Lose weight & tone", "Rehabilitation/injury recovery", "Pregnancy fitness", "General wellness", "Just curious"];
     const experienceOptions = ["Yes, I'm experienced", "Some experience", "I'm a beginner"];
-    const groupOptions = ["Private (just me)", "With a partner (couple)", "Small group (3 people)", "Group class (max 4)"];
+    const groupOptions = ["Private (just me)", "With a partner (couple)", "Small group (3 people)", "Group class (max 5)"];
     const injuryOptions = ["Yes, I have injuries", "No injuries", "Some minor concerns", "Back pain", "Pelvic floor", "General fitness", "Preparing for birth", "No specific concerns"];
     const followUpOptions = ["Book a class now", "Tell me about equipment", "View all trainers", "Start over", "Yes, show me", "No thanks"];
 

@@ -16,11 +16,11 @@ export const Home: React.FC = () => {
     <>
       <SEOHead
         title="Reformer Pilates Amsterdam | PT Studio 7 Museumplein"
-        description="Reformer Pilates Amsterdam at Museumplein. Small group classes (max 4), private sessions, expert instructors. EMS, TRX, Functional Training. Book now!"
+        description="Reformer Pilates Amsterdam at Museumplein. Small group classes (max 5), private sessions, expert instructors. EMS, TRX, Functional Training. Book now!"
         keywords="Reformer Pilates Amsterdam, Pilates Amsterdam, Reformer Pilates Museumplein, Pilates classes Amsterdam, private Reformer Pilates Amsterdam, small group Pilates, Pilates studio Amsterdam, best Pilates Amsterdam, Reformer Pilates near me, boutique Pilates Amsterdam, Pilates Zuid Amsterdam"
         canonical="https://www.ptstudio7amsterdam.nl"
         ogTitle="Reformer Pilates Amsterdam Museumplein | PT Studio 7"
-        ogDescription="Premium Reformer Pilates studio at Museumplein Amsterdam. Small groups (max 4), expert instructors, private & group classes. Book your Reformer Pilates session!"
+        ogDescription="Premium Reformer Pilates studio at Museumplein Amsterdam. Small groups (max 5), expert instructors, private & group classes. Book your Reformer Pilates session!"
         ogImage="/assets/images/about-us-web.jpg"
       />
       
@@ -39,7 +39,7 @@ export const Home: React.FC = () => {
         <div className="hero-overlay">
           <div className="hero-content-wrapper">
             <h1 className="hero-title">Reformer Pilates Amsterdam Museumplein</h1>
-              <h2 className="hero-tagline">Premium Reformer Pilates Studio | Small Group Classes (Max 4)</h2>
+              <h2 className="hero-tagline">Premium Reformer Pilates Studio | Small Group Classes (Max 5)</h2>
               <p className="hero-description">
                   • Expert Certified Instructors • Private & Group Reformer Pilates • Museumplein Location<br/>
                   Reformer Pilates • EMS Training • TRX • Functional Training
@@ -59,7 +59,7 @@ export const Home: React.FC = () => {
               </div>
               <div className="feature-item">
                 <span className="feature-icon">✓</span>
-                <span>Small Groups (Max 4)</span>
+                <span>Small Groups (Max 5)</span>
               </div>
               <div className="feature-item">
                 <span className="feature-icon">✓</span>
@@ -82,7 +82,7 @@ export const Home: React.FC = () => {
             </p>
             <p>
               We specialize in one-on-one private Reformer Pilates where you receive 100% of your instructor's attention. 
-              We also offer intimate small group Reformer Pilates classes (maximum 4 people) for those who enjoy training 
+              We also offer intimate small group Reformer Pilates classes (maximum 5 people) for those who enjoy training 
               with friends. Each program is customized to build strength, improve flexibility, or achieve your wellness goals.
             </p>
             <p>

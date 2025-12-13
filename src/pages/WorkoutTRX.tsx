@@ -17,7 +17,7 @@ export const WorkoutTRX: React.FC = () => {
         keywords="TRX training Amsterdam, suspension training Amsterdam, TRX Museumplein, functional fitness Amsterdam, strength training, balance training, TRX classes"
         canonical="https://www.ptstudio7amsterdam.nl/workouts/trx"
         ogTitle="TRX Suspension Training Amsterdam | PT Studio 7"
-        ogDescription="Expert TRX suspension training at Museumplein. Build total body strength, balance & functional fitness in small groups (max 4)."
+        ogDescription="Expert TRX suspension training at Museumplein. Build total body strength, balance & functional fitness in small groups (max 5)."
         ogImage="/assets/images/trx.jpg"
       />
 

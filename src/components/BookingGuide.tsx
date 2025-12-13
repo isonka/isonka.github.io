@@ -19,7 +19,7 @@ export const BookingGuide: React.FC = () => {
       description: 'Click on either the "Group Classes" or "Private Classes" tab at the top of the booking widget.',
       instructions: [
         '📍 Look for the two tabs right above the calendar',
-        '👥 "Group Classes" tab shows small group sessions (4 people max)',
+        '👥 "Group Classes" tab shows small group sessions (5 people max)',
         '👤 "Private Classes" tab shows one-on-one appointments',
         '✨ The active tab will be highlighted in gold/yellow'
       ],

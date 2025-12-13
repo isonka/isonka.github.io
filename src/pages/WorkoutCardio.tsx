@@ -17,7 +17,7 @@ export const WorkoutCardio: React.FC = () => {
         keywords="cardio training Amsterdam, HIIT Amsterdam, fat burning workout, endurance training Museumplein, cardio classes Amsterdam, heart health fitness"
         canonical="https://www.ptstudio7amsterdam.nl/workouts/cardio"
         ogTitle="Cardio Training Amsterdam | PT Studio 7"
-        ogDescription="High-energy cardio workouts to burn calories and build endurance. Small groups (max 4) at Museumplein."
+        ogDescription="High-energy cardio workouts to burn calories and build endurance. Small groups (max 5) at Museumplein."
         ogImage="/assets/images/cardio.jpg"
       />
 

@@ -64,17 +64,17 @@ export const Pricing: React.FC = () => {
     <>
       <SEOHead
         title="Pricing - Pilates Classes & Memberships | PT Studio 7 Museumplein"
-        description="Flexible Pilates pricing at Museumplein. Small group classes (max 4), memberships, private classes. Expert instructors. Premium location. EMS & TRX. From €28/class."
+        description="Flexible Pilates pricing at Museumplein. Small group classes (max 5), memberships, private classes. Expert instructors. Premium location. EMS & TRX. From €28/class."
         keywords="Pilates prices Amsterdam, Pilates membership Amsterdam, Pilates class rates Museumplein, small group Pilates pricing, boutique Pilates studio membership Amsterdam, private Pilates rates Museumplein, couple Pilates Amsterdam, Pilates packages Amsterdam, intimate Pilates classes pricing Amsterdam"
         canonical="https://www.ptstudio7amsterdam.nl/pricing"
         ogTitle="PT Studio 7 Pricing | Pilates Packages at Museumplein"
-        ogDescription="Small group Pilates (max 4) from €28/class. Memberships & private classes available. Expert instructors at Amsterdam's most exclusive Museumplein Pilates studio."
+        ogDescription="Small group Pilates (max 5) from €28/class. Memberships & private classes available. Expert instructors at Amsterdam's most exclusive Museumplein Pilates studio."
       />
 
       <div className="pricing-page">
         <div className="pricing-hero">
           <h1>Pricing & Membership</h1>
-          <p>Pilates Classes - Small groups (max 4) at Museumplein</p>
+          <p>Pilates Classes - Small groups (max 5) at Museumplein</p>
         </div>
 
         {/* Introduction Package - Special Offer */}
@@ -217,7 +217,7 @@ export const Pricing: React.FC = () => {
         {activeTab === 'group' && (
           <div className="pricing-content">
             <h2 className="pricing-section-title">Small Group Classes</h2>
-            <p className="pricing-subtitle">Small group training with maximum 4 participants. Expert instruction in an energizing environment. 45-minute sessions.</p>
+            <p className="pricing-subtitle">Small group training with maximum 5 participants. Expert instruction in an energizing environment. 45-minute sessions.</p>
             
             <div className="packages-grid">
               <div className="package-card">
@@ -778,7 +778,7 @@ export const Pricing: React.FC = () => {
                 <span className="faq-icon">{openFaqIndex === 8 ? '−' : '+'}</span>
               </div>
               <div className="faq-content">
-                <p>Our group classes have a maximum of 4 participants, ensuring you receive personalized attention while enjoying the energy of a group setting.</p>
+                <p>Our group classes have a maximum of 5 participants, ensuring you receive personalized attention while enjoying the energy of a group setting.</p>
               </div>
             </div>
           </div>
