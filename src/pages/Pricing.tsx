@@ -17,7 +17,8 @@ declare global {
 }
 
 export const Pricing: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('membership');
+  const [activeTab, setActiveTab] = useState('private');
+  const [instructorTier, setInstructorTier] = useState('master');
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
@@ -97,18 +98,6 @@ export const Pricing: React.FC = () => {
         {/* Tabs */}
         <div className="pricing-tabs">
           <button
-            className={`pricing-tab ${activeTab === 'membership' ? 'active' : ''}`}
-            onClick={() => handleTabChange('membership')}
-          >
-            Membership
-          </button>
-          <button
-            className={`pricing-tab ${activeTab === 'group' ? 'active' : ''}`}
-            onClick={() => handleTabChange('group')}
-          >
-            Group Classes
-          </button>
-          <button
             className={`pricing-tab ${activeTab === 'private' ? 'active' : ''}`}
             onClick={() => handleTabChange('private')}
           >
@@ -121,10 +110,22 @@ export const Pricing: React.FC = () => {
             Couple Classes
           </button>
           <button
+            className={`pricing-tab ${activeTab === 'membership' ? 'active' : ''}`}
+            onClick={() => handleTabChange('membership')}
+          >
+            Membership
+          </button>
+          <button
             className={`pricing-tab ${activeTab === 'trio' ? 'active' : ''}`}
             onClick={() => handleTabChange('trio')}
           >
             Trio Classes
+          </button>
+          <button
+            className={`pricing-tab ${activeTab === 'group' ? 'active' : ''}`}
+            onClick={() => handleTabChange('group')}
+          >
+            Group Classes
           </button>
         </div>
 
@@ -286,8 +287,101 @@ export const Pricing: React.FC = () => {
         {activeTab === 'private' && (
           <div className="pricing-content">
             <h2 className="pricing-section-title">Private Classes</h2>
-            <p className="pricing-subtitle">Personalized one-on-one training tailored to your specific goals and fitness level. Also available as couple or trio classes. 45-minute classes.</p>
+            <p className="pricing-subtitle">Personalized one-on-one training tailored to your specific goals and fitness level. Choose your instructor level. 45-minute classes.</p>
             
+            {/* Instructor Tier Tabs */}
+            <div className="instructor-tabs">
+              <button
+                className={`instructor-tab ${instructorTier === 'master' ? 'active' : ''}`}
+                onClick={() => setInstructorTier('master')}
+              >
+                Master Instructor
+              </button>
+              <button
+                className={`instructor-tab ${instructorTier === 'senior' ? 'active' : ''}`}
+                onClick={() => setInstructorTier('senior')}
+              >
+                Senior Instructor
+              </button>
+              <button
+                className={`instructor-tab ${instructorTier === 'junior' ? 'active' : ''}`}
+                onClick={() => setInstructorTier('junior')}
+              >
+                Junior Instructor
+              </button>
+            </div>
+
+            {/* Junior Instructor */}
+            {instructorTier === 'junior' && (
+            <>
+            <p className="instructor-info">Junior Instructors: Coming soon</p>
+            <div className="packages-grid">
+              <div className="package-card">
+                <div className="price-display">
+                  <h4 className="price-per-class">€70</h4>
+                  <span className="package-name">Single Class</span>
+                </div>
+                <p className="validity">Valid for 1 week</p>
+                <div 
+                  className="buy-button healcode-pricing-option-text-link"
+                  dangerouslySetInnerHTML={{
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100052" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                  }}
+                />
+              </div>
+
+              <div className="package-card">
+                <div className="price-display">
+                  <h4 className="price-per-class">€65 <span className="per-person">per class</span></h4>
+                  <span className="package-name">5-Class Pack</span>
+                </div>
+                <p className="total-price">€325 in total</p>
+                <p className="validity">Valid for 5 weeks</p>
+                <div 
+                  className="buy-button healcode-pricing-option-text-link"
+                  dangerouslySetInnerHTML={{
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100053" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                  }}
+                />
+              </div>
+
+              <div className="package-card">
+                <div className="price-display">
+                  <h4 className="price-per-class">€62.50 <span className="per-person">per class</span></h4>
+                  <span className="package-name">10-Class Pack</span>
+                </div>
+                <p className="total-price">€625 in total</p>
+                <p className="validity">Valid for 10 weeks</p>
+                <div 
+                  className="buy-button healcode-pricing-option-text-link"
+                  dangerouslySetInnerHTML={{
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100054" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                  }}
+                />
+              </div>
+
+              <div className="package-card">
+                <div className="price-display">
+                  <h4 className="price-per-class">€60 <span className="per-person">per class</span></h4>
+                  <span className="package-name">20-Class Pack</span>
+                </div>
+                <p className="total-price">€1,200 in total</p>
+                <p className="validity">Valid for 20 weeks</p>
+                <div 
+                  className="buy-button healcode-pricing-option-text-link"
+                  dangerouslySetInnerHTML={{
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100055" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                  }}
+                />
+              </div>
+            </div>
+            </>
+            )}
+
+            {/* Senior Instructor */}
+            {instructorTier === 'senior' && (
+            <>
+            <p className="instructor-info">Senior Instructors: <strong>Gökben Öztekin</strong>, <strong>Göknur Dipli</strong></p>
             <div className="packages-grid">
               <div className="package-card">
                 <div className="price-display">
@@ -298,14 +392,14 @@ export const Pricing: React.FC = () => {
                 <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
-                    __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100012" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100012" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
                   }}
                 />
               </div>
 
               <div className="package-card">
                 <div className="price-display">
-                  <h4 className="price-per-class">€75</h4>
+                  <h4 className="price-per-class">€75 <span className="per-person">per class</span></h4>
                   <span className="package-name">5-Class Pack</span>
                 </div>
                 <p className="total-price">€375 in total</p>
@@ -313,15 +407,15 @@ export const Pricing: React.FC = () => {
                 <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
-                    __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100013" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100013" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
                   }}
                 />
               </div>
 
               <div className="package-card featured">
-                <div className="badge">Best Value</div>
+                <div className="badge">Most Popular</div>
                 <div className="price-display">
-                  <h4 className="price-per-class">€72.50</h4>
+                  <h4 className="price-per-class">€72.50 <span className="per-person">per class</span></h4>
                   <span className="package-name">10-Class Pack</span>
                 </div>
                 <p className="total-price">€725 in total</p>
@@ -329,14 +423,14 @@ export const Pricing: React.FC = () => {
                 <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
-                    __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100014" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100014" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
                   }}
                 />
               </div>
 
               <div className="package-card">
                 <div className="price-display">
-                  <h4 className="price-per-class">€70</h4>
+                  <h4 className="price-per-class">€70 <span className="per-person">per class</span></h4>
                   <span className="package-name">20-Class Pack</span>
                 </div>
                 <p className="total-price">€1,400 in total</p>
@@ -344,11 +438,80 @@ export const Pricing: React.FC = () => {
                 <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
-                    __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100015" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100015" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
                   }}
                 />
               </div>
             </div>
+            </>
+            )}
+
+            {/* Master Instructor */}
+            {instructorTier === 'master' && (
+            <>
+            <p className="instructor-info">Master Instructor: <strong>Elif Arzu Ogan</strong> — Owner & Head Trainer with 15+ years experience</p>
+            <div className="packages-grid">
+              <div className="package-card">
+                <div className="price-display">
+                  <h4 className="price-per-class">€85</h4>
+                  <span className="package-name">Single Class</span>
+                </div>
+                <p className="validity">Valid for 1 week</p>
+                <div 
+                  className="buy-button healcode-pricing-option-text-link"
+                  dangerouslySetInnerHTML={{
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100048" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                  }}
+                />
+              </div>
+
+              <div className="package-card">
+                <div className="price-display">
+                  <h4 className="price-per-class">€80 <span className="per-person">per class</span></h4>
+                  <span className="package-name">5-Class Pack</span>
+                </div>
+                <p className="total-price">€400 in total</p>
+                <p className="validity">Valid for 5 weeks</p>
+                <div 
+                  className="buy-button healcode-pricing-option-text-link"
+                  dangerouslySetInnerHTML={{
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100049" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                  }}
+                />
+              </div>
+
+              <div className="package-card">
+                <div className="price-display">
+                  <h4 className="price-per-class">€77.50 <span className="per-person">per class</span></h4>
+                  <span className="package-name">10-Class Pack</span>
+                </div>
+                <p className="total-price">€775 in total</p>
+                <p className="validity">Valid for 10 weeks</p>
+                <div 
+                  className="buy-button healcode-pricing-option-text-link"
+                  dangerouslySetInnerHTML={{
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100050" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                  }}
+                />
+              </div>
+
+              <div className="package-card">
+                <div className="price-display">
+                  <h4 className="price-per-class">€75 <span className="per-person">per class</span></h4>
+                  <span className="package-name">20-Class Pack</span>
+                </div>
+                <p className="total-price">€1,500 in total</p>
+                <p className="validity">Valid for 20 weeks</p>
+                <div 
+                  className="buy-button healcode-pricing-option-text-link"
+                  dangerouslySetInnerHTML={{
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100051" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                  }}
+                />
+              </div>
+            </div>
+            </>
+            )}
           </div>
         )}
 

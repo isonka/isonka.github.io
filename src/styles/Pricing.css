@@ -174,6 +174,53 @@
   color: #222;
 }
 
+/* Instructor Tier Tabs */
+.instructor-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.instructor-tab {
+  padding: 12px 28px;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #333;
+}
+
+.instructor-tab:hover {
+  border-color: #ffd700;
+  background: #fffef5;
+}
+
+.instructor-tab.active {
+  background: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+.instructor-info {
+  text-align: center;
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 32px;
+  padding: 16px 24px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  border-left: 4px solid #ffd700;
+}
+
+.instructor-info strong {
+  color: #222;
+}
+
 /* Content */
 .pricing-content {
   max-width: 1200px;
