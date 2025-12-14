@@ -1,0 +1,367 @@
+/* Trainers Page */
+.trainers-page {
+  min-height: 100vh;
+  background: #fff;
+}
+
+/* Hero Section */
+.trainers-hero {
+  background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+  padding: 120px 24px 80px;
+  text-align: center;
+}
+
+.trainers-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.trainers-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.02em;
+}
+
+.trainers-hero p {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Trainers Sections */
+.trainers-section {
+  padding: 80px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trainers-section-coming {
+  background: #fafafa;
+  max-width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.trainers-section-coming .trainers-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trainers-section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.trainers-section-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.01em;
+}
+
+.trainers-section-header p {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Trainers Grid */
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.trainers-grid-featured {
+  grid-template-columns: 1fr;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.trainers-grid-coming {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+/* Trainer Card */
+.trainer-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+}
+
+.trainer-card:hover {
+  border-color: #111;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.trainer-card-featured {
+  border-width: 2px;
+  border-color: #111;
+}
+
+.trainer-card-placeholder {
+  background: #f5f5f5;
+  border-color: #e0e0e0;
+  pointer-events: none;
+}
+
+/* Trainer Card Image */
+.trainer-card-image {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.trainer-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.trainer-card:hover .trainer-card-image img {
+  transform: scale(1.03);
+}
+
+.placeholder-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8e8e8;
+}
+
+.placeholder-image svg {
+  width: 64px;
+  height: 64px;
+  color: #bbb;
+}
+
+/* Tier Badge */
+.trainer-tier-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 2px;
+}
+
+.tier-master {
+  background: #111;
+  color: #ffd700;
+}
+
+.tier-senior {
+  background: #fff;
+  color: #111;
+  border: 1px solid #111;
+}
+
+.tier-junior {
+  background: #f5f5f5;
+  color: #666;
+  border: 1px solid #ddd;
+}
+
+/* Trainer Card Content */
+.trainer-card-content {
+  padding: 24px;
+}
+
+.trainer-card-content h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.01em;
+}
+
+.trainer-card-title {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0 0 16px 0;
+}
+
+/* Languages */
+.trainer-card-languages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.language-tag {
+  font-size: 0.8rem;
+  color: #111;
+  padding: 4px 10px;
+  background: #f5f5f5;
+  border-radius: 2px;
+  font-weight: 500;
+}
+
+/* Specialties */
+.trainer-card-specialties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.specialty-tag {
+  font-size: 0.75rem;
+  color: #555;
+  padding: 4px 8px;
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+}
+
+/* View Profile Link */
+.trainer-card-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s ease;
+}
+
+.trainer-card:hover .trainer-card-link {
+  opacity: 0.7;
+}
+
+/* CTA Section */
+.trainers-cta {
+  text-align: center;
+  padding: 80px 24px;
+  background: #111;
+}
+
+.trainers-cta h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.01em;
+}
+
+.trainers-cta p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 32px 0;
+}
+
+.trainers-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.trainers-btn-primary,
+.trainers-btn-secondary {
+  display: inline-block;
+  padding: 16px 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.trainers-btn-primary {
+  background: #fff;
+  color: #111;
+}
+
+.trainers-btn-primary:hover {
+  background: #f5f5f5;
+}
+
+.trainers-btn-secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.trainers-btn-secondary:hover {
+  border-color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .trainers-hero {
+    padding: 100px 20px 60px;
+  }
+
+  .trainers-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .trainers-hero p {
+    font-size: 1.1rem;
+  }
+
+  .trainers-section {
+    padding: 60px 20px;
+  }
+
+  .trainers-section-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .trainers-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .trainers-grid-coming {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .trainers-cta {
+    padding: 60px 20px;
+  }
+
+  .trainers-cta h2 {
+    font-size: 1.75rem;
+  }
+
+  .trainers-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .trainers-btn-primary,
+  .trainers-btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .trainers-grid-coming {
+    grid-template-columns: 1fr;
+  }
+
+  .trainer-card-content {
+    padding: 20px;
+  }
+}
+

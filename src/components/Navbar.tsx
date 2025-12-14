@@ -75,6 +75,7 @@ export const Navbar: React.FC = () => {
           <li><a href="#about" aria-label="Learn about us" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About Us</a></li>
           <li><a href="#reviews" aria-label="Read reviews" onClick={(e) => { e.preventDefault(); scrollToSection('reviews'); }}>Reviews</a></li>
           <li><a href="#workouts" aria-label="Explore workouts" onClick={(e) => { e.preventDefault(); scrollToSection('workouts'); }}>Workouts</a></li>
+          <li><Link to="/trainers" aria-label="Meet our trainers" onClick={closeMenu}>Trainers</Link></li>
           <li><Link to="/pricing" aria-label="View pricing" onClick={closeMenu}>Prices</Link></li>
           <li><Link to="/equipment" aria-label="Explore equipment" onClick={closeMenu}>Equipment</Link></li>
           <li><Link to="/academy" aria-label="PT 7 Academy" onClick={closeMenu}>Academy</Link></li>

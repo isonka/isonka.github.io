@@ -15,6 +15,7 @@ import { EquipmentCadillac } from './pages/EquipmentCadillac';
 import { EquipmentWundaChair } from './pages/EquipmentWundaChair';
 import { EquipmentLadderBarrel } from './pages/EquipmentLadderBarrel';
 import { Congrats } from './pages/Congrats';
+import { Trainers } from './pages/Trainers';
 import { TrainerElif } from './pages/TrainerElif';
 import { TrainerGokben } from './pages/TrainerGokben';
 import { TrainerGoknur } from './pages/TrainerGoknur';
@@ -71,6 +72,7 @@ function App() {
             <Route path="/workouts/cardio" element={<WorkoutCardio />} />
             <Route path="/workouts/ems" element={<WorkoutEMS />} />
             <Route path="/congrats" element={<Congrats />} />
+            <Route path="/trainers" element={<Trainers />} />
             <Route path="/trainer-elif" element={<TrainerElif />} />
             <Route path="/trainer-gokben" element={<TrainerGokben />} />
             <Route path="/trainer-goknur" element={<TrainerGoknur />} />

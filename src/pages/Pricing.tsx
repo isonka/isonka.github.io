@@ -17,7 +17,7 @@ declare global {
 }
 
 export const Pricing: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('private');
+  const [activeTab, setActiveTab] = useState('membership');
   const [instructorTier, setInstructorTier] = useState('master');
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
@@ -98,10 +98,22 @@ export const Pricing: React.FC = () => {
         {/* Tabs */}
         <div className="pricing-tabs">
           <button
+            className={`pricing-tab ${activeTab === 'membership' ? 'active' : ''}`}
+            onClick={() => handleTabChange('membership')}
+          >
+            Membership
+          </button>
+          <button
             className={`pricing-tab ${activeTab === 'private' ? 'active' : ''}`}
             onClick={() => handleTabChange('private')}
           >
             Private Classes
+          </button>
+          <button
+            className={`pricing-tab ${activeTab === 'group' ? 'active' : ''}`}
+            onClick={() => handleTabChange('group')}
+          >
+            Group Classes
           </button>
           <button
             className={`pricing-tab ${activeTab === 'couple' ? 'active' : ''}`}
@@ -110,22 +122,10 @@ export const Pricing: React.FC = () => {
             Couple Classes
           </button>
           <button
-            className={`pricing-tab ${activeTab === 'membership' ? 'active' : ''}`}
-            onClick={() => handleTabChange('membership')}
-          >
-            Membership
-          </button>
-          <button
             className={`pricing-tab ${activeTab === 'trio' ? 'active' : ''}`}
             onClick={() => handleTabChange('trio')}
           >
             Trio Classes
-          </button>
-          <button
-            className={`pricing-tab ${activeTab === 'group' ? 'active' : ''}`}
-            onClick={() => handleTabChange('group')}
-          >
-            Group Classes
           </button>
         </div>
 
