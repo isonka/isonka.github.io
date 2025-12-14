@@ -449,7 +449,7 @@ export const Pricing: React.FC = () => {
             {/* Master Instructor */}
             {instructorTier === 'master' && (
             <>
-            <p className="instructor-info">Master Instructor: <strong>Elif Arzu Ogan</strong> — Owner & Head Trainer with 15+ years experience</p>
+            <p className="instructor-info">Master Instructor: <strong>Elif Arzu Ogan</strong> — Owner & Head Instructor with 15+ years experience</p>
             <div className="packages-grid">
               <div className="package-card">
                 <div className="price-display">

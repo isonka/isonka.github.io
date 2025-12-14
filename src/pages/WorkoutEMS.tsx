@@ -162,7 +162,7 @@ export const WorkoutEMS: React.FC = () => {
               <div className="trainer-mini-card">
                 <img 
                   src="/assets/images/elif.jpeg" 
-                  alt="Elif Arzu Ogan - EMS Specialist" 
+                  alt="Elif Arzu Ogan - EMS Instructor" 
                   width="400" 
                   height="280" 
                   loading="lazy" 
@@ -170,13 +170,13 @@ export const WorkoutEMS: React.FC = () => {
                 />
                 <h3>Elif Arzu Ogan</h3>
                 <p className="trainer-cert">Miha Bodytec EMS Advance Trainer</p>
-                <p>Certified EMS specialist with 15+ years training experience</p>
+                <p>Certified EMS instructor with 15+ years experience</p>
                 <Link to="/trainer-elif" className="trainer-link">View Profile →</Link>
               </div>
               <div className="trainer-mini-card">
                 <img 
                   src="/assets/images/goknur.jpeg" 
-                  alt="Göknur Dipli - EMS Trainer" 
+                  alt="Göknur Dipli - EMS Instructor" 
                   width="400" 
                   height="280" 
                   loading="lazy" 

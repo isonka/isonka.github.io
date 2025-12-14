@@ -157,14 +157,14 @@ export const WorkoutTRX: React.FC = () => {
               <div className="trainer-mini-card">
                 <img 
                   src="/assets/images/goknur.jpeg" 
-                  alt="Göknur Dipli - TRX Specialist" 
+                  alt="Göknur Dipli - TRX Instructor" 
                   width="400" 
                   height="280" 
                   loading="lazy" 
                   decoding="async" 
                 />
                 <h3>Göknur Dipli</h3>
-                <p className="trainer-cert">TRX & Functional Training Specialist</p>
+                <p className="trainer-cert">TRX & Functional Training Instructor</p>
                 <p>12+ years experience in suspension training and functional fitness</p>
                 <Link to="/trainer-goknur" className="trainer-link">View Profile →</Link>
               </div>

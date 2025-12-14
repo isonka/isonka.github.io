@@ -143,22 +143,22 @@ export const Chatbot: React.FC = () => {
     addBotMessage("Let me find the perfect match for you! 🎯", 1000);
 
     setTimeout(() => {
-      // Determine best trainer
-      let recommendedTrainer = '';
-      let trainerReason = '';
+      // Determine best instructor
+      let recommendedInstructor = '';
+      let instructorReason = '';
       
       if (profile.isPregnant === 'yes' || profile.goal === 'Pregnancy fitness') {
-        recommendedTrainer = 'Elif Arzu Ogan';
-        trainerReason = 'Elif has specialized training in pregnancy Pilates and offers safe, personalized one-on-one sessions.';
+        recommendedInstructor = 'Elif Arzu Ogan';
+        instructorReason = 'Elif has specialized training in pregnancy Pilates and offers safe, personalized one-on-one sessions.';
       } else if (profile.hasInjuries === 'Yes, I have injuries' || profile.goal === 'Rehabilitation/injury recovery') {
-        recommendedTrainer = 'Elif Arzu Ogan or Göknur Dipli';
-        trainerReason = 'Both are Senior Polestar Pilates instructors with extensive experience in rehabilitation and working with injuries, including spinal disorders and low back care.';
+        recommendedInstructor = 'Elif Arzu Ogan or Göknur Dipli';
+        instructorReason = 'Both are Senior Polestar Pilates instructors with extensive experience in rehabilitation and working with injuries, including spinal disorders and low back care.';
       } else if (profile.goal === 'Improve strength & fitness' || profile.goal === 'Lose weight & tone') {
-        recommendedTrainer = 'Göknur Dipli';
-        trainerReason = 'Göknur specializes in EMS training and functional training, perfect for building strength and achieving weight goals efficiently.';
+        recommendedInstructor = 'Göknur Dipli';
+        instructorReason = 'Göknur specializes in EMS training and functional training, perfect for building strength and achieving weight goals efficiently.';
       } else {
-        recommendedTrainer = 'Gökben Öztekin';
-        trainerReason = 'Gökben is an expert Basi Pilates instructor who creates a welcoming environment for all fitness levels.';
+        recommendedInstructor = 'Gökben Öztekin';
+        instructorReason = 'Gökben is an expert Basi Pilates instructor who creates a welcoming environment for all fitness levels.';
       }
 
       // Determine class type
@@ -184,8 +184,8 @@ export const Chatbot: React.FC = () => {
 
       const recommendation = `✨ **Your Perfect Match:**
 
-👨‍🏫 **Recommended Trainer:** ${recommendedTrainer}
-${trainerReason}
+👨‍🏫 **Recommended Instructor:** ${recommendedInstructor}
+${instructorReason}
 
 📋 **Best Class Type:** ${classType}
 

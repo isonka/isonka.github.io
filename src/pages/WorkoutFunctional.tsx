@@ -143,14 +143,14 @@ export const WorkoutFunctional: React.FC = () => {
               <div className="trainer-mini-card">
                 <img 
                   src="/assets/images/elif.jpeg" 
-                  alt="Elif Arzu Ogan - Functional Training Specialist" 
+                  alt="Elif Arzu Ogan - Functional Training Instructor" 
                   width="400" 
                   height="280" 
                   loading="lazy" 
                   decoding="async" 
                 />
                 <h3>Elif Arzu Ogan</h3>
-                <p className="trainer-cert">Functional Training Specialist</p>
+                <p className="trainer-cert">Functional Training Instructor</p>
                 <p>15+ years experience in strength training and functional movement</p>
                 <Link to="/trainer-elif" className="trainer-link">View Profile →</Link>
               </div>
@@ -164,7 +164,7 @@ export const WorkoutFunctional: React.FC = () => {
                   decoding="async" 
                 />
                 <h3>Göknur Dipli</h3>
-                <p className="trainer-cert">Functional Training Expert</p>
+                <p className="trainer-cert">Functional Training Instructor</p>
                 <p>Certified coach with 12+ years in functional fitness and strength training</p>
                 <Link to="/trainer-goknur" className="trainer-link">View Profile →</Link>
               </div>

@@ -18,11 +18,11 @@ const trainers: Trainer[] = [
   {
     id: 'elif',
     name: 'Elif Arzu Ogan',
-    title: 'Owner & Head Trainer',
+    title: 'Owner & Head Instructor',
     tier: 'master',
     image: '/assets/images/elif.jpeg',
     languages: ['English', 'Turkish'],
-    specialties: ['Reformer Pilates', 'EMS Training', 'TRX', 'Functional Training'],
+    specialties: ['Reformer Pilates', 'TRX', 'Functional Training'],
     link: '/trainer-elif',
     available: true,
   },
@@ -114,9 +114,9 @@ export const Trainers: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Our Trainers | PT Studio 7 Amsterdam"
-        description="Meet our expert team of certified Pilates and fitness instructors at PT Studio 7 Amsterdam. Master, senior, and junior trainers dedicated to your fitness journey."
-        keywords="Pilates instructors Amsterdam, personal trainers, reformer pilates teachers, PT Studio 7 trainers"
+        title="Our Instructors | PT Studio 7 Amsterdam"
+        description="Meet our expert team of certified Pilates and fitness instructors at PT Studio 7 Amsterdam. Master, senior, and junior instructors dedicated to your fitness journey."
+        keywords="Pilates instructors Amsterdam, reformer pilates teachers, PT Studio 7 instructors"
         canonical="https://www.ptstudio7amsterdam.nl/trainers"
       />
 
@@ -124,7 +124,7 @@ export const Trainers: React.FC = () => {
         {/* Hero Section */}
         <section className="trainers-hero">
           <div className="trainers-hero-content">
-            <h1>Our Trainers</h1>
+            <h1>Our Instructors</h1>
             <p>Meet our team of certified experts dedicated to your fitness journey</p>
           </div>
         </section>
@@ -134,7 +134,7 @@ export const Trainers: React.FC = () => {
           <section className="trainers-section">
             <div className="trainers-section-header">
               <h2>Master Instructor</h2>
-              <p>Our founder and head trainer with 15+ years of experience</p>
+              <p>Our founder and head instructor with 15+ years of experience</p>
             </div>
             <div className="trainers-grid trainers-grid-featured">
               {masterTrainers.map(trainer => (

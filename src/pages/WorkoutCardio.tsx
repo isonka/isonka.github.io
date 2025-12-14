@@ -143,14 +143,14 @@ export const WorkoutCardio: React.FC = () => {
               <div className="trainer-mini-card">
                 <img 
                   src="/assets/images/elif.jpeg" 
-                  alt="Elif Arzu Ogan - Cardio Specialist" 
+                  alt="Elif Arzu Ogan - Cardio Instructor" 
                   width="400" 
                   height="280" 
                   loading="lazy" 
                   decoding="async" 
                 />
                 <h3>Elif Arzu Ogan</h3>
-                <p className="trainer-cert">Cardio & HIIT Specialist</p>
+                <p className="trainer-cert">Cardio & HIIT Instructor</p>
                 <p>15+ years experience in high-intensity training and cardio conditioning</p>
                 <Link to="/trainer-elif" className="trainer-link">View Profile →</Link>
               </div>
@@ -164,7 +164,7 @@ export const WorkoutCardio: React.FC = () => {
                   decoding="async" 
                 />
                 <h3>Göknur Dipli</h3>
-                <p className="trainer-cert">Metabolic Conditioning Expert</p>
+                <p className="trainer-cert">Metabolic Conditioning Instructor</p>
                 <p>12+ years experience in cardio training and endurance coaching</p>
                 <Link to="/trainer-goknur" className="trainer-link">View Profile →</Link>
               </div>

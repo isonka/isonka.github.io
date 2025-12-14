@@ -91,7 +91,7 @@ export const Home: React.FC = () => {
             </p>
             <p className="about-signature">
               <strong>Elif Arzu Ogan</strong><br/>
-              Owner & Head Trainer, PT Studio 7
+              Owner & Head Instructor, PT Studio 7
             </p>
           </div>
           <div className="about-image">
@@ -199,7 +199,7 @@ export const Home: React.FC = () => {
               height="140"
             />
             <h3>Elif Arzu Ogan</h3>
-            <p>Pilates & Functional Training Specialist</p>
+            <p>Pilates & Functional Training Instructor</p>
             <span className="learn-more">Learn More →</span>
           </Link>
           <Link to="/trainer-gokben" className="trainer-card">
@@ -218,14 +218,14 @@ export const Home: React.FC = () => {
           <Link to="/trainer-goknur" className="trainer-card">
             <img 
               src="/assets/images/goknur.jpeg" 
-              alt="Göknur Dipli - Personal Trainer" 
+              alt="Göknur Dipli - Pilates Instructor" 
               loading="lazy"
               decoding="async"
               width="140"
               height="140"
             />
             <h3>Göknur Dipli</h3>
-            <p>Personal Trainer & Nutrition Coach</p>
+            <p>Pilates & Functional Training Instructor</p>
             <span className="learn-more">Learn More →</span>
           </Link>
         </div>
@@ -250,7 +250,7 @@ export const Home: React.FC = () => {
             />
             <div className="stars">★★★★★</div>
             <p className="review-text">
-              "Through a neighbor in my building I was introduced to PT Studio 7. I have been going to this studio for the past 18 months, of which I have been pregnant for 9. During my pregnancy Elif trained me until the very end (38.5 weeks). Her training gave me and my body an extremely comfortable pregnancy and smooth delivery of birth! Her experience and knowledge about the human body, pregnant or not, makes all the difference. Of course I continued after my pregnancy and I really enjoy and recommend this studio to everyone who is looking for a Pilates studio with qualified and experienced trainers. Since the Pilates sport is getting so popular there are a lot of places where you can go but most of the instructors don't have enough knowledge to be able to teach and train you like they do at PT Studio 7!"
+              "Through a neighbor in my building I was introduced to PT Studio 7. I have been going to this studio for the past 18 months, of which I have been pregnant for 9. During my pregnancy Elif trained me until the very end (38.5 weeks). Her training gave me and my body an extremely comfortable pregnancy and smooth delivery of birth! Her experience and knowledge about the human body, pregnant or not, makes all the difference. Of course I continued after my pregnancy and I really enjoy and recommend this studio to everyone who is looking for a Pilates studio with qualified and experienced instructors. Since the Pilates sport is getting so popular there are a lot of places where you can go but most of the instructors don't have enough knowledge to be able to teach and train you like they do at PT Studio 7!"
             </p>
             <p className="review-author">- Lot Canter Cremers</p>
           </div>
@@ -266,7 +266,7 @@ export const Home: React.FC = () => {
             />
             <div className="stars">★★★★★</div>
             <p className="review-text">
-              "Amazing studio with top-notch equipment and incredibly knowledgeable trainers. 
+              "Amazing studio with top-notch equipment and incredibly knowledgeable instructors. 
               The small group classes ensure personalized attention every session."
             </p>
             <p className="review-author">- Cansu</p>
@@ -283,7 +283,7 @@ export const Home: React.FC = () => {
             />
             <div className="stars">★★★★★</div>
             <p className="review-text">
-              "The location is unbeatable - right at Museumplein! The trainers are professional 
+              "The location is unbeatable - right at Museumplein! The instructors are professional 
               and really care about your progress. Best Pilates studio in Amsterdam!"
             </p>
             <p className="review-author">- Su</p>
@@ -317,7 +317,7 @@ export const Home: React.FC = () => {
             />
             <div className="stars">★★★★★</div>
             <p className="review-text">
-              "Professional trainers, clean studio, and great energy. I feel stronger and more 
+              "Professional instructors, clean studio, and great energy. I feel stronger and more 
               confident after every session. Couldn't ask for a better Pilates studio!"
             </p>
             <p className="review-author">- Tuğçe</p>

@@ -6,9 +6,9 @@ export const TrainerElif: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Elif Arzu Ogan - Pilates & Functional Training Specialist | PT Studio 7"
-        description="Meet Elif Arzu Ogan, expert Pilates and functional training specialist at PT Studio 7 Amsterdam. Book your personalized session today."
-        keywords="Elif Arzu Ogan, Pilates instructor Amsterdam, functional training, PT Studio 7, personal trainer"
+        title="Elif Arzu Ogan - Pilates & Functional Training Instructor | PT Studio 7"
+        description="Meet Elif Arzu Ogan, expert Pilates and functional training instructor at PT Studio 7 Amsterdam. Book your personalized session today."
+        keywords="Elif Arzu Ogan, Pilates instructor Amsterdam, functional training, PT Studio 7"
         canonical="https://www.ptstudio7amsterdam.nl/trainer-elif"
       />
 
@@ -17,7 +17,7 @@ export const TrainerElif: React.FC = () => {
           <div className="trainer-hero-content">
             <img 
               src="/assets/images/elif.jpeg" 
-              alt="Elif Arzu Ogan - Owner & Head Trainer" 
+              alt="Elif Arzu Ogan - Owner & Head Instructor" 
               className="trainer-hero-photo" 
               width="180" 
               height="180" 
@@ -26,7 +26,7 @@ export const TrainerElif: React.FC = () => {
             />
             <div className="trainer-hero-text">
               <h1>Elif Arzu Ogan</h1>
-              <p className="trainer-title">Owner & Head Trainer</p>
+              <p className="trainer-title">Owner & Head Instructor</p>
               <ul className="trainer-languages">
                 <li>English</li>
                 <li>Turkish</li>
@@ -38,7 +38,7 @@ export const TrainerElif: React.FC = () => {
         <div className="trainer-content">
           <section className="trainer-bio">
             <p>
-              Elif is the founder and head trainer of PT Studio 7, which she established in 2010. Since founding the studio, she has continued her career as both a trainer and business owner. With over 15 years of experience, she is a Senior Polestar Pilates Instructor, Miha BodyTec EMS Advance Trainer, and TRX & Functional Training Instructor. Elif holds a bachelor's degree in Business Administration from Hacettepe University. She started her sports career with athletics, continued with swimming, and played basketball in various clubs. She is passionate about helping clients reach their goals through personalized, attentive training and a holistic approach to health and fitness.
+              Elif is the founder and head instructor of PT Studio 7, which she established in 2010. Since founding the studio, she has continued her career as both an instructor and business owner. With over 15 years of experience, she is a Senior Polestar Pilates Instructor, Miha BodyTec EMS Advance Trainer, and TRX & Functional Training Instructor. Elif holds a bachelor's degree in Business Administration from Hacettepe University. She started her sports career with athletics, continued with swimming, and played basketball in various clubs. She is passionate about helping clients reach their goals through personalized, attentive training and a holistic approach to health and fitness.
             </p>
           </section>
 
@@ -48,7 +48,7 @@ export const TrainerElif: React.FC = () => {
               <li>Senior Polestar Pilates Instructor</li>
               <li>Miha BodyTec EMS Advance Trainer</li>
               <li>TRX & Functional Training Instructor</li>
-              <li>15+ years of experience in personal training and Pilates</li>
+              <li>15+ years of experience in Pilates instruction</li>
               <li>Specializes in individualized programs for all ages and fitness levels</li>
               <li>Pilates for scoliosis and spinal disorders – Polestar Pilates, Online</li>
               <li>Pilates during and post pregnancy workshop – Polestar Pilates, Online</li>
@@ -78,7 +78,7 @@ export const TrainerElif: React.FC = () => {
           </section>
 
           <div className="back-link">
-            <Link to="/#trainers">← Back to All Trainers</Link>
+            <Link to="/trainers">← Back to All Instructors</Link>
           </div>
         </div>
       </div>
