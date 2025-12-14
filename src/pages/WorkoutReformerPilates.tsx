@@ -191,7 +191,7 @@ export const WorkoutReformerPilates: React.FC = () => {
                 />
                 <h3>Gökben Öztekin</h3>
                 <p className="trainer-cert">Basi Pilates Instructor</p>
-                <p>Expert in mindful movement and technique perfection</p>
+                <p>Pilates Instructor</p>
                 <Link to="/trainer-gokben" className="trainer-link">View Profile →</Link>
               </div>
               <div className="trainer-mini-card">

@@ -138,7 +138,7 @@ export const WorkoutFunctional: React.FC = () => {
           </section>
 
           <section className="trainers-section">
-            <h2>Your Functional Training Experts</h2>
+            <h2>Your Functional Training Instructors</h2>
             <div className="trainers-grid">
               <div className="trainer-mini-card">
                 <img 
@@ -157,7 +157,7 @@ export const WorkoutFunctional: React.FC = () => {
               <div className="trainer-mini-card">
                 <img 
                   src="/assets/images/goknur.jpeg" 
-                  alt="Göknur Dipli - Functional Training Expert" 
+                  alt="Göknur Dipli - Pilates & Functional Training Instructor" 
                   width="400" 
                   height="280" 
                   loading="lazy" 

@@ -205,14 +205,14 @@ export const Home: React.FC = () => {
           <Link to="/trainer-gokben" className="trainer-card">
             <img 
               src="/assets/images/gokben.jpeg" 
-              alt="Gökben Öztekin - Reformer Pilates Expert" 
+              alt="Gökben Öztekin - Pilates Instructor" 
               loading="lazy"
               decoding="async"
               width="140"
               height="140"
             />
             <h3>Gökben Öztekin</h3>
-            <p>Reformer Pilates Expert</p>
+            <p>Pilates Instructor</p>
             <span className="learn-more">Learn More →</span>
           </Link>
           <Link to="/trainer-goknur" className="trainer-card">

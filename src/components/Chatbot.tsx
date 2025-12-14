@@ -158,7 +158,7 @@ export const Chatbot: React.FC = () => {
         instructorReason = 'Göknur specializes in EMS training and functional training, perfect for building strength and achieving weight goals efficiently.';
       } else {
         recommendedInstructor = 'Gökben Öztekin';
-        instructorReason = 'Gökben is an expert Basi Pilates instructor who creates a welcoming environment for all fitness levels.';
+        instructorReason = 'Gökben is a Basi Pilates instructor who creates a welcoming environment for all fitness levels.';
       }
 
       // Determine class type

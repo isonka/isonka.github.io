@@ -6,7 +6,7 @@ export const TrainerGokben: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Gökben Öztekin - Reformer Pilates Expert | PT Studio 7"
+        title="Gökben Öztekin - Pilates Instructor | PT Studio 7"
         description="Meet Gökben Öztekin, expert Reformer Pilates instructor at PT Studio 7 Amsterdam. Specializing in precise technique and mindful movement."
         keywords="Gökben Öztekin, Reformer Pilates, Pilates instructor Amsterdam, PT Studio 7"
         canonical="https://www.ptstudio7amsterdam.nl/trainer-gokben"

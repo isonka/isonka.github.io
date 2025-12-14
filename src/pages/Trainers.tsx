@@ -175,7 +175,7 @@ export const Trainers: React.FC = () => {
                   </div>
                   <div className="trainer-card-content">
                     <h3>{trainer.name}</h3>
-                    <p className="trainer-card-title">New Instructor</p>
+                    <p className="trainer-card-title">Pilates Instructor</p>
                   </div>
                 </div>
               ))}
@@ -185,7 +185,7 @@ export const Trainers: React.FC = () => {
 
         {/* CTA Section */}
         <section className="trainers-cta">
-          <h2>Ready to Train with Our Experts?</h2>
+          <h2>Ready to Train with Our Instructors?</h2>
           <p>Book a session and experience personalized training at its finest</p>
           <div className="trainers-cta-buttons">
             <Link to="/schedule" className="trainers-btn-primary">Book a Class</Link>
