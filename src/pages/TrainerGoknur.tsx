@@ -74,7 +74,7 @@ export const TrainerGoknur: React.FC = () => {
           </section>
 
           <div className="back-link">
-            <Link to="/trainers">← Back to All Instructors</Link>
+            <Link to="/instructors">← Back to All Instructors</Link>
           </div>
         </div>
       </div>

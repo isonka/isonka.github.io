@@ -89,7 +89,7 @@
 }
 
 /* Desktop Book Now Button */
-@media (min-width: 801px) {
+@media (min-width: 1025px) {
     .navbar-booknow-mobile {
         display: none !important;
     }
@@ -112,8 +112,8 @@
     }
 }
 
-/* Mobile Styles */
-@media (max-width: 800px) {
+/* Mobile & Tablet Styles */
+@media (max-width: 1024px) {
     .navbar-container {
         display: flex;
         align-items: center;

@@ -29,7 +29,7 @@ const trainers: Trainer[] = [
   {
     id: 'gokben',
     name: 'Gökben Öztekin',
-    title: 'Senior Pilates Instructor',
+    title: 'Pilates Instructor',
     tier: 'senior',
     image: '/assets/images/gokben.jpeg',
     languages: ['English', 'Turkish'],
@@ -40,7 +40,7 @@ const trainers: Trainer[] = [
   {
     id: 'goknur',
     name: 'Göknur Dipli',
-    title: 'Senior Pilates Instructor',
+    title: 'Pilates & Functional Training Instructor',
     tier: 'senior',
     image: '/assets/images/goknur.jpeg',
     languages: ['English', 'Turkish'],
@@ -107,8 +107,7 @@ const trainers: Trainer[] = [
 ];
 
 export const Trainers: React.FC = () => {
-  const masterTrainers = trainers.filter(t => t.tier === 'master' && t.available);
-  const seniorTrainers = trainers.filter(t => t.tier === 'senior' && t.available);
+  const availableInstructors = trainers.filter(t => t.available);
   const comingSoon = trainers.filter(t => !t.available);
 
   return (
@@ -117,77 +116,36 @@ export const Trainers: React.FC = () => {
         title="Our Instructors | PT Studio 7 Amsterdam"
         description="Meet our expert team of certified Pilates and fitness instructors at PT Studio 7 Amsterdam. Master, senior, and junior instructors dedicated to your fitness journey."
         keywords="Pilates instructors Amsterdam, reformer pilates teachers, PT Studio 7 instructors"
-        canonical="https://www.ptstudio7amsterdam.nl/trainers"
+        canonical="https://www.ptstudio7amsterdam.nl/instructors"
       />
 
       <div className="trainers-page">
-        {/* Hero Section */}
-        <section className="trainers-hero">
-          <div className="trainers-hero-content">
-            <h1>Our Instructors</h1>
-            <p>Meet our team of certified experts dedicated to your fitness journey</p>
-          </div>
-        </section>
-
-        {/* Master Instructors */}
-        {masterTrainers.length > 0 && (
-          <section className="trainers-section">
+        {/* All Instructors */}
+        {availableInstructors.length > 0 && (
+          <section className="trainers-section trainers-section-main">
             <div className="trainers-section-header">
-              <h2>Master Instructor</h2>
-              <p>Our founder and head instructor with 15+ years of experience</p>
-            </div>
-            <div className="trainers-grid trainers-grid-featured">
-              {masterTrainers.map(trainer => (
-                <Link to={trainer.link} key={trainer.id} className="trainer-card trainer-card-featured">
-                  <div className="trainer-card-image">
-                    <img src={trainer.image} alt={trainer.name} loading="lazy" />
-                    <span className="trainer-tier-badge tier-master">Master</span>
-                  </div>
-                  <div className="trainer-card-content">
-                    <h3>{trainer.name}</h3>
-                    <p className="trainer-card-title">{trainer.title}</p>
-                    <div className="trainer-card-languages">
-                      {trainer.languages.map(lang => (
-                        <span key={lang} className="language-tag">{lang}</span>
-                      ))}
-                    </div>
-                    <div className="trainer-card-specialties">
-                      {trainer.specialties.map(spec => (
-                        <span key={spec} className="specialty-tag">{spec}</span>
-                      ))}
-                    </div>
-                    <span className="trainer-card-link">View Profile →</span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* Senior Instructors */}
-        {seniorTrainers.length > 0 && (
-          <section className="trainers-section">
-            <div className="trainers-section-header">
-              <h2>Senior Instructors</h2>
+              <h1>Meet Our Team</h1>
               <p>Experienced professionals with advanced certifications</p>
             </div>
             <div className="trainers-grid">
-              {seniorTrainers.map(trainer => (
-                <Link to={trainer.link} key={trainer.id} className="trainer-card">
+              {availableInstructors.map(instructor => (
+                <Link to={instructor.link} key={instructor.id} className="trainer-card">
                   <div className="trainer-card-image">
-                    <img src={trainer.image} alt={trainer.name} loading="lazy" />
-                    <span className="trainer-tier-badge tier-senior">Senior</span>
+                    <img src={instructor.image} alt={instructor.name} loading="lazy" />
+                    <span className={`trainer-tier-badge tier-${instructor.tier}`}>
+                      {instructor.tier === 'master' ? 'Master' : 'Senior'}
+                    </span>
                   </div>
                   <div className="trainer-card-content">
-                    <h3>{trainer.name}</h3>
-                    <p className="trainer-card-title">{trainer.title}</p>
+                    <h3>{instructor.name}</h3>
+                    <p className="trainer-card-title">{instructor.title}</p>
                     <div className="trainer-card-languages">
-                      {trainer.languages.map(lang => (
+                      {instructor.languages.map(lang => (
                         <span key={lang} className="language-tag">{lang}</span>
                       ))}
                     </div>
                     <div className="trainer-card-specialties">
-                      {trainer.specialties.map(spec => (
+                      {instructor.specialties.map(spec => (
                         <span key={spec} className="specialty-tag">{spec}</span>
                       ))}
                     </div>

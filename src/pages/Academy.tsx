@@ -5,12 +5,12 @@ export const Academy: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="PT 7 Academy - Pilates & Mat Instructor Certification Courses | Amsterdam"
-        description="Join PT 7 Academy for professional Pilates and Mat instructor certification courses in Amsterdam. Learn from experienced trainers with 15+ years of expertise at our Museumplein studio."
-        keywords="Pilates instructor course Amsterdam, Mat Pilates certification, Pilates teacher training Amsterdam, Pilates certification Museumplein, become Pilates instructor, Pilates education Amsterdam"
+        title="PT 7 Academy - Pilates Instructor Certification Courses | Amsterdam"
+        description="Join PT 7 Academy for professional Pilates instructor certification in Amsterdam. Mat & Trapeze Table and Reformer courses. Learn from experienced instructors with 15+ years of expertise."
+        keywords="Pilates instructor course Amsterdam, Mat Pilates certification, Reformer Pilates certification, Trapeze Table certification, Pilates teacher training Amsterdam, become Pilates instructor"
         canonical="https://www.ptstudio7amsterdam.nl/academy"
-        ogTitle="PT 7 Academy | Pilates Instructor Certification Courses Amsterdam"
-        ogDescription="Professional Pilates and Mat instructor certification courses. Learn from expert trainers with 15+ years of experience. Located at Museumplein, Amsterdam."
+        ogTitle="PT 7 Academy | Pilates Instructor Certification Amsterdam"
+        ogDescription="Professional Pilates instructor certification courses. Mat & Trapeze Table and Reformer training. Learn from expert instructors with 15+ years of experience."
       />
 
       <div className="academy-page">
@@ -31,13 +31,12 @@ export const Academy: React.FC = () => {
             <h2>Become a Certified Pilates Instructor with PT 7 Academy!</h2>
             <p className="start-date"><strong>🎓 Start your journey in January 2026</strong></p>
             <p>
-              PT 7 Academy's Pilates Instructor Course is designed to equip you with a strong foundation in the two most 
-              essential components of Pilates: Mat and Reformer. Our goal is to help you become a highly sought-after 
-              instructor — one whose clients stay committed and inspired. That's why our program goes far beyond just 
-              teaching exercises.
+              PT 7 Academy's Pilates Instructor Courses are designed to equip you with a strong foundation in Pilates. 
+              Our goal is to help you become a highly sought-after instructor — one whose clients stay committed and inspired. 
+              That's why our program goes far beyond just teaching exercises.
             </p>
             <p>
-              You can join either Mat or Reformer training individually — or take both and receive <strong>5% off the total fee</strong>.
+              You can join either Mat & Trapeze Table or Reformer training individually — or take both and receive <strong>5% off the total fee</strong>.
             </p>
           </div>
         </section>
@@ -61,11 +60,11 @@ export const Academy: React.FC = () => {
             </div>
 
             <div className="courses-grid">
-              {/* Mat Pilates Course */}
+              {/* Mat & Trapeze Table Course */}
               <div className="course-card">
-                <h3>Mat Pilates Instructor Course</h3>
-                <p className="course-price">€1,700 <span className="vat-text">+ VAT (21%)</span></p>
-                <p className="combo-note">💡 <strong>Take both courses</strong> and get <strong>5% off</strong> — Only €3,515 + VAT (Save €185!)</p>
+                <h3>Mat & Trapeze Table Instructor Course</h3>
+                <p className="course-price">€2,000 <span className="vat-text">+ VAT (21%)</span></p>
+                <p className="combo-note">💡 <strong>Take both courses</strong> and get <strong>5% off</strong> the total fee!</p>
                 
                 <div className="course-details">
                   <h4>Course Details:</h4>
@@ -80,6 +79,8 @@ export const Academy: React.FC = () => {
                   <ul>
                     <li>48 hours of in-person technical training</li>
                     <li>Intro to Pilates (first week)</li>
+                    <li>Comprehensive Mat Pilates curriculum</li>
+                    <li>Trapeze Table (Cadillac) training</li>
                     <li>5 hours of observation + 5 hours of practice (by appointment)</li>
                     <li>2 exams (theoretical & practical)</li>
                     <li>One-on-one final assessment</li>
@@ -89,7 +90,7 @@ export const Academy: React.FC = () => {
                 </div>
                 
                 <div className="course-cta">
-                  <a href="mailto:info@ptstudio7amsterdam.nl?subject=Mat Pilates Instructor Course Inquiry" className="course-btn primary">
+                  <a href="mailto:info@ptstudio7amsterdam.nl?subject=Mat %26 Trapeze Table Instructor Course Inquiry" className="course-btn primary">
                     Inquire About This Course
                   </a>
                 </div>
@@ -100,7 +101,7 @@ export const Academy: React.FC = () => {
                 <div className="course-badge">Most Popular</div>
                 <h3>Reformer Pilates Instructor Course</h3>
                 <p className="course-price">€2,000 <span className="vat-text">+ VAT (21%)</span></p>
-                <p className="combo-note">💡 <strong>Take both courses</strong> and get <strong>5% off</strong> — Only €3,515 + VAT (Save €185!)</p>
+                <p className="combo-note">💡 <strong>Take both courses</strong> and get <strong>5% off</strong> the total fee!</p>
                 
                 <div className="course-details">
                   <h4>Course Details:</h4>
@@ -115,6 +116,7 @@ export const Academy: React.FC = () => {
                   <ul>
                     <li>48 hours of in-person technical training</li>
                     <li>Intro to Pilates (first week)</li>
+                    <li>Comprehensive Reformer Pilates curriculum</li>
                     <li>5 hours of observation + 5 hours of practice (by appointment)</li>
                     <li>2 exams (theoretical & practical)</li>
                     <li>One-on-one final assessment</li>
