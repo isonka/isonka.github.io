@@ -179,7 +179,7 @@ export const Chatbot: React.FC = () => {
         pricing = '• Single class: €45/person\n• 10-class pack: €40/person (€400 total) - Best Value\n• 20-class pack: €38/person (€760 total)';
       } else {
         classType = '**Small Group Classes** (max 5 people)';
-        pricing = '• Single class: €37/person\n• 10-class pack: €30/person (€300 total) - Most Popular\n• 20-class pack: €28/person (€560 total) - Best Value\n\n💡 **Or try our Weekday Membership** (Mon-Fri 9am-5pm):\n• 4 classes/month: €21.50/class (€86/month)\n• Unlimited 3 months: €350/month';
+        pricing = '• Single class: €37/person\n• 10-class pack: €30/person (€300 total) - Most Popular\n• 20-class pack: €28/person (€560 total) - Best Value\n\n💡 **Or try our Membership** (All days 9am-6pm):\n• 4 classes/month: €21.50/class (€86/month)\n• Unlimited 3 months: €350/month';
       }
 
       const recommendation = `✨ **Your Perfect Match:**
