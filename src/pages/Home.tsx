@@ -16,7 +16,7 @@ export const Home: React.FC = () => {
     <>
       <SEOHead
         title="Reformer Pilates Amsterdam | PT Studio 7 Museumplein"
-        description="Reformer Pilates Amsterdam at Museumplein. Small group classes (max 5), private sessions, expert instructors. EMS, TRX, Functional Training. Book now!"
+        description="Reformer Pilates Amsterdam at Museumplein. Small group classes (max 5), private sessions, expert instructors. TRX, Strength Training. Book now!"
         keywords="Reformer Pilates Amsterdam, Pilates Amsterdam, Reformer Pilates Museumplein, Pilates classes Amsterdam, private Reformer Pilates Amsterdam, small group Pilates, Pilates studio Amsterdam, best Pilates Amsterdam, Reformer Pilates near me, boutique Pilates Amsterdam, Pilates Zuid Amsterdam"
         canonical="https://www.ptstudio7amsterdam.nl"
         ogTitle="Reformer Pilates Amsterdam Museumplein | PT Studio 7"
@@ -42,7 +42,7 @@ export const Home: React.FC = () => {
               <h2 className="hero-tagline">Premium Reformer Pilates Studio | Small Group Classes (Max 5)</h2>
               <p className="hero-description">
                   • Expert Certified Instructors • Private & Group Reformer Pilates • Museumplein Location<br/>
-                  Reformer Pilates • EMS Training • TRX • Functional Training
+                  Reformer Pilates • TRX • Strength Training • Cardio
               </p>
             <div className="hero-buttons">
               <Link to="/schedule" className="hero-btn-primary" onClick={() => trackFBBookingClick()}>Book a Class</Link>
@@ -116,14 +116,14 @@ export const Home: React.FC = () => {
         <div className="workouts-grid">
           <Link to="/workouts/reformer-pilates" className="workout-card">
             <img 
-              src="/assets/images/pilates.jpg" 
-              alt="Reformer Pilates" 
+              src="/assets/images/reformer.JPG" 
+              alt="Reformer & Trapeze Table Pilates" 
               width="400" 
               height="220" 
               loading="lazy" 
               decoding="async" 
             />
-            <h3>Reformer Pilates</h3>
+            <h3>Reformer & Trapeze Table Pilates</h3>
             <p>Full-body workout focusing on core strength, flexibility, and posture</p>
             <span className="learn-more">Learn More →</span>
           </Link>
@@ -142,14 +142,14 @@ export const Home: React.FC = () => {
           </Link>
           <Link to="/workouts/functional-training" className="workout-card">
             <img 
-              src="/assets/images/free.jpg" 
-              alt="Functional Training" 
+              src="/assets/images/strength.JPG" 
+              alt="Strength Training" 
               width="400" 
               height="220" 
               loading="lazy" 
               decoding="async" 
             />
-            <h3>Functional Training</h3>
+            <h3>Strength Training</h3>
             <p>Build strength and improve movement patterns with free weights</p>
             <span className="learn-more">Learn More →</span>
           </Link>
@@ -166,19 +166,6 @@ export const Home: React.FC = () => {
             <p>High-intensity cardio workouts to boost endurance and burn calories</p>
             <span className="learn-more">Learn More →</span>
           </Link>
-          <Link to="/workouts/ems" className="workout-card">
-            <img 
-              src="/assets/images/ems.jpg" 
-              alt="EMS Training" 
-              width="400" 
-              height="220" 
-              loading="lazy" 
-              decoding="async" 
-            />
-            <h3>EMS Training</h3>
-            <p>Electro Muscle Stimulation for efficient full-body activation</p>
-            <span className="learn-more">Learn More →</span>
-          </Link>
         </div>
       </section>
 
@@ -191,7 +178,7 @@ export const Home: React.FC = () => {
         <div className="trainers-grid">
           <Link to="/trainer-elif" className="trainer-card">
             <img 
-              src="/assets/images/elif.jpeg" 
+              src="/assets/images/elif.JPG" 
               alt="Elif Arzu Ogan - Pilates Instructor" 
               loading="lazy"
               decoding="async"
@@ -199,7 +186,7 @@ export const Home: React.FC = () => {
               height="140"
             />
             <h3>Elif Arzu Ogan</h3>
-            <p>Pilates & Functional Training Instructor</p>
+            <p>Pilates & Strength Training Instructor</p>
             <span className="learn-more">Learn More →</span>
           </Link>
           <Link to="/trainer-gokben" className="trainer-card">
@@ -225,7 +212,59 @@ export const Home: React.FC = () => {
               height="140"
             />
             <h3>Göknur Dipli</h3>
-            <p>Pilates & Functional Training Instructor</p>
+            <p>Pilates & Strength Training Instructor</p>
+            <span className="learn-more">Learn More →</span>
+          </Link>
+          <Link to="/trainer-gulce" className="trainer-card">
+            <img 
+              src="/assets/images/gulce.JPG" 
+              alt="Gülce - Pilates Instructor" 
+              loading="lazy"
+              decoding="async"
+              width="140"
+              height="140"
+            />
+            <h3>Gülce</h3>
+            <p>Pilates Instructor</p>
+            <span className="learn-more">Learn More →</span>
+          </Link>
+          <Link to="/trainer-melis" className="trainer-card">
+            <img 
+              src="/assets/images/melis.JPG" 
+              alt="Melis - Pilates Instructor" 
+              loading="lazy"
+              decoding="async"
+              width="140"
+              height="140"
+            />
+            <h3>Melis</h3>
+            <p>Pilates Instructor</p>
+            <span className="learn-more">Learn More →</span>
+          </Link>
+          <Link to="/trainer-lal" className="trainer-card">
+            <img 
+              src="/assets/images/lal.JPG" 
+              alt="Lal - Pilates Instructor" 
+              loading="lazy"
+              decoding="async"
+              width="140"
+              height="140"
+            />
+            <h3>Lal</h3>
+            <p>Pilates Instructor</p>
+            <span className="learn-more">Learn More →</span>
+          </Link>
+          <Link to="/trainer-nisan" className="trainer-card">
+            <img 
+              src="/assets/images/nisan.JPG" 
+              alt="Nisan - Pilates Instructor" 
+              loading="lazy"
+              decoding="async"
+              width="140"
+              height="140"
+            />
+            <h3>Nisan</h3>
+            <p>Pilates Instructor</p>
             <span className="learn-more">Learn More →</span>
           </Link>
         </div>

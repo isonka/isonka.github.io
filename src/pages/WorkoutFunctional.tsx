@@ -6,26 +6,26 @@ import '../styles/WorkoutDetail.css';
 
 export const WorkoutFunctional: React.FC = () => {
   useEffect(() => {
-    trackPageView('/workouts/functional-training', 'Functional Training - PT Studio 7');
+    trackPageView('/workouts/functional-training', 'Strength Training - PT Studio 7');
   }, []);
 
   return (
     <>
       <SEOHead
-        title="Functional Training Amsterdam | PT Studio 7 Museumplein"
-        description="Expert Functional Training in Amsterdam at Museumplein. Build real-world strength, improve movement patterns, prevent injuries. Small groups & private training!"
-        keywords="functional training Amsterdam, strength training Amsterdam, free weights training, movement training Museumplein, functional fitness Amsterdam, personal training"
+        title="Strength Training Amsterdam | PT Studio 7 Museumplein"
+        description="Expert Strength Training in Amsterdam at Museumplein. Build real-world strength, improve movement patterns, prevent injuries. Small groups & private training!"
+        keywords="strength training Amsterdam, free weights training, movement training Museumplein, functional fitness Amsterdam, personal training"
         canonical="https://www.ptstudio7amsterdam.nl/workouts/functional-training"
-        ogTitle="Functional Training Amsterdam | PT Studio 7"
-        ogDescription="Build practical strength for everyday life. Expert functional training with free weights at our Museumplein studio."
-        ogImage="/assets/images/free.jpg"
+        ogTitle="Strength Training Amsterdam | PT Studio 7"
+        ogDescription="Build practical strength for everyday life. Expert strength training with free weights at our Museumplein studio."
+        ogImage="/assets/images/strength.JPG"
       />
 
       <div className="workout-detail-page">
-        <section className="workout-hero" style={{ backgroundImage: 'url(/assets/images/free.jpg)' }}>
+        <section className="workout-hero" style={{ backgroundImage: 'url(/assets/images/strength.JPG)' }}>
           <div className="workout-hero-overlay">
             <div className="workout-hero-content">
-              <h1>Functional Training</h1>
+              <h1>Strength Training</h1>
               <p className="workout-tagline">Train multiple muscles with one exercise - Build strength efficiently</p>
               <Link to="/schedule" className="cta-button">Book a Session</Link>
             </div>
@@ -36,12 +36,12 @@ export const WorkoutFunctional: React.FC = () => {
           <section className="workout-intro">
             <h2>Train Multiple Muscles with Every Exercise</h2>
             <p className="lead">
-              Functional Training uses compound movements that engage multiple muscle groups simultaneously for maximum efficiency. With one exercise, you train your entire body - building real-world strength, stability, and mobility that translates directly to your daily activities, whether lifting groceries, playing with kids, or excelling in sports.
+              Strength Training uses compound movements that engage multiple muscle groups simultaneously for maximum efficiency. With one exercise, you train your entire body - building real-world strength, stability, and mobility that translates directly to your daily activities, whether lifting groceries, playing with kids, or excelling in sports.
             </p>
           </section>
 
           <section className="benefits-section">
-            <h2>Why Functional Training?</h2>
+            <h2>Why Strength Training?</h2>
             <div className="benefits-grid">
               <div className="benefit-card">
                 <div className="benefit-icon">🏋️</div>
@@ -138,34 +138,34 @@ export const WorkoutFunctional: React.FC = () => {
           </section>
 
           <section className="trainers-section">
-            <h2>Your Functional Training Instructors</h2>
+            <h2>Your Strength Training Instructors</h2>
             <div className="trainers-grid">
               <div className="trainer-mini-card">
                 <img 
-                  src="/assets/images/elif.jpeg" 
-                  alt="Elif Arzu Ogan - Functional Training Instructor" 
+                  src="/assets/images/elif.JPG" 
+                  alt="Elif Arzu Ogan - Strength Training Instructor" 
                   width="400" 
                   height="280" 
                   loading="lazy" 
                   decoding="async" 
                 />
                 <h3>Elif Arzu Ogan</h3>
-                <p className="trainer-cert">Functional Training Instructor</p>
+                <p className="trainer-cert">Strength Training Instructor</p>
                 <p>15+ years experience in strength training and functional movement</p>
                 <Link to="/trainer-elif" className="trainer-link">View Profile →</Link>
               </div>
               <div className="trainer-mini-card">
                 <img 
                   src="/assets/images/goknur.jpeg" 
-                  alt="Göknur Dipli - Pilates & Functional Training Instructor" 
+                  alt="Göknur Dipli - Pilates & Strength Training Instructor" 
                   width="400" 
                   height="280" 
                   loading="lazy" 
                   decoding="async" 
                 />
                 <h3>Göknur Dipli</h3>
-                <p className="trainer-cert">Functional Training Instructor</p>
-                <p>Certified coach with 12+ years in functional fitness and strength training</p>
+                <p className="trainer-cert">Strength Training Instructor</p>
+                <p>Certified coach with 12+ years in fitness and strength training</p>
                 <Link to="/trainer-goknur" className="trainer-link">View Profile →</Link>
               </div>
             </div>
@@ -175,8 +175,8 @@ export const WorkoutFunctional: React.FC = () => {
             <h2>Frequently Asked Questions</h2>
             <div className="faq-list">
               <div className="faq-item">
-                <h3>What's the difference between functional training and regular gym workouts?</h3>
-                <p>Functional training focuses on multi-joint, compound movements that mimic real-life activities, rather than isolating individual muscles on machines. This builds practical, usable strength.</p>
+                <h3>What's the difference between strength training and regular gym workouts?</h3>
+                <p>Our strength training focuses on multi-joint, compound movements that mimic real-life activities, rather than isolating individual muscles on machines. This builds practical, usable strength.</p>
               </div>
               <div className="faq-item">
                 <h3>Do I need weight training experience?</h3>
@@ -187,19 +187,19 @@ export const WorkoutFunctional: React.FC = () => {
                 <p>No. Functional training builds lean, athletic muscle. The type of training we do creates strength and definition without excessive bulk.</p>
               </div>
               <div className="faq-item">
-                <h3>Can functional training help with weight loss?</h3>
-                <p>Absolutely! Building muscle increases your resting metabolism, and functional training workouts burn significant calories both during and after exercise.</p>
+                <h3>Can strength training help with weight loss?</h3>
+                <p>Absolutely! Building muscle increases your resting metabolism, and strength training workouts burn significant calories both during and after exercise.</p>
               </div>
               <div className="faq-item">
                 <h3>Is this suitable for older adults?</h3>
-                <p>Yes! Functional training is one of the best ways to maintain independence as you age. We modify exercises to match your abilities and gradually build strength safely.</p>
+                <p>Yes! Strength training is one of the best ways to maintain independence as you age. We modify exercises to match your abilities and gradually build strength safely.</p>
               </div>
             </div>
           </section>
 
           <section className="final-cta">
             <h2>Start Building Real-World Strength</h2>
-            <p>Experience functional training at PT Studio 7 Museumplein</p>
+            <p>Experience strength training at PT Studio 7 Museumplein</p>
             <div className="cta-buttons">
               <Link to="/schedule" className="cta-button primary">Book Your Session</Link>
               <Link to="/pricing" className="cta-button secondary">View Pricing</Link>

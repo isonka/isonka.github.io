@@ -43,12 +43,12 @@ export const Schedule: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Book Classes - Pilates, EMS, TRX & Training | PT Studio 7 Museumplein Amsterdam"
-        description="Book Pilates, EMS, TRX, Functional Training at PT Studio 7 Museumplein. Small group classes (max 5) & private classes with expert trainers. 45-min classes. Premium location across from Stedelijk Museum."
-        keywords="book Pilates Amsterdam, book EMS training Amsterdam, book TRX Amsterdam, Pilates Museumplein, EMS Museumplein, small group fitness Amsterdam, private training booking Amsterdam, Pilates schedule, boutique gym booking Amsterdam, Pilates near Rijksmuseum, intimate fitness classes Amsterdam"
+        title="Book Classes - Pilates, TRX & Training | PT Studio 7 Museumplein Amsterdam"
+        description="Book Pilates, TRX, Strength Training at PT Studio 7 Museumplein. Small group classes (max 5) & private classes with expert trainers. 45-min classes. Premium location across from Stedelijk Museum."
+        keywords="book Pilates Amsterdam, book TRX Amsterdam, Pilates Museumplein, small group fitness Amsterdam, private training booking Amsterdam, Pilates schedule, boutique gym booking Amsterdam, Pilates near Rijksmuseum, intimate fitness classes Amsterdam"
         canonical="https://www.ptstudio7amsterdam.nl/schedule"
-        ogTitle="Book Your Class | Pilates, EMS, TRX at PT Studio 7 Museumplein"
-        ogDescription="Reserve your spot in small group classes (max 5) or private classes. Pilates, EMS, TRX, Functional Training. Expert trainers. Premium Museumplein location."
+        ogTitle="Book Your Class | Pilates, TRX & Training at PT Studio 7 Museumplein"
+        ogDescription="Reserve your spot in small group classes (max 5) or private classes. Pilates, TRX, Strength Training. Expert trainers. Premium Museumplein location."
       />
 
       <div className="schedule-page">
@@ -56,7 +56,7 @@ export const Schedule: React.FC = () => {
         <section className="schedule-hero">
           <div className="schedule-hero-content">
             <h1>Schedule & Book Your Session</h1>
-            <p>Pilates • EMS Training • TRX • Functional Training • Cardio<br/>
+            <p>Pilates • TRX • Strength Training • Cardio<br/>
             Small group classes (max 5) or private classes with expert trainers</p>
             <div className="location-highlight">
               <span className="location-icon">📍</span>

@@ -18,12 +18,12 @@ export const WorkoutReformerPilates: React.FC = () => {
         canonical="https://www.ptstudio7amsterdam.nl/workouts/reformer-pilates"
         ogTitle="Reformer Pilates Amsterdam | PT Studio 7 Museumplein"
         ogDescription="Premium Reformer Pilates studio at Museumplein. Small groups (max 5), expert instructors. Build core strength, flexibility & perfect posture."
-        ogImage="/assets/images/pilates.jpg"
+        ogImage="/assets/images/reformer.JPG"
       />
 
       <div className="workout-detail-page">
         {/* Hero Section */}
-        <section className="workout-hero" style={{ backgroundImage: 'url(/assets/images/pilates.jpg)' }}>
+        <section className="workout-hero" style={{ backgroundImage: 'url(/assets/images/reformer.JPG)' }}>
           <div className="workout-hero-overlay">
             <div className="workout-hero-content">
               <h1>Reformer Pilates</h1>
@@ -168,7 +168,7 @@ export const WorkoutReformerPilates: React.FC = () => {
             <div className="trainers-grid">
               <div className="trainer-mini-card">
                 <img 
-                  src="/assets/images/elif.jpeg" 
+                  src="/assets/images/elif.JPG" 
                   alt="Elif Arzu Ogan - Reformer Pilates Instructor" 
                   width="400" 
                   height="280" 
@@ -205,7 +205,7 @@ export const WorkoutReformerPilates: React.FC = () => {
                 />
                 <h3>Göknur Dipli</h3>
                 <p className="trainer-cert">Senior Polestar Pilates Instructor</p>
-                <p>12+ years experience in Reformer Pilates and functional training</p>
+                <p>12+ years experience in Reformer Pilates and strength training</p>
                 <Link to="/trainer-goknur" className="trainer-link">View Profile →</Link>
               </div>
             </div>

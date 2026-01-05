@@ -1,0 +1,50 @@
+{
+  "gulce": {
+    "name": "Gülce",
+    "title": "Pilates Instructor",
+    "tier": "junior",
+    "certifications": ["PT 7 Academy Comprehensive Reformer Pilates Instructor Course"],
+    "image": "/assets/images/gulce.JPG",
+    "languages": ["English", "Turkish"],
+    "specialties": ["Reformer Pilates"],
+    "link": "/trainer-gulce",
+    "description": "Gülce has been practicing Pilates since she started college and has explored a wide range of teaching methods and movement approaches throughout her journey. Her experience spans Turkey, Germany, and the Netherlands, where she has both practiced and studied Pilates in diverse studio environments. She has been a happy and dedicated student at PT7 Studio for the past four years, and is now even happier to join the elite team of instructors. Gülce is passionate about sharing the same sense of strength, balance, and joy that Pilates has brought into her own life, and looks forward to bringing that happiness to her students.",
+    "available": true
+  },
+  "melis": {
+    "name": "Melis",
+    "title": "Pilates Instructor",
+    "tier": "junior",
+    "certifications": ["PT 7 Academy Comprehensive Reformer Pilates Instructor Course"],
+    "image": "/assets/images/melis.JPG",
+    "languages": ["English", "Turkish"],
+    "specialties": ["Reformer Pilates"],
+    "link": "/trainer-melis",
+    "description": "Based in Amsterdam, Melis helps clients build strength, mobility, and confidence through intentional and tailored Reformer Pilates. With a background as a former volleyball player and four years of Salsa dancing, movement and body awareness have always been central to her life. She discovered Pilates as a powerful way to support both physical performance and overall wellbeing, and values its blend of precision, control, and functional strength. Melis enjoys helping clients improve posture, develop strength that carries into everyday life, and feel better in their bodies within a welcoming and supportive environment.",
+    "available": true
+  },
+  "lal": {
+    "name": "Lal",
+    "title": "Pilates Instructor",
+    "tier": "junior",
+    "certifications": ["PT 7 Academy Comprehensive Reformer Pilates Instructor Course"],
+    "image": "/assets/images/lal.JPG",
+    "languages": ["English", "Turkish"],
+    "specialties": ["Reformer Pilates"],
+    "link": "/trainer-lal",
+    "description": "Lal began practicing Pilates in 2022, building on a lifelong relationship with movement as an active spirit. Growing up in Istanbul, she was drawn to group sports like football and volleyball, later developing a strong interest in gym training and personal conditioning. Alongside her Pilates journey, Lal works professionally as a visual artist and creative technologist, a field that involves long hours of standing and physically demanding installation work. Pilates first helped her resolve the physical strain caused by this work, and over time became an essential practice for building strength, resilience, and body awareness. She chose to become an instructor to practice movements mindfully and share her knowledge with others.",
+    "available": true
+  },
+  "nisan": {
+    "name": "Nisan",
+    "title": "Pilates Instructor",
+    "tier": "junior",
+    "certifications": ["PT 7 Academy Comprehensive Reformer Pilates Instructor Course"],
+    "image": "/assets/images/nisan.JPG",
+    "languages": ["English", "Turkish", "Dutch"],
+    "specialties": ["Reformer Pilates"],
+    "link": "/trainer-nisan",
+    "description": "Nisan is a newly certified Pilates instructor who is passionate about mindful movement and helping people feel good in their bodies. Her approach focuses on building strength, mobility, and balance in ways that support a high quality of life and long-term wellbeing.",
+    "available": true
+  }
+}

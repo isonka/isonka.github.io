@@ -142,7 +142,7 @@ export const WorkoutCardio: React.FC = () => {
             <div className="trainers-grid">
               <div className="trainer-mini-card">
                 <img 
-                  src="/assets/images/elif.jpeg" 
+                  src="/assets/images/elif.JPG" 
                   alt="Elif Arzu Ogan - Cardio Instructor" 
                   width="400" 
                   height="280" 

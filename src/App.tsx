@@ -19,6 +19,10 @@ import { Trainers } from './pages/Trainers';
 import { TrainerElif } from './pages/TrainerElif';
 import { TrainerGokben } from './pages/TrainerGokben';
 import { TrainerGoknur } from './pages/TrainerGoknur';
+import { TrainerGulce } from './pages/TrainerGulce';
+import { TrainerMelis } from './pages/TrainerMelis';
+import { TrainerLal } from './pages/TrainerLal';
+import { TrainerNisan } from './pages/TrainerNisan';
 import { Academy } from './pages/Academy';
 import { Blog } from './pages/Blog';
 import { BlogPost } from './pages/BlogPost';
@@ -26,7 +30,6 @@ import { WorkoutReformerPilates } from './pages/WorkoutReformerPilates';
 import { WorkoutTRX } from './pages/WorkoutTRX';
 import { WorkoutFunctional } from './pages/WorkoutFunctional';
 import { WorkoutCardio } from './pages/WorkoutCardio';
-import { WorkoutEMS } from './pages/WorkoutEMS';
 import './App.css';
 
 // Component to handle GitHub Pages redirects
@@ -70,12 +73,15 @@ function App() {
             <Route path="/workouts/trx" element={<WorkoutTRX />} />
             <Route path="/workouts/functional-training" element={<WorkoutFunctional />} />
             <Route path="/workouts/cardio" element={<WorkoutCardio />} />
-            <Route path="/workouts/ems" element={<WorkoutEMS />} />
             <Route path="/congrats" element={<Congrats />} />
             <Route path="/instructors" element={<Trainers />} />
             <Route path="/trainer-elif" element={<TrainerElif />} />
             <Route path="/trainer-gokben" element={<TrainerGokben />} />
             <Route path="/trainer-goknur" element={<TrainerGoknur />} />
+            <Route path="/trainer-gulce" element={<TrainerGulce />} />
+            <Route path="/trainer-melis" element={<TrainerMelis />} />
+            <Route path="/trainer-lal" element={<TrainerLal />} />
+            <Route path="/trainer-nisan" element={<TrainerNisan />} />
             <Route path="/academy" element={<Academy />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />

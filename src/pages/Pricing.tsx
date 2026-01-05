@@ -64,7 +64,7 @@ export const Pricing: React.FC = () => {
     <>
       <SEOHead
         title="Pricing - Pilates Classes & Memberships | PT Studio 7 Museumplein"
-        description="Flexible Pilates pricing at Museumplein. Small group classes (max 5), memberships, private classes. Expert instructors. Premium location. EMS & TRX. From €28/class."
+        description="Flexible Pilates pricing at Museumplein. Small group classes (max 5), memberships, private classes. Expert instructors. Premium location. TRX & Strength Training. From €28/class."
         keywords="Pilates prices Amsterdam, Pilates membership Amsterdam, Pilates class rates Museumplein, small group Pilates pricing, boutique Pilates studio membership Amsterdam, private Pilates rates Museumplein, couple Pilates Amsterdam, Pilates packages Amsterdam, intimate Pilates classes pricing Amsterdam"
         canonical="https://www.ptstudio7amsterdam.nl/pricing"
         ogTitle="PT Studio 7 Pricing | Pilates Packages at Museumplein"

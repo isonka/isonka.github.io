@@ -6,7 +6,7 @@ export const TrainerGoknur: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Göknur Dipli - Pilates & Functional Training Instructor | PT Studio 7"
+        title="Göknur Dipli - Pilates & Strength Training Instructor | PT Studio 7"
         description="Meet Göknur Dipli, expert Pilates and functional training instructor at PT Studio 7 Amsterdam. Holistic approach to fitness and wellness."
         keywords="Göknur Dipli, Pilates instructor Amsterdam, PT Studio 7"
         canonical="https://www.ptstudio7amsterdam.nl/trainer-goknur"
@@ -17,7 +17,7 @@ export const TrainerGoknur: React.FC = () => {
           <div className="trainer-hero-content">
             <img 
               src="/assets/images/goknur.jpeg" 
-              alt="Göknur Dipli - Pilates & Functional Training Instructor" 
+              alt="Göknur Dipli - Pilates & Strength Training Instructor" 
               className="trainer-hero-photo" 
               width="180" 
               height="180" 
@@ -26,7 +26,7 @@ export const TrainerGoknur: React.FC = () => {
             />
             <div className="trainer-hero-text">
               <h1>Goknur Dipli</h1>
-              <p className="trainer-title">Pilates & Functional Training Instructor</p>
+              <p className="trainer-title">Pilates & Strength Training Instructor</p>
               <ul className="trainer-languages">
                 <li>English</li>
                 <li>Turkish</li>
@@ -47,7 +47,7 @@ export const TrainerGoknur: React.FC = () => {
             <ul>
               <li>Senior Polestar Pilates Instructor</li>
               <li>Miha BodyTec EMS Advance Trainer</li>
-              <li>TRX & Functional Training Instructor</li>
+              <li>TRX & Strength Training Instructor</li>
               <li>12+ years of experience in Pilates instruction</li>
               <li>Specializes in individualized programs for all ages and fitness levels</li>
               <li>Polestar Pilates Certified Pilates Trainer – Polestar Pilates, İstanbul</li>

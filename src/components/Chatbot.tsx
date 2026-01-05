@@ -155,7 +155,7 @@ export const Chatbot: React.FC = () => {
         instructorReason = 'Both are Senior Polestar Pilates instructors with extensive experience in rehabilitation and working with injuries, including spinal disorders and low back care.';
       } else if (profile.goal === 'Improve strength & fitness' || profile.goal === 'Lose weight & tone') {
         recommendedInstructor = 'Göknur Dipli';
-        instructorReason = 'Göknur specializes in EMS training and functional training, perfect for building strength and achieving weight goals efficiently.';
+        instructorReason = 'Göknur specializes in functional training, perfect for building strength and achieving weight goals efficiently.';
       } else {
         recommendedInstructor = 'Gökben Öztekin';
         instructorReason = 'Gökben is a Basi Pilates instructor who creates a welcoming environment for all fitness levels.';
@@ -216,7 +216,7 @@ ${pricing}
         break;
       
       case "Tell me about equipment":
-        addBotMessage("We use professional Pilates equipment including Reformers, Cadillac/Trapeze Tables, Tower Reformers, Ladder Barrel, Wunda Chair, and Spine Corrector. We also offer EMS training and TRX!", 500);
+        addBotMessage("We use professional Pilates equipment including Reformers, Cadillac/Trapeze Tables, Tower Reformers, Ladder Barrel, Wunda Chair, and Spine Corrector. We also offer TRX and Strength Training!", 500);
         addBotMessage("Would you like to see our equipment?", 1500, ["Yes, show me", "No thanks", "Start over"]);
         break;
       

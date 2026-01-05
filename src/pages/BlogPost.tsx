@@ -156,7 +156,7 @@ export const BlogPost: React.FC = () => {
             <h3>About PT Studio 7</h3>
             <p>
               Located at Museumplein in Amsterdam, PT Studio 7 offers premium Pilates, 
-              EMS training, and functional fitness with expert instructors in an intimate setting.
+              TRX, and functional fitness with expert instructors in an intimate setting.
             </p>
             <Link to="/pricing" className="sidebar-link">View Our Packages →</Link>
           </div>

@@ -142,7 +142,7 @@ export const WorkoutTRX: React.FC = () => {
             <div className="trainers-grid">
               <div className="trainer-mini-card">
                 <img 
-                  src="/assets/images/elif.jpeg" 
+                  src="/assets/images/elif.JPG" 
                   alt="Elif Arzu Ogan - TRX Instructor" 
                   width="400" 
                   height="280" 
@@ -164,7 +164,7 @@ export const WorkoutTRX: React.FC = () => {
                   decoding="async" 
                 />
                 <h3>Göknur Dipli</h3>
-                <p className="trainer-cert">TRX & Functional Training Instructor</p>
+                <p className="trainer-cert">TRX & Strength Training Instructor</p>
                 <p>12+ years experience in suspension training and functional fitness</p>
                 <Link to="/trainer-goknur" className="trainer-link">View Profile →</Link>
               </div>
