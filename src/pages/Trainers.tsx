@@ -18,7 +18,7 @@ const trainers: Trainer[] = [
   {
     id: 'elif',
     name: 'Elif Arzu Ogan',
-    title: 'Owner & Head Instructor',
+    title: 'Comprehensive Pilates\nStrength Training\nPrenatal Pilates',
     tier: 'master',
     image: '/assets/images/elif.JPG',
     languages: ['English', 'Turkish'],
@@ -29,7 +29,7 @@ const trainers: Trainer[] = [
   {
     id: 'gokben',
     name: 'Gökben Öztekin',
-    title: 'Pilates Instructor',
+    title: 'Comprehensive Pilates',
     tier: 'senior',
     image: '/assets/images/gokben.jpeg',
     languages: ['English', 'Turkish'],
@@ -40,7 +40,7 @@ const trainers: Trainer[] = [
   {
     id: 'goknur',
     name: 'Göknur Dipli',
-    title: 'Pilates & Strength Training Instructor',
+    title: 'Comprehensive Pilates\nStrength Training\nPrenatal Pilates',
     tier: 'senior',
     image: '/assets/images/goknur.jpeg',
     languages: ['English', 'Turkish'],
@@ -51,7 +51,7 @@ const trainers: Trainer[] = [
   {
     id: 'gulce',
     name: 'Gülce',
-    title: 'Pilates Instructor',
+    title: 'Reformer Pilates',
     tier: 'junior',
     image: '/assets/images/gulce.JPG',
     languages: ['English', 'Turkish'],
@@ -62,7 +62,7 @@ const trainers: Trainer[] = [
   {
     id: 'melis',
     name: 'Melis',
-    title: 'Pilates Instructor',
+    title: 'Reformer Pilates',
     tier: 'junior',
     image: '/assets/images/melis.JPG',
     languages: ['English', 'Turkish'],
@@ -73,7 +73,7 @@ const trainers: Trainer[] = [
   {
     id: 'lal',
     name: 'Lal',
-    title: 'Pilates Instructor',
+    title: 'Reformer Pilates',
     tier: 'junior',
     image: '/assets/images/lal.JPG',
     languages: ['English', 'Turkish'],
@@ -84,7 +84,7 @@ const trainers: Trainer[] = [
   {
     id: 'nisan',
     name: 'Nisan',
-    title: 'Pilates Instructor',
+    title: 'Reformer Pilates',
     tier: 'junior',
     image: '/assets/images/nisan.JPG',
     languages: ['English', 'Turkish', 'Dutch'],
@@ -138,15 +138,10 @@ export const Trainers: React.FC = () => {
                   </div>
                   <div className="trainer-card-content">
                     <h3>{instructor.name}</h3>
-                    <p className="trainer-card-title">{instructor.title}</p>
+                    <p className="trainer-card-title" style={{ whiteSpace: 'pre-line' }}>{instructor.title}</p>
                     <div className="trainer-card-languages">
                       {instructor.languages.map(lang => (
                         <span key={lang} className="language-tag">{lang}</span>
-                      ))}
-                    </div>
-                    <div className="trainer-card-specialties">
-                      {instructor.specialties.map(spec => (
-                        <span key={spec} className="specialty-tag">{spec}</span>
                       ))}
                     </div>
                     <span className="trainer-card-link">View Profile →</span>

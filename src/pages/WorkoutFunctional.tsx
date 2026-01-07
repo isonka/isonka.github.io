@@ -157,7 +157,7 @@ export const WorkoutFunctional: React.FC = () => {
               <div className="trainer-mini-card">
                 <img 
                   src="/assets/images/goknur.jpeg" 
-                  alt="Göknur Dipli - Pilates & Strength Training Instructor" 
+                  alt="Göknur Dipli - Comprehensive Pilates, Strength Training, Prenatal Pilates Instructor" 
                   width="400" 
                   height="280" 
                   loading="lazy" 

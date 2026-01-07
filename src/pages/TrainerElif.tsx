@@ -6,7 +6,7 @@ export const TrainerElif: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Elif Arzu Ogan - Pilates & Strength Training Instructor | PT Studio 7"
+        title="Elif Arzu Ogan - Comprehensive Pilates, Strength Training, Prenatal Pilates Instructor | PT Studio 7"
         description="Meet Elif Arzu Ogan, expert Pilates and functional training instructor at PT Studio 7 Amsterdam. Book your personalized session today."
         keywords="Elif Arzu Ogan, Pilates instructor Amsterdam, functional training, PT Studio 7"
         canonical="https://www.ptstudio7amsterdam.nl/trainer-elif"

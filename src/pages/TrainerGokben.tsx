@@ -26,7 +26,7 @@ export const TrainerGokben: React.FC = () => {
             />
             <div className="trainer-hero-text">
               <h1>Gokben Oztekin</h1>
-              <p className="trainer-title">Basi Pilates Instructor</p>
+              <p className="trainer-title">Comprehensive Pilates</p>
               <ul className="trainer-languages">
                 <li>English</li>
                 <li>Turkish</li>

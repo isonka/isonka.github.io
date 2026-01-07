@@ -6,7 +6,7 @@ export const TrainerGoknur: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Göknur Dipli - Pilates & Strength Training Instructor | PT Studio 7"
+        title="Göknur Dipli - Comprehensive Pilates, Strength Training, Prenatal Pilates Instructor | PT Studio 7"
         description="Meet Göknur Dipli, expert Pilates and functional training instructor at PT Studio 7 Amsterdam. Holistic approach to fitness and wellness."
         keywords="Göknur Dipli, Pilates instructor Amsterdam, PT Studio 7"
         canonical="https://www.ptstudio7amsterdam.nl/trainer-goknur"
@@ -17,7 +17,7 @@ export const TrainerGoknur: React.FC = () => {
           <div className="trainer-hero-content">
             <img 
               src="/assets/images/goknur.jpeg" 
-              alt="Göknur Dipli - Pilates & Strength Training Instructor" 
+              alt="Göknur Dipli - Comprehensive Pilates, Strength Training, Prenatal Pilates Instructor" 
               className="trainer-hero-photo" 
               width="180" 
               height="180" 
@@ -26,7 +26,7 @@ export const TrainerGoknur: React.FC = () => {
             />
             <div className="trainer-hero-text">
               <h1>Goknur Dipli</h1>
-              <p className="trainer-title">Pilates & Strength Training Instructor</p>
+              <p className="trainer-title">Comprehensive Pilates<br />Strength Training<br />Prenatal Pilates</p>
               <ul className="trainer-languages">
                 <li>English</li>
                 <li>Turkish</li>

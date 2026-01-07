@@ -116,7 +116,7 @@ export const Home: React.FC = () => {
         <div className="workouts-grid">
           <Link to="/workouts/reformer-pilates" className="workout-card">
             <img 
-              src="/assets/images/reformer.JPG" 
+              src="/assets/images/reformer.jpg" 
               alt="Reformer & Trapeze Table Pilates" 
               width="400" 
               height="220" 
@@ -186,7 +186,7 @@ export const Home: React.FC = () => {
               height="140"
             />
             <h3>Elif Arzu Ogan</h3>
-            <p>Pilates & Strength Training Instructor</p>
+            <p>Comprehensive Pilates<br />Strength Training<br />Prenatal Pilates</p>
             <span className="learn-more">Learn More →</span>
           </Link>
           <Link to="/trainer-gokben" className="trainer-card">
@@ -199,7 +199,7 @@ export const Home: React.FC = () => {
               height="140"
             />
             <h3>Gökben Öztekin</h3>
-            <p>Pilates Instructor</p>
+            <p>Comprehensive Pilates</p>
             <span className="learn-more">Learn More →</span>
           </Link>
           <Link to="/trainer-goknur" className="trainer-card">
@@ -212,7 +212,7 @@ export const Home: React.FC = () => {
               height="140"
             />
             <h3>Göknur Dipli</h3>
-            <p>Pilates & Strength Training Instructor</p>
+            <p>Comprehensive Pilates<br />Strength Training<br />Prenatal Pilates</p>
             <span className="learn-more">Learn More →</span>
           </Link>
           <Link to="/trainer-gulce" className="trainer-card">
@@ -225,7 +225,7 @@ export const Home: React.FC = () => {
               height="140"
             />
             <h3>Gülce</h3>
-            <p>Pilates Instructor</p>
+            <p>Reformer Pilates</p>
             <span className="learn-more">Learn More →</span>
           </Link>
           <Link to="/trainer-melis" className="trainer-card">
@@ -238,7 +238,7 @@ export const Home: React.FC = () => {
               height="140"
             />
             <h3>Melis</h3>
-            <p>Pilates Instructor</p>
+            <p>Reformer Pilates</p>
             <span className="learn-more">Learn More →</span>
           </Link>
           <Link to="/trainer-lal" className="trainer-card">
@@ -251,7 +251,7 @@ export const Home: React.FC = () => {
               height="140"
             />
             <h3>Lal</h3>
-            <p>Pilates Instructor</p>
+            <p>Reformer Pilates</p>
             <span className="learn-more">Learn More →</span>
           </Link>
           <Link to="/trainer-nisan" className="trainer-card">
@@ -264,7 +264,7 @@ export const Home: React.FC = () => {
               height="140"
             />
             <h3>Nisan</h3>
-            <p>Pilates Instructor</p>
+            <p>Reformer Pilates</p>
             <span className="learn-more">Learn More →</span>
           </Link>
         </div>
