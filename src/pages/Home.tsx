@@ -14,13 +14,18 @@ const reviewsData = [
     ratingValue: 5,
   },
   {
-    author: 'Cansu',
-    reviewBody: 'Amazing studio with top-notch equipment and incredibly knowledgeable instructors. The small group classes ensure personalized attention every session.',
+    author: 'Ayşe',
+    reviewBody: "I've been training at PT Studio 7 for a while now, and I couldn't be happier with my experience! The studio has such a calm and positive atmosphere, and the trainers are incredibly professional and supportive.",
     ratingValue: 5,
   },
   {
-    author: 'Su',
-    reviewBody: 'The location is unbeatable - right at Museumplein! The instructors are professional and really care about your progress. Best Pilates studio in Amsterdam!',
+    author: 'Maya',
+    reviewBody: "This is a truly special Pilates Reformer studio — warm, welcoming, and filled with care. Gökben and Elif bring so much heart into every session. I've been practicing here for almost six months, and I feel stronger, more balanced, and more connected to my body.",
+    ratingValue: 5,
+  },
+  {
+    author: 'Flaminia',
+    reviewBody: "PT Studio 7 and Elif are exactly what I was looking for: professional, thoughtful, engaging in your body progress and growth. Elif is amazing and has decades of experience as a fitness trainer with a detail-oriented approach.",
     ratingValue: 5,
   },
 ];
@@ -315,26 +320,17 @@ export const Home: React.FC = () => {
             <p className="review-author">- Lot Canter Cremers</p>
           </div>
           <div className="review-card">
-            <img 
-              src="/assets/images/cansu.png" 
-              alt="Cansu review" 
-              className="reviewer-photo" 
-              width="80" 
-              height="80" 
-              loading="lazy" 
-              decoding="async" 
-            />
+            <div className="reviewer-initial" aria-label="Flaminia">F</div>
             <div className="stars">★★★★★</div>
             <p className="review-text">
-              "Amazing studio with top-notch equipment and incredibly knowledgeable instructors. 
-              The small group classes ensure personalized attention every session."
+              "I had been looking for a professional Pilates reformer studio for about 2 years and tried many different studios around Amsterdam. PT Studio 7 and Elif are exactly what I was looking for: professional, thoughtful, engaging in your body progress and growth. Elif is amazing and has decades of experience as a fitness trainer. She demonstrates techniques with a detail-oriented approach and her classes are always different and tailored to the group!"
             </p>
-            <p className="review-author">- Cansu</p>
+            <p className="review-author">- Flaminia</p>
           </div>
           <div className="review-card">
             <img 
-              src="/assets/images/su.png" 
-              alt="Su review" 
+              src="/assets/images/maya.png" 
+              alt="Maya review" 
               className="reviewer-photo" 
               width="80" 
               height="80" 
@@ -343,10 +339,9 @@ export const Home: React.FC = () => {
             />
             <div className="stars">★★★★★</div>
             <p className="review-text">
-              "The location is unbeatable - right at Museumplein! The instructors are professional 
-              and really care about your progress. Best Pilates studio in Amsterdam!"
+              "This is a truly special Pilates Reformer studio — warm, welcoming, and filled with care. Gökben and Elif bring so much heart into every session. Their gentle guidance, attentiveness, and kindness make all the difference. I've been practicing here for almost six months, and I feel stronger, more balanced, and more connected to my body. Every class leaves me smiling and deeply grateful!"
             </p>
-            <p className="review-author">- Su</p>
+            <p className="review-author">- Maya</p>
           </div>
           <div className="review-card">
             <img 
@@ -367,8 +362,8 @@ export const Home: React.FC = () => {
           </div>
           <div className="review-card">
             <img 
-              src="/assets/images/tugce.png" 
-              alt="Tuğçe review" 
+              src="/assets/images/ayse.png" 
+              alt="Ayşe review" 
               className="reviewer-photo" 
               width="80" 
               height="80" 
@@ -377,10 +372,78 @@ export const Home: React.FC = () => {
             />
             <div className="stars">★★★★★</div>
             <p className="review-text">
-              "Professional instructors, clean studio, and great energy. I feel stronger and more 
-              confident after every session. Couldn't ask for a better Pilates studio!"
+              "I've been training at PT Studio 7 for a while now, and I couldn't be happier with my experience! The studio has such a calm and positive atmosphere, and the trainers are incredibly professional and supportive. They pay close attention to your needs and guide you through every movement with care. I highly recommend it!"
             </p>
-            <p className="review-author">- Tuğçe</p>
+            <p className="review-author">- Ayşe</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Partner Badges Section */}
+      <section className="partner-badges-section">
+        <div className="partner-badges-container">
+          <h3>Find Us On</h3>
+          <div className="partner-badges">
+            {/* Google Reviews Badge */}
+            <a 
+              href="https://maps.app.goo.gl/wrhyzYbov9eiGQJw5" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="partner-badge google-badge"
+            >
+              <img 
+                src="/assets/images/google-logo.svg" 
+                alt="Google" 
+                className="partner-logo"
+                width="24"
+                height="24"
+              />
+              <div className="google-rating">
+                <span className="rating-stars">★★★★★</span>
+                <span className="rating-text">4.8</span>
+                <span className="review-incentive">Leave a review, get 5% off!</span>
+              </div>
+            </a>
+            
+            {/* ClassPass Badge */}
+            <a 
+              href="https://classpass.com/studios/pt-studio-7-amsterdam" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="partner-badge classpass-badge"
+            >
+              <img 
+                src="/assets/images/classpass-logo.svg" 
+                alt="classpass" 
+                className="partner-logo"
+                width="100"
+                height="20"
+              />
+              <div className="classpass-rating">
+                <span className="rating-stars">★★★★★</span>
+                <span className="rating-text">4.9</span>
+                <span className="review-count">2,500+ reviews</span>
+              </div>
+            </a>
+
+            {/* Urban Sports Club Badge */}
+            <a 
+              href="https://urbansportsclub.com/nl/venues/pt-studio-7-museumplein" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="partner-badge usc-badge"
+            >
+              <img 
+                src="/assets/images/urbansportsclub-logo.svg" 
+                alt="Urban Sports Club" 
+                className="partner-logo"
+                width="140"
+                height="20"
+              />
+              <div className="usc-rating">
+                <span className="rating-text">Book via USC</span>
+              </div>
+            </a>
           </div>
         </div>
       </section>

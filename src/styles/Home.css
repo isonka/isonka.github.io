@@ -541,5 +541,180 @@
   .reviews-container {
     grid-template-columns: 1fr;
   }
+
+  .partner-badges {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .partner-badge {
+    width: 100%;
+    max-width: 320px;
+    padding: 28px 40px;
+    min-height: 140px;
+  }
+
+  .partner-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .classpass-badge .rating-text,
+  .google-badge .rating-text {
+    font-size: 1.4rem;
+  }
+
+  .classpass-badge .rating-stars,
+  .google-badge .rating-stars {
+    font-size: 1.3rem;
+  }
+
+  .google-badge .review-incentive {
+    font-size: 1rem;
+    padding: 6px 14px;
+  }
+
+  .usc-badge .usc-text {
+    font-size: 1rem;
+  }
+}
+
+/* Partner Badges Section */
+.partner-badges-section {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  text-align: center;
+}
+
+.partner-badges-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.partner-badges-container h3 {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.partner-badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.partner-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 32px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  gap: 12px;
+  min-width: 160px;
+}
+
+.partner-badge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.partner-logo {
+  height: 24px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.classpass-badge .partner-logo {
+  height: 20px;
+}
+
+.usc-badge .partner-logo {
+  height: 18px;
+}
+
+.classpass-badge .classpass-rating,
+.google-badge .google-rating,
+.usc-badge .usc-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.classpass-badge .rating-stars {
+  color: #6C63FF;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.classpass-badge .rating-text {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.classpass-badge .review-count {
+  font-size: 0.7rem;
+  color: #888;
+}
+
+.google-badge .rating-stars {
+  color: #fbbf24;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.google-badge .rating-text {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.google-badge .review-incentive {
+  font-size: 0.85rem;
+  color: #34A853;
+  font-weight: 700;
+  margin-top: 6px;
+  background: rgba(52, 168, 83, 0.1);
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.usc-badge .rating-stars {
+  color: #FF6B35;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.usc-badge .rating-text {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 700;
+}
+
+/* Reviewer Initial Avatar (for reviews without photo) */
+.reviewer-initial {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #ffd700;
+  color: #333;
+  font-size: 2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
 }
 
