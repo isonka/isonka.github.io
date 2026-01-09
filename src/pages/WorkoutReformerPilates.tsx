@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 import { trackPageView } from '../utils/gtmTracking';
 import { useEffect } from 'react';
 import '../styles/WorkoutDetail.css';
@@ -20,6 +21,7 @@ export const WorkoutReformerPilates: React.FC = () => {
         ogDescription="Premium Reformer Pilates studio at Museumplein. Small groups (max 5), expert instructors. Build core strength, flexibility & perfect posture."
         ogImage="/assets/images/reformer.jpg"
       />
+      <Breadcrumbs items={[{ name: 'Reformer Pilates', path: '/workouts/reformer-pilates' }]} />
 
       <div className="workout-detail-page">
         {/* Hero Section */}

@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
+import { Breadcrumbs } from '../components/Breadcrumbs';
+import { StructuredData } from '../components/StructuredData';
 import '../styles/Trainer.css';
 
 export const TrainerMelis: React.FC = () => {
@@ -8,9 +10,22 @@ export const TrainerMelis: React.FC = () => {
       <SEOHead
         title="Melis - Pilates Instructor | PT Studio 7"
         description="Meet Melis, certified Reformer Pilates instructor at PT Studio 7 Amsterdam. Helping clients build strength, mobility, and confidence through intentional movement."
-        keywords="Melis, Reformer Pilates, Pilates instructor Amsterdam, PT Studio 7"
+        keywords="Melis, Reformer Pilates, Pilates instructor Amsterdam, PT Studio 7, Pilates leraar"
         canonical="https://www.ptstudio7amsterdam.nl/trainer-melis"
       />
+      <StructuredData
+        type="Person"
+        data={{
+          person: {
+            name: 'Melis',
+            jobTitle: 'Reformer Pilates Instructor',
+            image: '/assets/images/melis.JPG',
+            description: 'Certified Reformer Pilates instructor helping clients build strength, mobility, and confidence through intentional movement at PT Studio 7 Amsterdam.',
+            worksFor: 'PT Studio 7 Amsterdam',
+          },
+        }}
+      />
+      <Breadcrumbs items={[{ name: 'Instructors', path: '/instructors' }, { name: 'Melis', path: '/trainer-melis' }]} />
 
       <div className="trainer-page">
         <div className="trainer-hero">

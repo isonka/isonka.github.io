@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
+import { Breadcrumbs } from '../components/Breadcrumbs';
+import { StructuredData } from '../components/StructuredData';
 import '../styles/Trainer.css';
 
 export const TrainerElif: React.FC = () => {
@@ -8,9 +10,22 @@ export const TrainerElif: React.FC = () => {
       <SEOHead
         title="Elif Arzu Ogan - Comprehensive Pilates, Strength Training, Prenatal Pilates Instructor | PT Studio 7"
         description="Meet Elif Arzu Ogan, expert Pilates and functional training instructor at PT Studio 7 Amsterdam. Book your personalized session today."
-        keywords="Elif Arzu Ogan, Pilates instructor Amsterdam, functional training, PT Studio 7"
+        keywords="Elif Arzu Ogan, Pilates instructor Amsterdam, functional training, PT Studio 7, Pilates leraar Amsterdam"
         canonical="https://www.ptstudio7amsterdam.nl/trainer-elif"
       />
+      <StructuredData
+        type="Person"
+        data={{
+          person: {
+            name: 'Elif Arzu Ogan',
+            jobTitle: 'Owner & Head Pilates Instructor',
+            image: '/assets/images/elif.JPG',
+            description: 'Founder and head instructor of PT Studio 7 with over 15 years of experience. Senior Polestar Pilates Instructor, TRX & Strength Training Instructor.',
+            worksFor: 'PT Studio 7 Amsterdam',
+          },
+        }}
+      />
+      <Breadcrumbs items={[{ name: 'Instructors', path: '/instructors' }, { name: 'Elif Arzu Ogan', path: '/trainer-elif' }]} />
 
       <div className="trainer-page">
         <div className="trainer-hero">

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 import { trackPageView } from '../utils/gtmTracking';
 import { useEffect } from 'react';
 import '../styles/WorkoutDetail.css';
@@ -20,6 +21,7 @@ export const WorkoutCardio: React.FC = () => {
         ogDescription="High-energy cardio workouts to burn calories and build endurance. Small groups (max 5) at Museumplein."
         ogImage="/assets/images/cardio.jpg"
       />
+      <Breadcrumbs items={[{ name: 'Cardio Training', path: '/workouts/cardio' }]} />
 
       <div className="workout-detail-page">
         <section className="workout-hero" style={{ backgroundImage: 'url(/assets/images/cardio.jpg)' }}>

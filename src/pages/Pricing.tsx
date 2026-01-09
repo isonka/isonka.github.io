@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { SEOHead } from '../components/SEOHead';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 import { trackPricingView, trackPageView } from '../utils/gtmTracking';
 import '../styles/Pricing.css';
 
@@ -70,6 +71,7 @@ export const Pricing: React.FC = () => {
         ogTitle="PT Studio 7 Pricing | Pilates Packages at Museumplein"
         ogDescription="Small group Pilates (max 5) from €28/class. Memberships & private classes available. Expert instructors at Amsterdam's most exclusive Museumplein Pilates studio."
       />
+      <Breadcrumbs items={[{ name: 'Pricing', path: '/pricing' }]} />
 
       <div className="pricing-page">
         <div className="pricing-hero">

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 import { trackPageView } from '../utils/gtmTracking';
 import { useEffect } from 'react';
 import '../styles/WorkoutDetail.css';
@@ -20,6 +21,7 @@ export const WorkoutTRX: React.FC = () => {
         ogDescription="Expert TRX suspension training at Museumplein. Build total body strength, balance & functional fitness in small groups (max 5)."
         ogImage="/assets/images/trx.jpg"
       />
+      <Breadcrumbs items={[{ name: 'TRX Training', path: '/workouts/trx' }]} />
 
       <div className="workout-detail-page">
         <section className="workout-hero" style={{ backgroundImage: 'url(/assets/images/trx.jpg)' }}>

@@ -1,9 +1,29 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
+import { StructuredData } from '../components/StructuredData';
 import { trackPageView, trackPhoneClick, trackEmailClick, trackSocialClick } from '../utils/gtmTracking';
 import { trackFBPageView, trackFBPhoneClick, trackFBEmailClick, trackFBWhatsAppClick, trackFBBookingClick } from '../utils/fbPixelTracking';
 import '../styles/Home.css';
+
+// Reviews data for structured data
+const reviewsData = [
+  {
+    author: 'Lot Canter Cremers',
+    reviewBody: 'Through a neighbor in my building I was introduced to PT Studio 7. I have been going to this studio for the past 18 months, of which I have been pregnant for 9. During my pregnancy Elif trained me until the very end (38.5 weeks). Her training gave me and my body an extremely comfortable pregnancy and smooth delivery of birth!',
+    ratingValue: 5,
+  },
+  {
+    author: 'Cansu',
+    reviewBody: 'Amazing studio with top-notch equipment and incredibly knowledgeable instructors. The small group classes ensure personalized attention every session.',
+    ratingValue: 5,
+  },
+  {
+    author: 'Su',
+    reviewBody: 'The location is unbeatable - right at Museumplein! The instructors are professional and really care about your progress. Best Pilates studio in Amsterdam!',
+    ratingValue: 5,
+  },
+];
 
 export const Home: React.FC = () => {
   useEffect(() => {
@@ -23,6 +43,7 @@ export const Home: React.FC = () => {
         ogDescription="Premium Reformer Pilates studio at Museumplein Amsterdam. Small groups (max 5), expert instructors, private & group classes. Book your Reformer Pilates session!"
         ogImage="/assets/images/about-us-web.jpg"
       />
+      <StructuredData type="LocalBusiness" data={{ reviews: reviewsData }} />
       
       {/* Hero Section with Background Image */}
       <section className="hero-video">

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 import '../styles/Trainers.css';
 
 interface Trainer {
@@ -118,6 +119,7 @@ export const Trainers: React.FC = () => {
         keywords="Pilates instructors Amsterdam, reformer pilates teachers, PT Studio 7 instructors, Pilates leraren Amsterdam, personal trainers Museumplein, gecertificeerde Pilates instructeurs"
         canonical="https://www.ptstudio7amsterdam.nl/instructors"
       />
+      <Breadcrumbs items={[{ name: 'Instructors', path: '/instructors' }]} />
 
       <div className="trainers-page">
         {/* All Instructors */}

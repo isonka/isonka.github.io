@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 import { BookingGuide } from '../components/BookingGuide';
 import { trackScheduleVisit, trackPageView } from '../utils/gtmTracking';
 import '../styles/Schedule.css';
@@ -50,6 +51,7 @@ export const Schedule: React.FC = () => {
         ogTitle="Book Your Class | Pilates, TRX & Training at PT Studio 7 Museumplein"
         ogDescription="Reserve your spot in small group classes (max 5) or private classes. Pilates, TRX, Strength Training. Expert trainers. Premium Museumplein location."
       />
+      <Breadcrumbs items={[{ name: 'Book Classes', path: '/schedule' }]} />
 
       <div className="schedule-page">
         {/* Hero Section */}

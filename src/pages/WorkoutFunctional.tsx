@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 import { trackPageView } from '../utils/gtmTracking';
 import { useEffect } from 'react';
 import '../styles/WorkoutDetail.css';
@@ -20,6 +21,7 @@ export const WorkoutFunctional: React.FC = () => {
         ogDescription="Build practical strength for everyday life. Expert strength training with free weights at our Museumplein studio."
         ogImage="/assets/images/strength.JPG"
       />
+      <Breadcrumbs items={[{ name: 'Strength Training', path: '/workouts/functional-training' }]} />
 
       <div className="workout-detail-page">
         <section className="workout-hero" style={{ backgroundImage: 'url(/assets/images/strength.JPG)' }}>
