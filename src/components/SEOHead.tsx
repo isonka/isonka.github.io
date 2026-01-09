@@ -45,8 +45,15 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     updateMetaTag('author', 'PT Studio 7');
     updateMetaTag('robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
 
+    // Geo-targeting for Amsterdam/Netherlands
+    updateMetaTag('geo.region', 'NL-NH');
+    updateMetaTag('geo.placename', 'Amsterdam');
+    updateMetaTag('geo.position', '52.3572909;4.8762577');
+    updateMetaTag('ICBM', '52.3572909, 4.8762577');
+
     // Open Graph tags (Facebook, LinkedIn, etc)
     updateMetaTag('og:locale', 'en_US', true);
+    updateMetaTag('og:locale:alternate', 'nl_NL', true);
     updateMetaTag('og:type', 'website', true);
     updateMetaTag('og:title', ogTitle || title, true);
     updateMetaTag('og:description', ogDescription || description, true);

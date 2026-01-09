@@ -1,111 +1,166 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Homepage -->
   <url>
     <loc>https://www.ptstudio7amsterdam.nl/</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.ptstudio7amsterdam.nl/assets/images/pt7logo.png</image:loc>
-      <image:title>PT Studio 7 Amsterdam - Pilates &amp; Personal Training</image:title>
+      <image:title>PT Studio 7 Amsterdam - Reformer Pilates Studio Museumplein</image:title>
     </image:image>
   </url>
+  
+  <!-- Core Pages -->
   <url>
     <loc>https://www.ptstudio7amsterdam.nl/pricing</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.ptstudio7amsterdam.nl/schedule</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://www.ptstudio7amsterdam.nl/instructors</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ptstudio7amsterdam.nl/academy</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Workout Pages -->
+  <url>
+    <loc>https://www.ptstudio7amsterdam.nl/workouts/reformer-pilates</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.ptstudio7amsterdam.nl/assets/images/reformer.jpg</image:loc>
+      <image:title>Reformer Pilates Amsterdam - PT Studio 7</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ptstudio7amsterdam.nl/workouts/trx</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ptstudio7amsterdam.nl/workouts/functional-training</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ptstudio7amsterdam.nl/workouts/cardio</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Equipment Pages -->
+  <url>
     <loc>https://www.ptstudio7amsterdam.nl/equipment</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.ptstudio7amsterdam.nl/equipment/reformer</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.ptstudio7amsterdam.nl/equipment/tower-reformer</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.ptstudio7amsterdam.nl/equipment/cadillac</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.ptstudio7amsterdam.nl/equipment/wunda-chair</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.ptstudio7amsterdam.nl/equipment/ladder-barrel</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.ptstudio7amsterdam.nl/academy</loc>
-    <lastmod>2025-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  
+  <!-- Trainer Pages -->
   <url>
     <loc>https://www.ptstudio7amsterdam.nl/trainer-elif</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.ptstudio7amsterdam.nl/assets/images/elif.JPG</image:loc>
+      <image:title>Elif Arzu Ogan - Owner &amp; Head Instructor PT Studio 7</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.ptstudio7amsterdam.nl/trainer-gokben</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.ptstudio7amsterdam.nl/trainer-goknur</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.ptstudio7amsterdam.nl/trainer-gulce</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ptstudio7amsterdam.nl/trainer-melis</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ptstudio7amsterdam.nl/trainer-lal</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ptstudio7amsterdam.nl/trainer-nisan</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog -->
   <url>
     <loc>https://www.ptstudio7amsterdam.nl/blog</loc>
-    <lastmod>2025-11-10</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.ptstudio7amsterdam.nl/blog/pilates-for-men-strength-flexibility-athletic-performance</loc>
-    <lastmod>2025-11-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.ptstudio7amsterdam.nl/blog/reformer-pilates-back-pain-relief-spine-health</loc>
-    <lastmod>2025-11-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.ptstudio7amsterdam.nl/blog/pilates-hip-mobility-joint-health-arthritis</loc>
-    <lastmod>2025-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.ptstudio7amsterdam.nl/blog/prenatal-pilates-supporting-body-through-every-trimester</loc>
@@ -113,5 +168,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.ptstudio7amsterdam.nl/blog/pilates-for-men-strength-flexibility-athletic-performance</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
-

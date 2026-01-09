@@ -14,7 +14,7 @@ export const WorkoutReformerPilates: React.FC = () => {
       <SEOHead
         title="Reformer Pilates Amsterdam Museumplein | PT Studio 7"
         description="Expert Reformer Pilates classes in Amsterdam at Museumplein. Small group classes (max 5) & private sessions. Strengthen core, improve flexibility, perfect posture. Book now!"
-        keywords="Reformer Pilates Amsterdam, Pilates Museumplein, Reformer classes Amsterdam, core strength training, flexibility training Amsterdam, posture correction, small group Pilates"
+        keywords="Reformer Pilates Amsterdam, Pilates Museumplein, Reformer classes Amsterdam, core strength training, flexibility training Amsterdam, posture correction, small group Pilates, Reformer Pilates lessen, buikspieren training Amsterdam, houding verbeteren"
         canonical="https://www.ptstudio7amsterdam.nl/workouts/reformer-pilates"
         ogTitle="Reformer Pilates Amsterdam | PT Studio 7 Museumplein"
         ogDescription="Premium Reformer Pilates studio at Museumplein. Small groups (max 5), expert instructors. Build core strength, flexibility & perfect posture."
