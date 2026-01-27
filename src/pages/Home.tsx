@@ -54,7 +54,7 @@ export const Home: React.FC = () => {
       <SEOHead
         title="Pilates Amsterdam | Boutique Studio Museumplein | PT Studio 7"
         description="Pilates Amsterdam studio at Museumplein, Oud-Zuid. Private sessions & small group classes (max 5). Expert instructors with 15+ years experience. TRX, Strength Training. Book now!"
-        keywords="Pilates Amsterdam, Pilates studio Amsterdam, Pilates classes Amsterdam, Pilates Museumplein, private Pilates Amsterdam, small group Pilates Amsterdam, best Pilates Amsterdam, Pilates lessen Amsterdam, Pilates Zuid Amsterdam, boutique Pilates Amsterdam, Pilates near me Amsterdam, Pilates les Amsterdam, personal training Pilates Amsterdam, Pilates Oud-Zuid"
+        keywords="Pilates Amsterdam, Pilates studio Amsterdam, Pilates Museumplein, Pilates Oud-Zuid, private Pilates Amsterdam, small group Pilates, Pilates lessen Amsterdam, boutique Pilates Amsterdam"
         canonical="https://www.ptstudio7amsterdam.nl"
         ogTitle="Pilates Amsterdam | PT Studio 7 Museumplein"
         ogDescription="Premium boutique Pilates studio at Museumplein Amsterdam. Small groups (max 5), private sessions, expert instructors. Book your Pilates class today!"

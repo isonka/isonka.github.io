@@ -46,7 +46,7 @@ export const Schedule: React.FC = () => {
       <SEOHead
         title="Book Classes - Pilates, TRX & Training | PT Studio 7 Museumplein Amsterdam"
         description="Book Pilates, TRX, Strength Training at PT Studio 7 Museumplein. Small group classes (max 5) & private classes with expert trainers. 45-min classes. Premium location across from Stedelijk Museum."
-        keywords="book Pilates Amsterdam, book TRX Amsterdam, Pilates Museumplein, small group fitness Amsterdam, private training booking Amsterdam, Pilates schedule, boutique gym booking Amsterdam, Pilates near Rijksmuseum, intimate fitness classes Amsterdam, Pilates reserveren Amsterdam, fitness boeken Amsterdam, sportschool Museumplein"
+        keywords="Pilates boeken Amsterdam, Pilates rooster Amsterdam, Pilates reserveren, TRX boeken Amsterdam, les boeken Museumplein, Pilates schedule Amsterdam, groepsles boeken"
         canonical="https://www.ptstudio7amsterdam.nl/schedule"
         ogTitle="Book Your Class | Pilates, TRX & Training at PT Studio 7 Museumplein"
         ogDescription="Reserve your spot in small group classes (max 5) or private classes. Pilates, TRX, Strength Training. Expert trainers. Premium Museumplein location."

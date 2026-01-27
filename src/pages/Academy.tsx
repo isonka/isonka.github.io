@@ -7,7 +7,7 @@ export const Academy: React.FC = () => {
       <SEOHead
         title="Pilates Instructor Course Amsterdam | Weekend Certification | PT 7 Academy"
         description="Become a certified Pilates instructor in Amsterdam. Weekend-only training, perfect for career changers. Small groups (4-8), globally certified instructors, job opportunities included. Starting March 2026."
-        keywords="pilates instructor course amsterdam, pilates teacher training amsterdam, pilates certification, become pilates instructor, pilates opleiding amsterdam, weekend pilates certification, career change pilates instructor, pilates certification netherlands, pilatesdocent worden, pilates teacher training with job, small group pilates certification, affordable pilates certification amsterdam"
+        keywords="Pilates instructor course Amsterdam, Pilates opleiding Amsterdam, Pilates teacher training, Pilates certification Netherlands, pilatesdocent worden, weekend Pilates certification, career change Pilates instructor"
         canonical="https://www.ptstudio7amsterdam.nl/academy"
         ogTitle="Pilates Instructor Course Amsterdam | Weekend Training | PT 7 Academy"
         ogDescription="Weekend Pilates certification for career changers. Small groups, globally certified instructors, job opportunities at our Museumplein studio. Starting March 2026."
