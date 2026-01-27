@@ -46,21 +46,21 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
         priceRange: '€€',
         address: {
           '@type': 'PostalAddress',
-          streetAddress: 'Ruysdaelstraat 35-A',
+          streetAddress: 'Van Baerlestraat 76C',
           addressLocality: 'Amsterdam',
-          postalCode: '1071 XA',
+          postalCode: '1071 BB',
           addressCountry: 'NL',
         },
         geo: {
           '@type': 'GeoCoordinates',
-          latitude: 52.3572909,
-          longitude: 4.8762577,
+          latitude: 52.3573141,
+          longitude: 4.8762787,
         },
         openingHoursSpecification: [
           {
             '@type': 'OpeningHoursSpecification',
             dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-            opens: '07:00',
+            opens: '08:00',
             closes: '21:00',
           },
           {
