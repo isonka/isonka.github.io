@@ -39,6 +39,18 @@ export const Home: React.FC = () => {
 
   return (
     <>
+      {/* Promotional Banner for Reformer Course */}
+      <div className="promo-banner">
+        <div className="promo-content">
+          <span className="promo-text">
+            <strong>Become a Certified Reformer Pilates Instructor</strong> — Course starts March 2026
+          </span>
+          <Link to="/academy" className="promo-cta">
+            Learn More →
+          </Link>
+        </div>
+      </div>
+
       <SEOHead
         title="Reformer Pilates Amsterdam | PT Studio 7 Museumplein"
         description="Reformer Pilates Amsterdam at Museumplein. Small group classes (max 5), private sessions, expert instructors. TRX, Strength Training. Book now!"

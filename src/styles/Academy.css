@@ -3,6 +3,75 @@
   min-height: 100vh;
 }
 
+/* Urgency Banner */
+.academy-urgency-banner {
+  background: linear-gradient(90deg, #ffd700 0%, #ffb800 100%);
+  padding: 14px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.academy-urgency-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
+
+.urgency-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.urgency-icon {
+  font-size: 1.5rem;
+}
+
+.urgency-text {
+  font-size: 1rem;
+  color: #222;
+  text-align: center;
+}
+
+.urgency-cta {
+  background: #222;
+  color: #ffd700;
+  padding: 8px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.urgency-cta:hover {
+  background: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 /* Hero Section */
 .academy-hero {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
@@ -157,6 +226,50 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  animation: pulse-badge 2s infinite;
+}
+
+@keyframes pulse-badge {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.course-badge.secondary {
+  background: #e5e5e5;
+  color: #666;
+  animation: none;
+}
+
+.course-badge.in-progress {
+  background: #4a90d9;
+  color: #fff;
+  animation: none;
+}
+
+/* Course Highlights */
+.course-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff9e6;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #222;
+  border: 1px solid #ffd700;
+}
+
+.highlight-icon {
+  font-size: 1rem;
 }
 
 .course-card h3 {
@@ -280,6 +393,13 @@
   box-shadow: 0 6px 16px rgba(255, 215, 0, 0.6);
 }
 
+.cta-subtext {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
 /* Payment Information */
 .payment-info {
   background: #f8f8f8;
@@ -300,6 +420,12 @@
   font-size: 1.1rem;
   color: #555;
   margin: 0;
+}
+
+.payment-breakdown {
+  margin-top: 12px !important;
+  font-size: 1.2rem !important;
+  color: #222 !important;
 }
 
 /* Benefits Section */
@@ -418,6 +544,33 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .academy-urgency-banner {
+    padding: 12px 16px;
+  }
+
+  .urgency-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .urgency-text {
+    font-size: 0.9rem;
+  }
+
+  .urgency-cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  .course-highlights {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .highlight-item {
+    justify-content: center;
+  }
+
   .academy-hero h1 {
     font-size: 2.5rem;
   }
