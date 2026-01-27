@@ -5,12 +5,12 @@ export const Academy: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="PT 7 Academy - Pilates Instructor Certification Courses | Amsterdam"
-        description="Join PT 7 Academy for professional Pilates instructor certification in Amsterdam. Mat & Trapeze Table and Reformer courses. Learn from experienced instructors with 15+ years of expertise."
-        keywords="Pilates instructor course Amsterdam, Mat Pilates certification, Reformer Pilates certification, Trapeze Table certification, Pilates teacher training Amsterdam, become Pilates instructor"
+        title="Pilates Instructor Course Amsterdam | Weekend Certification | PT 7 Academy"
+        description="Become a certified Pilates instructor in Amsterdam. Weekend-only training, perfect for career changers. Small groups (4-8), globally certified instructors, job opportunities included. Reformer certification starting March 2026."
+        keywords="pilates instructor course amsterdam, pilates teacher training amsterdam, reformer pilates certification, become pilates instructor, pilates opleiding amsterdam, weekend pilates certification, career change pilates instructor, pilates certification netherlands, pilatesdocent worden, pilates teacher training with job, small group pilates certification, affordable reformer certification amsterdam"
         canonical="https://www.ptstudio7amsterdam.nl/academy"
-        ogTitle="PT 7 Academy | Pilates Instructor Certification Amsterdam"
-        ogDescription="Professional Pilates instructor certification courses. Mat & Trapeze Table and Reformer training. Learn from expert instructors with 15+ years of experience."
+        ogTitle="Pilates Instructor Course Amsterdam | Weekend Training | PT 7 Academy"
+        ogDescription="Weekend Pilates certification for career changers. Small groups, globally certified instructors, job opportunities at our Museumplein studio. Starting March 2026."
       />
 
       <div className="academy-page">
@@ -30,10 +30,10 @@ export const Academy: React.FC = () => {
         {/* Hero Section */}
         <section className="academy-hero">
           <div className="academy-hero-content">
-            <h1>PT 7 Academy</h1>
-            <p className="hero-subtitle">Professional Pilates Instructor Certification Courses</p>
+            <h1>Pilates Instructor Course Amsterdam</h1>
+            <p className="hero-subtitle">Weekend Certification — Perfect for Career Changers</p>
             <p className="hero-description">
-              Transform your passion for Pilates into a rewarding career. Join our comprehensive instructor training programs led by globally certified professionals with over 15 years of experience.
+              Transform your passion for Pilates into a rewarding career. Our weekend-only training lets you keep your day job while becoming a certified instructor. Led by globally certified professionals with over 15 years of experience.
             </p>
           </div>
         </section>
@@ -41,8 +41,12 @@ export const Academy: React.FC = () => {
         {/* About Academy Section */}
         <section className="academy-about">
           <div className="academy-container">
-            <h2>Become a Certified Pilates Instructor with PT 7 Academy!</h2>
+            <h2>Become a Certified Pilates Instructor in Amsterdam</h2>
             <p className="start-date"><strong>🎓 Reformer Instructor Course Starting March 2026 — Only a Few Spots Left!</strong></p>
+            <p>
+              <strong>Thinking about a career change?</strong> Many of our instructors came from banking, tech, and corporate backgrounds. 
+              Our weekend-only schedule means you can train while keeping your current job — no need to quit before you're ready.
+            </p>
             <p>
               PT 7 Academy's Pilates Instructor Courses are designed to equip you with a strong foundation in Pilates. 
               Our goal is to help you become a highly sought-after instructor — one whose clients stay committed and inspired. 
@@ -183,39 +187,39 @@ export const Academy: React.FC = () => {
             <h2>Why Choose PT 7 Academy?</h2>
             <div className="benefits-grid">
               <div className="benefit-card">
-                <div className="benefit-icon">🌍</div>
-                <h3>Globally Certified Instructors</h3>
-                <p>Learn from Senior Polestar Pilates certified instructors with internationally recognized credentials and over 15 years of teaching experience</p>
+                <div className="benefit-icon">📅</div>
+                <h3>Weekend-Only Schedule</h3>
+                <p>Train on Saturdays and Sundays — keep your day job while becoming a certified Pilates instructor</p>
+              </div>
+
+              <div className="benefit-card">
+                <div className="benefit-icon">🔄</div>
+                <h3>Perfect for Career Changers</h3>
+                <p>No fitness background needed. Our instructors came from banking, tech, and corporate careers — just like you</p>
               </div>
               
               <div className="benefit-card">
-                <div className="benefit-icon">🏆</div>
-                <h3>Premium Location</h3>
-                <p>Train at our state-of-the-art Museumplein studio with professional-grade equipment</p>
+                <div className="benefit-icon">🌍</div>
+                <h3>Globally Certified Instructors</h3>
+                <p>Learn from Senior Polestar Pilates certified instructors with internationally recognized credentials</p>
               </div>
               
               <div className="benefit-card">
                 <div className="benefit-icon">👥</div>
                 <h3>Small Class Sizes</h3>
-                <p>4-8 participants per course for personalized attention and hands-on guidance</p>
-              </div>
-              
-              <div className="benefit-card">
-                <div className="benefit-icon">📚</div>
-                <h3>Comprehensive Curriculum</h3>
-                <p>Balanced mix of theory, practical skills, and real teaching experience</p>
-              </div>
-              
-              <div className="benefit-card">
-                <div className="benefit-icon">✨</div>
-                <h3>Recognized Certification</h3>
-                <p>Receive a PT 7 Academy certification upon successful completion</p>
+                <p>Only 4-8 participants per course — more personal attention than larger programs</p>
               </div>
               
               <div className="benefit-card">
                 <div className="benefit-icon">💼</div>
-                <h3>Work Opportunities</h3>
-                <p>Optional work opportunities at our studio for successful graduates</p>
+                <h3>Job Opportunities Included</h3>
+                <p>Work opportunities at our Museumplein studio for successful graduates — start earning right away</p>
+              </div>
+              
+              <div className="benefit-card">
+                <div className="benefit-icon">💰</div>
+                <h3>Affordable Investment</h3>
+                <p>€2,000 + VAT — significantly less than BASI or Polestar comprehensive programs (€5,000-8,000)</p>
               </div>
             </div>
           </div>
@@ -224,14 +228,14 @@ export const Academy: React.FC = () => {
         {/* CTA Section */}
         <section className="academy-cta">
           <div className="academy-container">
-            <h2>Ready to Start Your Journey?</h2>
+            <h2>Ready for a Career Change?</h2>
             <p>
-              Whether you're looking to deepen your Pilates practice or start a new career as a certified instructor, 
-              PT 7 Academy is here to support you every step of the way.
+              Whether you're a banker tired of spreadsheets, a developer seeking balance, or simply passionate about Pilates — 
+              this is your chance to turn that passion into a profession. No fitness background required.
             </p>
             <div className="cta-buttons">
-              <a href="mailto:info@ptstudio7amsterdam.nl?subject=PT 7 Academy Course Inquiry" className="cta-btn primary">
-                Contact Us for More Information
+              <a href="mailto:info@ptstudio7amsterdam.nl?subject=Reformer Pilates Instructor Course Inquiry" className="cta-btn primary">
+                Inquire About the Course
               </a>
               <a href="tel:+31685162693" className="cta-btn secondary">
                 Call: 06 85 16 26 93

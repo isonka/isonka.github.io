@@ -4,7 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.ptstudio7amsterdam.nl/</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -34,9 +34,9 @@
   </url>
   <url>
     <loc>https://www.ptstudio7amsterdam.nl/academy</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   
   <!-- Workout Pages -->
@@ -174,4 +174,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <!-- HIDDEN PENDING APPROVAL
+  <url>
+    <loc>https://www.ptstudio7amsterdam.nl/blog/career-change-banker-to-pilates-instructor</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  -->
 </urlset>

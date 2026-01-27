@@ -39,11 +39,11 @@ export const Home: React.FC = () => {
 
   return (
     <>
-      {/* Promotional Banner for Reformer Course */}
+      {/* Promotional Banner for Pilates Instructor Course */}
       <div className="promo-banner">
         <div className="promo-content">
           <span className="promo-text">
-            <strong>Become a Certified Reformer Pilates Instructor</strong> — Course starts March 2026
+            <strong>Become a Certified Pilates Instructor</strong> — Course starts March 2026
           </span>
           <Link to="/academy" className="promo-cta">
             Learn More →
@@ -52,12 +52,12 @@ export const Home: React.FC = () => {
       </div>
 
       <SEOHead
-        title="Reformer Pilates Amsterdam | PT Studio 7 Museumplein"
-        description="Reformer Pilates Amsterdam at Museumplein. Small group classes (max 5), private sessions, expert instructors. TRX, Strength Training. Book now!"
-        keywords="Reformer Pilates Amsterdam, Pilates Amsterdam, Reformer Pilates Museumplein, Pilates classes Amsterdam, private Reformer Pilates Amsterdam, small group Pilates, Pilates studio Amsterdam, best Pilates Amsterdam, Reformer Pilates near me, boutique Pilates Amsterdam, Pilates Zuid Amsterdam, Pilates lessen Amsterdam, Pilates studio Museumkwartier, personal training Amsterdam, zwangerschapspilates Amsterdam"
+        title="Pilates Amsterdam | Boutique Studio Museumplein | PT Studio 7"
+        description="Pilates Amsterdam studio at Museumplein. Private sessions & small group classes (max 5). Expert instructors with 15+ years experience. TRX, Strength Training. Book now!"
+        keywords="Pilates Amsterdam, Pilates studio Amsterdam, Pilates classes Amsterdam, Pilates Museumplein, private Pilates Amsterdam, small group Pilates Amsterdam, best Pilates Amsterdam, Pilates lessen Amsterdam, Pilates Zuid Amsterdam, boutique Pilates Amsterdam, Pilates near me Amsterdam, Pilates les Amsterdam, personal training Pilates Amsterdam, Pilates Oud-Zuid"
         canonical="https://www.ptstudio7amsterdam.nl"
-        ogTitle="Reformer Pilates Amsterdam Museumplein | PT Studio 7"
-        ogDescription="Premium Reformer Pilates studio at Museumplein Amsterdam. Small groups (max 5), expert instructors, private & group classes. Book your Reformer Pilates session!"
+        ogTitle="Pilates Amsterdam | PT Studio 7 Museumplein"
+        ogDescription="Premium boutique Pilates studio at Museumplein Amsterdam. Small groups (max 5), private sessions, expert instructors. Book your Pilates class today!"
         ogImage="/assets/images/about-us-web.jpg"
       />
       <StructuredData type="LocalBusiness" data={{ reviews: reviewsData }} />
@@ -66,7 +66,7 @@ export const Home: React.FC = () => {
       <section className="hero-video">
         <img 
           src="/assets/images/studio.jpg"
-          alt="PT Studio 7 Amsterdam - Premium Reformer Pilates Studio at Museumplein"
+          alt="PT Studio 7 Amsterdam - Premium Pilates Studio at Museumplein"
           className="hero-video-bg"
           width="2304"
           height="1536"
@@ -76,11 +76,11 @@ export const Home: React.FC = () => {
         />
         <div className="hero-overlay">
           <div className="hero-content-wrapper">
-            <h1 className="hero-title">Reformer Pilates Amsterdam Museumplein</h1>
-              <h2 className="hero-tagline">Premium Reformer Pilates Studio | Small Group Classes (Max 5)</h2>
+            <h1 className="hero-title">Pilates Amsterdam Museumplein</h1>
+              <h2 className="hero-tagline">Boutique Pilates Studio | Small Groups (Max 5) | Private Sessions</h2>
               <p className="hero-description">
-                  • Expert Certified Instructors • Private & Group Reformer Pilates • Museumplein Location<br/>
-                  Reformer Pilates • TRX • Strength Training • Cardio
+                  • Expert Certified Instructors • Private & Group Classes • Museumplein Location<br/>
+                  Pilates • TRX • Strength Training • Cardio
               </p>
             <div className="hero-buttons">
               <Link to="/schedule" className="hero-btn-primary" onClick={() => trackFBBookingClick()}>Book a Class</Link>
@@ -112,15 +112,15 @@ export const Home: React.FC = () => {
       <section id="about" className="about-section">
         <div className="about-container">
           <div className="about-content">
-            <h2>Reformer Pilates Amsterdam at Museumplein</h2>
+            <h2>Pilates Amsterdam — Your Boutique Studio at Museumplein</h2>
             <p>
-              With 15 years of Reformer Pilates expertise at our Museumplein location, we offer Amsterdam's premier 
-              boutique Reformer Pilates studio experience. Located at Van Baerlestraat 76C, across from Stedelijk Museum, 
-              we provide personalized Reformer Pilates training tailored to your body and goals.
+              Looking for the best Pilates in Amsterdam? With 15 years of expertise at our Museumplein location, PT Studio 7 offers 
+              Amsterdam's premier boutique Pilates experience. Located at Van Baerlestraat 76C, across from Stedelijk Museum, 
+              we provide personalized Pilates training tailored to your body and goals.
             </p>
             <p>
-              We specialize in one-on-one private Reformer Pilates where you receive 100% of your instructor's attention. 
-              We also offer intimate small group Reformer Pilates classes (maximum 5 people) for those who enjoy training 
+              We offer one-on-one private Pilates sessions where you receive 100% of your instructor's attention. 
+              We also offer intimate small group classes (maximum 5 people) for those who enjoy training 
               with friends. Each program is customized to build strength, improve flexibility, or achieve your wellness goals.
             </p>
             <p>
@@ -148,7 +148,7 @@ export const Home: React.FC = () => {
       {/* Workouts Section */}
       <section id="workouts" className="workouts-section">
         <div className="section-header">
-          <h2>Reformer Pilates & Training Programs Amsterdam</h2>
+          <h2>Pilates & Training Programs Amsterdam</h2>
           <p>Explore our variety of training programs</p>
         </div>
         <div className="workouts-grid">
@@ -210,7 +210,7 @@ export const Home: React.FC = () => {
       {/* Trainers Section */}
       <section id="trainers" className="trainers-section">
         <div className="section-header">
-          <h2>Expert Reformer Pilates Instructors Amsterdam</h2>
+          <h2>Expert Pilates Instructors Amsterdam</h2>
           <p>Certified professionals dedicated to your success</p>
         </div>
         <div className="trainers-grid">
@@ -311,7 +311,7 @@ export const Home: React.FC = () => {
       {/* Reviews Section */}
       <section id="reviews" className="reviews-section">
         <div className="section-header">
-          <h2>Reformer Pilates Amsterdam Reviews</h2>
+          <h2>Pilates Amsterdam Reviews</h2>
           <p>Real experiences from our community</p>
         </div>
         <div className="reviews-container">
@@ -464,7 +464,7 @@ export const Home: React.FC = () => {
       <section id="contact" className="contact-section">
         <div className="contact-container">
           <div className="contact-info">
-            <h2>Visit Our Reformer Pilates Studio Museumplein</h2>
+            <h2>Visit Our Pilates Studio Museumplein</h2>
             <p className="address">
               Van Baerlestraat 76C<br />
               1071BB Amsterdam<br />
