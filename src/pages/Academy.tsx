@@ -6,8 +6,8 @@ export const Academy: React.FC = () => {
     <>
       <SEOHead
         title="Pilates Instructor Course Amsterdam | Weekend Certification | PT 7 Academy"
-        description="Become a certified Pilates instructor in Amsterdam. Weekend-only training, perfect for career changers. Small groups (4-8), globally certified instructors, job opportunities included. Reformer certification starting March 2026."
-        keywords="pilates instructor course amsterdam, pilates teacher training amsterdam, reformer pilates certification, become pilates instructor, pilates opleiding amsterdam, weekend pilates certification, career change pilates instructor, pilates certification netherlands, pilatesdocent worden, pilates teacher training with job, small group pilates certification, affordable reformer certification amsterdam"
+        description="Become a certified Pilates instructor in Amsterdam. Weekend-only training, perfect for career changers. Small groups (4-8), globally certified instructors, job opportunities included. Starting March 2026."
+        keywords="pilates instructor course amsterdam, pilates teacher training amsterdam, pilates certification, become pilates instructor, pilates opleiding amsterdam, weekend pilates certification, career change pilates instructor, pilates certification netherlands, pilatesdocent worden, pilates teacher training with job, small group pilates certification, affordable pilates certification amsterdam"
         canonical="https://www.ptstudio7amsterdam.nl/academy"
         ogTitle="Pilates Instructor Course Amsterdam | Weekend Training | PT 7 Academy"
         ogDescription="Weekend Pilates certification for career changers. Small groups, globally certified instructors, job opportunities at our Museumplein studio. Starting March 2026."
@@ -19,9 +19,9 @@ export const Academy: React.FC = () => {
           <div className="urgency-content">
             <span className="urgency-icon">🎓</span>
             <span className="urgency-text">
-              <strong>Reformer Instructor Course — Starting March 2026!</strong> Limited to 8 participants — Secure your spot today
+              <strong>Pilates Instructor Course — Starting March 2026!</strong> Limited to 8 participants — Secure your spot today
             </span>
-            <a href="mailto:info@ptstudio7amsterdam.nl?subject=Reformer Pilates Instructor Course Inquiry" className="urgency-cta">
+            <a href="mailto:info@ptstudio7amsterdam.nl?subject=Pilates Instructor Course Inquiry" className="urgency-cta">
               Inquire Now →
             </a>
           </div>
@@ -42,7 +42,7 @@ export const Academy: React.FC = () => {
         <section className="academy-about">
           <div className="academy-container">
             <h2>Become a Certified Pilates Instructor in Amsterdam</h2>
-            <p className="start-date"><strong>🎓 Reformer Instructor Course Starting March 2026 — Only a Few Spots Left!</strong></p>
+            <p className="start-date"><strong>🎓 Pilates Instructor Course Starting March 2026 — Only a Few Spots Left!</strong></p>
             <p>
               <strong>Thinking about a career change?</strong> Many of our instructors came from banking, tech, and corporate backgrounds. 
               Our weekend-only schedule means you can train while keeping your current job — no need to quit before you're ready.
@@ -53,7 +53,7 @@ export const Academy: React.FC = () => {
               That's why our program goes far beyond just teaching exercises.
             </p>
             <p>
-              You can join either Mat & Trapeze Table or Reformer training individually — or take both and receive <strong>5% off the total fee</strong>.
+              You can join either Mat & Trapeze Table or Studio Equipment training individually — or take both and receive <strong>5% off the total fee</strong>.
             </p>
           </div>
         </section>
@@ -77,10 +77,10 @@ export const Academy: React.FC = () => {
             </div>
 
             <div className="courses-grid">
-              {/* Reformer Pilates Course - FEATURED */}
+              {/* Pilates Studio Equipment Course - FEATURED */}
               <div className="course-card featured">
                 <div className="course-badge">Enrolling Now</div>
-                <h3>Reformer Pilates Instructor Course</h3>
+                <h3>Pilates Instructor Course</h3>
                 <p className="course-price">€2,000 <span className="vat-text">+ VAT (21%)</span></p>
                 
                 <div className="course-highlights">
@@ -117,7 +117,7 @@ export const Academy: React.FC = () => {
                   <ul>
                     <li>48 hours of in-person technical training</li>
                     <li>Intro to Pilates (first week)</li>
-                    <li>Comprehensive Reformer Pilates curriculum</li>
+                    <li>Comprehensive Pilates curriculum (studio equipment)</li>
                     <li>5 hours of observation + 5 hours of practice (by appointment)</li>
                     <li>2 exams (theoretical & practical)</li>
                     <li>One-on-one final assessment</li>
@@ -127,7 +127,7 @@ export const Academy: React.FC = () => {
                 </div>
                 
                 <div className="course-cta">
-                  <a href="mailto:info@ptstudio7amsterdam.nl?subject=Reformer Pilates Instructor Course Inquiry" className="course-btn primary">
+                  <a href="mailto:info@ptstudio7amsterdam.nl?subject=Pilates Instructor Course Inquiry" className="course-btn primary">
                     Secure Your Spot Now
                   </a>
                   <p className="cta-subtext">Reply within 48 hours to guarantee your place</p>
@@ -234,7 +234,7 @@ export const Academy: React.FC = () => {
               this is your chance to turn that passion into a profession. No fitness background required.
             </p>
             <div className="cta-buttons">
-              <a href="mailto:info@ptstudio7amsterdam.nl?subject=Reformer Pilates Instructor Course Inquiry" className="cta-btn primary">
+              <a href="mailto:info@ptstudio7amsterdam.nl?subject=Pilates Instructor Course Inquiry" className="cta-btn primary">
                 Inquire About the Course
               </a>
               <a href="tel:+31685162693" className="cta-btn secondary">
