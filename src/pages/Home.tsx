@@ -53,7 +53,7 @@ export const Home: React.FC = () => {
 
       <SEOHead
         title="Pilates Amsterdam | Boutique Studio Museumplein | PT Studio 7"
-        description="Pilates Amsterdam studio at Museumplein. Private sessions & small group classes (max 5). Expert instructors with 15+ years experience. TRX, Strength Training. Book now!"
+        description="Pilates Amsterdam studio at Museumplein, Oud-Zuid. Private sessions & small group classes (max 5). Expert instructors with 15+ years experience. TRX, Strength Training. Book now!"
         keywords="Pilates Amsterdam, Pilates studio Amsterdam, Pilates classes Amsterdam, Pilates Museumplein, private Pilates Amsterdam, small group Pilates Amsterdam, best Pilates Amsterdam, Pilates lessen Amsterdam, Pilates Zuid Amsterdam, boutique Pilates Amsterdam, Pilates near me Amsterdam, Pilates les Amsterdam, personal training Pilates Amsterdam, Pilates Oud-Zuid"
         canonical="https://www.ptstudio7amsterdam.nl"
         ogTitle="Pilates Amsterdam | PT Studio 7 Museumplein"
@@ -79,7 +79,7 @@ export const Home: React.FC = () => {
             <h1 className="hero-title">Pilates Amsterdam Museumplein</h1>
               <h2 className="hero-tagline">Boutique Pilates Studio | Small Groups (Max 5) | Private Sessions</h2>
               <p className="hero-description">
-                  • Expert Certified Instructors • Private & Group Classes • Museumplein Location<br/>
+                  • Expert Certified Instructors • Private & Group Classes • Oud-Zuid, Museumplein<br/>
                   Pilates • TRX • Strength Training • Cardio
               </p>
             <div className="hero-buttons">
@@ -112,10 +112,10 @@ export const Home: React.FC = () => {
       <section id="about" className="about-section">
         <div className="about-container">
           <div className="about-content">
-            <h2>Pilates Amsterdam — Your Boutique Studio at Museumplein</h2>
+            <h2>Pilates Amsterdam Oud-Zuid — Your Boutique Studio at Museumplein</h2>
             <p>
-              Looking for the best Pilates in Amsterdam? With 15 years of expertise at our Museumplein location, PT Studio 7 offers 
-              Amsterdam's premier boutique Pilates experience. Located at Van Baerlestraat 76C, across from Stedelijk Museum, 
+              Looking for the best Pilates in Amsterdam Oud-Zuid? With 15 years of expertise at our Museumplein location, PT Studio 7 offers 
+              Amsterdam's premier boutique Pilates experience. Located at Van Baerlestraat 76C in the heart of Oud-Zuid, across from Stedelijk Museum, 
               we provide personalized Pilates training tailored to your body and goals.
             </p>
             <p>
@@ -464,17 +464,17 @@ export const Home: React.FC = () => {
       <section id="contact" className="contact-section">
         <div className="contact-container">
           <div className="contact-info">
-            <h2>Visit Our Pilates Studio Museumplein</h2>
+            <h2>Visit Our Pilates Studio in Oud-Zuid</h2>
             <p className="address">
               Van Baerlestraat 76C<br />
-              1071BB Amsterdam<br />
+              1071BB Amsterdam Oud-Zuid<br />
               Netherlands
             </p>
             <p className="location-note">
               <svg className="location-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#bfa100"/>
               </svg>
-              Located at Museumplein, across from Stedelijk Museum with Rijksmuseum views
+              Located at Museumplein in Oud-Zuid, across from Stedelijk Museum
             </p>
             <div className="contact-links">
               <a href="tel:+31685162693" className="contact-link" onClick={() => { trackPhoneClick(); trackFBPhoneClick(); }}>

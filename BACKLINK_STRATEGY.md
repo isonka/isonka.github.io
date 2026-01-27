@@ -200,7 +200,7 @@ No strings attached - just hoping you'll enjoy the experience! If you
 love it and want to share with your followers, that would be amazing, 
 but there's no obligation.
 
-Our studio overlooks the Rijksmuseum and we specialize in small groups 
+We specialize in small groups 
 (max 4) for personalized attention.
 
 Would you be interested? Happy to work around your schedule!

@@ -62,7 +62,7 @@ export const Schedule: React.FC = () => {
             Small group classes (max 5) or private classes with expert trainers</p>
             <div className="location-highlight">
               <span className="location-icon">📍</span>
-              <span>Premium location at <strong>Museumplein</strong> - across from Stedelijk Museum with stunning Rijksmuseum views</span>
+              <span>Premium location at <strong>Museumplein</strong> - across from Stedelijk Museum</span>
             </div>
           </div>
         </section>
