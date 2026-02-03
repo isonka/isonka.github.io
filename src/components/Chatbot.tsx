@@ -148,17 +148,28 @@ export const Chatbot: React.FC = () => {
       let instructorReason = '';
       
       if (profile.isPregnant === 'yes' || profile.goal === 'Pregnancy fitness') {
-        recommendedInstructor = 'Elif Arzu Ogan';
-        instructorReason = 'Elif has specialized training in pregnancy Pilates and offers safe, personalized one-on-one sessions.';
+        recommendedInstructor = 'Elif Arzu Ogan (Master Instructor)';
+        instructorReason = 'Elif is our Master instructor with specialized training in pregnancy Pilates. She offers safe, personalized one-on-one sessions for expectant mothers.';
       } else if (profile.hasInjuries === 'Yes, I have injuries' || profile.goal === 'Rehabilitation/injury recovery') {
-        recommendedInstructor = 'Elif Arzu Ogan or Göknur Dipli';
-        instructorReason = 'Both are Senior Polestar Pilates instructors with extensive experience in rehabilitation and working with injuries, including spinal disorders and low back care.';
+        recommendedInstructor = 'Elif (Master) or Göknur (Senior)';
+        instructorReason = 'Our Master and Senior instructors have extensive experience in rehabilitation, working with injuries including spinal disorders and low back care.';
       } else if (profile.goal === 'Improve strength & fitness' || profile.goal === 'Lose weight & tone') {
-        recommendedInstructor = 'Göknur Dipli';
-        instructorReason = 'Göknur specializes in functional training, perfect for building strength and achieving weight goals efficiently.';
+        if (profile.groupSize === 'Private (just me)') {
+          recommendedInstructor = 'Göknur Dipli (Senior Instructor)';
+          instructorReason = 'Göknur is a Senior instructor who specializes in functional training and strength building — perfect for achieving your fitness goals with personalized attention.';
+        } else {
+          recommendedInstructor = 'Any of our instructors';
+          instructorReason = 'For group classes, all our instructors — from Junior to Master level — can help you build strength. Our Junior instructors (Gülce, Melis, Lal, Nisan) offer great value for group sessions.';
+        }
+      } else if (profile.experience === "I'm a beginner") {
+        recommendedInstructor = 'Gülce, Melis, Lal, or Nisan (Junior Instructors)';
+        instructorReason = 'Our Junior instructors are PT 7 Academy certified and excellent with beginners — they focus on fundamentals, proper form, and making you feel comfortable.';
+      } else if (profile.goal === 'General wellness' || profile.goal === 'Just curious') {
+        recommendedInstructor = 'Gökben Öztekin (Senior Instructor)';
+        instructorReason = 'Gökben is a Senior Basi Pilates instructor who creates a welcoming environment for all fitness levels. Great for exploring what Pilates can do for you.';
       } else {
-        recommendedInstructor = 'Gökben Öztekin';
-        instructorReason = 'Gökben is a Basi Pilates instructor who creates a welcoming environment for all fitness levels.';
+        recommendedInstructor = 'Any of our 7 instructors';
+        instructorReason = 'We have Master, Senior, and Junior instructors to match your needs and budget. Visit our instructors page to learn more about each one.';
       }
 
       // Determine class type
@@ -167,19 +178,19 @@ export const Chatbot: React.FC = () => {
 
       if (profile.isPregnant === 'yes') {
         classType = '**Private Classes** (Required for pregnancy)';
-        pricing = '• Single class: €80\n• 5-class pack: €75/class (€375 total)\n• 10-class pack: €72.50/class (€725 total) - Best Value';
+        pricing = '• Master (Elif): €85 single, €80/class (5-pack), €77.50/class (10-pack)\n• Senior: €80 single, €75/class (5-pack), €72.50/class (10-pack)';
       } else if (profile.groupSize === 'Private (just me)') {
         classType = '**Private Classes**';
-        pricing = '• Single class: €80\n• 5-class pack: €75/class (€375 total)\n• 10-class pack: €72.50/class (€725 total) - Best Value';
+        pricing = '• Junior: €70 single, €65/class (5-pack), €62.50/class (10-pack)\n• Senior: €80 single, €75/class (5-pack), €72.50/class (10-pack)\n• Master: €85 single, €80/class (5-pack), €77.50/class (10-pack)';
       } else if (profile.groupSize === 'With a partner (couple)') {
         classType = '**Couple Classes**';
-        pricing = '• Single class: €50/person\n• 10-class pack: €43/person (€430 total) - Best Value\n• 20-class pack: €40/person (€800 total)';
+        pricing = '• Single class: €50/person\n• 5-class pack: €45/person (€225 total)\n• 10-class pack: €43/person (€430 total) - Best Value';
       } else if (profile.groupSize === 'Small group (3 people)') {
         classType = '**Trio Classes**';
-        pricing = '• Single class: €45/person\n• 10-class pack: €40/person (€400 total) - Best Value\n• 20-class pack: €38/person (€760 total)';
+        pricing = '• Single class: €45/person\n• 5-class pack: €42/person (€210 total)\n• 10-class pack: €40/person (€400 total) - Best Value';
       } else {
         classType = '**Small Group Classes** (max 5 people)';
-        pricing = '• Single class: €37/person\n• 10-class pack: €30/person (€300 total) - Most Popular\n• 20-class pack: €28/person (€560 total) - Best Value\n\n💡 **Or try our Membership** (All days 9am-6pm):\n• 4 classes/month: €21.50/class (€86/month)\n• Unlimited 3 months: €350/month';
+        pricing = '• Single class: €37\n• 5-class pack: €35/class (€175 total)\n• 10-class pack: €30/class (€300 total) - Most Popular\n\n💡 **Or try our Membership** (All days 9am-6pm):\n• 4 classes/month: €21.50/class (€86/month)\n• 8 classes/month: €20/class (€160/month)\n• Unlimited 3 months: €350/month';
       }
 
       const recommendation = `✨ **Your Perfect Match:**
@@ -228,9 +239,9 @@ ${pricing}
         break;
       
       case "View all trainers":
-        addBotMessage("I'll take you to our home page where you can learn about all our amazing trainers!", 500);
+        addBotMessage("I'll take you to our instructors page where you can meet all 7 of our trainers — 1 Master, 2 Senior, and 4 Junior instructors!", 500);
         setTimeout(() => {
-          window.location.href = '/#trainers';
+          window.location.href = '/instructors';
         }, 1500);
         break;
       
