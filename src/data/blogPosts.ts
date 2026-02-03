@@ -59,8 +59,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   */
-  // CAREER CHANGE POST - HIDDEN PENDING APPROVAL FROM TRAINER
-  /*
+  // CAREER CHANGE POST - NOW LIVE
   {
     id: '5',
     slug: 'career-change-banker-to-pilates-instructor',
@@ -186,7 +185,6 @@ export const blogPosts: BlogPost[] = [
       'pilates teacher training career changers'
     ]
   },
-  */
   // END OF HIDDEN BLOG POSTS
   
   // LINKABLE CONTENT - DESIGNED TO EARN BACKLINKS
