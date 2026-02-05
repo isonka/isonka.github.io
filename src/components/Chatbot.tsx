@@ -156,10 +156,10 @@ export const Chatbot: React.FC = () => {
       } else if (profile.goal === 'Improve strength & fitness' || profile.goal === 'Lose weight & tone') {
         if (profile.groupSize === 'Private (just me)') {
           recommendedInstructor = 'Göknur Dipli (Senior Instructor)';
-          instructorReason = 'Göknur is a Senior instructor who specializes in functional training and strength building — perfect for achieving your fitness goals with personalized attention.';
+          instructorReason = 'Göknur is a Senior instructor who specializes in functional training and strength building. Train on our premium Nike Strength equipment — half rack, Olympic barbell, and dumbbells!';
         } else {
           recommendedInstructor = 'Any of our instructors';
-          instructorReason = 'For group classes, all our instructors — from Junior to Master level — can help you build strength. Our Junior instructors (Gülce, Melis, Lal, Nisan) offer great value for group sessions.';
+          instructorReason = 'For group classes, all our instructors — from Junior to Master level — can help you build strength. We also offer Nike Strength Training with premium equipment for personal training.';
         }
       } else if (profile.experience === "I'm a beginner") {
         recommendedInstructor = 'Gülce, Melis, Lal, or Nisan (Junior Instructors)';
@@ -227,7 +227,7 @@ ${pricing}
         break;
       
       case "Tell me about equipment":
-        addBotMessage("We use professional Pilates equipment including Reformers, Cadillac/Trapeze Tables, Tower Reformers, Ladder Barrel, Wunda Chair, and Spine Corrector. We also offer TRX and Strength Training!", 500);
+        addBotMessage("We use professional Pilates equipment including Reformers, Cadillac/Trapeze Tables, Tower Reformers, Ladder Barrel, Wunda Chair, and Spine Corrector. Plus Nike Strength Training with a half rack, Olympic barbell, and premium dumbbells!", 500);
         addBotMessage("Would you like to see our equipment?", 1500, ["Yes, show me", "No thanks", "Start over"]);
         break;
       

@@ -13,22 +13,22 @@ export const WorkoutFunctional: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Strength Training Amsterdam | PT Studio 7 Museumplein"
-        description="Expert Strength Training in Amsterdam at Museumplein. Build real-world strength, improve movement patterns, prevent injuries. Small groups & private training!"
-        keywords="strength training Amsterdam, free weights training, movement training Museumplein, functional fitness Amsterdam, personal training"
+        title="Nike Strength Training Amsterdam | PT Studio 7 Museumplein"
+        description="Premium Nike Strength Training in Amsterdam at Museumplein. Olympic barbell, half rack, Nike dumbbells. Build real-world strength with expert personal training!"
+        keywords="Nike strength training Amsterdam, olympic lifting Amsterdam, personal training Museumplein, barbell training Amsterdam, functional fitness Amsterdam, Nike gym equipment"
         canonical="https://www.ptstudio7amsterdam.nl/workouts/functional-training"
-        ogTitle="Strength Training Amsterdam | PT Studio 7"
-        ogDescription="Build practical strength for everyday life. Expert strength training with free weights at our Museumplein studio."
-        ogImage="/assets/images/strength.JPG"
+        ogTitle="Nike Strength Training Amsterdam | PT Studio 7"
+        ogDescription="Premium Nike Strength equipment. Olympic barbell training with expert coaches at our boutique Museumplein studio."
+        ogImage="/assets/images/nike_strength_studio.JPG"
       />
-      <Breadcrumbs items={[{ name: 'Strength Training', path: '/workouts/functional-training' }]} />
+      <Breadcrumbs items={[{ name: 'Nike Strength Training', path: '/workouts/functional-training' }]} />
 
       <div className="workout-detail-page">
-        <section className="workout-hero" style={{ backgroundImage: 'url(/assets/images/strength.JPG)' }}>
+        <section className="workout-hero" style={{ backgroundImage: 'url(/assets/images/nike_strength_studio.JPG)' }}>
           <div className="workout-hero-overlay">
             <div className="workout-hero-content">
-              <h1>Strength Training</h1>
-              <p className="workout-tagline">Train multiple muscles with one exercise - Build strength efficiently</p>
+              <h1>Nike Strength Training</h1>
+              <p className="workout-tagline">Premium equipment. Expert coaching. Real results.</p>
               <Link to="/schedule" className="cta-button">Book a Session</Link>
             </div>
           </div>
@@ -36,10 +36,38 @@ export const WorkoutFunctional: React.FC = () => {
 
         <div className="workout-content">
           <section className="workout-intro">
-            <h2>Train Multiple Muscles with Every Exercise</h2>
+            <h2>Premium Nike Strength Equipment</h2>
             <p className="lead">
-              Strength Training uses compound movements that engage multiple muscle groups simultaneously for maximum efficiency. With one exercise, you train your entire body - building real-world strength, stability, and mobility that translates directly to your daily activities, whether lifting groceries, playing with kids, or excelling in sports.
+              Experience strength training with professional-grade Nike equipment — including our Nike Strength Half Rack, Olympic barbell, recycled Nike Grind weight plates, and premium hex dumbbells. Combined with expert coaching, you'll build real-world strength, stability, and mobility that translates directly to your daily life.
             </p>
+          </section>
+
+          {/* Nike Equipment Gallery */}
+          <section className="equipment-gallery-section">
+            <h2>Our Nike Strength Equipment</h2>
+            <div className="equipment-gallery-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginTop: '2rem' }}>
+              <div className="equipment-gallery-item" style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 15px rgba(0,0,0,0.1)' }}>
+                <img src="/assets/images/nike_strength_studio.JPG" alt="Nike Strength Half Rack with Olympic barbell" style={{ width: '100%', height: '250px', objectFit: 'cover' }} loading="lazy" />
+                <div style={{ padding: '1rem', background: '#fff' }}>
+                  <h4 style={{ margin: '0 0 0.5rem', color: '#333' }}>Nike Strength Half Rack</h4>
+                  <p style={{ margin: 0, color: '#666', fontSize: '0.9rem' }}>Professional half rack for squats, bench press, and Olympic lifting</p>
+                </div>
+              </div>
+              <div className="equipment-gallery-item" style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 15px rgba(0,0,0,0.1)' }}>
+                <img src="/assets/images/nike_grind_plates.JPG" alt="Nike Grind recycled weight plates" style={{ width: '100%', height: '250px', objectFit: 'cover' }} loading="lazy" />
+                <div style={{ padding: '1rem', background: '#fff' }}>
+                  <h4 style={{ margin: '0 0 0.5rem', color: '#333' }}>Nike Grind Weight Plates</h4>
+                  <p style={{ margin: 0, color: '#666', fontSize: '0.9rem' }}>Sustainable plates made from recycled Nike materials</p>
+                </div>
+              </div>
+              <div className="equipment-gallery-item" style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 15px rgba(0,0,0,0.1)' }}>
+                <img src="/assets/images/nike_dumbbell.JPG" alt="Nike hex dumbbells" style={{ width: '100%', height: '250px', objectFit: 'cover' }} loading="lazy" />
+                <div style={{ padding: '1rem', background: '#fff' }}>
+                  <h4 style={{ margin: '0 0 0.5rem', color: '#333' }}>Nike Hex Dumbbells</h4>
+                  <p style={{ margin: 0, color: '#666', fontSize: '0.9rem' }}>Full range of premium dumbbells for all strength levels</p>
+                </div>
+              </div>
+            </div>
           </section>
 
           <section className="benefits-section">

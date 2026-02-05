@@ -180,15 +180,15 @@ export const Home: React.FC = () => {
           </Link>
           <Link to="/workouts/functional-training" className="workout-card">
             <img 
-              src="/assets/images/strength.JPG" 
-              alt="Strength Training" 
+              src="/assets/images/nike_strength_studio.JPG" 
+              alt="Nike Strength Training" 
               width="400" 
               height="220" 
               loading="lazy" 
               decoding="async" 
             />
-            <h3>Strength Training</h3>
-            <p>Build strength and improve movement patterns with free weights</p>
+            <h3>Nike Strength Training</h3>
+            <p>Premium Nike equipment: half rack, Olympic barbell & dumbbells</p>
             <span className="learn-more">Learn More →</span>
           </Link>
           <Link to="/workouts/cardio" className="workout-card">
