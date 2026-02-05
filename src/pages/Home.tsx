@@ -1,10 +1,16 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { trackPageView, trackPhoneClick, trackEmailClick, trackSocialClick } from '../utils/gtmTracking';
 import { trackFBPageView, trackFBPhoneClick, trackFBEmailClick, trackFBWhatsAppClick, trackFBBookingClick } from '../utils/fbPixelTracking';
 import '../styles/Home.css';
+
+// Hero background images for rotation
+const heroImages = [
+  { src: '/assets/images/studio.jpg', alt: 'PT Studio 7 - Pilates Reformer Studio' },
+  { src: '/assets/images/nike_strength_studio.JPG', alt: 'PT Studio 7 - Nike Strength Training Area' },
+];
 
 // Reviews data for structured data
 const reviewsData = [
@@ -31,10 +37,20 @@ const reviewsData = [
 ];
 
 export const Home: React.FC = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   useEffect(() => {
     // Track page view
     trackPageView('/', 'Home - PT Studio 7 Amsterdam');
     trackFBPageView('Home - PT Studio 7 Amsterdam');
+  }, []);
+
+  // Rotate hero background images every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -62,18 +78,21 @@ export const Home: React.FC = () => {
       />
       <StructuredData type="LocalBusiness" data={{ reviews: reviewsData }} />
       
-      {/* Hero Section with Background Image */}
+      {/* Hero Section with Rotating Background Images */}
       <section className="hero-video">
-        <img 
-          src="/assets/images/studio.jpg"
-          alt="PT Studio 7 Amsterdam - Boutique Personal Training Studio at Museumplein"
-          className="hero-video-bg"
-          width="2304"
-          height="1536"
-          fetchPriority="high"
-          loading="eager"
-          decoding="async"
-        />
+        {heroImages.map((image, index) => (
+          <img 
+            key={image.src}
+            src={image.src}
+            alt={image.alt}
+            className={`hero-video-bg ${index === currentImageIndex ? 'active' : ''}`}
+            width="2304"
+            height="1536"
+            fetchPriority={index === 0 ? "high" : "low"}
+            loading={index === 0 ? "eager" : "lazy"}
+            decoding="async"
+          />
+        ))}
         <div className="hero-overlay">
           <div className="hero-content-wrapper">
             <h1 className="hero-title">Personal Training Amsterdam</h1>
