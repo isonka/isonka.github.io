@@ -108,11 +108,11 @@ export const Home: React.FC = () => {
             <div className="hero-features">
               <div className="feature-item">
                 <span className="feature-icon">✓</span>
-                <span>Private Sessions</span>
+                <span>Two Dedicated Studios</span>
               </div>
               <div className="feature-item">
                 <span className="feature-icon">✓</span>
-                <span>Tailored Programs</span>
+                <span>Private Sessions</span>
               </div>
               <div className="feature-item">
                 <span className="feature-icon">✓</span>
@@ -120,7 +120,7 @@ export const Home: React.FC = () => {
               </div>
               <div className="feature-item">
                 <span className="feature-icon">✓</span>
-                <span>Expert Instructors</span>
+                <span>Expert Trainers</span>
               </div>
             </div>
           </div>
@@ -135,10 +135,10 @@ export const Home: React.FC = () => {
             <p>
               Looking for expert personal training in Amsterdam Oud-Zuid? With 15 years of expertise at our Museumplein location, PT Studio 7 offers 
               Amsterdam's premier boutique fitness experience. Located at Van Baerlestraat 76C in the heart of Oud-Zuid, across from Stedelijk Museum, 
-              we provide personalized training — Pilates, Nike Strength, TRX, and Cardio — tailored to your body and goals.
+              we feature <strong>two dedicated training studios</strong> — a Pilates studio with professional Reformers, and a Strength & Cardio studio with Nike equipment and Technogym machines.
             </p>
             <p>
-              We offer one-on-one private Pilates sessions where you receive 100% of your instructor's attention. 
+              We offer one-on-one private sessions where you receive 100% of your instructor's attention. 
               We also offer intimate small group classes (maximum 5 people) for those who enjoy training 
               with friends. Each program is customized to build strength, improve flexibility, or achieve your wellness goals.
             </p>
