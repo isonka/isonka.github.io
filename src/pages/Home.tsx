@@ -96,10 +96,10 @@ export const Home: React.FC = () => {
         <div className="hero-overlay">
           <div className="hero-content-wrapper">
             <h1 className="hero-title">Personal Training Amsterdam</h1>
-              <h2 className="hero-tagline">Boutique Fitness Studio | Small Groups (Max 5) | Private Sessions</h2>
+              <h2 className="hero-tagline">Boutique Fitness Studio at Museumplein</h2>
               <p className="hero-description">
-                  • Expert Certified Trainers • Private & Group Classes • Museumplein, Oud-Zuid<br/>
-                  Pilates • Nike Strength • TRX • Cardio
+                  Pilates · Nike Strength · TRX · Cardio<br/>
+                  Private Sessions & Small Groups (Max 5)
               </p>
             <div className="hero-buttons">
               <Link to="/schedule" className="hero-btn-primary" onClick={() => trackFBBookingClick()}>Book a Class</Link>
