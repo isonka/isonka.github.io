@@ -68,11 +68,11 @@ export const Home: React.FC = () => {
       </div>
 
       <SEOHead
-        title="Personal Training Amsterdam | Boutique Studio Museumplein | PT Studio 7"
+        title="Pilates & Personal Training Amsterdam | Boutique Studio Museumplein | PT Studio 7"
         description="Personal Training studio Amsterdam at Museumplein, Oud-Zuid. Pilates, Nike Strength Training, TRX & Cardio. Private sessions & small groups (max 5). Expert instructors. Book now!"
         keywords="personal training Amsterdam, personal trainer Museumplein, Pilates Amsterdam, Nike strength training, TRX Amsterdam, boutique fitness Amsterdam, private training Oud-Zuid, PT Amsterdam"
         canonical="https://www.ptstudio7amsterdam.nl"
-        ogTitle="Personal Training Amsterdam | PT Studio 7 Museumplein"
+        ogTitle="Pilates & Personal Training Amsterdam | PT Studio 7 Museumplein"
         ogDescription="Boutique personal training studio at Museumplein. Pilates, Nike Strength, TRX & Cardio. Small groups (max 5), private sessions, expert instructors."
         ogImage="/assets/images/about-us-web.jpg"
       />
@@ -95,8 +95,8 @@ export const Home: React.FC = () => {
         ))}
         <div className="hero-overlay">
           <div className="hero-content-wrapper">
-            <h1 className="hero-title">Personal Training Amsterdam</h1>
-              <h2 className="hero-tagline">Boutique Fitness Studio at Museumplein</h2>
+            <h1 className="hero-title">Pilates & Personal Training Amsterdam</h1>
+              <h2 className="hero-tagline">Boutique Pilates & Fitness Studio at Museumplein</h2>
               <p className="hero-description">
                   Pilates · Nike Strength · TRX · Cardio<br/>
                   Private Sessions & Small Groups (Max 5)
@@ -131,7 +131,7 @@ export const Home: React.FC = () => {
       <section id="about" className="about-section">
         <div className="about-container">
           <div className="about-content">
-            <h2>Personal Training Amsterdam — Your Boutique Studio at Museumplein</h2>
+            <h2>Pilates & Personal Training Amsterdam — Your Boutique Studio at Museumplein</h2>
             <p>
               Looking for expert personal training in Amsterdam Oud-Zuid? With 15 years of expertise at our Museumplein location, PT Studio 7 offers 
               Amsterdam's premier boutique fitness experience. Located at Van Baerlestraat 76C in the heart of Oud-Zuid, across from Stedelijk Museum, 

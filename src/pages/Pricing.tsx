@@ -135,7 +135,7 @@ export const Pricing: React.FC = () => {
         {activeTab === 'membership' && (
           <div className="pricing-content">
             <h2 className="pricing-section-title">Membership</h2>
-            <p className="pricing-subtitle">Valid all days, 9:00-18:00 • Maximum 1 class per day</p>
+            <p className="pricing-subtitle">Valid all days, 7:00-18:00 • Maximum 1 class per day</p>
             
             <div className="packages-grid">
               <div className="package-card">
@@ -144,7 +144,7 @@ export const Pricing: React.FC = () => {
                   <span className="package-name">4 Classes in 1 Month</span>
                 </div>
                 <p className="total-price">€86 in total</p>
-                <p className="validity">All days 9:00-18:00 • 1 class/day</p>
+                <p className="validity">All days 7:00-18:00 • 1 class/day</p>
                 <p className="validity" style={{ color: '#888', fontSize: '13px' }}>
                   1-month period • You can cancel after first month • Auto-renews monthly unless cancelled
                 </p>
@@ -162,7 +162,7 @@ export const Pricing: React.FC = () => {
                   <span className="package-name">8 Classes in 1 Month</span>
                 </div>
                 <p className="total-price">€160 in total</p>
-                <p className="validity">All days 9:00-18:00 • 1 class/day</p>
+                <p className="validity">All days 7:00-18:00 • 1 class/day</p>
                 <p className="validity" style={{ color: '#888', fontSize: '13px' }}>
                   1-month period • You can cancel after first month • Auto-renews monthly unless cancelled
                 </p>
@@ -181,7 +181,7 @@ export const Pricing: React.FC = () => {
                   <span className="package-name">Unlimited 3 Months</span>
                 </div>
                 <p className="total-price">Unlimited classes</p>
-                <p className="validity">All days 9:00-18:00 • 1 class/day</p>
+                <p className="validity">All days 7:00-18:00 • 1 class/day</p>
                 <p className="validity" style={{ color: '#888', fontSize: '13px' }}>
                   3-month commitment • You can cancel after 3 months • Auto-renews unless cancelled
                 </p>
@@ -200,7 +200,7 @@ export const Pricing: React.FC = () => {
                   <span className="package-name">Annual Unlimited</span>
                 </div>
                 <p className="total-price">€3,000/year • Includes 4-week freeze option</p>
-                <p className="validity">All days 9:00-18:00 • 1 class/day</p>
+                <p className="validity">All days 7:00-18:00 • 1 class/day</p>
                 <p className="validity" style={{ color: '#888', fontSize: '13px' }}>
                   12-month commitment • You can cancel after 12 months • Auto-renews unless cancelled
                 </p>
@@ -760,7 +760,7 @@ export const Pricing: React.FC = () => {
                 <span className="faq-icon">{openFaqIndex === 6 ? '−' : '+'}</span>
               </div>
               <div className="faq-content">
-                <p>Yes! The annual membership at €250 per month (€3,000 for 12 months total) gives you UNLIMITED classes (all days, 9:00-18:00), with a maximum of 1 class per day. This is our best value option and includes a 4-week freeze option.</p>
+                <p>Yes! The annual membership at €250 per month (€3,000 for 12 months total) gives you UNLIMITED classes (all days, 7:00-18:00), with a maximum of 1 class per day. This is our best value option and includes a 4-week freeze option.</p>
               </div>
             </div>
 
