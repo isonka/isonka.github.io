@@ -20,33 +20,66 @@ const distDir = path.join(__dirname, '..', 'dist');
 
 const BASE_URL = 'https://www.ptstudio7amsterdam.nl';
 
+// Default OG image for all pages
+const DEFAULT_IMAGE = '/assets/images/studio.jpg';
+
 // Route-specific meta data for social sharing
 // Routes not listed here will use default homepage meta tags
 const routeMeta = {
   'classpass-offer': {
     title: 'ClassPass Members: Exclusive Offer | PT Studio 7 Amsterdam',
     description: 'Special offer for ClassPass members. Save money and get priority booking when you join PT Studio 7 directly. Same great Pilates classes, better value.',
-    image: '/assets/images/about-us-web.jpg',
+    image: DEFAULT_IMAGE,
   },
   'pricing': {
     title: 'Pricing | PT Studio 7 Amsterdam',
     description: 'Flexible Pilates pricing at Museumplein. Memberships from €20/class, class packs, private sessions. Expert instructors, small groups (max 5).',
-    image: '/assets/images/about-us-web.jpg',
+    image: DEFAULT_IMAGE,
   },
   'academy': {
     title: 'Pilates Instructor Training | PT 7 Academy Amsterdam',
     description: 'Become a certified Pilates instructor. 4 weeks of lessons + 8 weeks optional observation. Learn from experienced instructors at Museumplein.',
-    image: '/assets/images/about-us-web.jpg',
+    image: DEFAULT_IMAGE,
   },
   'schedule': {
     title: 'Class Schedule | PT Studio 7 Amsterdam',
     description: 'Book your Pilates, TRX, or Strength class at PT Studio 7 Museumplein. Small group classes (max 5) and private sessions available.',
-    image: '/assets/images/about-us-web.jpg',
+    image: DEFAULT_IMAGE,
   },
   'instructors': {
     title: 'Our Instructors | PT Studio 7 Amsterdam',
     description: 'Meet our expert certified Pilates instructors. 10+ years experience, specialized in Reformer Pilates, pregnancy Pilates, and strength training.',
-    image: '/assets/images/about-us-web.jpg',
+    image: DEFAULT_IMAGE,
+  },
+  'equipment': {
+    title: 'Pilates Equipment | PT Studio 7 Amsterdam',
+    description: 'Professional Pilates equipment: Reformers, Tower Reformers, Cadillac, Wunda Chair, Ladder Barrel. Premium equipment at Museumplein.',
+    image: DEFAULT_IMAGE,
+  },
+  'blog': {
+    title: 'Blog | PT Studio 7 Amsterdam',
+    description: 'Pilates tips, fitness advice, and wellness insights from Amsterdam\'s boutique Pilates studio at Museumplein.',
+    image: DEFAULT_IMAGE,
+  },
+  'workouts/reformer-pilates': {
+    title: 'Reformer Pilates | PT Studio 7 Amsterdam',
+    description: 'Reformer Pilates classes at Museumplein. Small groups (max 5), expert instructors, premium equipment. Book your session today.',
+    image: DEFAULT_IMAGE,
+  },
+  'workouts/trx': {
+    title: 'TRX Training | PT Studio 7 Amsterdam',
+    description: 'TRX suspension training at Museumplein. Build strength and stability with expert coaching in small groups.',
+    image: DEFAULT_IMAGE,
+  },
+  'workouts/functional-training': {
+    title: 'Nike Strength Training | PT Studio 7 Amsterdam',
+    description: 'Nike Strength Training at Museumplein. Half rack, Olympic barbell, premium dumbbells. Expert personal training.',
+    image: DEFAULT_IMAGE,
+  },
+  'workouts/cardio': {
+    title: 'Cardio Training | PT Studio 7 Amsterdam',
+    description: 'Cardio training at Museumplein. Concept2 rower, SkillBike, and more. Build endurance with expert coaching.',
+    image: DEFAULT_IMAGE,
   },
 };
 
