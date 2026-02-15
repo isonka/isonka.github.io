@@ -107,7 +107,7 @@ export const Academy: React.FC = () => {
                 <div className="course-details">
                   <h4>Course Details:</h4>
                   <ul>
-                    <li><strong>Duration:</strong> 12 weeks (includes Pilates foundations module)</li>
+                    <li><strong>Duration:</strong> 4 weeks of lessons + 8 weeks optional observation & practice</li>
                     <li><strong>Schedule:</strong> Saturdays & Sundays | 12:00 – 18:00</li>
                     <li><strong>Location:</strong> PT Studio 7, Museumplein, Amsterdam</li>
                     <li><strong>Class Size:</strong> 4–8 participants</li>
@@ -144,7 +144,7 @@ export const Academy: React.FC = () => {
                 <div className="course-details">
                   <h4>Course Details:</h4>
                   <ul>
-                    <li><strong>Duration:</strong> 12 weeks (includes Pilates foundations module)</li>
+                    <li><strong>Duration:</strong> 4 weeks of lessons + 8 weeks optional observation & practice</li>
                     <li><strong>Schedule:</strong> Saturdays & Sundays | 12:00 – 18:00</li>
                     <li><strong>Location:</strong> PT Studio 7, Museumplein, Amsterdam</li>
                     <li><strong>Class Size:</strong> 4–8 participants</li>
