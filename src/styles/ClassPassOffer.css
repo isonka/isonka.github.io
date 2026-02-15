@@ -1,0 +1,518 @@
+/* ClassPass Offer Page */
+.classpass-offer-page {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Hero Section */
+.cp-hero {
+  position: relative;
+  min-height: 70vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cp-hero-overlay {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 800px;
+}
+
+.cp-hero-content {
+  color: white;
+}
+
+.cp-badge {
+  display: inline-block;
+  background: #ffd700;
+  color: #1a1a2e;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.cp-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0 0 24px;
+  line-height: 1.2;
+}
+
+.cp-hero-subtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+
+.cp-cta-button {
+  display: inline-block;
+  background: #ffd700;
+  color: #1a1a2e;
+  padding: 16px 40px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cp-cta-button:hover {
+  background: #ffed4a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+}
+
+.cp-cta-button.secondary {
+  background: transparent;
+  border: 2px solid #ffd700;
+  color: #ffd700;
+}
+
+.cp-cta-button.secondary:hover {
+  background: #ffd700;
+  color: #1a1a2e;
+}
+
+/* Comparison Section */
+.cp-comparison {
+  padding: 80px 20px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.cp-comparison h2 {
+  font-size: 2.5rem;
+  margin: 0 0 12px;
+  color: #1a1a2e;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 0 auto 48px;
+  text-align: center;
+  max-width: 600px;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.comparison-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.comparison-card.featured {
+  border: 3px solid #ffd700;
+  transform: scale(1.02);
+}
+
+.card-ribbon {
+  position: absolute;
+  top: 20px;
+  right: -35px;
+  background: #ffd700;
+  color: #1a1a2e;
+  padding: 8px 40px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transform: rotate(45deg);
+}
+
+.card-header {
+  padding: 24px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+}
+
+.cp-logo {
+  height: 30px;
+  margin-bottom: 8px;
+}
+
+.pt7-logo {
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.card-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.card-body {
+  padding: 24px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.price-row:last-child {
+  border-bottom: none;
+}
+
+.price-row span:first-child {
+  color: #333;
+}
+
+.price-row .price {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.price-row .price.strike {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.price-row .price.yes {
+  color: #0f3460;
+  font-weight: 700;
+}
+
+.price-row .price.no {
+  color: #dc3545;
+}
+
+.price-row.highlight {
+  background: #fffbeb;
+  margin: 0 -24px;
+  padding: 12px 24px;
+}
+
+.direct-card .card-header {
+  background: #fffbeb;
+}
+
+.savings-highlight {
+  margin-top: 48px;
+  background: linear-gradient(135deg, #ffd700, #ffed4a);
+  color: #1a1a2e;
+  padding: 32px;
+  border-radius: 16px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.savings-number {
+  display: block;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.savings-text {
+  font-size: 1.2rem;
+  opacity: 0.95;
+}
+
+/* Exclusive Offer Section */
+.cp-exclusive-offer {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+  color: white;
+  text-align: center;
+}
+
+.offer-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.offer-badge {
+  display: inline-block;
+  background: rgba(255, 215, 0, 0.2);
+  color: #ffd700;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.cp-exclusive-offer h2 {
+  font-size: 2.5rem;
+  margin: 0 0 16px;
+}
+
+.offer-description {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin: 0 0 40px;
+}
+
+.offer-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.offer-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 32px;
+  border-radius: 12px;
+}
+
+.offer-item h4 {
+  font-size: 1.3rem;
+  margin: 0 0 16px;
+  color: #ffd700;
+}
+
+.original-price {
+  font-size: 1.1rem;
+  text-decoration: line-through;
+  opacity: 0.6;
+  margin: 0;
+}
+
+.offer-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 8px 0;
+  color: #ffd700;
+}
+
+.per-class {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.offer-note {
+  font-size: 0.95rem;
+  opacity: 0.7;
+  margin: 0 0 32px;
+  font-style: italic;
+}
+
+/* Benefits Section */
+.cp-benefits {
+  padding: 80px 20px;
+  background: white;
+  text-align: center;
+}
+
+.cp-benefits h2 {
+  font-size: 2.5rem;
+  margin: 0 0 48px;
+  color: #1a1a2e;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  padding: 32px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.benefit-card h3 {
+  font-size: 1.3rem;
+  margin: 0 0 12px;
+  color: #1a1a2e;
+}
+
+.benefit-card p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Testimonials Section */
+.cp-testimonials {
+  padding: 80px 20px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.cp-testimonials h2 {
+  font-size: 2.5rem;
+  margin: 0 0 48px;
+  color: #1a1a2e;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333;
+  margin: 0 0 16px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: #666;
+  margin: 0;
+}
+
+/* FAQ Section */
+.cp-faq {
+  padding: 80px 20px;
+  background: white;
+  text-align: center;
+}
+
+.cp-faq h2 {
+  font-size: 2.5rem;
+  margin: 0 0 48px;
+  color: #1a1a2e;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-item h4 {
+  font-size: 1.1rem;
+  margin: 0 0 12px;
+  color: #1a1a2e;
+}
+
+.faq-item p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Final CTA Section */
+.cp-final-cta {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #ffd700, #ffed4a);
+  text-align: center;
+}
+
+.cp-final-cta h2 {
+  font-size: 2.5rem;
+  margin: 0 0 16px;
+  color: #1a1a2e;
+}
+
+.cp-final-cta p {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0 0 32px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cp-final-cta .cp-cta-button.primary {
+  background: #1a1a2e;
+  color: white;
+}
+
+.cp-final-cta .cp-cta-button.primary:hover {
+  background: #0f3460;
+}
+
+.cp-final-cta .cp-cta-button.secondary {
+  background: transparent;
+  border: 2px solid #1a1a2e;
+  color: #1a1a2e;
+}
+
+.cp-final-cta .cp-cta-button.secondary:hover {
+  background: #1a1a2e;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cp-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .cp-hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .cp-comparison h2,
+  .cp-exclusive-offer h2,
+  .cp-benefits h2,
+  .cp-testimonials h2,
+  .cp-faq h2,
+  .cp-final-cta h2 {
+    font-size: 2rem;
+  }
+
+  .comparison-card.featured {
+    transform: none;
+  }
+
+  .card-ribbon {
+    font-size: 0.75rem;
+    padding: 6px 35px;
+    right: -40px;
+  }
+
+  .savings-number {
+    font-size: 2.5rem;
+  }
+
+  .offer-price {
+    font-size: 2rem;
+  }
+}

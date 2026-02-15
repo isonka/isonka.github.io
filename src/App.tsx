@@ -30,6 +30,7 @@ import { WorkoutReformerPilates } from './pages/WorkoutReformerPilates';
 import { WorkoutTRX } from './pages/WorkoutTRX';
 import { WorkoutFunctional } from './pages/WorkoutFunctional';
 import { WorkoutCardio } from './pages/WorkoutCardio';
+import { ClassPassOffer } from './pages/ClassPassOffer';
 import './App.css';
 
 // Component to handle GitHub Pages redirects
@@ -85,6 +86,7 @@ function App() {
             <Route path="/academy" element={<Academy />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/classpass-offer" element={<ClassPassOffer />} />
           </Routes>
         </main>
         <Footer />
