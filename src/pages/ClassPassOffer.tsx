@@ -176,7 +176,7 @@ export const ClassPassOffer = () => {
                 "I was hopping between 5 different studios on ClassPass. When I found PT Studio 7, I knew I had to commit. 
                 The small groups (max 5!) and personal attention are worth so much more than the 'variety' I thought I needed."
               </p>
-              <p className="testimonial-author">— Sarah M., Member since 2024</p>
+              <p className="testimonial-author">— Sarah M., Member since 2025</p>
             </div>
             <div className="testimonial-card">
               <p className="testimonial-text">
@@ -190,7 +190,7 @@ export const ClassPassOffer = () => {
                 "The booking stress alone was worth switching. With ClassPass I'd refresh at midnight hoping for a spot. 
                 Now I book a week in advance with no drama."
               </p>
-              <p className="testimonial-author">— Anna K., Member since 2023</p>
+              <p className="testimonial-author">— Anna K., Member since 2025</p>
             </div>
           </div>
         </section>
