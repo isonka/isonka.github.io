@@ -31,6 +31,7 @@ import { WorkoutTRX } from './pages/WorkoutTRX';
 import { WorkoutFunctional } from './pages/WorkoutFunctional';
 import { WorkoutCardio } from './pages/WorkoutCardio';
 import { ClassPassOffer } from './pages/ClassPassOffer';
+import { HealthcareProviders } from './pages/HealthcareProviders';
 import './App.css';
 
 // Component to handle GitHub Pages redirects
@@ -87,6 +88,7 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/classpass-offer" element={<ClassPassOffer />} />
+            <Route path="/healthcare-providers" element={<HealthcareProviders />} />
           </Routes>
         </main>
         <Footer />

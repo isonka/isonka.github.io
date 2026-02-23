@@ -41,6 +41,11 @@ const routeMeta = {
     description: 'Become a certified Pilates instructor. 4 weeks of lessons + 8 weeks optional observation. Learn from experienced instructors at Museumplein.',
     image: DEFAULT_IMAGE,
   },
+  'healthcare-providers': {
+    title: 'Refer Your Clients | For Healthcare Providers | PT Studio 7 Amsterdam',
+    description: 'Physiotherapists and healthcare providers: refer your clients to PT Studio 7 for post-rehab Pilates and functional training. Small groups, expert instructors.',
+    image: DEFAULT_IMAGE,
+  },
   'schedule': {
     title: 'Class Schedule | PT Studio 7 Amsterdam',
     description: 'Book your Pilates, TRX, or Strength class at PT Studio 7 Museumplein. Small group classes (max 5) and private sessions available.',
@@ -107,6 +112,7 @@ const routes = [
   'trainer-lal',
   'trainer-nisan',
   'academy',
+  'healthcare-providers',
   'blog',
   'classpass-offer',
   // Blog posts
