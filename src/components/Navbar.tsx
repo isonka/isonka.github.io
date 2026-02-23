@@ -98,9 +98,9 @@ export const Navbar: React.FC = () => {
         <ul className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
           <li><a href="#about" aria-label="Learn about us" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About Us</a></li>
           <li><a href="#reviews" aria-label="Read reviews" onClick={(e) => { e.preventDefault(); scrollToSection('reviews'); }}>Reviews</a></li>
-          <li><a href="#workouts" aria-label="Explore workouts" onClick={(e) => { e.preventDefault(); scrollToSection('workouts'); }}>Workouts</a></li>
           <li><Link to="/instructors" aria-label="Meet our instructors" onClick={closeMenu}>Instructors</Link></li>
           <li><Link to="/pricing" aria-label="View pricing" onClick={closeMenu}>Prices</Link></li>
+          <li><Link to="/academy" aria-label="PT Studio 7 Academy" onClick={closeMenu}>Academy</Link></li>
           <li className="navbar-dropdown">
             <button
               type="button"
@@ -112,8 +112,8 @@ export const Navbar: React.FC = () => {
               More
             </button>
             <ul className={`navbar-dropdown-menu ${moreOpen ? 'open' : ''}`}>
+              <li><a href="#workouts" onClick={(e) => { e.preventDefault(); closeMenu(); setMoreOpen(false); scrollToSection('workouts'); }}>Workouts</a></li>
               <li><Link to="/equipment" onClick={() => { closeMenu(); setMoreOpen(false); }}>Equipment</Link></li>
-              <li><Link to="/academy" onClick={() => { closeMenu(); setMoreOpen(false); }}>Academy</Link></li>
               <li><Link to="/healthcare-providers" onClick={() => { closeMenu(); setMoreOpen(false); }}>For Healthcare</Link></li>
               <li><Link to="/blog" onClick={() => { closeMenu(); setMoreOpen(false); }}>Blog</Link></li>
             </ul>
