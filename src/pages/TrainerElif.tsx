@@ -53,7 +53,7 @@ export const TrainerElif: React.FC = () => {
         <div className="trainer-content">
           <section className="trainer-bio">
             <p>
-              Elif is the founder and head instructor of PT Studio 7, which she established in 2010. Since founding the studio, she has continued her career as both an instructor and business owner. With over 15 years of experience, she is a Senior Polestar Pilates Instructor, Miha BodyTec EMS Advance Trainer, and TRX & Strength Training Instructor. Elif holds a bachelor's degree in Business Administration from Hacettepe University. She started her sports career with athletics, continued with swimming, and played basketball in various clubs. She is passionate about helping clients reach their goals through personalized, attentive training and a holistic approach to health and fitness.
+              Elif is the founder and head instructor of PT Studio 7, which she established in 2010. Since founding the studio, she has continued her career as both an instructor and business owner. With over 15 years of experience, she is a Senior Polestar Pilates Instructor, PMA-registered instructor (Pilates Method Alliance), Miha BodyTec EMS Advance Trainer, and TRX & Strength Training Instructor. Elif holds a bachelor's degree in Business Administration from Hacettepe University. She started her sports career with athletics, continued with swimming, and played basketball in various clubs. She is passionate about helping clients reach their goals through personalized, attentive training and a holistic approach to health and fitness.
             </p>
           </section>
 
@@ -61,6 +61,7 @@ export const TrainerElif: React.FC = () => {
             <h2>Qualifications & Experience</h2>
             <ul>
               <li>Senior Polestar Pilates Instructor</li>
+              <li>PMA-Registered Pilates Teacher — Pilates Method Alliance (ITTAP accreditation in progress)</li>
               <li>Miha BodyTec EMS Advance Trainer</li>
               <li>TRX & Strength Training Instructor</li>
               <li>15+ years of experience in Pilates instruction</li>

@@ -6,11 +6,11 @@ export const Academy: React.FC = () => {
     <>
       <SEOHead
         title="Pilates Instructor Course Amsterdam | Weekend Certification | PT 7 Academy"
-        description="Become a certified Pilates instructor in Amsterdam. Weekend-only training, perfect for career changers. Small groups (4-8), globally certified instructors, job opportunities included. Starting March 2026."
+        description="Become a certified Pilates instructor in Amsterdam. Weekend-only training, perfect for career changers. Small groups (4-8), PMA-registered instructors, pursuing ITTAP accreditation from the Pilates Method Alliance. Starting March 2026."
         keywords="Pilates instructor course Amsterdam, Pilates opleiding Amsterdam, Pilates teacher training, Pilates certification Netherlands, pilatesdocent worden, weekend Pilates certification, career change Pilates instructor"
         canonical="https://www.ptstudio7amsterdam.nl/academy"
         ogTitle="Pilates Instructor Course Amsterdam | Weekend Training | PT 7 Academy"
-        ogDescription="Weekend Pilates certification for career changers. Small groups, globally certified instructors, job opportunities at our Museumplein studio. Starting March 2026."
+        ogDescription="Weekend Pilates certification for career changers. Small groups, PMA-registered instructors, pursuing ITTAP accreditation from the Pilates Method Alliance. Job opportunities at our Museumplein studio. Starting March 2026."
       />
 
       <div className="academy-page">
@@ -33,7 +33,7 @@ export const Academy: React.FC = () => {
             <h1>Pilates Instructor Course Amsterdam</h1>
             <p className="hero-subtitle">Weekend Certification — Perfect for Career Changers</p>
             <p className="hero-description">
-              Transform your passion for Pilates into a rewarding career. Our weekend-only training lets you keep your day job while becoming a certified instructor. Led by globally certified professionals with over 15 years of experience.
+              Transform your passion for Pilates into a rewarding career. Our weekend-only training lets you keep your day job while becoming a certified instructor. Led by PMA-registered professionals with over 15 years of experience. PT Studio 7 is pursuing ITTAP accreditation from the Pilates Method Alliance — the international standard for recognized Pilates teacher training programs worldwide.
             </p>
           </div>
         </section>
@@ -90,7 +90,7 @@ export const Academy: React.FC = () => {
                   </div>
                   <div className="highlight-item">
                     <span className="highlight-icon">🌍</span>
-                    <span>Globally certified instructors</span>
+                    <span>PMA-registered instructors</span>
                   </div>
                   <div className="highlight-item">
                     <span className="highlight-icon">👥</span>
@@ -200,8 +200,8 @@ export const Academy: React.FC = () => {
               
               <div className="benefit-card">
                 <div className="benefit-icon">🌍</div>
-                <h3>Globally Certified Instructors</h3>
-                <p>Learn from Senior Polestar Pilates certified instructors with internationally recognized credentials</p>
+                <h3>Globally Recognized Training</h3>
+                <p>Learn from PMA-registered instructors. PT Studio 7 is pursuing ITTAP accreditation from the Pilates Method Alliance — the international standard for recognized Pilates teacher training programs.</p>
               </div>
               
               <div className="benefit-card">
