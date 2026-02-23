@@ -748,11 +748,17 @@
 }
 
 .usc-badge .partner-logo {
-  height: 18px;
+  height: 20px;
 }
 
 .classpass-badge .classpass-rating,
-.google-badge .google-rating,
+.google-badge .google-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
 .usc-badge .usc-rating {
   display: flex;
   flex-direction: column;
@@ -809,6 +815,11 @@
   font-size: 1.1rem;
   color: #333;
   font-weight: 700;
+}
+
+.usc-badge .review-count {
+  font-size: 0.7rem;
+  color: #888;
 }
 
 /* Reviewer Initial Avatar (for reviews without photo) */

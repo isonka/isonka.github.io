@@ -444,11 +444,9 @@ export const Home: React.FC = () => {
               className="partner-badge classpass-badge"
             >
               <img 
-                src="/assets/images/classpass-logo.svg" 
-                alt="classpass" 
+                src="https://cdn9.classpass.com/dist/gfe-v2/_next/static/media/logotype.f52b0a12.svg" 
+                alt="ClassPass" 
                 className="partner-logo"
-                width="100"
-                height="20"
               />
               <div className="classpass-rating">
                 <span className="rating-stars">★★★★★</span>
@@ -465,14 +463,14 @@ export const Home: React.FC = () => {
               className="partner-badge usc-badge"
             >
               <img 
-                src="/assets/images/urbansportsclub-logo.svg" 
+                src="/assets/images/urbansportsclub-logo.png" 
                 alt="Urban Sports Club" 
                 className="partner-logo"
-                width="140"
-                height="20"
               />
               <div className="usc-rating">
-                <span className="rating-text">Book via USC</span>
+                <span className="rating-stars">★★★★★</span>
+                <span className="rating-text">4.9</span>
+                <span className="review-count">12 reviews</span>
               </div>
             </a>
           </div>

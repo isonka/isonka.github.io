@@ -39,7 +39,7 @@ export const ClassPassOffer = () => {
           <div className="comparison-grid">
             <div className="comparison-card classpass-card">
               <div className="card-header">
-                <img src="/assets/images/classpass-logo.svg" alt="ClassPass" className="cp-logo" />
+                <img src="https://cdn9.classpass.com/dist/gfe-v2/_next/static/media/logotype.f52b0a12.svg" alt="ClassPass" className="cp-logo" />
                 <span className="card-label">ClassPass (for 4 classes/month)</span>
               </div>
               <div className="card-body">
