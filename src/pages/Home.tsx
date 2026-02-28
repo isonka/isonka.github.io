@@ -1,39 +1,73 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
+import { SummerShredModal } from '../components/SummerShredModal';
 import { StructuredData } from '../components/StructuredData';
 import { trackPageView, trackPhoneClick, trackEmailClick, trackSocialClick } from '../utils/gtmTracking';
 import { trackFBPageView, trackFBPhoneClick, trackFBEmailClick, trackFBWhatsAppClick, trackFBBookingClick } from '../utils/fbPixelTracking';
+import { workouts } from '../data/workouts';
+import { WorkoutCard } from '../components/WorkoutCard';
 import '../styles/Home.css';
 
-// Hero background images for rotation
 const heroImages = [
   { src: '/assets/images/studio.jpg', alt: 'PT Studio 7 - Pilates Reformer Studio' },
   { src: '/assets/images/nike_strength_studio.JPG', alt: 'PT Studio 7 - Nike Strength Training Area' },
 ];
 
-// Reviews data for structured data
+
+const trainers = [
+  { to: '/trainer-elif', src: '/assets/images/elif.JPG', alt: 'Elif Arzu Ogan - Pilates Instructor', name: 'Elif Arzu Ogan', specialties: 'Comprehensive Pilates\nStrength Training\nPrenatal Pilates' },
+  { to: '/trainer-gokben', src: '/assets/images/gokben.jpeg', alt: 'Gökben Öztekin - Pilates Instructor', name: 'Gökben Öztekin', specialties: 'Comprehensive Pilates' },
+  { to: '/trainer-goknur', src: '/assets/images/goknur.jpeg', alt: 'Göknur Dipli - Pilates Instructor', name: 'Göknur Dipli', specialties: 'Comprehensive Pilates\nStrength Training\nPrenatal Pilates' },
+  { to: '/trainer-gulce', src: '/assets/images/gulce.JPG', alt: 'Gülce - Pilates Instructor', name: 'Gülce', specialties: 'Reformer Pilates' },
+  { to: '/trainer-lal', src: '/assets/images/lal.JPG', alt: 'Lal - Pilates Instructor', name: 'Lal', specialties: 'Reformer Pilates' },
+  { to: '/trainer-nisan', src: '/assets/images/nisan.JPG', alt: 'Nisan - Pilates Instructor', name: 'Nisan', specialties: 'Reformer Pilates' },
+];
+
+const reviews = [
+  { author: 'Lot Canter Cremers', photo: '/assets/images/lot.png', text: '"Through a neighbor in my building I was introduced to PT Studio 7. I have been going to this studio for the past 18 months, of which I have been pregnant for 9. During my pregnancy Elif trained me until the very end (38.5 weeks). Her training gave me and my body an extremely comfortable pregnancy and smooth delivery of birth! Her experience and knowledge about the human body, pregnant or not, makes all the difference. Of course I continued after my pregnancy and I really enjoy and recommend this studio to everyone who is looking for a Pilates studio with qualified and experienced instructors. Since the Pilates sport is getting so popular there are a lot of places where you can go but most of the instructors don\'t have enough knowledge to be able to teach and train you like they do at PT Studio 7!"' },
+  { author: 'Flaminia', initial: 'F', text: '"I had been looking for a professional Pilates reformer studio for about 2 years and tried many different studios around Amsterdam. PT Studio 7 and Elif are exactly what I was looking for: professional, thoughtful, engaging in your body progress and growth. Elif is amazing and has decades of experience as a fitness trainer. She demonstrates techniques with a detail-oriented approach and her classes are always different and tailored to the group!"' },
+  { author: 'Maya', photo: '/assets/images/maya.png', text: '"This is a truly special Pilates Reformer studio — warm, welcoming, and filled with care. Gökben and Elif bring so much heart into every session. Their gentle guidance, attentiveness, and kindness make all the difference. I\'ve been practicing here for almost six months, and I feel stronger, more balanced, and more connected to my body. Every class leaves me smiling and deeply grateful!"' },
+  { author: 'Yeşim', photo: '/assets/images/yesim.png', text: '"I\'ve been coming here for 6 months and the results are incredible. The atmosphere is motivating and the equipment is pristine. Highly recommend!"' },
+  { author: 'Ayşe', photo: '/assets/images/ayse.png', text: '"I\'ve been training at PT Studio 7 for a while now, and I couldn\'t be happier with my experience! The studio has such a calm and positive atmosphere, and the trainers are incredibly professional and supportive. They pay close attention to your needs and guide you through every movement with care. I highly recommend it!"' },
+];
+
+const partnerBadges = [
+  {
+    href: 'https://maps.app.goo.gl/wrhyzYbov9eiGQJw5',
+    className: 'google-badge',
+    logo: { src: '/assets/images/google-logo.svg', alt: 'Google', width: 24, height: 24 },
+    ratingClass: 'google-rating',
+    stars: true,
+    ratingText: '4.8',
+    extra: <span className="review-incentive">Leave a review, get 5% off!</span>,
+  },
+  {
+    href: 'https://classpass.com/studios/pt-studio-7-amsterdam',
+    className: 'classpass-badge',
+    logo: { src: 'https://cdn9.classpass.com/dist/gfe-v2/_next/static/media/logotype.f52b0a12.svg', alt: 'ClassPass' },
+    ratingClass: 'classpass-rating',
+    stars: true,
+    ratingText: '4.9',
+    extra: <span className="review-count">2,500+ reviews</span>,
+  },
+  {
+    href: 'https://urbansportsclub.com/nl/venues/pt-studio-7-museumplein',
+    className: 'usc-badge',
+    logo: { src: '/assets/images/urbansportsclub-logo.png', alt: 'Urban Sports Club' },
+    ratingClass: 'usc-rating',
+    stars: true,
+    ratingText: '4.9',
+    extra: <span className="review-count">12 reviews</span>,
+  },
+];
+
+// For structured data only
 const reviewsData = [
-  {
-    author: 'Lot Canter Cremers',
-    reviewBody: 'Through a neighbor in my building I was introduced to PT Studio 7. I have been going to this studio for the past 18 months, of which I have been pregnant for 9. During my pregnancy Elif trained me until the very end (38.5 weeks). Her training gave me and my body an extremely comfortable pregnancy and smooth delivery of birth!',
-    ratingValue: 5,
-  },
-  {
-    author: 'Ayşe',
-    reviewBody: "I've been training at PT Studio 7 for a while now, and I couldn't be happier with my experience! The studio has such a calm and positive atmosphere, and the trainers are incredibly professional and supportive.",
-    ratingValue: 5,
-  },
-  {
-    author: 'Maya',
-    reviewBody: "This is a truly special Pilates Reformer studio — warm, welcoming, and filled with care. Gökben and Elif bring so much heart into every session. I've been practicing here for almost six months, and I feel stronger, more balanced, and more connected to my body.",
-    ratingValue: 5,
-  },
-  {
-    author: 'Flaminia',
-    reviewBody: "PT Studio 7 and Elif are exactly what I was looking for: professional, thoughtful, engaging in your body progress and growth. Elif is amazing and has decades of experience as a fitness trainer with a detail-oriented approach.",
-    ratingValue: 5,
-  },
+  { author: 'Lot Canter Cremers', reviewBody: 'Through a neighbor in my building I was introduced to PT Studio 7...', ratingValue: 5 },
+  { author: 'Ayşe', reviewBody: "I've been training at PT Studio 7 for a while now...", ratingValue: 5 },
+  { author: 'Maya', reviewBody: "This is a truly special Pilates Reformer studio...", ratingValue: 5 },
+  { author: 'Flaminia', reviewBody: "PT Studio 7 and Elif are exactly what I was looking for...", ratingValue: 5 },
 ];
 
 export const Home: React.FC = () => {
@@ -55,6 +89,7 @@ export const Home: React.FC = () => {
 
   return (
     <>
+      <SummerShredModal />
       {/* Promotional Banner for Pilates Instructor Course */}
       <div className="promo-banner">
         <div className="promo-content">
@@ -171,58 +206,9 @@ export const Home: React.FC = () => {
           <p>Explore our variety of training programs</p>
         </div>
         <div className="workouts-grid">
-          <Link to="/workouts/reformer-pilates" className="workout-card">
-            <img 
-              src="/assets/images/reformer.jpg" 
-              alt="Reformer & Trapeze Table Pilates" 
-              width="400" 
-              height="220" 
-              loading="lazy" 
-              decoding="async" 
-            />
-            <h3>Reformer & Trapeze Table Pilates</h3>
-            <p>Full-body workout focusing on core strength, flexibility, and posture</p>
-            <span className="learn-more">Learn More →</span>
-          </Link>
-          <Link to="/workouts/trx" className="workout-card">
-            <img 
-              src="/assets/images/trx.jpg" 
-              alt="TRX Training" 
-              width="400" 
-              height="220" 
-              loading="lazy" 
-              decoding="async" 
-            />
-            <h3>TRX Training</h3>
-            <p>Suspension training for strength, balance, and functional fitness</p>
-            <span className="learn-more">Learn More →</span>
-          </Link>
-          <Link to="/workouts/functional-training" className="workout-card">
-            <img 
-              src="/assets/images/nike_strength_studio.JPG" 
-              alt="Nike Strength Training" 
-              width="400" 
-              height="220" 
-              loading="lazy" 
-              decoding="async" 
-            />
-            <h3>Nike Strength Training</h3>
-            <p>Premium Nike equipment: half rack, Olympic barbell & dumbbells</p>
-            <span className="learn-more">Learn More →</span>
-          </Link>
-          <Link to="/workouts/cardio" className="workout-card">
-            <img 
-              src="/assets/images/cardio.jpg" 
-              alt="Cardio Training" 
-              width="400" 
-              height="220" 
-              loading="lazy" 
-              decoding="async" 
-            />
-            <h3>Cardio</h3>
-            <p>High-intensity cardio workouts to boost endurance and burn calories</p>
-            <span className="learn-more">Learn More →</span>
-          </Link>
+          {workouts.map((w) => (
+            <WorkoutCard key={w.to} workout={w} />
+          ))}
         </div>
       </section>
 
@@ -233,97 +219,14 @@ export const Home: React.FC = () => {
           <p>Certified professionals dedicated to your fitness journey</p>
         </div>
         <div className="trainers-grid">
-          <Link to="/trainer-elif" className="trainer-card">
-            <img 
-              src="/assets/images/elif.JPG" 
-              alt="Elif Arzu Ogan - Pilates Instructor" 
-              loading="lazy"
-              decoding="async"
-              width="140"
-              height="140"
-            />
-            <h3>Elif Arzu Ogan</h3>
-            <p>Comprehensive Pilates<br />Strength Training<br />Prenatal Pilates</p>
-            <span className="learn-more">Learn More →</span>
-          </Link>
-          <Link to="/trainer-gokben" className="trainer-card">
-            <img 
-              src="/assets/images/gokben.jpeg" 
-              alt="Gökben Öztekin - Pilates Instructor" 
-              loading="lazy"
-              decoding="async"
-              width="140"
-              height="140"
-            />
-            <h3>Gökben Öztekin</h3>
-            <p>Comprehensive Pilates</p>
-            <span className="learn-more">Learn More →</span>
-          </Link>
-          <Link to="/trainer-goknur" className="trainer-card">
-            <img 
-              src="/assets/images/goknur.jpeg" 
-              alt="Göknur Dipli - Pilates Instructor" 
-              loading="lazy"
-              decoding="async"
-              width="140"
-              height="140"
-            />
-            <h3>Göknur Dipli</h3>
-            <p>Comprehensive Pilates<br />Strength Training<br />Prenatal Pilates</p>
-            <span className="learn-more">Learn More →</span>
-          </Link>
-          <Link to="/trainer-gulce" className="trainer-card">
-            <img 
-              src="/assets/images/gulce.JPG" 
-              alt="Gülce - Pilates Instructor" 
-              loading="lazy"
-              decoding="async"
-              width="140"
-              height="140"
-            />
-            <h3>Gülce</h3>
-            <p>Reformer Pilates</p>
-            <span className="learn-more">Learn More →</span>
-          </Link>
-          <Link to="/trainer-melis" className="trainer-card">
-            <img 
-              src="/assets/images/melis.JPG" 
-              alt="Melis - Pilates Instructor" 
-              loading="lazy"
-              decoding="async"
-              width="140"
-              height="140"
-            />
-            <h3>Melis</h3>
-            <p>Reformer Pilates</p>
-            <span className="learn-more">Learn More →</span>
-          </Link>
-          <Link to="/trainer-lal" className="trainer-card">
-            <img 
-              src="/assets/images/lal.JPG" 
-              alt="Lal - Pilates Instructor" 
-              loading="lazy"
-              decoding="async"
-              width="140"
-              height="140"
-            />
-            <h3>Lal</h3>
-            <p>Reformer Pilates</p>
-            <span className="learn-more">Learn More →</span>
-          </Link>
-          <Link to="/trainer-nisan" className="trainer-card">
-            <img 
-              src="/assets/images/nisan.JPG" 
-              alt="Nisan - Pilates Instructor" 
-              loading="lazy"
-              decoding="async"
-              width="140"
-              height="140"
-            />
-            <h3>Nisan</h3>
-            <p>Reformer Pilates</p>
-            <span className="learn-more">Learn More →</span>
-          </Link>
+          {trainers.map((t) => (
+            <Link key={t.to} to={t.to} className="trainer-card">
+              <img src={t.src} alt={t.alt} loading="lazy" decoding="async" width="140" height="140" />
+              <h3>{t.name}</h3>
+              <p>{t.specialties.split('\n').map((s, i) => <span key={i}>{s}{i < t.specialties.split('\n').length - 1 && <br />}</span>)}</p>
+              <span className="learn-more">Learn More →</span>
+            </Link>
+          ))}
         </div>
       </section>
 
@@ -334,79 +237,17 @@ export const Home: React.FC = () => {
           <p>Real experiences from our community</p>
         </div>
         <div className="reviews-container">
-          <div className="review-card">
-            <img 
-              src="/assets/images/lot.png" 
-              alt="Lot Canter Cremers review" 
-              className="reviewer-photo" 
-              width="80" 
-              height="80" 
-              loading="lazy" 
-              decoding="async" 
-            />
-            <div className="stars">★★★★★</div>
-            <p className="review-text">
-              "Through a neighbor in my building I was introduced to PT Studio 7. I have been going to this studio for the past 18 months, of which I have been pregnant for 9. During my pregnancy Elif trained me until the very end (38.5 weeks). Her training gave me and my body an extremely comfortable pregnancy and smooth delivery of birth! Her experience and knowledge about the human body, pregnant or not, makes all the difference. Of course I continued after my pregnancy and I really enjoy and recommend this studio to everyone who is looking for a Pilates studio with qualified and experienced instructors. Since the Pilates sport is getting so popular there are a lot of places where you can go but most of the instructors don't have enough knowledge to be able to teach and train you like they do at PT Studio 7!"
-            </p>
-            <p className="review-author">- Lot Canter Cremers</p>
-          </div>
-          <div className="review-card">
-            <div className="reviewer-initial" aria-label="Flaminia">F</div>
-            <div className="stars">★★★★★</div>
-            <p className="review-text">
-              "I had been looking for a professional Pilates reformer studio for about 2 years and tried many different studios around Amsterdam. PT Studio 7 and Elif are exactly what I was looking for: professional, thoughtful, engaging in your body progress and growth. Elif is amazing and has decades of experience as a fitness trainer. She demonstrates techniques with a detail-oriented approach and her classes are always different and tailored to the group!"
-            </p>
-            <p className="review-author">- Flaminia</p>
-          </div>
-          <div className="review-card">
-            <img 
-              src="/assets/images/maya.png" 
-              alt="Maya review" 
-              className="reviewer-photo" 
-              width="80" 
-              height="80" 
-              loading="lazy" 
-              decoding="async" 
-            />
-            <div className="stars">★★★★★</div>
-            <p className="review-text">
-              "This is a truly special Pilates Reformer studio — warm, welcoming, and filled with care. Gökben and Elif bring so much heart into every session. Their gentle guidance, attentiveness, and kindness make all the difference. I've been practicing here for almost six months, and I feel stronger, more balanced, and more connected to my body. Every class leaves me smiling and deeply grateful!"
-            </p>
-            <p className="review-author">- Maya</p>
-          </div>
-          <div className="review-card">
-            <img 
-              src="/assets/images/yesim.png" 
-              alt="Yeşim review" 
-              className="reviewer-photo" 
-              width="80" 
-              height="80" 
-              loading="lazy" 
-              decoding="async" 
-            />
-            <div className="stars">★★★★★</div>
-            <p className="review-text">
-              "I've been coming here for 6 months and the results are incredible. The atmosphere 
-              is motivating and the equipment is pristine. Highly recommend!"
-            </p>
-            <p className="review-author">- Yeşim</p>
-          </div>
-          <div className="review-card">
-            <img 
-              src="/assets/images/ayse.png" 
-              alt="Ayşe review" 
-              className="reviewer-photo" 
-              width="80" 
-              height="80" 
-              loading="lazy" 
-              decoding="async" 
-            />
-            <div className="stars">★★★★★</div>
-            <p className="review-text">
-              "I've been training at PT Studio 7 for a while now, and I couldn't be happier with my experience! The studio has such a calm and positive atmosphere, and the trainers are incredibly professional and supportive. They pay close attention to your needs and guide you through every movement with care. I highly recommend it!"
-            </p>
-            <p className="review-author">- Ayşe</p>
-          </div>
+          {reviews.map((r) => (
+            <div key={r.author} className="review-card">
+              {r.photo
+                ? <img src={r.photo} alt={`${r.author} review`} className="reviewer-photo" width="80" height="80" loading="lazy" decoding="async" />
+                : <div className="reviewer-initial" aria-label={r.author}>{r.initial}</div>
+              }
+              <div className="stars">★★★★★</div>
+              <p className="review-text">{r.text}</p>
+              <p className="review-author">- {r.author}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -415,64 +256,16 @@ export const Home: React.FC = () => {
         <div className="partner-badges-container">
           <h3>Find Us On</h3>
           <div className="partner-badges">
-            {/* Google Reviews Badge */}
-            <a 
-              href="https://maps.app.goo.gl/wrhyzYbov9eiGQJw5" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="partner-badge google-badge"
-            >
-              <img 
-                src="/assets/images/google-logo.svg" 
-                alt="Google" 
-                className="partner-logo"
-                width="24"
-                height="24"
-              />
-              <div className="google-rating">
-                <span className="rating-stars">★★★★★</span>
-                <span className="rating-text">4.8</span>
-                <span className="review-incentive">Leave a review, get 5% off!</span>
-              </div>
-            </a>
-            
-            {/* ClassPass Badge */}
-            <a 
-              href="https://classpass.com/studios/pt-studio-7-amsterdam" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="partner-badge classpass-badge"
-            >
-              <img 
-                src="https://cdn9.classpass.com/dist/gfe-v2/_next/static/media/logotype.f52b0a12.svg" 
-                alt="ClassPass" 
-                className="partner-logo"
-              />
-              <div className="classpass-rating">
-                <span className="rating-stars">★★★★★</span>
-                <span className="rating-text">4.9</span>
-                <span className="review-count">2,500+ reviews</span>
-              </div>
-            </a>
-
-            {/* Urban Sports Club Badge */}
-            <a 
-              href="https://urbansportsclub.com/nl/venues/pt-studio-7-museumplein" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="partner-badge usc-badge"
-            >
-              <img 
-                src="/assets/images/urbansportsclub-logo.png" 
-                alt="Urban Sports Club" 
-                className="partner-logo"
-              />
-              <div className="usc-rating">
-                <span className="rating-stars">★★★★★</span>
-                <span className="rating-text">4.9</span>
-                <span className="review-count">12 reviews</span>
-              </div>
-            </a>
+            {partnerBadges.map((b) => (
+              <a key={b.href} href={b.href} target="_blank" rel="noopener noreferrer" className={`partner-badge ${b.className}`}>
+                <img src={b.logo.src} alt={b.logo.alt} className="partner-logo" width={b.logo.width} height={b.logo.height} />
+                <div className={b.ratingClass}>
+                  {b.stars && <span className="rating-stars">★★★★★</span>}
+                  <span className="rating-text">{b.ratingText}</span>
+                  {b.extra}
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>

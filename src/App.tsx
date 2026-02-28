@@ -30,6 +30,7 @@ import { WorkoutReformerPilates } from './pages/WorkoutReformerPilates';
 import { WorkoutTRX } from './pages/WorkoutTRX';
 import { WorkoutFunctional } from './pages/WorkoutFunctional';
 import { WorkoutCardio } from './pages/WorkoutCardio';
+import { WorkoutSummerShredLab } from './pages/WorkoutSummerShredLab';
 import { ClassPassOffer } from './pages/ClassPassOffer';
 import { HealthcareProviders } from './pages/HealthcareProviders';
 import './App.css';
@@ -75,6 +76,7 @@ function App() {
             <Route path="/workouts/trx" element={<WorkoutTRX />} />
             <Route path="/workouts/functional-training" element={<WorkoutFunctional />} />
             <Route path="/workouts/cardio" element={<WorkoutCardio />} />
+            <Route path="/workouts/summer-shred-lab" element={<WorkoutSummerShredLab />} />
             <Route path="/congrats" element={<Congrats />} />
             <Route path="/instructors" element={<Trainers />} />
             <Route path="/trainer-elif" element={<TrainerElif />} />

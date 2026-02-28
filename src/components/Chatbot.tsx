@@ -47,6 +47,7 @@ export const Chatbot: React.FC = () => {
           [
             "Improve strength & fitness",
             "Lose weight & tone",
+            "Summer body transformation",
             "Rehabilitation/injury recovery",
             "Pregnancy fitness",
             "General wellness",
@@ -94,7 +95,17 @@ export const Chatbot: React.FC = () => {
 
     // Progress through conversation flow
     if (field === 'goal') {
-      if (response === "Pregnancy fitness") {
+      if (response === "Summer body transformation") {
+        addBotMessage(
+          "Great choice! We have a dedicated program for that — Summer Shred Lab. It's a 6-week HIIT program using the Technogym Skillrun, Concept2 RowErg, and Nike Strength Half Rack. Max 3 people per group, 45-minute sessions, 2 or 3 times per week.",
+          1000
+        );
+        addBotMessage(
+          "Which plan suits you better?",
+          2500,
+          ["12 classes (2× per week, 6 weeks)", "18 classes (3× per week, 6 weeks)", "Tell me more first"]
+        );
+      } else if (response === "Pregnancy fitness") {
         setUserProfile({ ...newProfile, isPregnant: 'yes' });
         addBotMessage(
           "Great! We offer specialized pregnancy Pilates. For safety, we only accept pregnant clients for one-on-one private classes.",
@@ -162,7 +173,7 @@ export const Chatbot: React.FC = () => {
           instructorReason = 'For group classes, all our instructors — from Junior to Master level — can help you build strength. We also offer Nike Strength Training with premium equipment for personal training.';
         }
       } else if (profile.experience === "I'm a beginner") {
-        recommendedInstructor = 'Gülce, Melis, Lal, or Nisan (Junior Instructors)';
+        recommendedInstructor = 'Gülce, Lal, or Nisan (Junior Instructors)';
         instructorReason = 'Our Junior instructors are PT 7 Academy certified and excellent with beginners — they focus on fundamentals, proper form, and making you feel comfortable.';
       } else if (profile.goal === 'General wellness' || profile.goal === 'Just curious') {
         recommendedInstructor = 'Gökben Öztekin (Senior Instructor)';
@@ -215,6 +226,27 @@ ${pricing}
     }, 2000);
   };
 
+  const handleSummerShred = (response: string) => {
+    addUserMessage(response);
+    if (response === "Tell me more first") {
+      addBotMessage(
+        "Summer Shred Lab is a 6-week HIIT program combining cardio and strength:\n\n**Technogym Skillrun** — performance treadmill, up to 30 km/h, sprint & sled modes\n**Concept2 RowErg** — full-body low-impact cardio\n**Nike Strength Half Rack** — compound lifts with Olympic barbell\n\nSessions are 45 minutes. Max 3 people per group so you get real coaching.",
+        800
+      );
+      addBotMessage("Which plan works for you?", 3000, [
+        "12 classes (2× per week, 6 weeks)",
+        "18 classes (3× per week, 6 weeks)",
+      ]);
+    } else {
+      const plan = response.startsWith("12") ? "12-class" : "18-class";
+      addBotMessage(
+        `Great! The ${plan} plan is ready to book. You can purchase it directly on the Summer Shred Lab page.`,
+        800
+      );
+      addBotMessage("Shall I take you there?", 2000, ["View Summer Shred Lab", "Start over"]);
+    }
+  };
+
   const handleFollowUp = (response: string) => {
     addUserMessage(response);
 
@@ -227,8 +259,8 @@ ${pricing}
         break;
       
       case "Tell me about equipment":
-        addBotMessage("We use professional Pilates equipment including Reformers, Cadillac/Trapeze Tables, Tower Reformers, Ladder Barrel, Wunda Chair, and Spine Corrector. Plus Nike Strength Training with a half rack, Olympic barbell, and premium dumbbells!", 500);
-        addBotMessage("Would you like to see our equipment?", 1500, ["Yes, show me", "No thanks", "Start over"]);
+        addBotMessage("We have two studios:\n\n**Pilates Studio:** Reformers, Tower Reformer, Cadillac/Trapeze Table, Ladder Barrel, Wunda Chair\n\n**Strength & Cardio Studio:** Nike Strength Half Rack, Olympic barbell, dumbbells, Technogym Skillrun (30 km/h performance treadmill), Concept2 RowErg", 500);
+        addBotMessage("Would you like to see our equipment page?", 2000, ["Yes, show me", "No thanks", "Start over"]);
         break;
       
       case "Yes, show me":
@@ -239,9 +271,16 @@ ${pricing}
         break;
       
       case "View all trainers":
-        addBotMessage("I'll take you to our instructors page where you can meet all 7 of our trainers — 1 Master, 2 Senior, and 4 Junior instructors!", 500);
+        addBotMessage("I'll take you to our instructors page where you can meet all 6 of our trainers — 1 Master, 2 Senior, and 3 Junior instructors!", 500);
         setTimeout(() => {
           window.location.href = '/instructors';
+        }, 1500);
+        break;
+
+      case "View Summer Shred Lab":
+        addBotMessage("Taking you to the Summer Shred Lab page where you can see full details and buy your package!", 500);
+        setTimeout(() => {
+          window.location.href = '/workouts/summer-shred-lab';
         }, 1500);
         break;
       
@@ -251,6 +290,7 @@ ${pricing}
         addBotMessage("Let's start fresh! What brings you to PT Studio 7?", 500, [
           "Improve strength & fitness",
           "Lose weight & tone",
+          "Summer body transformation",
           "Rehabilitation/injury recovery",
           "Pregnancy fitness",
           "General wellness",
@@ -269,11 +309,17 @@ ${pricing}
 
   const handleOptionClick = (option: string) => {
     // Determine which field this option belongs to
-    const goalOptions = ["Improve strength & fitness", "Lose weight & tone", "Rehabilitation/injury recovery", "Pregnancy fitness", "General wellness", "Just curious"];
+    const goalOptions = ["Improve strength & fitness", "Lose weight & tone", "Summer body transformation", "Rehabilitation/injury recovery", "Pregnancy fitness", "General wellness", "Just curious"];
     const experienceOptions = ["Yes, I'm experienced", "Some experience", "I'm a beginner"];
     const groupOptions = ["Private (just me)", "With a partner (couple)", "Small group (3 people)", "Group class (max 5)"];
     const injuryOptions = ["Yes, I have injuries", "No injuries", "Some minor concerns", "Back pain", "Pelvic floor", "General fitness", "Preparing for birth", "No specific concerns"];
-    const followUpOptions = ["Book a class now", "Tell me about equipment", "View all trainers", "Start over", "Yes, show me", "No thanks"];
+    const summerShredOptions = ["12 classes (2× per week, 6 weeks)", "18 classes (3× per week, 6 weeks)", "Tell me more first"];
+    const followUpOptions = ["Book a class now", "Tell me about equipment", "View all trainers", "View Summer Shred Lab", "Start over", "Yes, show me", "No thanks"];
+
+    if (summerShredOptions.includes(option)) {
+      handleSummerShred(option);
+      return;
+    }
 
     if (goalOptions.includes(option)) {
       handleUserResponse(option, 'goal');

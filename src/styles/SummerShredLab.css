@@ -1,0 +1,88 @@
+/* Summer Shred Lab — Announcement Banner */
+.ssl-announcement-banner {
+  background: #1a1a1a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 12px 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.ssl-banner-label {
+  background: #c0392b;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.ssl-banner-text {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+.ssl-banner-cta {
+  color: #e8623a;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.ssl-banner-cta:hover {
+  color: #fff;
+}
+
+/* Summer Shred Lab — Hero */
+.ssl-hero {
+  background: #1a1a1a;
+  position: relative;
+}
+
+.ssl-hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 560px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ssl-hero-cta {
+  position: absolute;
+  bottom: 32px;
+  right: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ssl-hero-image {
+    max-height: none;
+  }
+
+  .ssl-hero-cta {
+    position: static;
+    display: flex;
+    justify-content: center;
+    padding: 20px 16px;
+    background: #1a1a1a;
+  }
+
+  .ssl-announcement-banner {
+    gap: 10px;
+    padding: 10px 16px;
+  }
+
+  .ssl-banner-text {
+    font-size: 0.85rem;
+  }
+}
