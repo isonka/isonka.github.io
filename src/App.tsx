@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
@@ -78,6 +78,7 @@ function App() {
             <Route path="/workouts/cardio" element={<WorkoutCardio />} />
             <Route path="/workouts/summer-shred-lab" element={<WorkoutSummerShredLab />} />
             <Route path="/congrats" element={<Congrats />} />
+            <Route path="/congrats.html" element={<Navigate to="/congrats" replace />} />
             <Route path="/instructors" element={<Trainers />} />
             <Route path="/trainer-elif" element={<TrainerElif />} />
             <Route path="/trainer-gokben" element={<TrainerGokben />} />

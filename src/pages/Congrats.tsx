@@ -38,7 +38,7 @@ export const Congrats: React.FC = () => {
         title="Booking Confirmed - PT Studio 7 Amsterdam"
         description="Your class is booked! See you at PT Studio 7 Amsterdam."
         keywords="PT Studio 7, booking confirmed"
-        canonical="https://www.ptstudio7amsterdam.nl/congrats.html"
+        canonical="https://www.ptstudio7amsterdam.nl/congrats"
       />
 
       <div className="congrats-page">
