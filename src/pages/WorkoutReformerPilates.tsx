@@ -19,13 +19,13 @@ export const WorkoutReformerPilates: React.FC = () => {
         canonical="https://www.ptstudio7amsterdam.nl/workouts/reformer-pilates"
         ogTitle="Reformer Pilates Amsterdam | PT Studio 7 Museumplein"
         ogDescription="Premium Reformer Pilates studio at Museumplein. Small groups (max 5), expert instructors. Build core strength, flexibility & perfect posture."
-        ogImage="/assets/images/reformer.jpg"
+        ogImage="/assets/images/reformer_1.png"
       />
       <Breadcrumbs items={[{ name: 'Reformer Pilates', path: '/workouts/reformer-pilates' }]} />
 
       <div className="workout-detail-page">
         {/* Hero Section */}
-        <section className="workout-hero" style={{ backgroundImage: 'url(/assets/images/reformer.jpg)' }}>
+        <section className="workout-hero" style={{ backgroundImage: 'url(/assets/images/reformer_1.png)' }}>
           <div className="workout-hero-overlay">
             <div className="workout-hero-content">
               <h1>Reformer Pilates</h1>

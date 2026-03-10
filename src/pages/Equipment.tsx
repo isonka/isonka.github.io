@@ -1,6 +1,15 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
+import { equipmentProducts } from '../data/equipment';
 import '../styles/Equipment.css';
+
+const equipmentMeta: Record<string, { description: string; tag?: string }> = {
+  'reformer': { description: 'The quintessential Pilates apparatus featuring a sliding carriage, springs, and straps for full-body conditioning.', tag: 'Most Popular' },
+  'tower-reformer': { description: 'Combines the reformer with a tower for added vertical spring resistance and exercise variety.' },
+  'cadillac': { description: 'Versatile equipment with overhead bars and springs for advanced stretching and strength work.' },
+  'wunda-chair': { description: 'Compact yet powerful equipment for balance, strength, and functional movement training.' },
+  'ladder-barrel': { description: 'Perfect for spinal extension, flexibility, and core strengthening exercises.' },
+};
 
 export const Equipment: React.FC = () => {
   const navigate = useNavigate();
@@ -15,39 +24,14 @@ export const Equipment: React.FC = () => {
       }
     }, 100);
   };
-  const equipment = [
-    {
-      name: 'Reformer',
-      image: '/assets/images/reformer.jpg',
-      description: 'The quintessential Pilates apparatus featuring a sliding carriage, springs, and straps for full-body conditioning.',
-      link: '/equipment/reformer',
-      tag: 'Most Popular',
-    },
-    {
-      name: 'Tower Reformer',
-      image: '/assets/images/tower_reformer.jpg',
-      description: 'Combines the reformer with a tower for added vertical spring resistance and exercise variety.',
-      link: '/equipment/tower-reformer',
-    },
-    {
-      name: 'Cadillac',
-      image: '/assets/images/cadillac.jpg',
-      description: 'Versatile equipment with overhead bars and springs for advanced stretching and strength work.',
-      link: '/equipment/cadillac',
-    },
-    {
-      name: 'Wunda Chair',
-      image: '/assets/images/wunda_chair.jpg',
-      description: 'Compact yet powerful equipment for balance, strength, and functional movement training.',
-      link: '/equipment/wunda-chair',
-    },
-    {
-      name: 'Ladder Barrel',
-      image: '/assets/images/ladder_barrel.jpg',
-      description: 'Perfect for spinal extension, flexibility, and core strengthening exercises.',
-      link: '/equipment/ladder-barrel',
-    },
-  ];
+
+  const equipment = equipmentProducts.map(p => ({
+    name: p.name,
+    image: p.images[0].src,
+    description: equipmentMeta[p.slug]?.description || p.shortDesc,
+    link: `/equipment/${p.slug}`,
+    tag: equipmentMeta[p.slug]?.tag,
+  }));
 
   return (
     <>

@@ -11,11 +11,7 @@ const Chatbot = lazy(() => import('./components/Chatbot').then(m => ({ default: 
 const Pricing = lazy(() => import('./pages/Pricing').then(m => ({ default: m.Pricing })));
 const Schedule = lazy(() => import('./pages/Schedule').then(m => ({ default: m.Schedule })));
 const Equipment = lazy(() => import('./pages/Equipment').then(m => ({ default: m.Equipment })));
-const EquipmentReformer = lazy(() => import('./pages/EquipmentReformer').then(m => ({ default: m.EquipmentReformer })));
-const EquipmentTowerReformer = lazy(() => import('./pages/EquipmentTowerReformer').then(m => ({ default: m.EquipmentTowerReformer })));
-const EquipmentCadillac = lazy(() => import('./pages/EquipmentCadillac').then(m => ({ default: m.EquipmentCadillac })));
-const EquipmentWundaChair = lazy(() => import('./pages/EquipmentWundaChair').then(m => ({ default: m.EquipmentWundaChair })));
-const EquipmentLadderBarrel = lazy(() => import('./pages/EquipmentLadderBarrel').then(m => ({ default: m.EquipmentLadderBarrel })));
+const EquipmentDetail = lazy(() => import('./pages/EquipmentDetail').then(m => ({ default: m.EquipmentDetail })));
 const Congrats = lazy(() => import('./pages/Congrats').then(m => ({ default: m.Congrats })));
 const Trainers = lazy(() => import('./pages/Trainers').then(m => ({ default: m.Trainers })));
 const TrainerElif = lazy(() => import('./pages/TrainerElif').then(m => ({ default: m.TrainerElif })));
@@ -69,11 +65,7 @@ function App() {
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/schedule" element={<Schedule />} />
               <Route path="/equipment" element={<Equipment />} />
-              <Route path="/equipment/reformer" element={<EquipmentReformer />} />
-              <Route path="/equipment/tower-reformer" element={<EquipmentTowerReformer />} />
-              <Route path="/equipment/cadillac" element={<EquipmentCadillac />} />
-              <Route path="/equipment/wunda-chair" element={<EquipmentWundaChair />} />
-              <Route path="/equipment/ladder-barrel" element={<EquipmentLadderBarrel />} />
+              <Route path="/equipment/:slug" element={<EquipmentDetail />} />
               <Route path="/workouts/reformer-pilates" element={<WorkoutReformerPilates />} />
               <Route path="/workouts/trx" element={<WorkoutTRX />} />
               <Route path="/workouts/functional-training" element={<WorkoutFunctional />} />

@@ -44,7 +44,7 @@ export const blogPosts: BlogPost[] = [
     content: `...`,
     author: 'PT Studio 7 Team',
     date: '2025-11-09',
-    image: '/assets/images/tower_reformer.jpg',
+    image: '/assets/images/tower_reformer_1.png',
     tags: ['Hip Health', 'Joint Mobility', 'Arthritis', 'Post-Surgery Recovery'],
     metaDescription: 'Reformer Pilates for hip pain, arthritis, and mobility in Amsterdam. Safe, effective treatment for hip conditions. Expert therapeutic Pilates at PT Studio 7 Museumplein.',
     keywords: [
@@ -169,7 +169,7 @@ export const blogPosts: BlogPost[] = [
     `,
     author: 'PT Studio 7 Team',
     date: '2026-01-23',
-    image: '/assets/images/reformer.jpg',
+    image: '/assets/images/reformer_1.png',
     tags: ['Career Change', 'Pilates Certification', 'PT 7 Academy', 'Lifestyle', 'Work-Life Balance'],
     metaDescription: 'How to switch careers from banking, tech, or corporate jobs to becoming a certified Pilates instructor. Weekend training in Amsterdam, no fitness background needed. PT 7 Academy.',
     keywords: [
@@ -355,7 +355,7 @@ export const blogPosts: BlogPost[] = [
       <h2>The Pilates Reformer: The Most Popular Equipment</h2>
       
       <div style="text-align: center; margin: 30px 0;">
-        <img src="/assets/images/reformer.jpg" alt="Pilates Reformer at PT Studio 7 Amsterdam" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
+        <img src="/assets/images/reformer_1.png" alt="Pilates Reformer at PT Studio 7 Amsterdam" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
       </div>
 
       <h3>What Is It?</h3>
@@ -379,7 +379,7 @@ export const blogPosts: BlogPost[] = [
       <h2>The Cadillac (Trapeze Table): The Ultimate Pilates Machine</h2>
 
       <div style="text-align: center; margin: 30px 0;">
-        <img src="/assets/images/cadillac.jpg" alt="Pilates Cadillac Trapeze Table" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
+        <img src="/assets/images/cadillac_1.png" alt="Pilates Cadillac Trapeze Table" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
       </div>
 
       <h3>What Is It?</h3>
@@ -400,7 +400,7 @@ export const blogPosts: BlogPost[] = [
       <h2>The Tower Reformer: Best of Both Worlds</h2>
 
       <div style="text-align: center; margin: 30px 0;">
-        <img src="/assets/images/tower_reformer.jpg" alt="Tower Reformer Pilates" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
+        <img src="/assets/images/tower_reformer_1.png" alt="Tower Reformer Pilates" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
       </div>
 
       <h3>What Is It?</h3>
@@ -416,7 +416,7 @@ export const blogPosts: BlogPost[] = [
       <h2>The Wunda Chair: Compact but Challenging</h2>
 
       <div style="text-align: center; margin: 30px 0;">
-        <img src="/assets/images/wunda_chair.jpg" alt="Wunda Chair Pilates" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
+        <img src="/assets/images/wunda_chair_1.png" alt="Wunda Chair Pilates" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
       </div>
 
       <h3>What Is It?</h3>
@@ -436,7 +436,7 @@ export const blogPosts: BlogPost[] = [
       <h2>The Ladder Barrel: For Spinal Flexibility</h2>
 
       <div style="text-align: center; margin: 30px 0;">
-        <img src="/assets/images/ladder_barrel.jpg" alt="Ladder Barrel Pilates" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
+        <img src="/assets/images/ladder_barrel_1.png" alt="Ladder Barrel Pilates" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
       </div>
 
       <h3>What Is It?</h3>
@@ -521,7 +521,7 @@ export const blogPosts: BlogPost[] = [
     `,
     author: 'PT Studio 7 Team',
     date: '2026-01-25',
-    image: '/assets/images/reformer.jpg',
+    image: '/assets/images/reformer_1.png',
     tags: ['Pilates Equipment', 'Reformer', 'Cadillac', 'Beginners Guide', 'Pilates Machines'],
     metaDescription: 'Complete guide to Pilates equipment: Reformer, Cadillac, Tower, Wunda Chair, Ladder Barrel explained. What each machine does, who should use it, and which is best for beginners.',
     keywords: [

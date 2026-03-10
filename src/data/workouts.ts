@@ -12,7 +12,7 @@ export interface Workout {
 export const workouts: Workout[] = [
   {
     to: '/workouts/reformer-pilates',
-    src: '/assets/images/reformer.jpg',
+    src: '/assets/images/reformer_1.png',
     alt: 'Reformer & Trapeze Table Pilates',
     title: 'Reformer & Trapeze Table Pilates',
     description: 'Full-body workout focusing on core strength, flexibility, and posture',
