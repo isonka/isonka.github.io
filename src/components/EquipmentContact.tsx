@@ -1,44 +1,38 @@
 export const EquipmentContact: React.FC = () => {
   return (
     <section id="product-contact" className="product-contact">
-      <h2>Contact Us to Order</h2>
-      <div className="contact-cards">
-        <div className="contact-card">
-          <div className="contact-icon">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="#bfa100" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
-            </svg>
-          </div>
-          <div className="contact-info">
-            <strong>Email:</strong><br/>
-            <a href="mailto:info@ptstudio7amsterdam.nl">info@ptstudio7amsterdam.nl</a>
-          </div>
+      <div className="product-contact-inner">
+        <div className="product-contact-text">
+          <h2>Ready to Order?</h2>
+          <p className="product-contact-subtitle">
+            Visit our Amsterdam studio to try the equipment in person, or get in touch to discuss your order.
+          </p>
+          <p className="product-contact-address">
+            Van Baerlestraat 76C, 1071BB Amsterdam Oud-Zuid
+          </p>
         </div>
-        <div className="contact-card">
-          <div className="contact-icon">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="#bfa100" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/>
+
+        <div className="product-contact-actions">
+          <a href="tel:+31685162693" className="product-contact-link">
+            <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z" fill="currentColor"/>
             </svg>
-          </div>
-          <div className="contact-info">
-            <strong>Phone:</strong><br/>
-            <a href="tel:0685162693">06 85 16 26 93</a> | 
-            <a href="https://wa.me/31685162693" target="_blank" rel="noopener noreferrer"> WhatsApp</a>
-          </div>
-        </div>
-        <div className="contact-card">
-          <div className="contact-icon">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="#bfa100" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C7.03 2 3 6.03 3 11c0 5.25 7.05 10.61 8.09 11.38.56.41 1.26.41 1.82 0C13.95 21.61 21 16.25 21 11c0-4.97-4.03-9-9-9zm0 18.54C10.14 18.07 5 13.97 5 11c0-3.87 3.13-7 7-7s7 3.13 7 7c0 2.97-5.14 7.07-7 9.54zM12 6.5A4.5 4.5 0 0 0 7.5 11c0 2.48 2.02 4.5 4.5 4.5s4.5-2.02 4.5-4.5A4.5 4.5 0 0 0 12 6.5zm0 7A2.5 2.5 0 1 1 12 9a2.5 2.5 0 0 1 0 5.5z"/>
+            +31 6 8516 2693
+          </a>
+          <a href="https://wa.me/31685162693" target="_blank" rel="noopener noreferrer" className="product-contact-link whatsapp">
+            <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.397z" fill="currentColor"/>
             </svg>
-          </div>
-          <div className="contact-info">
-            <strong>Visit us:</strong><br/>
-            Van Baerlestraat 76C, 1071BB Amsterdam
-          </div>
+            WhatsApp
+          </a>
+          <a href="mailto:info@ptstudio7amsterdam.nl" className="product-contact-link">
+            <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
+            </svg>
+            info@ptstudio7amsterdam.nl
+          </a>
         </div>
       </div>
     </section>
   );
 };
-

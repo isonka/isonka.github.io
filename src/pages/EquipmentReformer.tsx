@@ -60,8 +60,7 @@ export const EquipmentReformer: React.FC = () => {
           <div className="product-info">
             <h1>Pilates Reformer</h1>
             <div className="product-price-highlight">
-              <span className="product-price">€3,500<sup>*</sup></span>
-              <span className="product-price-note">(incl. BTW & delivery)</span>
+              <span className="product-price">€2,200</span>
             </div>
             <p className="product-short-desc">
               The classic Pilates Reformer for all levels. Smooth, silent, and built for a lifetime of movement.

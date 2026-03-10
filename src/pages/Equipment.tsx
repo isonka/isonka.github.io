@@ -61,10 +61,6 @@ export const Equipment: React.FC = () => {
       />
 
       <div className="equipment-page">
-        <div className="equipment-hero">
-          <h1>Our Equipment</h1>
-          <p>Explore our range of top-quality Pilates equipment, designed to enhance your practice—whether you're a home user or a professional studio, gym, or wellness business. We supply both individuals and businesses with studio-grade equipment and expert support.</p>
-        </div>
 
         <div className="equipment-content">
           <div className="equipment-grid">

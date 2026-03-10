@@ -74,7 +74,7 @@
 .rehab-card {
   background: #f8f8f8;
   padding: 24px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   border: 1px solid #eee;
 }
 
@@ -116,7 +116,7 @@
 .who-card {
   background: #f8f8f8;
   padding: 28px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   border: 1px solid #eee;
   transition: box-shadow 0.2s ease;
 }
@@ -174,7 +174,7 @@
   color: #fff;
   font-weight: 700;
   font-size: 1.25rem;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   margin-bottom: 16px;
 }
 
@@ -207,7 +207,7 @@
 .offer-card {
   background: #f8f8f8;
   padding: 24px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   border: 1px solid #eee;
 }
 
@@ -284,7 +284,7 @@
 .healthcare-cta .cta-button {
   display: inline-block;
   padding: 14px 28px;
-  border-radius: 8px;
+  border-radius: var(--radius-pill);
   font-weight: 600;
   font-size: 1rem;
   text-decoration: none;

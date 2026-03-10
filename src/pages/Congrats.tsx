@@ -74,6 +74,18 @@ export const Congrats: React.FC = () => {
             <Link to="/" className="btn-secondary">Back to Home</Link>
           </div>
 
+          <div className="review-request">
+            <p>Enjoyed your experience at PT Studio 7?</p>
+            <a
+              href="https://g.page/r/ptstudio7amsterdam/review"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-review"
+            >
+              Leave Us a Google Review
+            </a>
+          </div>
+
           <div className="contact-support">
             <p>Questions? Contact us at <a href="mailto:info@ptstudio7amsterdam.nl">info@ptstudio7amsterdam.nl</a></p>
           </div>

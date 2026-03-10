@@ -48,8 +48,7 @@ export const EquipmentCadillac: React.FC = () => {
           <div className="product-info">
             <h1>Combo Cadillac</h1>
             <div className="product-price-highlight">
-              <span className="product-price">€5,000<sup>*</sup></span>
-              <span className="product-price-note">(incl. BTW & delivery)</span>
+              <span className="product-price">€3,000</span>
             </div>
             <p className="product-short-desc">
               The ultimate Pilates Cadillac for endless exercise possibilities. Perfect for advanced training and rehabilitation.

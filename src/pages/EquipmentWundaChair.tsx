@@ -48,8 +48,7 @@ export const EquipmentWundaChair: React.FC = () => {
           <div className="product-info">
             <h1>Wunda Chair</h1>
             <div className="product-price-highlight">
-              <span className="product-price">€2,000<sup>*</sup></span>
-              <span className="product-price-note">(incl. BTW & delivery)</span>
+              <span className="product-price">€1,000</span>
             </div>
             <p className="product-short-desc">
               The Wunda Chair is a classic Pilates apparatus designed for a wide range of exercises that improve strength, balance, and stability. 

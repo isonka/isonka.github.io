@@ -29,7 +29,7 @@
   background: #ffd700;
   color: #1a1a2e;
   padding: 8px 20px;
-  border-radius: 30px;
+  border-radius: var(--radius-pill);
   font-weight: 700;
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -57,7 +57,7 @@
   background: #ffd700;
   color: #1a1a2e;
   padding: 16px 40px;
-  border-radius: 8px;
+  border-radius: var(--radius-pill);
   font-weight: 700;
   font-size: 1.1rem;
   text-decoration: none;
@@ -112,7 +112,7 @@
 
 .comparison-card {
   background: white;
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   position: relative;
@@ -212,7 +212,7 @@
   background: linear-gradient(135deg, #ffd700, #ffed4a);
   color: #1a1a2e;
   padding: 32px;
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
@@ -247,7 +247,7 @@
   background: rgba(255, 215, 0, 0.2);
   color: #ffd700;
   padding: 8px 20px;
-  border-radius: 30px;
+  border-radius: var(--radius-pill);
   font-weight: 600;
   font-size: 0.9rem;
   margin-bottom: 20px;
@@ -274,7 +274,7 @@
 .offer-item {
   background: rgba(255, 255, 255, 0.1);
   padding: 32px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
 }
 
 .offer-item h4 {
@@ -334,7 +334,7 @@
 .benefit-card {
   padding: 32px;
   background: #f8f9fa;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   text-align: left;
 }
 
@@ -380,7 +380,7 @@
 .testimonial-card {
   background: white;
   padding: 32px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   text-align: left;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }

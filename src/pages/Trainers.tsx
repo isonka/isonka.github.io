@@ -61,17 +61,6 @@ const trainers: Trainer[] = [
     available: true,
   },
   {
-    id: 'melis',
-    name: 'Melis',
-    title: 'Reformer Pilates',
-    tier: 'junior',
-    image: '/assets/images/melis.JPG',
-    languages: ['English', 'Turkish'],
-    specialties: ['Reformer Pilates'],
-    link: '/trainer-melis',
-    available: true,
-  },
-  {
     id: 'lal',
     name: 'Lal',
     title: 'Reformer Pilates',
@@ -93,9 +82,8 @@ const trainers: Trainer[] = [
     link: '/trainer-nisan',
     available: true,
   },
-  // Placeholder trainer - Coming Soon
   {
-    id: 'trainer-8',
+    id: 'coming-soon',
     name: 'Coming Soon',
     title: 'Instructor',
     tier: 'junior',
@@ -154,28 +142,15 @@ export const Trainers: React.FC = () => {
           </section>
         )}
 
-        {/* Coming Soon */}
+        {/* Growing Team Banner */}
         {comingSoon.length > 0 && (
-          <section className="trainers-section trainers-section-coming">
-            <div className="trainers-section-header">
-              <h2>Growing Team</h2>
-              <p>We're expanding! New instructors joining soon</p>
-            </div>
-            <div className="trainers-grid trainers-grid-coming">
-              {comingSoon.map(trainer => (
-                <div key={trainer.id} className="trainer-card trainer-card-placeholder">
-                  <div className="trainer-card-image placeholder-image">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                      <circle cx="12" cy="8" r="4" />
-                      <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" />
-                    </svg>
-                  </div>
-                  <div className="trainer-card-content">
-                    <h3>{trainer.name}</h3>
-                    <p className="trainer-card-title">Pilates Instructor</p>
-                  </div>
-                </div>
-              ))}
+          <section className="trainers-growing-banner">
+            <div className="growing-banner-inner">
+              <div className="growing-banner-text">
+                <h2>Our Team is Growing</h2>
+                <p>New instructors are joining soon. Interested in teaching at PT Studio 7?</p>
+              </div>
+              <Link to="/academy" className="growing-banner-link">Learn About Our Academy →</Link>
             </div>
           </section>
         )}

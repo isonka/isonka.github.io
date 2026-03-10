@@ -6,8 +6,31 @@ interface Review {
   ratingValue: number;
 }
 
+interface BlogPostingData {
+  headline: string;
+  description: string;
+  image: string;
+  datePublished: string;
+  dateModified: string;
+  authorName: string;
+  keywords: string[];
+  slug: string;
+}
+
+interface CourseData {
+  name: string;
+  description: string;
+  price: string;
+  priceCurrency: string;
+  startDate: string;
+  endDate?: string;
+  schedule: string;
+  locationName: string;
+  maxParticipants: number;
+}
+
 interface StructuredDataProps {
-  type: 'LocalBusiness' | 'Person' | 'FAQPage' | 'BreadcrumbList';
+  type: 'LocalBusiness' | 'Person' | 'FAQPage' | 'BreadcrumbList' | 'BlogPosting' | 'Course';
   data?: {
     reviews?: Review[];
     person?: {
@@ -19,6 +42,8 @@ interface StructuredDataProps {
     };
     faqs?: { question: string; answer: string }[];
     breadcrumbs?: { name: string; url: string }[];
+    blogPosting?: BlogPostingData;
+    course?: CourseData;
   };
 }
 
@@ -136,6 +161,90 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
           name: crumb.name,
           item: crumb.url,
         })),
+      };
+    }
+
+    if (type === 'BlogPosting' && data?.blogPosting) {
+      const bp = data.blogPosting;
+      const baseUrl = 'https://www.ptstudio7amsterdam.nl';
+      schema = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': `${baseUrl}/blog/${bp.slug}`,
+        },
+        headline: bp.headline,
+        description: bp.description,
+        image: bp.image.startsWith('http') ? bp.image : `${baseUrl}${bp.image}`,
+        datePublished: bp.datePublished,
+        dateModified: bp.dateModified,
+        author: {
+          '@type': 'Organization',
+          name: bp.authorName,
+          url: baseUrl,
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'PT Studio 7 Amsterdam',
+          logo: {
+            '@type': 'ImageObject',
+            url: `${baseUrl}/assets/images/pt7logo.png`,
+          },
+        },
+        keywords: bp.keywords.join(', '),
+        inLanguage: 'en',
+      };
+    }
+
+    if (type === 'Course' && data?.course) {
+      const c = data.course;
+      const baseUrl = 'https://www.ptstudio7amsterdam.nl';
+      schema = {
+        '@context': 'https://schema.org',
+        '@type': 'Course',
+        name: c.name,
+        description: c.description,
+        provider: {
+          '@type': 'Organization',
+          name: 'PT 7 Academy',
+          url: baseUrl,
+          sameAs: `${baseUrl}/academy`,
+        },
+        offers: {
+          '@type': 'Offer',
+          price: c.price,
+          priceCurrency: c.priceCurrency,
+          availability: 'https://schema.org/LimitedAvailability',
+          validFrom: c.startDate,
+        },
+        hasCourseInstance: {
+          '@type': 'CourseInstance',
+          courseMode: 'Onsite',
+          courseSchedule: {
+            '@type': 'Schedule',
+            repeatFrequency: 'P1W',
+            byDay: ['Saturday', 'Sunday'],
+            startTime: '12:00',
+            endTime: '18:00',
+          },
+          startDate: c.startDate,
+          ...(c.endDate && { endDate: c.endDate }),
+          location: {
+            '@type': 'Place',
+            name: c.locationName,
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'Van Baerlestraat 76C',
+              addressLocality: 'Amsterdam',
+              postalCode: '1071 BB',
+              addressCountry: 'NL',
+            },
+          },
+          maximumAttendeeCapacity: c.maxParticipants,
+        },
+        inLanguage: 'en',
+        isAccessibleForFree: false,
       };
     }
 

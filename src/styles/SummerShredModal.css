@@ -18,7 +18,7 @@
 
 .ssl-modal {
   background: #1a1a1a;
-  border-radius: 14px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   max-width: 720px;
   width: 100%;
@@ -45,7 +45,7 @@
   line-height: 1;
   width: 32px;
   height: 32px;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -79,7 +79,7 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
   padding: 4px 10px;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   margin-bottom: 14px;
 }
 
@@ -107,7 +107,7 @@
 
 .ssl-modal-btn {
   padding: 11px 22px;
-  border-radius: 8px;
+  border-radius: var(--radius-pill);
   font-weight: 700;
   font-size: 0.92rem;
   text-decoration: none;

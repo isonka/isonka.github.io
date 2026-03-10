@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { SEOHead } from '../components/SEOHead';
+import { StructuredData } from '../components/StructuredData';
 import { getBlogPostBySlug, getRecentPosts } from '../data/blogPosts';
 import { trackBlogPostView, trackBlogPostRead, trackPageView } from '../utils/gtmTracking';
 import '../styles/BlogPost.css';
@@ -55,6 +56,21 @@ export const BlogPost: React.FC = () => {
         ogTitle={post.title}
         ogDescription={post.metaDescription}
         ogImage={`https://www.ptstudio7amsterdam.nl${post.image}`}
+      />
+      <StructuredData
+        type="BlogPosting"
+        data={{
+          blogPosting: {
+            headline: post.title,
+            description: post.metaDescription,
+            image: post.image,
+            datePublished: post.date,
+            dateModified: post.date,
+            authorName: post.author,
+            keywords: post.keywords,
+            slug: post.slug,
+          },
+        }}
       />
 
       <div className="blog-post-page">

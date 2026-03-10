@@ -7,7 +7,7 @@
   height: 64px;
   background: linear-gradient(135deg, #bfa100 0%, #d4b829 100%);
   border: none;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   box-shadow: 0 4px 12px rgba(191, 161, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   display: flex;
@@ -43,7 +43,7 @@
   font-size: 11px;
   font-weight: 600;
   padding: 4px 8px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   white-space: nowrap;
   box-shadow: 0 2px 8px rgba(255, 68, 68, 0.4);
   animation: pulse 2s infinite;
@@ -68,7 +68,7 @@
   height: 600px;
   max-height: calc(100vh - 100px);
   background: white;
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
@@ -96,7 +96,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 16px 16px 0 0;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -110,7 +110,7 @@
   width: 40px;
   height: 40px;
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,7 +141,7 @@
   color: white;
   width: 32px;
   height: 32px;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   cursor: pointer;
   font-size: 20px;
   display: flex;
@@ -177,7 +177,7 @@
 
 .chatbot-messages::-webkit-scrollbar-thumb {
   background: #cbd5e0;
-  border-radius: 3px;
+  border-radius: var(--radius-sm);
 }
 
 .chatbot-messages::-webkit-scrollbar-thumb:hover {
@@ -205,7 +205,7 @@
 .message-content {
   max-width: 85%;
   padding: 12px 16px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   line-height: 1.5;
   font-size: 14px;
 }
@@ -213,7 +213,7 @@
 .message.bot .message-content {
   background: white;
   color: #2d3748;
-  border-bottom-left-radius: 4px;
+  border-bottom-left-radius: var(--radius-sm);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   align-self: flex-start;
 }
@@ -221,7 +221,7 @@
 .message.user .message-content {
   background: linear-gradient(135deg, #bfa100 0%, #d4b829 100%);
   color: white;
-  border-bottom-right-radius: 4px;
+  border-bottom-right-radius: var(--radius-sm);
   align-self: flex-end;
   box-shadow: 0 2px 6px rgba(191, 161, 0, 0.3);
 }
@@ -264,7 +264,7 @@
   border: 2px solid #e2e8f0;
   color: #2d3748;
   padding: 12px 16px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
@@ -296,7 +296,7 @@
   width: 8px;
   height: 8px;
   background: #cbd5e0;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   animation: typing 1.4s infinite;
 }
 
@@ -325,7 +325,7 @@
   padding: 12px 20px;
   border-top: 1px solid #e2e8f0;
   text-align: center;
-  border-radius: 0 0 16px 16px;
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
 }
 
 .chatbot-footer p {

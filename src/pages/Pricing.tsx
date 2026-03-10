@@ -73,12 +73,7 @@ export const Pricing: React.FC = () => {
       />
       <Breadcrumbs items={[{ name: 'Pricing', path: '/pricing' }]} />
 
-      <div className="pricing-page">
-        <div className="pricing-hero">
-          <h1>Pricing & Membership</h1>
-          <p>Pilates Classes - Small groups (max 5) at Museumplein</p>
-        </div>
-
+      <div className="pricing-page">        
         {/* Introduction Package - Special Offer */}
         <div className="special-offer-container">
           <div className="special-offer">
@@ -316,7 +311,7 @@ export const Pricing: React.FC = () => {
             {/* Junior Instructor */}
             {instructorTier === 'junior' && (
             <>
-            <p className="instructor-info">Junior Instructors: Coming soon</p>
+            <p className="instructor-info">Junior Instructors: <strong>Gülce</strong>, <strong>Lal</strong>, <strong>Nisan</strong></p>
             <div className="packages-grid">
               <div className="package-card">
                 <div className="price-display">

@@ -15,14 +15,7 @@ export const Blog: React.FC = () => {
         ogDescription="Expert articles about Pilates, prenatal fitness, and wellness from PT Studio 7 Amsterdam's certified trainers."
       />
 
-      <div className="blog-page">
-        {/* Hero Section */}
-        <section className="blog-hero">
-          <div className="blog-hero-content">
-            <h1>Pilates & Wellness Blog</h1>
-            <p>Expert tips, guides, and insights from our certified trainers at PT Studio 7 Amsterdam</p>
-          </div>
-        </section>
+      <div className="blog-page">        
 
         {/* Blog Posts Grid */}
         <section className="blog-content">

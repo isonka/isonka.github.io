@@ -37,7 +37,7 @@
 
 .equipment-card {
   background: #fff;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -57,7 +57,7 @@
   background: linear-gradient(135deg, #bfa100 0%, #d4b500 100%);
   color: #fff;
   padding: 6px 16px;
-  border-radius: 20px;
+  border-radius: var(--radius-pill);
   font-size: 13px;
   font-weight: 600;
   z-index: 10;
@@ -103,7 +103,7 @@
   text-align: center;
   padding: 60px 20px;
   background: linear-gradient(135deg, #222 0%, #111 100%);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   color: #fff;
 }
 
@@ -134,7 +134,7 @@
   background: #ffd700;
   color: #222;
   padding: 16px 48px;
-  border-radius: 8px;
+  border-radius: var(--radius-pill);
   text-decoration: none;
   font-weight: 700;
   font-size: 1.2rem;

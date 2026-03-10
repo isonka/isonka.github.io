@@ -21,7 +21,7 @@
 .trainer-hero-photo {
   width: 180px;
   height: 180px;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   object-fit: cover;
   border: 5px solid #ffd700;
   flex-shrink: 0;
@@ -53,7 +53,7 @@
   font-size: 0.95rem;
   padding: 6px 16px;
   background: rgba(255, 215, 0, 0.15);
-  border-radius: 20px;
+  border-radius: var(--radius-pill);
   border: 1px solid rgba(255, 215, 0, 0.3);
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -87,7 +87,7 @@
 .trainer-qualifications {
   margin-bottom: 60px;
   background: #f9f9f9;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   padding: 40px;
 }
 
@@ -142,7 +142,7 @@
 .specialty-card {
   background: #f8f8f8;
   padding: 28px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   border-left: 4px solid #ffd700;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -169,7 +169,7 @@
 .trainer-approach {
   background: linear-gradient(135deg, #ffd700 0%, #e5c100 100%);
   padding: 48px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   margin-bottom: 60px;
   text-align: center;
 }
@@ -195,7 +195,7 @@
   text-align: center;
   padding: 60px 20px;
   background: #f8f8f8;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   margin-bottom: 40px;
 }
 
@@ -222,7 +222,7 @@
 .btn-secondary {
   display: inline-block;
   padding: 16px 40px;
-  border-radius: 8px;
+  border-radius: var(--radius-pill);
   text-decoration: none;
   font-weight: 700;
   font-size: 1.1rem;

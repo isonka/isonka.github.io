@@ -100,7 +100,7 @@
 .benefit-card {
   background: #f8f8f8;
   padding: 32px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -183,7 +183,7 @@
 
 .expect-image img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
@@ -192,7 +192,7 @@
   padding: 20px;
   background: #fff3cd;
   border-left: 4px solid #ffd700;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   line-height: 1.8;
   color: #555;
 }
@@ -219,7 +219,7 @@
   background: white;
   border: 2px solid #f0f0f0;
   padding: 28px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -263,7 +263,7 @@
 .class-option-card {
   background: white;
   border: 2px solid #e0e0e0;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   padding: 40px;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -286,7 +286,7 @@
   background: #ffd700;
   color: #222;
   padding: 6px 16px;
-  border-radius: 20px;
+  border-radius: var(--radius-pill);
   font-size: 0.85rem;
   font-weight: 600;
 }
@@ -337,7 +337,7 @@
   background: linear-gradient(135deg, #ffd700 0%, #e5c100 100%);
   color: #222;
   text-align: center;
-  border-radius: 8px;
+  border-radius: var(--radius-pill);
   text-decoration: none;
   font-weight: 600;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -353,7 +353,7 @@
   margin-bottom: 80px;
   background: #f8f8f8;
   padding: 60px 40px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
 }
 
 .equipment-section h2 {
@@ -434,7 +434,7 @@
 
 .trainer-mini-card {
   background: white;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -506,7 +506,7 @@
 .how-card {
   background: #f8f8f8;
   padding: 32px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   text-align: center;
 }
 
@@ -517,7 +517,7 @@
   color: #222;
   font-size: 2rem;
   font-weight: 700;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -557,7 +557,7 @@
 .safety-card {
   background: white;
   border: 2px solid #e0e0e0;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   padding: 32px;
 }
 
@@ -643,7 +643,7 @@
 .faq-item {
   background: white;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   padding: 28px;
   margin-bottom: 16px;
 }
@@ -665,7 +665,7 @@
   text-align: center;
   background: linear-gradient(135deg, #222 0%, #111 100%);
   padding: 80px 40px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   color: white;
 }
 
@@ -691,7 +691,7 @@
 .cta-button {
   display: inline-block;
   padding: 16px 40px;
-  border-radius: 8px;
+  border-radius: var(--radius-pill);
   text-decoration: none;
   font-weight: 700;
   font-size: 1.1rem;

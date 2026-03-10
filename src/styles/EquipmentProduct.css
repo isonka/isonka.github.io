@@ -22,7 +22,7 @@
 .product-gallery .main-image {
   width: 100%;
   height: auto;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   object-fit: cover;
 }
@@ -43,7 +43,7 @@
 .product-price-highlight {
   background: linear-gradient(135deg, #f8f5e8 0%, #fdfbf3 100%);
   border: 2px solid #bfa100;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   padding: 20px 24px;
   margin-bottom: 24px;
 }
@@ -111,7 +111,7 @@
   background: linear-gradient(135deg, #bfa100 0%, #d4b500 100%);
   color: #fff;
   padding: 16px 48px;
-  border-radius: 8px;
+  border-radius: var(--radius-pill);
   text-decoration: none;
   font-size: 18px;
   font-weight: 600;
@@ -156,7 +156,7 @@
 .product-specs li {
   padding: 12px 16px;
   background: #fff;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   font-size: 15px;
   color: #444;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -183,7 +183,7 @@
 
 .faq-list {
   background: #fff;
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   padding: 40px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
@@ -249,68 +249,79 @@
 
 /* Product Contact Section */
 .product-contact {
-  background: linear-gradient(135deg, #f8f5e8 0%, #fdfbf3 100%);
-  padding: 60px 32px;
+  background: #1a1a1a;
+  padding: 80px 32px;
 }
 
-.product-contact h2 {
-  font-size: 32px;
-  font-weight: 600;
-  color: #1a1a1a;
-  margin-bottom: 48px;
+.product-contact-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  gap: 40px;
+}
+
+.product-contact-text h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 16px;
   font-family: 'Poppins', 'Gotham', sans-serif;
 }
 
-.contact-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
-  max-width: 1200px;
-  margin: 0 auto;
+.product-contact-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #aaa;
+  margin: 0 0 12px;
+  max-width: 560px;
 }
 
-.contact-card {
-  background: #fff;
-  padding: 32px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-}
-
-.contact-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-.contact-icon {
-  margin-bottom: 16px;
-}
-
-.contact-info {
-  font-size: 15px;
-  color: #444;
-  line-height: 1.6;
-}
-
-.contact-info strong {
-  display: block;
-  font-size: 16px;
-  color: #1a1a1a;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-.contact-info a {
+.product-contact-address {
+  font-size: 0.95rem;
   color: #bfa100;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  margin: 0;
+  font-weight: 500;
 }
 
-.contact-info a:hover {
-  color: #d4b500;
-  text-decoration: underline;
+.product-contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.product-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: #fff;
+  color: #1a1a1a;
+  font-family: 'Poppins', 'Gotham', sans-serif;
+}
+
+.product-contact-link:hover {
+  background: #ffd700;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+}
+
+.product-contact-link.whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+
+.product-contact-link.whatsapp:hover {
+  background: #1ebe57;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
 }
 
 /* Responsive Design */
@@ -379,17 +390,21 @@
   }
 
   .product-contact {
-    padding: 40px 20px;
+    padding: 60px 20px;
   }
 
-  .product-contact h2 {
-    font-size: 26px;
-    margin-bottom: 32px;
+  .product-contact-text h2 {
+    font-size: 1.8rem;
   }
 
-  .contact-cards {
-    grid-template-columns: 1fr;
-    gap: 24px;
+  .product-contact-actions {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .product-contact-link {
+    justify-content: center;
   }
 }
 

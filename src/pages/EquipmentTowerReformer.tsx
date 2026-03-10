@@ -60,8 +60,7 @@ export const EquipmentTowerReformer: React.FC = () => {
           <div className="product-info">
             <h1>Tower Reformer</h1>
             <div className="product-price-highlight">
-              <span className="product-price">€4,000<sup>*</sup></span>
-              <span className="product-price-note">(incl. BTW & delivery)</span>
+              <span className="product-price">€2,500</span>
             </div>
             <p className="product-short-desc">
               Professional-grade reformer with integrated tower for expanded exercise options and versatility.

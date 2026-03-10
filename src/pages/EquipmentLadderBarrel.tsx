@@ -48,8 +48,7 @@ export const EquipmentLadderBarrel: React.FC = () => {
           <div className="product-info">
             <h1>Ladder Barrel</h1>
             <div className="product-price-highlight">
-              <span className="product-price">€2,000<sup>*</sup></span>
-              <span className="product-price-note">(incl. BTW & delivery)</span>
+              <span className="product-price">€1,000</span>
             </div>
             <p className="product-short-desc">
               The Ladder Barrel is a classic Pilates apparatus designed to support a wide variety of stretching, 

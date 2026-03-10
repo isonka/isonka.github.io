@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p className="footer-copyright">© 2025 PT Studio 7 Amsterdam. All rights reserved.</p>
+        <p className="footer-copyright">© {new Date().getFullYear()} PT Studio 7 Amsterdam. All rights reserved.</p>
         <ul className="footer-links">
           <li><Link to="/schedule">Book</Link></li>
           <li><Link to="/pricing">Pricing</Link></li>

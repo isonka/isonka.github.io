@@ -32,7 +32,7 @@
 .special-offer {
   background: linear-gradient(135deg, #222 0%, #2a2a2a 100%);
   padding: 40px 30px;
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   text-align: center;
   max-width: 850px;
   margin: 0 auto;
@@ -49,7 +49,7 @@
   background: linear-gradient(135deg, #ffd700 0%, #ffeb3b 100%);
   color: #222;
   padding: 8px 20px;
-  border-radius: 20px;
+  border-radius: var(--radius-pill);
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.7rem;
@@ -155,7 +155,7 @@
   padding: 16px 32px;
   background: #fff;
   border: 2px solid #ddd;
-  border-radius: 8px;
+  border-radius: var(--radius-pill);
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
@@ -187,7 +187,7 @@
   padding: 12px 28px;
   background: #fff;
   border: 2px solid #e0e0e0;
-  border-radius: 6px;
+  border-radius: var(--radius-pill);
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
@@ -213,7 +213,7 @@
   margin-bottom: 32px;
   padding: 16px 24px;
   background: #f8f8f8;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   border-left: 4px solid #ffd700;
 }
 
@@ -252,7 +252,7 @@
 
 .package-card {
   background: #fff;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   padding: 32px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -275,7 +275,7 @@
   background: #ffd700;
   color: #222;
   padding: 6px 16px;
-  border-radius: 20px;
+  border-radius: var(--radius-pill);
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -329,7 +329,7 @@
   text-decoration: none;
   font-weight: 700;
   font-size: 1.1rem;
-  border-radius: 8px;
+  border-radius: var(--radius-pill);
   margin-top: 20px;
   transition: all 0.3s ease;
 }
@@ -361,7 +361,7 @@
 
 .info-container {
   background: #fff;
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   padding: 60px 40px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
@@ -383,7 +383,7 @@
   text-align: center;
   padding: 24px;
   background: #f8f8f8;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -415,7 +415,7 @@
 
 .faq-container {
   background: #fff;
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   padding: 60px 40px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
@@ -507,7 +507,7 @@
   margin: 80px auto;
   padding: 60px 40px;
   background: linear-gradient(135deg, #222 0%, #111 100%);
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   text-align: center;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
@@ -533,7 +533,7 @@
 
 .cta-button {
   padding: 16px 32px;
-  border-radius: 8px;
+  border-radius: var(--radius-pill);
   text-decoration: none;
   font-weight: 700;
   font-size: 1.1rem;
