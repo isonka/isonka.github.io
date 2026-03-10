@@ -127,7 +127,7 @@
   
   <!-- Trainer Pages -->
   <url>
-    <loc>https://www.ptstudio7amsterdam.nl/trainer-elif</loc>
+    <loc>https://www.ptstudio7amsterdam.nl/trainer/elif</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -137,37 +137,31 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ptstudio7amsterdam.nl/trainer-gokben</loc>
+    <loc>https://www.ptstudio7amsterdam.nl/trainer/gokben</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ptstudio7amsterdam.nl/trainer-goknur</loc>
+    <loc>https://www.ptstudio7amsterdam.nl/trainer/goknur</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ptstudio7amsterdam.nl/trainer-gulce</loc>
+    <loc>https://www.ptstudio7amsterdam.nl/trainer/gulce</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ptstudio7amsterdam.nl/trainer-melis</loc>
+    <loc>https://www.ptstudio7amsterdam.nl/trainer/lal</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ptstudio7amsterdam.nl/trainer-lal</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.ptstudio7amsterdam.nl/trainer-nisan</loc>
+    <loc>https://www.ptstudio7amsterdam.nl/trainer/nisan</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

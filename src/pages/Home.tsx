@@ -16,12 +16,12 @@ const heroImages = [
 
 
 const trainers = [
-  { to: '/trainer-elif', src: '/assets/images/elif.JPG', alt: 'Elif Arzu Ogan - Pilates Instructor', name: 'Elif Arzu Ogan', specialties: 'Comprehensive Pilates\nStrength Training\nPrenatal Pilates' },
-  { to: '/trainer-gokben', src: '/assets/images/gokben.jpeg', alt: 'Gökben Öztekin - Pilates Instructor', name: 'Gökben Öztekin', specialties: 'Comprehensive Pilates' },
-  { to: '/trainer-goknur', src: '/assets/images/goknur.jpeg', alt: 'Göknur Dipli - Pilates Instructor', name: 'Göknur Dipli', specialties: 'Comprehensive Pilates\nStrength Training\nPrenatal Pilates' },
-  { to: '/trainer-gulce', src: '/assets/images/gulce.JPG', alt: 'Gülce - Pilates Instructor', name: 'Gülce', specialties: 'Reformer Pilates' },
-  { to: '/trainer-lal', src: '/assets/images/lal.JPG', alt: 'Lal - Pilates Instructor', name: 'Lal', specialties: 'Reformer Pilates' },
-  { to: '/trainer-nisan', src: '/assets/images/nisan.JPG', alt: 'Nisan - Pilates Instructor', name: 'Nisan', specialties: 'Reformer Pilates' },
+  { to: '/trainer/elif', src: '/assets/images/elif.JPG', alt: 'Elif Arzu Ogan - Pilates Instructor', name: 'Elif Arzu Ogan', specialties: 'Comprehensive Pilates\nStrength Training\nPrenatal Pilates' },
+  { to: '/trainer/gokben', src: '/assets/images/gokben.jpeg', alt: 'Gökben Öztekin - Pilates Instructor', name: 'Gökben Öztekin', specialties: 'Comprehensive Pilates' },
+  { to: '/trainer/goknur', src: '/assets/images/goknur.jpeg', alt: 'Göknur Dipli - Pilates Instructor', name: 'Göknur Dipli', specialties: 'Comprehensive Pilates\nStrength Training\nPrenatal Pilates' },
+  { to: '/trainer/gulce', src: '/assets/images/gulce.JPG', alt: 'Gülce - Pilates Instructor', name: 'Gülce', specialties: 'Reformer Pilates' },
+  { to: '/trainer/lal', src: '/assets/images/lal.JPG', alt: 'Lal - Pilates Instructor', name: 'Lal', specialties: 'Reformer Pilates' },
+  { to: '/trainer/nisan', src: '/assets/images/nisan.JPG', alt: 'Nisan - Pilates Instructor', name: 'Nisan', specialties: 'Reformer Pilates' },
 ];
 
 const reviews = [

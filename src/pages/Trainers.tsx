@@ -1,103 +1,12 @@
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { trainerProfiles } from '../data/trainers';
 import '../styles/Trainers.css';
 
-interface Trainer {
-  id: string;
-  name: string;
-  title: string;
-  tier: 'master' | 'senior' | 'junior';
-  image: string;
-  languages: string[];
-  specialties: string[];
-  link: string;
-  available: boolean;
-}
-
-const trainers: Trainer[] = [
-  {
-    id: 'elif',
-    name: 'Elif Arzu Ogan',
-    title: 'Comprehensive Pilates\nStrength Training\nPrenatal Pilates',
-    tier: 'master',
-    image: '/assets/images/elif.JPG',
-    languages: ['English', 'Turkish'],
-    specialties: ['Reformer Pilates', 'TRX', 'Strength Training'],
-    link: '/trainer-elif',
-    available: true,
-  },
-  {
-    id: 'gokben',
-    name: 'Gökben Öztekin',
-    title: 'Comprehensive Pilates',
-    tier: 'senior',
-    image: '/assets/images/gokben.jpeg',
-    languages: ['English', 'Turkish'],
-    specialties: ['Reformer Pilates', 'Mat Pilates', 'Prenatal Pilates'],
-    link: '/trainer-gokben',
-    available: true,
-  },
-  {
-    id: 'goknur',
-    name: 'Göknur Dipli',
-    title: 'Comprehensive Pilates\nStrength Training\nPrenatal Pilates',
-    tier: 'senior',
-    image: '/assets/images/goknur.jpeg',
-    languages: ['English', 'Turkish'],
-    specialties: ['Reformer Pilates', 'Mat Pilates', 'Rehabilitation'],
-    link: '/trainer-goknur',
-    available: true,
-  },
-  {
-    id: 'gulce',
-    name: 'Gülce',
-    title: 'Reformer Pilates',
-    tier: 'junior',
-    image: '/assets/images/gulce.JPG',
-    languages: ['English', 'Turkish'],
-    specialties: ['Reformer Pilates'],
-    link: '/trainer-gulce',
-    available: true,
-  },
-  {
-    id: 'lal',
-    name: 'Lal',
-    title: 'Reformer Pilates',
-    tier: 'junior',
-    image: '/assets/images/lal.JPG',
-    languages: ['English', 'Turkish'],
-    specialties: ['Reformer Pilates'],
-    link: '/trainer-lal',
-    available: true,
-  },
-  {
-    id: 'nisan',
-    name: 'Nisan',
-    title: 'Reformer Pilates',
-    tier: 'junior',
-    image: '/assets/images/nisan.JPG',
-    languages: ['English', 'Turkish', 'Dutch'],
-    specialties: ['Reformer Pilates'],
-    link: '/trainer-nisan',
-    available: true,
-  },
-  {
-    id: 'coming-soon',
-    name: 'Coming Soon',
-    title: 'Instructor',
-    tier: 'junior',
-    image: '',
-    languages: [],
-    specialties: [],
-    link: '',
-    available: false,
-  },
-];
-
 export const Trainers: React.FC = () => {
-  const availableInstructors = trainers.filter(t => t.available);
-  const comingSoon = trainers.filter(t => !t.available);
+  const availableInstructors = trainerProfiles.filter(t => t.available);
+  const hasComingSoon = trainerProfiles.some(t => !t.available);
 
   return (
     <>
@@ -119,7 +28,7 @@ export const Trainers: React.FC = () => {
             </div>
             <div className="trainers-grid">
               {availableInstructors.map(instructor => (
-                <Link to={instructor.link} key={instructor.id} className="trainer-card">
+                <Link to={`/trainer/${instructor.slug}`} key={instructor.slug} className="trainer-card">
                   <div className="trainer-card-image">
                     <img src={instructor.image} alt={instructor.name} loading="lazy" />
                     <span className={`trainer-tier-badge tier-${instructor.tier}`}>
@@ -143,7 +52,7 @@ export const Trainers: React.FC = () => {
         )}
 
         {/* Growing Team Banner */}
-        {comingSoon.length > 0 && (
+        {hasComingSoon && (
           <section className="trainers-growing-banner">
             <div className="growing-banner-inner">
               <div className="growing-banner-text">

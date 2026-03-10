@@ -14,21 +14,11 @@ const Equipment = lazy(() => import('./pages/Equipment').then(m => ({ default: m
 const EquipmentDetail = lazy(() => import('./pages/EquipmentDetail').then(m => ({ default: m.EquipmentDetail })));
 const Congrats = lazy(() => import('./pages/Congrats').then(m => ({ default: m.Congrats })));
 const Trainers = lazy(() => import('./pages/Trainers').then(m => ({ default: m.Trainers })));
-const TrainerElif = lazy(() => import('./pages/TrainerElif').then(m => ({ default: m.TrainerElif })));
-const TrainerGokben = lazy(() => import('./pages/TrainerGokben').then(m => ({ default: m.TrainerGokben })));
-const TrainerGoknur = lazy(() => import('./pages/TrainerGoknur').then(m => ({ default: m.TrainerGoknur })));
-const TrainerGulce = lazy(() => import('./pages/TrainerGulce').then(m => ({ default: m.TrainerGulce })));
-const TrainerMelis = lazy(() => import('./pages/TrainerMelis').then(m => ({ default: m.TrainerMelis })));
-const TrainerLal = lazy(() => import('./pages/TrainerLal').then(m => ({ default: m.TrainerLal })));
-const TrainerNisan = lazy(() => import('./pages/TrainerNisan').then(m => ({ default: m.TrainerNisan })));
+const TrainerDetail = lazy(() => import('./pages/TrainerDetail').then(m => ({ default: m.TrainerDetail })));
 const Academy = lazy(() => import('./pages/Academy').then(m => ({ default: m.Academy })));
 const Blog = lazy(() => import('./pages/Blog').then(m => ({ default: m.Blog })));
 const BlogPost = lazy(() => import('./pages/BlogPost').then(m => ({ default: m.BlogPost })));
-const WorkoutReformerPilates = lazy(() => import('./pages/WorkoutReformerPilates').then(m => ({ default: m.WorkoutReformerPilates })));
-const WorkoutTRX = lazy(() => import('./pages/WorkoutTRX').then(m => ({ default: m.WorkoutTRX })));
-const WorkoutFunctional = lazy(() => import('./pages/WorkoutFunctional').then(m => ({ default: m.WorkoutFunctional })));
-const WorkoutCardio = lazy(() => import('./pages/WorkoutCardio').then(m => ({ default: m.WorkoutCardio })));
-const WorkoutSummerShredLab = lazy(() => import('./pages/WorkoutSummerShredLab').then(m => ({ default: m.WorkoutSummerShredLab })));
+const WorkoutDetail = lazy(() => import('./pages/WorkoutDetail').then(m => ({ default: m.WorkoutDetail })));
 const ClassPassOffer = lazy(() => import('./pages/ClassPassOffer').then(m => ({ default: m.ClassPassOffer })));
 const HealthcareProviders = lazy(() => import('./pages/HealthcareProviders').then(m => ({ default: m.HealthcareProviders })));
 
@@ -66,21 +56,11 @@ function App() {
               <Route path="/schedule" element={<Schedule />} />
               <Route path="/equipment" element={<Equipment />} />
               <Route path="/equipment/:slug" element={<EquipmentDetail />} />
-              <Route path="/workouts/reformer-pilates" element={<WorkoutReformerPilates />} />
-              <Route path="/workouts/trx" element={<WorkoutTRX />} />
-              <Route path="/workouts/functional-training" element={<WorkoutFunctional />} />
-              <Route path="/workouts/cardio" element={<WorkoutCardio />} />
-              <Route path="/workouts/summer-shred-lab" element={<WorkoutSummerShredLab />} />
+              <Route path="/workouts/:slug" element={<WorkoutDetail />} />
               <Route path="/congrats" element={<Congrats />} />
               <Route path="/congrats.html" element={<Navigate to="/congrats" replace />} />
               <Route path="/instructors" element={<Trainers />} />
-              <Route path="/trainer-elif" element={<TrainerElif />} />
-              <Route path="/trainer-gokben" element={<TrainerGokben />} />
-              <Route path="/trainer-goknur" element={<TrainerGoknur />} />
-              <Route path="/trainer-gulce" element={<TrainerGulce />} />
-              <Route path="/trainer-melis" element={<TrainerMelis />} />
-              <Route path="/trainer-lal" element={<TrainerLal />} />
-              <Route path="/trainer-nisan" element={<TrainerNisan />} />
+              <Route path="/trainer/:slug" element={<TrainerDetail />} />
               <Route path="/academy" element={<Academy />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />

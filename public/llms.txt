@@ -98,9 +98,9 @@ English, Turkish, Dutch
 - Cardio Training: https://www.ptstudio7amsterdam.nl/workouts/cardio
 
 ### Trainer Profiles
-- Elif Arzu Ogan: https://www.ptstudio7amsterdam.nl/trainer-elif
-- Gökben Öztekin: https://www.ptstudio7amsterdam.nl/trainer-gokben
-- Göknur Dipli: https://www.ptstudio7amsterdam.nl/trainer-goknur
+- Elif Arzu Ogan: https://www.ptstudio7amsterdam.nl/trainer/elif
+- Gökben Öztekin: https://www.ptstudio7amsterdam.nl/trainer/gokben
+- Göknur Dipli: https://www.ptstudio7amsterdam.nl/trainer/goknur
 
 ### Equipment Information
 - Reformer: https://www.ptstudio7amsterdam.nl/equipment/reformer
