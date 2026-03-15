@@ -44,6 +44,7 @@ export const Footer: React.FC = () => {
     <footer className="footer">
       <div className="footer-content">
         <p className="footer-copyright">© {new Date().getFullYear()} PT Studio 7 Amsterdam. All rights reserved.</p>
+        <p className="footer-credit">Website by <a href="https://karams.nl" target="_blank" rel="noopener noreferrer">Kara</a></p>
         <ul className="footer-links">
           <li><Link to="/schedule">Book</Link></li>
           <li><Link to="/pricing">Pricing</Link></li>
