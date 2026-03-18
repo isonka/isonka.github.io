@@ -31,7 +31,7 @@ export const SummerShredModal: React.FC = () => {
           ×
         </button>
         <img
-          src="/assets/images/summer-shred-lab-poster-v2.png"
+          src="/assets/images/summer-shred-lab-poster-v2.webp"
           alt="Summer Shred Lab"
           className="ssl-modal-poster"
         />

@@ -22,7 +22,7 @@ export const blogPosts: BlogPost[] = [
     content: `...`,
     author: 'PT Studio 7 Team',
     date: '2025-11-08',
-    image: '/assets/images/spine_corrector.jpg',
+    image: '/assets/images/spine_corrector.webp',
     tags: ['Back Pain', 'Spine Health', 'Therapeutic Pilates', 'Injury Recovery'],
     metaDescription: 'Reformer Pilates for back pain relief in Amsterdam. Safe, effective treatment for herniated discs, sciatica, chronic pain. Expert therapeutic Pilates at PT Studio 7 Museumplein.',
     keywords: [
@@ -44,7 +44,7 @@ export const blogPosts: BlogPost[] = [
     content: `...`,
     author: 'PT Studio 7 Team',
     date: '2025-11-09',
-    image: '/assets/images/tower_reformer_1.png',
+    image: '/assets/images/tower_reformer_1.webp',
     tags: ['Hip Health', 'Joint Mobility', 'Arthritis', 'Post-Surgery Recovery'],
     metaDescription: 'Reformer Pilates for hip pain, arthritis, and mobility in Amsterdam. Safe, effective treatment for hip conditions. Expert therapeutic Pilates at PT Studio 7 Museumplein.',
     keywords: [
@@ -169,7 +169,7 @@ export const blogPosts: BlogPost[] = [
     `,
     author: 'PT Studio 7 Team',
     date: '2026-01-23',
-    image: '/assets/images/reformer_1.png',
+    image: '/assets/images/reformer_1.webp',
     tags: ['Career Change', 'Pilates Certification', 'PT 7 Academy', 'Lifestyle', 'Work-Life Balance'],
     metaDescription: 'How to switch careers from banking, tech, or corporate jobs to becoming a certified Pilates instructor. Weekend training in Amsterdam, no fitness background needed. PT 7 Academy.',
     keywords: [
@@ -324,7 +324,7 @@ export const blogPosts: BlogPost[] = [
     `,
     author: 'PT Studio 7 Team',
     date: '2026-01-27',
-    image: '/assets/images/studio.jpg',
+    image: '/assets/images/studio.webp',
     tags: ['Pilates Prices', 'Amsterdam Fitness', 'Cost Guide', 'Pilates Classes'],
     metaDescription: 'Complete Pilates pricing guide for Amsterdam 2026. Compare group class costs (€25-50), private session rates (€60-120), and membership options. Find the best value for your budget.',
     keywords: [
@@ -355,7 +355,7 @@ export const blogPosts: BlogPost[] = [
       <h2>The Pilates Reformer: The Most Popular Equipment</h2>
       
       <div style="text-align: center; margin: 30px 0;">
-        <img src="/assets/images/reformer_1.png" alt="Pilates Reformer at PT Studio 7 Amsterdam" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
+        <img src="/assets/images/reformer_1.webp" alt="Pilates Reformer at PT Studio 7 Amsterdam" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
       </div>
 
       <h3>What Is It?</h3>
@@ -379,7 +379,7 @@ export const blogPosts: BlogPost[] = [
       <h2>The Cadillac (Trapeze Table): The Ultimate Pilates Machine</h2>
 
       <div style="text-align: center; margin: 30px 0;">
-        <img src="/assets/images/cadillac_1.png" alt="Pilates Cadillac Trapeze Table" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
+        <img src="/assets/images/cadillac_1.webp" alt="Pilates Cadillac Trapeze Table" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
       </div>
 
       <h3>What Is It?</h3>
@@ -400,7 +400,7 @@ export const blogPosts: BlogPost[] = [
       <h2>The Tower Reformer: Best of Both Worlds</h2>
 
       <div style="text-align: center; margin: 30px 0;">
-        <img src="/assets/images/tower_reformer_1.png" alt="Tower Reformer Pilates" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
+        <img src="/assets/images/tower_reformer_1.webp" alt="Tower Reformer Pilates" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
       </div>
 
       <h3>What Is It?</h3>
@@ -416,7 +416,7 @@ export const blogPosts: BlogPost[] = [
       <h2>The Wunda Chair: Compact but Challenging</h2>
 
       <div style="text-align: center; margin: 30px 0;">
-        <img src="/assets/images/wunda_chair_1.png" alt="Wunda Chair Pilates" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
+        <img src="/assets/images/wunda_chair_1.webp" alt="Wunda Chair Pilates" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
       </div>
 
       <h3>What Is It?</h3>
@@ -436,7 +436,7 @@ export const blogPosts: BlogPost[] = [
       <h2>The Ladder Barrel: For Spinal Flexibility</h2>
 
       <div style="text-align: center; margin: 30px 0;">
-        <img src="/assets/images/ladder_barrel_1.png" alt="Ladder Barrel Pilates" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
+        <img src="/assets/images/ladder_barrel_1.webp" alt="Ladder Barrel Pilates" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
       </div>
 
       <h3>What Is It?</h3>
@@ -456,7 +456,7 @@ export const blogPosts: BlogPost[] = [
       <h2>The Spine Corrector: Gentle Spinal Support</h2>
 
       <div style="text-align: center; margin: 30px 0;">
-        <img src="/assets/images/spine_corrector.jpg" alt="Spine Corrector Pilates" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
+        <img src="/assets/images/spine_corrector.webp" alt="Spine Corrector Pilates" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
       </div>
 
       <h3>What Is It?</h3>
@@ -521,7 +521,7 @@ export const blogPosts: BlogPost[] = [
     `,
     author: 'PT Studio 7 Team',
     date: '2026-01-25',
-    image: '/assets/images/reformer_1.png',
+    image: '/assets/images/reformer_1.webp',
     tags: ['Pilates Equipment', 'Reformer', 'Cadillac', 'Beginners Guide', 'Pilates Machines'],
     metaDescription: 'Complete guide to Pilates equipment: Reformer, Cadillac, Tower, Wunda Chair, Ladder Barrel explained. What each machine does, who should use it, and which is best for beginners.',
     keywords: [
@@ -684,7 +684,7 @@ export const blogPosts: BlogPost[] = [
     `,
     author: 'PT Studio 7 Team',
     date: '2026-01-24',
-    image: '/assets/images/pilates.jpg',
+    image: '/assets/images/pilates.webp',
     tags: ['Pilates vs Yoga', 'Comparison', 'Fitness Guide', 'Beginners'],
     metaDescription: 'Pilates vs Yoga: Which is better? Honest comparison of benefits, costs, and results. Core strength, flexibility, stress relief — find which practice matches your goals.',
     keywords: [
@@ -830,7 +830,7 @@ export const blogPosts: BlogPost[] = [
     `,
     author: 'PT Studio 7 Team',
     date: '2026-01-22',
-    image: '/assets/images/studio.jpg',
+    image: '/assets/images/studio.webp',
     tags: ['Amsterdam Guide', 'Wellness', 'Oud-Zuid', 'Museumplein', 'Self-Care'],
     metaDescription: 'Plan your perfect wellness day in Amsterdam Oud-Zuid. Morning Pilates at Museumplein, healthy brunch spots, spa recommendations, and evening dining. Complete self-care itinerary.',
     keywords: [
@@ -857,7 +857,7 @@ export const blogPosts: BlogPost[] = [
       <p>Pregnancy is a unique journey, and each trimester brings different physical and emotional needs. At our studio, we use Reformer Pilates as a safe and effective way to support expecting mothers throughout this transformation.</p>
 
       <div style="text-align: center; margin: 40px 0;">
-        <img src="/assets/images/pregnancy1.jpg" alt="Prenatal Pilates at PT Studio 7 Amsterdam" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
+        <img src="/assets/images/pregnancy1.webp" alt="Prenatal Pilates at PT Studio 7 Amsterdam" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
       </div>
 
       <h2>First Trimester: Building a Strong Foundation</h2>
@@ -867,7 +867,7 @@ export const blogPosts: BlogPost[] = [
       <p>As we move into the second trimester, the goal is to maintain mobility, improve posture, and start preparing the body for birth by strengthening the pelvic floor and back muscles. Your body is changing rapidly, and Pilates helps you adapt with grace and strength.</p>
 
       <div style="text-align: center; margin: 40px 0;">
-        <img src="/assets/images/pregnancy2.jpeg" alt="Prenatal Reformer Pilates exercises" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
+        <img src="/assets/images/pregnancy2.webp" alt="Prenatal Reformer Pilates exercises" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
       </div>
 
       <h2>Third Trimester: Breathwork and Preparation</h2>
@@ -883,7 +883,7 @@ export const blogPosts: BlogPost[] = [
     `,
     author: 'PT Studio 7 Team',
     date: '2025-11-05',
-    image: '/assets/images/pregnancy2.jpeg',
+    image: '/assets/images/pregnancy2.webp',
     tags: ['Prenatal', 'Pilates', 'Pregnancy', 'Women\'s Health', 'Pelvic Floor'],
     metaDescription: 'Learn how Prenatal Reformer Pilates at PT Studio 7 Amsterdam supports expecting mothers through every trimester with safe, effective exercises for pregnancy and postpartum recovery.',
     keywords: [
@@ -906,7 +906,7 @@ export const blogPosts: BlogPost[] = [
       <p>When people think of Pilates, they often imagine a workout primarily for women. However, Reformer Pilates was actually developed by Joseph Pilates—a man who designed the practice for male athletes, injured soldiers, and boxers. Today, professional athletes from the NBA, NFL, and Olympic teams incorporate Pilates into their training regimens.</p>
 
       <div style="text-align: center; margin: 40px 0;">
-        <img src="/assets/images/men-pilates.jpg" alt="Men's Pilates training at PT Studio 7" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
+        <img src="/assets/images/men-pilates.webp" alt="Men's Pilates training at PT Studio 7" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
       </div>
 
       <h2>Why Men Should Do Reformer Pilates</h2>
@@ -950,7 +950,7 @@ export const blogPosts: BlogPost[] = [
     `,
     author: 'PT Studio 7 Team',
     date: '2025-11-10',
-    image: '/assets/images/men-pilates.jpg',
+    image: '/assets/images/men-pilates.webp',
     tags: ['Men\'s Fitness', 'Athletic Performance', 'Injury Prevention', 'Core Strength'],
     metaDescription: 'Reformer Pilates for men in Amsterdam: Build core strength, prevent injuries, enhance athletic performance. Professional training for all fitness levels at PT Studio 7 Museumplein.',
     keywords: [

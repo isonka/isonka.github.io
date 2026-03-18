@@ -1,18 +1,20 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-    <!-- Meta Pixel Code -->
+    <!-- Meta Pixel Code - Deferred to not block rendering -->
     <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1197758608916828');
-      fbq('track', 'PageView');
+      window.addEventListener('load', function() {
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1197758608916828');
+        fbq('track', 'PageView');
+      });
     </script>
     <!-- End Meta Pixel Code -->
     
@@ -89,6 +91,7 @@
     
     <!-- Language/Region targeting -->
     <link rel="alternate" hreflang="en" href="https://www.ptstudio7amsterdam.nl/" />
+    <link rel="alternate" hreflang="nl" href="https://www.ptstudio7amsterdam.nl/" />
     <link rel="alternate" hreflang="x-default" href="https://www.ptstudio7amsterdam.nl/" />
     <meta name="geo.region" content="NL-NH" />
     <meta name="geo.placename" content="Amsterdam" />
@@ -99,6 +102,7 @@
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://widgets.mindbodyonline.com">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
     
     <!-- Preconnect to critical origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -158,7 +162,7 @@
     </noscript>
     
     <!-- Preload critical assets for better LCP -->
-    <link rel="preload" as="image" href="/assets/images/studio.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="/assets/images/studio.webp" fetchpriority="high" type="image/webp">
     
     <!-- Optimized Google Fonts - Non-blocking with font-display swap -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -223,7 +227,7 @@
       "description": "Certified Pilates instructor with 15+ years of experience, specializing in Reformer Pilates, functional training, and pregnancy Pilates",
       "knowsAbout": ["Reformer Pilates", "Polestar Pilates", "Strength Training", "Pregnancy Pilates", "Postnatal Fitness"],
       "url": "https://www.ptstudio7amsterdam.nl/trainer/elif",
-      "image": "https://www.ptstudio7amsterdam.nl/assets/images/elif.JPG",
+      "image": "https://www.ptstudio7amsterdam.nl/assets/images/elif.jpg",
       "email": "info@ptstudio7amsterdam.nl",
       "telephone": "+31685162693",
       "sameAs": [
@@ -330,7 +334,7 @@
           "name": "What types of Pilates classes does PT Studio 7 offer?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We offer both small group Pilates classes (maximum 4 participants) and private Pilates sessions. Classes include Reformer Pilates, Tower Reformer, Cadillac, and mat Pilates, along with TRX, and strength training."
+            "text": "We offer both small group Pilates classes (maximum 5 participants) and private Pilates sessions. Classes include Reformer Pilates, Tower Reformer, Cadillac, and mat Pilates, along with TRX, and strength training."
           }
         },
         {
@@ -338,7 +342,7 @@
           "name": "How many people are in PT Studio 7 group classes?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Our small group classes have a maximum of 4 participants, ensuring personalized attention from our expert instructors in an intimate boutique setting."
+            "text": "Our small group classes have a maximum of 5 participants, ensuring personalized attention from our expert instructors in an intimate boutique setting."
           }
         },
         {

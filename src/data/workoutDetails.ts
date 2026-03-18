@@ -117,7 +117,7 @@ const elifCard: TrainerCard = {
   name: 'Elif Arzu Ogan',
   cert: '',
   description: '15+ years experience',
-  image: '/assets/images/elif.JPG',
+  image: '/assets/images/elif.webp',
   imageAlt: 'Elif Arzu Ogan',
 };
 
@@ -126,7 +126,7 @@ const goknurCard: TrainerCard = {
   name: 'Göknur Dipli',
   cert: '',
   description: '12+ years experience',
-  image: '/assets/images/goknur.jpeg',
+  image: '/assets/images/goknur.webp',
   imageAlt: 'Göknur Dipli',
 };
 
@@ -144,7 +144,7 @@ export const workoutDetails: WorkoutDetailData[] = [
     },
     breadcrumbName: 'Reformer Pilates',
     hero: {
-      image: '/assets/images/reformer_1.png',
+      image: '/assets/images/reformer_1.webp',
       title: 'Reformer Pilates',
       tagline: 'Full-body workout focusing on core strength, flexibility, and posture',
       ctaLabel: 'Book a Class',
@@ -218,7 +218,7 @@ export const workoutDetails: WorkoutDetailData[] = [
       title: 'Meet Your Expert Instructors',
       cards: [
         { ...elifCard, cert: 'Senior Polestar Pilates Instructor', description: '15+ years experience, specializing in injury recovery and spinal health', imageAlt: 'Elif Arzu Ogan - Reformer Pilates Instructor' },
-        { slug: 'gokben', name: 'Gökben Öztekin', cert: 'Basi Pilates Instructor', description: 'Pilates Instructor', image: '/assets/images/gokben.jpeg', imageAlt: 'Gökben Öztekin - Basi Pilates Instructor' },
+        { slug: 'gokben', name: 'Gökben Öztekin', cert: 'Basi Pilates Instructor', description: 'Pilates Instructor', image: '/assets/images/gokben.webp', imageAlt: 'Gökben Öztekin - Basi Pilates Instructor' },
         { ...goknurCard, cert: 'Senior Polestar Pilates Instructor', description: '12+ years experience in Reformer Pilates and strength training', imageAlt: 'Göknur Dipli - Reformer Pilates Instructor' },
       ],
     },
@@ -251,7 +251,7 @@ export const workoutDetails: WorkoutDetailData[] = [
     },
     breadcrumbName: 'TRX Training',
     hero: {
-      image: '/assets/images/trx.jpg',
+      image: '/assets/images/trx.webp',
       title: 'TRX Suspension Training',
       tagline: 'Suspension training for strength, balance, and functional fitness',
       ctaLabel: 'Book a Class',
@@ -338,11 +338,11 @@ export const workoutDetails: WorkoutDetailData[] = [
       canonical: 'https://www.ptstudio7amsterdam.nl/workouts/functional-training',
       ogTitle: 'Nike Strength Training Amsterdam | PT Studio 7',
       ogDescription: 'Premium Nike Strength equipment. Olympic barbell training with expert coaches at our boutique Museumplein studio.',
-      ogImage: '/assets/images/nike_strength_studio.JPG',
+      ogImage: '/assets/images/nike_strength_studio.jpg',
     },
     breadcrumbName: 'Nike Strength Training',
     hero: {
-      image: '/assets/images/nike_strength_studio.JPG',
+      image: '/assets/images/nike_strength_studio.webp',
       title: 'Nike Strength Training',
       tagline: 'Premium equipment. Expert coaching. Real results.',
       ctaLabel: 'Book a Session',
@@ -355,9 +355,9 @@ export const workoutDetails: WorkoutDetailData[] = [
     equipmentGallery: {
       title: 'Our Nike Strength Equipment',
       items: [
-        { image: '/assets/images/nike_strength_studio.JPG', imageAlt: 'Nike Strength Half Rack with Olympic barbell', title: 'Nike Strength Half Rack', description: 'Professional half rack for squats, bench press, and Olympic lifting' },
-        { image: '/assets/images/nike_grind_plates.JPG', imageAlt: 'Nike Grind recycled weight plates', title: 'Nike Grind Weight Plates', description: 'Sustainable plates made from recycled Nike materials' },
-        { image: '/assets/images/nike_dumbbell.JPG', imageAlt: 'Nike hex dumbbells', title: 'Nike Hex Dumbbells', description: 'Full range of premium dumbbells for all strength levels' },
+        { image: '/assets/images/nike_strength_studio.webp', imageAlt: 'Nike Strength Half Rack with Olympic barbell', title: 'Nike Strength Half Rack', description: 'Professional half rack for squats, bench press, and Olympic lifting' },
+        { image: '/assets/images/nike_grind_plates.webp', imageAlt: 'Nike Grind recycled weight plates', title: 'Nike Grind Weight Plates', description: 'Sustainable plates made from recycled Nike materials' },
+        { image: '/assets/images/nike_dumbbell.webp', imageAlt: 'Nike hex dumbbells', title: 'Nike Hex Dumbbells', description: 'Full range of premium dumbbells for all strength levels' },
       ],
     },
     benefits: {
@@ -441,7 +441,7 @@ export const workoutDetails: WorkoutDetailData[] = [
     },
     breadcrumbName: 'Cardio Training',
     hero: {
-      image: '/assets/images/cardio.jpg',
+      image: '/assets/images/cardio.webp',
       title: 'Cardio Training',
       tagline: 'High-intensity cardio workouts to boost endurance and burn calories',
       ctaLabel: 'Book a Session',
@@ -539,7 +539,7 @@ export const workoutDetails: WorkoutDetailData[] = [
       ctaHref: '#buy',
     },
     hero: {
-      image: '/assets/images/summer-shred-lab-poster.png',
+      image: '/assets/images/summer-shred-lab-poster.webp',
       title: 'Summer Shred Lab',
       tagline: '',
       ctaLabel: 'Reserve Your Spot',

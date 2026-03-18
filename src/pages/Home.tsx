@@ -10,26 +10,26 @@ import { WorkoutCard } from '../components/WorkoutCard';
 import '../styles/Home.css';
 
 const heroImages = [
-  { src: '/assets/images/studio.jpg', alt: 'PT Studio 7 - Pilates Reformer Studio' },
-  { src: '/assets/images/nike_strength_studio.JPG', alt: 'PT Studio 7 - Nike Strength Training Area' },
+  { src: '/assets/images/studio.webp', alt: 'PT Studio 7 - Pilates Reformer Studio' },
+  { src: '/assets/images/nike_strength_studio.webp', alt: 'PT Studio 7 - Nike Strength Training Area' },
 ];
 
 
 const trainers = [
-  { to: '/trainer/elif', src: '/assets/images/elif.JPG', alt: 'Elif Arzu Ogan - Pilates Instructor', name: 'Elif Arzu Ogan', specialties: 'Comprehensive Pilates\nStrength Training\nPrenatal Pilates' },
-  { to: '/trainer/gokben', src: '/assets/images/gokben.jpeg', alt: 'Gökben Öztekin - Pilates Instructor', name: 'Gökben Öztekin', specialties: 'Comprehensive Pilates' },
-  { to: '/trainer/goknur', src: '/assets/images/goknur.jpeg', alt: 'Göknur Dipli - Pilates Instructor', name: 'Göknur Dipli', specialties: 'Comprehensive Pilates\nStrength Training\nPrenatal Pilates' },
-  { to: '/trainer/gulce', src: '/assets/images/gulce.JPG', alt: 'Gülce - Pilates Instructor', name: 'Gülce', specialties: 'Reformer Pilates' },
-  { to: '/trainer/lal', src: '/assets/images/lal.JPG', alt: 'Lal - Pilates Instructor', name: 'Lal', specialties: 'Reformer Pilates' },
-  { to: '/trainer/nisan', src: '/assets/images/nisan.JPG', alt: 'Nisan - Pilates Instructor', name: 'Nisan', specialties: 'Reformer Pilates' },
+  { to: '/trainer/elif', src: '/assets/images/elif.webp', alt: 'Elif Arzu Ogan - Pilates Instructor', name: 'Elif Arzu Ogan', specialties: 'Comprehensive Pilates\nStrength Training\nPrenatal Pilates' },
+  { to: '/trainer/gokben', src: '/assets/images/gokben.webp', alt: 'Gökben Öztekin - Pilates Instructor', name: 'Gökben Öztekin', specialties: 'Comprehensive Pilates' },
+  { to: '/trainer/goknur', src: '/assets/images/goknur.webp', alt: 'Göknur Dipli - Pilates Instructor', name: 'Göknur Dipli', specialties: 'Comprehensive Pilates\nStrength Training\nPrenatal Pilates' },
+  { to: '/trainer/gulce', src: '/assets/images/gulce.webp', alt: 'Gülce - Pilates Instructor', name: 'Gülce', specialties: 'Reformer Pilates' },
+  { to: '/trainer/lal', src: '/assets/images/lal.webp', alt: 'Lal - Pilates Instructor', name: 'Lal', specialties: 'Reformer Pilates' },
+  { to: '/trainer/nisan', src: '/assets/images/nisan.webp', alt: 'Nisan - Pilates Instructor', name: 'Nisan', specialties: 'Reformer Pilates' },
 ];
 
 const reviews = [
-  { author: 'Lot Canter Cremers', photo: '/assets/images/lot.png', text: '"Through a neighbor in my building I was introduced to PT Studio 7. I have been going to this studio for the past 18 months, of which I have been pregnant for 9. During my pregnancy Elif trained me until the very end (38.5 weeks). Her training gave me and my body an extremely comfortable pregnancy and smooth delivery of birth! Her experience and knowledge about the human body, pregnant or not, makes all the difference. Of course I continued after my pregnancy and I really enjoy and recommend this studio to everyone who is looking for a Pilates studio with qualified and experienced instructors. Since the Pilates sport is getting so popular there are a lot of places where you can go but most of the instructors don\'t have enough knowledge to be able to teach and train you like they do at PT Studio 7!"' },
+  { author: 'Lot Canter Cremers', photo: '/assets/images/lot.webp', text: '"Through a neighbor in my building I was introduced to PT Studio 7. I have been going to this studio for the past 18 months, of which I have been pregnant for 9. During my pregnancy Elif trained me until the very end (38.5 weeks). Her training gave me and my body an extremely comfortable pregnancy and smooth delivery of birth! Her experience and knowledge about the human body, pregnant or not, makes all the difference. Of course I continued after my pregnancy and I really enjoy and recommend this studio to everyone who is looking for a Pilates studio with qualified and experienced instructors. Since the Pilates sport is getting so popular there are a lot of places where you can go but most of the instructors don\'t have enough knowledge to be able to teach and train you like they do at PT Studio 7!"' },
   { author: 'Flaminia', initial: 'F', text: '"I had been looking for a professional Pilates reformer studio for about 2 years and tried many different studios around Amsterdam. PT Studio 7 and Elif are exactly what I was looking for: professional, thoughtful, engaging in your body progress and growth. Elif is amazing and has decades of experience as a fitness trainer. She demonstrates techniques with a detail-oriented approach and her classes are always different and tailored to the group!"' },
-  { author: 'Maya', photo: '/assets/images/maya.png', text: '"This is a truly special Pilates Reformer studio — warm, welcoming, and filled with care. Gökben and Elif bring so much heart into every session. Their gentle guidance, attentiveness, and kindness make all the difference. I\'ve been practicing here for almost six months, and I feel stronger, more balanced, and more connected to my body. Every class leaves me smiling and deeply grateful!"' },
-  { author: 'Yeşim', photo: '/assets/images/yesim.png', text: '"I\'ve been coming here for 6 months and the results are incredible. The atmosphere is motivating and the equipment is pristine. Highly recommend!"' },
-  { author: 'Ayşe', photo: '/assets/images/ayse.png', text: '"I\'ve been training at PT Studio 7 for a while now, and I couldn\'t be happier with my experience! The studio has such a calm and positive atmosphere, and the trainers are incredibly professional and supportive. They pay close attention to your needs and guide you through every movement with care. I highly recommend it!"' },
+  { author: 'Maya', photo: '/assets/images/maya.webp', text: '"This is a truly special Pilates Reformer studio — warm, welcoming, and filled with care. Gökben and Elif bring so much heart into every session. Their gentle guidance, attentiveness, and kindness make all the difference. I\'ve been practicing here for almost six months, and I feel stronger, more balanced, and more connected to my body. Every class leaves me smiling and deeply grateful!"' },
+  { author: 'Yeşim', photo: '/assets/images/yesim.webp', text: '"I\'ve been coming here for 6 months and the results are incredible. The atmosphere is motivating and the equipment is pristine. Highly recommend!"' },
+  { author: 'Ayşe', photo: '/assets/images/ayse.webp', text: '"I\'ve been training at PT Studio 7 for a while now, and I couldn\'t be happier with my experience! The studio has such a calm and positive atmosphere, and the trainers are incredibly professional and supportive. They pay close attention to your needs and guide you through every movement with care. I highly recommend it!"' },
 ];
 
 const partnerBadges = [
@@ -54,7 +54,7 @@ const partnerBadges = [
   {
     href: 'https://urbansportsclub.com/nl/venues/pt-studio-7-museumplein',
     className: 'usc-badge',
-    logo: { src: '/assets/images/urbansportsclub-logo.png', alt: 'Urban Sports Club' },
+    logo: { src: '/assets/images/urbansportsclub-logo.webp', alt: 'Urban Sports Club' },
     ratingClass: 'usc-rating',
     stars: true,
     ratingText: '4.9',
@@ -188,7 +188,7 @@ export const Home: React.FC = () => {
           </div>
           <div className="about-image">
             <img 
-              src="/assets/images/about-us-web.jpg" 
+              src="/assets/images/about-us-web.webp" 
               alt="PT Studio 7 Museumplein Location - Small Group Pilates Studio"
               width="700"
               height="447"
