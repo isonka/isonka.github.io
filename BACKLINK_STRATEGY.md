@@ -201,7 +201,7 @@ love it and want to share with your followers, that would be amazing,
 but there's no obligation.
 
 We specialize in small groups 
-(max 4) for personalized attention.
+(max 5) for personalized attention.
 
 Would you be interested? Happy to work around your schedule!
 
@@ -248,7 +248,7 @@ area. We're PT Studio 7 (www.ptstudio7amsterdam.nl), a boutique studio
 with:
 
 • 15 years experience
-• Small group classes (max 4)
+• Small group classes (max 5)
 • 4.9-star rating
 • Unique Museumplein location
 

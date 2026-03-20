@@ -25,7 +25,7 @@ PT Studio 7 Amsterdam is a boutique Reformer Pilates studio website at Van Baerl
 - No WebP images — all images are JPG/PNG/JPEG in public/assets/images/
 - Meta Pixel loads synchronously at top of <head> (render-blocking — should be deferred)
 - ViteImageOptimizer only optimizes assets imported in JS/CSS, NOT the public/ folder images
-- FAQ schema says max 4 participants, marketing copy says max 5 — inconsistency
+- FAQ schema says max 5 participants, marketing copy says max 5 — inconsistency
 - Only en + x-default hreflang, missing nl hreflang
 - No manifest.json (PWA not configured)
 
