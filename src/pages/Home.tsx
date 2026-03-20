@@ -104,8 +104,8 @@ export const Home: React.FC = () => {
 
       <SEOHead
         title="Pilates & Personal Training Amsterdam | Boutique Studio Museumplein | PT Studio 7"
-        description="Personal Training studio Amsterdam at Museumplein, Oud-Zuid. Pilates, Nike Strength Training, TRX & Cardio. Private sessions & small groups (max 5). Expert instructors. Book now!"
-        keywords="personal training Amsterdam, personal trainer Museumplein, Pilates Amsterdam, Nike strength training, TRX Amsterdam, boutique fitness Amsterdam, private training Oud-Zuid, PT Amsterdam"
+        description="Amsterdam's most personal Reformer Pilates studio — max 5 per class, at Museumplein. Private sessions & small groups with certified instructors. 15+ years expertise. Book now."
+        keywords="pilates amsterdam-Zuid, kleine groep pilates amsterdam, reformer pilates prive amsterdam, pilates museumplein, pilates studio van baerlestraat, postnatale pilates amsterdam, pilates zwangerschap amsterdam, polestar pilates amsterdam, TRX training amsterdam, personal training Amsterdam, Pilates Amsterdam"
         canonical="https://www.ptstudio7amsterdam.nl"
         ogTitle="Pilates & Personal Training Amsterdam | PT Studio 7 Museumplein"
         ogDescription="Boutique personal training studio at Museumplein. Pilates, Nike Strength, TRX & Cardio. Small groups (max 5), private sessions, expert instructors."
