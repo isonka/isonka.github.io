@@ -58,6 +58,7 @@ function App() {
               <Route path="/equipment/:slug" element={<EquipmentDetail />} />
               <Route path="/workouts/:slug" element={<WorkoutDetail />} />
               <Route path="/congrats" element={<Congrats />} />
+              <Route path="/index.html" element={<Navigate to="/" replace />} />
               <Route path="/congrats.html" element={<Navigate to="/congrats" replace />} />
               <Route path="/instructors" element={<Trainers />} />
               <Route path="/trainer/:slug" element={<TrainerDetail />} />
