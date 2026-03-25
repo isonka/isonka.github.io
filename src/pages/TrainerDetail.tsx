@@ -19,7 +19,7 @@ export const TrainerDetail: React.FC = () => {
         title={trainer.seo.title}
         description={trainer.seo.description}
         keywords={trainer.seo.keywords}
-        canonical={`https://www.ptstudio7amsterdam.nl/trainer/${trainer.slug}`}
+        canonical={`https://www.pt7.nl/trainer/${trainer.slug}`}
       />
       <StructuredData
         type="Person"

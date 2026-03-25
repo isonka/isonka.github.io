@@ -25,7 +25,7 @@ export const EquipmentDetail: React.FC = () => {
         title={product.seo.title}
         description={product.seo.description}
         keywords={product.seo.keywords}
-        canonical={`https://www.ptstudio7amsterdam.nl/equipment/${product.slug}`}
+        canonical={`https://www.pt7.nl/equipment/${product.slug}`}
       />
 
       <main className="product-detail-main">

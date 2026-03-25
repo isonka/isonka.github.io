@@ -67,7 +67,7 @@ export const Pricing: React.FC = () => {
         title="Pricing - Pilates Classes & Memberships | PT Studio 7 Museumplein"
         description="Flexible Pilates pricing at Museumplein. Small group classes (max 5), memberships, private classes. Expert instructors. Premium location. TRX & Strength Training. From €28/class."
         keywords="Pilates prijzen Amsterdam, Pilates abonnement Amsterdam, Pilates prices Museumplein, reformer pilates prive amsterdam, kleine groep pilates amsterdam, private Pilates kosten, small group Pilates pricing, proefles Pilates Amsterdam, strippenkaart Pilates"
-        canonical="https://www.ptstudio7amsterdam.nl/pricing"
+        canonical="https://www.pt7.nl/pricing"
         ogTitle="PT Studio 7 Pricing | Pilates Packages at Museumplein"
         ogDescription="Small group Pilates (max 5) from €28/class. Memberships & private classes available. Expert instructors at Amsterdam's most exclusive Museumplein Pilates studio."
       />
@@ -130,7 +130,7 @@ export const Pricing: React.FC = () => {
         {activeTab === 'membership' && (
           <div className="pricing-content">
             <h2 className="pricing-section-title">Membership</h2>
-            <p className="pricing-subtitle">Valid all days, 7:00-18:00 • Maximum 1 class per day</p>
+            <p className="pricing-subtitle">Valid all days • Maximum 1 class per day</p>
             
             <div className="packages-grid">
               <div className="package-card">
@@ -139,7 +139,7 @@ export const Pricing: React.FC = () => {
                   <span className="package-name">4 Classes in 1 Month</span>
                 </div>
                 <p className="total-price">€86 in total</p>
-                <p className="validity">All days 7:00-18:00 • 1 class/day</p>
+                <p className="validity">All days • 1 class/day</p>
                 <p className="validity" style={{ color: '#888', fontSize: '13px' }}>
                   1-month period • You can cancel after first month • Auto-renews monthly unless cancelled
                 </p>
@@ -157,7 +157,7 @@ export const Pricing: React.FC = () => {
                   <span className="package-name">8 Classes in 1 Month</span>
                 </div>
                 <p className="total-price">€160 in total</p>
-                <p className="validity">All days 7:00-18:00 • 1 class/day</p>
+                <p className="validity">All days • 1 class/day</p>
                 <p className="validity" style={{ color: '#888', fontSize: '13px' }}>
                   1-month period • You can cancel after first month • Auto-renews monthly unless cancelled
                 </p>
@@ -176,7 +176,7 @@ export const Pricing: React.FC = () => {
                   <span className="package-name">Unlimited 3 Months</span>
                 </div>
                 <p className="total-price">Unlimited classes</p>
-                <p className="validity">All days 7:00-18:00 • 1 class/day</p>
+                <p className="validity">All days • 1 class/day</p>
                 <p className="validity" style={{ color: '#888', fontSize: '13px' }}>
                   3-month commitment • You can cancel after 3 months • Auto-renews unless cancelled
                 </p>
@@ -195,7 +195,7 @@ export const Pricing: React.FC = () => {
                   <span className="package-name">Annual Unlimited</span>
                 </div>
                 <p className="total-price">€3,000/year • Includes 4-week freeze option</p>
-                <p className="validity">All days 7:00-18:00 • 1 class/day</p>
+                <p className="validity">All days • 1 class/day</p>
                 <p className="validity" style={{ color: '#888', fontSize: '13px' }}>
                   12-month commitment • You can cancel after 12 months • Auto-renews unless cancelled
                 </p>
@@ -745,7 +745,7 @@ export const Pricing: React.FC = () => {
               </div>
               <div className="faq-content">
                 <p>Yes! In 1-month memberships (4 & 8 classes), you have the right to cancel after the first month. The 3-month and annual memberships can be cancelled after you complete your initial commitment period (3 or 12 months).</p>
-                <p>To cancel, contact us via email at <a href="mailto:info@ptstudio7amsterdam.nl">info@ptstudio7amsterdam.nl</a> or call <a href="tel:+31685162693">06 85 16 26 93</a> before your renewal date.</p>
+                <p>To cancel, contact us via email at <a href="mailto:info@pt7.nl">info@pt7.nl</a> or call <a href="tel:+31685162693">06 85 16 26 93</a> before your renewal date.</p>
               </div>
             </div>
 
@@ -786,7 +786,7 @@ export const Pricing: React.FC = () => {
           <h2>Need Assistance?</h2>
           <p>We care about you! Email any assistance you need or call us for personalized guidance.</p>
           <div className="cta-buttons">
-            <a href="mailto:info@ptstudio7amsterdam.nl" className="cta-button primary">Email Us</a>
+            <a href="mailto:info@pt7.nl" className="cta-button primary">Email Us</a>
             <a href="tel:+31685162693" className="cta-button secondary">Call: 06 85 16 26 93</a>
           </div>
         </div>

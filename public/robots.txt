@@ -27,8 +27,8 @@ User-agent: Google-Extended
 Allow: /
 
 # Sitemaps
-Sitemap: https://www.ptstudio7amsterdam.nl/sitemap.xml
+Sitemap: https://www.pt7.nl/sitemap.xml
 
 # LLM Context File (for AI understanding)
-# https://www.ptstudio7amsterdam.nl/llms.txt
+# https://www.pt7.nl/llms.txt
 

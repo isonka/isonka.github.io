@@ -10,7 +10,7 @@ export const ClassPassOffer = () => {
         title="ClassPass Members Exclusive Offer | PT Studio 7 Amsterdam"
         description="Special offer for ClassPass members. Save up to 40% when you join PT Studio 7 directly. Same great Pilates classes, better value, more perks."
         keywords="ClassPass Amsterdam, Pilates ClassPass, ClassPass offer, Pilates membership Amsterdam"
-        canonical="https://www.ptstudio7amsterdam.nl/classpass-offer"
+        canonical="https://www.pt7.nl/classpass-offer"
         ogTitle="ClassPass Members: Exclusive Offer Inside"
         ogDescription="Stop paying premium ClassPass credits. Join PT Studio 7 directly and save up to 40% per class."
       />
@@ -209,7 +209,7 @@ export const ClassPassOffer = () => {
             </div>
             <div className="faq-item">
               <h4>How do I claim the 20% off?</h4>
-              <p>Email us at info@ptstudio7amsterdam.nl or ask at the studio to get your discount code.</p>
+              <p>Email us at info@pt7.nl or ask at the studio to get your discount code.</p>
             </div>
             <div className="faq-item">
               <h4>Is the class experience different?</h4>

@@ -299,7 +299,7 @@ ${pricing}
         break;
       
       case "No thanks":
-        addBotMessage("No problem! Feel free to reach out anytime. You can call us at +31 6 8516 2693 or email info@ptstudio7amsterdam.nl. See you at the studio! 💪", 500);
+        addBotMessage("No problem! Feel free to reach out anytime. You can call us at +31 6 8516 2693 or email info@pt7.nl. See you at the studio! 💪", 500);
         break;
       
       default:

@@ -24,7 +24,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     document.title = title;
 
     // Ensure absolute URL for images
-    const baseUrl = 'https://www.ptstudio7amsterdam.nl';
+    const baseUrl = 'https://www.pt7.nl';
     const absoluteImageUrl = ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`;
 
     // Update or create meta tags

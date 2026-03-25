@@ -18,7 +18,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const distDir = path.join(__dirname, '..', 'dist');
 
-const BASE_URL = 'https://www.ptstudio7amsterdam.nl';
+const BASE_URL = 'https://www.pt7.nl';
 
 // Default OG image for all pages
 const DEFAULT_IMAGE = '/assets/images/studio.jpg';

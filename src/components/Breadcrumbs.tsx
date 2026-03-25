@@ -11,7 +11,7 @@ interface BreadcrumbsProps {
 }
 
 export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items }) => {
-  const baseUrl = 'https://www.ptstudio7amsterdam.nl';
+  const baseUrl = 'https://www.pt7.nl';
   
   const breadcrumbData = [
     { name: 'Home', url: baseUrl },

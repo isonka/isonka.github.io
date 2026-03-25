@@ -63,10 +63,10 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
       schema = {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        '@id': 'https://www.ptstudio7amsterdam.nl/#localbusiness',
+        '@id': 'https://www.pt7.nl/#localbusiness',
         name: 'PT Studio 7 Amsterdam',
-        image: 'https://www.ptstudio7amsterdam.nl/assets/images/studio.jpg',
-        url: 'https://www.ptstudio7amsterdam.nl',
+        image: 'https://www.pt7.nl/assets/images/studio.jpg',
+        url: 'https://www.pt7.nl',
         telephone: '+31-20-3038377',
         priceRange: '€€',
         address: {
@@ -125,12 +125,12 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
         '@type': 'Person',
         name: data.person.name,
         jobTitle: data.person.jobTitle,
-        image: `https://www.ptstudio7amsterdam.nl${data.person.image}`,
+        image: `https://www.pt7.nl${data.person.image}`,
         description: data.person.description,
         worksFor: {
           '@type': 'LocalBusiness',
           name: data.person.worksFor,
-          url: 'https://www.ptstudio7amsterdam.nl',
+          url: 'https://www.pt7.nl',
         },
         knowsAbout: ['Pilates', 'Reformer Pilates', 'Fitness Training', 'Strength Training'],
       };
@@ -166,7 +166,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
 
     if (type === 'BlogPosting' && data?.blogPosting) {
       const bp = data.blogPosting;
-      const baseUrl = 'https://www.ptstudio7amsterdam.nl';
+      const baseUrl = 'https://www.pt7.nl';
       schema = {
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
@@ -199,7 +199,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
 
     if (type === 'Course' && data?.course) {
       const c = data.course;
-      const baseUrl = 'https://www.ptstudio7amsterdam.nl';
+      const baseUrl = 'https://www.pt7.nl';
       schema = {
         '@context': 'https://schema.org',
         '@type': 'Course',

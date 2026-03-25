@@ -14,7 +14,7 @@ export const Trainers: React.FC = () => {
         title="Our Instructors | PT Studio 7 Amsterdam"
         description="Meet our expert team of certified Pilates and fitness instructors at PT Studio 7 Amsterdam. Master, senior, and junior instructors dedicated to your fitness journey."
         keywords="Pilates instructors Amsterdam, polestar pilates amsterdam, Pilates leraren Amsterdam, gecertificeerde Pilates instructeurs, Pilates teachers Museumplein, Pilates team Oud-Zuid"
-        canonical="https://www.ptstudio7amsterdam.nl/instructors"
+        canonical="https://www.pt7.nl/instructors"
       />
       <Breadcrumbs items={[{ name: 'Instructors', path: '/instructors' }]} />
 

@@ -106,7 +106,7 @@ export const Home: React.FC = () => {
         title="Pilates & Personal Training Amsterdam | Boutique Studio Museumplein | PT Studio 7"
         description="Amsterdam's most personal Reformer Pilates studio — max 5 per class, at Museumplein. Private sessions & small groups with certified instructors. 15+ years expertise. Book now."
         keywords="pilates amsterdam-Zuid, kleine groep pilates amsterdam, reformer pilates prive amsterdam, pilates museumplein, pilates studio van baerlestraat, postnatale pilates amsterdam, pilates zwangerschap amsterdam, polestar pilates amsterdam, TRX training amsterdam, personal training Amsterdam, Pilates Amsterdam"
-        canonical="https://www.ptstudio7amsterdam.nl"
+        canonical="https://www.pt7.nl"
         ogTitle="Pilates & Personal Training Amsterdam | PT Studio 7 Museumplein"
         ogDescription="Boutique personal training studio at Museumplein. Pilates, Nike Strength, TRX & Cardio. Small groups (max 5), private sessions, expert instructors."
         ogImage="/assets/images/about-us-web.jpg"
@@ -307,7 +307,7 @@ export const Home: React.FC = () => {
               </svg>
               WhatsApp
             </a>
-            <a href="mailto:info@ptstudio7amsterdam.nl" className="contact-action-btn" onClick={() => { trackEmailClick(); trackFBEmailClick(); }}>
+            <a href="mailto:info@pt7.nl" className="contact-action-btn" onClick={() => { trackEmailClick(); trackFBEmailClick(); }}>
               <svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
               </svg>

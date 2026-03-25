@@ -16,7 +16,7 @@ export const HealthcareProviders: React.FC = () => {
         title="Refer Your Clients | For Healthcare Providers | PT Studio 7 Amsterdam"
         description="Physiotherapists, GPs, and healthcare providers: refer your clients to PT Studio 7 for post-rehab Pilates and functional training. Small groups, expert instructors, Museumplein."
         keywords="physiotherapist referral Amsterdam, Pilates post-rehab, fysiotherapeut doorverwijzing, beweegprogramma Amsterdam, Pilates fysiotherapie"
-        canonical="https://www.ptstudio7amsterdam.nl/healthcare-providers"
+        canonical="https://www.pt7.nl/healthcare-providers"
         ogTitle="Refer Your Clients | For Healthcare Providers | PT Studio 7"
         ogDescription="Partner with PT Studio 7. Refer your clients for post-rehab Pilates and functional training. Small groups, expert instructors."
       />
@@ -144,7 +144,7 @@ export const HealthcareProviders: React.FC = () => {
             <h2>Start Referring</h2>
             <p>Email or WhatsApp with your client&apos;s name and a brief note. We&apos;ll take it from there.</p>
             <div className="cta-buttons">
-              <a href="mailto:info@ptstudio7amsterdam.nl?subject=Referral%20-%20Healthcare%20Provider" className="cta-button primary">
+              <a href="mailto:info@pt7.nl?subject=Referral%20-%20Healthcare%20Provider" className="cta-button primary">
                 Email Referral
               </a>
               <a href="https://wa.me/31685162693?text=Hi%2C%20I%27d%20like%20to%20refer%20a%20client%20to%20PT%20Studio%207." className="cta-button secondary" target="_blank" rel="noopener noreferrer">

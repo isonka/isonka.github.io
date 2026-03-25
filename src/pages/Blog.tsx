@@ -10,7 +10,7 @@ export const Blog: React.FC = () => {
         title="Pilates & Fitness Blog | Expert Tips & Guides | PT Studio 7 Amsterdam"
         description="Read expert articles about Pilates, prenatal fitness, and wellness from PT Studio 7 Amsterdam. Tips, guides, and insights from our certified trainers at Museumplein."
         keywords="pilates blog, prenatal pilates, fitness tips amsterdam, pilates exercises, reformer pilates guide, pregnancy fitness, wellness blog amsterdam"
-        canonical="https://www.ptstudio7amsterdam.nl/blog"
+        canonical="https://www.pt7.nl/blog"
         ogTitle="Pilates & Fitness Blog | PT Studio 7 Amsterdam"
         ogDescription="Expert articles about Pilates, prenatal fitness, and wellness from PT Studio 7 Amsterdam's certified trainers."
       />

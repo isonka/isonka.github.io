@@ -165,7 +165,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Because five years from now, you'll be somewhere. The question is: will it be the same corner office, or somewhere that makes you come alive?</p>
 
-      <p><em>Ready to explore? <a href="mailto:info@ptstudio7amsterdam.nl?subject=Career Change - Reformer Course Inquiry">Email us</a> or <a href="/academy">learn more about the course</a>.</em></p>
+      <p><em>Ready to explore? <a href="mailto:info@pt7.nl?subject=Career Change - Reformer Course Inquiry">Email us</a> or <a href="/academy">learn more about the course</a>.</em></p>
     `,
     author: 'PT Studio 7 Team',
     date: '2026-01-23',

@@ -9,7 +9,7 @@ export const Academy: React.FC = () => {
         title="Pilates Instructor Course Amsterdam | Weekend Certification | PT 7 Academy"
         description="Become a certified Pilates instructor in Amsterdam. Weekend-only training, perfect for career changers. Small groups (5-10), PMA-registered instructors, pursuing ITTAP accreditation from the Pilates Method Alliance. Starting March 2026."
         keywords="Pilates instructor course Amsterdam, Pilates opleiding Amsterdam, Pilates teacher training, Pilates certification Netherlands, pilatesdocent worden, weekend Pilates certification, career change Pilates instructor"
-        canonical="https://www.ptstudio7amsterdam.nl/academy"
+        canonical="https://www.pt7.nl/academy"
         ogTitle="Pilates Instructor Course Amsterdam | Weekend Training | PT 7 Academy"
         ogDescription="Weekend Pilates certification for career changers. Small groups, PMA-registered instructors, pursuing ITTAP accreditation from the Pilates Method Alliance. Job opportunities at our Museumplein studio. Starting March 2026."
       />
@@ -36,7 +36,7 @@ export const Academy: React.FC = () => {
             <span className="urgency-text">
               <strong>Pilates Instructor Course — Starting September 2026!</strong> Limited to 10 participants — Secure your spot today
             </span>
-            <a href="mailto:info@ptstudio7amsterdam.nl?subject=Pilates Instructor Course Inquiry" className="urgency-cta">
+            <a href="mailto:info@pt7.nl?subject=Pilates Instructor Course Inquiry" className="urgency-cta">
               Inquire Now →
             </a>
           </div>
@@ -127,7 +127,7 @@ export const Academy: React.FC = () => {
                 </div>
                 
                 <div className="course-cta">
-                  <a href="mailto:info@ptstudio7amsterdam.nl?subject=Pilates Instructor Course Inquiry" className="course-btn primary">
+                  <a href="mailto:info@pt7.nl?subject=Pilates Instructor Course Inquiry" className="course-btn primary">
                     Secure Your Spot Now
                   </a>
                   <p className="cta-subtext">Reply within 48 hours to guarantee your place</p>
@@ -165,7 +165,7 @@ export const Academy: React.FC = () => {
                 </div>
                 
                 <div className="course-cta">
-                  <a href="mailto:info@ptstudio7amsterdam.nl?subject=Mat %26 Trapeze Table - Next Cohort Inquiry" className="course-btn primary">
+                  <a href="mailto:info@pt7.nl?subject=Mat %26 Trapeze Table - Next Cohort Inquiry" className="course-btn primary">
                   Secure Your Spot Now
                   </a>
                 </div>
@@ -242,7 +242,7 @@ export const Academy: React.FC = () => {
               this is your chance to turn that passion into a profession. No fitness background required.
             </p>
             <div className="cta-buttons">
-              <a href="mailto:info@ptstudio7amsterdam.nl?subject=Pilates Instructor Course Inquiry" className="cta-btn primary">
+              <a href="mailto:info@pt7.nl?subject=Pilates Instructor Course Inquiry" className="cta-btn primary">
                 Inquire About the Course
               </a>
               <a href="tel:+31685162693" className="cta-btn secondary">

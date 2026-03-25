@@ -241,8 +241,8 @@ export const BookingGuide: React.FC = () => {
                 <a href="tel:+31685162693" className="help-link">
                   📞 Call us: +31 6 8516 2693
                 </a>
-                <a href="mailto:info@ptstudio7amsterdam.nl" className="help-link">
-                  ✉️ Email: info@ptstudio7amsterdam.nl
+                <a href="mailto:info@pt7.nl" className="help-link">
+                  ✉️ Email: info@pt7.nl
                 </a>
                 <a href="https://wa.me/31685162693" target="_blank" rel="noopener noreferrer" className="help-link">
                   💬 WhatsApp us

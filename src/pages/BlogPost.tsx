@@ -52,10 +52,10 @@ export const BlogPost: React.FC = () => {
         title={`${post.title} | PT Studio 7 Amsterdam Blog`}
         description={post.metaDescription}
         keywords={post.keywords.join(', ')}
-        canonical={`https://www.ptstudio7amsterdam.nl/blog/${post.slug}`}
+        canonical={`https://www.pt7.nl/blog/${post.slug}`}
         ogTitle={post.title}
         ogDescription={post.metaDescription}
-        ogImage={`https://www.ptstudio7amsterdam.nl${post.image}`}
+        ogImage={`https://www.pt7.nl${post.image}`}
       />
       <StructuredData
         type="BlogPosting"
