@@ -21,6 +21,10 @@ const BlogPost = lazy(() => import('./pages/BlogPost').then(m => ({ default: m.B
 const WorkoutDetail = lazy(() => import('./pages/WorkoutDetail').then(m => ({ default: m.WorkoutDetail })));
 const ClassPassOffer = lazy(() => import('./pages/ClassPassOffer').then(m => ({ default: m.ClassPassOffer })));
 const HealthcareProviders = lazy(() => import('./pages/HealthcareProviders').then(m => ({ default: m.HealthcareProviders })));
+const PregnancyPilates = lazy(() => import('./pages/PregnancyPilates').then(m => ({ default: m.PregnancyPilates })));
+const PrivatePilates = lazy(() => import('./pages/PrivatePilates').then(m => ({ default: m.PrivatePilates })));
+const TRXTrainingAmsterdam = lazy(() => import('./pages/TRXTrainingAmsterdam').then(m => ({ default: m.TRXTrainingAmsterdam })));
+const StrengthTrainingAmsterdam = lazy(() => import('./pages/StrengthTrainingAmsterdam').then(m => ({ default: m.StrengthTrainingAmsterdam })));
 
 // Component to handle GitHub Pages redirects
 function RedirectHandler() {
@@ -67,6 +71,10 @@ function App() {
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/classpass-offer" element={<ClassPassOffer />} />
               <Route path="/healthcare-providers" element={<HealthcareProviders />} />
+              <Route path="/pregnancy-pilates-amsterdam" element={<PregnancyPilates />} />
+              <Route path="/private-pilates-amsterdam" element={<PrivatePilates />} />
+              <Route path="/trx-training-amsterdam" element={<TRXTrainingAmsterdam />} />
+              <Route path="/strength-training-amsterdam" element={<StrengthTrainingAmsterdam />} />
             </Routes>
           </Suspense>
         </main>

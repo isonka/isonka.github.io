@@ -4,7 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.pt7.nl/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -167,6 +167,38 @@
     <priority>0.7</priority>
   </url>
   
+  <!-- Service Landing Pages (local SEO) -->
+  <url>
+    <loc>https://www.pt7.nl/pregnancy-pilates-amsterdam</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.pt7.nl/private-pilates-amsterdam</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.pt7.nl/trx-training-amsterdam</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.pt7.nl/strength-training-amsterdam</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.pt7.nl/pilates-instructor-course-amsterdam</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Blog -->
   <url>
     <loc>https://www.pt7.nl/blog</loc>

@@ -8,6 +8,26 @@
 [build.environment]
   NODE_VERSION = "20.19.1"
 
+# Domain consolidation: redirect ptstudio7amsterdam.nl to pt7.nl
+# NOTE: ptstudio7amsterdam.nl must be added as a domain alias in the Netlify dashboard for this to work
+[[redirects]]
+  from = "https://www.ptstudio7amsterdam.nl/*"
+  to = "https://www.pt7.nl/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://ptstudio7amsterdam.nl/*"
+  to = "https://www.pt7.nl/:splat"
+  status = 301
+  force = true
+
+# Pilates instructor course SEO URL → academy page (301 redirect)
+[[redirects]]
+  from = "/pilates-instructor-course-amsterdam"
+  to = "/academy"
+  status = 301
+
 # SPA redirect for React Router - MUST come before any other redirects
 [[redirects]]
   from = "/*"

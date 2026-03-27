@@ -174,7 +174,7 @@ export const Home: React.FC = () => {
             </p>
             <p>
               We offer one-on-one private sessions where you receive 100% of your instructor's attention. 
-              We also offer intimate small group classes (maximum 5 people) for those who enjoy training 
+              We also offer intimate small group classes (maximum 5 people) for those who enjoy training
               with friends. Each program is customized to build strength, improve flexibility, or achieve your wellness goals.
             </p>
             <p>

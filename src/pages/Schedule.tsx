@@ -44,12 +44,12 @@ export const Schedule: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Book Classes - Pilates, TRX & Training | PT Studio 7 Museumplein Amsterdam"
-        description="Book Pilates, TRX, Strength Training at PT Studio 7 Museumplein. Small group classes (max 5) & private classes with expert trainers. 45-min classes. Premium location across from Stedelijk Museum."
+        title="Class Schedule & Booking | PT Studio 7 Amsterdam"
+        description="Book your Reformer Pilates class at PT Studio 7 Museumplein. View our weekly schedule for private sessions and small group classes (max 5 people)."
         keywords="Pilates boeken Amsterdam, Pilates rooster Amsterdam, Pilates reserveren, TRX boeken Amsterdam, les boeken Museumplein, Pilates schedule Amsterdam, groepsles boeken"
         canonical="https://www.pt7.nl/schedule"
-        ogTitle="Book Your Class | Pilates, TRX & Training at PT Studio 7 Museumplein"
-        ogDescription="Reserve your spot in small group classes (max 5) or private classes. Pilates, TRX, Strength Training. Expert trainers. Premium Museumplein location."
+        ogTitle="Class Schedule & Booking | PT Studio 7 Amsterdam"
+        ogDescription="Book your Reformer Pilates class at PT Studio 7 Museumplein. Weekly schedule for private sessions and small group classes (max 5 people)."
       />
       <Breadcrumbs items={[{ name: 'Book Classes', path: '/schedule' }]} />
 
