@@ -16,12 +16,6 @@ export const WorkoutDetail: React.FC = () => {
     }
   }, [workout]);
 
-  useEffect(() => {
-    if (workout?.extraCss === 'SummerShredLab') {
-      import('../styles/SummerShredLab.css');
-    }
-  }, [workout]);
-
   if (!workout) {
     return <Navigate to="/" replace />;
   }

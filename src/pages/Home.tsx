@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
-import { SummerShredModal } from '../components/SummerShredModal';
 import { StructuredData } from '../components/StructuredData';
 import { trackPageView, trackPhoneClick, trackEmailClick, trackSocialClick } from '../utils/gtmTracking';
 import { trackFBPageView, trackFBPhoneClick, trackFBEmailClick, trackFBWhatsAppClick, trackFBBookingClick } from '../utils/fbPixelTracking';
@@ -89,19 +88,6 @@ export const Home: React.FC = () => {
 
   return (
     <>
-      <SummerShredModal />
-      {/* Promotional Banner for Pilates Instructor Course */}
-      <div className="promo-banner">
-        <div className="promo-content">
-          <span className="promo-text">
-            <strong>Summer Shred Lab</strong> — 6-Week HIIT Program | Small Groups (Max 3)
-          </span>
-          <Link to="/workouts/summer-shred-lab" className="promo-cta">
-            Join Now →
-          </Link>
-        </div>
-      </div>
-
       <SEOHead
         title="Pilates & Personal Training Amsterdam | Boutique Studio Museumplein | PT Studio 7"
         description="Amsterdam's most personal Reformer Pilates studio — max 5 per class, at Museumplein. Private sessions & small groups with certified instructors. 15+ years expertise. Book now."

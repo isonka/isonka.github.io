@@ -38,12 +38,4 @@ export const workouts: Workout[] = [
     title: 'Cardio',
     description: 'High-intensity cardio workouts to boost endurance and burn calories',
   },
-  {
-    to: '/workouts/summer-shred-lab',
-    src: '/assets/images/summer-shred-lab-poster.webp',
-    alt: 'Summer Shred Lab',
-    title: 'Summer Shred Lab',
-    description: '6-week body transformation — Skillrun, RowErg & Nike Strength. Max 3 people.',
-    style: { objectPosition: 'center' },
-  },
 ];
