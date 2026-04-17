@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "name": "PT Studio 7 Agent Resource Catalog",
+  "resources": [
+    {
+      "href": "/llms.txt",
+      "rel": "service-doc",
+      "type": "text/plain",
+      "title": "LLM-readable service documentation"
+    },
+    {
+      "href": "/sitemap.xml",
+      "rel": "service-doc",
+      "type": "application/xml",
+      "title": "Public URL inventory"
+    }
+  ]
+}

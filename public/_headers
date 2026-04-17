@@ -1,6 +1,21 @@
 # Cache-Control headers for Netlify/Vercel/Modern hosting
 # This file optimizes caching for static assets
 
+# Homepage discovery links for AI agents (RFC 8288 / RFC 9727)
+/
+  Link: </.well-known/api-catalog>; rel="api-catalog"
+  Link: </llms.txt>; rel="service-doc"; type="text/plain"
+
+/index.html
+  Link: </.well-known/api-catalog>; rel="api-catalog"
+  Link: </llms.txt>; rel="service-doc"; type="text/plain"
+  Vary: Accept
+
+/index.md
+  Content-Type: text/markdown; charset=UTF-8
+  X-Markdown-Tokens: available
+  Vary: Accept
+
 # HTML files - short cache (1 hour) with revalidation
 /*.html
   Cache-Control: public, max-age=3600, must-revalidate

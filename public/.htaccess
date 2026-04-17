@@ -2,6 +2,12 @@
 # Optimize caching for better performance and Core Web Vitals
 
 <IfModule mod_headers.c>
+  # Homepage discovery links for AI agents (RFC 8288 / RFC 9727)
+  <FilesMatch "^index\.html$">
+    Header append Link "</.well-known/api-catalog>; rel=\"api-catalog\""
+    Header append Link "</llms.txt>; rel=\"service-doc\"; type=\"text/plain\""
+  </FilesMatch>
+
   # HTML - Short cache with revalidation (1 hour)
   <FilesMatch "\.(html|htm)$">
     Header set Cache-Control "public, max-age=3600, must-revalidate"
@@ -61,6 +67,10 @@
   RewriteEngine On
   RewriteBase /
   RewriteRule ^index\.html$ - [L]
+  # Agent markdown negotiation: if client prefers Markdown, serve /index.md for homepage.
+  RewriteCond %{REQUEST_URI} ^/$
+  RewriteCond %{HTTP:Accept} text/markdown [NC]
+  RewriteRule ^$ /index.md [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
@@ -72,5 +82,14 @@
   Header set X-Frame-Options "SAMEORIGIN"
   Header set X-XSS-Protection "1; mode=block"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Markdown response headers for agent-friendly homepage rendering
+<IfModule mod_headers.c>
+  <Files "index.md">
+    Header set Content-Type "text/markdown; charset=UTF-8"
+    Header set X-Markdown-Tokens "available"
+    Header merge Vary "Accept"
+  </Files>
 </IfModule>
 
