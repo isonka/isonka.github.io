@@ -1,0 +1,27 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "PT Studio 7 Public API",
+    "version": "1.0.0",
+    "description": "Read-only metadata endpoints for agent discovery and site status."
+  },
+  "servers": [
+    {
+      "url": "https://www.pt7.nl",
+      "description": "Production"
+    }
+  ],
+  "paths": {
+    "/.well-known/api-status": {
+      "get": {
+        "summary": "Get API status",
+        "operationId": "getApiStatus",
+        "responses": {
+          "200": {
+            "description": "Service status payload"
+          }
+        }
+      }
+    }
+  }
+}

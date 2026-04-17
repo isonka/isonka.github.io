@@ -16,6 +16,24 @@
   X-Markdown-Tokens: available
   Vary: Accept
 
+/.well-known/api-catalog
+  Content-Type: application/linkset+json; charset=UTF-8
+
+/.well-known/openid-configuration
+  Content-Type: application/json; charset=UTF-8
+
+/.well-known/oauth-authorization-server
+  Content-Type: application/json; charset=UTF-8
+
+/.well-known/oauth-protected-resource
+  Content-Type: application/json; charset=UTF-8
+
+/.well-known/mcp/server-card.json
+  Content-Type: application/json; charset=UTF-8
+
+/.well-known/agent-skills/index.json
+  Content-Type: application/json; charset=UTF-8
+
 # HTML files - short cache (1 hour) with revalidation
 /*.html
   Cache-Control: public, max-age=3600, must-revalidate

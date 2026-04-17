@@ -1,18 +1,28 @@
 {
-  "version": "1.0",
-  "name": "PT Studio 7 Agent Resource Catalog",
-  "resources": [
+  "linkset": [
     {
-      "href": "/llms.txt",
-      "rel": "service-doc",
-      "type": "text/plain",
-      "title": "LLM-readable service documentation"
-    },
-    {
-      "href": "/sitemap.xml",
-      "rel": "service-doc",
-      "type": "application/xml",
-      "title": "Public URL inventory"
+      "anchor": "https://www.pt7.nl/api",
+      "service-desc": [
+        {
+          "href": "https://www.pt7.nl/.well-known/openapi.json",
+          "type": "application/vnd.oai.openapi+json;version=3.1",
+          "title": "PT Studio 7 Public API Specification"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://www.pt7.nl/.well-known/api-docs",
+          "type": "text/markdown",
+          "title": "PT Studio 7 API Documentation"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://www.pt7.nl/.well-known/api-status",
+          "type": "application/json",
+          "title": "PT Studio 7 API Health Endpoint"
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,16 @@
+# PT Studio 7 Public API Docs
+
+This site exposes lightweight machine-readable endpoints for automated discovery.
+
+## Endpoints
+
+- `GET /.well-known/api-catalog`
+  - Returns RFC 9727 API catalog in RFC 9264 linkset format.
+- `GET /.well-known/openapi.json`
+  - OpenAPI 3.1 specification for discovery endpoints.
+- `GET /.well-known/api-status`
+  - Basic service health and metadata.
+
+## Authentication
+
+Discovery endpoints are public and do not require authentication.

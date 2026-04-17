@@ -1,0 +1,10 @@
+{
+  "resource": "https://www.pt7.nl/api",
+  "authorization_servers": [
+    "https://www.pt7.nl"
+  ],
+  "scopes_supported": [
+    "api:read",
+    "api:status"
+  ]
+}

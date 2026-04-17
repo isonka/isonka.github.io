@@ -1,0 +1,15 @@
+{
+  "serverInfo": {
+    "name": "pt7-site-tools",
+    "version": "1.0.0"
+  },
+  "transports": [
+    {
+      "type": "webmcp",
+      "url": "https://www.pt7.nl/"
+    }
+  ],
+  "capabilities": {
+    "tools": true
+  }
+}
