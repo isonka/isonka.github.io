@@ -230,6 +230,8 @@ async function prerenderRoutes() {
   const previewPort = await findAvailablePort();
   const server = await startPreviewServer(previewPort);
   let browser;
+  let successCount = 0;
+  let skippedCount = 0;
 
   try {
     browser = await launchBrowser();
@@ -246,14 +248,21 @@ async function prerenderRoutes() {
     });
 
     for (const route of routes) {
-      const url = `${baseUrl}${route}`;
-      await page.goto(url, { waitUntil: 'networkidle2' });
-      await page.waitForSelector('#root *', { timeout: 30000 });
-      const html = await page.content();
-      const outputFile = outputPathForRoute(route);
-      fs.mkdirSync(path.dirname(outputFile), { recursive: true });
-      fs.writeFileSync(outputFile, html);
-      console.log(`✓ Prerendered: ${route}`);
+      try {
+        const url = `${baseUrl}${route}`;
+        await page.goto(url, { waitUntil: 'networkidle2' });
+        await page.waitForSelector('#root *', { timeout: 30000 });
+        const html = await page.content();
+        const outputFile = outputPathForRoute(route);
+        fs.mkdirSync(path.dirname(outputFile), { recursive: true });
+        fs.writeFileSync(outputFile, html);
+        successCount += 1;
+        console.log(`✓ Prerendered: ${route}`);
+      } catch (error) {
+        skippedCount += 1;
+        const message = error instanceof Error ? error.message : String(error);
+        console.warn(`⚠ Skipped prerender for ${route}: ${message}`);
+      }
     }
   } finally {
     if (browser) {
@@ -261,12 +270,17 @@ async function prerenderRoutes() {
     }
     await stopProcess(server);
   }
+
+  if (skippedCount > 0) {
+    console.log(`\n⚠ Prerender completed with ${skippedCount} skipped route(s).`);
+    console.log(`ℹ️  Successfully prerendered ${successCount}/${routes.length} routes.`);
+  } else {
+    console.log(`\n✅ Prerendered ${successCount}/${routes.length} routes.`);
+  }
 }
 
 prerenderRoutes()
-  .then(() => {
-    console.log(`\n✅ Prerendered ${routes.length} routes to static HTML`);
-  })
+  .then(() => {})
   .catch((error) => {
     console.error('\n❌ Static prerender failed:', error);
     process.exit(1);
