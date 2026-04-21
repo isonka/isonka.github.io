@@ -280,7 +280,10 @@ async function prerenderRoutes() {
 }
 
 prerenderRoutes()
-  .then(() => {})
+  .then(() => {
+    // Ensure CI does not wait on lingering event-loop handles.
+    process.exit(0);
+  })
   .catch((error) => {
     console.error('\n❌ Static prerender failed:', error);
     process.exit(1);

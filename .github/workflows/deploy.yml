@@ -46,7 +46,11 @@ jobs:
         run: npx puppeteer browsers install chrome
       
       - name: Build
-        run: npm run build
+        timeout-minutes: 12
+        run: |
+          echo "▶ Build step started"
+          npm run build
+          echo "✅ Build step finished"
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
