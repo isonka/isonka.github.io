@@ -103,7 +103,7 @@ function startPreviewServer(port) {
     const server = spawn(
       process.platform === 'win32' ? 'npm.cmd' : 'npm',
       ['run', 'preview', '--', '--host', host, '--port', String(port), '--strictPort'],
-      { cwd: projectRoot, stdio: ['ignore', 'pipe', 'pipe'] }
+      { cwd: projectRoot, stdio: ['ignore', 'ignore', 'pipe'] }
     );
 
     const stderrChunks = [];
@@ -129,6 +129,44 @@ function startPreviewServer(port) {
         server.kill('SIGTERM');
         reject(error);
       });
+  });
+}
+
+function stopProcess(child, timeoutMs = 10000) {
+  return new Promise((resolve) => {
+    if (!child || child.exitCode !== null || child.killed) {
+      resolve();
+      return;
+    }
+
+    let done = false;
+    const finish = () => {
+      if (!done) {
+        done = true;
+        resolve();
+      }
+    };
+
+    const timer = setTimeout(() => {
+      try {
+        child.kill('SIGKILL');
+      } catch {
+        // ignore
+      }
+      finish();
+    }, timeoutMs);
+
+    child.once('close', () => {
+      clearTimeout(timer);
+      finish();
+    });
+
+    try {
+      child.kill('SIGTERM');
+    } catch {
+      clearTimeout(timer);
+      finish();
+    }
   });
 }
 
@@ -221,7 +259,7 @@ async function prerenderRoutes() {
     if (browser) {
       await browser.close();
     }
-    server.kill('SIGTERM');
+    await stopProcess(server);
   }
 }
 
