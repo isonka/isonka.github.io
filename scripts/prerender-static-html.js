@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { spawn } from 'child_process';
 import net from 'net';
+import http from 'http';
 import puppeteer from 'puppeteer';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -67,6 +68,35 @@ function findAvailablePort(start = 4173) {
   });
 }
 
+function wait(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function pingPreviewServer(url) {
+  return new Promise((resolve) => {
+    const req = http.get(url, (res) => {
+      res.resume();
+      resolve(res.statusCode === 200);
+    });
+    req.on('error', () => resolve(false));
+    req.setTimeout(2000, () => {
+      req.destroy();
+      resolve(false);
+    });
+  });
+}
+
+async function waitForPreviewServer(url, timeoutMs = 60000) {
+  const startedAt = Date.now();
+  while (Date.now() - startedAt < timeoutMs) {
+    if (await pingPreviewServer(url)) {
+      return;
+    }
+    await wait(500);
+  }
+  throw new Error(`Preview server did not become ready within ${timeoutMs}ms (${url})`);
+}
+
 function startPreviewServer(port) {
   return new Promise((resolve, reject) => {
     baseUrl = `http://${host}:${port}`;
@@ -76,23 +106,29 @@ function startPreviewServer(port) {
       { cwd: projectRoot, stdio: ['ignore', 'pipe', 'pipe'] }
     );
 
-    let resolved = false;
-    const onData = (data) => {
-      const text = data.toString();
-      if (!resolved && text.includes(baseUrl)) {
-        resolved = true;
-        resolve(server);
-      }
-    };
+    const stderrChunks = [];
+    server.stderr.on('data', (data) => {
+      stderrChunks.push(data.toString());
+      if (stderrChunks.length > 40) stderrChunks.shift();
+    });
 
-    server.stdout.on('data', onData);
-    server.stderr.on('data', onData);
     server.on('error', reject);
     server.on('exit', (code) => {
-      if (!resolved) {
-        reject(new Error(`Preview server exited before starting (code ${code ?? 'unknown'})`));
-      }
+      const details = stderrChunks.join('').trim();
+      reject(
+        new Error(
+          `Preview server exited before starting (code ${code ?? 'unknown'})` +
+          (details ? `\n${details}` : '')
+        )
+      );
     });
+
+    waitForPreviewServer(baseUrl)
+      .then(() => resolve(server))
+      .catch((error) => {
+        server.kill('SIGTERM');
+        reject(error);
+      });
   });
 }
 
