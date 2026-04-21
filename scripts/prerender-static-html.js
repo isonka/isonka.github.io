@@ -129,8 +129,17 @@ function isMissingChromeError(error) {
 }
 
 async function launchBrowser() {
+  const launchOptions = {
+    headless: true,
+    ...(process.env.CI === 'true'
+      ? {
+          args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        }
+      : {}),
+  };
+
   try {
-    return await puppeteer.launch({ headless: true });
+    return await puppeteer.launch(launchOptions);
   } catch (error) {
     if (!isMissingChromeError(error)) {
       throw error;
@@ -139,7 +148,7 @@ async function launchBrowser() {
     const npxCmd = process.platform === 'win32' ? 'npx.cmd' : 'npx';
     await runCommand(npxCmd, ['puppeteer', 'browsers', 'install', 'chrome']);
     console.log('ℹ️  Chrome installation complete. Retrying prerender...');
-    return await puppeteer.launch({ headless: true });
+    return await puppeteer.launch(launchOptions);
   }
 }
 
