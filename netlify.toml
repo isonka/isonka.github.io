@@ -1,6 +1,3 @@
-# Netlify Configuration for PT Studio 7
-# Optimized for caching and performance
-
 [build]
   publish = "dist"
   command = "npm run build"
@@ -8,8 +5,6 @@
 [build.environment]
   NODE_VERSION = "20.19.1"
 
-# Domain consolidation: redirect ptstudio7amsterdam.nl to pt7.nl
-# NOTE: ptstudio7amsterdam.nl must be added as a domain alias in the Netlify dashboard for this to work
 [[redirects]]
   from = "https://www.ptstudio7amsterdam.nl/*"
   to = "https://pt7.nl/:splat"
@@ -22,19 +17,16 @@
   status = 301
   force = true
 
-# Pilates instructor course SEO URL → academy page (301 redirect)
 [[redirects]]
   from = "/pilates-instructor-course-amsterdam"
   to = "/academy"
   status = 301
 
-# SPA redirect for React Router - MUST come before any other redirects
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-# Cache headers for optimal performance
 [[headers]]
   for = "/*.html"
   [headers.values]
@@ -78,4 +70,3 @@
   for = "/robots.txt"
   [headers.values]
     Cache-Control = "public, max-age=86400"
-

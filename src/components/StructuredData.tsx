@@ -62,7 +62,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
     if (type === 'LocalBusiness' && data?.reviews) {
       schema = {
         '@context': 'https://schema.org',
-        '@type': 'LocalBusiness',
+        '@type': ['LocalBusiness', 'SportsActivityLocation'],
         '@id': 'https://www.pt7.nl/#localbusiness',
         name: 'PT Studio 7 Amsterdam',
         image: 'https://www.pt7.nl/assets/images/studio.jpg',
@@ -81,6 +81,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
           latitude: 52.3573141,
           longitude: 4.8762787,
         },
+        sport: ['Pilates', 'Reformer Pilates', 'TRX', 'Strength Training', 'Cardio Fitness'],
         openingHoursSpecification: [
           {
             '@type': 'OpeningHoursSpecification',
