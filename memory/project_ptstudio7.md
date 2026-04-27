@@ -25,7 +25,7 @@ PT Studio 7 Amsterdam is a boutique Reformer Pilates studio website at Van Baerl
 - No WebP images — all images are JPG/PNG/JPEG in public/assets/images/
 - Meta Pixel loads synchronously at top of <head> (render-blocking — should be deferred)
 - ViteImageOptimizer only optimizes assets imported in JS/CSS, NOT the public/ folder images
-- Max 4/5 inconsistency FIXED (2026-03-27) — homepage meta description intentionally kept at "max 5" per client instruction; all other content updated to "max 4"
+- Max 4/5 inconsistency FIXED (2026-03-27) — homepage meta description intentionally kept at "max 5" per client instruction; all other content updated to "max 5"
 - Only en + x-default hreflang, missing nl hreflang
 - No manifest.json (PWA not configured)
 - ptstudio7amsterdam.nl domain redirect added to netlify.toml — requires domain alias setup in Netlify dashboard

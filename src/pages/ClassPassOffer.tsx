@@ -7,12 +7,12 @@ export const ClassPassOffer = () => {
   return (
     <>
       <SEOHead
-        title="ClassPass Members Exclusive Offer | PT Studio 7 Amsterdam"
-        description="Special offer for ClassPass members. Save up to 40% when you join PT Studio 7 directly. Same great Pilates classes, better value, more perks."
+        title="ClassPass Transition Offer | PT Studio 7 Amsterdam"
+        description="A clear transition offer for ClassPass clients moving to PT Studio 7 direct pricing. Compare costs and claim 20% off eligible first purchases."
         keywords="ClassPass Amsterdam, Pilates ClassPass, ClassPass offer, Pilates membership Amsterdam"
         canonical="https://www.pt7.nl/classpass-offer"
-        ogTitle="ClassPass Members: Exclusive Offer Inside"
-        ogDescription="Stop paying premium ClassPass credits. Join PT Studio 7 directly and save up to 40% per class."
+        ogTitle="ClassPass Clients: PT Studio 7 Direct Offer"
+        ogDescription="Compare ClassPass costs with PT Studio 7 direct pricing and claim your transition discount."
       />
       <Breadcrumbs items={[{ name: 'ClassPass Offer', path: '/classpass-offer' }]} />
 
@@ -21,20 +21,20 @@ export const ClassPassOffer = () => {
         <section className="cp-hero">
           <div className="cp-hero-overlay">
             <div className="cp-hero-content">
-              <span className="cp-badge">ClassPass Members Only</span>
-              <h1>Love Our Classes?<br />Get More for Less.</h1>
+              <span className="cp-badge">For ClassPass Clients</span>
+              <h1>Prefer PT Studio 7?<br />Book Direct.</h1>
               <p className="cp-hero-subtitle">
-                You've discovered PT Studio 7 through ClassPass. Now discover how much you can save by joining us directly.
+                If you already train with us through ClassPass, this page shows the direct pricing difference and your transition discount.
               </p>
-              <a href="#offer" className="cp-cta-button">See Your Savings</a>
+              <a href="#offer" className="cp-cta-button hero-cta">View Offer Details</a>
             </div>
           </div>
         </section>
 
         {/* Price Comparison */}
         <section className="cp-comparison" id="offer">
-          <h2>The Real Cost Comparison</h2>
-          <p className="section-subtitle">Our classes cost 13-20 credits on ClassPass. Here's what that really means.</p>
+          <h2>Cost Comparison</h2>
+          <p className="section-subtitle">Our classes typically cost 13-20 credits on ClassPass. Here is a direct monthly comparison.</p>
           
           <div className="comparison-grid">
             <div className="comparison-card classpass-card">
@@ -66,10 +66,9 @@ export const ClassPassOffer = () => {
               </div>
             </div>
 
-            <div className="comparison-card direct-card featured">
-              <div className="card-ribbon">Save €13+</div>
+            <div className="comparison-card direct-card">
               <div className="card-header">
-                <img src="/assets/images/pt7logo.webp" alt="PT Studio 7" className="pt7-logo" />
+                <img src="/assets/images/ts_logo.png" alt="PT Studio 7" className="pt7-logo" />
                 <span className="card-label">Direct Membership (4 classes/month)</span>
               </div>
               <div className="card-body">
@@ -99,132 +98,126 @@ export const ClassPassOffer = () => {
 
           <div className="savings-highlight">
             <span className="savings-number">€156/year</span>
-            <span className="savings-text">saved with direct membership (€13/month × 12)</span>
+            <span className="savings-text">estimated yearly savings on a 4-class monthly plan</span>
           </div>
         </section>
 
         {/* Exclusive Offer */}
         <section className="cp-exclusive-offer">
           <div className="offer-container">
-            <span className="offer-badge">ClassPass Converter Special</span>
-            <h2>Your First Month: 20% Off</h2>
+            <span className="offer-badge">Transition Offer</span>
+            <h2>20% Off Your First Eligible Purchase</h2>
             <p className="offer-description">
-              Switch from ClassPass to our 4-class or 8-class monthly membership and get <strong>20% off your first month</strong>.
+              Switch from ClassPass and get <strong>20% off your first month</strong> on all monthly plans, plus <strong>20% off your first purchase</strong> on class packs and private, couple, or trio packages.
             </p>
             <div className="offer-details">
               <div className="offer-item">
                 <h4>4 Classes/Month</h4>
                 <p className="original-price">€86</p>
                 <p className="offer-price">€69</p>
-                <p className="per-class">Just €17.25/class</p>
+                <p className="per-class">€17.25 per class</p>
               </div>
               <div className="offer-item">
                 <h4>8 Classes/Month</h4>
                 <p className="original-price">€160</p>
                 <p className="offer-price">€128</p>
-                <p className="per-class">Just €16/class</p>
+                <p className="per-class">€16 per class</p>
               </div>
             </div>
-            <p className="offer-note">Contact us to get your discount code. Valid for new direct members only.</p>
-            <Link to="/pricing" className="cp-cta-button">View All Membership Options</Link>
+            <p className="offer-note">Contact us for your discount code. Available for new direct clients on eligible first purchases.</p>
+            <Link to="/pricing" className="cp-cta-button offer-cta">View All Pricing Options</Link>
           </div>
         </section>
 
         {/* Why Switch */}
         <section className="cp-benefits">
-          <h2>Why Members Love Being Direct</h2>
+          <h2>Why Clients Switch to Direct Booking</h2>
           <div className="benefits-grid">
             <div className="benefit-card">
-              <span className="benefit-icon">📅</span>
+              <span className="benefit-icon">Booking</span>
               <h3>Priority Booking</h3>
-              <p>Book classes before they open to ClassPass. Never miss your favorite time slot again.</p>
+              <p>Access classes earlier than ClassPass release windows.</p>
             </div>
             <div className="benefit-card">
-              <span className="benefit-icon">👩‍🏫</span>
+              <span className="benefit-icon">Coaching</span>
               <h3>Your Instructor Knows You</h3>
-              <p>Build a real relationship. Your instructor tracks your progress and tailors corrections to you.</p>
+              <p>Train more consistently with instructors who know your history and goals.</p>
             </div>
             <div className="benefit-card">
-              <span className="benefit-icon">📈</span>
+              <span className="benefit-icon">Progress</span>
               <h3>Track Your Progress</h3>
-              <p>Your instructor remembers your history and tracks your improvement over time.</p>
+              <p>Build continuity across sessions instead of starting from zero each visit.</p>
             </div>
             <div className="benefit-card">
-              <span className="benefit-icon">🎯</span>
+              <span className="benefit-icon">Results</span>
               <h3>Real Progress</h3>
-              <p>When you commit to one studio, you see real results. Our members transform in 8-12 weeks.</p>
+              <p>Consistent training in one studio usually leads to better long-term results.</p>
             </div>
             <div className="benefit-card">
-              <span className="benefit-icon">👥</span>
+              <span className="benefit-icon">Community</span>
               <h3>Community</h3>
-              <p>Join our WhatsApp group, member events, and workshops. You're not just a booking—you're family.</p>
+              <p>Join member updates, workshops, and events at the studio.</p>
             </div>
             <div className="benefit-card">
-              <span className="benefit-icon">💰</span>
+              <span className="benefit-icon">Value</span>
               <h3>Better Value</h3>
-              <p>More classes, lower price, better experience. It's a no-brainer.</p>
+              <p>Direct plans are often more predictable in both availability and cost.</p>
             </div>
           </div>
         </section>
 
-        {/* Testimonials */}
+        {/* Client Observations */}
         <section className="cp-testimonials">
-          <h2>From ClassPass to Committed</h2>
+          <h2>What We Hear Most Often</h2>
           <div className="testimonials-grid">
             <div className="testimonial-card">
               <p className="testimonial-text">
-                "I was hopping between 5 different studios on ClassPass. When I found PT Studio 7, I knew I had to commit. 
-                The small groups (max 5!) and personal attention are worth so much more than the 'variety' I thought I needed."
+                More stable scheduling makes it easier to train consistently.
               </p>
-              <p className="testimonial-author">— Sarah M., Member since 2025</p>
             </div>
             <div className="testimonial-card">
               <p className="testimonial-text">
-                "With ClassPass I was always scrambling for spots and never saw the same instructor twice. 
-                Now I have my regular slot, my instructor knows my weak points, and I've made actual progress."
+                Working with familiar instructors improves continuity from week to week.
               </p>
-              <p className="testimonial-author">— Marc V., Former ClassPass user</p>
             </div>
             <div className="testimonial-card">
               <p className="testimonial-text">
-                "The booking stress alone was worth switching. With ClassPass I'd refresh at midnight hoping for a spot. 
-                Now I book a week in advance with no drama."
+                Direct plans feel simpler for clients who already train here regularly.
               </p>
-              <p className="testimonial-author">— Anna K., Member since 2025</p>
             </div>
           </div>
         </section>
 
         {/* FAQ */}
         <section className="cp-faq">
-          <h2>Questions?</h2>
+          <h2>Frequently Asked Questions</h2>
           <div className="faq-grid">
             <div className="faq-item">
               <h4>Can I still use ClassPass occasionally?</h4>
-              <p>Of course! But once you see the value of direct membership, you probably won't want to.</p>
+              <p>Yes. Many clients use direct plans as their main option and keep ClassPass for occasional flexibility.</p>
             </div>
             <div className="faq-item">
               <h4>What if I'm not ready to commit?</h4>
-              <p>Try our 5-class pack (€35/class, valid 5 weeks). No subscription, no commitment. See if we're the right fit.</p>
+              <p>You can start with a class pack. It has no recurring subscription and lets you test the studio rhythm first.</p>
             </div>
             <div className="faq-item">
               <h4>How do I claim the 20% off?</h4>
-              <p>Email us at info@pt7.nl or ask at the studio to get your discount code.</p>
+              <p>Email us at info@pt7.nl or ask at the studio to get your discount code for eligible monthly plans and first-time package purchases.</p>
             </div>
             <div className="faq-item">
               <h4>Is the class experience different?</h4>
-              <p>The class is the same high quality. But as a member, you get priority booking, progress tracking, and instructors who know your goals.</p>
+              <p>The class method is the same. Direct clients mainly benefit from earlier booking access and better continuity with instructors.</p>
             </div>
           </div>
         </section>
 
         {/* Final CTA */}
         <section className="cp-final-cta">
-          <h2>Ready to Make the Switch?</h2>
-          <p>Join the members who've upgraded from ClassPass credits to real community.</p>
+          <h2>Ready to Switch to Direct?</h2>
+          <p>Review pricing options and choose the format that fits your schedule.</p>
           <div className="cta-buttons">
-            <Link to="/pricing" className="cp-cta-button primary">View Membership Options</Link>
-            <Link to="/schedule" className="cp-cta-button secondary">Try a Class First</Link>
+            <Link to="/pricing" className="cp-cta-button primary">View Pricing Options</Link>
+            <Link to="/schedule" className="cp-cta-button secondary">View Schedule</Link>
           </div>
         </section>
       </div>

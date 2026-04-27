@@ -8,7 +8,7 @@
 .cp-hero {
   position: relative;
   min-height: 70vh;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background: #1f2a37;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,16 +25,19 @@
 }
 
 .cp-badge {
-  display: inline-block;
-  background: #ffd700;
-  color: #1a1a2e;
-  padding: 8px 20px;
-  border-radius: var(--radius-pill);
-  font-weight: 700;
-  font-size: 0.9rem;
+  display: block;
+  width: fit-content;
+  background: transparent;
+  color: #e5ebf2;
+  padding: 0;
+  border-radius: 0;
+  font-weight: 600;
+  font-size: 0.92rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 24px;
+  letter-spacing: 0.1em;
+  margin: 0 auto 18px;
+  border: none;
+  opacity: 0.92;
 }
 
 .cp-hero h1 {
@@ -54,31 +57,29 @@
 
 .cp-cta-button {
   display: inline-block;
-  background: #ffd700;
-  color: #1a1a2e;
-  padding: 16px 40px;
+  background: #e9edf2;
+  color: #1f2a37;
+  padding: 14px 28px;
   border-radius: var(--radius-pill);
-  font-weight: 700;
-  font-size: 1.1rem;
+  font-weight: 600;
+  font-size: 1rem;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .cp-cta-button:hover {
-  background: #ffed4a;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+  background: #dce3eb;
 }
 
 .cp-cta-button.secondary {
   background: transparent;
-  border: 2px solid #ffd700;
-  color: #ffd700;
+  border: 1px solid #c4ced9;
+  color: #4a5a6a;
 }
 
 .cp-cta-button.secondary:hover {
-  background: #ffd700;
-  color: #1a1a2e;
+  background: #eff3f7;
+  color: #364657;
 }
 
 /* Comparison Section */
@@ -116,23 +117,6 @@
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   position: relative;
-}
-
-.comparison-card.featured {
-  border: 3px solid #ffd700;
-  transform: scale(1.02);
-}
-
-.card-ribbon {
-  position: absolute;
-  top: 20px;
-  right: -35px;
-  background: #ffd700;
-  color: #1a1a2e;
-  padding: 8px 40px;
-  font-weight: 700;
-  font-size: 0.85rem;
-  transform: rotate(45deg);
 }
 
 .card-header {
@@ -198,19 +182,19 @@
 }
 
 .price-row.highlight {
-  background: #fffbeb;
+  background: #f5f8fb;
   margin: 0 -24px;
   padding: 12px 24px;
 }
 
 .direct-card .card-header {
-  background: #fffbeb;
+  background: #f5f8fb;
 }
 
 .savings-highlight {
   margin-top: 48px;
-  background: linear-gradient(135deg, #ffd700, #ffed4a);
-  color: #1a1a2e;
+  background: #eef3f8;
+  color: #1f2a37;
   padding: 32px;
   border-radius: var(--radius-xl);
   max-width: 500px;
@@ -232,8 +216,8 @@
 /* Exclusive Offer Section */
 .cp-exclusive-offer {
   padding: 80px 20px;
-  background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
-  color: white;
+  background: #2a3644;
+  color: #f5f7fa;
   text-align: center;
 }
 
@@ -243,14 +227,40 @@
 }
 
 .offer-badge {
-  display: inline-block;
-  background: rgba(255, 215, 0, 0.2);
-  color: #ffd700;
-  padding: 8px 20px;
-  border-radius: var(--radius-pill);
+  display: block;
+  width: fit-content;
+  background: transparent;
+  color: #d7e0ea;
+  padding: 0;
+  border-radius: 0;
+  border: none;
   font-weight: 600;
-  font-size: 0.9rem;
-  margin-bottom: 20px;
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 auto 18px;
+  opacity: 0.92;
+}
+
+.cp-cta-button.hero-cta {
+  background: #e9edf2;
+  color: #1f2a37;
+  border: 1px solid transparent;
+}
+
+.cp-cta-button.hero-cta:hover {
+  background: #dce3eb;
+}
+
+.cp-cta-button.offer-cta {
+  background: transparent;
+  color: #f5f7fa;
+  border: 1px solid rgba(245, 247, 250, 0.6);
+}
+
+.cp-cta-button.offer-cta:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
 }
 
 .cp-exclusive-offer h2 {
@@ -280,7 +290,7 @@
 .offer-item h4 {
   font-size: 1.3rem;
   margin: 0 0 16px;
-  color: #ffd700;
+  color: #ffffff;
 }
 
 .original-price {
@@ -294,7 +304,7 @@
   font-size: 2.5rem;
   font-weight: 800;
   margin: 8px 0;
-  color: #ffd700;
+  color: #ffffff;
 }
 
 .per-class {
@@ -339,9 +349,16 @@
 }
 
 .benefit-icon {
-  font-size: 2.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #0f3460;
+  background: #eef3f9;
+  border-radius: var(--radius-pill);
+  padding: 6px 10px;
+  display: inline-block;
   margin-bottom: 16px;
-  display: block;
 }
 
 .benefit-card h3 {
@@ -387,15 +404,8 @@
 
 .testimonial-text {
   font-size: 1.05rem;
-  line-height: 1.7;
+  line-height: 1.65;
   color: #333;
-  margin: 0 0 16px;
-  font-style: italic;
-}
-
-.testimonial-author {
-  font-weight: 600;
-  color: #666;
   margin: 0;
 }
 
@@ -436,7 +446,7 @@
 /* Final CTA Section */
 .cp-final-cta {
   padding: 80px 20px;
-  background: linear-gradient(135deg, #ffd700, #ffed4a);
+  background: #f2f5f8;
   text-align: center;
 }
 
@@ -460,23 +470,23 @@
 }
 
 .cp-final-cta .cp-cta-button.primary {
-  background: #1a1a2e;
-  color: white;
+  background: #2a3644;
+  color: #ffffff;
 }
 
 .cp-final-cta .cp-cta-button.primary:hover {
-  background: #0f3460;
+  background: #1f2a37;
 }
 
 .cp-final-cta .cp-cta-button.secondary {
   background: transparent;
-  border: 2px solid #1a1a2e;
-  color: #1a1a2e;
+  border: 1px solid #2a3644;
+  color: #2a3644;
 }
 
 .cp-final-cta .cp-cta-button.secondary:hover {
-  background: #1a1a2e;
-  color: white;
+  background: #e3e9ef;
+  color: #1f2a37;
 }
 
 /* Responsive */
@@ -496,16 +506,6 @@
   .cp-faq h2,
   .cp-final-cta h2 {
     font-size: 2rem;
-  }
-
-  .comparison-card.featured {
-    transform: none;
-  }
-
-  .card-ribbon {
-    font-size: 0.75rem;
-    padding: 6px 35px;
-    right: -40px;
   }
 
   .savings-number {
