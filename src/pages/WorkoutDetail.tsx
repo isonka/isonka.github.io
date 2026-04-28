@@ -88,9 +88,9 @@ export const WorkoutDetail: React.FC = () => {
             />
             <div className="ssl-hero-cta">
               {isAnchorLink(workout.hero.ctaTo) ? (
-                <a href={workout.hero.ctaTo} className="cta-button">{workout.hero.ctaLabel}</a>
+                <a href={workout.hero.ctaTo} className="cta-button primary">{workout.hero.ctaLabel}</a>
               ) : (
-                <Link to={workout.hero.ctaTo} className="cta-button">{workout.hero.ctaLabel}</Link>
+                <Link to={workout.hero.ctaTo} className="cta-button primary">{workout.hero.ctaLabel}</Link>
               )}
             </div>
           </section>
@@ -100,7 +100,7 @@ export const WorkoutDetail: React.FC = () => {
               <div className="workout-hero-content">
                 <h1>{workout.hero.title}</h1>
                 <p className="workout-tagline">{workout.hero.tagline}</p>
-                <Link to={workout.hero.ctaTo} className="cta-button">{workout.hero.ctaLabel}</Link>
+                <Link to={workout.hero.ctaTo} className="cta-button primary">{workout.hero.ctaLabel}</Link>
               </div>
             </div>
           </section>
