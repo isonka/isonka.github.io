@@ -121,6 +121,20 @@
   font-size: 1.2rem;
 }
 
+.trainer-qualifications a,
+.trainer-bio a {
+  color: #bfa100;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(191, 161, 0, 0.45);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.trainer-qualifications a:hover,
+.trainer-bio a:hover {
+  color: #9e8500;
+  border-bottom-color: rgba(158, 133, 0, 0.75);
+}
+
 /* Specialties */
 .trainer-specialties {
   margin-bottom: 60px;

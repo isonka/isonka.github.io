@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { SEOHead } from '../components/SEOHead';
+import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { trackPricingView, trackPageView } from '../utils/gtmTracking';
 import '../styles/Pricing.css';
@@ -61,6 +62,54 @@ export const Pricing: React.FC = () => {
     // No manual initialization needed - the script in index.html handles this automatically
   }, [activeTab]);
 
+  const pricingFaqs = [
+    {
+      question: 'How long are the packages valid?',
+      answer:
+        'Each package has a valid period of weeks equal to the number of lessons. For example, a 5-class package is valid for 5 weeks from the purchase date.',
+    },
+    {
+      question: 'Can I attend during pregnancy?',
+      answer:
+        'Pregnant clients are only accepted for one-on-one classes where we can provide personalized attention to ensure safety.',
+    },
+    {
+      question: 'What if I have injuries?',
+      answer:
+        'Please inform us if you have any injuries or joint problems before booking. Our trainers can modify exercises to accommodate your needs.',
+    },
+    {
+      question: 'Can I try before I commit to a package?',
+      answer:
+        'Yes! We offer single class options for all training types, and we recommend starting with a smaller package to try our classes.',
+    },
+    {
+      question: 'How do membership renewals work?',
+      answer:
+        "1-Month Memberships (4 & 8 classes): 1-month period. You can cancel after the first month. Auto-renews monthly unless cancelled. 3-Month Membership: 3-month commitment. You can cancel after 3 months. Auto-renews unless cancelled. Annual Membership: 12-month commitment. You can cancel after 12 months. Auto-renews unless cancelled. If you don't cancel before the renewal date, payments will be processed automatically.",
+    },
+    {
+      question: 'Can I cancel my membership?',
+      answer:
+        'Yes! In 1-month memberships (4 & 8 classes), you have the right to cancel after the first month. The 3-month and annual memberships can be cancelled after you complete your initial commitment period (3 or 12 months). To cancel, contact us via email at info@pt7.nl or call 06 85 16 26 93 before your renewal date.',
+    },
+    {
+      question: 'Is the annual membership unlimited classes?',
+      answer:
+        'Yes! The annual membership at EUR 250 per month (EUR 3,000 for 12 months total) gives you unlimited classes (all days, 7:00-18:00), with a maximum of 1 class per day. This is our best value option and includes a 4-week freeze option.',
+    },
+    {
+      question: "What's the class duration?",
+      answer:
+        'All our classes are 45 minutes long, providing an effective and efficient workout that fits into your busy schedule.',
+    },
+    {
+      question: 'How many people in group classes?',
+      answer:
+        'Our group classes have a maximum of 5 participants, ensuring you receive personalized attention while enjoying the energy of a group setting.',
+    },
+  ];
+
   return (
     <>
       <SEOHead
@@ -71,6 +120,7 @@ export const Pricing: React.FC = () => {
         ogTitle="PT Studio 7 Pricing | Pilates Packages at Museumplein"
         ogDescription="Small group Pilates (max 5) from €28/class. Memberships & private classes available. Expert instructors at Amsterdam's most exclusive Museumplein Pilates studio."
       />
+      <StructuredData type="FAQPage" data={{ faqs: pricingFaqs }} />
       <Breadcrumbs items={[{ name: 'Pricing', path: '/pricing' }]} />
 
       <div className="pricing-page">        

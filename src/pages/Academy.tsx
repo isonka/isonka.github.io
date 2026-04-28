@@ -1,23 +1,57 @@
+import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import '../styles/Academy.css';
 
 export const Academy: React.FC = () => {
+  const academyFaqs = [
+    {
+      question: 'Is the Reformer Instructor Course weekend-only?',
+      answer:
+        'Yes. The course runs on Saturdays and Sundays, so career changers can keep their weekday jobs while training.',
+    },
+    {
+      question: 'What is the course format and duration?',
+      answer:
+        'Each instructor course includes 4 weeks of lessons plus 8 weeks of optional observation and practice, with theoretical and practical exams and a final assessment.',
+    },
+    {
+      question: 'What is the accreditation status of the Academy?',
+      answer:
+        'The program is taught by PMA-registered instructors and PT Studio 7 is pursuing ITTAP accreditation from the Pilates Method Alliance.',
+    },
+    {
+      question: 'How much does the course cost?',
+      answer:
+        'The course fee is EUR 2,000 plus 21% VAT per course. If you take both courses, you receive 5% off the total fee.',
+    },
+    {
+      question: 'Do you offer installment payments?',
+      answer:
+        'Yes. A 3-installment plan is available to reduce upfront cost and make the transition into training more manageable.',
+    },
+    {
+      question: 'Is there a link between the Academy and real teaching opportunities?',
+      answer:
+        'Yes. Successful graduates may access optional work opportunities at PT Studio 7, helping them build experience and income after certification.',
+    },
+  ];
+
   return (
     <>
       <SEOHead
-        title="Pilates Instructor Course Amsterdam | Weekend Certification | PT 7 Academy"
+        title="Reformer Instructor Course Amsterdam 2026 | PT Studio 7 Academy"
         description="Become a certified Pilates instructor in Amsterdam. Weekend-only training, perfect for career changers. Small groups (5-10), PMA-registered instructors, pursuing ITTAP accreditation from the Pilates Method Alliance. Starting March 2026."
-        keywords="Pilates instructor course Amsterdam, Pilates opleiding Amsterdam, Pilates teacher training, Pilates certification Netherlands, pilatesdocent worden, weekend Pilates certification, career change Pilates instructor"
+        keywords="Reformer instructor course Amsterdam, Pilates opleiding Amsterdam, Pilates teacher training, Pilates certification Netherlands, pilatesdocent worden, weekend Pilates certification, career change Pilates instructor"
         canonical="https://www.pt7.nl/academy"
-        ogTitle="Pilates Instructor Course Amsterdam | Weekend Training | PT 7 Academy"
+        ogTitle="Reformer Instructor Course Amsterdam 2026 | PT Studio 7 Academy"
         ogDescription="Weekend Pilates certification for career changers. Small groups, PMA-registered instructors, pursuing ITTAP accreditation from the Pilates Method Alliance. Job opportunities at our Museumplein studio. Starting March 2026."
       />
       <StructuredData
         type="Course"
         data={{
           course: {
-            name: 'Pilates Instructor Course',
+            name: 'Reformer Instructor Course',
             description: 'Weekend-only Reformer Pilates instructor certification in Amsterdam. 85 hours of in-person technical training, anatomy, comprehensive curriculum, exams, and job opportunities at PT Studio 7 Museumplein.',
             price: '2000',
             priceCurrency: 'EUR',
@@ -28,15 +62,16 @@ export const Academy: React.FC = () => {
           },
         }}
       />
+      <StructuredData type="FAQPage" data={{ faqs: academyFaqs }} />
 
       <div className="academy-page">
         {/* Urgency Banner */}
         <div className="academy-urgency-banner">
           <div className="urgency-content">
             <span className="urgency-text">
-              <strong>Pilates Instructor Course — Starting September 2026!</strong> Limited to 10 participants — Secure your spot today
+              <strong>Reformer Instructor Course — Starting September 2026!</strong> Limited to 10 participants — Secure your spot today
             </span>
-            <a href="mailto:info@pt7.nl?subject=Pilates Instructor Course Inquiry" className="urgency-cta">
+            <a href="mailto:info@pt7.nl?subject=Reformer Instructor Course Inquiry" className="urgency-cta">
               Inquire Now →
             </a>
           </div>
@@ -46,18 +81,34 @@ export const Academy: React.FC = () => {
         <section className="academy-about">
           <div className="academy-container">
             <h2>Become a Certified Pilates Instructor in Amsterdam</h2>
-            <p className="start-date"><strong>Pilates Instructor Course — Starting September 2026</strong></p>
+            <p className="start-date"><strong>Reformer Instructor Course — Starting September 2026</strong></p>
             <p>
               <strong>Thinking about a career change?</strong> Many of our instructors came from banking, tech, and corporate backgrounds. 
               Our weekend-only schedule means you can train while keeping your current job — no need to quit before you're ready.
             </p>
             <p>
-              PT 7 Academy's Pilates Instructor Courses are designed to equip you with a strong foundation in Pilates. 
+              Want a real example? Read our <Link to="/blog/career-change-banker-to-pilates-instructor">career-change story</Link> and explore the
+              <Link to="/trainer/elif"> Elif instructor profile</Link> to see who leads the training.
+            </p>
+            <p>
+              PT 7 Academy's Reformer Instructor Courses are designed to equip you with a strong foundation in Pilates. 
               Our goal is to help you become a highly sought-after instructor — one whose clients stay committed and inspired. 
               That's why our program goes far beyond just teaching exercises.
             </p>
             <p>
-              You can join either Mat & Trapeze Table or Studio Equipment training individually — or take both and receive <strong>5% off the total fee</strong>.
+              You will also see how programming is applied in real sessions on our
+              <Link to="/workouts/reformer-pilates"> Reformer Pilates</Link>,
+              <Link to="/private-pilates-amsterdam"> Private Pilates</Link>, and
+              <Link to="/prenatal-pilates-amsterdam"> Prenatal Pilates</Link> pages.
+            </p>
+            <div className="payment-info" style={{ marginTop: '1.5rem' }}>
+              <h3>Career-Changer Story</h3>
+              <p>
+                Read <Link to="/blog/career-change-banker-to-pilates-instructor">From Banker to Pilates Instructor</Link> to see how the Academy pathway works in real life and how graduates transition into teaching.
+              </p>
+            </div>
+            <p>
+              You can enroll in the Reformer Instructor Course or the Mat & Trapeze Table Instructor Course individually, or take both and receive <strong>5% off the total fee</strong>.
             </p>
           </div>
         </section>
@@ -80,11 +131,10 @@ export const Academy: React.FC = () => {
               </div>
             </div>
 
-            <div className="courses-grid">
-              {/* Pilates Studio Equipment Course - FEATURED */}
+            <div className="courses-grid">              
               <div className="course-card featured">
                 <div className="course-badge">Enrolling Now</div>
-                <h3>Pilates Instructor Course</h3>
+                <h3>Reformer Instructor Course</h3>
                 <p className="course-price">€2,000 <span className="vat-text">+ VAT (21%)</span></p>
                 
                 <div className="course-highlights">
@@ -117,7 +167,7 @@ export const Academy: React.FC = () => {
                   <ul>
                     <li>85 hours of in-person technical training</li>
                     <li>Intro to Pilates (first week)</li>
-                    <li>Comprehensive Pilates curriculum (studio equipment)</li>
+                    <li>Comprehensive Pilates curriculum (reformer)</li>
                     <li>Observation + practice (by appointment)</li>
                     <li>2 exams (theoretical & practical)</li>
                     <li>One-on-one final assessment</li>
@@ -127,7 +177,7 @@ export const Academy: React.FC = () => {
                 </div>
                 
                 <div className="course-cta">
-                  <a href="mailto:info@pt7.nl?subject=Pilates Instructor Course Inquiry" className="course-btn primary">
+                  <a href="mailto:info@pt7.nl?subject=Reformer Instructor Course Inquiry" className="course-btn primary">
                     Secure Your Spot Now
                   </a>
                   <p className="cta-subtext">Reply within 48 hours to guarantee your place</p>
@@ -233,6 +283,20 @@ export const Academy: React.FC = () => {
           </div>
         </section>
 
+        <section className="academy-benefits">
+          <div className="academy-container">
+            <h2>Frequently Asked Questions</h2>
+            <div className="benefits-grid">
+              {academyFaqs.map((faq) => (
+                <div key={faq.question} className="benefit-card">
+                  <h3>{faq.question}</h3>
+                  <p>{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="academy-cta">
           <div className="academy-container">
@@ -242,7 +306,7 @@ export const Academy: React.FC = () => {
               this is your chance to turn that passion into a profession. No fitness background required.
             </p>
             <div className="cta-buttons">
-              <a href="mailto:info@pt7.nl?subject=Pilates Instructor Course Inquiry" className="cta-btn primary">
+              <a href="mailto:info@pt7.nl?subject=Reformer Instructor Course Inquiry" className="cta-btn primary">
                 Inquire About the Course
               </a>
               <a href="tel:+31685162693" className="cta-btn secondary">

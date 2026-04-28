@@ -113,7 +113,7 @@ export const Navbar: React.FC = () => {
             </button>
             <ul className={`navbar-dropdown-menu ${moreOpen ? 'open' : ''}`}>
               <li><a href="#workouts" onClick={(e) => { e.preventDefault(); closeMenu(); setMoreOpen(false); scrollToSection('workouts'); }}>Workouts</a></li>
-              <li><Link to="/equipment" onClick={() => { closeMenu(); setMoreOpen(false); }}>Equipment</Link></li>
+              <li><Link to="/equipment" onClick={() => { closeMenu(); setMoreOpen(false); }}>Shop Equipment</Link></li>
               <li><Link to="/healthcare-providers" onClick={() => { closeMenu(); setMoreOpen(false); }}>For Healthcare</Link></li>
               <li><Link to="/blog" onClick={() => { closeMenu(); setMoreOpen(false); }}>Blog</Link></li>
             </ul>

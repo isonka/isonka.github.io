@@ -66,9 +66,10 @@ export const BlogPost: React.FC = () => {
             image: post.image,
             datePublished: post.date,
             dateModified: post.date,
-            authorName: post.author,
+            authorName: post.author === 'PT Studio 7 Team' ? 'Elif Arzu Ogan' : post.author,
             keywords: post.keywords,
             slug: post.slug,
+            articleSection: post.tags[0] || 'Pilates',
           },
         }}
       />

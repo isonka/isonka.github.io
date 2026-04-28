@@ -55,7 +55,7 @@ export const equipmentProducts: EquipmentProduct[] = [
     name: 'Pilates Reformer',
     price: '€2,200',
     seo: {
-      title: 'Pilates Reformer - PT Studio 7 Amsterdam',
+      title: 'Buy Pilates Reformer Amsterdam | €2,200 | PT Studio 7',
       description: 'Professional-grade Pilates Reformer for sale. Solid beech wood frame, smooth-gliding carriage, complete with accessories. Studio-quality equipment available in Amsterdam.',
       keywords: 'Pilates Reformer for sale, professional Pilates equipment, reformer Amsterdam, studio equipment, Pilates apparatus',
     },

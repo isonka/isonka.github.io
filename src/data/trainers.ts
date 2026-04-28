@@ -170,7 +170,7 @@ export const trainerProfiles: TrainerProfile[] = [
       'She has been a happy and dedicated student at PT7 Studio for the past four years, and is now even happier to join the elite team of instructors. Gülce is passionate about sharing the same sense of strength, balance, and joy that Pilates has brought into her own life, and looks forward to bringing that happiness to her students.',
     ],
     qualifications: [
-      'PT 7 Academy Comprehensive Reformer Pilates Instructor Course',
+      'PT 7 Academy Comprehensive Reformer Instructor Course',
       'International Pilates experience across Turkey, Germany, and the Netherlands',
       'Specializes in Reformer Pilates',
       'Focus on strength, balance, and mindful movement',
@@ -202,7 +202,7 @@ export const trainerProfiles: TrainerProfile[] = [
       'Alongside her Pilates journey, Lal works professionally as a visual artist and creative technologist, a field that involves long hours of standing and physically demanding installation work. Pilates first helped her resolve the physical strain caused by this work, and over time became an essential practice for building strength, resilience, and body awareness. She chose to become an instructor to practice movements mindfully and share her knowledge with others.',
     ],
     qualifications: [
-      'PT 7 Academy Comprehensive Reformer Pilates Instructor Course',
+      'PT 7 Academy Comprehensive Reformer Instructor Course',
       'Background in team sports (football, volleyball)',
       'Professional visual artist and creative technologist',
       'Specializes in Reformer Pilates',
@@ -234,7 +234,7 @@ export const trainerProfiles: TrainerProfile[] = [
       'Nisan is a newly certified Pilates instructor who is passionate about mindful movement and helping people feel good in their bodies. Her approach focuses on building strength, mobility, and balance in ways that support a high quality of life and long-term wellbeing.',
     ],
     qualifications: [
-      'PT 7 Academy Comprehensive Reformer Pilates Instructor Course',
+      'PT 7 Academy Comprehensive Reformer Instructor Course',
       'Specializes in Reformer Pilates',
       'Focus on mindful movement and wellbeing',
       'Emphasis on building strength, mobility, and balance',

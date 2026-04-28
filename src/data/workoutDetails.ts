@@ -145,7 +145,7 @@ export const workoutDetails: WorkoutDetailData[] = [
     breadcrumbName: 'Reformer Pilates',
     hero: {
       image: '/assets/images/reformer_1.webp',
-      title: 'Reformer Pilates',
+      title: 'Reformer Pilates Amsterdam Oud-Zuid',
       tagline: 'Full-body workout focusing on core strength, flexibility, and posture',
       ctaLabel: 'Book a Class',
       ctaTo: '/schedule',

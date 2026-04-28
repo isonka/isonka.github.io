@@ -13,6 +13,24 @@ export const TrainerDetail: React.FC = () => {
     return <Navigate to="/instructors" replace />;
   }
 
+  const relatedLinksByTrainer: Record<string, { to: string; label: string }[]> = {
+    elif: [
+      { to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' },
+      { to: '/academy', label: 'PT Studio 7 Academy (lead instructor)' },
+      { to: '/prenatal-pilates-amsterdam', label: 'Prenatal Pilates page' },
+    ],
+    gokben: [{ to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' }],
+    goknur: [
+      { to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' },
+      { to: '/workouts/functional-training', label: 'Strength training classes' },
+    ],
+    gulce: [{ to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' }],
+    lal: [{ to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' }],
+    nisan: [{ to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' }],
+  };
+
+  const relatedLinks = relatedLinksByTrainer[trainer.slug] || [];
+
   return (
     <>
       <SEOHead
@@ -30,6 +48,11 @@ export const TrainerDetail: React.FC = () => {
             image: trainer.image,
             description: trainer.structuredData.description,
             worksFor: 'PT Studio 7 Amsterdam',
+            knowsAbout: trainer.specialties,
+            hasCredential: trainer.qualifications,
+            sameAs: trainer.slug === 'elif'
+              ? ['https://www.instagram.com/ptstudio7amsterdam', 'https://www.polestarpilates.nl/']
+              : ['https://www.instagram.com/ptstudio7amsterdam'],
           },
         }}
       />
@@ -77,6 +100,19 @@ export const TrainerDetail: React.FC = () => {
               ))}
             </ul>
           </section>
+
+          {relatedLinks.length > 0 && (
+            <section className="trainer-qualifications">
+              <h2>Explore Related Pages</h2>
+              <ul>
+                {relatedLinks.map((link) => (
+                  <li key={link.to}>
+                    <Link to={link.to}>{link.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
 
           <section className="trainer-cta">
             <h2>Ready to Start Your Journey?</h2>

@@ -39,6 +39,7 @@ const routes = [
   '/academy',
   '/healthcare-providers',
   '/classpass-offer',
+  '/prenatal-pilates-amsterdam',
   '/pregnancy-pilates-amsterdam',
   '/private-pilates-amsterdam',
   '/trx-training-amsterdam',

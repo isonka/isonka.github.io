@@ -89,7 +89,7 @@ export const Home: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Pilates & Personal Training Amsterdam | Boutique Studio Museumplein | PT Studio 7"
+        title="Reformer Pilates Amsterdam Oud-Zuid | PT Studio 7"
         description="Amsterdam's most personal Reformer Pilates studio — max 5 per class, at Museumplein. Private sessions & small groups with certified instructors. 15+ years expertise. Book now."
         keywords="pilates amsterdam-Zuid, kleine groep pilates amsterdam, reformer pilates prive amsterdam, pilates museumplein, pilates studio van baerlestraat, postnatale pilates amsterdam, pilates zwangerschap amsterdam, polestar pilates amsterdam, TRX training amsterdam, personal training Amsterdam, Pilates Amsterdam"
         canonical="https://www.pt7.nl"
@@ -98,6 +98,7 @@ export const Home: React.FC = () => {
         ogImage="/assets/images/about-us-web.jpg"
       />
       <StructuredData type="LocalBusiness" data={{ reviews: reviewsData }} />
+      <StructuredData type="SportsActivityLocation" />
       
       {/* Hero Section with Rotating Background Images */}
       <section className="hero-video">

@@ -22,6 +22,7 @@ const WorkoutDetail = lazy(() => import('./pages/WorkoutDetail').then(m => ({ de
 const ClassPassOffer = lazy(() => import('./pages/ClassPassOffer').then(m => ({ default: m.ClassPassOffer })));
 const HealthcareProviders = lazy(() => import('./pages/HealthcareProviders').then(m => ({ default: m.HealthcareProviders })));
 const PregnancyPilates = lazy(() => import('./pages/PregnancyPilates').then(m => ({ default: m.PregnancyPilates })));
+const PrenatalPilatesAmsterdam = lazy(() => import('./pages/PrenatalPilatesAmsterdam').then(m => ({ default: m.PrenatalPilatesAmsterdam })));
 const PrivatePilates = lazy(() => import('./pages/PrivatePilates').then(m => ({ default: m.PrivatePilates })));
 const TRXTrainingAmsterdam = lazy(() => import('./pages/TRXTrainingAmsterdam').then(m => ({ default: m.TRXTrainingAmsterdam })));
 const StrengthTrainingAmsterdam = lazy(() => import('./pages/StrengthTrainingAmsterdam').then(m => ({ default: m.StrengthTrainingAmsterdam })));
@@ -71,6 +72,7 @@ function App() {
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/classpass-offer" element={<ClassPassOffer />} />
               <Route path="/healthcare-providers" element={<HealthcareProviders />} />
+              <Route path="/prenatal-pilates-amsterdam" element={<PrenatalPilatesAmsterdam />} />
               <Route path="/pregnancy-pilates-amsterdam" element={<PregnancyPilates />} />
               <Route path="/private-pilates-amsterdam" element={<PrivatePilates />} />
               <Route path="/trx-training-amsterdam" element={<TRXTrainingAmsterdam />} />

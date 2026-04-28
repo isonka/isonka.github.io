@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SEOHead } from '../components/SEOHead';
+import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { trackPageView } from '../utils/gtmTracking';
 import { workoutDetails } from '../data/workoutDetails';
@@ -21,6 +22,17 @@ export const WorkoutDetail: React.FC = () => {
   }
 
   const isAnchorLink = (to: string) => to.startsWith('#');
+  const baseUrl = 'https://www.pt7.nl';
+  const serviceOffers = workout.classOptions.cards.map((card) => {
+    const combinedText = `${card.description} ${card.features.join(' ')}`;
+    const priceMatch = combinedText.match(/€\s?(\d+(?:[.,]\d+)?)/);
+    return {
+      name: card.title,
+      ...(priceMatch ? { price: priceMatch[1].replace(',', '.') } : {}),
+      priceCurrency: 'EUR',
+      url: `${baseUrl}/pricing`,
+    };
+  });
 
   return (
     <>
@@ -33,6 +45,29 @@ export const WorkoutDetail: React.FC = () => {
         ogDescription={workout.seo.ogDescription}
         ogImage={workout.seo.ogImage}
       />
+      <StructuredData
+        type="Service"
+        data={{
+          service: {
+            name: workout.hero.title,
+            description: workout.intro.lead,
+            serviceUrl: `${baseUrl}/workouts/${workout.slug}`,
+            areaServed: 'Amsterdam',
+            offers: serviceOffers,
+          },
+        }}
+      />
+      {workout.slug === 'reformer-pilates' && (
+        <StructuredData
+          type="FAQPage"
+          data={{
+            faqs: workout.faq.map((item) => ({
+              question: item.question,
+              answer: item.answer,
+            })),
+          }}
+        />
+      )}
       <Breadcrumbs items={[{ name: workout.breadcrumbName, path: `/workouts/${workout.slug}` }]} />
 
       {workout.announcementBanner && (

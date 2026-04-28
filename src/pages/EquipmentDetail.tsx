@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
+import { StructuredData } from '../components/StructuredData';
 import { EquipmentFAQ } from '../components/EquipmentFAQ';
 import { EquipmentContact } from '../components/EquipmentContact';
 import { equipmentProducts } from '../data/equipment';
@@ -18,6 +19,16 @@ export const EquipmentDetail: React.FC = () => {
 
   const hasGallery = product.images.length > 1;
   const currentImage = product.images[activeImage] || product.images[0];
+  const numericPrice = product.price.replace(/[^\d.,]/g, '').replace(',', '');
+  const productUrl = `https://www.pt7.nl/equipment/${product.slug}`;
+  const workoutByEquipment: Record<string, { to: string; label: string }> = {
+    reformer: { to: '/workouts/reformer-pilates', label: 'Try Reformer Pilates classes' },
+    'tower-reformer': { to: '/workouts/reformer-pilates', label: 'Try Tower/Reformer-style classes' },
+    cadillac: { to: '/workouts/reformer-pilates', label: 'Try equipment-based Pilates classes' },
+    'wunda-chair': { to: '/workouts/reformer-pilates', label: 'Try Pilates classes using this equipment family' },
+    'ladder-barrel': { to: '/workouts/reformer-pilates', label: 'Try mobility-focused Pilates classes' },
+  };
+  const relatedWorkout = workoutByEquipment[product.slug];
 
   return (
     <>
@@ -26,6 +37,28 @@ export const EquipmentDetail: React.FC = () => {
         description={product.seo.description}
         keywords={product.seo.keywords}
         canonical={`https://www.pt7.nl/equipment/${product.slug}`}
+      />
+      <StructuredData
+        type="Product"
+        data={{
+          product: {
+            name: product.name,
+            description: product.description,
+            image: product.images.map((img) => `https://www.pt7.nl${img.src}`),
+            sku: `PT7-${product.slug.toUpperCase()}`,
+            brand: 'PT Studio 7',
+            url: productUrl,
+            price: numericPrice,
+            priceCurrency: 'EUR',
+            availability: 'https://schema.org/InStock',
+            itemCondition: 'https://schema.org/NewCondition',
+            category: 'Pilates Equipment',
+            additionalProperty: [
+              { name: 'Warranty', value: '2 years' },
+              { name: 'Delivery', value: '3-8 weeks in the Netherlands' },
+            ],
+          },
+        }}
       />
 
       <main className="product-detail-main">
@@ -81,6 +114,16 @@ export const EquipmentDetail: React.FC = () => {
             </ul>
           </div>
         </section>
+
+        {relatedWorkout && (
+          <section className="product-details">
+            <div className="product-desc-specs">
+              <div className="product-desc">
+                Want to experience this equipment before buying? <a href={relatedWorkout.to}>{relatedWorkout.label}</a> at our Amsterdam studio.
+              </div>
+            </div>
+          </section>
+        )}
 
         <EquipmentFAQ items={product.faq} />
         <EquipmentContact />

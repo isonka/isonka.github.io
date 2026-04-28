@@ -37,13 +37,18 @@ const routeMeta = {
     image: DEFAULT_IMAGE,
   },
   'academy': {
-    title: 'Pilates Instructor Training | PT 7 Academy Amsterdam',
+    title: 'Reformer Instructor Course Amsterdam 2026 | PT Studio 7 Academy',
     description: 'Become a certified Pilates instructor. 4 weeks of lessons + 8 weeks optional observation. Learn from experienced instructors at Museumplein.',
     image: DEFAULT_IMAGE,
   },
   'healthcare-providers': {
-    title: 'Refer Your Clients | For Healthcare Providers | PT Studio 7 Amsterdam',
+    title: 'Pilates for Rehabilitation Amsterdam | For Healthcare Providers | PT Studio 7',
     description: 'Physiotherapists and healthcare providers: refer your clients to PT Studio 7 for post-rehab Pilates and functional training. Small groups, expert instructors.',
+    image: DEFAULT_IMAGE,
+  },
+  'prenatal-pilates-amsterdam': {
+    title: 'Prenatal Pilates Amsterdam Oud-Zuid | Private Sessions | PT Studio 7',
+    description: 'Prenatal Pilates in Amsterdam Oud-Zuid with trimester-specific private Reformer sessions, pelvic floor support, and expert instructors.',
     image: DEFAULT_IMAGE,
   },
   'schedule': {
@@ -57,8 +62,8 @@ const routeMeta = {
     image: DEFAULT_IMAGE,
   },
   'equipment': {
-    title: 'Pilates Equipment | PT Studio 7 Amsterdam',
-    description: 'Professional Pilates equipment: Reformers, Tower Reformers, Cadillac, Wunda Chair, Ladder Barrel. Premium equipment at Museumplein.',
+    title: 'Buy Pilates Equipment Amsterdam | Reformers & More | PT Studio 7',
+    description: 'Buy Pilates equipment in Amsterdam: Reformer, Tower Reformer, Cadillac, Wunda Chair, and Ladder Barrel with pricing, specs, and ordering support.',
     image: DEFAULT_IMAGE,
   },
   'blog': {
@@ -67,7 +72,7 @@ const routeMeta = {
     image: DEFAULT_IMAGE,
   },
   'workouts/reformer-pilates': {
-    title: 'Reformer Pilates | PT Studio 7 Amsterdam',
+    title: 'Reformer Pilates Amsterdam | PT Studio 7 Museumplein',
     description: 'Reformer Pilates classes at Museumplein. Small groups (max 5), expert instructors, premium equipment. Book your session today.',
     image: DEFAULT_IMAGE,
   },
@@ -92,7 +97,7 @@ const routeMeta = {
     image: DEFAULT_IMAGE,
   },
   'equipment/reformer': {
-    title: 'Pilates Reformer | PT Studio 7 Amsterdam',
+    title: 'Buy Pilates Reformer Amsterdam | €2,200 | PT Studio 7',
     description: 'Professional Pilates Reformer at PT Studio 7 Museumplein. Train on premium equipment with certified instructors in small groups of max 5.',
     image: DEFAULT_IMAGE,
   },
@@ -183,6 +188,7 @@ const routes = [
   'trainer/nisan',
   'academy',
   'healthcare-providers',
+  'prenatal-pilates-amsterdam',
   'blog',
   'classpass-offer',
   // Blog posts
