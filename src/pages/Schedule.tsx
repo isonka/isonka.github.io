@@ -4,41 +4,43 @@ import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { BookingGuide } from '../components/BookingGuide';
 import { trackScheduleVisit, trackPageView } from '../utils/gtmTracking';
+import {
+  clearMindBodyWidgetContainers,
+  initScheduleMindBodyWidgets,
+} from '../utils/mindbodyBrandedWeb';
 import '../styles/Schedule.css';
 
 export const Schedule: React.FC = () => {
   const [activeTab, setActiveTab] = useState('group');
+  const [widgetsLoading, setWidgetsLoading] = useState(true);
+  const [widgetsError, setWidgetsError] = useState(false);
 
   useEffect(() => {
-    // Track page view
     trackPageView('/schedule', 'Schedule & Book Your Session');
     trackScheduleVisit();
 
-    // Load MindBody Branded Web widget script once on mount
-    const existingScript = document.querySelector('script[src*="brandedweb.mindbodyonline.com"]');
-    
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.src = 'https://brandedweb.mindbodyonline.com/embed/widget.js';
-      script.async = true;
-      
-      // Add script and wait for it to load
-      script.onload = () => {
-        console.log('MindBody widget script loaded');
-      };
-      
-      script.onerror = () => {
-        console.error('Failed to load MindBody widget script');
-      };
-      
-      document.body.appendChild(script);
+    let cancelled = false;
 
-      return () => {
-        if (document.body.contains(script)) {
-          document.body.removeChild(script);
+    setWidgetsLoading(true);
+    setWidgetsError(false);
+
+    initScheduleMindBodyWidgets()
+      .then(() => {
+        if (!cancelled) {
+          setWidgetsLoading(false);
         }
-      };
-    }
+      })
+      .catch(() => {
+        if (!cancelled) {
+          setWidgetsError(true);
+          setWidgetsLoading(false);
+        }
+      });
+
+    return () => {
+      cancelled = true;
+      clearMindBodyWidgetContainers();
+    };
   }, []);
 
   return (
@@ -115,12 +117,24 @@ export const Schedule: React.FC = () => {
 
               {/* MindBody Widget for Group Classes */}
               <div className="widget-container">
-                <div 
-                  className="mindbody-widget" 
-                  data-widget-type="Schedules" 
-                  data-widget-id="2b9312c036" 
+                {widgetsLoading && (
+                  <p className="widget-loading" role="status">
+                    Loading booking calendar…
+                  </p>
+                )}
+                {widgetsError && (
+                  <p className="widget-error" role="alert">
+                    Booking calendar could not load. Please{' '}
+                    <a href="/schedule">refresh this page</a> or call us to book.
+                  </p>
+                )}
+                <div
+                  className="mindbody-widget"
+                  data-widget-type="Schedules"
+                  data-widget-id="2b9312c036"
                   style={{ width: '100%' }}
-                ></div>
+                  hidden={widgetsError}
+                />
               </div>
             </div>
 
@@ -155,12 +169,24 @@ export const Schedule: React.FC = () => {
 
               {/* MindBody Widget for Private Classes */}
               <div className="widget-container">
-                <div 
-                  className="mindbody-widget" 
-                  data-widget-type="Appointments" 
-                  data-widget-id="2b18450c036" 
+                {widgetsLoading && (
+                  <p className="widget-loading" role="status">
+                    Loading booking calendar…
+                  </p>
+                )}
+                {widgetsError && (
+                  <p className="widget-error" role="alert">
+                    Booking calendar could not load. Please{' '}
+                    <a href="/schedule">refresh this page</a> or call us to book.
+                  </p>
+                )}
+                <div
+                  className="mindbody-widget"
+                  data-widget-type="Appointments"
+                  data-widget-id="2b18450c036"
                   style={{ width: '100%' }}
-                ></div>
+                  hidden={widgetsError}
+                />
               </div>
             </div>
           </div>

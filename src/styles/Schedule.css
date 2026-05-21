@@ -233,6 +233,19 @@
   box-sizing: border-box;
 }
 
+.widget-loading,
+.widget-error {
+  text-align: center;
+  color: #666;
+  margin: 0 0 16px;
+  font-size: 0.95rem;
+}
+
+.widget-error a {
+  color: #222;
+  font-weight: 600;
+}
+
 .mindbody-widget {
   max-width: 100% !important;
   width: 100% !important;
