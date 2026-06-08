@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AcademyUrgencyBanner } from '../components/AcademyUrgencyBanner';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { trackPageView, trackPhoneClick, trackEmailClick, trackSocialClick } from '../utils/gtmTracking';
@@ -99,7 +100,9 @@ export const Home: React.FC = () => {
       />
       <StructuredData type="LocalBusiness" data={{ reviews: reviewsData }} />
       <StructuredData type="SportsActivityLocation" />
-      
+
+      <AcademyUrgencyBanner />
+
       {/* Hero Section with Rotating Background Images */}
       <section className="hero-video">
         {heroImages.map((image, index) => (

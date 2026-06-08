@@ -1,7 +1,12 @@
 import { Link } from 'react-router-dom';
+import { AcademyUrgencyBanner } from '../components/AcademyUrgencyBanner';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import '../styles/Academy.css';
+
+const ITTAP_LOGO = '/assets/images/ittap-approved-program.png';
+const ITTAP_LOGO_ALT =
+  'ITTAP Approved Program: International Teacher Training Accreditation for Pilates, Pilates Method Alliance';
 
 export const Academy: React.FC = () => {
   const academyFaqs = [
@@ -18,7 +23,12 @@ export const Academy: React.FC = () => {
     {
       question: 'What is the accreditation status of the Academy?',
       answer:
-        'The program is taught by PMA-registered instructors and PT Studio 7 is pursuing ITTAP accreditation from the Pilates Method Alliance.',
+        'PT Studio 7 Academy offers international Pilates instructor certification training as an ITTAP-approved program, accredited by the Pilates Method Alliance, the international body for Pilates education.',
+    },
+    {
+      question: 'Is the certification recognized internationally?',
+      answer:
+        'Yes. ITTAP (International Teacher Training Accreditation for Pilates) is the Pilates Method Alliance standard for teacher training worldwide. Your certificate comes from an international Pilates instructor certification training program, valued by studios and employers internationally, not just in the Netherlands.',
     },
     {
       question: 'How much does the course cost?',
@@ -30,29 +40,24 @@ export const Academy: React.FC = () => {
       answer:
         'Yes. A 3-installment plan is available to reduce upfront cost and make the transition into training more manageable.',
     },
-    {
-      question: 'Is there a link between the Academy and real teaching opportunities?',
-      answer:
-        'Yes. Successful graduates may access optional work opportunities at PT Studio 7, helping them build experience and income after certification.',
-    },
   ];
 
   return (
     <>
       <SEOHead
         title="Reformer Instructor Course Amsterdam 2026 | PT Studio 7 Academy"
-        description="Become a certified Pilates instructor in Amsterdam. Weekend-only training, perfect for career changers. Small groups (5-10), PMA-registered instructors, pursuing ITTAP accreditation from the Pilates Method Alliance. Starting March 2026."
-        keywords="Reformer instructor course Amsterdam, Pilates opleiding Amsterdam, Pilates teacher training, Pilates certification Netherlands, pilatesdocent worden, weekend Pilates certification, career change Pilates instructor"
+        description="Become a certified Pilates instructor in Amsterdam. ITTAP-approved international Pilates instructor certification training from the Pilates Method Alliance. Weekend-only training for career changers. Small groups (5-10), PMA-registered instructors. Starting September 2026."
+        keywords="Reformer instructor course Amsterdam, Pilates opleiding Amsterdam, Pilates teacher training, international Pilates instructor certification, ITTAP approved Pilates, Pilates certification Netherlands, pilatesdocent worden, weekend Pilates certification, career change Pilates instructor"
         canonical="https://www.pt7.nl/academy"
         ogTitle="Reformer Instructor Course Amsterdam 2026 | PT Studio 7 Academy"
-        ogDescription="Weekend Pilates certification for career changers. Small groups, PMA-registered instructors, pursuing ITTAP accreditation from the Pilates Method Alliance. Job opportunities at our Museumplein studio. Starting March 2026."
+        ogDescription="ITTAP-approved international Pilates instructor certification training in Amsterdam. Weekend training for career changers. Small groups, PMA-registered instructors. Starting September 2026."
       />
       <StructuredData
         type="Course"
         data={{
           course: {
             name: 'Reformer Instructor Course',
-            description: 'Weekend-only Reformer Pilates instructor certification in Amsterdam. 85 hours of in-person technical training, anatomy, comprehensive curriculum, exams, and job opportunities at PT Studio 7 Museumplein.',
+            description: 'ITTAP-approved international Pilates instructor certification training in Amsterdam. 85 hours of in-person technical training, anatomy, comprehensive curriculum, exams, and final assessment at PT Studio 7 Museumplein.',
             price: '2000',
             priceCurrency: 'EUR',
             startDate: '2026-03-01',
@@ -65,35 +70,48 @@ export const Academy: React.FC = () => {
       <StructuredData type="FAQPage" data={{ faqs: academyFaqs }} />
 
       <div className="academy-page">
-        {/* Urgency Banner */}
-        <div className="academy-urgency-banner">
-          <div className="urgency-content">
-            <span className="urgency-text">
-              <strong>Reformer Instructor Course — Starting September 2026!</strong> Limited to 10 participants — Secure your spot today
-            </span>
-            <a href="mailto:info@pt7.nl?subject=Reformer Instructor Course Inquiry" className="urgency-cta">
-              Inquire Now →
-            </a>
-          </div>
-        </div>     
+        <AcademyUrgencyBanner />
 
         {/* About Academy Section */}
         <section className="academy-about">
           <div className="academy-container">
             <h2>Become a Certified Pilates Instructor in Amsterdam</h2>
-            <p className="start-date"><strong>Reformer Instructor Course — Starting September 2026</strong></p>
+            <p className="start-date"><strong>Reformer Instructor Course, Starting September 2026</strong></p>
+            <div className="ittap-accreditation">
+              <a
+                href="https://pilatesmethodalliance.org/page/ITTAP"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ittap-accreditation-link"
+              >
+                <img
+                  src={ITTAP_LOGO}
+                  alt={ITTAP_LOGO_ALT}
+                  className="ittap-logo"
+                  width={500}
+                  height={215}
+                />
+              </a>
+              <p>
+                PT Studio 7 Academy is an <strong>ITTAP-approved</strong> international Pilates instructor
+                certification training program, the international standard for Pilates teacher training, accredited
+                by the Pilates Method Alliance. Graduates earn an <strong>internationally recognized certificate</strong>{' '}
+                valued by studios and employers worldwide.
+              </p>
+            </div>
             <p>
               <strong>Thinking about a career change?</strong> Many of our instructors came from banking, tech, and corporate backgrounds. 
-              Our weekend-only schedule means you can train while keeping your current job — no need to quit before you're ready.
+              Our weekend-only schedule means you can train while keeping your current job, with no need to quit before you're ready.
             </p>
             <p>
               Want a real example? Read our <Link to="/blog/career-change-banker-to-pilates-instructor">career-change story</Link> and explore the
               <Link to="/trainer/elif"> Elif instructor profile</Link> to see who leads the training.
             </p>
             <p>
-              PT 7 Academy's Reformer Instructor Courses are designed to equip you with a strong foundation in Pilates. 
-              Our goal is to help you become a highly sought-after instructor — one whose clients stay committed and inspired. 
-              That's why our program goes far beyond just teaching exercises.
+              PT 7 Academy's instructor courses are designed to equip you with a strong foundation in Pilates and
+              <strong> international Pilates instructor certification training</strong> you can take anywhere. Our goal is to help you become a
+              highly sought-after instructor, one whose clients stay committed and inspired. That's why our program
+              goes far beyond just teaching exercises.
             </p>
             <p>
               You will also see how programming is applied in real sessions on our
@@ -145,10 +163,13 @@ export const Academy: React.FC = () => {
                     <span>PMA-registered instructors</span>
                   </div>
                   <div className="highlight-item">
-                    <span>Only 10 spots available</span>
+                    <span>ITTAP-approved program</span>
                   </div>
                   <div className="highlight-item">
-                    <span>Job opportunities included</span>
+                    <span>International Pilates Instructor Certification</span>
+                  </div>
+                  <div className="highlight-item">
+                    <span>Only 10 spots available</span>
                   </div>
                 </div>
 
@@ -171,8 +192,7 @@ export const Academy: React.FC = () => {
                     <li>Observation + practice (by appointment)</li>
                     <li>2 exams (theoretical & practical)</li>
                     <li>One-on-one final assessment</li>
-                    <li>Completion certificate for successful participants</li>
-                    <li>Optional work opportunities at our studio</li>
+                    <li>Internationally recognized completion certificate (ITTAP-approved international Pilates instructor certification training)</li>
                   </ul>
                 </div>
                 
@@ -209,8 +229,7 @@ export const Academy: React.FC = () => {
                     <li>Observation + practice (by appointment)</li>
                     <li>2 exams (theoretical & practical)</li>
                     <li>One-on-one final assessment</li>
-                    <li>Completion certificate for successful participants</li>
-                    <li>Optional work opportunities at our studio</li>
+                    <li>Internationally recognized completion certificate (ITTAP-approved international Pilates instructor certification training)</li>
                   </ul>
                 </div>
                 
@@ -224,7 +243,7 @@ export const Academy: React.FC = () => {
 
             {/* Payment Information */}
             <div className="payment-info">
-              <h3>Flexible Payment — No Financial Stress</h3>
+              <h3>Flexible Payment, No Financial Stress</h3>
               <p>We know a career change is already a big step. That's why we offer a 3-installment plan so you can focus on learning, not budgeting.</p>
               <div className="payment-breakdown-grid">
                 <div className="payment-step">
@@ -252,32 +271,31 @@ export const Academy: React.FC = () => {
             <div className="benefits-grid">
               <div className="benefit-card">
                 <h3>Weekend-Only Schedule</h3>
-                <p>Train on Saturdays and Sundays — keep your day job while becoming a certified Pilates instructor</p>
+                <p>Train on Saturdays and Sundays and keep your day job while becoming a certified Pilates instructor</p>
               </div>
 
               <div className="benefit-card">
                 <h3>Perfect for Career Changers</h3>
-                <p>No fitness background needed. Our instructors came from banking, tech, and corporate careers — just like you</p>
+                <p>No fitness background needed. Our instructors came from banking, tech, and corporate careers, just like you</p>
               </div>
               
               <div className="benefit-card">
-                <h3>Globally Recognized Training</h3>
-                <p>Learn from PMA-registered instructors. PT Studio 7 is pursuing ITTAP accreditation from the Pilates Method Alliance — the international standard for recognized Pilates teacher training programs.</p>
+                <h3>International Pilates Instructor Certification Training</h3>
+                <p>
+                  Train in Amsterdam, certify internationally. PT Studio 7 Academy is an ITTAP-approved international
+                  Pilates instructor certification training program. Graduates receive a certificate recognized
+                  internationally by the Pilates Method Alliance, the worldwide standard for Pilates teacher training.
+                </p>
               </div>
               
               <div className="benefit-card">
                 <h3>Small Class Sizes</h3>
-                <p>Only 5-10 participants per course — more personal attention than larger programs</p>
-              </div>
-              
-              <div className="benefit-card">
-                <h3>Job Opportunities Included</h3>
-                <p>Work opportunities at our Museumplein studio for successful graduates — start earning right away</p>
+                <p>Only 5-10 participants per course for more personal attention than larger programs</p>
               </div>
               
               <div className="benefit-card">
                 <h3>Affordable Investment</h3>
-                <p>€2,000 + VAT — significantly less than BASI or Polestar comprehensive programs (€5,000-8,000)</p>
+                <p>€2,000 + VAT, significantly less than BASI or Polestar comprehensive programs (€5,000-8,000)</p>
               </div>
             </div>
           </div>
@@ -302,7 +320,7 @@ export const Academy: React.FC = () => {
           <div className="academy-container">
             <h2>Ready for a Career Change?</h2>
             <p>
-              Whether you're a banker tired of spreadsheets, a developer seeking balance, or simply passionate about Pilates — 
+              Whether you're a banker tired of spreadsheets, a developer seeking balance, or simply passionate about Pilates,
               this is your chance to turn that passion into a profession. No fitness background required.
             </p>
             <div className="cta-buttons">

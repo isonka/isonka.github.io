@@ -68,10 +68,11 @@ export const Navbar: React.FC = () => {
       <div className="navbar-container">
         <div className="navbar-logo">
           <Link to="/" aria-label="PT Studio 7 Home">
-            <img 
-              src="/assets/images/ts_logo.png" 
-              alt="PT Studio 7 Logo" 
-              style={{ height: '72px', width: 'auto', verticalAlign: 'middle' }}
+            <img
+              src="/assets/images/ts_logo.png"
+              alt="PT Studio 7 Logo"
+              width={160}
+              height={48}
             />
           </Link>
         </div>
