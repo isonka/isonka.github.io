@@ -27,7 +27,7 @@ interface CourseData {
   endDate?: string;
   schedule: string;
   locationName: string;
-  maxParticipants: number;
+  maxParticipants?: number;
 }
 
 interface StructuredDataProps {
