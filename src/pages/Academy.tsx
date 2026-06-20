@@ -28,6 +28,9 @@ const COURSE_TITLE = 'Reformer Pilates Instructor Course';
 const ACADEMY_ENROLL_WIDGET =
   '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100058" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Enroll"></healcode-widget>';
 
+const ACADEMY_INSTALLMENTS_WIDGET =
+  '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100065" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Enroll with 3 Installments"></healcode-widget>';
+
 const termSchedule = [
   { dates: '12–13 September 2026', module: 'Pilates Introduction & Anatomy' },
   { dates: '26–27 September 2026', module: 'Reformer 1' },
@@ -98,7 +101,7 @@ export const Academy: React.FC = () => {
     {
       question: 'How much does the course cost?',
       answer:
-        'The standard fee is EUR 2,000 plus VAT, or EUR 1,800 plus VAT with early bird pricing before the end of June. You can pay in full or spread the fee over 3 equal installments (3 × EUR 667 + VAT standard, or 3 × EUR 600 + VAT early bird) via MindBody checkout.',
+        'The standard fee is EUR 2,000 plus VAT, or EUR 1,800 plus VAT with early bird pricing before the end of June. Enroll via MindBody to pay in full, or choose Enroll with 3 Installments (3 × EUR 667 + VAT standard, or 3 × EUR 600 + VAT early bird).',
     },
     {
       question: 'What assessments are included?',
@@ -320,14 +323,19 @@ export const Academy: React.FC = () => {
                       <span className="payment-step-note">+ VAT per installment</span>
                     </div>
                   </div>
-                  <p className="payment-note">Installment plan available through MindBody checkout.</p>
+                  <p className="payment-note">Choose pay in full or 3 installments at MindBody checkout below.</p>
                 </div>
                 <div className="academy-enroll-action">
-                  <div
-                    className="course-btn primary academy-enroll-btn healcode-pricing-option-text-link"
-                    dangerouslySetInnerHTML={{ __html: ACADEMY_ENROLL_WIDGET }}
-                  />
-                  <p className="academy-enroll-note">Pay in full or in 3 installments via MindBody checkout</p>
+                  <div className="academy-enroll-buttons">
+                    <div
+                      className="course-btn primary academy-enroll-btn"
+                      dangerouslySetInnerHTML={{ __html: ACADEMY_ENROLL_WIDGET }}
+                    />
+                    <div
+                      className="course-btn secondary academy-enroll-btn academy-enroll-btn--installments"
+                      dangerouslySetInnerHTML={{ __html: ACADEMY_INSTALLMENTS_WIDGET }}
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -401,8 +409,12 @@ export const Academy: React.FC = () => {
               <div className="course-cta">
                 <div className="course-cta-buttons">
                   <div
-                    className="course-btn primary academy-enroll-btn healcode-pricing-option-text-link"
+                    className="course-btn primary academy-enroll-btn"
                     dangerouslySetInnerHTML={{ __html: ACADEMY_ENROLL_WIDGET }}
+                  />
+                  <div
+                    className="course-btn secondary academy-enroll-btn academy-enroll-btn--installments"
+                    dangerouslySetInnerHTML={{ __html: ACADEMY_INSTALLMENTS_WIDGET }}
                   />
                   <a
                     href="mailto:info@pt7.nl?subject=Reformer Pilates Instructor Course Inquiry"
@@ -500,8 +512,12 @@ export const Academy: React.FC = () => {
             </p>
             <div className="cta-buttons">
               <div
-                className="cta-btn primary academy-enroll-btn healcode-pricing-option-text-link"
+                className="cta-btn primary academy-enroll-btn"
                 dangerouslySetInnerHTML={{ __html: ACADEMY_ENROLL_WIDGET }}
+              />
+              <div
+                className="cta-btn secondary academy-enroll-btn academy-enroll-btn--installments"
+                dangerouslySetInnerHTML={{ __html: ACADEMY_INSTALLMENTS_WIDGET }}
               />
               <a href="mailto:info@pt7.nl?subject=Reformer Pilates Instructor Course Inquiry" className="cta-btn secondary">
                 Inquire About the Course

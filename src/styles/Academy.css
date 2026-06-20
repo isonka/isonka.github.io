@@ -652,6 +652,20 @@
   text-align: center;
 }
 
+.academy-enroll-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.academy-enroll-btn--installments {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 1rem;
+  padding: 16px 28px;
+}
+
 .academy-enroll-note {
   font-size: 0.85rem;
   color: #888;
