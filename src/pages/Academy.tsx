@@ -1,8 +1,17 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { AcademyUrgencyBanner } from '../components/AcademyUrgencyBanner';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import '../styles/Academy.css';
+
+declare global {
+  interface Window {
+    HealcodeWidget?: {
+      init: () => void;
+    };
+  }
+}
 
 const ITTAP_LOGO = '/assets/images/pma-ittap-reformer-approved-2026.png';
 const PMA_LOGO = '/assets/images/pma-logo-black.png';
@@ -15,6 +24,9 @@ const PMA_ITTAP_URL =
 const PMA_NAME = 'Pilates Method Alliance (PMA)';
 
 const COURSE_TITLE = 'Reformer Pilates Instructor Course';
+
+const ACADEMY_ENROLL_WIDGET =
+  '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100058" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Enroll"></healcode-widget>';
 
 const termSchedule = [
   { dates: '12–13 September 2026', module: 'Pilates Introduction & Anatomy' },
@@ -53,6 +65,10 @@ const trainingBreakdown = [
 ];
 
 export const Academy: React.FC = () => {
+  useEffect(() => {
+    window.HealcodeWidget?.init?.();
+  }, []);
+
   const academyFaqs = [
     {
       question: 'When are classes held?',
@@ -82,7 +98,7 @@ export const Academy: React.FC = () => {
     {
       question: 'How much does the course cost?',
       answer:
-        'The standard fee is EUR 2,000 plus VAT. Early bird pricing is EUR 1,800 plus VAT when you enroll before the end of June.',
+        'The standard fee is EUR 2,000 plus VAT, or EUR 1,800 plus VAT with early bird pricing before the end of June. You can pay in full or spread the fee over 3 equal installments (3 × EUR 667 + VAT standard, or 3 × EUR 600 + VAT early bird) via MindBody checkout.',
     },
     {
       question: 'What assessments are included?',
@@ -252,6 +268,9 @@ export const Academy: React.FC = () => {
                   <span>Sep–Nov 2026</span>
                 </div>
                 <div className="highlight-item">
+                  <span>3 installment plan</span>
+                </div>
+                <div className="highlight-item">
                   <span>{lectureHours}</span>
                 </div>
               </div>
@@ -285,6 +304,30 @@ export const Academy: React.FC = () => {
                     <span className="price-option-amount">€1,800</span>
                     <span className="price-option-note">+ VAT (21%) · until end of June</span>
                   </div>
+                </div>
+                <div className="payment-info payment-info--inline">
+                  <h4>Payment Options</h4>
+                  <p>Pay in full at checkout, or spread the course fee over 3 equal installments.</p>
+                  <div className="payment-breakdown-grid">
+                    <div className="payment-step">
+                      <span className="payment-step-label">Standard</span>
+                      <span className="payment-step-amount">3 × €667</span>
+                      <span className="payment-step-note">+ VAT per installment</span>
+                    </div>
+                    <div className="payment-step">
+                      <span className="payment-step-label">Early Bird</span>
+                      <span className="payment-step-amount">3 × €600</span>
+                      <span className="payment-step-note">+ VAT per installment</span>
+                    </div>
+                  </div>
+                  <p className="payment-note">Installment plan available through MindBody checkout.</p>
+                </div>
+                <div className="academy-enroll-action">
+                  <div
+                    className="course-btn primary academy-enroll-btn healcode-pricing-option-text-link"
+                    dangerouslySetInnerHTML={{ __html: ACADEMY_ENROLL_WIDGET }}
+                  />
+                  <p className="academy-enroll-note">Pay in full or in 3 installments via MindBody checkout</p>
                 </div>
               </div>
 
@@ -356,9 +399,18 @@ export const Academy: React.FC = () => {
               </div>
 
               <div className="course-cta">
-                <a href="mailto:info@pt7.nl?subject=Reformer Pilates Instructor Course Inquiry" className="course-btn primary">
-                  Inquire About the Course
-                </a>
+                <div className="course-cta-buttons">
+                  <div
+                    className="course-btn primary academy-enroll-btn healcode-pricing-option-text-link"
+                    dangerouslySetInnerHTML={{ __html: ACADEMY_ENROLL_WIDGET }}
+                  />
+                  <a
+                    href="mailto:info@pt7.nl?subject=Reformer Pilates Instructor Course Inquiry"
+                    className="course-btn secondary"
+                  >
+                    Inquire About the Course
+                  </a>
+                </div>
                 <p className="cta-subtext">Reply within 48 hours to secure early bird pricing</p>
               </div>
             </div>
@@ -413,6 +465,14 @@ export const Academy: React.FC = () => {
                 <h3>Early Bird Pricing</h3>
                 <p>Enroll before the end of June and save EUR 200 on the standard course fee.</p>
               </div>
+
+              <div className="benefit-card">
+                <h3>Flexible Payment</h3>
+                <p>
+                  Pay in full at checkout, or spread the course fee over 3 equal installments through MindBody. Early
+                  bird enrollees pay 3 × EUR 600 + VAT; standard fee is 3 × EUR 667 + VAT.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -439,7 +499,11 @@ export const Academy: React.FC = () => {
               Reformer training.
             </p>
             <div className="cta-buttons">
-              <a href="mailto:info@pt7.nl?subject=Reformer Pilates Instructor Course Inquiry" className="cta-btn primary">
+              <div
+                className="cta-btn primary academy-enroll-btn healcode-pricing-option-text-link"
+                dangerouslySetInnerHTML={{ __html: ACADEMY_ENROLL_WIDGET }}
+              />
+              <a href="mailto:info@pt7.nl?subject=Reformer Pilates Instructor Course Inquiry" className="cta-btn secondary">
                 Inquire About the Course
               </a>
               <a href="tel:+31685162693" className="cta-btn secondary">

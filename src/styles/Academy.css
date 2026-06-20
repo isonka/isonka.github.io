@@ -640,6 +640,35 @@
   border-top: 2px solid #f0f0f0;
 }
 
+.course-cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.academy-enroll-action {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.academy-enroll-note {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 12px 0 0;
+}
+
+.academy-enroll-btn a,
+.academy-enroll-btn healcode-widget,
+.academy-enroll-btn .healcode-pricing-option-text-link {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
 .course-btn {
   display: inline-block;
   padding: 16px 40px;
@@ -664,6 +693,19 @@
   box-shadow: 0 6px 16px rgba(255, 215, 0, 0.6);
 }
 
+.course-btn.secondary {
+  background: transparent;
+  color: #222;
+  border: 2px solid #222;
+  box-shadow: none;
+}
+
+.course-btn.secondary:hover {
+  background: #222;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 .cta-subtext {
   font-size: 0.85rem;
   color: #888;
@@ -680,11 +722,22 @@
   text-align: center;
 }
 
-.payment-info h3 {
+.payment-info--inline {
+  margin-top: 28px;
+  padding: 32px 28px;
+}
+
+.payment-info h3,
+.payment-info h4 {
   font-size: 1.6rem;
   color: #ffd700;
   margin-bottom: 12px;
   font-weight: 700;
+}
+
+.payment-info--inline h4 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
 }
 
 .payment-info > p {
@@ -727,6 +780,11 @@
   font-size: 1.6rem;
   font-weight: 700;
   color: #fff;
+}
+
+.payment-step-note {
+  font-size: 0.8rem;
+  color: #999;
 }
 
 .payment-note {
