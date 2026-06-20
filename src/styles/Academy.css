@@ -51,11 +51,34 @@
   background: #f8f8f8;
 }
 
-.academy-about h2 {
+.academy-about h2,
+.academy-page-title {
   font-size: 2.5rem;
   margin-bottom: 32px;
   color: #222;
   text-align: center;
+  line-height: 1.25;
+}
+
+.academy-page-title {
+  font-weight: 700;
+}
+
+.academy-pma-subtitle {
+  font-size: 1.15rem;
+  color: #0075be;
+  text-align: center;
+  margin: -16px auto 24px;
+  font-weight: 600;
+}
+
+.academy-lead {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #444;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 24px;
 }
 
 .academy-about p {
@@ -88,36 +111,141 @@
 }
 
 .ittap-accreditation {
-  background: #111;
+  background: #f6f3ec;
+  border: 1px solid #ece4da;
   border-radius: var(--radius-lg);
-  padding: 32px 24px;
+  padding: 40px 32px;
   margin-bottom: 32px;
   text-align: center;
 }
 
-.ittap-accreditation-link {
-  display: inline-block;
-  margin-bottom: 20px;
-  transition: opacity 0.2s ease;
+.ittap-accreditation-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0075be;
+  margin: 0 0 20px;
 }
 
-.ittap-accreditation-link:hover {
-  opacity: 0.9;
+.accreditation-logos {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 48px;
+  margin: 0 auto 24px;
+  flex-wrap: wrap;
+}
+
+.accreditation-logo-cell {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.accreditation-logo-link {
+  display: block;
+  line-height: 0;
+}
+
+.accreditation-logo-link:focus-visible {
+  outline: 2px solid #0075be;
+  outline-offset: 4px;
+  border-radius: var(--radius-md);
+}
+
+.pma-logo {
+  display: block;
+  height: 170px;
+  width: auto;
 }
 
 .ittap-logo {
   display: block;
-  max-width: 100%;
-  height: auto;
+  height: 200px;
+  width: auto;
+}
+
+@media (max-width: 520px) {
+  .accreditation-logos {
+    gap: 28px;
+  }
+
+  .pma-logo {
+    height: 130px;
+  }
+
+  .ittap-logo {
+    height: 150px;
+  }
 }
 
 .ittap-accreditation p {
-  color: #ddd;
+  color: #222;
   font-size: 1.05rem;
   margin-bottom: 0;
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.75;
+}
+
+.ittap-accreditation p + p {
+  margin-top: 16px;
+}
+
+.ittap-accreditation p a {
+  color: #0075be;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 117, 190, 0.35);
+}
+
+.ittap-accreditation p a:hover {
+  border-bottom-color: rgba(0, 117, 190, 0.75);
+}
+
+.pma-callout {
+  background: #fff;
+  border: 2px solid #0075be;
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.pma-callout h2 {
+  font-size: 1.5rem;
+  color: #0075be;
+  margin: 0 0 16px;
+}
+
+.pma-callout p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #444;
+  max-width: 720px;
+  margin: 0 auto 20px;
+}
+
+.pma-callout-link {
+  display: inline-block;
+  color: #0075be;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 117, 190, 0.35);
+}
+
+.pma-callout-link:hover {
+  border-bottom-color: rgba(0, 117, 190, 0.75);
+}
+
+.benefit-card--pma {
+  border: 2px solid #0075be;
+}
+
+.benefit-card--pma::before {
+  background: #0075be;
 }
 
 /* Courses Section */
@@ -168,6 +296,176 @@
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 40px;
   margin-top: 40px;
+}
+
+.course-card-title {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  color: #222;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.academy-course-section {
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #eee;
+}
+
+.academy-course-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.academy-course-section h3 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 16px;
+}
+
+.academy-course-section h4 {
+  font-size: 1.15rem;
+  color: #444;
+  margin: 24px 0 16px;
+}
+
+.academy-course-section p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.academy-course-section--certification {
+  background: #fff9e6;
+  border: 2px solid #ffd700;
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  margin-top: 8px;
+}
+
+.academy-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+}
+
+.academy-bullet-list li {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #555;
+  padding: 6px 0 6px 24px;
+  position: relative;
+}
+
+.academy-bullet-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #ffd700;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+.price-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.price-option {
+  background: #f8f8f8;
+  border: 2px solid #e5e5e5;
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.price-option--early {
+  background: #fff9e6;
+  border-color: #ffd700;
+}
+
+.price-option-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #666;
+}
+
+.price-option-amount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.price-option-note {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.hours-breakdown-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.hours-breakdown-item {
+  background: #f8f8f8;
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  border-left: 4px solid #ffd700;
+}
+
+.hours-breakdown-hours {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.hours-breakdown-label {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.term-schedule-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.term-schedule-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 16px;
+  background: #f8f8f8;
+  border-left: 4px solid #0075be;
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+}
+
+.term-schedule-dates {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.term-schedule-module {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0075be;
 }
 
 .course-card {
@@ -579,10 +877,12 @@
   }
 
   .academy-about h2,
+  .academy-page-title,
   .academy-courses h2,
   .academy-benefits h2,
-  .academy-cta h2 {
-    font-size: 2rem;
+  .academy-cta h2,
+  .course-card-title {
+    font-size: 1.75rem;
   }
 
   .courses-grid {

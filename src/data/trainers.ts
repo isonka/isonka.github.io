@@ -49,7 +49,7 @@ export const trainerProfiles: TrainerProfile[] = [
     ],
     qualifications: [
       'Senior Polestar Pilates Instructor',
-      'PMA-Registered Pilates Teacher — Pilates Method Alliance (ITTAP accreditation in progress)',
+      'PMA-Registered Pilates Teacher — Pilates Method Alliance (ITTAP-approved Reformer Pilates Instructor Course)',
       'Miha BodyTec EMS Advance Trainer',
       'TRX & Strength Training Instructor',
       '15+ years of experience in Pilates instruction',
