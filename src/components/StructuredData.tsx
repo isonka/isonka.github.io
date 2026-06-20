@@ -22,6 +22,8 @@ interface CourseData {
   price: string;
   priceCurrency: string;
   startDate: string;
+  startTime?: string;
+  endTime?: string;
   endDate?: string;
   schedule: string;
   locationName: string;
