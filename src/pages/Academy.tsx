@@ -101,7 +101,7 @@ export const Academy: React.FC = () => {
     {
       question: 'How much does the course cost?',
       answer:
-        'The standard fee is EUR 2,000 plus VAT, or EUR 1,800 plus VAT with early bird pricing before the end of June. Enroll via MindBody to pay in full, or choose Enroll with 3 Installments (3 × EUR 667 + VAT standard, or 3 × EUR 600 + VAT early bird).',
+        'The course fee is EUR 2,000 plus VAT. Enroll via MindBody to pay in full, or choose Enroll with 3 Installments (3 × EUR 667 + VAT).',
     },
     {
       question: 'What assessments are included?',
@@ -119,11 +119,11 @@ export const Academy: React.FC = () => {
     <>
       <SEOHead
         title="Reformer Pilates Instructor Course Amsterdam | PT7 Academy"
-        description="300 hours Reformer Pilates Instructor Course, ITTAP approved by the Pilates Method Alliance (PMA). Next term: September–November 2026 weekend intensives in Amsterdam. Early bird EUR 1,800 + VAT until end of June."
+        description="300 hours Reformer Pilates Instructor Course, ITTAP approved by the Pilates Method Alliance (PMA). Next term: September–November 2026 weekend intensives in Amsterdam. Last spots available."
         keywords="Pilates Method Alliance, PMA ITTAP, Reformer Pilates Instructor Course, 300 hours reformer training, Reformer instructor course Amsterdam, ITTAP approved Pilates, Pilates teacher training Netherlands"
         canonical="https://www.pt7.nl/academy"
         ogTitle="Reformer Pilates Instructor Course | PMA ITTAP Approved | PT7 Academy"
-        ogDescription="300 hours Reformer Pilates Instructor Course, ITTAP approved by the Pilates Method Alliance (PMA). Next term starts 12 September 2026. Early bird pricing available."
+        ogDescription="300 hours Reformer Pilates Instructor Course, ITTAP approved by the Pilates Method Alliance (PMA). Next term starts 12 September 2026. Last spots available."
       />
       <StructuredData
         type="Course"
@@ -302,24 +302,14 @@ export const Academy: React.FC = () => {
                     <span className="price-option-amount">€2,000</span>
                     <span className="price-option-note">+ VAT (21%)</span>
                   </div>
-                  <div className="price-option price-option--early">
-                    <span className="price-option-label">Early Bird</span>
-                    <span className="price-option-amount">€1,800</span>
-                    <span className="price-option-note">+ VAT (21%) · until end of June</span>
-                  </div>
                 </div>
                 <div className="payment-info payment-info--inline">
                   <h4>Payment Options</h4>
                   <p>Pay in full at checkout, or spread the course fee over 3 equal installments.</p>
                   <div className="payment-breakdown-grid">
                     <div className="payment-step">
-                      <span className="payment-step-label">Standard</span>
+                      <span className="payment-step-label">Installments</span>
                       <span className="payment-step-amount">3 × €667</span>
-                      <span className="payment-step-note">+ VAT per installment</span>
-                    </div>
-                    <div className="payment-step">
-                      <span className="payment-step-label">Early Bird</span>
-                      <span className="payment-step-amount">3 × €600</span>
                       <span className="payment-step-note">+ VAT per installment</span>
                     </div>
                   </div>
@@ -423,7 +413,7 @@ export const Academy: React.FC = () => {
                     Inquire About the Course
                   </a>
                 </div>
-                <p className="cta-subtext">Reply within 48 hours to secure early bird pricing</p>
+                <p className="cta-subtext">Reply within 48 hours to secure your place.</p>
               </div>
             </div>
           </div>
@@ -474,15 +464,10 @@ export const Academy: React.FC = () => {
               </div>
 
               <div className="benefit-card">
-                <h3>Early Bird Pricing</h3>
-                <p>Enroll before the end of June and save EUR 200 on the standard course fee.</p>
-              </div>
-
-              <div className="benefit-card">
                 <h3>Flexible Payment</h3>
                 <p>
-                  Pay in full at checkout, or spread the course fee over 3 equal installments through MindBody. Early
-                  bird enrollees pay 3 × EUR 600 + VAT; standard fee is 3 × EUR 667 + VAT.
+                  Pay in full at checkout, or spread the course fee over 3 equal installments through MindBody
+                  (3 × EUR 667 + VAT).
                 </p>
               </div>
             </div>
