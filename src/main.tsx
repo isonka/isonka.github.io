@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import { createRoot, hydrateRoot } from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 
@@ -71,8 +71,6 @@ const app = (
   </StrictMode>
 );
 
-if (rootElement.hasChildNodes()) {
-  hydrateRoot(rootElement, app);
-} else {
-  createRoot(rootElement).render(app);
-}
+// Client-rendered SPA: clear static fallback HTML before mount (avoids Safari hydration blank screen).
+rootElement.innerHTML = '';
+createRoot(rootElement).render(app);

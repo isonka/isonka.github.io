@@ -14,7 +14,7 @@ For day-to-day human setup, see [README.md](./README.md).
 | **Stack** | React 19, TypeScript, Vite 7, React Router 7. Static output in `dist/` after build. |
 | **Production site** | `https://www.pt7.nl` (canonical URLs and structured data assume this host). |
 | **Repo / hosting** | GitHub repo `isonka.github.io`; **GitHub Pages** deploy via [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml) on push to `main` (and manual `workflow_dispatch`). |
-| **Node** | `>=20.19.1` (see `package.json` and workflow). |
+| **Node** | `>=22.12.0` (CI uses Node 24; see `package.json` and workflow). |
 | **Build** | `npm run build` runs TypeScript, Vite build, static route generation, and **Puppeteer prerender** for HTML snapshots (important for crawlers and first paint). |
 | **AI / LLM context** | `public/llms.txt` — curated business facts; keep in sync when marketing facts change. |
 
