@@ -1,39 +1,37 @@
 import { useEffect } from 'react';
+import { loadTrackingIfConsented } from '../utils/consentTracking';
 
-declare global {
-  interface Window {
-    Cookiebot?: any;
-  }
-}
+const COOKIEBOT_ID = 'b7046d56-8fa7-4aff-9789-7c95656f78f5';
 
 export const CookieConsent: React.FC = () => {
   useEffect(() => {
-    // Check if script already exists
+    const onConsentReady = () => {
+      loadTrackingIfConsented();
+    };
+
+    window.addEventListener('CookiebotOnLoad', onConsentReady);
+    window.addEventListener('CookiebotOnAccept', onConsentReady);
+    window.addEventListener('CookiebotOnDecline', onConsentReady);
+
     const existingScript = document.getElementById('Cookiebot');
-    if (existingScript) {
-      return;
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.id = 'Cookiebot';
+      script.src = 'https://consent.cookiebot.com/uc.js';
+      script.setAttribute('data-cbid', COOKIEBOT_ID);
+      script.setAttribute('data-blockingmode', 'auto');
+      script.type = 'text/javascript';
+      document.head.appendChild(script);
+    } else if (window.Cookiebot?.consent) {
+      onConsentReady();
     }
-    
-    // Load Cookiebot script dynamically
-    const script = document.createElement('script');
-    script.id = 'Cookiebot';
-    script.src = 'https://consent.cookiebot.com/uc.js';
-    script.setAttribute('data-cbid', 'b7046d56-8fa7-4aff-9789-7c95656f78f5');
-    script.setAttribute('data-blockingmode', 'auto');
-    script.type = 'text/javascript';
 
-    // Add script to document head
-    document.head.appendChild(script);
-
-    // Cleanup on unmount
     return () => {
-      const scriptToRemove = document.getElementById('Cookiebot');
-      if (scriptToRemove) {
-        scriptToRemove.remove();
-      }
+      window.removeEventListener('CookiebotOnLoad', onConsentReady);
+      window.removeEventListener('CookiebotOnAccept', onConsentReady);
+      window.removeEventListener('CookiebotOnDecline', onConsentReady);
     };
   }, []);
 
-  return null; // This component doesn't render anything visible
+  return null;
 };
-

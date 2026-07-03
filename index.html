@@ -1,57 +1,7 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-    <!-- Meta Pixel Code - Deferred to not block rendering -->
-    <script>
-      window.addEventListener('load', function() {
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1197758608916828');
-        fbq('track', 'PageView');
-      });
-    </script>
-    <!-- End Meta Pixel Code -->
-    
-    <!-- Google Tag Manager (Primary - handles all tracking) -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KB25PGXB');</script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Google Analytics & Ads - Deferred to not block rendering -->
-    <script>
-      // Defer analytics initialization until page is interactive
-      window.addEventListener('load', function() {
-        // Google Ads
-        var gtagScript1 = document.createElement('script');
-        gtagScript1.async = true;
-        gtagScript1.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17684932205';
-        document.head.appendChild(gtagScript1);
-        
-        // Google Analytics
-        var gtagScript2 = document.createElement('script');
-        gtagScript2.async = true;
-        gtagScript2.src = 'https://www.googletagmanager.com/gtag/js?id=G-J7K4DF0N40';
-        document.head.appendChild(gtagScript2);
-        
-        // Initialize when scripts load
-        gtagScript1.onload = function() {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'AW-17684932205');
-          gtag('config', 'G-J7K4DF0N40', {'send_page_view': false});
-        };
-      });
-    </script>
+    <!-- GTM, Google Analytics/Ads, and Meta Pixel load after Cookiebot consent via src/utils/consentTracking.ts -->
 
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/pt7logo.png" />
@@ -367,17 +317,6 @@
     </script>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KB25PGXB"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    
-    <!-- Meta Pixel (noscript) -->
-    <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1197758608916828&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel (noscript) -->
-
     <div id="root">
       <!-- Static Content Fallback for LLMs and No-JS Users - Hidden from visual users -->
       <main id="static-fallback" style="max-width: 1200px; margin: 0 auto; padding: 20px; font-family: system-ui;">
