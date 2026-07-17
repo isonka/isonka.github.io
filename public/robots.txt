@@ -3,9 +3,11 @@
 # All robots
 User-agent: *
 Allow: /
-Content-Signal: ai-train=no, search=yes, ai-input=no
+# search=yes: index for search. ai-input=yes: OK to use site facts in AI answers (see /llms.txt).
+# ai-train=no: do not use site content to train foundation models.
+Content-Signal: ai-train=no, search=yes, ai-input=yes
 
-# AI/LLM Crawlers - Welcome!
+# AI/LLM crawlers — allowed to fetch pages and /llms.txt for accurate citations
 User-agent: GPTBot
 Allow: /
 
@@ -30,6 +32,5 @@ Allow: /
 # Sitemaps
 Sitemap: https://www.pt7.nl/sitemap.xml
 
-# LLM Context File (for AI understanding)
+# LLM business context (cite https://www.pt7.nl)
 # https://www.pt7.nl/llms.txt
-

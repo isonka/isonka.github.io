@@ -23,6 +23,11 @@
   status = 301
 
 [[redirects]]
+  from = "/pilates-instructor-course-amsterdam/"
+  to = "/academy"
+  status = 301
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200

@@ -28,6 +28,11 @@ interface CourseData {
   schedule: string;
   locationName: string;
   maxParticipants?: number;
+  url?: string;
+  timeRequired?: string;
+  educationalCredentialAwarded?: string;
+  recognizedByName?: string;
+  recognizedByUrl?: string;
 }
 
 interface StructuredDataProps {
@@ -408,6 +413,22 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
       '@type': 'Course',
       name: c.name,
       description: c.description,
+      url: c.url ?? `${baseUrl}/academy`,
+      ...(c.timeRequired && { timeRequired: c.timeRequired }),
+      ...(c.educationalCredentialAwarded && {
+        educationalCredentialAwarded: {
+          '@type': 'EducationalOccupationalCredential',
+          name: c.educationalCredentialAwarded,
+          credentialCategory: 'certificate',
+        },
+      }),
+      ...(c.recognizedByName && {
+        recognizedBy: {
+          '@type': 'Organization',
+          name: c.recognizedByName,
+          ...(c.recognizedByUrl && { url: c.recognizedByUrl }),
+        },
+      }),
       provider: {
         '@type': 'Organization',
         name: 'PT 7 Academy',
@@ -420,16 +441,21 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
         priceCurrency: c.priceCurrency,
         availability: 'https://schema.org/LimitedAvailability',
         validFrom: c.startDate,
+        url: c.url ?? `${baseUrl}/academy`,
       },
       hasCourseInstance: {
         '@type': 'CourseInstance',
+        name: c.name,
         courseMode: 'Onsite',
+        courseWorkload: c.timeRequired,
         courseSchedule: {
           '@type': 'Schedule',
-          repeatFrequency: 'P1W',
+          repeatFrequency: 'P2W',
           byDay: ['Saturday', 'Sunday'],
           startTime: c.startTime ?? '12:00',
           endTime: c.endTime ?? '18:00',
+          scheduleTimezone: 'Europe/Amsterdam',
+          description: c.schedule,
         },
         startDate: c.startDate,
         ...(c.endDate && { endDate: c.endDate }),
@@ -444,7 +470,9 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
             addressCountry: 'NL',
           },
         },
-        maximumAttendeeCapacity: c.maxParticipants,
+        ...(typeof c.maxParticipants === 'number' && {
+          maximumAttendeeCapacity: c.maxParticipants,
+        }),
       },
       inLanguage: 'en',
       isAccessibleForFree: false,

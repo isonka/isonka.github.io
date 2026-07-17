@@ -28,6 +28,11 @@
   to = "/academy"
   status = 301
 
+[[redirects]]
+  from = "/pilates-instructor-course-amsterdam/"
+  to = "/academy"
+  status = 301
+
 # SPA redirect for React Router - MUST come before any other redirects
 [[redirects]]
   from = "/*"

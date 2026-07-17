@@ -193,11 +193,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.pt7.nl/pilates-instructor-course-amsterdam</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://www.pt7.nl/reformer-pilates-amsterdam</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
+  <!-- /pilates-instructor-course-amsterdam is a legacy keyword alias → 301/redirect to /academy; do not list in sitemap -->
 
   <!-- Blog -->
   <url>

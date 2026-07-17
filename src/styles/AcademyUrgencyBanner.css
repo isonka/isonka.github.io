@@ -5,6 +5,10 @@
   overflow: hidden;
   width: 100%;
   box-sizing: border-box;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .academy-urgency-banner::before {

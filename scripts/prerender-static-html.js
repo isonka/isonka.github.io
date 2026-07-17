@@ -44,6 +44,7 @@ const routes = [
   '/private-pilates-amsterdam',
   '/trx-training-amsterdam',
   '/strength-training-amsterdam',
+  '/reformer-pilates-amsterdam',
   '/blog',
   '/blog/prenatal-pilates-supporting-body-through-every-trimester',
   '/blog/pilates-for-men-strength-flexibility-athletic-performance',

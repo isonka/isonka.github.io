@@ -135,10 +135,17 @@ export const Academy: React.FC = () => {
             price: '2000',
             priceCurrency: 'EUR',
             startDate: '2026-09-12',
+            endDate: '2026-11-08',
             schedule: 'Selected weekends Sep–Nov 2026, 12:00-18:00',
             startTime: '12:00',
             endTime: '18:00',
             locationName: 'PT Studio 7 Amsterdam - Museumplein',
+            url: 'https://www.pt7.nl/academy',
+            timeRequired: 'PT300H',
+            educationalCredentialAwarded: 'PT7 Academy Reformer Pilates Instructor Certificate',
+            recognizedByName: 'Pilates Method Alliance (PMA) — ITTAP',
+            recognizedByUrl:
+              'https://www.pilatesmethodalliance.org/international-teacher-trainer-accreditation-for-pilates',
           },
         }}
       />

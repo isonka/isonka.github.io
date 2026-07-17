@@ -37,8 +37,8 @@ const routeMeta = {
     image: DEFAULT_IMAGE,
   },
   'academy': {
-    title: 'Reformer Instructor Course Amsterdam 2026 | PT Studio 7 Academy',
-    description: 'Become a certified Pilates instructor. 4 weeks of lessons + 8 weeks optional observation. Learn from experienced instructors at Museumplein.',
+    title: 'Reformer Pilates Instructor Course Amsterdam 2026 | PT7 Academy',
+    description: '300-hour Reformer Pilates Instructor Course, ITTAP approved by the Pilates Method Alliance (PMA). Next term September–November 2026, weekend lectures at Museumplein.',
     image: DEFAULT_IMAGE,
   },
   'healthcare-providers': {
@@ -49,6 +49,31 @@ const routeMeta = {
   'prenatal-pilates-amsterdam': {
     title: 'Prenatal Pilates Amsterdam Oud-Zuid | Private Sessions | PT Studio 7',
     description: 'Prenatal Pilates in Amsterdam Oud-Zuid with trimester-specific private Reformer sessions, pelvic floor support, and expert instructors.',
+    image: DEFAULT_IMAGE,
+  },
+  'reformer-pilates-amsterdam': {
+    title: 'Reformer Pilates Amsterdam Museumplein | PT Studio 7',
+    description: 'Reformer Pilates classes in Amsterdam at Museumplein. Small groups (max 5), private sessions, expert instructors in Oud-Zuid.',
+    image: DEFAULT_IMAGE,
+  },
+  'private-pilates-amsterdam': {
+    title: 'Private Reformer Pilates Sessions Amsterdam | PT Studio 7',
+    description: 'One-on-one private Reformer Pilates at Museumplein. Personalised training with certified instructors. Duo & trio options.',
+    image: DEFAULT_IMAGE,
+  },
+  'trx-training-amsterdam': {
+    title: 'TRX Training Amsterdam Museumplein | PT Studio 7',
+    description: 'Professional TRX suspension training at Museumplein. Functional strength, core stability, small groups & private sessions.',
+    image: DEFAULT_IMAGE,
+  },
+  'strength-training-amsterdam': {
+    title: 'Strength Training Amsterdam | PT Studio 7 Museumplein',
+    description: 'Personal strength training at Museumplein. Small groups (max 5) and private sessions with expert trainers.',
+    image: DEFAULT_IMAGE,
+  },
+  'pregnancy-pilates-amsterdam': {
+    title: 'Pregnancy Pilates Amsterdam | PT Studio 7',
+    description: 'Pregnancy-safe Reformer Pilates in Amsterdam Museumplein with specialist instructors.',
     image: DEFAULT_IMAGE,
   },
   'schedule': {
@@ -189,6 +214,11 @@ const routes = [
   'academy',
   'healthcare-providers',
   'prenatal-pilates-amsterdam',
+  'pregnancy-pilates-amsterdam',
+  'private-pilates-amsterdam',
+  'trx-training-amsterdam',
+  'strength-training-amsterdam',
+  'reformer-pilates-amsterdam',
   'blog',
   'classpass-offer',
   // Blog posts

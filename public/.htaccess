@@ -69,6 +69,8 @@
   # Canonical host redirect: legacy domain -> primary domain
   RewriteCond %{HTTP_HOST} ^(www\.)?ptstudio7amsterdam\.nl$ [NC]
   RewriteRule ^(.*)$ https://pt7.nl/$1 [R=301,L]
+  # Legacy keyword URL → Academy canonical
+  RewriteRule ^pilates-instructor-course-amsterdam/?$ /academy [R=301,L]
   RewriteRule ^index\.html$ - [L]
   # Agent markdown negotiation: if client prefers Markdown, serve /index.md for homepage.
   RewriteCond %{REQUEST_URI} ^/$

@@ -1,16 +1,19 @@
+import { Link } from 'react-router-dom';
 import '../styles/AcademyUrgencyBanner.css';
 
 export const AcademyUrgencyBanner: React.FC = () => (
-  <div className="academy-urgency-banner">
+  <Link
+    to="/academy"
+    className="academy-urgency-banner"
+    aria-label="Reformer Pilates Instructor Course — open PT7 Academy"
+  >
     <div className="urgency-content">
       <span className="urgency-text">
         <strong>Reformer Pilates Instructor Course</strong>
         <span className="urgency-text-full"> · 300 hours · PMA ITTAP Approved · Last spots</span>
         <span className="urgency-text-short"> · 300 hours · Last spots</span>
       </span>
-      <a href="mailto:info@pt7.nl?subject=Reformer Pilates Instructor Course Inquiry" className="urgency-cta">
-        Inquire Now →
-      </a>
+      <span className="urgency-cta">View Course →</span>
     </div>
-  </div>
+  </Link>
 );

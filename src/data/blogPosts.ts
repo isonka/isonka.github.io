@@ -96,18 +96,21 @@ export const blogPosts: BlogPost[] = [
 
       <h2>What Does the Certification Process Look Like?</h2>
 
-      <p>The Reformer Instructor Course at PT 7 Academy is a 12-week program that includes:</p>
+      <p>The Reformer Pilates Instructor Course at PT 7 Academy is a <strong>300-hour</strong> program, ITTAP approved by the Pilates Method Alliance (PMA). It includes:</p>
 
       <ul>
-        <li>48 hours of in-person technical training</li>
-        <li>Comprehensive anatomy and movement theory</li>
-        <li>5 hours of observation + 5 hours of practice teaching</li>
-        <li>Theoretical and practical exams</li>
-        <li>One-on-one final assessment</li>
-        <li>Certificate upon completion</li>
+        <li>85 hours of lectures and theory (selected weekends, 12:00–18:00)</li>
+        <li>60 hours of observation</li>
+        <li>60 hours of self practice</li>
+        <li>40 hours of teaching practice</li>
+        <li>40 hours of private or group sessions with a master trainer</li>
+        <li>10 hours of assisted teaching with a master trainer</li>
+        <li>5 hours of QTT observation and assessment</li>
+        <li>Theoretical and practical exams, plus a mandatory exercise assessment for certification</li>
+        <li>PT7 Academy Reformer Pilates Instructor Certificate upon successful completion</li>
       </ul>
 
-      <p>The investment is €2,000 + VAT — significantly less than comprehensive programs from BASI (€5,000+) or Polestar (€7,000+). And you can pay in three installments if needed.</p>
+      <p>The investment is €2,000 + VAT — significantly less than many comprehensive programs from BASI (€5,000+) or Polestar (€7,000+). You can pay in full or in three installments if needed. A mandatory exercise assessment for certification costs €250 including BTW.</p>
 
       <h2>The Part Nobody Talks About: Building Your Client Base</h2>
 
@@ -157,9 +160,9 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Imagine your life in one year</strong> — Same desk, or something new?</li>
       </ol>
 
-      <h2>The Next Cohort Starts March 2026</h2>
+      <h2>The Next Term Starts September 2026</h2>
 
-      <p>PT 7 Academy's Reformer Instructor Course begins in March 2026. It's weekend-only, small groups (4-8 people), taught by globally certified instructors with 15+ years of experience.</p>
+      <p>PT 7 Academy's Reformer Pilates Instructor Course runs September–November 2026 on selected weekends at our Museumplein studio. Lectures are weekend-only (12:00–18:00), so you can keep your weekday job while you train — taught by instructors with 15+ years of experience.</p>
 
       <p>If you're curious, reach out. No pressure, no sales pitch — just an honest conversation about whether this path might be right for you.</p>
 
@@ -171,7 +174,7 @@ export const blogPosts: BlogPost[] = [
     date: '2026-01-23',
     image: '/assets/images/reformer_1.webp',
     tags: ['Career Change', 'Pilates Certification', 'PT 7 Academy', 'Lifestyle', 'Work-Life Balance'],
-    metaDescription: 'How to switch careers from banking, tech, or corporate jobs to becoming a certified Pilates instructor. Weekend training in Amsterdam, no fitness background needed. PT 7 Academy.',
+    metaDescription: 'How to switch careers from banking, tech, or corporate jobs to becoming a Reformer Pilates instructor. 300-hour weekend training in Amsterdam (Sep–Nov 2026), PMA ITTAP-approved program. PT 7 Academy.',
     keywords: [
       'career change pilates instructor',
       'banker to pilates instructor',
