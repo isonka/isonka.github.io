@@ -6,21 +6,21 @@
       "type": "action",
       "description": "Navigate users to class booking options and schedule flows.",
       "url": "https://www.pt7.nl/.well-known/agent-skills/book-class.md",
-      "sha256": "6d776ae99998c6824e2fe576dc588e2fe7494970a445c6ae7fbaf3e1d9756c93"
+      "sha256": "a5a5e498cf7ae009bd9ca0cbeee33afd7e208b80fbde28e4224814d812115fd2"
     },
     {
       "name": "get-pricing",
       "type": "query",
       "description": "Retrieve current pricing packages and session options.",
       "url": "https://www.pt7.nl/.well-known/agent-skills/get-pricing.md",
-      "sha256": "ee986ccd9f353e116149004ab10f970ea62382602311aa5a2563311f0a3927b7"
+      "sha256": "428972ca4ffc9c3cae2f5f274f683201f448c7fe60a4d597a2bfaa2df41f29ab"
     },
     {
       "name": "contact-studio",
       "type": "action",
       "description": "Provide direct contact channels and studio location details.",
       "url": "https://www.pt7.nl/.well-known/agent-skills/contact-studio.md",
-      "sha256": "aa337ac07a90254e9bbaef61ebe9daaf55f0a09c97945eb217c2f96ecfffa843"
+      "sha256": "74183b402d3cfa89d5d747a3636b12c0113cd6f922e3b02ab4f5bd8067615374"
     }
   ]
 }

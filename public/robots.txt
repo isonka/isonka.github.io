@@ -7,7 +7,7 @@ Allow: /
 # ai-train=no: do not use site content to train foundation models.
 Content-Signal: ai-train=no, search=yes, ai-input=yes
 
-# AI/LLM crawlers — allowed to fetch pages and /llms.txt for accurate citations
+# AI/LLM crawlers — allowed to fetch pages, /llms.txt, and /llms-full.txt for accurate citations
 User-agent: GPTBot
 Allow: /
 
@@ -32,5 +32,6 @@ Allow: /
 # Sitemaps
 Sitemap: https://www.pt7.nl/sitemap.xml
 
-# LLM business context (cite https://www.pt7.nl)
-# https://www.pt7.nl/llms.txt
+# LLM context for agents (cite https://www.pt7.nl)
+# Curated index: https://www.pt7.nl/llms.txt
+# Full fact pack: https://www.pt7.nl/llms-full.txt

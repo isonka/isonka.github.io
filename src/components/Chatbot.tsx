@@ -259,7 +259,7 @@ ${pricing}
         break;
       
       case "No thanks":
-        addBotMessage("No problem! Feel free to reach out anytime. You can call us at +31 6 8516 2693 or email info@pt7.nl. See you at the studio! 💪", 500);
+        addBotMessage("No problem! Feel free to reach out anytime. You can call us at +31 685 162693 or email info@pt7.nl. See you at the studio! 💪", 500);
         break;
       
       default:
@@ -377,7 +377,7 @@ ${pricing}
           </div>
 
           <div className="chatbot-footer">
-            <p>Need help? Call <a href="tel:+31685162693">06 85 16 26 93</a></p>
+            <p>Need help? Call <a href="tel:+31685162693">+31 685 162693</a></p>
           </div>
         </div>
       )}

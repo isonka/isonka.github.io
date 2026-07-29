@@ -3,9 +3,11 @@
 
 <IfModule mod_headers.c>
   # Homepage discovery links for AI agents (RFC 8288 / RFC 9727)
+  # Note: GitHub Pages ignores .htaccess; primary discovery is HTML <link> in index.html
   <FilesMatch "^index\.html$">
     Header append Link "</.well-known/api-catalog>; rel=\"api-catalog\""
     Header append Link "</llms.txt>; rel=\"service-doc\"; type=\"text/plain\""
+    Header append Link "</llms-full.txt>; rel=\"describedby\"; type=\"text/plain\""
   </FilesMatch>
 
   # HTML - Short cache with revalidation (1 hour)

@@ -91,7 +91,7 @@ export const Pricing: React.FC = () => {
     {
       question: 'Can I cancel my membership?',
       answer:
-        'Yes! In 1-month memberships (4 & 8 classes), you have the right to cancel after the first month. The 3-month and annual memberships can be cancelled after you complete your initial commitment period (3 or 12 months). To cancel, contact us via email at info@pt7.nl or call 06 85 16 26 93 before your renewal date.',
+        'Yes! In 1-month memberships (4 & 8 classes), you have the right to cancel after the first month. The 3-month and annual memberships can be cancelled after you complete your initial commitment period (3 or 12 months). To cancel, contact us via email at info@pt7.nl or call +31 685 162693 before your renewal date.',
     },
     {
       question: 'Is the annual membership unlimited classes?',
@@ -795,7 +795,7 @@ export const Pricing: React.FC = () => {
               </div>
               <div className="faq-content">
                 <p>Yes! In 1-month memberships (4 & 8 classes), you have the right to cancel after the first month. The 3-month and annual memberships can be cancelled after you complete your initial commitment period (3 or 12 months).</p>
-                <p>To cancel, contact us via email at <a href="mailto:info@pt7.nl">info@pt7.nl</a> or call <a href="tel:+31685162693">06 85 16 26 93</a> before your renewal date.</p>
+                <p>To cancel, contact us via email at <a href="mailto:info@pt7.nl">info@pt7.nl</a> or call <a href="tel:+31685162693">+31 685 162693</a> before your renewal date.</p>
               </div>
             </div>
 
@@ -837,7 +837,7 @@ export const Pricing: React.FC = () => {
           <p>We care about you! Email any assistance you need or call us for personalized guidance.</p>
           <div className="cta-buttons">
             <a href="mailto:info@pt7.nl" className="cta-button primary">Email Us</a>
-            <a href="tel:+31685162693" className="cta-button secondary">Call: 06 85 16 26 93</a>
+            <a href="tel:+31685162693" className="cta-button secondary">Call: +31 685 162693</a>
           </div>
         </div>
       </div>

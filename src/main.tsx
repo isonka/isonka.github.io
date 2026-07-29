@@ -54,7 +54,7 @@ if (maybeModelContext?.provideContext) {
           additionalProperties: false
         },
         execute: () => ({
-          phone: '+31 6 8516 2693',
+          phone: '+31 685 162693',
           email: 'info@pt7.nl',
           whatsapp: 'https://wa.me/31685162693',
           address: 'Van Baerlestraat 76C, 1071BB Amsterdam'

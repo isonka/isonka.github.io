@@ -1,26 +1,29 @@
 {
   "linkset": [
     {
-      "anchor": "https://www.pt7.nl/api",
-      "service-desc": [
-        {
-          "href": "https://www.pt7.nl/.well-known/openapi.json",
-          "type": "application/vnd.oai.openapi+json;version=3.1",
-          "title": "PT Studio 7 Public API Specification"
-        }
-      ],
+      "anchor": "https://www.pt7.nl/",
       "service-doc": [
         {
-          "href": "https://www.pt7.nl/.well-known/api-docs",
+          "href": "https://www.pt7.nl/llms.txt",
+          "type": "text/plain",
+          "title": "LLM context index (llmstxt.org)"
+        },
+        {
+          "href": "https://www.pt7.nl/llms-full.txt",
+          "type": "text/plain",
+          "title": "LLM full studio & Academy fact pack"
+        },
+        {
+          "href": "https://www.pt7.nl/index.md",
           "type": "text/markdown",
-          "title": "PT Studio 7 API Documentation"
+          "title": "Short Markdown site summary"
         }
       ],
-      "status": [
+      "describedby": [
         {
-          "href": "https://www.pt7.nl/.well-known/api-status",
+          "href": "https://www.pt7.nl/.well-known/agent-skills/index.json",
           "type": "application/json",
-          "title": "PT Studio 7 API Health Endpoint"
+          "title": "Agent skills index (book, pricing, contact)"
         }
       ]
     }

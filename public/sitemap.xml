@@ -168,9 +168,10 @@
   </url>
   
   <!-- Service Landing Pages (local SEO) -->
+  <!-- /pregnancy-pilates-amsterdam is a legacy keyword alias → client redirect to /prenatal-pilates-amsterdam; do not list in sitemap -->
   <url>
-    <loc>https://www.pt7.nl/pregnancy-pilates-amsterdam</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://www.pt7.nl/prenatal-pilates-amsterdam</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

@@ -127,7 +127,7 @@ export const BookingGuide: React.FC = () => {
         '🕐 Arrive 10 minutes early for your first visit',
         '👟 What to bring: Water, towel, grip socks',
         '🎽 Wear comfortable fitted clothing (no loose shirts)',
-        '📞 Still having issues? Call us: +31 6 8516 2693'
+        '📞 Still having issues? Call us: +31 685 162693'
       ]
     }
   ];
@@ -239,7 +239,7 @@ export const BookingGuide: React.FC = () => {
               <h5>Still need help?</h5>
               <div className="help-options">
                 <a href="tel:+31685162693" className="help-link">
-                  📞 Call us: +31 6 8516 2693
+                  📞 Call us: +31 685 162693
                 </a>
                 <a href="mailto:info@pt7.nl" className="help-link">
                   ✉️ Email: info@pt7.nl

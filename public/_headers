@@ -2,13 +2,16 @@
 # This file optimizes caching for static assets
 
 # Homepage discovery links for AI agents (RFC 8288 / RFC 9727)
+# Note: GitHub Pages ignores this file; primary discovery is HTML <link> in index.html
 /
   Link: </.well-known/api-catalog>; rel="api-catalog"
   Link: </llms.txt>; rel="service-doc"; type="text/plain"
+  Link: </llms-full.txt>; rel="describedby"; type="text/plain"
 
 /index.html
   Link: </.well-known/api-catalog>; rel="api-catalog"
   Link: </llms.txt>; rel="service-doc"; type="text/plain"
+  Link: </llms-full.txt>; rel="describedby"; type="text/plain"
   Vary: Accept
 
 /index.md
@@ -18,18 +21,6 @@
 
 /.well-known/api-catalog
   Content-Type: application/linkset+json; charset=UTF-8
-
-/.well-known/openid-configuration
-  Content-Type: application/json; charset=UTF-8
-
-/.well-known/oauth-authorization-server
-  Content-Type: application/json; charset=UTF-8
-
-/.well-known/oauth-protected-resource
-  Content-Type: application/json; charset=UTF-8
-
-/.well-known/mcp/server-card.json
-  Content-Type: application/json; charset=UTF-8
 
 /.well-known/agent-skills/index.json
   Content-Type: application/json; charset=UTF-8

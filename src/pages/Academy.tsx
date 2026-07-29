@@ -515,7 +515,7 @@ export const Academy: React.FC = () => {
                 Inquire About the Course
               </a>
               <a href="tel:+31685162693" className="cta-btn secondary">
-                Call: 06 85 16 26 93
+                Call: +31 685 162693
               </a>
             </div>
           </div>

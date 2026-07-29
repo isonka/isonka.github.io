@@ -112,7 +112,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
       name: 'PT Studio 7 Amsterdam',
       image: `${baseUrl}/assets/images/studio.jpg`,
       url: baseUrl,
-      telephone: '+31-6-8516-2693',
+      telephone: '+31685162693',
       priceRange: 'EUR 28-85',
       address: {
         '@type': 'PostalAddress',
@@ -181,7 +181,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
       description:
         "Boutique Pilates and personal training studio at Museumplein, Amsterdam offering Reformer Pilates, TRX, strength training, private sessions, and small group classes.",
       image: `${baseUrl}/assets/images/studio.jpg`,
-      telephone: '+31-6-8516-2693',
+      telephone: '+31685162693',
       priceRange: 'EUR 28-85',
       address: {
         '@type': 'PostalAddress',

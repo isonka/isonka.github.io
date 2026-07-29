@@ -47,8 +47,8 @@ const routeMeta = {
     image: DEFAULT_IMAGE,
   },
   'prenatal-pilates-amsterdam': {
-    title: 'Prenatal Pilates Amsterdam Oud-Zuid | Private Sessions | PT Studio 7',
-    description: 'Prenatal Pilates in Amsterdam Oud-Zuid with trimester-specific private Reformer sessions, pelvic floor support, and expert instructors.',
+    title: 'Prenatal & Pregnancy Pilates Amsterdam | Private Reformer | PT Studio 7',
+    description: 'Private prenatal Reformer Pilates in Amsterdam Oud-Zuid / Museumplein. Trimester-specific sessions, pelvic floor support, pregnancy-safe training with specialist instructors.',
     image: DEFAULT_IMAGE,
   },
   'reformer-pilates-amsterdam': {
@@ -71,10 +71,12 @@ const routeMeta = {
     description: 'Personal strength training at Museumplein. Small groups (max 5) and private sessions with expert trainers.',
     image: DEFAULT_IMAGE,
   },
+  // Legacy keyword URL → soft redirect; static HTML must canonicalize to prenatal
   'pregnancy-pilates-amsterdam': {
     title: 'Pregnancy Pilates Amsterdam | PT Studio 7',
-    description: 'Pregnancy-safe Reformer Pilates in Amsterdam Museumplein with specialist instructors.',
+    description: 'Pregnancy-safe Reformer Pilates in Amsterdam Museumplein. Redirects to our prenatal private sessions page.',
     image: DEFAULT_IMAGE,
+    canonical: 'https://www.pt7.nl/prenatal-pilates-amsterdam',
   },
   'schedule': {
     title: 'Class Schedule | PT Studio 7 Amsterdam',
@@ -246,12 +248,13 @@ routes.forEach(route => {
   const meta = routeMeta[route];
   if (meta) {
     const fullUrl = `${BASE_URL}/${route}`;
+    const canonicalUrl = meta.canonical || fullUrl;
     const imageUrl = `${BASE_URL}${meta.image}`;
     
     // Replace OG meta tags
     html = html.replace(
       /<meta property="og:url" content="[^"]*" \/>/,
-      `<meta property="og:url" content="${fullUrl}" />`
+      `<meta property="og:url" content="${canonicalUrl}" />`
     );
     html = html.replace(
       /<meta property="og:title" content="[^"]*" \/>/,
@@ -265,7 +268,7 @@ routes.forEach(route => {
     // Replace Twitter meta tags
     html = html.replace(
       /<meta name="twitter:url" content="[^"]*" \/>/,
-      `<meta name="twitter:url" content="${fullUrl}" />`
+      `<meta name="twitter:url" content="${canonicalUrl}" />`
     );
     html = html.replace(
       /<meta name="twitter:title" content="[^"]*" \/>/,
@@ -288,10 +291,10 @@ routes.forEach(route => {
       `<meta name="description" content="${meta.description}" />`
     );
     
-    // Replace canonical
+    // Replace canonical (optional override for legacy redirect routes)
     html = html.replace(
       /<link rel="canonical" href="[^"]*" \/>/,
-      `<link rel="canonical" href="${fullUrl}" />`
+      `<link rel="canonical" href="${canonicalUrl}" />`
     );
     
     console.log(`✓ Created: /${route}/index.html (with custom OG tags)`);

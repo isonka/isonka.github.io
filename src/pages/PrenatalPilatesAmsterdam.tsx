@@ -10,7 +10,7 @@ const faqs = [
   {
     question: 'Is prenatal Reformer Pilates safe in every trimester?',
     answer:
-      'Yes, when supervised by certified prenatal instructors. At PT Studio 7, every exercise is adapted to your trimester, symptoms, and energy level. We modify load, range, and positions as your body changes.',
+      'Yes, when supervised by instructors experienced in pregnancy training. At PT Studio 7, every exercise is adapted to your trimester, symptoms, and energy level. We modify load, range, and positions as your body changes. Clients commonly train safely through 38+ weeks.',
   },
   {
     question: 'Do I need Pilates experience before starting prenatal sessions?',
@@ -18,14 +18,19 @@ const faqs = [
       'No. Beginners are welcome. We start with a private intake and build your program around your current fitness level, pregnancy stage, and goals.',
   },
   {
-    question: 'Are prenatal sessions private or group-based?',
+    question: 'Are pregnancy / prenatal sessions private or group-based?',
     answer:
-      'Prenatal sessions at PT Studio 7 are offered exclusively as private sessions. Because each pregnancy presents unique medical history, movement needs, and trimester-specific considerations, an individual format is required to ensure safe, appropriate, and clinically informed programming.',
+      'Pregnancy and prenatal Pilates at PT Studio 7 are offered exclusively as private sessions. Each pregnancy has unique medical history and trimester needs, so an individual format is required for safe, appropriate programming. Small group classes (max 5) are for non-pregnancy clients.',
   },
   {
     question: 'Can this help with pelvic floor and lower-back discomfort?',
     answer:
       'Yes. We focus on breath-led core control, pelvic floor awareness, spinal support, and glute strength to reduce common pregnancy discomforts and improve day-to-day movement.',
+  },
+  {
+    question: 'Is this the same as “pregnancy Pilates Amsterdam”?',
+    answer:
+      'Yes. Prenatal Pilates and pregnancy Pilates refer to the same private Reformer offering at our Museumplein / Oud-Zuid studio. This page is the canonical guide; book via the schedule page or contact us directly.',
   },
   {
     question: 'Can I continue after birth with postnatal Pilates?',
@@ -45,11 +50,11 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Prenatal Pilates Amsterdam Oud-Zuid | Private Sessions | PT Studio 7"
-        description="Prenatal Pilates in Amsterdam Oud-Zuid with certified instructors. Private Reformer sessions tailored per trimester, pelvic floor support, and postnatal progression."
-        keywords="prenatal pilates amsterdam, pregnancy pilates amsterdam, private prenatal pilates, reformer pilates pregnancy, pelvic floor pilates amsterdam, postnatal pilates amsterdam"
+        title="Prenatal & Pregnancy Pilates Amsterdam | Private Reformer | PT Studio 7"
+        description="Private prenatal Reformer Pilates in Amsterdam Oud-Zuid / Museumplein. Trimester-specific sessions, pelvic floor support, pregnancy-safe training with specialist instructors."
+        keywords="prenatal pilates amsterdam, pregnancy pilates amsterdam, private prenatal pilates, reformer pilates pregnancy, pelvic floor pilates amsterdam, postnatal pilates amsterdam, pregnancy pilates museumplein"
         canonical={`${baseUrl}/prenatal-pilates-amsterdam`}
-        ogTitle="Prenatal Pilates Amsterdam | PT Studio 7"
+        ogTitle="Prenatal & Pregnancy Pilates Amsterdam | PT Studio 7"
         ogDescription="Private prenatal Reformer Pilates in Amsterdam Oud-Zuid with trimester-specific programming and expert pelvic floor support."
       />
 
@@ -57,9 +62,9 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
         type="Service"
         data={{
           service: {
-            name: 'Prenatal Pilates Amsterdam',
+            name: 'Prenatal & Pregnancy Pilates Amsterdam',
             description:
-              'Private prenatal Reformer Pilates sessions in Amsterdam Oud-Zuid tailored to each trimester, with pelvic floor and core-focused programming.',
+              'Private prenatal and pregnancy Reformer Pilates sessions in Amsterdam Oud-Zuid / Museumplein, tailored to each trimester, with pelvic floor and core-focused programming. Max class size for non-pregnancy groups is 5; pregnancy training is private only.',
             serviceUrl: `${baseUrl}/prenatal-pilates-amsterdam`,
             areaServed: 'Amsterdam',
             offers: [
@@ -76,15 +81,15 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
       <div className="service-page">
         <section className="service-hero">
           <div className="service-hero-content">
-            <h1>Prenatal Pilates Amsterdam Oud-Zuid</h1>
+            <h1>Prenatal &amp; Pregnancy Pilates Amsterdam</h1>
             <p>
-              Expert-led Reformer Pilates for pregnancy at Museumplein. Every session is adapted to your trimester, your body, and your goals so you can train safely with confidence.
+              Expert-led Reformer Pilates for pregnancy at Museumplein (Oud-Zuid). Every session is private and adapted to your trimester, your body, and your goals so you can train safely with confidence.
             </p>
             <div className="service-hero-badges">
-              <span className="service-badge">Private sessions</span>
+              <span className="service-badge">Private sessions only</span>
               <span className="service-badge">Trimester-specific programming</span>
               <span className="service-badge">Pelvic floor focus</span>
-              <span className="service-badge">Amsterdam Oud-Zuid</span>
+              <span className="service-badge">Museumplein / Oud-Zuid</span>
             </div>
             <Link to="/schedule" className="service-hero-btn">Book a Prenatal Session</Link>
           </div>
@@ -137,10 +142,22 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
             <h2>Meet your prenatal specialists</h2>
             <p>
               You can train with <Link to="/trainer/elif">Elif Arzu Ogan</Link> and{' '}
-              <Link to="/trainer/goknur">Goknur Dipli</Link>, both experienced in prenatal and postnatal Pilates coaching.
+              <Link to="/trainer/goknur">Göknur Dipli</Link>, both experienced in prenatal and postnatal Pilates coaching.
             </p>
             <p>
               See private-session options and current packages on our <Link to="/pricing">Pricing page</Link>.
+            </p>
+          </div>
+        </section>
+
+        <section className="service-section">
+          <div className="service-container">
+            <h2>Related studio pages</h2>
+            <p>
+              Looking for non-pregnancy training? Explore{' '}
+              <Link to="/private-pilates-amsterdam">private Pilates Amsterdam</Link>,{' '}
+              <Link to="/reformer-pilates-amsterdam">Reformer Pilates Amsterdam</Link>, or the full{' '}
+              <Link to="/schedule">class schedule</Link>.
             </p>
           </div>
         </section>

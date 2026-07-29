@@ -83,7 +83,7 @@ Would you be interested in a brief call to discuss?
 Best regards,
 Elif Arzu Ogan
 PT Studio 7 Amsterdam
-+31 6 8516 2693
++31 685 162693
 ```
 
 #### **Local Businesses (Cross-Promotion):**
@@ -380,7 +380,7 @@ Best regards,
 Elif Arzu Ogan
 Owner, PT Studio 7
 www.ptstudio7amsterdam.nl
-+31 6 8516 2693
++31 685 162693
 ```
 
 ### **Template 2: Resource Link Request**
