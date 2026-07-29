@@ -131,7 +131,6 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
         'https://www.instagram.com/ptstudio7amsterdam',
         'https://www.facebook.com/ptstudio7',
         'https://classpass.com/studios/pt-studio-7-amsterdam',
-        'https://urbansportsclub.com/nl/venues/pt-studio-7-museumplein',
         'https://www.polestarpilates.nl/',
       ],
       openingHoursSpecification: [
@@ -150,7 +149,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
       ],
       aggregateRating: {
         '@type': 'AggregateRating',
-        ratingValue: '4.8',
+        ratingValue: '4.9',
         reviewCount: '150',
         bestRating: '5',
         worstRating: '1',
@@ -214,14 +213,13 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
       ],
       aggregateRating: {
         '@type': 'AggregateRating',
-        ratingValue: '4.8',
+        ratingValue: '4.9',
         reviewCount: '150',
       },
       sameAs: [
         'https://www.instagram.com/ptstudio7amsterdam',
         'https://www.facebook.com/ptstudio7',
         'https://classpass.com/studios/pt-studio-7-amsterdam',
-        'https://urbansportsclub.com/nl/venues/pt-studio-7-museumplein',
         'https://www.polestarpilates.nl/',
       ],
     };

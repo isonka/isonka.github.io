@@ -39,7 +39,7 @@ const partnerBadges = [
     logo: { src: '/assets/images/google-logo.svg', alt: 'Google', width: 24, height: 24 },
     ratingClass: 'google-rating',
     stars: true,
-    ratingText: '4.8',
+    ratingText: '4.9',
     extra: <span className="review-incentive">Leave a review, get 5% off!</span>,
   },
   {
@@ -50,15 +50,6 @@ const partnerBadges = [
     stars: true,
     ratingText: '4.9',
     extra: <span className="review-count">2,500+ reviews</span>,
-  },
-  {
-    href: 'https://urbansportsclub.com/nl/venues/pt-studio-7-museumplein',
-    className: 'usc-badge',
-    logo: { src: '/assets/images/urbansportsclub-logo.webp', alt: 'Urban Sports Club' },
-    ratingClass: 'usc-rating',
-    stars: true,
-    ratingText: '4.9',
-    extra: <span className="review-count">12 reviews</span>,
   },
 ];
 

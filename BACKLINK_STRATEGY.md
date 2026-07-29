@@ -29,7 +29,6 @@
 - [ ] Treatwell - https://www.treatwell.nl
 - [ ] ClassPass - https://classpass.com (list your studio)
 - [ ] Gympass - https://www.gympass.com
-- [ ] Urban Sports Club - https://urbansportsclub.com
 - [ ] Zowel - https://www.zowel.nl (Dutch wellness)
 - [ ] Holland.com - https://www.holland.com (tourism + wellness)
 - [ ] Fitnesszaken.nl - Fitness business directory

@@ -409,7 +409,7 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Ask about off-peak pricing:</strong> Some studios offer lower rates for daytime classes</li>
         <li><strong>Buy larger packages:</strong> 20-class packages often offer 20-25% savings over single classes</li>
         <li><strong>Consider couples/group bookings:</strong> Duo and trio sessions split the cost while maintaining personalization</li>
-        <li><strong>Check ClassPass/Urban Sports Club:</strong> Aggregator platforms can provide good value for studio-hoppers</li>
+        <li><strong>Check ClassPass:</strong> Aggregator platforms can provide good value for studio-hoppers</li>
       </ol>
 
       <h2>The Real Question: Is Pilates Worth the Investment?</h2>
