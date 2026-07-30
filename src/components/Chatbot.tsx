@@ -203,7 +203,7 @@ ${instructorReason}
 💰 **Pricing Options:**
 ${pricing}
 
-🎁 **Special Offer:** Try our Introduction Package - 1 group class + 1 personal training session for just €105.30!`;
+🎁 **Special Offer:** New clients — Introduction Package: 3 group classes for €50!`;
 
       addBotMessage(recommendation, 2000);
 

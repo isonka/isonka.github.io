@@ -129,16 +129,14 @@ export const Pricing: React.FC = () => {
           <div className="special-offer">
             <span className="offer-badge">Special Offer</span>
             <h3>Introduction Package</h3>
-            <p>Perfect starter: 1 group class + 1 personal training session</p>
-            <span className="special-price">€105.30</span>
-            <a 
-              href="https://clients.mindbodyonline.com/classic/ws?studioid=5741736&stype=40" 
-              className="buy-button"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Get Started
-            </a>
+            <p>New clients only: 3 group classes for €50</p>
+            <span className="special-price">€50</span>
+            <div
+              className="buy-button healcode-pricing-option-text-link"
+              dangerouslySetInnerHTML={{
+                __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100066" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+              }}
+            />
           </div>
         </div>
 

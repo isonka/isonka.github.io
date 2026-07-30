@@ -13,7 +13,7 @@
       "type": "query",
       "description": "Retrieve current pricing packages and session options.",
       "url": "https://www.pt7.nl/.well-known/agent-skills/get-pricing.md",
-      "sha256": "428972ca4ffc9c3cae2f5f274f683201f448c7fe60a4d597a2bfaa2df41f29ab"
+      "sha256": "fde50fbe566afc7a2e8d092bdf0f64034d2ee771d6841d92071a737ed54755c4"
     },
     {
       "name": "contact-studio",

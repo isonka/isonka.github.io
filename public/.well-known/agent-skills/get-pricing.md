@@ -9,6 +9,10 @@ Return current package and session pricing for PT Studio 7 Amsterdam.
 
 ## Snapshot (EUR, as published on site — re-check pricing page)
 
+### Introduction offer
+
+- Introduction Package: 3 group classes for €50 (**new clients only**)
+
 ### Small group classes (max 5, 45 min)
 
 - Single class: €37
