@@ -81,16 +81,15 @@ export const Home: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Reformer Pilates Amsterdam Oud-Zuid | PT Studio 7"
-        description="Amsterdam's most personal Reformer Pilates studio — max 5 per class, at Museumplein. Private sessions & small groups with certified instructors. 15+ years expertise. Book now."
-        keywords="pilates amsterdam-Zuid, kleine groep pilates amsterdam, reformer pilates prive amsterdam, pilates museumplein, pilates studio van baerlestraat, postnatale pilates amsterdam, pilates zwangerschap amsterdam, polestar pilates amsterdam, TRX training amsterdam, personal training Amsterdam, Pilates Amsterdam"
-        canonical="https://www.pt7.nl"
-        ogTitle="Pilates & Personal Training Amsterdam | PT Studio 7 Museumplein"
-        ogDescription="Boutique personal training studio at Museumplein. Pilates, Nike Strength, TRX & Cardio. Small groups (max 5), private sessions, expert instructors."
-        ogImage="/assets/images/about-us-web.jpg"
+        title="Pilates & Personal Training Amsterdam Museumplein | PT Studio 7"
+        description="Boutique Pilates and personal training at Museumplein — max 5 per class. Private sessions and small groups with certified instructors. 15+ years expertise. Book now."
+        keywords="Pilates Amsterdam, personal training Amsterdam, Pilates Museumplein, Reformer Pilates Amsterdam, private Pilates Amsterdam, small group Pilates, Pilates studio Van Baerlestraat, TRX training Amsterdam, prenatal Pilates Amsterdam"
+        canonical="https://www.pt7.nl/"
+        ogTitle="Pilates & Personal Training Amsterdam Museumplein | PT Studio 7"
+        ogDescription="Boutique Pilates and personal training at Museumplein — max 5 per class. Private sessions and small groups with certified instructors. 15+ years expertise. Book now."
+        ogImage="/assets/images/studio.jpg"
       />
       <StructuredData type="LocalBusiness" data={{ reviews: reviewsData }} />
-      <StructuredData type="SportsActivityLocation" />
 
       <AcademyUrgencyBanner />
 
@@ -112,7 +111,7 @@ export const Home: React.FC = () => {
         <div className="hero-overlay">
           <div className="hero-content-wrapper">
             <h1 className="hero-title">Pilates & Personal Training Amsterdam</h1>
-              <h2 className="hero-tagline">Boutique Pilates & Fitness Studio at Museumplein</h2>
+              <p className="hero-tagline">Boutique Pilates & Fitness Studio at Museumplein</p>
               <p className="hero-description">
                   Pilates · Nike Strength · TRX · Cardio<br/>
                   Private Sessions & Small Groups (Max 5)
@@ -149,18 +148,30 @@ export const Home: React.FC = () => {
           <div className="about-content">
             <h2>Pilates & Personal Training Amsterdam — Your Boutique Studio at Museumplein</h2>
             <p>
-              Looking for expert personal training in Amsterdam Oud-Zuid? With 15 years of expertise at our Museumplein location, PT Studio 7 offers 
-              Amsterdam's premier boutique fitness experience. Located at Van Baerlestraat 76C in the heart of Oud-Zuid, across from Stedelijk Museum, 
-              we feature <strong>two dedicated training studios</strong> — a Pilates studio with professional Reformers, and a Strength & Cardio studio with Nike equipment and Technogym machines.
+              Looking for expert personal training in Amsterdam Oud-Zuid? With 15+ years of expertise at our Museumplein location, PT Studio 7 offers
+              a boutique fitness experience built around attention and results. Located at Van Baerlestraat 76C in the heart of Oud-Zuid, across from Stedelijk Museum,
+              we feature <strong>two dedicated training studios</strong> — a Pilates studio with professional Reformers, and a Strength & Cardio studio with Nike equipment and Concept2 machines.
             </p>
             <p>
-              We offer one-on-one private sessions where you receive 100% of your instructor's attention. 
+              We offer one-on-one private sessions where you receive 100% of your instructor's attention.
               We also offer intimate small group classes (maximum 5 people) for those who enjoy training
               with friends. Each program is customized to build strength, improve flexibility, or achieve your wellness goals.
             </p>
             <p>
-              Our expert instructors design a personalized roadmap for your success, adapting every session 
+              Our expert instructors design a personalized roadmap for your success, adapting every session
               to your progress and celebrating each milestone with you.
+            </p>
+            <p className="about-explore">
+              Explore:{' '}
+              <Link to="/reformer-pilates-amsterdam">Reformer Pilates</Link>
+              {' · '}
+              <Link to="/private-pilates-amsterdam">Private Pilates</Link>
+              {' · '}
+              <Link to="/prenatal-pilates-amsterdam">Prenatal Pilates</Link>
+              {' · '}
+              <Link to="/trx-training-amsterdam">TRX</Link>
+              {' · '}
+              <Link to="/strength-training-amsterdam">Strength Training</Link>
             </p>
             <p className="about-signature">
               <strong>Elif Arzu Ogan</strong><br/>
@@ -256,7 +267,7 @@ export const Home: React.FC = () => {
         <div className="contact-header">
           <h2>Visit Our Studio</h2>
           <p className="contact-address">
-            Van Baerlestraat 76C, 1071BB Amsterdam Oud-Zuid
+            Van Baerlestraat 76C, 1071 BB Amsterdam Oud-Zuid
           </p>
           <p className="contact-landmark">Across from Stedelijk Museum at Museumplein</p>
         </div>

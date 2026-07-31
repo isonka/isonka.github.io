@@ -11,7 +11,7 @@ Provide direct contact and location for PT Studio 7 Amsterdam.
 - **WhatsApp**: https://wa.me/31685162693
 - **Web**: https://www.pt7.nl
 - **Instagram**: @ptstudio7amsterdam
-- **Hours**: Mon–Fri 09:00–21:00; Sat–Sun 10:00–18:00
+- **Hours**: Mon–Fri 09:00–20:00; Sat–Sun 09:00–13:00
 - **Languages**: English, Turkish, Dutch
 
 ## Behavior

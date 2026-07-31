@@ -48,6 +48,8 @@ export const Footer: React.FC = () => {
         <ul className="footer-links">
           <li><Link to="/schedule">Book</Link></li>
           <li><Link to="/pricing">Pricing</Link></li>
+          <li><Link to="/reformer-pilates-amsterdam">Reformer Pilates</Link></li>
+          <li><Link to="/prenatal-pilates-amsterdam">Prenatal</Link></li>
           <li><Link to="/academy">Academy</Link></li>
           <li><a href="#contact" onClick={handleContactClick}>Contact</a></li>
           <li><a href="#" onClick={handleCookieSettings}>Cookie Settings</a></li>

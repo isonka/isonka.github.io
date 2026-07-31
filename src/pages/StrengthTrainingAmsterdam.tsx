@@ -9,7 +9,7 @@ import '../styles/ServicePage.css';
 const faqs = [
   {
     question: 'What strength training equipment does PT Studio 7 have?',
-    answer: 'Our strength studio is equipped with Nike premium equipment: a half rack with an Olympic barbell, a full set of dumbbells, kettlebells, a Technogym SkillRun treadmill, and a Concept2 RowErg rowing machine. It is a fully equipped functional training space designed for high-quality small group and personal training.',
+    answer: 'Our strength studio is equipped with Nike premium equipment: a half rack with an Olympic barbell, a full set of dumbbells, kettlebells, and a Concept2 RowErg rowing machine. It is a fully equipped functional training space designed for high-quality small group and personal training.',
   },
   {
     question: 'Is strength training combined with Pilates at PT Studio 7?',
@@ -42,7 +42,7 @@ export const StrengthTrainingAmsterdam: React.FC = () => {
     <>
       <SEOHead
         title="Strength Training Amsterdam | PT Studio 7 Museumplein"
-        description="Personal strength training and functional fitness at Museumplein Amsterdam. Nike equipment, Technogym SkillRun, expert certified trainers. Small groups (max 5) & private sessions."
+        description="Personal strength training and functional fitness at Museumplein Amsterdam. Nike equipment, expert certified trainers. Small groups (max 5) & private sessions."
         keywords="strength training amsterdam, krachttraining amsterdam, personal training amsterdam, functionele training amsterdam, personal trainer museumplein, krachtsport amsterdam oud-zuid, personal training oud-zuid amsterdam, nike strength amsterdam"
         canonical="https://www.pt7.nl/strength-training-amsterdam"
         ogTitle="Strength Training Amsterdam | PT Studio 7 Museumplein"
@@ -64,7 +64,7 @@ export const StrengthTrainingAmsterdam: React.FC = () => {
             </p>
             <div className="service-hero-badges">
               <span className="service-badge">Nike equipment</span>
-              <span className="service-badge">Technogym SkillRun</span>
+              <span className="service-badge">Concept2 RowErg</span>
               <span className="service-badge">Max 5 per group</span>
               <span className="service-badge">Museumplein Amsterdam</span>
             </div>
@@ -77,8 +77,8 @@ export const StrengthTrainingAmsterdam: React.FC = () => {
             <h2>Strength training in Amsterdam Oud-Zuid</h2>
             <p>
               PT Studio 7 houses a dedicated strength and conditioning studio equipped with premium
-              Nike gear — a half rack, Olympic barbell, dumbbells, kettlebells, and a Technogym
-              SkillRun treadmill. It is a serious training environment designed for people who want
+              Nike gear — a half rack, Olympic barbell, dumbbells, kettlebells, and a Concept2
+              RowErg. It is a serious training environment designed for people who want
               results, not a row of treadmills and mirrors.
             </p>
             <p>
@@ -107,7 +107,7 @@ export const StrengthTrainingAmsterdam: React.FC = () => {
             <div className="service-benefits-grid">
               <div className="service-benefit-card">
                 <h3>Premium equipment</h3>
-                <p>Nike half rack, Olympic barbell, full dumbbell range, kettlebells, Technogym SkillRun, and Concept2 RowErg — professional tools for serious training.</p>
+                <p>Nike half rack, Olympic barbell, full dumbbell range, kettlebells, and Concept2 RowErg — professional tools for serious training.</p>
               </div>
               <div className="service-benefit-card">
                 <h3>Expert guidance every session</h3>

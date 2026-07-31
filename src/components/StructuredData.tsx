@@ -130,6 +130,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
       sameAs: [
         'https://www.instagram.com/ptstudio7amsterdam',
         'https://www.facebook.com/ptstudio7',
+        'https://www.linkedin.com/company/pt-studio-7',
         'https://classpass.com/studios/pt-studio-7-amsterdam',
         'https://www.polestarpilates.nl/',
       ],
@@ -137,14 +138,14 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
         {
           '@type': 'OpeningHoursSpecification',
           dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-          opens: '08:00',
-          closes: '21:00',
+          opens: '09:00',
+          closes: '20:00',
         },
         {
           '@type': 'OpeningHoursSpecification',
           dayOfWeek: ['Saturday', 'Sunday'],
           opens: '09:00',
-          closes: '17:00',
+          closes: '13:00',
         },
       ],
       aggregateRating: {
@@ -201,14 +202,14 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
         {
           '@type': 'OpeningHoursSpecification',
           dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-          opens: '08:00',
-          closes: '21:00',
+          opens: '09:00',
+          closes: '20:00',
         },
         {
           '@type': 'OpeningHoursSpecification',
           dayOfWeek: ['Saturday', 'Sunday'],
           opens: '09:00',
-          closes: '17:00',
+          closes: '13:00',
         },
       ],
       aggregateRating: {
@@ -219,6 +220,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
       sameAs: [
         'https://www.instagram.com/ptstudio7amsterdam',
         'https://www.facebook.com/ptstudio7',
+        'https://www.linkedin.com/company/pt-studio-7',
         'https://classpass.com/studios/pt-studio-7-amsterdam',
         'https://www.polestarpilates.nl/',
       ],

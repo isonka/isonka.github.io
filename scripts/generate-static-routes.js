@@ -115,7 +115,7 @@ const routeMeta = {
   },
   'workouts/cardio': {
     title: 'Cardio Training | PT Studio 7 Amsterdam',
-    description: 'Cardio training at Museumplein. Concept2 rower, SkillBike, and more. Build endurance with expert coaching.',
+    description: 'Cardio training at Museumplein. Concept2 rower and more. Build endurance with expert coaching.',
     image: DEFAULT_IMAGE,
   },
   'workouts/summer-shred-lab': {
