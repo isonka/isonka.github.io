@@ -1,5 +1,6 @@
 const GTM_ID = 'GTM-KB25PGXB';
 const GA_ID = 'G-JYKY1GMV9Z';
+const GOOGLE_TAG_ID = 'GT-TWM74JTS';
 const GOOGLE_ADS_ID = 'AW-17684932205';
 const META_PIXEL_ID = '1197758608916828';
 
@@ -102,8 +103,8 @@ export function loadGTM() {
 }
 
 /**
- * AW gtag loads from index.html for Ads detection.
- * Here we only attach GA4 after statistics/marketing consent.
+ * Primary Google tag (GT-…) loads from index.html.
+ * After consent we attach GA4 for SPA page_view (and ensure Ads config for conversions).
  */
 export function loadGoogleTag() {
   const loaded = getTrackingState();
@@ -117,6 +118,7 @@ export function loadGoogleTag() {
         window.dataLayer!.push(args);
       };
       win.gtag('js', new Date());
+      win.gtag('config', GOOGLE_TAG_ID);
       win.gtag('config', GOOGLE_ADS_ID);
     }
     win.gtag('config', GA_ID, { send_page_view: false });
@@ -135,12 +137,12 @@ export function loadGoogleTag() {
   gaScript.onload = ensureGtag;
   document.head.appendChild(gaScript);
 
-  // If AW script somehow missing (old HTML cache), load it once.
-  if (!document.querySelector(`script[src*="gtag/js?id=${GOOGLE_ADS_ID}"]`)) {
-    const adsScript = document.createElement('script');
-    adsScript.async = true;
-    adsScript.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`;
-    document.head.appendChild(adsScript);
+  // Fallback if index.html Google tag missing (old cache)
+  if (!document.querySelector(`script[src*="gtag/js?id=${GOOGLE_TAG_ID}"]`)) {
+    const googleTagScript = document.createElement('script');
+    googleTagScript.async = true;
+    googleTagScript.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}`;
+    document.head.appendChild(googleTagScript);
   }
 
   loaded.gtag = true;
