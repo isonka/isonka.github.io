@@ -31,12 +31,22 @@ const ACADEMY_ENROLL_WIDGET =
 const ACADEMY_INSTALLMENTS_WIDGET =
   '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100065" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Enroll with 3 Installments"></healcode-widget>';
 
-const termSchedule = [
+const termSchedule2026 = [
   { dates: '12–13 September 2026', module: 'Pilates Introduction & Anatomy' },
   { dates: '26–27 September 2026', module: 'Reformer 1' },
   { dates: '17–18 October 2026', module: 'Reformer 2' },
   { dates: '7–8 November 2026', module: 'Reformer 3' },
 ];
+
+const termSchedule2027 = [
+  { dates: '13–14 March 2027', module: 'Pilates Introduction & Anatomy' },
+  { dates: '3–4 April 2027', module: 'Reformer 1' },
+  { dates: '24–25 April 2027', module: 'Reformer 2' },
+  { dates: '15–16 May 2027', module: 'Reformer 3' },
+];
+
+const formatTermSchedule = (schedule: { dates: string; module: string }[]) =>
+  schedule.map((item) => `${item.dates} (${item.module})`).join('; ');
 
 const lectureHours = '12:00 to 18:00';
 const exerciseAssessmentNote =
@@ -76,7 +86,7 @@ export const Academy: React.FC = () => {
     {
       question: 'When are classes held?',
       answer:
-        `Lectures are held on selected weekends, not every week. The next term runs September to November 2026: ${termSchedule.map((item) => `${item.dates} (${item.module})`).join('; ')}. Each lecture weekend runs ${lectureHours}, so you can keep your weekday job while you train.`,
+        `Lectures are held on selected weekends, not every week. Two terms are open for enrollment. Autumn 2026 (September–November): ${formatTermSchedule(termSchedule2026)}. Spring 2027 (March–May): ${formatTermSchedule(termSchedule2027)}. Each lecture weekend runs ${lectureHours}, so you can keep your weekday job while you train.`,
     },
     {
       question: 'How long is the program?',
@@ -119,11 +129,11 @@ export const Academy: React.FC = () => {
     <>
       <SEOHead
         title="Reformer Pilates Instructor Course Amsterdam | PT7 Academy"
-        description="300 hours Reformer Pilates Instructor Course, ITTAP approved by the Pilates Method Alliance (PMA). Next term: September–November 2026 weekend intensives in Amsterdam. Last spots available."
+        description="300 hours Reformer Pilates Instructor Course, ITTAP approved by the Pilates Method Alliance (PMA). Terms: September–November 2026 and March–May 2027 weekend intensives in Amsterdam."
         keywords="Pilates Method Alliance, PMA ITTAP, Reformer Pilates Instructor Course, 300 hours reformer training, Reformer instructor course Amsterdam, ITTAP approved Pilates, Pilates teacher training Netherlands"
         canonical="https://www.pt7.nl/academy"
         ogTitle="Reformer Pilates Instructor Course | PMA ITTAP Approved | PT7 Academy"
-        ogDescription="300 hours Reformer Pilates Instructor Course, ITTAP approved by the Pilates Method Alliance (PMA). Next term starts 12 September 2026. Last spots available."
+        ogDescription="300 hours Reformer Pilates Instructor Course, ITTAP approved by the Pilates Method Alliance (PMA). Next terms: Sep–Nov 2026 and Mar–May 2027."
       />
       <StructuredData
         type="Course"
@@ -149,6 +159,30 @@ export const Academy: React.FC = () => {
           },
         }}
       />
+      <StructuredData
+        type="Course"
+        data={{
+          course: {
+            name: `${COURSE_TITLE} — Spring 2027`,
+            description:
+              '300 hours Reformer Pilates Instructor Course, ITTAP approved by the Pilates Method Alliance (PMA) in Amsterdam. Spring 2027 term: March–May weekend lectures, observation, self practice, teaching practice, and master trainer sessions.',
+            price: '2000',
+            priceCurrency: 'EUR',
+            startDate: '2027-03-13',
+            endDate: '2027-05-16',
+            schedule: 'Selected weekends Mar–May 2027, 12:00-18:00',
+            startTime: '12:00',
+            endTime: '18:00',
+            locationName: 'PT Studio 7 Amsterdam - Museumplein',
+            url: 'https://www.pt7.nl/academy',
+            timeRequired: 'PT300H',
+            educationalCredentialAwarded: 'PT7 Academy Reformer Pilates Instructor Certificate',
+            recognizedByName: 'Pilates Method Alliance (PMA) — ITTAP',
+            recognizedByUrl:
+              'https://www.pilatesmethodalliance.org/international-teacher-trainer-accreditation-for-pilates',
+          },
+        }}
+      />
       <StructuredData type="FAQPage" data={{ faqs: academyFaqs }} />
 
       <div className="academy-page">
@@ -161,7 +195,7 @@ export const Academy: React.FC = () => {
               300 hours · ITTAP Approved · <strong>Pilates Method Alliance (PMA)</strong>
             </p>
             <p className="start-date">
-              <strong>Next term starts 12 September 2026</strong> · Selected weekend lectures, {lectureHours}
+              <strong>Next term starts 12 September 2026</strong> · Also open: Spring 2027 (13 March–16 May) · Selected weekend lectures, {lectureHours}
             </p>
 
             <div className="ittap-accreditation">
@@ -275,7 +309,7 @@ export const Academy: React.FC = () => {
                   <span>4 weekend intensives</span>
                 </div>
                 <div className="highlight-item">
-                  <span>Sep–Nov 2026</span>
+                  <span>2026 &amp; 2027 terms</span>
                 </div>
                 <div className="highlight-item">
                   <span>3 installment plan</span>
@@ -286,13 +320,26 @@ export const Academy: React.FC = () => {
               </div>
 
               <div className="academy-course-section">
-                <h3>Next Term Schedule</h3>
+                <h3>Upcoming Term Schedules</h3>
                 <p>
-                  Lectures are not held every weekend. The next term runs on four selected weekends at PT Studio 7,
-                  Museumplein, Amsterdam. Each lecture weekend runs {lectureHours}.
+                  Lectures are not held every weekend. Each term runs on four selected weekends at PT Studio 7,
+                  Museumplein, Amsterdam. Each lecture weekend runs {lectureHours}. Same course fee and enroll options
+                  for both terms.
                 </p>
+
+                <h4 className="term-schedule-heading">Autumn 2026 — September–November</h4>
                 <div className="term-schedule-grid">
-                  {termSchedule.map((item) => (
+                  {termSchedule2026.map((item) => (
+                    <div key={item.dates} className="term-schedule-item">
+                      <span className="term-schedule-dates">{item.dates}</span>
+                      <span className="term-schedule-module">{item.module}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <h4 className="term-schedule-heading">Spring 2027 — March–May</h4>
+                <div className="term-schedule-grid">
+                  {termSchedule2027.map((item) => (
                     <div key={item.dates} className="term-schedule-item">
                       <span className="term-schedule-dates">{item.dates}</span>
                       <span className="term-schedule-module">{item.module}</span>
@@ -441,7 +488,7 @@ export const Academy: React.FC = () => {
               <div className="benefit-card">
                 <h3>Selected Weekend Schedule</h3>
                 <p>
-                  Train on four scheduled weekends between September and November 2026, {lectureHours}, and keep your
+                  Train on four scheduled weekends per term (Sep–Nov 2026 or Mar–May 2027), {lectureHours}, and keep your
                   day job while becoming a certified Reformer instructor.
                 </p>
               </div>

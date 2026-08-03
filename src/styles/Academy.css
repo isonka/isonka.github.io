@@ -444,6 +444,17 @@
   margin-top: 20px;
 }
 
+.term-schedule-heading {
+  margin: 28px 0 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.term-schedule-heading + .term-schedule-grid {
+  margin-top: 12px;
+}
+
 .term-schedule-item {
   display: flex;
   flex-wrap: wrap;

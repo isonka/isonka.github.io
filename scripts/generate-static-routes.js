@@ -37,8 +37,8 @@ const routeMeta = {
     image: DEFAULT_IMAGE,
   },
   'academy': {
-    title: 'Reformer Pilates Instructor Course Amsterdam 2026 | PT7 Academy',
-    description: '300-hour Reformer Pilates Instructor Course, ITTAP approved by the Pilates Method Alliance (PMA). Next term September–November 2026, weekend lectures at Museumplein.',
+    title: 'Reformer Pilates Instructor Course Amsterdam | PT7 Academy',
+    description: '300-hour Reformer Pilates Instructor Course, ITTAP approved by the Pilates Method Alliance (PMA). Terms September–November 2026 and March–May 2027, weekend lectures at Museumplein.',
     image: DEFAULT_IMAGE,
   },
   'healthcare-providers': {
