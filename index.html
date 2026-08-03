@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
   <head>
     <meta charset="UTF-8" />
-    <!-- Google Consent Mode v2 (defaults before any Google tags) + Ads tag for detection -->
+    <!-- Google Consent Mode v2 (defaults before any Google tags) + Google tag for detection -->
     <script data-cookieconsent="ignore">
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -19,10 +19,11 @@
       gtag('set', 'ads_data_redaction', true);
       gtag('set', 'url_passthrough', true);
     </script>
-    <!-- Google tag (gtag.js) — AW-17684932205; storage stays denied until Cookiebot grants marketing -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17684932205" data-cookieconsent="ignore"></script>
+    <!-- Google tag GT-TWM74JTS (+ AW config for Ads conversions); storage denied until Cookiebot -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GT-TWM74JTS" data-cookieconsent="ignore"></script>
     <script data-cookieconsent="ignore">
       gtag('js', new Date());
+      gtag('config', 'GT-TWM74JTS');
       gtag('config', 'AW-17684932205');
     </script>
     <!-- Cookiebot CMP (after Consent Mode + gtag) -->
