@@ -1,4 +1,5 @@
 // GTM Event tracking utility functions
+import { sendGaPageView } from './consentTracking';
 
 declare global {
   interface Window {
@@ -33,13 +34,14 @@ export const trackBookNowClick = (location: string) => {
   });
 };
 
-// Track page views (for SPA)
+// Track page views (for SPA) — dataLayer for GTM + gtag for GA4
 export const trackPageView = (pagePath: string, pageTitle: string) => {
   trackEvent('page_view', {
     page_path: pagePath,
     page_title: pageTitle,
     event_category: 'navigation',
   });
+  sendGaPageView(pagePath, pageTitle);
 };
 
 // Track schedule page visit

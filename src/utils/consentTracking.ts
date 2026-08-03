@@ -11,6 +11,15 @@ type TrackingState = {
 
 type GtagFn = (...args: unknown[]) => void;
 
+declare global {
+  interface Window {
+    __pt7GaReady?: boolean;
+  }
+}
+
+let lastGaPageKey = '';
+let lastGaPageAt = 0;
+
 function getTrackingState(): TrackingState {
   const win = window as Window & { __pt7TrackingLoaded?: TrackingState };
   win.__pt7TrackingLoaded ??= { gtm: false, gtag: false, meta: false };
@@ -51,6 +60,32 @@ export function updateGoogleConsentFromCookiebot() {
   });
 }
 
+/** Send GA4 SPA page_view (deduped briefly to avoid consent/React race doubles). */
+export function sendGaPageView(pagePath: string, pageTitle: string) {
+  const gtag = getGtag();
+  if (!window.__pt7GaReady || !gtag) return;
+
+  const now = Date.now();
+  if (lastGaPageKey === pagePath && now - lastGaPageAt < 2000) return;
+  lastGaPageKey = pagePath;
+  lastGaPageAt = now;
+
+  gtag('event', 'page_view', {
+    page_path: pagePath,
+    page_title: pageTitle,
+    page_location: `${window.location.origin}${pagePath}`,
+    send_to: GA_ID,
+  });
+}
+
+function markGaReadyAndSendCurrentPage() {
+  window.__pt7GaReady = true;
+  sendGaPageView(
+    `${window.location.pathname}${window.location.search}`,
+    document.title,
+  );
+}
+
 export function loadGTM() {
   const loaded = getTrackingState();
   if (loaded.gtm) return;
@@ -85,6 +120,7 @@ export function loadGoogleTag() {
       win.gtag('config', GOOGLE_ADS_ID);
     }
     win.gtag('config', GA_ID, { send_page_view: false });
+    markGaReadyAndSendCurrentPage();
   };
 
   if (document.querySelector(`script[src*="gtag/js?id=${GA_ID}"]`)) {
