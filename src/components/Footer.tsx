@@ -1,11 +1,6 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { openCookieSettings } from '../utils/consentTracking';
 import '../styles/Footer.css';
-
-declare global {
-  interface Window {
-    Cookiebot?: any;
-  }
-}
 
 export const Footer: React.FC = () => {
   const navigate = useNavigate();
@@ -13,9 +8,7 @@ export const Footer: React.FC = () => {
 
   const handleCookieSettings = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    if (window.Cookiebot) {
-      window.Cookiebot.renew();
-    }
+    openCookieSettings();
   };
 
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {

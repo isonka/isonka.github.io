@@ -1,0 +1,144 @@
+.pt7-consent {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 10000;
+  padding: 16px;
+  pointer-events: none;
+}
+
+.pt7-consent-panel {
+  pointer-events: auto;
+  max-width: 720px;
+  margin: 0 auto;
+  background: #1a1a1a;
+  color: #f2f2f2;
+  border: 1px solid rgba(255, 215, 0, 0.35);
+  border-radius: 12px;
+  padding: 20px 22px 18px;
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.pt7-consent-title {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffd700;
+}
+
+.pt7-consent-text {
+  margin: 0 0 16px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #ccc;
+}
+
+.pt7-consent-options {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 16px;
+}
+
+.pt7-consent-option {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.pt7-consent-option input {
+  margin-top: 3px;
+  accent-color: #ffd700;
+}
+
+.pt7-consent-option span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pt7-consent-option strong {
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.pt7-consent-option small {
+  font-size: 0.8rem;
+  color: #999;
+  line-height: 1.4;
+}
+
+.pt7-consent-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.pt7-consent-btn {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 10px 18px;
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.pt7-consent-btn:hover {
+  transform: translateY(-1px);
+}
+
+.pt7-consent-btn--primary {
+  background: #ffd700;
+  color: #1a1a1a;
+}
+
+.pt7-consent-btn--primary:hover {
+  background: #e5c100;
+}
+
+.pt7-consent-btn--ghost {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.pt7-consent-btn--ghost:hover {
+  border-color: #ffd700;
+  color: #ffd700;
+}
+
+.pt7-consent-btn--text {
+  background: transparent;
+  color: #ffd700;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.pt7-consent-btn--text:hover {
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .pt7-consent {
+    padding: 12px;
+  }
+
+  .pt7-consent-panel {
+    padding: 16px;
+  }
+
+  .pt7-consent-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pt7-consent-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

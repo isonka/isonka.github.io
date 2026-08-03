@@ -4,6 +4,17 @@ const GOOGLE_TAG_ID = 'GT-TWM74JTS';
 const GOOGLE_ADS_ID = 'AW-17684932205';
 const META_PIXEL_ID = '1197758608916828';
 
+export const CONSENT_STORAGE_KEY = 'pt7_cookie_consent';
+export const OPEN_COOKIE_SETTINGS_EVENT = 'pt7-open-cookie-settings';
+
+export type Pt7Consent = {
+  necessary: true;
+  preferences: boolean;
+  statistics: boolean;
+  marketing: boolean;
+  updatedAt: string;
+};
+
 type TrackingState = {
   gtm: boolean;
   gtag: boolean;
@@ -31,21 +42,46 @@ function getGtag(): GtagFn | undefined {
   return (window as Window & { gtag?: GtagFn }).gtag;
 }
 
-function getCookiebotConsent() {
-  const cookiebot = (window as Window & { Cookiebot?: { consent?: {
-    necessary: boolean;
-    preferences: boolean;
-    statistics: boolean;
-    marketing: boolean;
-  } } }).Cookiebot;
-  return cookiebot?.consent;
+export function getStoredConsent(): Pt7Consent | null {
+  try {
+    const raw = localStorage.getItem(CONSENT_STORAGE_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as Partial<Pt7Consent>;
+    if (typeof parsed.statistics !== 'boolean' || typeof parsed.marketing !== 'boolean') {
+      return null;
+    }
+    return {
+      necessary: true,
+      preferences: Boolean(parsed.preferences),
+      statistics: parsed.statistics,
+      marketing: parsed.marketing,
+      updatedAt: typeof parsed.updatedAt === 'string' ? parsed.updatedAt : new Date().toISOString(),
+    };
+  } catch {
+    return null;
+  }
 }
 
-/** Map Cookiebot categories → Google Consent Mode v2 update. */
-export function updateGoogleConsentFromCookiebot() {
-  const consent = getCookiebotConsent();
+export function saveConsent(consent: Omit<Pt7Consent, 'necessary' | 'updatedAt'> & Partial<Pick<Pt7Consent, 'preferences'>>): Pt7Consent {
+  const next: Pt7Consent = {
+    necessary: true,
+    preferences: Boolean(consent.preferences),
+    statistics: Boolean(consent.statistics),
+    marketing: Boolean(consent.marketing),
+    updatedAt: new Date().toISOString(),
+  };
+  localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(next));
+  return next;
+}
+
+export function openCookieSettings() {
+  window.dispatchEvent(new Event(OPEN_COOKIE_SETTINGS_EVENT));
+}
+
+/** Map PT7 consent → Google Consent Mode v2 update. */
+export function updateGoogleConsent(consent: Pt7Consent) {
   const gtag = getGtag();
-  if (!consent || !gtag) return;
+  if (!gtag) return;
 
   const analytics = consent.statistics ? 'granted' : 'denied';
   const ads = consent.marketing ? 'granted' : 'denied';
@@ -137,7 +173,6 @@ export function loadGoogleTag() {
   gaScript.onload = ensureGtag;
   document.head.appendChild(gaScript);
 
-  // Fallback if index.html Google tag missing (old cache)
   if (!document.querySelector(`script[src*="gtag/js?id=${GOOGLE_TAG_ID}"]`)) {
     const googleTagScript = document.createElement('script');
     googleTagScript.async = true;
@@ -170,11 +205,9 @@ export function loadMetaPixel() {
   loaded.meta = true;
 }
 
-export function loadTrackingIfConsented() {
-  const consent = getCookiebotConsent();
-  if (!consent) return;
-
-  updateGoogleConsentFromCookiebot();
+/** Apply saved consent: Consent Mode update + load allowed tags. */
+export function applyConsent(consent: Pt7Consent) {
+  updateGoogleConsent(consent);
 
   if (consent.statistics || consent.marketing) {
     loadGTM();
@@ -184,4 +217,10 @@ export function loadTrackingIfConsented() {
   if (consent.marketing) {
     loadMetaPixel();
   }
+}
+
+export function loadTrackingIfConsented() {
+  const consent = getStoredConsent();
+  if (!consent) return;
+  applyConsent(consent);
 }

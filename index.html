@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <!-- Google Consent Mode v2 (defaults before any Google tags) + Google tag for detection -->
-    <script data-cookieconsent="ignore">
+    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('consent', 'default', {
@@ -19,22 +19,14 @@
       gtag('set', 'ads_data_redaction', true);
       gtag('set', 'url_passthrough', true);
     </script>
-    <!-- Google tag GT-TWM74JTS (+ AW config for Ads conversions); storage denied until Cookiebot -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GT-TWM74JTS" data-cookieconsent="ignore"></script>
-    <script data-cookieconsent="ignore">
+    <!-- Google tag GT-TWM74JTS (+ AW config for Ads conversions); storage denied until PT7 consent banner -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GT-TWM74JTS"></script>
+    <script>
       gtag('js', new Date());
       gtag('config', 'GT-TWM74JTS');
       gtag('config', 'AW-17684932205');
     </script>
-    <!-- Cookiebot CMP (after Consent Mode + gtag) -->
-    <script
-      id="Cookiebot"
-      src="https://consent.cookiebot.com/uc.js"
-      data-cbid="b7046d56-8fa7-4aff-9789-7c95656f78f5"
-      data-blockingmode="auto"
-      type="text/javascript"
-    ></script>
-    <!-- GTM / GA / Meta still gated in src/utils/consentTracking.ts after Cookiebot consent -->
+    <!-- GTM / GA / Meta gated in src/utils/consentTracking.ts after custom cookie consent -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/pt7logo.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/pt7logo.png" />
