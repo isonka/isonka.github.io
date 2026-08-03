@@ -9,7 +9,7 @@ const equipmentMeta: Record<string, { description: string; tag?: string }> = {
   'tower-reformer': { description: 'Combines the reformer with a tower for added vertical spring resistance and exercise variety.' },
   'cadillac': { description: 'Versatile equipment with overhead bars and springs for advanced stretching and strength work.' },
   'wunda-chair': { description: 'Compact yet powerful equipment for balance, strength, and functional movement training.' },
-  'ladder-barrel': { description: 'Perfect for spinal extension, flexibility, and core strengthening exercises.' },
+  'ladder-barrel': { description: 'Available for purchase for home or studio use. Sold by PT Studio 7; not used in our client trainings.' },
 };
 
 export const Equipment: React.FC = () => {

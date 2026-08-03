@@ -12,7 +12,7 @@ Boutique Pilates and personal training studio in Museumplein, Amsterdam.
 
 ## Why PT Studio 7
 
-- Two dedicated studios: Pilates and Strength/Cardio
+- One boutique studio with Pilates apparatus plus strength/cardio equipment
 - Expert certified trainers with personalized coaching
 - Pregnancy and postnatal training expertise
 - Boutique atmosphere with focused instruction

@@ -9,11 +9,11 @@ import '../styles/ServicePage.css';
 const faqs = [
   {
     question: 'What strength training equipment does PT Studio 7 have?',
-    answer: 'Our strength studio is equipped with Nike premium equipment: a half rack with an Olympic barbell, a full set of dumbbells, kettlebells, and a Concept2 RowErg rowing machine. It is a fully equipped functional training space designed for high-quality small group and personal training.',
+    answer: 'Our Museumplein studio has Nike premium equipment: a half rack with an Olympic barbell, a full set of dumbbells, kettlebells, and a Concept2 RowErg rowing machine, alongside Reformer Pilates apparatus. It is a boutique training space for high-quality small group and personal training.',
   },
   {
     question: 'Is strength training combined with Pilates at PT Studio 7?',
-    answer: 'Often, yes. Many of our clients train in both studios. Pilates and strength training complement each other perfectly: Pilates builds deep core stability, postural alignment, and movement quality; strength training adds power, muscle mass, and metabolic conditioning. Our instructors can design an integrated program that uses both.',
+    answer: 'Often, yes. Many of our clients combine Pilates and strength training in the same studio. Pilates builds deep core stability, postural alignment, and movement quality; strength training adds power, muscle mass, and metabolic conditioning. Our instructors can design an integrated program that uses both.',
   },
   {
     question: 'Do I need prior experience for strength training at PT Studio 7?',
@@ -59,7 +59,7 @@ export const StrengthTrainingAmsterdam: React.FC = () => {
           <div className="service-hero-content">
             <h1>Strength Training Amsterdam</h1>
             <p>
-              Expert-led personal strength training in our premium Nike-equipped studio at
+              Expert-led personal strength training with premium Nike equipment at
               Museumplein. Small groups of max 5 people and one-on-one private sessions.
             </p>
             <div className="service-hero-badges">
@@ -76,9 +76,9 @@ export const StrengthTrainingAmsterdam: React.FC = () => {
           <div className="service-container">
             <h2>Strength training in Amsterdam Oud-Zuid</h2>
             <p>
-              PT Studio 7 houses a dedicated strength and conditioning studio equipped with premium
-              Nike gear — a half rack, Olympic barbell, dumbbells, kettlebells, and a Concept2
-              RowErg. It is a serious training environment designed for people who want
+              PT Studio 7 is a boutique studio at Museumplein equipped with premium
+              Nike gear: a half rack, Olympic barbell, dumbbells, kettlebells, and a Concept2
+              RowErg, in the same space as our Reformer Pilates apparatus. It is a serious training environment designed for people who want
               results, not a row of treadmills and mirrors.
             </p>
             <p>

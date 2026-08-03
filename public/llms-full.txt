@@ -43,7 +43,6 @@ Professional-grade Pilates equipment including:
 - Tower Reformers
 - Cadillac (Trapeze Table)
 - Wunda Chair
-- Ladder Barrel
 - Spine Corrector
 - TRX suspension trainers
 
@@ -184,12 +183,12 @@ PT7 Academy is the teacher-training arm of PT Studio 7. Training happens inside 
 - Lal: https://www.pt7.nl/trainer/lal
 - Nisan: https://www.pt7.nl/trainer/nisan
 
-### Equipment Information
+### Equipment Information (for sale)
 - Reformer: https://www.pt7.nl/equipment/reformer
 - Tower Reformer: https://www.pt7.nl/equipment/tower-reformer
 - Cadillac: https://www.pt7.nl/equipment/cadillac
 - Wunda Chair: https://www.pt7.nl/equipment/wunda-chair
-- Ladder Barrel: https://www.pt7.nl/equipment/ladder-barrel
+- Ladder Barrel (sold; not used in PT7 client trainings): https://www.pt7.nl/equipment/ladder-barrel
 
 ### Blog & Resources
 - Blog: https://www.pt7.nl/blog
@@ -390,7 +389,7 @@ A: Yes. Specialized pregnancy / prenatal Pilates is offered as private Reformer 
 A: Van Baerlestraat 76C, directly across from Stedelijk Museum at Museumplein in Amsterdam Zuid.
 
 **Q: What equipment do they have?**
-A: Professional equipment including Reformers, Tower Reformers, Cadillac, Wunda Chair, Ladder Barrel, Spine Corrector, and TRX suspension trainers.
+A: Professional equipment including Reformers, Tower Reformers, Cadillac, Wunda Chair, Spine Corrector, and TRX suspension trainers.
 
 **Q: Can I book a single class?**
 A: Yes, though packages are recommended for best results. Book via website or call directly.

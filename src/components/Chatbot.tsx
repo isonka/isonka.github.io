@@ -227,7 +227,7 @@ ${pricing}
         break;
       
       case "Tell me about equipment":
-        addBotMessage("We have two studios:\n\n**Pilates Studio:** Reformers, Tower Reformer, Cadillac/Trapeze Table, Ladder Barrel, Wunda Chair\n\n**Strength & Cardio Studio:** Nike Strength Half Rack, Olympic barbell, dumbbells, Concept2 RowErg", 500);
+        addBotMessage("We train in one boutique studio at Museumplein with:\n\n**Pilates apparatus:** Reformers, Tower Reformer, Cadillac/Trapeze Table, Wunda Chair\n\n**Strength & cardio:** Nike Strength Half Rack, Olympic barbell, dumbbells, Concept2 RowErg, TRX", 500);
         addBotMessage("Would you like to see our equipment page?", 2000, ["Yes, show me", "No thanks", "Start over"]);
         break;
       

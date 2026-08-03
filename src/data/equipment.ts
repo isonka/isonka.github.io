@@ -267,9 +267,9 @@ export const equipmentProducts: EquipmentProduct[] = [
     name: 'Ladder Barrel',
     price: '€1,000',
     seo: {
-      title: 'Ladder Barrel - PT Studio 7 Amsterdam',
-      description: 'Professional Pilates Ladder Barrel for sale. Perfect for stretching, spinal extension, and core strengthening. Studio-quality equipment in Amsterdam.',
-      keywords: 'Ladder Barrel for sale, Pilates barrel, spine corrector, professional Pilates equipment, Amsterdam',
+      title: 'Ladder Barrel for Sale | PT Studio 7 Amsterdam',
+      description: 'Buy a professional Pilates Ladder Barrel in Amsterdam. Specs, pricing, and ordering for home or studio use. Sold by PT Studio 7; not used in our client training sessions.',
+      keywords: 'Ladder Barrel for sale, Pilates barrel for sale Amsterdam, buy Pilates equipment Netherlands, professional Pilates apparatus',
     },
     images: [
       { src: '/assets/images/ladder_barrel_1.webp', alt: 'Ladder Barrel - Side view' },
@@ -279,7 +279,7 @@ export const equipmentProducts: EquipmentProduct[] = [
       { src: '/assets/images/ladder_barrel_5.webp', alt: 'Ladder Barrel - Detail view' },
       { src: '/assets/images/ladder_barrel_6.webp', alt: 'Ladder Barrel - Close-up detail' },
     ],
-    shortDesc: 'The Ladder Barrel is a classic Pilates apparatus designed to support a wide variety of stretching, strengthening, and flexibility exercises.',
+    shortDesc: 'Professional Ladder Barrel available for purchase for home or studio setups. Classic apparatus for stretching, spinal extension, and flexibility work.',
     features: [
       'Solid wood construction',
       'Adjustable barrel position with ladder',
@@ -290,7 +290,7 @@ export const equipmentProducts: EquipmentProduct[] = [
       'Dimensions: 90 x 75 x 90 cm',
       'Weight: approx. 40 kg',
     ],
-    description: 'The Ladder Barrel is essential for spinal extension work and deep stretching. Its unique design supports the body in a way that promotes proper alignment while performing challenging exercises. Excellent for rehabilitation, flexibility training, and core strengthening.',
+    description: 'The Ladder Barrel supports spinal extension, stretching, and flexibility work with a curved barrel and ladder. Available for sale through PT Studio 7 for home or studio use. We sell this apparatus; it is not part of our regular client training sessions at Museumplein.',
     specs: [
       { label: 'Frame', value: 'Solid wood construction' },
       { label: 'Barrel', value: 'Smooth curved surface with padding' },
@@ -308,6 +308,10 @@ export const equipmentProducts: EquipmentProduct[] = [
       {
         question: 'What space is needed?',
         answer: 'The Ladder Barrel requires approximately 1.5m x 1.5m of floor space for safe use.',
+      },
+      {
+        question: 'Do you use the Ladder Barrel in PT Studio 7 classes?',
+        answer: 'No. We sell the Ladder Barrel for home or studio purchase. Client trainings at our Museumplein studio use Reformers, Tower Reformer, Cadillac, Wunda Chair, and related apparatus, not the Ladder Barrel.',
       },
       commonFAQ[1],
       ...commonFAQ.slice(2),

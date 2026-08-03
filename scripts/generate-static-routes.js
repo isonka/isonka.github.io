@@ -144,8 +144,8 @@ const routeMeta = {
     image: DEFAULT_IMAGE,
   },
   'equipment/ladder-barrel': {
-    title: 'Ladder Barrel | PT Studio 7 Amsterdam',
-    description: 'Ladder Barrel Pilates at PT Studio 7 Museumplein. Spinal mobility and flexibility training with certified instructors.',
+    title: 'Ladder Barrel for Sale | PT Studio 7 Amsterdam',
+    description: 'Professional Pilates Ladder Barrel for sale. Specs, pricing, and ordering for home or studio use. Sold by PT Studio 7; not used in our client training sessions.',
     image: DEFAULT_IMAGE,
   },
   'trainer/elif': {

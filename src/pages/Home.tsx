@@ -123,7 +123,7 @@ export const Home: React.FC = () => {
             <div className="hero-features">
               <div className="feature-item">
                 <span className="feature-icon">✓</span>
-                <span>Two Dedicated Studios</span>
+                <span>Boutique Museumplein Studio</span>
               </div>
               <div className="feature-item">
                 <span className="feature-icon">✓</span>
@@ -150,7 +150,7 @@ export const Home: React.FC = () => {
             <p>
               Looking for expert personal training in Amsterdam Oud-Zuid? With 15+ years of expertise at our Museumplein location, PT Studio 7 offers
               a boutique fitness experience built around attention and results. Located at Van Baerlestraat 76C in the heart of Oud-Zuid, across from Stedelijk Museum,
-              we feature <strong>two dedicated training studios</strong> — a Pilates studio with professional Reformers, and a Strength & Cardio studio with Nike equipment and Concept2 machines.
+              our studio combines professional Reformers and classical Pilates apparatus with Nike strength equipment, TRX, and Concept2 machines in one space.
             </p>
             <p>
               We offer one-on-one private sessions where you receive 100% of your instructor's attention.
@@ -162,8 +162,8 @@ export const Home: React.FC = () => {
               to your progress and celebrating each milestone with you.
             </p>
             <p className="about-explore">
-              Explore:{' '}
-              <Link to="/reformer-pilates-amsterdam">Reformer Pilates</Link>
+              Start here:{' '}
+              <Link to="/reformer-pilates-amsterdam">Reformer Pilates Amsterdam (Museumplein)</Link>
               {' · '}
               <Link to="/private-pilates-amsterdam">Private Pilates</Link>
               {' · '}

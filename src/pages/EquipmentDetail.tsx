@@ -26,7 +26,6 @@ export const EquipmentDetail: React.FC = () => {
     'tower-reformer': { to: '/workouts/reformer-pilates', label: 'Try Tower/Reformer-style classes' },
     cadillac: { to: '/workouts/reformer-pilates', label: 'Try equipment-based Pilates classes' },
     'wunda-chair': { to: '/workouts/reformer-pilates', label: 'Try Pilates classes using this equipment family' },
-    'ladder-barrel': { to: '/workouts/reformer-pilates', label: 'Try mobility-focused Pilates classes' },
   };
   const relatedWorkout = workoutByEquipment[product.slug];
 

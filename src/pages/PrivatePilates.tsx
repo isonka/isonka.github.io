@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     question: 'What equipment is used in private Pilates sessions?',
-    answer: 'Depending on your goals, private sessions at PT Studio 7 can include the Reformer, Tower Reformer, Cadillac (Trapeze Table), Wunda Chair, Ladder Barrel, and Spine Corrector — the full suite of classical Pilates apparatus. Your instructor selects the most appropriate equipment for each session.',
+    answer: 'Depending on your goals, private sessions at PT Studio 7 can include the Reformer, Tower Reformer, Cadillac (Trapeze Table), Wunda Chair, and Spine Corrector. Your instructor selects the most appropriate equipment for each session.',
   },
 ];
 
@@ -95,8 +95,8 @@ export const PrivatePilates: React.FC = () => {
               good workout.
             </p>
             <p>
-              We use the full suite of classical Pilates apparatus: Reformer, Tower Reformer,
-              Cadillac, Wunda Chair, Ladder Barrel, and Spine Corrector. Your instructor selects
+              We use classical Pilates apparatus: Reformer, Tower Reformer,
+              Cadillac, Wunda Chair, and Spine Corrector. Your instructor selects
               the right tools for each phase of your program.
             </p>
           </div>
@@ -124,7 +124,7 @@ export const PrivatePilates: React.FC = () => {
               </div>
               <div className="service-benefit-card">
                 <h3>Full equipment access</h3>
-                <p>Private sessions give you access to all of our Pilates apparatus — Reformer, Cadillac, Wunda Chair, Ladder Barrel — not just the equipment available in group classes.</p>
+                <p>Private sessions give you access to our Pilates apparatus: Reformer, Cadillac, Wunda Chair, and Spine Corrector, not just the equipment available in group classes.</p>
               </div>
               <div className="service-benefit-card">
                 <h3>Injury & special needs</h3>

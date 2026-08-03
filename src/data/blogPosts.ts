@@ -616,7 +616,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Which Equipment Should Beginners Start With?</h2>
       <p>Most beginners should start on the <strong>Reformer</strong>. It's the most versatile, offers adjustable resistance, and builds the foundational strength and body awareness needed for other equipment. Once you've developed core stability and proper form, your instructor can introduce other apparatus to target specific goals.</p>
 
-      <p><em>At PT Studio 7 Amsterdam, we have a full equipment studio including Reformers, Tower Reformers, Cadillac, Wunda Chair, Ladder Barrel, and Spine Corrector. <a href="/equipment">Explore our equipment</a> or <a href="/schedule">book a class</a> to experience it yourself.</em></p>
+      <p><em>At PT Studio 7 Amsterdam, we have a full equipment studio including Reformers, Tower Reformers, Cadillac, Wunda Chair, and Spine Corrector. <a href="/equipment">Explore our equipment</a> or <a href="/schedule">book a class</a> to experience it yourself.</em></p>
     `,
     author: 'PT Studio 7 Team',
     date: '2026-01-25',
