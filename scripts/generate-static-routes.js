@@ -48,7 +48,7 @@ const routeMeta = {
   },
   'prenatal-pilates-amsterdam': {
     title: 'Prenatal & Pregnancy Pilates Amsterdam | Private Reformer | PT Studio 7',
-    description: 'Private prenatal Reformer Pilates in Amsterdam Oud-Zuid / Museumplein. Trimester-specific sessions, pelvic floor support, pregnancy-safe training with specialist instructors.',
+    description: 'Private prenatal Reformer Pilates at Museumplein (Oud-Zuid). 45-minute 1:1 sessions, trimester adaptations, pelvic floor focus. Train with Elif or Göknur through pregnancy.',
     image: DEFAULT_IMAGE,
   },
   'reformer-pilates-amsterdam': {

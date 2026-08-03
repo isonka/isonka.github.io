@@ -13,6 +13,16 @@ const faqs = [
       'Yes, when supervised by instructors experienced in pregnancy training. At PT Studio 7, every exercise is adapted to your trimester, symptoms, and energy level. We modify load, range, and positions as your body changes. Clients commonly train safely through 38+ weeks.',
   },
   {
+    question: 'Do I need approval from my midwife or doctor?',
+    answer:
+      'Yes. Confirm with your midwife or doctor that exercise is appropriate before you start. If they say no, or set limits that rule out this training, we will not begin or continue sessions. Prenatal Pilates at PT Studio 7 is supportive movement coaching, not medical care. Share any restrictions so we can stay within them.',
+  },
+  {
+    question: 'Can I start at any week of pregnancy?',
+    answer:
+      'Yes, when you are cleared to exercise. Clients start at different weeks and often continue until labor. We adapt every private session to your week, symptoms, and energy.',
+  },
+  {
     question: 'Do I need Pilates experience before starting prenatal sessions?',
     answer:
       'No. Beginners are welcome. We start with a private intake and build your program around your current fitness level, pregnancy stage, and goals.',
@@ -25,7 +35,17 @@ const faqs = [
   {
     question: 'Can this help with pelvic floor and lower-back discomfort?',
     answer:
-      'Yes. We focus on breath-led core control, pelvic floor awareness, spinal support, and glute strength to reduce common pregnancy discomforts and improve day-to-day movement.',
+      'Yes. We focus on breathing, pelvic floor muscles control, spinal support, and leg strength to reduce common pregnancy discomforts and improve day-to-day movement.',
+  },
+  {
+    question: 'Which languages are sessions offered in?',
+    answer:
+      'Sessions are available in English, Turkish, and Dutch. Many prenatal clients are expats living near Museumplein / Oud-Zuid who prefer coaching in English.',
+  },
+  {
+    question: 'Where is the studio and how do I get there?',
+    answer:
+      'PT Studio 7 is at Van Baerlestraat 76C, 1071 BB Amsterdam, across from the Stedelijk Museum at Museumplein in Oud-Zuid. The location is easy to reach by tram or metro to the Museumplein area. Arrive a few minutes early for your first private intake so we can settle in without rushing.',
   },
   {
     question: 'Is this the same as “pregnancy Pilates Amsterdam”?',
@@ -51,11 +71,11 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
     <>
       <SEOHead
         title="Prenatal & Pregnancy Pilates Amsterdam | Private Reformer | PT Studio 7"
-        description="Private prenatal Reformer Pilates in Amsterdam Oud-Zuid / Museumplein. Trimester-specific sessions, pelvic floor support, pregnancy-safe training with specialist instructors."
+        description="Private prenatal Reformer Pilates at Museumplein (Oud-Zuid). 45-minute 1:1 sessions, trimester adaptations, pelvic floor focus. Train with Elif or Göknur through pregnancy."
         keywords="prenatal pilates amsterdam, pregnancy pilates amsterdam, private prenatal pilates, reformer pilates pregnancy, pelvic floor pilates amsterdam, postnatal pilates amsterdam, pregnancy pilates museumplein"
         canonical={`${baseUrl}/prenatal-pilates-amsterdam`}
         ogTitle="Prenatal & Pregnancy Pilates Amsterdam | PT Studio 7"
-        ogDescription="Private prenatal Reformer Pilates in Amsterdam Oud-Zuid with trimester-specific programming and expert pelvic floor support."
+        ogDescription="Private 45-minute prenatal Reformer sessions at Museumplein. Trimester-specific coaching with Elif and Göknur, not group classes."
       />
 
       <StructuredData
@@ -102,7 +122,7 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
               Pregnancy changes breathing mechanics, posture, and load through your spine and pelvis. Our prenatal sessions use the Reformer to provide support and controlled resistance so you can keep moving well without overloading sensitive areas.
             </p>
             <p>
-              We prioritize deep core coordination, pelvic floor awareness, hip stability, and upper-back strength. That combination helps reduce common complaints like lower-back tension, pelvic discomfort, and shoulder tightness while preparing you for labor and recovery.
+              We prioritize breathing, pelvic floor muscles control, leg strength, and upper-back strength. That combination helps reduce common complaints like lower-back tension, pelvic discomfort, and shoulder tightness while preparing you for labor and recovery.
             </p>
             <p>
               If you want a deeper trimester-by-trimester guide, read our full article:{' '}
@@ -116,22 +136,28 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
         <section className="service-section">
           <div className="service-container">
             <h2>Who this is for</h2>
+            <p>
+              If your midwife or doctor says exercise is okay, you can start private prenatal Reformer sessions at
+              any week of pregnancy and continue until labor.
+            </p>
+            <p>
+              If your doctor or midwife says no to exercise, or places clear limits that rule out this type of
+              training, we will not start or continue sessions. Your medical guidance always comes first.
+            </p>
             <div className="service-benefits-grid">
               <div className="service-benefit-card">
-                <h3>First trimester foundations</h3>
-                <p>Maintain healthy movement habits, breathing control, and gentle strength while managing fatigue and changing energy levels.</p>
-              </div>
-              <div className="service-benefit-card">
-                <h3>Second trimester stability</h3>
-                <p>Build glute and trunk support to improve posture and reduce stress on the lower back as your bump grows.</p>
-              </div>
-              <div className="service-benefit-card">
-                <h3>Third trimester confidence</h3>
-                <p>Focus on mobility, breathing, and practical movement strategies that help with comfort and preparation for labor.</p>
+                <h3>Any week until labor</h3>
+                <p>
+                  Start when you are ready, or keep going through the final weeks. We adapt every session to your
+                  week, energy, and symptoms, including clients who train with us into the 38+ week range.
+                </p>
               </div>
               <div className="service-benefit-card">
                 <h3>Postnatal continuation</h3>
-                <p>Progress safely into recovery work after birth with structured core and pelvic-floor rehab guidance.</p>
+                <p>
+                  After birth, many clients continue with postnatal sessions focused on recovery, pelvic floor
+                  muscles control, and returning to strength after medical clearance.
+                </p>
               </div>
             </div>
           </div>
@@ -139,14 +165,99 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
 
         <section className="service-section">
           <div className="service-container">
+            <h2>What a private prenatal session looks like</h2>
+            <p>
+              Sessions are 45 minutes and private only, never mixed into a group class. That matters in pregnancy:
+              load, range, and positions change week by week, and your instructor needs full attention on you.
+            </p>
+            <div className="service-benefits-grid">
+              <div className="service-benefit-card">
+                <h3>1. Intake &amp; goals</h3>
+                <p>
+                  We start with how far along you are, how you feel day to day, prior exercise experience, and any
+                  guidance from your midwife or doctor. Your first booking is a private intake so programming fits
+                  your pregnancy, not a generic class plan.
+                </p>
+              </div>
+              <div className="service-benefit-card">
+                <h3>2. Reformer-supported movement</h3>
+                <p>
+                  Springs and the carriage give controlled resistance with more support than floor-only work. We
+                  emphasise breathing, pelvic floor muscles control, leg strength, and upper-back strength as
+                  posture and balance shift.
+                </p>
+              </div>
+              <div className="service-benefit-card">
+                <h3>3. Trimester adaptations</h3>
+                <p>
+                  We adjust intensity and positions as your body changes, including through later pregnancy when
+                  many clients continue training with us into the 38+ week range.
+                </p>
+              </div>
+              <div className="service-benefit-card">
+                <h3>4. Tailored to how you feel today</h3>
+                <p>
+                  Every day can feel different in pregnancy: energy, sleep, and comfort shift. We tailor each
+                  class to your needs and requirements that day, not a fixed routine you have to push through.
+                  That is why we believe prenatal Pilates should be one-on-one.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="service-section">
+          <div className="service-container">
+            <h2>From our prenatal clients</h2>
+            <blockquote className="service-quote">
+              <p>
+                “I have been going to this studio for the past 18 months, of which I have been pregnant for 9.
+                During my pregnancy Elif trained me until the very end (38.5 weeks). Her training gave me and my
+                body an extremely comfortable pregnancy and smooth delivery of birth! Her experience and knowledge
+                about the human body, pregnant or not, makes all the difference.”
+              </p>
+              <footer>Lot Canter Cremers</footer>
+            </blockquote>
+            <p>
+              Lot’s experience reflects how we work here: private Reformer sessions, trimester-aware coaching, and
+              instructors who stay with you through pregnancy when it is appropriate for you.
+            </p>
+          </div>
+        </section>
+
+        <section className="service-section">
+          <div className="service-container">
             <h2>Meet your prenatal specialists</h2>
             <p>
-              You can train with <Link to="/trainer/elif">Elif Arzu Ogan</Link> and{' '}
-              <Link to="/trainer/goknur">Göknur Dipli</Link>, both experienced in prenatal and postnatal Pilates coaching.
+              Book with instructors experienced in prenatal and postnatal Reformer coaching. See private packages on
+              our <Link to="/pricing">Pricing page</Link>.
             </p>
-            <p>
-              See private-session options and current packages on our <Link to="/pricing">Pricing page</Link>.
-            </p>
+            <div className="service-trainers-strip">
+              <Link to="/trainer/elif" className="service-trainer-card">
+                <img
+                  src="/assets/images/elif.webp"
+                  alt="Elif Arzu Ogan, prenatal Pilates instructor"
+                  width={60}
+                  height={60}
+                />
+                <div>
+                  <h3>Elif Arzu Ogan</h3>
+                  <p>Owner &amp; head instructor · prenatal specialist</p>
+                </div>
+              </Link>
+              <Link to="/trainer/goknur" className="service-trainer-card">
+                <img
+                  src="/assets/images/goknur.webp"
+                  alt="Göknur Dipli, prenatal Pilates instructor"
+                  width={60}
+                  height={60}
+                />
+                <div>
+                  <h3>Göknur Dipli</h3>
+                  <p>Senior instructor · prenatal &amp; strength</p>
+                </div>
+              </Link>
+            </div>
           </div>
         </section>
 
