@@ -72,6 +72,82 @@
   font-weight: 600;
 }
 
+.academy-offer-strip {
+  background: #fff;
+  border: 1px solid #e5dccf;
+  border-radius: var(--radius-lg);
+  padding: 24px 20px 20px;
+  margin: 0 auto 32px;
+  max-width: 920px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.academy-offer-facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px 16px;
+  margin-bottom: 20px;
+}
+
+.academy-offer-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.academy-offer-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.academy-offer-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.35;
+}
+
+.academy-offer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.academy-offer-actions .course-btn {
+  margin: 0;
+}
+
+.academy-offer-actions button.course-btn {
+  font: inherit;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.academy-offer-note {
+  margin: 16px 0 0;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .academy-offer-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .academy-offer-actions .course-btn {
+    width: 100%;
+  }
+}
+
 .academy-lead {
   font-size: 1.2rem;
   line-height: 1.8;

@@ -1,8 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { AcademyUrgencyBanner } from '../components/AcademyUrgencyBanner';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
+import {
+  trackAcademyEnrollClick,
+  trackAcademyInquiryClick,
+  trackPageView,
+} from '../utils/gtmTracking';
 import '../styles/Academy.css';
 
 declare global {
@@ -112,8 +116,42 @@ export const Academy: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'reformer' | 'mat'>('reformer');
 
   useEffect(() => {
+    trackPageView('/academy', 'Pilates Instructor Course Amsterdam | PT7 Academy');
+    window.HealcodeWidget?.init?.();
+  }, []);
+
+  useEffect(() => {
     window.HealcodeWidget?.init?.();
   }, [activeTab]);
+
+  useEffect(() => {
+    const onClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement | null;
+      if (!target) return;
+
+      const enrollBtn = target.closest('.academy-enroll-btn') as HTMLElement | null;
+      if (enrollBtn) {
+        const paymentType = enrollBtn.classList.contains('academy-enroll-btn--installments')
+          ? 'installments'
+          : 'full';
+        const course = (enrollBtn.dataset.course as 'reformer' | 'mat' | undefined) ?? 'reformer';
+        const location = enrollBtn.dataset.location ?? 'academy_page';
+        trackAcademyEnrollClick(paymentType, course, location);
+        return;
+      }
+
+      const inquiryBtn = target.closest('[data-academy-inquiry]') as HTMLElement | null;
+      if (inquiryBtn) {
+        const course = (inquiryBtn.dataset.course as 'reformer' | 'mat' | undefined) ?? 'reformer';
+        const method = (inquiryBtn.dataset.academyInquiry as 'email' | 'phone' | undefined) ?? 'email';
+        const location = inquiryBtn.dataset.location ?? 'academy_page';
+        trackAcademyInquiryClick(course, method, location);
+      }
+    };
+
+    document.addEventListener('click', onClick, true);
+    return () => document.removeEventListener('click', onClick, true);
+  }, []);
 
   const handleTabChange = (tabName: 'reformer' | 'mat') => {
     setActiveTab(tabName);
@@ -124,6 +162,17 @@ export const Academy: React.FC = () => {
         window.scrollTo({ top: offsetTop, behavior: 'smooth' });
       }
     }, 100);
+  };
+
+  const scrollToEnroll = () => {
+    setActiveTab('reformer');
+    setTimeout(() => {
+      const enroll = document.getElementById('academy-enroll');
+      if (enroll) {
+        const offsetTop = enroll.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+      }
+    }, 50);
   };
 
   const academyFaqs = [
@@ -271,13 +320,65 @@ export const Academy: React.FC = () => {
       <StructuredData type="FAQPage" data={{ faqs: academyFaqs }} />
 
       <div className="academy-page">
-        <AcademyUrgencyBanner />
-
         <section className="academy-courses">
           <div className="academy-container">
             <div className="ittap-accreditation">
+              <p className="ittap-accreditation-eyebrow">PT7 Academy · Museumplein, Amsterdam</p>
               <h1 className="academy-page-title">Pilates Instructor Courses Amsterdam</h1>
-              <p className="academy-pma-subtitle">Pilates teacher training at Museumplein · PT7 Academy</p>
+              <p className="academy-pma-subtitle">
+                300-hour Reformer teacher training · PMA ITTAP approved · Weekend schedule
+              </p>
+
+              <div className="academy-offer-strip" id="academy-offer">
+                <div className="academy-offer-facts">
+                  <div className="academy-offer-fact">
+                    <span className="academy-offer-label">Next Reformer term</span>
+                    <span className="academy-offer-value">12 Sep – 8 Nov 2026</span>
+                  </div>
+                  <div className="academy-offer-fact">
+                    <span className="academy-offer-label">Format</span>
+                    <span className="academy-offer-value">Selected weekends · {lectureHours}</span>
+                  </div>
+                  <div className="academy-offer-fact">
+                    <span className="academy-offer-label">Course fee</span>
+                    <span className="academy-offer-value">€2,000 + VAT</span>
+                  </div>
+                  <div className="academy-offer-fact">
+                    <span className="academy-offer-label">Or pay in 3</span>
+                    <span className="academy-offer-value">3 × €667 + VAT</span>
+                  </div>
+                </div>
+                <div className="academy-offer-actions">
+                  <div
+                    className="course-btn primary academy-enroll-btn"
+                    data-course="reformer"
+                    data-location="offer_strip"
+                    dangerouslySetInnerHTML={{ __html: ACADEMY_ENROLL_WIDGET }}
+                  />
+                  <div
+                    className="course-btn secondary academy-enroll-btn academy-enroll-btn--installments"
+                    data-course="reformer"
+                    data-location="offer_strip"
+                    dangerouslySetInnerHTML={{ __html: ACADEMY_INSTALLMENTS_WIDGET }}
+                  />
+                  <button type="button" className="course-btn secondary" onClick={scrollToEnroll}>
+                    View full schedule
+                  </button>
+                  <a
+                    href="mailto:info@pt7.nl?subject=Reformer Pilates Instructor Course Inquiry"
+                    className="course-btn secondary"
+                    data-academy-inquiry="email"
+                    data-course="reformer"
+                    data-location="offer_strip"
+                  >
+                    Inquire
+                  </a>
+                </div>
+                <p className="academy-offer-note">
+                  Spring 2027 term also open (13 Mar – 16 May). Mat &amp; Trapeze Table track below.
+                </p>
+              </div>
+
               <div className="accreditation-logos">
                 <div className="accreditation-logo-cell">
                   <a
@@ -464,7 +565,7 @@ export const Academy: React.FC = () => {
                 </div>
               </div>
 
-              <div className="academy-course-section">
+              <div className="academy-course-section" id="academy-enroll">
                 <h3>Course Fee</h3>
                 <div className="price-options">
                   <div className="price-option">
@@ -489,10 +590,14 @@ export const Academy: React.FC = () => {
                   <div className="academy-enroll-buttons">
                     <div
                       className="course-btn primary academy-enroll-btn"
+                      data-course="reformer"
+                      data-location="reformer_fee"
                       dangerouslySetInnerHTML={{ __html: ACADEMY_ENROLL_WIDGET }}
                     />
                     <div
                       className="course-btn secondary academy-enroll-btn academy-enroll-btn--installments"
+                      data-course="reformer"
+                      data-location="reformer_fee"
                       dangerouslySetInnerHTML={{ __html: ACADEMY_INSTALLMENTS_WIDGET }}
                     />
                   </div>
@@ -570,15 +675,22 @@ export const Academy: React.FC = () => {
                 <div className="course-cta-buttons">
                   <div
                     className="course-btn primary academy-enroll-btn"
+                    data-course="reformer"
+                    data-location="reformer_cta"
                     dangerouslySetInnerHTML={{ __html: ACADEMY_ENROLL_WIDGET }}
                   />
                   <div
                     className="course-btn secondary academy-enroll-btn academy-enroll-btn--installments"
+                    data-course="reformer"
+                    data-location="reformer_cta"
                     dangerouslySetInnerHTML={{ __html: ACADEMY_INSTALLMENTS_WIDGET }}
                   />
                   <a
                     href="mailto:info@pt7.nl?subject=Reformer Pilates Instructor Course Inquiry"
                     className="course-btn secondary"
+                    data-academy-inquiry="email"
+                    data-course="reformer"
+                    data-location="reformer_cta"
                   >
                     Inquire About the Course
                   </a>
@@ -677,10 +789,14 @@ export const Academy: React.FC = () => {
                   <div className="academy-enroll-buttons">
                     <div
                       className="course-btn primary academy-enroll-btn"
+                      data-course="mat"
+                      data-location="mat_fee"
                       dangerouslySetInnerHTML={{ __html: ACADEMY_ENROLL_WIDGET }}
                     />
                     <div
                       className="course-btn secondary academy-enroll-btn academy-enroll-btn--installments"
+                      data-course="mat"
+                      data-location="mat_fee"
                       dangerouslySetInnerHTML={{ __html: ACADEMY_INSTALLMENTS_WIDGET }}
                     />
                   </div>
@@ -721,15 +837,22 @@ export const Academy: React.FC = () => {
                 <div className="course-cta-buttons">
                   <div
                     className="course-btn primary academy-enroll-btn"
+                    data-course="mat"
+                    data-location="mat_cta"
                     dangerouslySetInnerHTML={{ __html: ACADEMY_ENROLL_WIDGET }}
                   />
                   <div
                     className="course-btn secondary academy-enroll-btn academy-enroll-btn--installments"
+                    data-course="mat"
+                    data-location="mat_cta"
                     dangerouslySetInnerHTML={{ __html: ACADEMY_INSTALLMENTS_WIDGET }}
                   />
                   <a
                     href="mailto:info@pt7.nl?subject=Mat %26 Trapeze Table Instructor Course Inquiry"
                     className="course-btn secondary"
+                    data-academy-inquiry="email"
+                    data-course="mat"
+                    data-location="mat_cta"
                   >
                     Inquire About This Course
                   </a>
@@ -822,16 +945,32 @@ export const Academy: React.FC = () => {
             <div className="cta-buttons">
               <div
                 className="cta-btn primary academy-enroll-btn"
+                data-course="reformer"
+                data-location="bottom_cta"
                 dangerouslySetInnerHTML={{ __html: ACADEMY_ENROLL_WIDGET }}
               />
               <div
                 className="cta-btn secondary academy-enroll-btn academy-enroll-btn--installments"
+                data-course="reformer"
+                data-location="bottom_cta"
                 dangerouslySetInnerHTML={{ __html: ACADEMY_INSTALLMENTS_WIDGET }}
               />
-              <a href="mailto:info@pt7.nl?subject=Reformer Pilates Instructor Course Inquiry" className="cta-btn secondary">
+              <a
+                href="mailto:info@pt7.nl?subject=Reformer Pilates Instructor Course Inquiry"
+                className="cta-btn secondary"
+                data-academy-inquiry="email"
+                data-course="reformer"
+                data-location="bottom_cta"
+              >
                 Inquire About the Course
               </a>
-              <a href="tel:+31685162693" className="cta-btn secondary">
+              <a
+                href="tel:+31685162693"
+                className="cta-btn secondary"
+                data-academy-inquiry="phone"
+                data-course="reformer"
+                data-location="bottom_cta"
+              >
                 Call: +31 685 162693
               </a>
             </div>

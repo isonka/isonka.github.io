@@ -1,9 +1,40 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-    <!-- GTM, Google Analytics/Ads, and Meta Pixel load after Cookiebot consent via src/utils/consentTracking.ts -->
-
     <meta charset="UTF-8" />
+    <!-- Google Consent Mode v2 (defaults before any Google tags) + Ads tag for detection -->
+    <script data-cookieconsent="ignore">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_personalization: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        analytics_storage: 'denied',
+        functionality_storage: 'denied',
+        personalization_storage: 'denied',
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
+      gtag('set', 'ads_data_redaction', true);
+      gtag('set', 'url_passthrough', true);
+    </script>
+    <!-- Google tag (gtag.js) — AW-17684932205; storage stays denied until Cookiebot grants marketing -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17684932205" data-cookieconsent="ignore"></script>
+    <script data-cookieconsent="ignore">
+      gtag('js', new Date());
+      gtag('config', 'AW-17684932205');
+    </script>
+    <!-- Cookiebot CMP (after Consent Mode + gtag) -->
+    <script
+      id="Cookiebot"
+      src="https://consent.cookiebot.com/uc.js"
+      data-cbid="b7046d56-8fa7-4aff-9789-7c95656f78f5"
+      data-blockingmode="auto"
+      type="text/javascript"
+    ></script>
+    <!-- GTM / GA / Meta still gated in src/utils/consentTracking.ts after Cookiebot consent -->
+
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/pt7logo.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/pt7logo.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/pt7logo.png" />

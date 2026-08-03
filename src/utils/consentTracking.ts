@@ -9,10 +9,16 @@ type TrackingState = {
   meta: boolean;
 };
 
+type GtagFn = (...args: unknown[]) => void;
+
 function getTrackingState(): TrackingState {
   const win = window as Window & { __pt7TrackingLoaded?: TrackingState };
   win.__pt7TrackingLoaded ??= { gtm: false, gtag: false, meta: false };
   return win.__pt7TrackingLoaded;
+}
+
+function getGtag(): GtagFn | undefined {
+  return (window as Window & { gtag?: GtagFn }).gtag;
 }
 
 function getCookiebotConsent() {
@@ -23,6 +29,26 @@ function getCookiebotConsent() {
     marketing: boolean;
   } } }).Cookiebot;
   return cookiebot?.consent;
+}
+
+/** Map Cookiebot categories → Google Consent Mode v2 update. */
+export function updateGoogleConsentFromCookiebot() {
+  const consent = getCookiebotConsent();
+  const gtag = getGtag();
+  if (!consent || !gtag) return;
+
+  const analytics = consent.statistics ? 'granted' : 'denied';
+  const ads = consent.marketing ? 'granted' : 'denied';
+  const preferences = consent.preferences ? 'granted' : 'denied';
+
+  gtag('consent', 'update', {
+    analytics_storage: analytics,
+    ad_storage: ads,
+    ad_user_data: ads,
+    ad_personalization: ads,
+    functionality_storage: preferences,
+    personalization_storage: preferences,
+  });
 }
 
 export function loadGTM() {
@@ -40,31 +66,46 @@ export function loadGTM() {
   loaded.gtm = true;
 }
 
+/**
+ * AW gtag loads from index.html for Ads detection.
+ * Here we only attach GA4 after statistics/marketing consent.
+ */
 export function loadGoogleTag() {
   const loaded = getTrackingState();
   if (loaded.gtag) return;
 
-  const initGtag = () => {
-    window.dataLayer = window.dataLayer || [];
-    const gtag = (...args: unknown[]) => {
-      window.dataLayer!.push(args);
-    };
-    (window as Window & { gtag?: (...args: unknown[]) => void }).gtag = gtag;
-    gtag('js', new Date());
-    gtag('config', GOOGLE_ADS_ID);
-    gtag('config', GA_ID, { send_page_view: false });
+  const win = window as Window & { gtag?: GtagFn };
+  const ensureGtag = () => {
+    if (!win.gtag) {
+      window.dataLayer = window.dataLayer || [];
+      win.gtag = (...args: unknown[]) => {
+        window.dataLayer!.push(args);
+      };
+      win.gtag('js', new Date());
+      win.gtag('config', GOOGLE_ADS_ID);
+    }
+    win.gtag('config', GA_ID, { send_page_view: false });
   };
 
-  const adsScript = document.createElement('script');
-  adsScript.async = true;
-  adsScript.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`;
-  adsScript.onload = initGtag;
-  document.head.appendChild(adsScript);
+  if (document.querySelector(`script[src*="gtag/js?id=${GA_ID}"]`)) {
+    ensureGtag();
+    loaded.gtag = true;
+    return;
+  }
 
   const gaScript = document.createElement('script');
   gaScript.async = true;
   gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+  gaScript.onload = ensureGtag;
   document.head.appendChild(gaScript);
+
+  // If AW script somehow missing (old HTML cache), load it once.
+  if (!document.querySelector(`script[src*="gtag/js?id=${GOOGLE_ADS_ID}"]`)) {
+    const adsScript = document.createElement('script');
+    adsScript.async = true;
+    adsScript.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`;
+    document.head.appendChild(adsScript);
+  }
 
   loaded.gtag = true;
 }
@@ -94,6 +135,8 @@ export function loadMetaPixel() {
 export function loadTrackingIfConsented() {
   const consent = getCookiebotConsent();
   if (!consent) return;
+
+  updateGoogleConsentFromCookiebot();
 
   if (consent.statistics || consent.marketing) {
     loadGTM();

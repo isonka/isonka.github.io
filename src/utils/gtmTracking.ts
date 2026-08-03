@@ -167,3 +167,34 @@ export const trackNavClick = (menuItem: string) => {
   });
 };
 
+// Academy / Google Ads conversion helpers
+export const trackAcademyEnrollClick = (
+  paymentType: 'full' | 'installments',
+  course: 'reformer' | 'mat' = 'reformer',
+  location: string = 'academy_page',
+) => {
+  trackEvent('academy_enroll_click', {
+    event_category: 'conversion',
+    event_label: `${course}_${paymentType}`,
+    payment_type: paymentType,
+    course,
+    button_location: location,
+    value: paymentType === 'full' ? 2000 : 667,
+    currency: 'EUR',
+  });
+};
+
+export const trackAcademyInquiryClick = (
+  course: 'reformer' | 'mat' = 'reformer',
+  method: 'email' | 'phone' = 'email',
+  location: string = 'academy_page',
+) => {
+  trackEvent('academy_inquiry_click', {
+    event_category: 'conversion',
+    event_label: `${course}_${method}`,
+    course,
+    contact_method: method,
+    button_location: location,
+  });
+};
+

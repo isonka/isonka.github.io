@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 import { loadTrackingIfConsented } from '../utils/consentTracking';
 
-const COOKIEBOT_ID = 'b7046d56-8fa7-4aff-9789-7c95656f78f5';
-
+/** Cookiebot script lives in index.html (before React). This only syncs consent → tags. */
 export const CookieConsent: React.FC = () => {
   useEffect(() => {
     const onConsentReady = () => {
@@ -13,16 +12,7 @@ export const CookieConsent: React.FC = () => {
     window.addEventListener('CookiebotOnAccept', onConsentReady);
     window.addEventListener('CookiebotOnDecline', onConsentReady);
 
-    const existingScript = document.getElementById('Cookiebot');
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = 'Cookiebot';
-      script.src = 'https://consent.cookiebot.com/uc.js';
-      script.setAttribute('data-cbid', COOKIEBOT_ID);
-      script.setAttribute('data-blockingmode', 'auto');
-      script.type = 'text/javascript';
-      document.head.appendChild(script);
-    } else if (window.Cookiebot?.consent) {
+    if (window.Cookiebot?.consent) {
       onConsentReady();
     }
 
