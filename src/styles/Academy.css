@@ -298,6 +298,54 @@
   margin-top: 40px;
 }
 
+.academy-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 28px 0;
+  flex-wrap: wrap;
+}
+
+.academy-tab {
+  padding: 16px 32px;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: var(--radius-pill);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.academy-tab:hover {
+  border-color: #ffd700;
+  background: #fffef0;
+}
+
+.academy-tab.active {
+  background: #ffd700;
+  border-color: #ffd700;
+  color: #222;
+}
+
+.academy-tab-content {
+  margin-top: 8px;
+}
+
+.ittap-accreditation .pma-callout-link {
+  display: inline-block;
+  margin-top: 12px;
+}
+
+.academy-course-accreditation {
+  text-align: center;
+  font-size: 1.05rem;
+  color: #555;
+  margin: -8px 0 28px;
+  line-height: 1.5;
+}
+
 .course-card-title {
   font-size: 2rem;
   margin-bottom: 24px;
@@ -938,6 +986,17 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .academy-tabs {
+    padding: 8px 12px 20px;
+  }
+
+  .academy-tab {
+    padding: 12px 20px;
+    font-size: 1rem;
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
   .course-highlights {
     flex-direction: column;
     align-items: stretch;
