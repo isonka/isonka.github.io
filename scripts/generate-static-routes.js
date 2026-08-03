@@ -37,8 +37,8 @@ const routeMeta = {
     image: DEFAULT_IMAGE,
   },
   'academy': {
-    title: 'Pilates Instructor Courses Amsterdam | PT7 Academy',
-    description: 'Reformer Pilates Instructor Course (PMA ITTAP approved) and Mat & Trapeze Table Instructor Course. Weekend intensives at Museumplein — 2026 and 2027 terms.',
+    title: 'Pilates Instructor Course Amsterdam | Teacher Training | PT7 Academy',
+    description: 'Pilates teacher training in Amsterdam at Museumplein. 300-hour Reformer instructor course (PMA ITTAP approved) plus Mat & Trapeze Table track. Weekend schedule for career changers.',
     image: DEFAULT_IMAGE,
   },
   'healthcare-providers': {
@@ -53,7 +53,7 @@ const routeMeta = {
   },
   'reformer-pilates-amsterdam': {
     title: 'Reformer Pilates Amsterdam Museumplein | PT Studio 7',
-    description: 'Reformer Pilates classes in Amsterdam at Museumplein. Small groups (max 5), private sessions, expert instructors in Oud-Zuid.',
+    description: 'Reformer Pilates at Museumplein Amsterdam. Small groups max 5, private sessions, full apparatus studio in Oud-Zuid. First visit coaching for beginners and expats.',
     image: DEFAULT_IMAGE,
   },
   'private-pilates-amsterdam': {

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { AcademyUrgencyBanner } from '../components/AcademyUrgencyBanner';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
@@ -127,6 +128,11 @@ export const Academy: React.FC = () => {
 
   const academyFaqs = [
     {
+      question: 'Who is this Pilates teacher training for?',
+      answer:
+        'PT7 Academy suits career changers and aspiring instructors who want a serious Reformer pathway (300 hours, PMA ITTAP approved) or Mat & Trapeze Table training on a weekend schedule at Museumplein, Amsterdam. Lectures are on selected weekends so you can keep weekday work. Sessions and studio life are English-friendly, with Turkish and Dutch also used in the community.',
+    },
+    {
       question: 'When are classes held?',
       answer:
         `Lectures are held on selected weekends, not every week. Reformer terms: Autumn 2026 (September–November): ${formatTermSchedule(termSchedule2026)}; Spring 2027 (March–May): ${formatTermSchedule(termSchedule2027)}. Mat & Trapeze Table (November 2026–January 2027): ${formatTermSchedule(matTrapezeSchedule)}. Each lecture weekend runs ${lectureHours}, so you can keep your weekday job while you train.`,
@@ -186,12 +192,12 @@ export const Academy: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Pilates Instructor Courses Amsterdam | PT7 Academy"
-        description="Reformer Pilates Instructor Course (PMA ITTAP approved) and Mat & Trapeze Table Instructor Course at Museumplein. Weekend intensives in 2026 and 2027. Enroll now."
-        keywords="Pilates Method Alliance, PMA ITTAP, Reformer Pilates Instructor Course, Mat Pilates instructor course, Trapeze Table instructor training, Pilates teacher training Amsterdam, ITTAP approved Pilates"
+        title="Pilates Instructor Course Amsterdam | Teacher Training | PT7 Academy"
+        description="Pilates teacher training in Amsterdam at Museumplein. 300-hour Reformer instructor course (PMA ITTAP approved) plus Mat & Trapeze Table track. Weekend schedule for career changers."
+        keywords="Pilates instructor course Amsterdam, Pilates teacher training Amsterdam, PMA ITTAP, Reformer Pilates Instructor Course, Mat Pilates instructor course, Trapeze Table instructor training, ITTAP approved Pilates"
         canonical="https://www.pt7.nl/academy"
-        ogTitle="Pilates Instructor Courses | PT7 Academy Amsterdam"
-        ogDescription="Reformer (PMA ITTAP approved) and Mat & Trapeze Table instructor courses. Weekend intensives at Museumplein — 2026 and 2027 terms open."
+        ogTitle="Pilates Instructor Course Amsterdam | PT7 Academy"
+        ogDescription="Pilates teacher training at Museumplein: 300-hour Reformer course (PMA ITTAP approved) and Mat & Trapeze Table track. Weekend intensives for 2026 and 2027."
       />
       <StructuredData
         type="Course"
@@ -211,7 +217,7 @@ export const Academy: React.FC = () => {
             url: 'https://www.pt7.nl/academy',
             timeRequired: 'PT300H',
             educationalCredentialAwarded: 'PT7 Academy Reformer Pilates Instructor Certificate',
-            recognizedByName: 'Pilates Method Alliance (PMA) — ITTAP',
+            recognizedByName: 'Pilates Method Alliance (PMA) / ITTAP',
             recognizedByUrl:
               'https://www.pilatesmethodalliance.org/pma-international-teacher-trainer-accreditation-for-pilates-ittap-reformer-program',
           },
@@ -221,7 +227,7 @@ export const Academy: React.FC = () => {
         type="Course"
         data={{
           course: {
-            name: `${COURSE_TITLE} — Spring 2027`,
+            name: `${COURSE_TITLE} (Spring 2027)`,
             description:
               '300 hours Reformer Pilates Instructor Course, ITTAP approved by the Pilates Method Alliance (PMA) in Amsterdam. Spring 2027 term: March–May weekend lectures, observation, self practice, teaching practice, and master trainer sessions.',
             price: '2000',
@@ -235,7 +241,7 @@ export const Academy: React.FC = () => {
             url: 'https://www.pt7.nl/academy',
             timeRequired: 'PT300H',
             educationalCredentialAwarded: 'PT7 Academy Reformer Pilates Instructor Certificate',
-            recognizedByName: 'Pilates Method Alliance (PMA) — ITTAP',
+            recognizedByName: 'Pilates Method Alliance (PMA) / ITTAP',
             recognizedByUrl:
               'https://www.pilatesmethodalliance.org/pma-international-teacher-trainer-accreditation-for-pilates-ittap-reformer-program',
           },
@@ -270,7 +276,8 @@ export const Academy: React.FC = () => {
         <section className="academy-courses">
           <div className="academy-container">
             <div className="ittap-accreditation">
-              <h1 className="ittap-accreditation-eyebrow">Pilates Method Alliance Accreditation</h1>
+              <h1 className="academy-page-title">Pilates Instructor Courses Amsterdam</h1>
+              <p className="academy-pma-subtitle">Pilates teacher training at Museumplein · PT7 Academy</p>
               <div className="accreditation-logos">
                 <div className="accreditation-logo-cell">
                   <a
@@ -326,6 +333,52 @@ export const Academy: React.FC = () => {
                 View ITTAP on the Pilates Method Alliance website →
               </a>
             </div>
+
+            <section className="academy-audience" aria-labelledby="academy-audience-heading">
+              <h2 id="academy-audience-heading">Who this Pilates teacher training is for</h2>
+              <p>
+                PT7 Academy is built for people who want to teach Reformer Pilates (and optionally Mat &amp; Trapeze
+                Table) without quitting their job first. Lectures run on selected weekends only at our working studio
+                on Van Baerlestraat, Museumplein. Coaching is English-friendly, with Turkish and Dutch available in
+                the studio community.
+              </p>
+              <div className="benefits-grid academy-audience-grid">
+                <div className="benefit-card">
+                  <h3>Career changers</h3>
+                  <p>
+                    Many trainees come from banking, tech, and other careers. Read how the switch works in our{' '}
+                    <Link to="/blog/career-change-banker-to-pilates-instructor">
+                      career-change guide
+                    </Link>
+                    , and meet course lead{' '}
+                    <Link to="/trainer/elif">Elif Arzu Ogan</Link>.
+                  </p>
+                </div>
+                <div className="benefit-card">
+                  <h3>Weekend schedule in central Amsterdam</h3>
+                  <p>
+                    Four Reformer lecture weekends per term ({lectureHours}), plus observation, self practice, and
+                    teaching hours. Train at Museumplein and keep weekday work.
+                  </p>
+                </div>
+                <div className="benefit-card">
+                  <h3>Serious Reformer pathway</h3>
+                  <p>
+                    The Reformer course is 300 hours and PMA ITTAP approved. That is a different depth than short
+                    mat-only intensives. Graduates receive the PT7 Academy Reformer Pilates Instructor Certificate
+                    (program-level ITTAP approval is not the same as a personal PMA membership card).
+                  </p>
+                </div>
+                <div className="benefit-card">
+                  <h3>Mat &amp; Trapeze Table track</h3>
+                  <p>
+                    Add apparatus teaching with our {MAT_COURSE_TOTAL_HOURS}-hour Mat &amp; Trapeze Table course.
+                    Curriculum follows international standards; PMA/ITTAP accreditation for this track is still in
+                    progress.
+                  </p>
+                </div>
+              </div>
+            </section>
 
             <div className="academy-tabs" role="tablist" aria-label="Academy courses">
               <button
@@ -390,7 +443,7 @@ export const Academy: React.FC = () => {
                   for both terms. Anatomy is included in the Reformer course (Pilates Introduction &amp; Anatomy weekend).
                 </p>
 
-                <h4 className="term-schedule-heading">Autumn 2026 — September–November</h4>
+                <h4 className="term-schedule-heading">Autumn 2026 (September–November)</h4>
                 <div className="term-schedule-grid">
                   {termSchedule2026.map((item) => (
                     <div key={item.dates} className="term-schedule-item">
@@ -400,7 +453,7 @@ export const Academy: React.FC = () => {
                   ))}
                 </div>
 
-                <h4 className="term-schedule-heading">Spring 2027 — March–May</h4>
+                <h4 className="term-schedule-heading">Spring 2027 (March–May)</h4>
                 <div className="term-schedule-grid">
                   {termSchedule2027.map((item) => (
                     <div key={item.dates} className="term-schedule-item">
@@ -692,7 +745,7 @@ export const Academy: React.FC = () => {
 
         <section className="academy-benefits">
           <div className="academy-container">
-            <h2>Why Choose PT7 Academy?</h2>
+            <h2>Why choose PT7 Academy for Pilates teacher training</h2>
             <div className="benefits-grid">
               <div className="benefit-card">
                 <h3>300 Hours Comprehensive Training</h3>
@@ -719,10 +772,10 @@ export const Academy: React.FC = () => {
               </div>
 
               <div className="benefit-card">
-                <h3>PMA-Aligned Curriculum</h3>
+                <h3>Teaching inside a real boutique studio</h3>
                 <p>
-                  Course content, assessment, and training hours are structured to meet the standards set by the
-                  Pilates Method Alliance through its ITTAP accreditation framework.
+                  Training happens at PT Studio 7 Museumplein, where clients book Reformer, private, and small-group
+                  sessions every week. You learn in the same environment you will teach in.
                 </p>
               </div>
 
