@@ -200,7 +200,7 @@ export const ReformerPilatesAmsterdam: React.FC = () => {
                 <h3>Future instructors</h3>
                 <p>
                   Want to teach?{' '}
-                  <Link to="/academy">PT7 Academy</Link> offers a 300-hour Reformer instructor
+                  <Link to="/academy">Pilates teacher training at PT7 Academy</Link> offers a 300-hour Reformer instructor
                   course (PMA ITTAP approved) on selected weekends at this same studio.
                 </p>
               </div>
@@ -271,7 +271,7 @@ export const ReformerPilatesAmsterdam: React.FC = () => {
               Reformer Guide
             </Link>
             <Link to="/academy" className="service-cta-btn-secondary">
-              PT7 Academy
+              Pilates teacher training
             </Link>
           </div>
         </section>

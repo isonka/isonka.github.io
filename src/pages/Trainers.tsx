@@ -59,7 +59,9 @@ export const Trainers: React.FC = () => {
                 <h2>Our Team is Growing</h2>
                 <p>New instructors are joining soon. Interested in teaching at PT Studio 7?</p>
               </div>
-              <Link to="/academy" className="growing-banner-link">Learn About Our Academy →</Link>
+              <Link to="/academy" className="growing-banner-link">
+                Become a Pilates instructor →
+              </Link>
             </div>
           </section>
         )}

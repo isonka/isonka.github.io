@@ -11,21 +11,21 @@ import {
   ACADEMY_URL_EN,
   ACADEMY_URL_NL,
   ANATOMY_COURSE_FEE,
-  COURSE_TITLE,
+  COURSE_TITLE_NL,
   ITTAP_LOGO,
   ITTAP_LOGO_ALT,
-  MAT_COURSE_TITLE,
+  MAT_COURSE_TITLE_NL,
   MAT_COURSE_TOTAL_HOURS,
   PMA_ITTAP_URL,
   PMA_LOGO,
   PMA_LOGO_ALT,
   PMA_NAME,
   PMA_URL,
-  curriculumTopics,
+  curriculumTopicsNl,
   formatTermSchedule,
-  lectureHours,
+  lectureHoursNl,
   matTrapezeBreakdown,
-  matTrapezeIncludes,
+  matTrapezeIncludesNl,
   matTrapezeSchedule,
   termSchedule2026,
   termSchedule2027,
@@ -47,7 +47,7 @@ declare global {
 }
 
 const exerciseAssessmentNote =
-  'The exercise assessment is mandatory for certification, costs EUR 250 including BTW.';
+  'De oefeningsevaluatie is verplicht voor certificering en kost EUR 250 inclusief BTW.';
 
 const academyHreflang = [
   { hreflang: 'en', href: ACADEMY_URL_EN },
@@ -55,11 +55,11 @@ const academyHreflang = [
   { hreflang: 'x-default', href: ACADEMY_URL_EN },
 ];
 
-export const Academy: React.FC = () => {
+export const AcademyNl: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'reformer' | 'mat'>('reformer');
 
   useEffect(() => {
-    trackPageView('/academy', 'Pilates Instructor Course Amsterdam | PT7 Academy');
+    trackPageView('/academy/nl', 'Pilates Opleiding Amsterdam | Docentenopleiding | PT7 Academy');
     window.HealcodeWidget?.init?.();
   }, []);
 
@@ -128,99 +128,99 @@ export const Academy: React.FC = () => {
 
   const academyFaqs = [
     {
-      question: 'Who is this Pilates teacher training for?',
+      question: 'Voor wie is deze pilates docentenopleiding bedoeld?',
       answer:
-        'PT7 Academy suits career changers and aspiring instructors who want a serious Reformer pathway (300 hours, PMA ITTAP approved) or Mat & Trapeze Table training on a weekend schedule at Museumplein, Amsterdam. Lectures are on selected weekends so you can keep weekday work. Sessions and studio life are English-friendly, with Turkish and Dutch also used in the community.',
+        'PT7 Academy is geschikt voor carrièreswitchers en aspirant-instructeurs die een serieuze Reformer-route willen (300 uur, PMA ITTAP goedgekeurd) of Mat & Trapeze Table training op een weekendrooster bij Museumplein, Amsterdam. Colleges vinden plaats op geselecteerde weekenden, zodat je doordeweeks kunt werken. Alle lessen en trainingen worden in het Engels gegeven. In de studio wordt ook Turks en Nederlands gesproken.',
     },
     {
-      question: 'When are classes held?',
+      question: 'Wanneer vinden de lessen plaats?',
       answer:
-        `Lectures are held on selected weekends, not every week. Reformer terms: Autumn 2026 (September–November): ${formatTermSchedule(termSchedule2026)}; Spring 2027 (March–May): ${formatTermSchedule(termSchedule2027)}. Mat & Trapeze Table (November 2026–January 2027): ${formatTermSchedule(matTrapezeSchedule)}. Each lecture weekend runs ${lectureHours}, so you can keep your weekday job while you train.`,
+        `Colleges vinden plaats op geselecteerde weekenden, niet elke week. Reformer-termijnen: Herfst 2026 (september–november): ${formatTermSchedule(termSchedule2026, true)}; Lente 2027 (maart–mei): ${formatTermSchedule(termSchedule2027, true)}. Mat & Trapeze Table (november 2026–januari 2027): ${formatTermSchedule(matTrapezeSchedule, true)}. Elk college-weekend duurt ${lectureHoursNl}, zodat je doordeweeks kunt blijven werken.`,
     },
     {
-      question: 'What courses does PT7 Academy offer?',
+      question: 'Welke cursussen biedt PT7 Academy aan?',
       answer:
-        `We offer the ${COURSE_TITLE} (ITTAP approved by the Pilates Method Alliance) and the ${MAT_COURSE_TITLE} (curriculum follows international standards; PMA/ITTAP accreditation in progress). Each course is EUR 2,000 + VAT with the same MindBody enroll options.`,
+        `We bieden de ${COURSE_TITLE_NL} (ITTAP goedgekeurd door de Pilates Method Alliance) en de ${MAT_COURSE_TITLE_NL} (curriculum volgt internationale standaarden; PMA/ITTAP-accreditatie in behandeling). Elke cursus kost EUR 2.000 + BTW met dezelfde MindBody-inschrijfopties.`,
     },
     {
-      question: 'How long is the Reformer program?',
+      question: 'Hoe lang duurt het Reformer-programma?',
       answer:
-        'The Reformer Pilates Instructor Course totals 300 hours, combining lectures, observation, self practice, teaching practice, sessions with a master trainer, and QTT observation.',
+        'De Reformer Pilates Instructeurscursus omvat in totaal 300 uur, met colleges, observatie, zelfpraktijk, lesgeven in de praktijk, sessies met een master trainer en QTT-observatie.',
     },
     {
-      question: 'How long is the Mat & Trapeze Table program?',
+      question: 'Hoe lang duurt het Mat & Trapeze Table-programma?',
       answer:
-        `The ${MAT_COURSE_TITLE} totals ${MAT_COURSE_TOTAL_HOURS} hours: 48 hours in-person technical training, 20 hours observation, 20 hours self practice, 15 hours student teaching, 15 hours private or group sessions with QTT, 5 hours assisted teaching with QTT, and 2 hours QTT observation of student teaching.`,
+        `De ${MAT_COURSE_TITLE_NL} omvat in totaal ${MAT_COURSE_TOTAL_HOURS} uur: 48 uur technische training op locatie, 20 uur observatie, 20 uur zelfpraktijk, 15 uur studentlesgeven, 15 uur private of groepssessies met QTT, 5 uur begeleid lesgeven met QTT en 2 uur QTT-observatie van studentlessen.`,
     },
     {
-      question: 'Is anatomy included in the courses?',
+      question: 'Is anatomie inbegrepen in de cursussen?',
       answer:
-        `Anatomy is included in the ${COURSE_TITLE} (Pilates Introduction & Anatomy weekend). The ${MAT_COURSE_TITLE} does not include anatomy. Trainees without prior anatomy training need to take the separate Anatomy course (${ANATOMY_COURSE_FEE} + VAT).`,
+        `Anatomie is inbegrepen in de ${COURSE_TITLE_NL} (Pilates Introductie & Anatomie-weekend). De ${MAT_COURSE_TITLE_NL} omvat geen anatomie. Trainees zonder eerdere anatomieopleiding moeten de aparte Anatomie-cursus volgen (${ANATOMY_COURSE_FEE} + BTW).`,
     },
     {
-      question: 'What is the accreditation status of the Academy?',
+      question: 'Wat is de accreditatiestatus van de Academy?',
       answer:
-        'PT7 Academy\'s Reformer Pilates Instructor Course is ITTAP approved by the Pilates Method Alliance (PMA), the international organization that sets professional standards for Pilates education. Our Reformer program is listed among accredited ITTAP Reformer programs. The Mat & Trapeze Table Instructor Course follows international teacher-training standards; PMA/ITTAP accreditation for that track is in progress and not yet approved.',
+        'De Reformer Pilates Instructeurscursus van PT7 Academy is ITTAP goedgekeurd door de Pilates Method Alliance (PMA), de internationale organisatie die professionele standaarden voor pilatesopleidingen vaststelt. Ons Reformer-programma staat vermeld onder geaccrediteerde ITTAP Reformer-programma\'s. De Mat & Trapeze Table Instructeurscursus volgt internationale docentenopleidingsstandaarden; PMA/ITTAP-accreditatie voor die route is in behandeling en nog niet goedgekeurd.',
     },
     {
-      question: 'What is ITTAP and how is PMA involved?',
+      question: 'Wat is ITTAP en wat is de rol van PMA?',
       answer:
-        'ITTAP (International Teacher Training Accreditation for Pilates) is the Pilates Method Alliance (PMA) accreditation system for teacher training programs. PMA reviews and approves programs that meet its standards for curriculum, assessment, and educational quality. PT7 Academy\'s Reformer Pilates Instructor Course holds ITTAP approval through 2026.',
+        'ITTAP (International Teacher Training Accreditation for Pilates) is het accreditatiesysteem van de Pilates Method Alliance (PMA) voor docentenopleidingen. PMA beoordeelt en keurt programma\'s goed die voldoen aan haar standaarden voor curriculum, assessment en onderwijskwaliteit. De Reformer Pilates Instructeurscursus van PT7 Academy heeft ITTAP-goedkeuring tot 2026.',
     },
     {
-      question: 'Is the certification recognized internationally?',
+      question: 'Wordt het certificaat internationaal erkend?',
       answer:
-        'The Reformer Pilates Instructor Course is ITTAP approved by the Pilates Method Alliance (PMA), placing it within PMA\'s international network of accredited Reformer programs. Graduates who complete the full program of 300 hours receive the PT7 Academy Reformer Pilates Instructor Certificate.',
+        'De Reformer Pilates Instructeurscursus is ITTAP goedgekeurd door de Pilates Method Alliance (PMA) en valt daarmee binnen PMA\'s internationale netwerk van geaccrediteerde Reformer-programma\'s. Afgestudeerden die het volledige programma van 300 uur afronden ontvangen het PT7 Academy Reformer Pilates Instructeurscertificaat.',
     },
     {
-      question: 'How much does the course cost?',
+      question: 'Wat kost de cursus?',
       answer:
-        'The course fee is EUR 2,000 plus VAT. Enroll via MindBody to pay in full, or choose Enroll with 3 Installments (3 × EUR 667 + VAT).',
+        'De cursusprijs is EUR 2.000 plus BTW. Schrijf je in via MindBody om in één keer te betalen, of kies Enroll with 3 Installments (3 × EUR 667 + BTW).',
     },
     {
-      question: 'What assessments are included?',
+      question: 'Welke assessments zijn inbegrepen?',
       answer:
-        'Participants complete one theoretical multiple-choice exam and one practical exam. The first attempt for both exams is free of charge. Any retakes are subject to an additional fee. Separately, a mandatory exercise assessment checked by a lead trainer is required for certification and costs EUR 250 including BTW.',
+        'Deelnemers maken één theoretisch meerkeuze-examen en één praktijkexamen. Het eerste examenpoging voor beide examens is gratis. Herkansingen zijn tegen meerprijs. Daarnaast is een verplichte oefeningsevaluatie door een lead trainer vereist voor certificering en kost EUR 250 inclusief BTW.',
     },
     {
-      question: 'What is the exercise assessment?',
+      question: 'Wat is de oefeningsevaluatie?',
       answer:
-        'Each trainee is checked by a lead trainer through a mandatory exercise assessment. It costs EUR 250 including BTW and is required to receive your certificate.',
+        'Elke trainee wordt door een lead trainer beoordeeld via een verplichte oefeningsevaluatie. Deze kost EUR 250 inclusief BTW en is vereist om je certificaat te ontvangen.',
     },
   ];
 
   return (
     <>
       <SEOHead
-        title="Pilates Instructor Course Amsterdam | Teacher Training | PT7 Academy"
-        description="Pilates instructor course and teacher training in Amsterdam. 300-hour Reformer Pilates instructor course (PMA ITTAP approved), Mat Pilates track, weekend schedule for career changers. Course fee from €2,000 + VAT."
-        keywords="pilates instructor course amsterdam, pilates teacher training amsterdam, reformer pilates instructor course, reformer teacher training amsterdam, become a pilates instructor amsterdam, ITTAP approved pilates course, PMA ITTAP reformer course netherlands, mat pilates instructor course amsterdam, weekend pilates teacher training, pilates instructor course for career changers, pilates instructor course amsterdam price"
-        canonical={ACADEMY_URL_EN}
-        ogTitle="Pilates Instructor Course Amsterdam | Reformer Teacher Training"
-        ogDescription="Become a Pilates instructor in Amsterdam: 300-hour Reformer teacher training (PMA ITTAP approved) plus Mat & Trapeze Table. Weekend intensives at Museumplein."
-        ogLocale="en_US"
-        ogLocaleAlternates={['nl_NL']}
-        htmlLang="en"
+        title="Pilates Opleiding Amsterdam | Docentenopleiding | PT7 Academy"
+        description="Pilates opleiding Amsterdam en pilates docentenopleiding bij Museumplein. 300 uur Reformer instructeurscursus (PMA ITTAP goedgekeurd) plus Mat & Trapeze Table. Weekendrooster. Lessen in het Engels. Vanaf €2.000 + BTW."
+        keywords="pilates opleiding amsterdam, pilates docentenopleiding, reformer pilates opleiding amsterdam, pilates instructeur opleiding, PMA ITTAP, mat pilates opleiding amsterdam, weekend pilates opleiding, carrièreswitch pilates"
+        canonical={ACADEMY_URL_NL}
+        ogTitle="Pilates Opleiding Amsterdam | Docentenopleiding PT7 Academy"
+        ogDescription="Pilates docentenopleiding in Amsterdam: 300 uur Reformer (PMA ITTAP goedgekeurd) en Mat & Trapeze Table. Weekendintensieven bij Museumplein. Training in het Engels."
+        ogLocale="nl_NL"
+        ogLocaleAlternates={['en_US']}
+        htmlLang="nl"
         hreflangAlternates={academyHreflang}
       />
       <StructuredData
         type="Course"
         data={{
           course: {
-            name: COURSE_TITLE,
+            name: COURSE_TITLE_NL,
             description:
-              '300 hours Reformer Pilates Instructor Course, ITTAP approved by the Pilates Method Alliance (PMA) in Amsterdam. Lectures, observation, self practice, teaching practice, and master trainer sessions.',
+              '300 uur Reformer Pilates Instructeurscursus, ITTAP goedgekeurd door de Pilates Method Alliance (PMA) in Amsterdam. Colleges, observatie, zelfpraktijk, lesgeven in de praktijk en sessies met master trainer.',
             price: '2000',
             priceCurrency: 'EUR',
             startDate: '2026-09-12',
             endDate: '2026-11-08',
-            schedule: 'Selected weekends Sep–Nov 2026, 12:00-18:00',
+            schedule: 'Geselecteerde weekenden sep–nov 2026, 12:00-18:00',
             startTime: '12:00',
             endTime: '18:00',
             locationName: 'PT Studio 7 Amsterdam - Museumplein',
-            url: ACADEMY_URL_EN,
+            url: ACADEMY_URL_NL,
             timeRequired: 'PT300H',
-            educationalCredentialAwarded: 'PT7 Academy Reformer Pilates Instructor Certificate',
+            educationalCredentialAwarded: 'PT7 Academy Reformer Pilates Instructeurscertificaat',
             recognizedByName: 'Pilates Method Alliance (PMA) / ITTAP',
             recognizedByUrl:
               'https://www.pilatesmethodalliance.org/pma-international-teacher-trainer-accreditation-for-pilates-ittap-reformer-program',
@@ -231,20 +231,20 @@ export const Academy: React.FC = () => {
         type="Course"
         data={{
           course: {
-            name: `${COURSE_TITLE} (Spring 2027)`,
+            name: `${COURSE_TITLE_NL} (Lente 2027)`,
             description:
-              '300 hours Reformer Pilates Instructor Course, ITTAP approved by the Pilates Method Alliance (PMA) in Amsterdam. Spring 2027 term: March–May weekend lectures, observation, self practice, teaching practice, and master trainer sessions.',
+              '300 uur Reformer Pilates Instructeurscursus, ITTAP goedgekeurd door de Pilates Method Alliance (PMA) in Amsterdam. Lente 2027-termijn: maart–mei weekendcolleges, observatie, zelfpraktijk, lesgeven in de praktijk en sessies met master trainer.',
             price: '2000',
             priceCurrency: 'EUR',
             startDate: '2027-03-13',
             endDate: '2027-05-16',
-            schedule: 'Selected weekends Mar–May 2027, 12:00-18:00',
+            schedule: 'Geselecteerde weekenden mrt–mei 2027, 12:00-18:00',
             startTime: '12:00',
             endTime: '18:00',
             locationName: 'PT Studio 7 Amsterdam - Museumplein',
-            url: ACADEMY_URL_EN,
+            url: ACADEMY_URL_NL,
             timeRequired: 'PT300H',
-            educationalCredentialAwarded: 'PT7 Academy Reformer Pilates Instructor Certificate',
+            educationalCredentialAwarded: 'PT7 Academy Reformer Pilates Instructeurscertificaat',
             recognizedByName: 'Pilates Method Alliance (PMA) / ITTAP',
             recognizedByUrl:
               'https://www.pilatesmethodalliance.org/pma-international-teacher-trainer-accreditation-for-pilates-ittap-reformer-program',
@@ -255,20 +255,20 @@ export const Academy: React.FC = () => {
         type="Course"
         data={{
           course: {
-            name: MAT_COURSE_TITLE,
+            name: MAT_COURSE_TITLE_NL,
             description:
-              'Mat & Trapeze Table Instructor Course at PT Studio 7 Amsterdam (125 hours). Mat Pilates and Cadillac/Trapeze Table teacher training on selected weekends. Curriculum follows international standards; PMA/ITTAP accreditation in progress. PT7 Academy certificate.',
+              'Mat & Trapeze Table Instructeurscursus bij PT Studio 7 Amsterdam (125 uur). Mat Pilates en Cadillac/Trapeze Table docentenopleiding op geselecteerde weekenden. Curriculum volgt internationale standaarden; PMA/ITTAP-accreditatie in behandeling. PT7 Academy certificaat.',
             price: '2000',
             priceCurrency: 'EUR',
             startDate: '2026-11-21',
             endDate: '2027-01-31',
-            schedule: 'Selected weekends Nov 2026–Jan 2027, 12:00-18:00',
+            schedule: 'Geselecteerde weekenden nov 2026–jan 2027, 12:00-18:00',
             startTime: '12:00',
             endTime: '18:00',
             locationName: 'PT Studio 7 Amsterdam - Museumplein',
-            url: ACADEMY_URL_EN,
+            url: ACADEMY_URL_NL,
             timeRequired: 'PT125H',
-            educationalCredentialAwarded: 'PT7 Academy Mat & Trapeze Table Instructor Certificate',
+            educationalCredentialAwarded: 'PT7 Academy Mat & Trapeze Table Instructeurscertificaat',
           },
         }}
       />
@@ -278,32 +278,35 @@ export const Academy: React.FC = () => {
         <section className="academy-courses">
           <div className="academy-container">
             <div className="ittap-accreditation">
-              <AcademyLangSwitch current="en" />
+              <AcademyLangSwitch current="nl" />
               <p className="ittap-accreditation-eyebrow">PT7 Academy · Museumplein, Amsterdam</p>
               <h1 className="academy-page-title">
-                Pilates Instructor Course Amsterdam — PMA ITTAP Approved Teacher Training
+                Pilates Opleiding Amsterdam — PMA ITTAP Goedgekeurde Docentenopleiding
               </h1>
               <p className="academy-pma-subtitle">
-                Reformer teacher training Amsterdam · PMA ITTAP approved · Weekend schedule
+                Pilates docentenopleiding · 300 uur Reformer · PMA ITTAP goedgekeurd · Weekendrooster
+              </p>
+              <p className="academy-lang-note">
+                <strong>Alle lessen en trainingen worden in het Engels gegeven.</strong>
               </p>
 
               <div className="academy-offer-strip" id="academy-offer">
                 <div className="academy-offer-facts">
                   <div className="academy-offer-fact">
-                    <span className="academy-offer-label">Next Reformer term</span>
-                    <span className="academy-offer-value">12 Sep – 8 Nov 2026</span>
+                    <span className="academy-offer-label">Volgende Reformer-termijn</span>
+                    <span className="academy-offer-value">12 sep – 8 nov 2026</span>
                   </div>
                   <div className="academy-offer-fact">
-                    <span className="academy-offer-label">Format</span>
-                    <span className="academy-offer-value">Selected weekends · {lectureHours}</span>
+                    <span className="academy-offer-label">Formaat</span>
+                    <span className="academy-offer-value">Geselecteerde weekenden · {lectureHoursNl}</span>
                   </div>
                   <div className="academy-offer-fact">
-                    <span className="academy-offer-label">Course fee</span>
-                    <span className="academy-offer-value">€2,000 + VAT</span>
+                    <span className="academy-offer-label">Cursusprijs</span>
+                    <span className="academy-offer-value">€2.000 + BTW</span>
                   </div>
                   <div className="academy-offer-fact">
-                    <span className="academy-offer-label">Or pay in 3</span>
-                    <span className="academy-offer-value">3 × €667 + VAT</span>
+                    <span className="academy-offer-label">Of in 3 termijnen</span>
+                    <span className="academy-offer-value">3 × €667 + BTW</span>
                   </div>
                 </div>
                 <div className="academy-offer-actions">
@@ -320,7 +323,7 @@ export const Academy: React.FC = () => {
                     dangerouslySetInnerHTML={{ __html: ACADEMY_INSTALLMENTS_WIDGET }}
                   />
                   <button type="button" className="course-btn secondary" onClick={scrollToEnroll}>
-                    View full schedule
+                    Bekijk volledig rooster
                   </button>
                   <button
                     type="button"
@@ -330,11 +333,11 @@ export const Academy: React.FC = () => {
                     data-location="offer_strip"
                     onClick={scrollToInquiry}
                   >
-                    Inquire
+                    Informeer
                   </button>
                 </div>
                 <p className="academy-offer-note">
-                  Spring 2027 term also open (13 Mar – 16 May). Mat &amp; Trapeze Table track below.
+                  Lente 2027-termijn ook open (13 mrt – 16 mei). Mat &amp; Trapeze Table route hieronder.
                 </p>
               </div>
 
@@ -373,74 +376,74 @@ export const Academy: React.FC = () => {
                 </div>
               </div>
               <p>
-                PT7 Academy&apos;s <strong>{COURSE_TITLE}</strong> is <strong>ITTAP approved</strong> by the{' '}
+                De <strong>{COURSE_TITLE_NL}</strong> van PT7 Academy is <strong>ITTAP goedgekeurd</strong> door de{' '}
                 <a href={PMA_ITTAP_URL} target="_blank" rel="noopener noreferrer">
                   {PMA_NAME}
                 </a>
-                , the international organization dedicated to elevating the Pilates profession and setting standards
-                for teacher training worldwide.
+                , de internationale organisatie die zich inzet voor het verhogen van het pilatesberoep en het vaststellen
+                van standaarden voor docentenopleidingen wereldwijd.
               </p>
               <p>
-                Through PMA&apos;s ITTAP accreditation system, the {COURSE_TITLE} has been reviewed and approved for
-                its curriculum, assessment standards, and educational quality. Graduates who complete the full 300 hours
-                program receive the <strong>PT7 Academy Reformer Pilates Instructor Certificate</strong>.
+                Via PMA&apos;s ITTAP-accreditatiesysteem is de {COURSE_TITLE_NL} beoordeeld en goedgekeurd op curriculum,
+                assessmentstandaarden en onderwijskwaliteit. Afgestudeerden die het volledige programma van 300 uur
+                afronden ontvangen het <strong>PT7 Academy Reformer Pilates Instructeurscertificaat</strong>.
               </p>
               <p>
-                The {MAT_COURSE_TITLE} follows international teacher-training standards. PMA / ITTAP accreditation for
-                this track is <strong>in progress</strong> and not yet approved.
+                De {MAT_COURSE_TITLE_NL} volgt internationale docentenopleidingsstandaarden. PMA / ITTAP-accreditatie
+                voor deze route is <strong>in behandeling</strong> en nog niet goedgekeurd.
               </p>
               <a href={PMA_ITTAP_URL} target="_blank" rel="noopener noreferrer" className="pma-callout-link">
-                View ITTAP on the Pilates Method Alliance website →
+                Bekijk ITTAP op de website van de Pilates Method Alliance →
               </a>
             </div>
 
             <section className="academy-audience" aria-labelledby="academy-audience-heading">
-              <h2 id="academy-audience-heading">Become a Pilates instructor in Amsterdam</h2>
+              <h2 id="academy-audience-heading">Voor wie is deze pilates docentenopleiding bedoeld</h2>
               <p>
-                PT7 Academy is built for people who want Reformer teacher training in Amsterdam (and optionally Mat
-                &amp; Trapeze Table) without quitting their job first. This weekend Pilates teacher training runs on
-                selected weekends only at our working studio on Van Baerlestraat, Museumplein. Coaching is
-                English-friendly, with Turkish and Dutch available in the studio community.
+                PT7 Academy is opgezet voor mensen die Reformer Pilates (en optioneel Mat &amp; Trapeze Table) willen
+                onderwijzen zonder eerst hun baan op te zeggen. Colleges vinden alleen plaats op geselecteerde
+                weekenden in onze werkende studio aan de Van Baerlestraat, Museumplein. Alle lessen en trainingen
+                worden in het Engels gegeven. In de studio wordt ook Turks en Nederlands gesproken.
               </p>
               <div className="benefits-grid academy-audience-grid">
                 <div className="benefit-card">
-                  <h3>Pilates instructor course for career changers</h3>
+                  <h3>Carrièreswitchers</h3>
                   <p>
-                    Many trainees come from banking, tech, and other careers. Read how the switch works in our{' '}
+                    Veel trainees komen uit banking, tech en andere sectoren. Lees hoe de switch werkt in onze{' '}
                     <Link to="/blog/career-change-banker-to-pilates-instructor">
-                      career-change guide
+                      carrièreswitchgids
                     </Link>
-                    , and meet course lead{' '}
+                    , en ontmoet cursusleider{' '}
                     <Link to="/trainer/elif">Elif Arzu Ogan</Link>.
                   </p>
                 </div>
                 <div className="benefit-card">
-                  <h3>Weekend Pilates teacher training in Amsterdam</h3>
+                  <h3>Weekendrooster in centraal Amsterdam</h3>
                   <p>
-                    Four Reformer lecture weekends per term ({lectureHours}), plus observation, self practice, and
-                    teaching hours. Train at Museumplein and keep weekday work.
+                    Vier Reformer college-weekenden per termijn ({lectureHoursNl}), plus observatie, zelfpraktijk en
+                    lesuren. Train bij Museumplein en behoud je doordeweekse werk.
                   </p>
                 </div>
                 <div className="benefit-card">
-                  <h3>Serious Reformer pathway</h3>
+                  <h3>Serieuze Reformer-route</h3>
                   <p>
-                    The Reformer course is 300 hours and PMA ITTAP approved. That is a different depth than short
-                    mat-only intensives. Graduates receive the PT7 Academy Reformer Pilates Instructor Certificate
-                    (program-level ITTAP approval is not the same as a personal PMA membership card).
+                    De Reformer-cursus omvat 300 uur en is PMA ITTAP goedgekeurd. Dat is een andere diepgang dan korte
+                    mat-only intensieven. Afgestudeerden ontvangen het PT7 Academy Reformer Pilates Instructeurscertificaat
+                    (programma-ITTAP-goedkeuring is niet hetzelfde als een persoonlijke PMA-lidmaatschapskaart).
                   </p>
                 </div>
                 <div className="benefit-card">
-                  <h3>Mat &amp; Trapeze Table track</h3>
+                  <h3>Mat &amp; Trapeze Table route</h3>
                   <p>
-                    Add apparatus teaching with our {MAT_COURSE_TOTAL_HOURS}-hour Mat &amp; Trapeze Table course.
-                    Curriculum follows international standards; PMA/ITTAP accreditation for this track is still in
-                    progress.
+                    Breid je apparatuuronderwijs uit met onze {MAT_COURSE_TOTAL_HOURS}-urige Mat &amp; Trapeze Table
+                    cursus. Curriculum volgt internationale standaarden; PMA/ITTAP-accreditatie voor deze route is nog
+                    in behandeling.
                   </p>
                 </div>
               </div>
             </section>
 
-            <div className="academy-tabs" role="tablist" aria-label="Academy courses">
+            <div className="academy-tabs" role="tablist" aria-label="Academy cursussen">
               <button
                 type="button"
                 role="tab"
@@ -463,87 +466,88 @@ export const Academy: React.FC = () => {
 
             <div className="academy-tab-content">
               {activeTab === 'reformer' && (
-                <div role="tabpanel" aria-label="Reformer Pilates Instructor Course">
+                <div role="tabpanel" aria-label="Reformer Pilates Instructeurscursus">
             <div className="course-card featured full-width">
-              <div className="course-badge">Enrolling Now</div>
-              <h2 className="course-card-title">{COURSE_TITLE}</h2>
+              <div className="course-badge">Inschrijving open</div>
+              <h2 className="course-card-title">{COURSE_TITLE_NL}</h2>
               <p className="academy-course-accreditation">
-                300 hours · ITTAP Approved · <strong>Pilates Method Alliance (PMA)</strong>
+                300 uur · ITTAP Goedgekeurd · <strong>Pilates Method Alliance (PMA)</strong>
               </p>
 
               <div className="course-highlights">
                 <div className="highlight-item">
-                  <span>PMA ITTAP approved</span>
+                  <span>PMA ITTAP goedgekeurd</span>
                 </div>
                 <div className="highlight-item">
-                  <span>Pilates Method Alliance accredited</span>
+                  <span>Pilates Method Alliance geaccrediteerd</span>
                 </div>
                 <div className="highlight-item">
-                  <span>300 hours total</span>
+                  <span>300 uur totaal</span>
                 </div>
                 <div className="highlight-item">
-                  <span>4 weekend intensives</span>
+                  <span>4 weekendintensieven</span>
                 </div>
                 <div className="highlight-item">
-                  <span>2026 &amp; 2027 terms</span>
+                  <span>2026 &amp; 2027 termijnen</span>
                 </div>
                 <div className="highlight-item">
-                  <span>3 installment plan</span>
+                  <span>3-termijnen betalingsplan</span>
                 </div>
                 <div className="highlight-item">
-                  <span>{lectureHours}</span>
+                  <span>{lectureHoursNl}</span>
                 </div>
               </div>
 
               <div className="academy-course-section">
-                <h3>Upcoming Term Schedules</h3>
+                <h3>Komende termijnroosters</h3>
                 <p>
-                  Lectures are not held every weekend. Each term runs on four selected weekends at PT Studio 7,
-                  Museumplein, Amsterdam. Each lecture weekend runs {lectureHours}. Same course fee and enroll options
-                  for both terms. Anatomy is included in the Reformer course (Pilates Introduction &amp; Anatomy weekend).
+                  Colleges vinden niet elk weekend plaats. Elke termijn loopt over vier geselecteerde weekenden bij PT
+                  Studio 7, Museumplein, Amsterdam. Elk college-weekend duurt {lectureHoursNl}. Dezelfde cursusprijs
+                  en inschrijfopties voor beide termijnen. Anatomie is inbegrepen in de Reformer-cursus (Pilates
+                  Introductie &amp; Anatomie-weekend).
                 </p>
 
-                <h4 className="term-schedule-heading">Autumn 2026 (September–November)</h4>
+                <h4 className="term-schedule-heading">Herfst 2026 (september–november)</h4>
                 <div className="term-schedule-grid">
                   {termSchedule2026.map((item) => (
-                    <div key={item.dates} className="term-schedule-item">
-                      <span className="term-schedule-dates">{item.dates}</span>
-                      <span className="term-schedule-module">{item.module}</span>
+                    <div key={item.datesNl} className="term-schedule-item">
+                      <span className="term-schedule-dates">{item.datesNl}</span>
+                      <span className="term-schedule-module">{item.moduleNl}</span>
                     </div>
                   ))}
                 </div>
 
-                <h4 className="term-schedule-heading">Spring 2027 (March–May)</h4>
+                <h4 className="term-schedule-heading">Lente 2027 (maart–mei)</h4>
                 <div className="term-schedule-grid">
                   {termSchedule2027.map((item) => (
-                    <div key={item.dates} className="term-schedule-item">
-                      <span className="term-schedule-dates">{item.dates}</span>
-                      <span className="term-schedule-module">{item.module}</span>
+                    <div key={item.datesNl} className="term-schedule-item">
+                      <span className="term-schedule-dates">{item.datesNl}</span>
+                      <span className="term-schedule-module">{item.moduleNl}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div className="academy-course-section" id="academy-enroll">
-                <h3>Course Fee</h3>
+                <h3>Cursusprijs</h3>
                 <div className="price-options">
                   <div className="price-option">
-                    <span className="price-option-label">Standard Fee</span>
-                    <span className="price-option-amount">€2,000</span>
-                    <span className="price-option-note">+ VAT (21%)</span>
+                    <span className="price-option-label">Standaard tarief</span>
+                    <span className="price-option-amount">€2.000</span>
+                    <span className="price-option-note">+ BTW (21%)</span>
                   </div>
                 </div>
                 <div className="payment-info payment-info--inline">
-                  <h4>Payment Options</h4>
-                  <p>Pay in full at checkout, or spread the course fee over 3 equal installments.</p>
+                  <h4>Betalingsopties</h4>
+                  <p>Betaal in één keer bij checkout, of spreid de cursusprijs over 3 gelijke termijnen.</p>
                   <div className="payment-breakdown-grid">
                     <div className="payment-step">
-                      <span className="payment-step-label">Installments</span>
+                      <span className="payment-step-label">Termijnen</span>
                       <span className="payment-step-amount">3 × €667</span>
-                      <span className="payment-step-note">+ VAT per installment</span>
+                      <span className="payment-step-note">+ BTW per termijn</span>
                     </div>
                   </div>
-                  <p className="payment-note">Choose pay in full or 3 installments at MindBody checkout below.</p>
+                  <p className="payment-note">Kies bij MindBody checkout voor betaling in één keer of 3 termijnen.</p>
                 </div>
                 <div className="academy-enroll-action">
                   <div className="academy-enroll-buttons">
@@ -564,14 +568,14 @@ export const Academy: React.FC = () => {
               </div>
 
               <div className="academy-course-section">
-                <h3>Curriculum Overview</h3>
+                <h3>Curriculumoverzicht</h3>
                 <p>
-                  This PMA ITTAP approved program combines theoretical knowledge with practical application to ensure
-                  a deep understanding of Pilates principles and teaching methodology.
+                  Dit PMA ITTAP goedgekeurde programma combineert theoretische kennis met praktische toepassing voor een
+                  diep begrip van pilatesprincipes en lesgeefmethodologie.
                 </p>
-                <h4>Core Topics Include</h4>
+                <h4>Kernonderwerpen</h4>
                 <div className="knowledge-grid">
-                  {curriculumTopics.map((topic) => (
+                  {curriculumTopicsNl.map((topic) => (
                     <div key={topic} className="knowledge-item">
                       ✓ {topic}
                     </div>
@@ -580,53 +584,53 @@ export const Academy: React.FC = () => {
               </div>
 
               <div className="academy-course-section">
-                <h3>Assessment &amp; Evaluation</h3>
-                <p>During the course, participants will complete:</p>
+                <h3>Assessment &amp; evaluatie</h3>
+                <p>Tijdens de cursus voltooien deelnemers:</p>
                 <ul className="academy-bullet-list">
-                  <li>1 Theoretical Multiple-Choice Exam</li>
-                  <li>1 Practical Exam</li>
-                  <li>Mandatory exercise assessment, checked by a lead trainer</li>
+                  <li>1 theoretisch meerkeuze-examen</li>
+                  <li>1 praktijkexamen</li>
+                  <li>Verplichte oefeningsevaluatie, beoordeeld door een lead trainer</li>
                 </ul>
                 <p>
-                  The first attempt for both exams is free of charge. Any exam retakes are subject to an additional fee.
+                  Het eerste examenpoging voor beide examens is gratis. Herkansingen zijn tegen meerprijs.
                 </p>
                 <p>{exerciseAssessmentNote}</p>
               </div>
 
               <div className="academy-course-section">
-                <h3>Course Requirements</h3>
+                <h3>Cursusvereisten</h3>
                 <p>
-                  Participants are required to complete assigned homework throughout the program and pass the mandatory
-                  exercise assessment with a lead trainer.
+                  Deelnemers moeten de toegewezen huiswerkopdrachten gedurende het programma voltooien en slagen voor
+                  de verplichte oefeningsevaluatie met een lead trainer.
                 </p>
               </div>
 
               <div className="academy-course-section">
-                <h3>Training Breakdown (300 Hours Total)</h3>
+                <h3>Trainingsoverzicht (300 uur totaal)</h3>
                 <div className="hours-breakdown-grid">
                   {trainingBreakdown.map((item) => (
-                    <div key={item.label} className="hours-breakdown-item">
-                      <span className="hours-breakdown-hours">{item.hours}</span>
-                      <span className="hours-breakdown-label">{item.label}</span>
+                    <div key={item.labelNl} className="hours-breakdown-item">
+                      <span className="hours-breakdown-hours">{item.hoursNl}</span>
+                      <span className="hours-breakdown-label">{item.labelNl}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div className="academy-course-section academy-course-section--certification">
-                <h3>Certification</h3>
-                <p>Participants who successfully:</p>
+                <h3>Certificering</h3>
+                <p>Deelnemers die succesvol:</p>
                 <ul className="academy-bullet-list">
-                  <li>Pass all required exams</li>
-                  <li>Complete the full training program of 300 hours</li>
+                  <li>Slagen voor alle vereiste examens</li>
+                  <li>Het volledige trainingsprogramma van 300 uur afronden</li>
                   <li>
-                    Complete the mandatory exercise assessment (EUR 250 including BTW)
+                    De verplichte oefeningsevaluatie voltooien (EUR 250 inclusief BTW)
                   </li>
                 </ul>
                 <p>
-                  will be awarded the <strong>PT7 Academy Reformer Pilates Instructor Certificate</strong>. The program
-                  is ITTAP approved by the Pilates Method Alliance (PMA); the graduate certificate is issued by PT7
-                  Academy.
+                  ontvangen het <strong>PT7 Academy Reformer Pilates Instructeurscertificaat</strong>. Het programma
+                  is ITTAP goedgekeurd door de Pilates Method Alliance (PMA); het afgestudeerden-certificaat wordt
+                  uitgereikt door PT7 Academy.
                 </p>
               </div>
 
@@ -652,98 +656,98 @@ export const Academy: React.FC = () => {
                     data-location="reformer_cta"
                     onClick={scrollToInquiry}
                   >
-                    Inquire About the Course
+                    Informeer over de cursus
                   </button>
                 </div>
-                <p className="cta-subtext">Reply within 48 hours to secure your place.</p>
+                <p className="cta-subtext">Reactie binnen 48 uur om je plek te bevestigen.</p>
               </div>
             </div>
                 </div>
               )}
 
               {activeTab === 'mat' && (
-                <div role="tabpanel" aria-label="Mat and Trapeze Table Instructor Course">
+                <div role="tabpanel" aria-label="Mat en Trapeze Table Instructeurscursus">
             <div className="course-card full-width">
-              <div className="course-badge">Enrolling Now</div>
-              <h2 className="course-card-title">{MAT_COURSE_TITLE}</h2>
+              <div className="course-badge">Inschrijving open</div>
+              <h2 className="course-card-title">{MAT_COURSE_TITLE_NL}</h2>
               <p className="academy-course-accreditation">
-                Mat Pilates &amp; Trapeze Table (Cadillac) · Follows international standards ·{' '}
-                <strong>PMA / ITTAP accreditation in progress</strong>
+                Mat Pilates &amp; Trapeze Table (Cadillac) · Volgt internationale standaarden ·{' '}
+                <strong>PMA / ITTAP-accreditatie in behandeling</strong>
               </p>
 
               <div className="course-highlights">
                 <div className="highlight-item">
-                  <span>International standards</span>
+                  <span>Internationale standaarden</span>
                 </div>
                 <div className="highlight-item">
-                  <span>Accreditation in progress</span>
+                  <span>Accreditatie in behandeling</span>
                 </div>
                 <div className="highlight-item">
-                  <span>125 hours total</span>
+                  <span>125 uur totaal</span>
                 </div>
                 <div className="highlight-item">
-                  <span>48 hours lectures</span>
+                  <span>48 uur colleges</span>
                 </div>
                 <div className="highlight-item">
-                  <span>4 weekend intensives</span>
+                  <span>4 weekendintensieven</span>
                 </div>
                 <div className="highlight-item">
-                  <span>Nov 2026 – Jan 2027</span>
+                  <span>Nov 2026 – jan 2027</span>
                 </div>
                 <div className="highlight-item">
-                  <span>3 installment plan</span>
+                  <span>3-termijnen betalingsplan</span>
                 </div>
                 <div className="highlight-item">
-                  <span>{lectureHours}</span>
+                  <span>{lectureHoursNl}</span>
                 </div>
               </div>
 
               <div className="academy-course-section">
-                <h3>Term Schedule</h3>
+                <h3>Termijnrooster</h3>
                 <p>
-                  Four selected weekends at PT Studio 7, Museumplein, Amsterdam. Each lecture weekend runs{' '}
-                  {lectureHours}.
+                  Vier geselecteerde weekenden bij PT Studio 7, Museumplein, Amsterdam. Elk college-weekend duurt{' '}
+                  {lectureHoursNl}.
                 </p>
                 <div className="term-schedule-grid">
                   {matTrapezeSchedule.map((item) => (
-                    <div key={item.dates} className="term-schedule-item">
-                      <span className="term-schedule-dates">{item.dates}</span>
-                      <span className="term-schedule-module">{item.module}</span>
+                    <div key={item.datesNl} className="term-schedule-item">
+                      <span className="term-schedule-dates">{item.datesNl}</span>
+                      <span className="term-schedule-module">{item.moduleNl}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div className="academy-course-section">
-                <h3>Course Fee</h3>
+                <h3>Cursusprijs</h3>
                 <div className="price-options">
                   <div className="price-option">
-                    <span className="price-option-label">Standard Fee</span>
-                    <span className="price-option-amount">€2,000</span>
-                    <span className="price-option-note">+ VAT (21%)</span>
+                    <span className="price-option-label">Standaard tarief</span>
+                    <span className="price-option-amount">€2.000</span>
+                    <span className="price-option-note">+ BTW (21%)</span>
                   </div>
                   <div className="price-option">
-                    <span className="price-option-label">Anatomy Course (if needed)</span>
+                    <span className="price-option-label">Anatomie-cursus (indien nodig)</span>
                     <span className="price-option-amount">{ANATOMY_COURSE_FEE}</span>
-                    <span className="price-option-note">+ VAT (21%)</span>
+                    <span className="price-option-note">+ BTW (21%)</span>
                   </div>
                 </div>
                 <p className="payment-note" style={{ marginBottom: '16px' }}>
-                  Anatomy is <strong>not</strong> included in the Mat &amp; Trapeze Table course (it is part of the
-                  Reformer course). If you do not already have anatomy training, you need to purchase the separate
-                  Anatomy course for {ANATOMY_COURSE_FEE} + VAT.
+                  Anatomie is <strong>niet</strong> inbegrepen in de Mat &amp; Trapeze Table cursus (het maakt deel uit
+                  van de Reformer-cursus). Als je nog geen anatomieopleiding hebt gevolgd, moet je de aparte
+                  Anatomie-cursus aanschaffen voor {ANATOMY_COURSE_FEE} + BTW.
                 </p>
                 <div className="payment-info payment-info--inline">
-                  <h4>Payment Options</h4>
-                  <p>Pay in full at checkout, or spread the course fee over 3 equal installments.</p>
+                  <h4>Betalingsopties</h4>
+                  <p>Betaal in één keer bij checkout, of spreid de cursusprijs over 3 gelijke termijnen.</p>
                   <div className="payment-breakdown-grid">
                     <div className="payment-step">
-                      <span className="payment-step-label">Installments</span>
+                      <span className="payment-step-label">Termijnen</span>
                       <span className="payment-step-amount">3 × €667</span>
-                      <span className="payment-step-note">+ VAT per installment</span>
+                      <span className="payment-step-note">+ BTW per termijn</span>
                     </div>
                   </div>
-                  <p className="payment-note">Choose pay in full or 3 installments at MindBody checkout below.</p>
+                  <p className="payment-note">Kies bij MindBody checkout voor betaling in één keer of 3 termijnen.</p>
                 </div>
                 <div className="academy-enroll-action">
                   <div className="academy-enroll-buttons">
@@ -764,32 +768,33 @@ export const Academy: React.FC = () => {
               </div>
 
               <div className="academy-course-section">
-                <h3>What&apos;s Included</h3>
+                <h3>Wat is inbegrepen</h3>
                 <ul className="academy-bullet-list">
-                  {matTrapezeIncludes.map((item) => (
+                  {matTrapezeIncludesNl.map((item) => (
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
                 <p>
-                  Does <strong>not</strong> include anatomy. Without prior anatomy training, add the separate Anatomy
-                  course ({ANATOMY_COURSE_FEE} + VAT).
+                  Omvat <strong>geen</strong> anatomie. Zonder eerdere anatomieopleiding voeg je de aparte Anatomie-cursus
+                  toe ({ANATOMY_COURSE_FEE} + BTW).
                 </p>
               </div>
 
               <div className="academy-course-section">
-                <h3>Training Breakdown ({MAT_COURSE_TOTAL_HOURS} Hours Total)</h3>
+                <h3>Trainingsoverzicht ({MAT_COURSE_TOTAL_HOURS} uur totaal)</h3>
                 <div className="hours-breakdown-grid">
                   {matTrapezeBreakdown.map((item) => (
-                    <div key={item.label} className="hours-breakdown-item">
-                      <span className="hours-breakdown-hours">{item.hours}</span>
-                      <span className="hours-breakdown-label">{item.label}</span>
+                    <div key={item.labelNl} className="hours-breakdown-item">
+                      <span className="hours-breakdown-hours">{item.hoursNl}</span>
+                      <span className="hours-breakdown-label">{item.labelNl}</span>
                     </div>
                   ))}
                 </div>
                 <p>
-                  Graduates who complete the program receive a <strong>PT7 Academy Mat &amp; Trapeze Table Instructor
-                  Certificate</strong>. The curriculum follows international teacher-training standards. PMA / ITTAP
-                  accreditation for this course is <strong>in progress</strong> and not yet approved.
+                  Afgestudeerden die het programma voltooien ontvangen een{' '}
+                  <strong>PT7 Academy Mat &amp; Trapeze Table Instructeurscertificaat</strong>. Het curriculum volgt
+                  internationale docentenopleidingsstandaarden. PMA / ITTAP-accreditatie voor deze cursus is{' '}
+                  <strong>in behandeling</strong> en nog niet goedgekeurd.
                 </p>
               </div>
 
@@ -815,10 +820,10 @@ export const Academy: React.FC = () => {
                     data-location="mat_cta"
                     onClick={scrollToInquiry}
                   >
-                    Inquire About This Course
+                    Informeer over deze cursus
                   </button>
                 </div>
-                <p className="cta-subtext">Reply within 48 hours to secure your place.</p>
+                <p className="cta-subtext">Reactie binnen 48 uur om je plek te bevestigen.</p>
               </div>
             </div>
                 </div>
@@ -829,66 +834,67 @@ export const Academy: React.FC = () => {
 
         <section className="academy-benefits">
           <div className="academy-container">
-            <h2>Why choose PT7 Academy for Pilates teacher training Amsterdam</h2>
+            <h2>Waarom PT7 Academy voor pilates opleiding Amsterdam</h2>
             <div className="benefits-grid">
               <div className="benefit-card">
-                <h3>300 Hours Comprehensive Training</h3>
+                <h3>300 uur uitgebreide training</h3>
                 <p>
-                  A full pathway from theory to teaching practice, observation, and master trainer sessions, not a
-                  shortened weekend-only certificate.
+                  Een volledige route van theorie naar lesgeven in de praktijk, observatie en sessies met master
+                  trainer — geen verkort weekend-only certificaat.
                 </p>
               </div>
 
               <div className="benefit-card">
-                <h3>Weekend Pilates teacher training</h3>
+                <h3>Geselecteerd weekendrooster</h3>
                 <p>
-                  Train on four scheduled weekends per term (Sep–Nov 2026 or Mar–May 2027), {lectureHours}, and keep your
-                  day job while becoming a certified Reformer instructor.
+                  Train op vier geplande weekenden per termijn (sep–nov 2026 of mrt–mei 2027), {lectureHoursNl}, en
+                  behoud je dagbaan terwijl je een gecertificeerde Reformer-instructeur wordt.
                 </p>
               </div>
 
               <div className="benefit-card benefit-card--pma">
-                <h3>PMA ITTAP Accredited Reformer Program</h3>
+                <h3>PMA ITTAP geaccrediteerd Reformer-programma</h3>
                 <p>
-                  The {COURSE_TITLE} is ITTAP approved by the Pilates Method Alliance (PMA). The{' '}
-                  {MAT_COURSE_TITLE} follows international standards, with PMA/ITTAP accreditation currently in progress.
+                  De {COURSE_TITLE_NL} is ITTAP goedgekeurd door de Pilates Method Alliance (PMA). De{' '}
+                  {MAT_COURSE_TITLE_NL} volgt internationale standaarden, met PMA/ITTAP-accreditatie momenteel in
+                  behandeling.
                 </p>
               </div>
 
               <div className="benefit-card">
-                <h3>Teaching inside a real boutique studio</h3>
+                <h3>Lesgeven in een echt boutique studio</h3>
                 <p>
-                  Training happens at PT Studio 7 Museumplein, where clients book Reformer, private, and small-group
-                  sessions every week. You learn in the same environment you will teach in.
+                  Training vindt plaats bij PT Studio 7 Museumplein, waar klanten wekelijks Reformer, private en
+                  kleine-groepssessies boeken. Je leert in dezelfde omgeving waarin je straks lesgeeft.
                 </p>
               </div>
 
               <div className="benefit-card">
-                <h3>Structured Assessment</h3>
+                <h3>Gestructureerde assessment</h3>
                 <p>
-                  Theoretical and practical exams, plus a mandatory exercise assessment (EUR 250 including BTW),
-                  with a clear path to the PT7 Academy Reformer Pilates Instructor Certificate.
+                  Theoretische en praktische examens, plus een verplichte oefeningsevaluatie (EUR 250 inclusief BTW),
+                  met een duidelijk pad naar het PT7 Academy Reformer Pilates Instructeurscertificaat.
                 </p>
               </div>
 
               <div className="benefit-card">
-                <h3>Flexible Payment</h3>
+                <h3>Flexibele betaling</h3>
                 <p>
-                  Pay in full at checkout, or spread the course fee over 3 equal installments through MindBody
-                  (3 × EUR 667 + VAT).
+                  Betaal in één keer bij checkout, of spreid de cursusprijs over 3 gelijke termijnen via MindBody
+                  (3 × EUR 667 + BTW).
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <AcademyGraduates locale="en" />
+        <AcademyGraduates locale="nl" />
 
-        <AcademyInquiry locale="en" />
+        <AcademyInquiry locale="nl" />
 
         <section className="academy-benefits">
           <div className="academy-container">
-            <h2>Frequently Asked Questions</h2>
+            <h2>Veelgestelde vragen</h2>
             <div className="benefits-grid">
               {academyFaqs.map((faq) => (
                 <div key={faq.question} className="benefit-card">
@@ -902,11 +908,10 @@ export const Academy: React.FC = () => {
 
         <section className="academy-cta">
           <div className="academy-container">
-            <h2>Ready to Become a Pilates Instructor in Amsterdam?</h2>
+            <h2>Klaar voor een pilates docentenopleiding in Amsterdam?</h2>
             <p>
-              Enroll in the ITTAP approved Reformer Pilates instructor course or the Mat Pilates instructor course
-              Amsterdam option ({MAT_COURSE_TITLE}) at PT7 Academy. Weekend teacher training at Museumplein — see
-              course fee and payment options above.
+              Kies de PMA ITTAP goedgekeurde {COURSE_TITLE_NL} of de {MAT_COURSE_TITLE_NL} bij PT7 Academy.
+              Weekendintensieven bij Museumplein — zie cursusprijs en betalingsopties hierboven.
             </p>
             <div className="cta-buttons">
               <div
@@ -929,7 +934,7 @@ export const Academy: React.FC = () => {
                 data-location="bottom_cta"
                 onClick={scrollToInquiry}
               >
-                Inquire About the Course
+                Informeer over de cursus
               </button>
               <a
                 href="tel:+31685162693"
@@ -938,7 +943,7 @@ export const Academy: React.FC = () => {
                 data-course="reformer"
                 data-location="bottom_cta"
               >
-                Call: +31 685 162693
+                Bel: +31 685 162693
               </a>
             </div>
           </div>

@@ -16,7 +16,7 @@ export const TrainerDetail: React.FC = () => {
   const relatedLinksByTrainer: Record<string, { to: string; label: string }[]> = {
     elif: [
       { to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' },
-      { to: '/academy', label: 'PT Studio 7 Academy (lead instructor)' },
+      { to: '/academy', label: 'Pilates teacher training at PT7 Academy' },
       { to: '/prenatal-pilates-amsterdam', label: 'Prenatal Pilates page' },
     ],
     gokben: [{ to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' }],
@@ -24,9 +24,18 @@ export const TrainerDetail: React.FC = () => {
       { to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' },
       { to: '/workouts/functional-training', label: 'Strength training classes' },
     ],
-    gulce: [{ to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' }],
-    lal: [{ to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' }],
-    nisan: [{ to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' }],
+    gulce: [
+      { to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' },
+      { to: '/academy', label: 'Become a Pilates instructor — PT7 Academy' },
+    ],
+    lal: [
+      { to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' },
+      { to: '/academy', label: 'Become a Pilates instructor — PT7 Academy' },
+    ],
+    nisan: [
+      { to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' },
+      { to: '/academy', label: 'Become a Pilates instructor — PT7 Academy' },
+    ],
   };
 
   const relatedLinks = relatedLinksByTrainer[trainer.slug] || [];

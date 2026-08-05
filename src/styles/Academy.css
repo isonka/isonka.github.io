@@ -882,6 +882,12 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button.course-btn {
+  appearance: none;
 }
 
 .course-btn.primary {
@@ -1050,6 +1056,215 @@
   color: #666;
 }
 
+/* Language switch — fixed flags on right */
+.academy-lang-switch {
+  position: fixed;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 10px 8px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #e5dccf;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.academy-lang-flag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+  opacity: 0.72;
+  transition: opacity 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.academy-lang-flag:hover {
+  opacity: 1;
+  transform: scale(1.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.academy-lang-flag--current {
+  opacity: 1;
+  border-color: #222;
+  box-shadow: 0 0 0 1px #222;
+  pointer-events: none;
+}
+
+.academy-lang-flag-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.academy-lang-switch .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.academy-lang-note {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 28px;
+  padding: 14px 18px;
+  background: #fff8e6;
+  border: 1px solid #e5dccf;
+  border-radius: var(--radius-lg);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .academy-lang-switch {
+    top: auto;
+    bottom: 88px;
+    right: 12px;
+    transform: none;
+    flex-direction: row;
+    padding: 8px;
+  }
+}
+
+/* Graduates */
+.academy-graduates {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.academy-graduates h2 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: #222;
+  text-align: center;
+}
+
+.academy-graduates-intro {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #666;
+}
+
+.academy-graduates-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.academy-graduate-card {
+  margin: 0;
+}
+
+.academy-graduate-link,
+.academy-graduate-link--static {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: #f8f8f8;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.academy-graduate-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.academy-graduate-link img,
+.academy-graduate-link--static img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.academy-graduate-meta {
+  padding: 20px 18px 24px;
+  text-align: center;
+}
+
+.academy-graduate-meta h3 {
+  font-size: 1.35rem;
+  margin: 0 0 8px;
+  color: #222;
+}
+
+.academy-graduate-meta p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+/* Inquiry / Mindbody form */
+.academy-inquiry {
+  padding: 80px 20px;
+  background: #f8f8f8;
+}
+
+.academy-inquiry h2 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: #222;
+  text-align: center;
+}
+
+.academy-inquiry-intro {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 32px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #666;
+}
+
+.academy-inquiry-widget {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 24px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  min-height: 120px;
+}
+
+.academy-inquiry-fallback {
+  text-align: center;
+  margin: 24px auto 0;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.academy-inquiry-fallback a {
+  color: #0075be;
+}
+
 /* CTA Section */
 .academy-cta {
   padding: 80px 20px;
@@ -1089,6 +1304,12 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button.cta-btn {
+  appearance: none;
 }
 
 .cta-btn.primary {
@@ -1171,6 +1392,17 @@
 
   .benefits-grid {
     grid-template-columns: 1fr;
+  }
+
+  .academy-graduates-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .academy-graduates h2,
+  .academy-inquiry h2 {
+    font-size: 1.75rem;
   }
 
   .cta-buttons {

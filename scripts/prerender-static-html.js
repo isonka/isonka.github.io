@@ -37,6 +37,7 @@ const routes = [
   '/trainer/lal',
   '/trainer/nisan',
   '/academy',
+  '/academy/nl',
   '/healthcare-providers',
   '/classpass-offer',
   '/prenatal-pilates-amsterdam',

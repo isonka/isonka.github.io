@@ -1,5 +1,10 @@
 import { useEffect } from 'react';
 
+export type HreflangAlternate = {
+  hreflang: string;
+  href: string;
+};
+
 interface SEOHeadProps {
   title: string;
   description: string;
@@ -8,6 +13,14 @@ interface SEOHeadProps {
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
+  /** Open Graph locale, e.g. en_US or nl_NL */
+  ogLocale?: string;
+  /** Alternate OG locales */
+  ogLocaleAlternates?: string[];
+  /** HTML lang attribute on <html> */
+  htmlLang?: string;
+  /** link rel="alternate" hreflang entries */
+  hreflangAlternates?: HreflangAlternate[];
 }
 
 export const SEOHead: React.FC<SEOHeadProps> = ({
@@ -18,16 +31,18 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
   ogTitle,
   ogDescription,
   ogImage = '/assets/images/pt7logo.png',
+  ogLocale = 'en_US',
+  ogLocaleAlternates = ['nl_NL'],
+  htmlLang = 'en',
+  hreflangAlternates,
 }) => {
   useEffect(() => {
-    // Update document title
     document.title = title;
+    document.documentElement.lang = htmlLang;
 
-    // Ensure absolute URL for images
     const baseUrl = 'https://www.pt7.nl';
     const absoluteImageUrl = ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`;
 
-    // Update or create meta tags
     const updateMetaTag = (name: string, content: string, property?: boolean) => {
       const attribute = property ? 'property' : 'name';
       let meta = document.querySelector(`meta[${attribute}="${name}"]`);
@@ -39,21 +54,25 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       meta.setAttribute('content', content);
     };
 
-    // Standard meta tags
     updateMetaTag('description', description);
     updateMetaTag('keywords', keywords);
     updateMetaTag('author', 'PT Studio 7');
     updateMetaTag('robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
 
-    // Geo-targeting for Amsterdam/Netherlands
     updateMetaTag('geo.region', 'NL-NH');
     updateMetaTag('geo.placename', 'Amsterdam');
     updateMetaTag('geo.position', '52.3572909;4.8762577');
     updateMetaTag('ICBM', '52.3572909, 4.8762577');
 
-    // Open Graph tags (Facebook, LinkedIn, etc)
-    updateMetaTag('og:locale', 'en_US', true);
-    updateMetaTag('og:locale:alternate', 'nl_NL', true);
+    updateMetaTag('og:locale', ogLocale, true);
+    document.querySelectorAll('meta[property="og:locale:alternate"]').forEach((el) => el.remove());
+    for (const alt of ogLocaleAlternates) {
+      const meta = document.createElement('meta');
+      meta.setAttribute('property', 'og:locale:alternate');
+      meta.setAttribute('content', alt);
+      document.head.appendChild(meta);
+    }
+
     updateMetaTag('og:type', 'website', true);
     updateMetaTag('og:title', ogTitle || title, true);
     updateMetaTag('og:description', ogDescription || description, true);
@@ -65,7 +84,6 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     updateMetaTag('og:image:height', '630', true);
     updateMetaTag('og:image:alt', 'PT Studio 7 Amsterdam - Pilates Studio', true);
 
-    // Twitter Card tags
     updateMetaTag('twitter:card', 'summary_large_image');
     updateMetaTag('twitter:site', '@ptstudio7amsterdam');
     updateMetaTag('twitter:title', ogTitle || title);
@@ -73,7 +91,6 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     updateMetaTag('twitter:image', absoluteImageUrl);
     updateMetaTag('twitter:image:alt', 'PT Studio 7 Amsterdam - Pilates Studio');
 
-    // Canonical link
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonicalLink) {
       canonicalLink = document.createElement('link');
@@ -81,8 +98,30 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       document.head.appendChild(canonicalLink);
     }
     canonicalLink.href = canonical;
-  }, [title, description, keywords, canonical, ogTitle, ogDescription, ogImage]);
 
-  return null; // This component doesn't render anything
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => el.remove());
+    if (hreflangAlternates?.length) {
+      for (const alt of hreflangAlternates) {
+        const link = document.createElement('link');
+        link.rel = 'alternate';
+        link.hreflang = alt.hreflang;
+        link.href = alt.href;
+        document.head.appendChild(link);
+      }
+    }
+  }, [
+    title,
+    description,
+    keywords,
+    canonical,
+    ogTitle,
+    ogDescription,
+    ogImage,
+    ogLocale,
+    ogLocaleAlternates,
+    htmlLang,
+    hreflangAlternates,
+  ]);
+
+  return null;
 };
-

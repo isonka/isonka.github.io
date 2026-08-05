@@ -220,6 +220,12 @@ export const Home: React.FC = () => {
             </Link>
           ))}
         </div>
+        <p className="section-footer-link">
+          Want to teach?{' '}
+          <Link to="/academy">Become a Pilates instructor</Link>
+          {' — '}
+          <Link to="/academy">Pilates teacher training</Link> at PT7 Academy.
+        </p>
       </section>
 
       {/* Reviews Section */}

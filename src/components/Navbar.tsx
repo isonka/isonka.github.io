@@ -101,7 +101,7 @@ export const Navbar: React.FC = () => {
           <li><a href="#reviews" aria-label="Read reviews" onClick={(e) => { e.preventDefault(); scrollToSection('reviews'); }}>Reviews</a></li>
           <li><Link to="/instructors" aria-label="Meet our instructors" onClick={closeMenu}>Instructors</Link></li>
           <li><Link to="/pricing" aria-label="View pricing" onClick={closeMenu}>Prices</Link></li>
-          <li><Link to="/academy" aria-label="PT Studio 7 Academy" onClick={closeMenu}>Academy</Link></li>
+          <li><Link to="/academy" aria-label="Pilates teacher training — PT7 Academy" onClick={closeMenu}>Academy</Link></li>
           <li className="navbar-dropdown">
             <button
               type="button"

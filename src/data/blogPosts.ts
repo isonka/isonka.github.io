@@ -168,7 +168,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Because five years from now, you'll be somewhere. The question is: will it be the same corner office, or somewhere that makes you come alive?</p>
 
-      <p><em>Ready to explore? <a href="/academy">Learn more about the course</a> or <a href="mailto:info@pt7.nl?subject=Career Change - Reformer Course Inquiry">email us with your questions</a>.</em></p>
+      <p><em>Ready to explore? <a href="/academy">Pilates teacher training at PT7 Academy</a> or <a href="mailto:info@pt7.nl?subject=Career Change - Reformer Course Inquiry">email us with your questions</a>.</em></p>
     `,
     author: 'PT Studio 7 Team',
     date: '2026-01-23',
@@ -262,7 +262,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Train in Amsterdam, Build Real Teaching Skills</h2>
       <p>PT7 Academy training takes place at PT Studio 7, Van Baerlestraat 76C (Museumplein). You learn inside an active boutique studio context with small-group culture and private-session depth.</p>
 
-      <p><em>Want details on dates, fees, and enrollment? Visit <a href="/academy">PT7 Academy</a> or email <a href="mailto:info@pt7.nl?subject=PMA%20ITTAP%20Course%20Inquiry">info@pt7.nl</a> for the next intake.</em></p>
+      <p><em>Want details on dates, fees, and enrollment? Visit our <a href="/academy">Pilates instructor course in Amsterdam</a> or email <a href="mailto:info@pt7.nl?subject=PMA%20ITTAP%20Course%20Inquiry">info@pt7.nl</a> for the next intake.</em></p>
     `,
     author: 'PT Studio 7 Team',
     date: '2026-07-29',
