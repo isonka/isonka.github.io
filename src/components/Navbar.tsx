@@ -120,6 +120,15 @@ export const Navbar: React.FC = () => {
             </ul>
           </li>
           <li><a href="#contact" aria-label="Contact us" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</a></li>
+          <li className="navbar-login">
+            <span
+              className="navbar-login-widget"
+              dangerouslySetInnerHTML={{
+                __html:
+                  '<healcode-widget data-version="0.2" data-link-class="loginRegister" data-site-id="123605" data-mb-site-id="5741736" data-bw-identity-site="true" data-type="account-link" data-inner-html="Login | Register"></healcode-widget>',
+              }}
+            />
+          </li>
           <li className="navbar-booknow-desktop-wrapper">
             <Link to="/schedule" className="navbar-booknow-desktop" aria-label="Book a class" onClick={() => { closeMenu(); trackBookNowClick('navbar-desktop'); }}>
               Book Now

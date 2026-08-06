@@ -181,6 +181,35 @@
     display: none;
 }
 
+/* MindBody Login | Register */
+.navbar-login {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-login-widget,
+.navbar-login-widget healcode-widget {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.navbar-login-widget a,
+.navbar-login-widget .loginRegister {
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.08rem;
+    line-height: 1;
+    padding: 8px 0;
+    transition: color 0.2s;
+}
+
+.navbar-login-widget a:hover,
+.navbar-login-widget .loginRegister:hover {
+    color: #ffd700;
+}
+
 /* Desktop Book Now Button */
 @media (min-width: 1025px) {
     .navbar-booknow-mobile {
@@ -294,6 +323,26 @@
         padding: 16px 24px;
         border-bottom: 1px solid #eee;
         color: #222;
+    }
+
+    .navbar-login {
+        width: 100%;
+    }
+
+    .navbar-login-widget,
+    .navbar-login-widget healcode-widget {
+        display: block;
+        width: 100%;
+    }
+
+    .navbar-login-widget a,
+    .navbar-login-widget .loginRegister {
+        display: block;
+        width: 100%;
+        padding: 16px 24px;
+        border-bottom: 1px solid #eee;
+        color: #222;
+        box-sizing: border-box;
     }
 
     .navbar-booknow-desktop-wrapper {
