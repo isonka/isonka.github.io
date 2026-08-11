@@ -58,7 +58,7 @@ export const ReformerPilatesAmsterdam: React.FC = () => {
         title="Reformer Pilates Amsterdam Museumplein | PT Studio 7"
         description="Reformer Pilates at Museumplein Amsterdam. Small groups max 5, private sessions, full apparatus studio in Oud-Zuid. First visit coaching for beginners and expats."
         keywords="reformer pilates amsterdam, pilates museumplein, reformer pilates oud-zuid, small group pilates amsterdam, pilates classes amsterdam, reformer pilates lessen amsterdam, boutique pilates amsterdam"
-        canonical="https://www.pt7.nl/reformer-pilates-amsterdam"
+        canonical="https://www.pt7.nl/reformer-pilates-amsterdam/"
         ogTitle="Reformer Pilates Amsterdam | PT Studio 7 Museumplein"
         ogDescription="Boutique Reformer Pilates at Museumplein. Small groups (max 5), private sessions, expert instructors in Amsterdam Oud-Zuid."
       />
@@ -70,11 +70,11 @@ export const ReformerPilatesAmsterdam: React.FC = () => {
             name: 'Reformer Pilates Amsterdam',
             description:
               'Small group (max 5) and private Reformer Pilates classes at PT Studio 7 Museumplein, Amsterdam Oud-Zuid.',
-            serviceUrl: 'https://www.pt7.nl/reformer-pilates-amsterdam',
+            serviceUrl: 'https://www.pt7.nl/reformer-pilates-amsterdam/',
             areaServed: 'Amsterdam',
             offers: [
-              { name: 'Small group Reformer class', url: 'https://www.pt7.nl/schedule' },
-              { name: 'Private Reformer session', url: 'https://www.pt7.nl/private-pilates-amsterdam' },
+              { name: 'Small group Reformer class', url: 'https://www.pt7.nl/schedule/' },
+              { name: 'Private Reformer session', url: 'https://www.pt7.nl/private-pilates-amsterdam/' },
             ],
           },
         }}
@@ -97,7 +97,7 @@ export const ReformerPilatesAmsterdam: React.FC = () => {
               <span className="service-badge">All levels</span>
               <span className="service-badge">Museumplein Amsterdam</span>
             </div>
-            <Link to="/schedule" className="service-hero-btn">
+            <Link to="/schedule/" className="service-hero-btn">
               Book a Reformer Class
             </Link>
           </div>
@@ -115,16 +115,16 @@ export const ReformerPilatesAmsterdam: React.FC = () => {
             <p>
               Small group classes are capped at five people so you still get personal attention.
               Prefer one-on-one?{' '}
-              <Link to="/private-pilates-amsterdam">Private, duo, and trio Reformer sessions</Link>{' '}
+              <Link to="/private-pilates-amsterdam/">Private, duo, and trio Reformer sessions</Link>{' '}
               are available for beginners, athletes, and rehab-minded clients. Pregnancy training is
               private only: see{' '}
-              <Link to="/prenatal-pilates-amsterdam">prenatal Pilates Amsterdam</Link>.
+              <Link to="/prenatal-pilates-amsterdam/">prenatal Pilates Amsterdam</Link>.
             </p>
             <p>
               Want deeper detail on benefits, equipment, and class options? See our full{' '}
-              <Link to="/workouts/reformer-pilates">Reformer Pilates workout guide</Link>,{' '}
-              <Link to="/pricing">pricing</Link>, and{' '}
-              <Link to="/schedule">live schedule</Link>.
+              <Link to="/workouts/reformer-pilates/">Reformer Pilates workout guide</Link>,{' '}
+              <Link to="/pricing/">pricing</Link>, and{' '}
+              <Link to="/schedule/">live schedule</Link>.
             </p>
           </div>
         </section>
@@ -191,8 +191,8 @@ export const ReformerPilatesAmsterdam: React.FC = () => {
                 <h3>Strength &amp; athletic clients</h3>
                 <p>
                   Combine Reformer with{' '}
-                  <Link to="/trx-training-amsterdam">TRX</Link> or{' '}
-                  <Link to="/strength-training-amsterdam">strength training</Link> in the same
+                  <Link to="/trx-training-amsterdam/">TRX</Link> or{' '}
+                  <Link to="/strength-training-amsterdam/">strength training</Link> in the same
                   studio for a balanced week.
                 </p>
               </div>
@@ -200,7 +200,7 @@ export const ReformerPilatesAmsterdam: React.FC = () => {
                 <h3>Future instructors</h3>
                 <p>
                   Want to teach?{' '}
-                  <Link to="/academy">Pilates teacher training at PT7 Academy</Link> offers a 300-hour Reformer instructor
+                  <Link to="/academy/">Pilates teacher training at PT7 Academy</Link> offers a 300-hour Reformer instructor
                   course (PMA ITTAP approved) on selected weekends at this same studio.
                 </p>
               </div>
@@ -264,13 +264,13 @@ export const ReformerPilatesAmsterdam: React.FC = () => {
             Academy if you want to teach.
           </p>
           <div className="service-cta-buttons">
-            <Link to="/schedule" className="service-cta-btn-primary">
+            <Link to="/schedule/" className="service-cta-btn-primary">
               Book a Session
             </Link>
-            <Link to="/workouts/reformer-pilates" className="service-cta-btn-secondary">
+            <Link to="/workouts/reformer-pilates/" className="service-cta-btn-secondary">
               Reformer Guide
             </Link>
-            <Link to="/academy" className="service-cta-btn-secondary">
+            <Link to="/academy/" className="service-cta-btn-secondary">
               Pilates teacher training
             </Link>
           </div>

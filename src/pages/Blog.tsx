@@ -10,7 +10,7 @@ export const Blog: React.FC = () => {
         title="Pilates & Fitness Blog | Expert Tips & Guides | PT Studio 7 Amsterdam"
         description="Read expert articles about Pilates, prenatal fitness, and wellness from PT Studio 7 Amsterdam. Tips, guides, and insights from our certified trainers at Museumplein."
         keywords="pilates blog, prenatal pilates, fitness tips amsterdam, pilates exercises, reformer pilates guide, pregnancy fitness, wellness blog amsterdam"
-        canonical="https://www.pt7.nl/blog"
+        canonical="https://www.pt7.nl/blog/"
         ogTitle="Pilates & Fitness Blog | PT Studio 7 Amsterdam"
         ogDescription="Expert articles about Pilates, prenatal fitness, and wellness from PT Studio 7 Amsterdam's certified trainers."
       />
@@ -22,7 +22,7 @@ export const Blog: React.FC = () => {
           <div className="blog-grid">
             {blogPosts.map((post) => (
               <article key={post.id} className="blog-card">
-                <Link to={`/blog/${post.slug}`} className="blog-card-link">
+                <Link to={`/blog/${post.slug}/`} className="blog-card-link">
                   <div className="blog-card-image">
                     <img 
                       src={post.image} 
@@ -56,7 +56,7 @@ export const Blog: React.FC = () => {
           <div className="blog-cta">
             <h2>Ready to Start Your Pilates Journey?</h2>
             <p>Join us at PT Studio 7 Amsterdam for expert-led Pilates classes in our beautiful Museumplein studio.</p>
-            <Link to="/schedule" className="cta-button">Book Your Class</Link>
+            <Link to="/schedule/" className="cta-button">Book Your Class</Link>
           </div>
         </section>
       </div>

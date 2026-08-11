@@ -400,11 +400,11 @@ export const Academy: React.FC = () => {
                   <h3>Pilates instructor course for career changers</h3>
                   <p>
                     Many trainees come from banking, tech, and other careers. Read how the switch works in our{' '}
-                    <Link to="/blog/career-change-banker-to-pilates-instructor">
+                    <Link to="/blog/career-change-banker-to-pilates-instructor/">
                       career-change guide
                     </Link>
                     , and meet course lead{' '}
-                    <Link to="/trainer/elif">Elif Arzu Ogan</Link>.
+                    <Link to="/trainer/elif/">Elif Arzu Ogan</Link>.
                   </p>
                 </div>
                 <div className="benefit-card">

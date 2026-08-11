@@ -64,7 +64,7 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   useEffect(() => {
-    trackPageView('/prenatal-pilates-amsterdam', 'Prenatal Pilates Amsterdam | PT Studio 7');
+    trackPageView('/prenatal-pilates-amsterdam/', 'Prenatal Pilates Amsterdam | PT Studio 7');
   }, []);
 
   return (
@@ -73,7 +73,7 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
         title="Prenatal & Pregnancy Pilates Amsterdam | Private Reformer | PT Studio 7"
         description="Private prenatal Reformer Pilates at Museumplein (Oud-Zuid). 45-minute 1:1 sessions, trimester adaptations, pelvic floor focus. Train with Elif or Göknur through pregnancy."
         keywords="prenatal pilates amsterdam, pregnancy pilates amsterdam, private prenatal pilates, reformer pilates pregnancy, pelvic floor pilates amsterdam, postnatal pilates amsterdam, pregnancy pilates museumplein"
-        canonical={`${baseUrl}/prenatal-pilates-amsterdam`}
+        canonical={`${baseUrl}/prenatal-pilates-amsterdam/`}
         ogTitle="Prenatal & Pregnancy Pilates Amsterdam | PT Studio 7"
         ogDescription="Private 45-minute prenatal Reformer sessions at Museumplein. Trimester-specific coaching with Elif and Göknur, not group classes."
       />
@@ -85,11 +85,11 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
             name: 'Prenatal & Pregnancy Pilates Amsterdam',
             description:
               'Private prenatal and pregnancy Reformer Pilates sessions in Amsterdam Oud-Zuid / Museumplein, tailored to each trimester, with pelvic floor and core-focused programming. Max class size for non-pregnancy groups is 5; pregnancy training is private only.',
-            serviceUrl: `${baseUrl}/prenatal-pilates-amsterdam`,
+            serviceUrl: `${baseUrl}/prenatal-pilates-amsterdam/`,
             areaServed: 'Amsterdam',
             offers: [
-              { name: 'Private Prenatal Pilates Session', priceCurrency: 'EUR', url: `${baseUrl}/pricing` },
-              { name: 'Prenatal Pilates Intro Session', priceCurrency: 'EUR', url: `${baseUrl}/schedule` },
+              { name: 'Private Prenatal Pilates Session', priceCurrency: 'EUR', url: `${baseUrl}/pricing/` },
+              { name: 'Prenatal Pilates Intro Session', priceCurrency: 'EUR', url: `${baseUrl}/schedule/` },
             ],
           },
         }}
@@ -111,7 +111,7 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
               <span className="service-badge">Pelvic floor focus</span>
               <span className="service-badge">Museumplein / Oud-Zuid</span>
             </div>
-            <Link to="/schedule" className="service-hero-btn">Book a Prenatal Session</Link>
+            <Link to="/schedule/" className="service-hero-btn">Book a Prenatal Session</Link>
           </div>
         </section>
 
@@ -126,7 +126,7 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
             </p>
             <p>
               If you want a deeper trimester-by-trimester guide, read our full article:{' '}
-              <Link to="/blog/prenatal-pilates-supporting-body-through-every-trimester">
+              <Link to="/blog/prenatal-pilates-supporting-body-through-every-trimester/">
                 Prenatal Pilates: Supporting Your Body Through Every Trimester
               </Link>.
             </p>
@@ -230,10 +230,10 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
             <h2>Meet your prenatal specialists</h2>
             <p>
               Book with instructors experienced in prenatal and postnatal Reformer coaching. See private packages on
-              our <Link to="/pricing">Pricing page</Link>.
+              our <Link to="/pricing/">Pricing page</Link>.
             </p>
             <div className="service-trainers-strip">
-              <Link to="/trainer/elif" className="service-trainer-card">
+              <Link to="/trainer/elif/" className="service-trainer-card">
                 <img
                   src="/assets/images/elif.webp"
                   alt="Elif Arzu Ogan, prenatal Pilates instructor"
@@ -245,7 +245,7 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
                   <p>Owner &amp; head instructor · prenatal specialist</p>
                 </div>
               </Link>
-              <Link to="/trainer/goknur" className="service-trainer-card">
+              <Link to="/trainer/goknur/" className="service-trainer-card">
                 <img
                   src="/assets/images/goknur.webp"
                   alt="Göknur Dipli, prenatal Pilates instructor"
@@ -266,9 +266,9 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
             <h2>Related studio pages</h2>
             <p>
               Looking for non-pregnancy training? Explore{' '}
-              <Link to="/private-pilates-amsterdam">private Pilates Amsterdam</Link>,{' '}
-              <Link to="/reformer-pilates-amsterdam">Reformer Pilates Amsterdam</Link>, or the full{' '}
-              <Link to="/schedule">class schedule</Link>.
+              <Link to="/private-pilates-amsterdam/">private Pilates Amsterdam</Link>,{' '}
+              <Link to="/reformer-pilates-amsterdam/">Reformer Pilates Amsterdam</Link>, or the full{' '}
+              <Link to="/schedule/">class schedule</Link>.
             </p>
           </div>
         </section>
@@ -306,8 +306,8 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
             Book your private prenatal intake and we will design a program that supports you through pregnancy and beyond.
           </p>
           <div className="service-cta-buttons">
-            <Link to="/schedule" className="service-cta-btn-primary">Book Prenatal Intake</Link>
-            <Link to="/pricing" className="service-cta-btn-secondary">View Private Session Pricing</Link>
+            <Link to="/schedule/" className="service-cta-btn-primary">Book Prenatal Intake</Link>
+            <Link to="/pricing/" className="service-cta-btn-secondary">View Private Session Pricing</Link>
           </div>
         </section>
       </div>

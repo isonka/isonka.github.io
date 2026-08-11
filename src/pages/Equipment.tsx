@@ -40,7 +40,7 @@ export const Equipment: React.FC = () => {
         title="Buy Pilates Equipment Amsterdam | Reformers & More | PT Studio 7"
         description="Buy professional Pilates equipment in Amsterdam: Reformer (€2,200), Tower Reformer, Cadillac, Wunda Chair, and Ladder Barrel. Specs, warranty, and 3-8 week delivery in the Netherlands."
         keywords="buy pilates equipment amsterdam, pilates reformer kopen nederland, pilates equipment for sale netherlands, buy reformer amsterdam, cadillac pilates for sale, tower reformer price"
-        canonical="https://www.pt7.nl/equipment"
+        canonical="https://www.pt7.nl/equipment/"
         ogTitle="Buy Pilates Equipment Amsterdam | PT Studio 7"
         ogDescription="Transactional Pilates equipment catalog: Reformer, Tower Reformer, Cadillac, Wunda Chair, and Ladder Barrel with pricing and ordering support."
       />
@@ -51,7 +51,7 @@ export const Equipment: React.FC = () => {
             name: 'Pilates Equipment for Sale',
             itemListElement: equipmentProducts.map((product) => ({
               name: product.name,
-              url: `https://www.pt7.nl/equipment/${product.slug}`,
+              url: `https://www.pt7.nl/equipment/${product.slug}/`,
               image: `https://www.pt7.nl${product.images[0].src}`,
             })),
           },
@@ -91,7 +91,7 @@ export const Equipment: React.FC = () => {
             <h2>Pilates Equipment for Sale in Amsterdam</h2>
             <p>Compare equipment models, review specs, and request an order for home or studio use. Need guidance? We can help you choose the right setup based on your space and goals.</p>
             <div className="cta-buttons">
-              <Link to="/schedule" className="cta-button">Book a Class</Link>
+              <Link to="/schedule/" className="cta-button">Book a Class</Link>
               <a href="#contact" onClick={handleContactClick} className="cta-button cta-button-secondary">Contact Us</a>
             </div>
           </div>

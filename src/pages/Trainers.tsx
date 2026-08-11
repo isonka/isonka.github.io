@@ -14,7 +14,7 @@ export const Trainers: React.FC = () => {
         title="Our Instructors | PT Studio 7 Amsterdam"
         description="Meet our expert team of certified Pilates and fitness instructors at PT Studio 7 Amsterdam. Master, senior, and junior instructors dedicated to your fitness journey."
         keywords="Pilates instructors Amsterdam, polestar pilates amsterdam, Pilates leraren Amsterdam, gecertificeerde Pilates instructeurs, Pilates teachers Museumplein, Pilates team Oud-Zuid"
-        canonical="https://www.pt7.nl/instructors"
+        canonical="https://www.pt7.nl/instructors/"
       />
       <Breadcrumbs items={[{ name: 'Instructors', path: '/instructors' }]} />
 
@@ -28,7 +28,7 @@ export const Trainers: React.FC = () => {
             </div>
             <div className="trainers-grid">
               {availableInstructors.map(instructor => (
-                <Link to={`/trainer/${instructor.slug}`} key={instructor.slug} className="trainer-card">
+                <Link to={`/trainer/${instructor.slug}/`} key={instructor.slug} className="trainer-card">
                   <div className="trainer-card-image">
                     <img src={instructor.image} alt={instructor.name} loading="lazy" />
                     <span className={`trainer-tier-badge tier-${instructor.tier}`}>
@@ -59,7 +59,7 @@ export const Trainers: React.FC = () => {
                 <h2>Our Team is Growing</h2>
                 <p>New instructors are joining soon. Interested in teaching at PT Studio 7?</p>
               </div>
-              <Link to="/academy" className="growing-banner-link">
+              <Link to="/academy/" className="growing-banner-link">
                 Become a Pilates instructor →
               </Link>
             </div>
@@ -71,8 +71,8 @@ export const Trainers: React.FC = () => {
           <h2>Ready to Train with Our Instructors?</h2>
           <p>Book a session and experience personalized training at its finest</p>
           <div className="trainers-cta-buttons">
-            <Link to="/schedule" className="trainers-btn-primary">Book a Class</Link>
-            <Link to="/pricing" className="trainers-btn-secondary">View Pricing</Link>
+            <Link to="/schedule/" className="trainers-btn-primary">Book a Class</Link>
+            <Link to="/pricing/" className="trainers-btn-secondary">View Pricing</Link>
           </div>
         </section>
       </div>

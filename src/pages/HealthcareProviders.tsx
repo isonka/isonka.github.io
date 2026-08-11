@@ -16,7 +16,7 @@ export const HealthcareProviders: React.FC = () => {
         title="Pilates for Rehabilitation Amsterdam | For Healthcare Providers | PT Studio 7"
         description="Physiotherapists, GPs, and healthcare providers: refer your clients to PT Studio 7 for post-rehab Pilates and functional training. Small groups, expert instructors, Museumplein."
         keywords="physiotherapist referral Amsterdam, Pilates post-rehab, fysiotherapeut doorverwijzing, beweegprogramma Amsterdam, Pilates fysiotherapie"
-        canonical="https://www.pt7.nl/healthcare-providers"
+        canonical="https://www.pt7.nl/healthcare-providers/"
         ogTitle="Pilates for Rehabilitation Amsterdam | PT Studio 7"
         ogDescription="Partner with PT Studio 7. Refer your clients for post-rehab Pilates and functional training. Small groups, expert instructors."
       />
@@ -160,9 +160,9 @@ export const HealthcareProviders: React.FC = () => {
             <div style={{ marginBottom: '1rem' }}>
               <h3>Related Service Pages</h3>
               <p>
-                <Link to="/workouts/reformer-pilates">Reformer Pilates</Link> ·{' '}
-                <Link to="/trainer/elif">Elif Arzu Ogan profile</Link> ·{' '}
-                <Link to="/trainer/goknur">Göknur Dipli profile</Link>
+                <Link to="/workouts/reformer-pilates/">Reformer Pilates</Link> ·{' '}
+                <Link to="/trainer/elif/">Elif Arzu Ogan profile</Link> ·{' '}
+                <Link to="/trainer/goknur/">Göknur Dipli profile</Link>
               </p>
             </div>
             <Link to="/" className="back-link">← Back to PT Studio 7</Link>

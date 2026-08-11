@@ -168,7 +168,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Because five years from now, you'll be somewhere. The question is: will it be the same corner office, or somewhere that makes you come alive?</p>
 
-      <p><em>Ready to explore? <a href="/academy">Pilates teacher training at PT7 Academy</a> or <a href="mailto:info@pt7.nl?subject=Career Change - Reformer Course Inquiry">email us with your questions</a>.</em></p>
+      <p><em>Ready to explore? <a href="/academy/">Pilates teacher training at PT7 Academy</a> or <a href="mailto:info@pt7.nl?subject=Career Change - Reformer Course Inquiry">email us with your questions</a>.</em></p>
     `,
     author: 'PT Studio 7 Team',
     date: '2026-01-23',
@@ -262,7 +262,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Train in Amsterdam, Build Real Teaching Skills</h2>
       <p>PT7 Academy training takes place at PT Studio 7, Van Baerlestraat 76C (Museumplein). You learn inside an active boutique studio context with small-group culture and private-session depth.</p>
 
-      <p><em>Want details on dates, fees, and enrollment? Visit our <a href="/academy">Pilates instructor course in Amsterdam</a> or email <a href="mailto:info@pt7.nl?subject=PMA%20ITTAP%20Course%20Inquiry">info@pt7.nl</a> for the next intake.</em></p>
+      <p><em>Want details on dates, fees, and enrollment? Visit our <a href="/academy/">Pilates instructor course in Amsterdam</a> or email <a href="mailto:info@pt7.nl?subject=PMA%20ITTAP%20Course%20Inquiry">info@pt7.nl</a> for the next intake.</em></p>
     `,
     author: 'PT Studio 7 Team',
     date: '2026-07-29',
@@ -419,7 +419,7 @@ export const blogPosts: BlogPost[] = [
       
       <p>Our clients at PT Studio 7 report that consistent Pilates has reduced their physiotherapy visits, improved their sleep, eliminated chronic pain issues, and given them a level of body awareness they never had before. When viewed as an investment in strength, control, and preventive healthcare rather than "just exercise," the perspective shifts significantly.</p>
 
-      <p><em>Looking for a tailored Pilates session designed around your specific needs and goals? Our private sessions at PT Studio 7 Museumplein offer one-on-one attention from expert instructors with 15+ years of experience. <a href="/pricing">View our private session packages</a> or <a href="/schedule">book your first session</a>.</em></p>
+      <p><em>Looking for a tailored Pilates session designed around your specific needs and goals? Our private sessions at PT Studio 7 Museumplein offer one-on-one attention from expert instructors with 15+ years of experience. <a href="/pricing/">View our private session packages</a> or <a href="/schedule/">book your first session</a>.</em></p>
     `,
     author: 'PT Studio 7 Team',
     date: '2026-01-27',
@@ -616,7 +616,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Which Equipment Should Beginners Start With?</h2>
       <p>Most beginners should start on the <strong>Reformer</strong>. It's the most versatile, offers adjustable resistance, and builds the foundational strength and body awareness needed for other equipment. Once you've developed core stability and proper form, your instructor can introduce other apparatus to target specific goals.</p>
 
-      <p><em>At PT Studio 7 Amsterdam, we have a full equipment studio including Reformers, Tower Reformers, Cadillac, Wunda Chair, and Spine Corrector. <a href="/equipment">Explore our equipment</a> or <a href="/schedule">book a class</a> to experience it yourself.</em></p>
+      <p><em>At PT Studio 7 Amsterdam, we have a full equipment studio including Reformers, Tower Reformers, Cadillac, Wunda Chair, and Spine Corrector. <a href="/equipment/">Explore our equipment</a> or <a href="/schedule/">book a class</a> to experience it yourself.</em></p>
     `,
     author: 'PT Studio 7 Team',
     date: '2026-01-25',
@@ -779,7 +779,7 @@ export const blogPosts: BlogPost[] = [
         </ul>
       </div>
 
-      <p><em>Curious about Pilates? <a href="/schedule">Book a class</a> at PT Studio 7 Amsterdam to experience Reformer Pilates with expert instruction in small groups (maximum 5 people).</em></p>
+      <p><em>Curious about Pilates? <a href="/schedule/">Book a class</a> at PT Studio 7 Amsterdam to experience Reformer Pilates with expert instruction in small groups (maximum 5 people).</em></p>
     `,
     author: 'PT Studio 7 Team',
     date: '2026-01-24',
@@ -925,7 +925,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Make It a Regular Ritual</h2>
       <p>You don't have to do everything in one day. Many Amsterdam residents build wellness rituals: Tuesday morning Pilates, Sunday brunch, monthly spa visits. The key is consistency over intensity.</p>
 
-      <p><em>Ready to start your wellness journey in Oud-Zuid? <a href="/schedule">Book a Pilates class</a> at PT Studio 7 and experience why Museumplein is Amsterdam's wellness heart.</em></p>
+      <p><em>Ready to start your wellness journey in Oud-Zuid? <a href="/schedule/">Book a Pilates class</a> at PT Studio 7 and experience why Museumplein is Amsterdam's wellness heart.</em></p>
     `,
     author: 'PT Studio 7 Team',
     date: '2026-01-22',
@@ -984,7 +984,7 @@ export const blogPosts: BlogPost[] = [
         <li>Stop immediately if pain, dizziness, bleeding, contractions, or unusual symptoms appear.</li>
       </ul>
 
-      <p>If you are dealing with pelvic pain, pubic symphysis discomfort, high blood pressure, IVF-related anxiety, prior miscarriage history, or significant fatigue, private training is often the safest and most effective path. You can review options on our <a href="/pricing">private session pricing page</a>.</p>
+      <p>If you are dealing with pelvic pain, pubic symphysis discomfort, high blood pressure, IVF-related anxiety, prior miscarriage history, or significant fatigue, private training is often the safest and most effective path. You can review options on our <a href="/pricing/">private session pricing page</a>.</p>
 
       <h2>First Trimester (Weeks 1-13): Build Capacity Without Overload</h2>
       <p>The first trimester can feel unpredictable. Some women feel strong; others experience fatigue, nausea, dizziness, or food aversions. This is not the time to chase performance. It is the time to establish movement habits that support the months ahead.</p>
@@ -1012,7 +1012,7 @@ export const blogPosts: BlogPost[] = [
         <li>Over-focusing on ab exercises instead of whole-body support patterns.</li>
       </ul>
 
-      <p>If your symptoms fluctuate daily, private sessions can help preserve progress without overwhelm. A good coach adapts session structure in real time so you finish feeling better, not depleted. For tailored one-on-one work, check our <a href="/pricing">private class packages</a>.</p>
+      <p>If your symptoms fluctuate daily, private sessions can help preserve progress without overwhelm. A good coach adapts session structure in real time so you finish feeling better, not depleted. For tailored one-on-one work, check our <a href="/pricing/">private class packages</a>.</p>
 
       <h2>Second Trimester (Weeks 14-27): Strength + Stability + Space</h2>
       <p>The second trimester is often the "golden window" for prenatal training. Energy usually improves, but structural changes become more obvious: your bump grows, posture shifts, and joint laxity can increase. Smart programming now can make late pregnancy dramatically more comfortable.</p>
@@ -1081,7 +1081,7 @@ export const blogPosts: BlogPost[] = [
         <li>Very intentional transitions to prevent strain in daily life.</li>
       </ul>
 
-      <p>This stage is where one-on-one guidance often matters most. You may need pillows, props, modified equipment setup, and frequent pacing adjustments. If you want a personalized third-trimester plan, our <a href="/pricing">private prenatal pricing options</a> are designed for exactly this phase.</p>
+      <p>This stage is where one-on-one guidance often matters most. You may need pillows, props, modified equipment setup, and frequent pacing adjustments. If you want a personalized third-trimester plan, our <a href="/pricing/">private prenatal pricing options</a> are designed for exactly this phase.</p>
 
       <h2>Pelvic Floor Deep Dive: Strength Is Only Half the Story</h2>
       <p>Let us address one of the biggest prenatal myths: a strong pelvic floor is not always a better pelvic floor. During pregnancy and birth, your pelvic floor must respond to changing pressure loads and eventually allow expansion for delivery.</p>
@@ -1108,7 +1108,7 @@ export const blogPosts: BlogPost[] = [
         <li>A goal for highly specific birth-prep coaching.</li>
       </ul>
 
-      <p>Private training also helps if you are short on time and want maximum quality in a single weekly session. You can compare all options on our <a href="/pricing">pricing page</a>, including one-on-one packages.</p>
+      <p>Private training also helps if you are short on time and want maximum quality in a single weekly session. You can compare all options on our <a href="/pricing/">pricing page</a>, including one-on-one packages.</p>
 
       <h2>How Often Should You Train During Pregnancy?</h2>
       <p>There is no single perfect number, but here is what works for most clients:</p>
@@ -1161,12 +1161,12 @@ export const blogPosts: BlogPost[] = [
 
       <h3>Related Pages for Pregnancy Support in Amsterdam</h3>
       <ul>
-        <li><a href="/workouts/reformer-pilates">Reformer Pilates Amsterdam</a> — see how classes are structured and what to expect.</li>
-        <li><a href="/pricing">Private session pricing</a> — compare one-on-one packages for trimester-specific support.</li>
-        <li><a href="/healthcare-providers">For healthcare providers</a> — referral information for physiotherapists, GPs, and specialists.</li>
+        <li><a href="/workouts/reformer-pilates/">Reformer Pilates Amsterdam</a> — see how classes are structured and what to expect.</li>
+        <li><a href="/pricing/">Private session pricing</a> — compare one-on-one packages for trimester-specific support.</li>
+        <li><a href="/healthcare-providers/">For healthcare providers</a> — referral information for physiotherapists, GPs, and specialists.</li>
       </ul>
 
-      <p><em>Ready for personalized prenatal support? See our <a href="/pricing">private session pricing</a>, then <a href="/schedule">book your session</a> at PT Studio 7 Museumplein.</em></p>
+      <p><em>Ready for personalized prenatal support? See our <a href="/pricing/">private session pricing</a>, then <a href="/schedule/">book your session</a> at PT Studio 7 Museumplein.</em></p>
     `,
     author: 'Elif Arzu Ogan',
     date: '2025-11-05',

@@ -10,7 +10,7 @@ export const ClassPassOffer = () => {
         title="ClassPass Transition Offer | PT Studio 7 Amsterdam"
         description="A clear transition offer for ClassPass clients moving to PT Studio 7 direct pricing. Compare costs and claim 20% off eligible first purchases."
         keywords="ClassPass Amsterdam, Pilates ClassPass, ClassPass offer, Pilates membership Amsterdam"
-        canonical="https://www.pt7.nl/classpass-offer"
+        canonical="https://www.pt7.nl/classpass-offer/"
         ogTitle="ClassPass Clients: PT Studio 7 Direct Offer"
         ogDescription="Compare ClassPass costs with PT Studio 7 direct pricing and claim your transition discount."
       />
@@ -125,7 +125,7 @@ export const ClassPassOffer = () => {
               </div>
             </div>
             <p className="offer-note">Contact us for your discount code. Available for new direct clients on eligible first purchases.</p>
-            <Link to="/pricing" className="cp-cta-button offer-cta">View All Pricing Options</Link>
+            <Link to="/pricing/" className="cp-cta-button offer-cta">View All Pricing Options</Link>
           </div>
         </section>
 
@@ -216,8 +216,8 @@ export const ClassPassOffer = () => {
           <h2>Ready to Switch to Direct?</h2>
           <p>Review pricing options and choose the format that fits your schedule.</p>
           <div className="cta-buttons">
-            <Link to="/pricing" className="cp-cta-button primary">View Pricing Options</Link>
-            <Link to="/schedule" className="cp-cta-button secondary">View Schedule</Link>
+            <Link to="/pricing/" className="cp-cta-button primary">View Pricing Options</Link>
+            <Link to="/schedule/" className="cp-cta-button secondary">View Schedule</Link>
           </div>
         </section>
       </div>

@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { withTrailingSlash } from '../utils/urls';
 
 export type HreflangAlternate = {
   hreflang: string;
@@ -41,6 +42,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     document.documentElement.lang = htmlLang;
 
     const baseUrl = 'https://www.pt7.nl';
+    const canonicalUrl = withTrailingSlash(canonical);
     const absoluteImageUrl = ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`;
 
     const updateMetaTag = (name: string, content: string, property?: boolean) => {
@@ -76,7 +78,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     updateMetaTag('og:type', 'website', true);
     updateMetaTag('og:title', ogTitle || title, true);
     updateMetaTag('og:description', ogDescription || description, true);
-    updateMetaTag('og:url', canonical, true);
+    updateMetaTag('og:url', canonicalUrl, true);
     updateMetaTag('og:site_name', 'PT Studio 7 Amsterdam', true);
     updateMetaTag('og:image', absoluteImageUrl, true);
     updateMetaTag('og:image:secure_url', absoluteImageUrl, true);
@@ -97,7 +99,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       canonicalLink.rel = 'canonical';
       document.head.appendChild(canonicalLink);
     }
-    canonicalLink.href = canonical;
+    canonicalLink.href = canonicalUrl;
 
     document.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => el.remove());
     if (hreflangAlternates?.length) {
@@ -105,7 +107,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
         const link = document.createElement('link');
         link.rel = 'alternate';
         link.hreflang = alt.hreflang;
-        link.href = alt.href;
+        link.href = withTrailingSlash(alt.href);
         document.head.appendChild(link);
       }
     }

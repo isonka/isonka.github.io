@@ -1,9 +1,17 @@
 import { useEffect, lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Navigate,
+  Outlet,
+  useNavigate,
+  useLocation,
+} from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
 import { CookieConsent } from './components/CookieConsent';
+import { withTrailingSlash } from './utils/urls';
 import { Home } from './pages/Home';
 import './App.css';
 
@@ -29,19 +37,40 @@ const TRXTrainingAmsterdam = lazy(() => import('./pages/TRXTrainingAmsterdam').t
 const StrengthTrainingAmsterdam = lazy(() => import('./pages/StrengthTrainingAmsterdam').then(m => ({ default: m.StrengthTrainingAmsterdam })));
 const ReformerPilatesAmsterdam = lazy(() => import('./pages/ReformerPilatesAmsterdam').then(m => ({ default: m.ReformerPilatesAmsterdam })));
 
-// Component to handle GitHub Pages redirects
+/** Keep SPA URLs on trailing-slash form (matches GH Pages 200 URLs). */
+function TrailingSlashNormalizer() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const normalized = withTrailingSlash(location.pathname);
+    if (normalized !== location.pathname) {
+      navigate(`${normalized}${location.search}${location.hash}`, { replace: true });
+    }
+  }, [location.pathname, location.search, location.hash, navigate]);
+
+  return null;
+}
+
+/** GitHub Pages SPA fallback: 404.html stores intended path in sessionStorage */
 function RedirectHandler() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Handle GitHub Pages SPA routing
-    // The 404.html stores the intended path in sessionStorage
     const redirect = sessionStorage.getItem('ghPagesRedirect');
-    if (redirect && redirect !== '/') {
-      sessionStorage.removeItem('ghPagesRedirect');
-      // Navigate to the stored path
-      navigate(redirect, { replace: true });
-    }
+    if (!redirect || redirect === '/') return;
+
+    sessionStorage.removeItem('ghPagesRedirect');
+
+    const qIndex = redirect.indexOf('?');
+    const hIndex = redirect.indexOf('#');
+    let pathEnd = redirect.length;
+    if (qIndex !== -1) pathEnd = Math.min(pathEnd, qIndex);
+    if (hIndex !== -1) pathEnd = Math.min(pathEnd, hIndex);
+
+    const path = withTrailingSlash(redirect.slice(0, pathEnd) || '/');
+    const rest = redirect.slice(pathEnd);
+    navigate(`${path}${rest}`, { replace: true });
   }, [navigate]);
 
   return null;
@@ -56,45 +85,18 @@ function RouteFallback() {
   );
 }
 
-function App() {
+function Layout() {
   return (
-    <Router>
+    <>
       <CookieConsent />
       <ScrollToTop />
+      <TrailingSlashNormalizer />
       <RedirectHandler />
       <div className="app">
         <Navbar />
         <main className="main-content">
           <Suspense fallback={<RouteFallback />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/pricing" element={<Pricing />} />
-              <Route path="/schedule" element={<Schedule />} />
-              <Route path="/equipment" element={<Equipment />} />
-              <Route path="/equipment/:slug" element={<EquipmentDetail />} />
-              <Route path="/workouts/:slug" element={<WorkoutDetail />} />
-              <Route path="/congrats" element={<Congrats />} />
-              <Route path="/index.html" element={<Navigate to="/" replace />} />
-              <Route path="/congrats.html" element={<Navigate to="/congrats" replace />} />
-              <Route path="/instructors" element={<Trainers />} />
-              <Route path="/trainer/:slug" element={<TrainerDetail />} />
-              <Route path="/academy" element={<Academy />} />
-              <Route path="/academy/nl" element={<AcademyNl />} />
-              <Route
-                path="/pilates-instructor-course-amsterdam"
-                element={<Navigate to="/academy" replace />}
-              />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
-              <Route path="/classpass-offer" element={<ClassPassOffer />} />
-              <Route path="/healthcare-providers" element={<HealthcareProviders />} />
-              <Route path="/prenatal-pilates-amsterdam" element={<PrenatalPilatesAmsterdam />} />
-              <Route path="/pregnancy-pilates-amsterdam" element={<PregnancyPilates />} />
-              <Route path="/private-pilates-amsterdam" element={<PrivatePilates />} />
-              <Route path="/trx-training-amsterdam" element={<TRXTrainingAmsterdam />} />
-              <Route path="/strength-training-amsterdam" element={<StrengthTrainingAmsterdam />} />
-              <Route path="/reformer-pilates-amsterdam" element={<ReformerPilatesAmsterdam />} />
-            </Routes>
+            <Outlet />
           </Suspense>
         </main>
         <Footer />
@@ -102,8 +104,48 @@ function App() {
           <Chatbot />
         </Suspense>
       </div>
-    </Router>
+    </>
   );
+}
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: 'pricing', element: <Pricing /> },
+      { path: 'schedule', element: <Schedule /> },
+      { path: 'equipment', element: <Equipment /> },
+      { path: 'equipment/:slug', element: <EquipmentDetail /> },
+      { path: 'workouts/:slug', element: <WorkoutDetail /> },
+      { path: 'congrats', element: <Congrats /> },
+      { path: 'index.html', element: <Navigate to="/" replace /> },
+      { path: 'congrats.html', element: <Navigate to="/congrats/" replace /> },
+      { path: 'instructors', element: <Trainers /> },
+      { path: 'trainer/:slug', element: <TrainerDetail /> },
+      { path: 'academy', element: <Academy /> },
+      { path: 'academy/nl', element: <AcademyNl /> },
+      {
+        path: 'pilates-instructor-course-amsterdam',
+        element: <Navigate to="/academy/" replace />,
+      },
+      { path: 'blog', element: <Blog /> },
+      { path: 'blog/:slug', element: <BlogPost /> },
+      { path: 'classpass-offer', element: <ClassPassOffer /> },
+      { path: 'healthcare-providers', element: <HealthcareProviders /> },
+      { path: 'prenatal-pilates-amsterdam', element: <PrenatalPilatesAmsterdam /> },
+      { path: 'pregnancy-pilates-amsterdam', element: <PregnancyPilates /> },
+      { path: 'private-pilates-amsterdam', element: <PrivatePilates /> },
+      { path: 'trx-training-amsterdam', element: <TRXTrainingAmsterdam /> },
+      { path: 'strength-training-amsterdam', element: <StrengthTrainingAmsterdam /> },
+      { path: 'reformer-pilates-amsterdam', element: <ReformerPilatesAmsterdam /> },
+    ],
+  },
+]);
+
+function App() {
+  return <RouterProvider router={router} />;
 }
 
 export default App;

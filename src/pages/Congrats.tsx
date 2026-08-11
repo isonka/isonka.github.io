@@ -38,7 +38,7 @@ export const Congrats: React.FC = () => {
         title="Booking Confirmed - PT Studio 7 Amsterdam"
         description="Your class is booked! See you at PT Studio 7 Amsterdam."
         keywords="PT Studio 7, booking confirmed"
-        canonical="https://www.pt7.nl/congrats"
+        canonical="https://www.pt7.nl/congrats/"
       />
 
       <div className="congrats-page">
@@ -69,8 +69,8 @@ export const Congrats: React.FC = () => {
           </div>
 
           <div className="action-buttons">
-            <Link to="/schedule" className="btn-primary">Book Another Class</Link>
-            <Link to="/pricing" className="btn-secondary">View Packages</Link>
+            <Link to="/schedule/" className="btn-primary">Book Another Class</Link>
+            <Link to="/pricing/" className="btn-secondary">View Packages</Link>
             <Link to="/" className="btn-secondary">Back to Home</Link>
           </div>
 

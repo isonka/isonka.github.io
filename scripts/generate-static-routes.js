@@ -81,7 +81,7 @@ const routeMeta = {
     title: 'Pregnancy Pilates Amsterdam | PT Studio 7',
     description: 'Pregnancy-safe Reformer Pilates in Amsterdam Museumplein. Redirects to our prenatal private sessions page.',
     image: DEFAULT_IMAGE,
-    canonical: 'https://www.pt7.nl/prenatal-pilates-amsterdam',
+    canonical: 'https://www.pt7.nl/prenatal-pilates-amsterdam/',
   },
   'schedule': {
     title: 'Class Schedule | PT Studio 7 Amsterdam',
@@ -253,7 +253,7 @@ routes.forEach(route => {
   // If this route has custom meta tags, inject them
   const meta = routeMeta[route];
   if (meta) {
-    const fullUrl = `${BASE_URL}/${route}`;
+    const fullUrl = `${BASE_URL}/${route}/`;
     const canonicalUrl = meta.canonical || fullUrl;
     const imageUrl = `${BASE_URL}${meta.image}`;
     

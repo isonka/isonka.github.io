@@ -403,11 +403,11 @@ export const AcademyNl: React.FC = () => {
                   <h3>Carrièreswitchers</h3>
                   <p>
                     Veel trainees komen uit banking, tech en andere sectoren. Lees hoe de switch werkt in onze{' '}
-                    <Link to="/blog/career-change-banker-to-pilates-instructor">
+                    <Link to="/blog/career-change-banker-to-pilates-instructor/">
                       carrièreswitchgids
                     </Link>
                     , en ontmoet cursusleider{' '}
-                    <Link to="/trainer/elif">Elif Arzu Ogan</Link>.
+                    <Link to="/trainer/elif/">Elif Arzu Ogan</Link>.
                   </p>
                 </div>
                 <div className="benefit-card">

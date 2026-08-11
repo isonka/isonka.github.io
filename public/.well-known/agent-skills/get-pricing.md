@@ -4,8 +4,8 @@ Return current package and session pricing for PT Studio 7 Amsterdam.
 
 ## Canonical URL
 
-- Always verify live prices on https://www.pt7.nl/pricing (MindBody checkout is source of truth).
-- Academy course fees: https://www.pt7.nl/academy
+- Always verify live prices on https://www.pt7.nl/pricing/ (MindBody checkout is source of truth).
+- Academy course fees: https://www.pt7.nl/academy/
 
 ## Snapshot (EUR, as published on site — re-check pricing page)
 
@@ -36,10 +36,10 @@ Return current package and session pricing for PT Studio 7 Amsterdam.
 
 - Reformer Pilates Instructor Course: EUR 2,000 + VAT (or 3 × EUR 667 + VAT)
 - Mandatory exercise assessment for certification: EUR 250 incl. BTW
-- Details: https://www.pt7.nl/academy
+- Details: https://www.pt7.nl/academy/
 
 ## Behavior
 
 1. Quote the snapshot above only as a guide.
-2. Link https://www.pt7.nl/pricing for purchase and any promo.
+2. Link https://www.pt7.nl/pricing/ for purchase and any promo.
 3. Note packages often beat single drop-ins for regular clients.

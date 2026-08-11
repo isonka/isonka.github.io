@@ -44,7 +44,7 @@ export const TRXTrainingAmsterdam: React.FC = () => {
         title="TRX Training Amsterdam Museumplein | PT Studio 7"
         description="Professional TRX suspension training at Museumplein Amsterdam. Build functional strength, core stability and balance with certified trainers. Small groups & private sessions."
         keywords="TRX training amsterdam, TRX suspension training amsterdam, TRX les amsterdam, TRX museumplein, suspension training amsterdam, TRX personal training amsterdam, functionele training amsterdam, TRX oud-zuid"
-        canonical="https://www.pt7.nl/trx-training-amsterdam"
+        canonical="https://www.pt7.nl/trx-training-amsterdam/"
         ogTitle="TRX Training Amsterdam | PT Studio 7 Museumplein"
         ogDescription="Professional TRX suspension training at Museumplein Amsterdam. Functional strength, core stability and balance. Certified trainers, small groups & private sessions."
       />
@@ -68,7 +68,7 @@ export const TRXTrainingAmsterdam: React.FC = () => {
               <span className="service-badge">All levels</span>
               <span className="service-badge">Museumplein Amsterdam</span>
             </div>
-            <Link to="/schedule" className="service-hero-btn">Book a TRX Session</Link>
+            <Link to="/schedule/" className="service-hero-btn">Book a TRX Session</Link>
           </div>
         </section>
 
@@ -153,8 +153,8 @@ export const TRXTrainingAmsterdam: React.FC = () => {
             functional training can do for your strength and fitness.
           </p>
           <div className="service-cta-buttons">
-            <Link to="/schedule" className="service-cta-btn-primary">Book a Session</Link>
-            <Link to="/workouts/trx" className="service-cta-btn-secondary">Learn More About TRX</Link>
+            <Link to="/schedule/" className="service-cta-btn-primary">Book a Session</Link>
+            <Link to="/workouts/trx/" className="service-cta-btn-secondary">Learn More About TRX</Link>
           </div>
         </section>
       </div>

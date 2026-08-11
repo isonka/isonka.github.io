@@ -39,11 +39,11 @@ export const Footer: React.FC = () => {
         <p className="footer-copyright">© {new Date().getFullYear()} PT Studio 7 Amsterdam. All rights reserved.</p>
         <p className="footer-credit">Website by <a href="https://karams.nl" target="_blank" rel="noopener noreferrer">Kara</a></p>
         <ul className="footer-links">
-          <li><Link to="/schedule">Book</Link></li>
-          <li><Link to="/pricing">Pricing</Link></li>
-          <li><Link to="/reformer-pilates-amsterdam">Reformer Pilates</Link></li>
-          <li><Link to="/prenatal-pilates-amsterdam">Prenatal</Link></li>
-          <li><Link to="/academy">Pilates teacher training</Link></li>
+          <li><Link to="/schedule/">Book</Link></li>
+          <li><Link to="/pricing/">Pricing</Link></li>
+          <li><Link to="/reformer-pilates-amsterdam/">Reformer Pilates</Link></li>
+          <li><Link to="/prenatal-pilates-amsterdam/">Prenatal</Link></li>
+          <li><Link to="/academy/">Pilates teacher training</Link></li>
           <li><a href="#contact" onClick={handleContactClick}>Contact</a></li>
           <li><a href="#" onClick={handleCookieSettings}>Cookie Settings</a></li>
         </ul>

@@ -3,7 +3,7 @@ import '../styles/AcademyUrgencyBanner.css';
 
 export const AcademyUrgencyBanner: React.FC = () => (
   <Link
-    to="/academy"
+    to="/academy/"
     className="academy-urgency-banner"
     aria-label="Become a Pilates instructor — Pilates teacher training at PT7 Academy"
   >

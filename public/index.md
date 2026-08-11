@@ -21,13 +21,13 @@ Boutique Pilates and personal training studio in Museumplein, Amsterdam.
 ## Primary Links
 
 - Website: <https://www.pt7.nl/>
-- Schedule: <https://www.pt7.nl/schedule>
-- Pricing: <https://www.pt7.nl/pricing>
-- Instructors: <https://www.pt7.nl/instructors>
-- Academy: <https://www.pt7.nl/academy>
-- Equipment: <https://www.pt7.nl/equipment>
-- Blog: <https://www.pt7.nl/blog>
-- Reformer Pilates Amsterdam: <https://www.pt7.nl/reformer-pilates-amsterdam>
+- Schedule: <https://www.pt7.nl/schedule/>
+- Pricing: <https://www.pt7.nl/pricing/>
+- Instructors: <https://www.pt7.nl/instructors/>
+- Academy: <https://www.pt7.nl/academy/>
+- Equipment: <https://www.pt7.nl/equipment/>
+- Blog: <https://www.pt7.nl/blog/>
+- Reformer Pilates Amsterdam: <https://www.pt7.nl/reformer-pilates-amsterdam/>
 
 ## Contact
 

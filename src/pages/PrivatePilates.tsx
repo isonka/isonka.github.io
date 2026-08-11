@@ -44,7 +44,7 @@ export const PrivatePilates: React.FC = () => {
         title="Private Reformer Pilates Sessions Amsterdam | PT Studio 7"
         description="One-on-one private Reformer Pilates sessions at Museumplein Amsterdam. 100% personalised training with certified instructors. Duo & trio options available. Book now."
         keywords="private pilates amsterdam, privé pilates amsterdam, one on one pilates amsterdam, personal pilates amsterdam, pilates prive les amsterdam, prive pilates museumplein, privé reformer pilates, priveles pilates amsterdam"
-        canonical="https://www.pt7.nl/private-pilates-amsterdam"
+        canonical="https://www.pt7.nl/private-pilates-amsterdam/"
         ogTitle="Private Reformer Pilates Amsterdam | PT Studio 7 Museumplein"
         ogDescription="100% personalised private Pilates sessions at Museumplein. One-on-one, duo or trio. Certified instructors with 15+ years experience."
       />
@@ -68,7 +68,7 @@ export const PrivatePilates: React.FC = () => {
               <span className="service-badge">All levels welcome</span>
               <span className="service-badge">Museumplein Amsterdam</span>
             </div>
-            <Link to="/schedule" className="service-hero-btn">Book a Private Session</Link>
+            <Link to="/schedule/" className="service-hero-btn">Book a Private Session</Link>
           </div>
         </section>
 
@@ -155,8 +155,8 @@ export const PrivatePilates: React.FC = () => {
             format is right for you.
           </p>
           <div className="service-cta-buttons">
-            <Link to="/schedule" className="service-cta-btn-primary">Book a Private Session</Link>
-            <Link to="/pricing" className="service-cta-btn-secondary">View Pricing</Link>
+            <Link to="/schedule/" className="service-cta-btn-primary">Book a Private Session</Link>
+            <Link to="/pricing/" className="service-cta-btn-secondary">View Pricing</Link>
           </div>
         </section>
       </div>

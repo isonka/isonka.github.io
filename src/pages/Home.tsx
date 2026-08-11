@@ -151,8 +151,8 @@ export const Home: React.FC = () => {
                   Private Sessions & Small Groups (Max 5)
               </p>
             <div className="hero-buttons">
-              <Link to="/schedule" className="hero-btn-primary" onClick={() => trackFBBookingClick()}>Book a Class</Link>
-              <Link to="/pricing" className="hero-btn-secondary">View Pricing</Link>
+              <Link to="/schedule/" className="hero-btn-primary" onClick={() => trackFBBookingClick()}>Book a Class</Link>
+              <Link to="/pricing/" className="hero-btn-secondary">View Pricing</Link>
             </div>
             <div className="hero-features">
               <div className="feature-item">
@@ -197,15 +197,15 @@ export const Home: React.FC = () => {
             </p>
             <p className="about-explore">
               Start here:{' '}
-              <Link to="/reformer-pilates-amsterdam">Reformer Pilates Amsterdam (Museumplein)</Link>
+              <Link to="/reformer-pilates-amsterdam/">Reformer Pilates Amsterdam (Museumplein)</Link>
               {' · '}
-              <Link to="/private-pilates-amsterdam">Private Pilates</Link>
+              <Link to="/private-pilates-amsterdam/">Private Pilates</Link>
               {' · '}
-              <Link to="/prenatal-pilates-amsterdam">Prenatal Pilates</Link>
+              <Link to="/prenatal-pilates-amsterdam/">Prenatal Pilates</Link>
               {' · '}
-              <Link to="/trx-training-amsterdam">TRX</Link>
+              <Link to="/trx-training-amsterdam/">TRX</Link>
               {' · '}
-              <Link to="/strength-training-amsterdam">Strength Training</Link>
+              <Link to="/strength-training-amsterdam/">Strength Training</Link>
             </p>
             <p className="about-signature">
               <strong>Elif Arzu Ogan</strong><br/>
@@ -256,9 +256,9 @@ export const Home: React.FC = () => {
         </div>
         <p className="section-footer-link">
           Want to teach?{' '}
-          <Link to="/academy">Become a Pilates instructor</Link>
+          <Link to="/academy/">Become a Pilates instructor</Link>
           {' — '}
-          <Link to="/academy">Pilates teacher training</Link> at PT7 Academy.
+          <Link to="/academy/">Pilates teacher training</Link> at PT7 Academy.
         </p>
       </section>
 

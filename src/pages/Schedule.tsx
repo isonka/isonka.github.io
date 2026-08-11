@@ -49,7 +49,7 @@ export const Schedule: React.FC = () => {
         title="Class Schedule & Booking | PT Studio 7 Amsterdam"
         description="Book your Reformer Pilates class at PT Studio 7 Museumplein. View our weekly schedule for private sessions and small group classes (max 5 people)."
         keywords="Pilates boeken Amsterdam, Pilates rooster Amsterdam, Pilates reserveren, TRX boeken Amsterdam, les boeken Museumplein, Pilates schedule Amsterdam, groepsles boeken"
-        canonical="https://www.pt7.nl/schedule"
+        canonical="https://www.pt7.nl/schedule/"
         ogTitle="Class Schedule & Booking | PT Studio 7 Amsterdam"
         ogDescription="Book your Reformer Pilates class at PT Studio 7 Museumplein. Weekly schedule for private sessions and small group classes (max 5 people)."
       />
@@ -125,7 +125,7 @@ export const Schedule: React.FC = () => {
                 {widgetsError && (
                   <p className="widget-error" role="alert">
                     Booking calendar could not load. Please{' '}
-                    <a href="/schedule">refresh this page</a> or call us to book.
+                    <a href="/schedule/">refresh this page</a> or call us to book.
                   </p>
                 )}
                 <div
@@ -177,7 +177,7 @@ export const Schedule: React.FC = () => {
                 {widgetsError && (
                   <p className="widget-error" role="alert">
                     Booking calendar could not load. Please{' '}
-                    <a href="/schedule">refresh this page</a> or call us to book.
+                    <a href="/schedule/">refresh this page</a> or call us to book.
                   </p>
                 )}
                 <div
@@ -195,7 +195,7 @@ export const Schedule: React.FC = () => {
           <div className="cta-section">
             <h2>Need Help Choosing?</h2>
             <p>Not sure whether group classes or private classes are right for you? Check out our pricing or contact us for guidance.</p>
-            <Link to="/pricing" className="cta-button">View Pricing & Packages</Link>
+            <Link to="/pricing/" className="cta-button">View Pricing & Packages</Link>
           </div>
         </section>
       </div>

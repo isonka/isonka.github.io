@@ -43,7 +43,7 @@ export const BlogPost: React.FC = () => {
 
   // If post not found, redirect to blog page
   if (!post) {
-    return <Navigate to="/blog" replace />;
+    return <Navigate to="/blog/" replace />;
   }
 
   return (
@@ -52,7 +52,7 @@ export const BlogPost: React.FC = () => {
         title={`${post.title} | PT Studio 7 Amsterdam Blog`}
         description={post.metaDescription}
         keywords={post.keywords.join(', ')}
-        canonical={`https://www.pt7.nl/blog/${post.slug}`}
+        canonical={`https://www.pt7.nl/blog/${post.slug}/`}
         ogTitle={post.title}
         ogDescription={post.metaDescription}
         ogImage={`https://www.pt7.nl${post.image}`}
@@ -79,7 +79,7 @@ export const BlogPost: React.FC = () => {
         <nav className="breadcrumb">
           <Link to="/">Home</Link>
           <span>/</span>
-          <Link to="/blog">Blog</Link>
+          <Link to="/blog/">Blog</Link>
           <span>/</span>
           <span>{post.title}</span>
         </nav>
@@ -125,7 +125,7 @@ export const BlogPost: React.FC = () => {
           <div className="blog-post-cta">
             <h3>Experience It Yourself</h3>
             <p>Ready to try Pilates at PT Studio 7 Amsterdam? Book your class today at our beautiful Museumplein studio.</p>
-            <Link to="/schedule" className="cta-button">Book Your Class</Link>
+            <Link to="/schedule/" className="cta-button">Book Your Class</Link>
           </div>
         </article>
 
@@ -139,7 +139,7 @@ export const BlogPost: React.FC = () => {
                 {recentPosts.map((recentPost) => (
                   <Link 
                     key={recentPost.id} 
-                    to={`/blog/${recentPost.slug}`}
+                    to={`/blog/${recentPost.slug}/`}
                     className="recent-post-card"
                   >
                     <div className="recent-post-image">
@@ -175,7 +175,7 @@ export const BlogPost: React.FC = () => {
               Located at Museumplein in Amsterdam, PT Studio 7 offers premium Pilates, 
               TRX, and functional fitness with expert instructors in an intimate setting.
             </p>
-            <Link to="/pricing" className="sidebar-link">View Our Packages →</Link>
+            <Link to="/pricing/" className="sidebar-link">View Our Packages →</Link>
           </div>
         </aside>
       </div>

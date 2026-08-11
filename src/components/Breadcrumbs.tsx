@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { StructuredData } from './StructuredData';
+import { withTrailingSlash } from '../utils/urls';
 
 interface BreadcrumbItem {
   name: string;
@@ -12,12 +13,12 @@ interface BreadcrumbsProps {
 
 export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items }) => {
   const baseUrl = 'https://www.pt7.nl';
-  
+
   const breadcrumbData = [
-    { name: 'Home', url: baseUrl },
+    { name: 'Home', url: `${baseUrl}/` },
     ...items.map((item) => ({
       name: item.name,
-      url: `${baseUrl}${item.path}`,
+      url: withTrailingSlash(`${baseUrl}${item.path}`),
     })),
   ];
 
@@ -34,7 +35,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items }) => {
               {index === items.length - 1 ? (
                 <span aria-current="page">{item.name}</span>
               ) : (
-                <Link to={item.path}>{item.name}</Link>
+                <Link to={withTrailingSlash(item.path)}>{item.name}</Link>
               )}
             </li>
           ))}
@@ -43,4 +44,3 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items }) => {
     </>
   );
 };
-

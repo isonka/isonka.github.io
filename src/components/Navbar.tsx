@@ -82,7 +82,7 @@ export const Navbar: React.FC = () => {
         </div>
         
         <Link 
-          to="/schedule" 
+          to="/schedule/" 
           className="navbar-booknow-mobile" 
           aria-label="Book a session"
           onClick={() => trackBookNowClick('navbar-mobile')}
@@ -103,9 +103,9 @@ export const Navbar: React.FC = () => {
         <ul className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
           <li><a href="#about" aria-label="Learn about us" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About Us</a></li>
           <li><a href="#reviews" aria-label="Read reviews" onClick={(e) => { e.preventDefault(); scrollToSection('reviews'); }}>Reviews</a></li>
-          <li><Link to="/instructors" aria-label="Meet our instructors" onClick={closeMenu}>Instructors</Link></li>
-          <li><Link to="/pricing" aria-label="View pricing" onClick={closeMenu}>Prices</Link></li>
-          <li><Link to="/academy" aria-label="Pilates teacher training — PT7 Academy" onClick={closeMenu}>Academy</Link></li>
+          <li><Link to="/instructors/" aria-label="Meet our instructors" onClick={closeMenu}>Instructors</Link></li>
+          <li><Link to="/pricing/" aria-label="View pricing" onClick={closeMenu}>Prices</Link></li>
+          <li><Link to="/academy/" aria-label="Pilates teacher training — PT7 Academy" onClick={closeMenu}>Academy</Link></li>
           <li className="navbar-dropdown">
             <button
               type="button"
@@ -118,9 +118,9 @@ export const Navbar: React.FC = () => {
             </button>
             <ul className={`navbar-dropdown-menu ${moreOpen ? 'open' : ''}`}>
               <li><a href="#workouts" onClick={(e) => { e.preventDefault(); closeMenu(); setMoreOpen(false); scrollToSection('workouts'); }}>Workouts</a></li>
-              <li><Link to="/equipment" onClick={() => { closeMenu(); setMoreOpen(false); }}>Shop Equipment</Link></li>
-              <li><Link to="/healthcare-providers" onClick={() => { closeMenu(); setMoreOpen(false); }}>For Healthcare</Link></li>
-              <li><Link to="/blog" onClick={() => { closeMenu(); setMoreOpen(false); }}>Blog</Link></li>
+              <li><Link to="/equipment/" onClick={() => { closeMenu(); setMoreOpen(false); }}>Shop Equipment</Link></li>
+              <li><Link to="/healthcare-providers/" onClick={() => { closeMenu(); setMoreOpen(false); }}>For Healthcare</Link></li>
+              <li><Link to="/blog/" onClick={() => { closeMenu(); setMoreOpen(false); }}>Blog</Link></li>
             </ul>
           </li>
           <li><a href="#contact" aria-label="Contact us" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</a></li>
@@ -134,7 +134,7 @@ export const Navbar: React.FC = () => {
             />
           </li>
           <li className="navbar-booknow-desktop-wrapper">
-            <Link to="/schedule" className="navbar-booknow-desktop" aria-label="Book a class" onClick={() => { closeMenu(); trackBookNowClick('navbar-desktop'); }}>
+            <Link to="/schedule/" className="navbar-booknow-desktop" aria-label="Book a class" onClick={() => { closeMenu(); trackBookNowClick('navbar-desktop'); }}>
               Book Now
             </Link>
           </li>

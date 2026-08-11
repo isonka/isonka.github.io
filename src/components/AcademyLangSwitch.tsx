@@ -31,7 +31,7 @@ export const AcademyLangSwitch: React.FC<AcademyLangSwitchProps> = ({ current })
       </span>
     ) : (
       <Link
-        to="/academy"
+        to="/academy/"
         hrefLang="en"
         lang="en"
         className="academy-lang-flag"
@@ -48,7 +48,7 @@ export const AcademyLangSwitch: React.FC<AcademyLangSwitchProps> = ({ current })
       </span>
     ) : (
       <Link
-        to="/academy/nl"
+        to="/academy/nl/"
         hrefLang="nl"
         lang="nl"
         className="academy-lang-flag"

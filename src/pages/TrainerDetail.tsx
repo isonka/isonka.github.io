@@ -10,7 +10,7 @@ export const TrainerDetail: React.FC = () => {
   const trainer = trainerProfiles.find(t => t.slug === slug);
 
   if (!trainer) {
-    return <Navigate to="/instructors" replace />;
+    return <Navigate to="/instructors/" replace />;
   }
 
   const relatedLinksByTrainer: Record<string, { to: string; label: string }[]> = {
@@ -46,7 +46,7 @@ export const TrainerDetail: React.FC = () => {
         title={trainer.seo.title}
         description={trainer.seo.description}
         keywords={trainer.seo.keywords}
-        canonical={`https://www.pt7.nl/trainer/${trainer.slug}`}
+        canonical={`https://www.pt7.nl/trainer/${trainer.slug}/`}
       />
       <StructuredData
         type="Person"
@@ -127,13 +127,13 @@ export const TrainerDetail: React.FC = () => {
             <h2>Ready to Start Your Journey?</h2>
             <p>{trainer.ctaText}</p>
             <div className="cta-buttons">
-              <Link to="/schedule" className="btn-primary">Book a Session</Link>
-              <Link to="/pricing" className="btn-secondary">View Pricing</Link>
+              <Link to="/schedule/" className="btn-primary">Book a Session</Link>
+              <Link to="/pricing/" className="btn-secondary">View Pricing</Link>
             </div>
           </section>
 
           <div className="back-link">
-            <Link to="/instructors">&larr; Back to All Instructors</Link>
+            <Link to="/instructors/">&larr; Back to All Instructors</Link>
           </div>
         </div>
       </div>

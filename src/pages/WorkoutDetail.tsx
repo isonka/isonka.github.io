@@ -30,7 +30,7 @@ export const WorkoutDetail: React.FC = () => {
       name: card.title,
       ...(priceMatch ? { price: priceMatch[1].replace(',', '.') } : {}),
       priceCurrency: 'EUR',
-      url: `${baseUrl}/pricing`,
+      url: `${baseUrl}/pricing/`,
     };
   });
 
@@ -51,7 +51,7 @@ export const WorkoutDetail: React.FC = () => {
           service: {
             name: workout.hero.title,
             description: workout.intro.lead,
-            serviceUrl: `${baseUrl}/workouts/${workout.slug}`,
+            serviceUrl: `${baseUrl}/workouts/${workout.slug}/`,
             areaServed: 'Amsterdam',
             offers: serviceOffers,
           },
@@ -68,7 +68,7 @@ export const WorkoutDetail: React.FC = () => {
           }}
         />
       )}
-      <Breadcrumbs items={[{ name: workout.breadcrumbName, path: `/workouts/${workout.slug}` }]} />
+      <Breadcrumbs items={[{ name: workout.breadcrumbName, path: `/workouts/${workout.slug}/` }]} />
 
       {workout.announcementBanner && (
         <div className="ssl-announcement-banner">
@@ -215,7 +215,7 @@ export const WorkoutDetail: React.FC = () => {
                   <h3>{trainer.name}</h3>
                   <p className="trainer-cert">{trainer.cert}</p>
                   <p>{trainer.description}</p>
-                  <Link to={`/trainer/${trainer.slug}`} className="trainer-link">View Profile →</Link>
+                  <Link to={`/trainer/${trainer.slug}/`} className="trainer-link">View Profile →</Link>
                 </div>
               ))}
             </div>

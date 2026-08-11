@@ -381,7 +381,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
       '@type': 'BlogPosting',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': `${baseUrl}/blog/${bp.slug}`,
+        '@id': `${baseUrl}/blog/${bp.slug}/`,
       },
       headline: bp.headline,
       description: bp.description,
@@ -413,7 +413,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
       '@type': 'Course',
       name: c.name,
       description: c.description,
-      url: c.url ?? `${baseUrl}/academy`,
+      url: c.url ?? `${baseUrl}/academy/`,
       ...(c.timeRequired && { timeRequired: c.timeRequired }),
       ...(c.educationalCredentialAwarded && {
         educationalCredentialAwarded: {
@@ -433,7 +433,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
         '@type': 'Organization',
         name: 'PT 7 Academy',
         url: baseUrl,
-        sameAs: `${baseUrl}/academy`,
+        sameAs: `${baseUrl}/academy/`,
       },
       offers: {
         '@type': 'Offer',
@@ -441,7 +441,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
         priceCurrency: c.priceCurrency,
         availability: 'https://schema.org/LimitedAvailability',
         validFrom: c.startDate,
-        url: c.url ?? `${baseUrl}/academy`,
+        url: c.url ?? `${baseUrl}/academy/`,
       },
       hasCourseInstance: {
         '@type': 'CourseInstance',

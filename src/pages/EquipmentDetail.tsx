@@ -14,18 +14,18 @@ export const EquipmentDetail: React.FC = () => {
   const product = equipmentProducts.find(p => p.slug === slug);
 
   if (!product) {
-    return <Navigate to="/equipment" replace />;
+    return <Navigate to="/equipment/" replace />;
   }
 
   const hasGallery = product.images.length > 1;
   const currentImage = product.images[activeImage] || product.images[0];
   const numericPrice = product.price.replace(/[^\d.,]/g, '').replace(',', '');
-  const productUrl = `https://www.pt7.nl/equipment/${product.slug}`;
+  const productUrl = `https://www.pt7.nl/equipment/${product.slug}/`;
   const workoutByEquipment: Record<string, { to: string; label: string }> = {
-    reformer: { to: '/workouts/reformer-pilates', label: 'Try Reformer Pilates classes' },
-    'tower-reformer': { to: '/workouts/reformer-pilates', label: 'Try Tower/Reformer-style classes' },
-    cadillac: { to: '/workouts/reformer-pilates', label: 'Try equipment-based Pilates classes' },
-    'wunda-chair': { to: '/workouts/reformer-pilates', label: 'Try Pilates classes using this equipment family' },
+    reformer: { to: '/workouts/reformer-pilates/', label: 'Try Reformer Pilates classes' },
+    'tower-reformer': { to: '/workouts/reformer-pilates/', label: 'Try Tower/Reformer-style classes' },
+    cadillac: { to: '/workouts/reformer-pilates/', label: 'Try equipment-based Pilates classes' },
+    'wunda-chair': { to: '/workouts/reformer-pilates/', label: 'Try Pilates classes using this equipment family' },
   };
   const relatedWorkout = workoutByEquipment[product.slug];
 
@@ -35,7 +35,7 @@ export const EquipmentDetail: React.FC = () => {
         title={product.seo.title}
         description={product.seo.description}
         keywords={product.seo.keywords}
-        canonical={`https://www.pt7.nl/equipment/${product.slug}`}
+        canonical={`https://www.pt7.nl/equipment/${product.slug}/`}
       />
       <StructuredData
         type="Product"

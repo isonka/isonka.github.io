@@ -7,8 +7,8 @@ export const ACADEMY_INSTALLMENTS_WIDGET =
 export const ACADEMY_INQUIRY_WIDGET =
   '<healcode-widget data-type="registrations" data-widget-partner="object" data-widget-id="2b154644c036" data-widget-version="0"></healcode-widget>';
 
-export const ACADEMY_URL_EN = 'https://www.pt7.nl/academy';
-export const ACADEMY_URL_NL = 'https://www.pt7.nl/academy/nl';
+export const ACADEMY_URL_EN = 'https://www.pt7.nl/academy/';
+export const ACADEMY_URL_NL = 'https://www.pt7.nl/academy/nl/';
 
 export const COURSE_TITLE = 'Reformer Pilates Instructor Course';
 export const MAT_COURSE_TITLE = 'Mat & Trapeze Table Instructor Course';
