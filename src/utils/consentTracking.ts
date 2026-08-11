@@ -139,46 +139,41 @@ export function loadGTM() {
 }
 
 /**
- * Primary Google tag (GT-…) loads from index.html.
- * After consent we attach GA4 for SPA page_view (and ensure Ads config for conversions).
+ * Load Google tag (GT), Ads (AW), and GA4 after consent.
+ * Consent Mode defaults stay in index.html; this is the first network fetch of gtag.js.
  */
 export function loadGoogleTag() {
   const loaded = getTrackingState();
   if (loaded.gtag) return;
 
   const win = window as Window & { gtag?: GtagFn };
-  const ensureGtag = () => {
-    if (!win.gtag) {
-      window.dataLayer = window.dataLayer || [];
-      win.gtag = (...args: unknown[]) => {
-        window.dataLayer!.push(args);
-      };
-      win.gtag('js', new Date());
-      win.gtag('config', GOOGLE_TAG_ID);
-      win.gtag('config', GOOGLE_ADS_ID);
-    }
-    win.gtag('config', GA_ID, { send_page_view: false });
+  window.dataLayer = window.dataLayer || [];
+  if (!win.gtag) {
+    win.gtag = (...args: unknown[]) => {
+      window.dataLayer!.push(args);
+    };
+  }
+
+  const configure = () => {
+    win.gtag!('js', new Date());
+    win.gtag!('config', GOOGLE_TAG_ID);
+    win.gtag!('config', GOOGLE_ADS_ID);
+    win.gtag!('config', GA_ID, { send_page_view: false });
     markGaReadyAndSendCurrentPage();
   };
 
-  if (document.querySelector(`script[src*="gtag/js?id=${GA_ID}"]`)) {
-    ensureGtag();
+  if (document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
+    configure();
     loaded.gtag = true;
     return;
   }
 
-  const gaScript = document.createElement('script');
-  gaScript.async = true;
-  gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
-  gaScript.onload = ensureGtag;
-  document.head.appendChild(gaScript);
-
-  if (!document.querySelector(`script[src*="gtag/js?id=${GOOGLE_TAG_ID}"]`)) {
-    const googleTagScript = document.createElement('script');
-    googleTagScript.async = true;
-    googleTagScript.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}`;
-    document.head.appendChild(googleTagScript);
-  }
+  const script = document.createElement('script');
+  script.id = 'pt7-gtag';
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}`;
+  script.onload = configure;
+  document.head.appendChild(script);
 
   loaded.gtag = true;
 }

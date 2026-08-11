@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
   <head>
     <meta charset="UTF-8" />
-    <!-- Google Consent Mode v2 (defaults before any Google tags) + Google tag for detection -->
+    <!-- Google Consent Mode v2 defaults only — gtag/GTM/Ads load after PT7 cookie consent -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -19,14 +19,7 @@
       gtag('set', 'ads_data_redaction', true);
       gtag('set', 'url_passthrough', true);
     </script>
-    <!-- Google tag GT-TWM74JTS (+ AW config for Ads conversions); storage denied until PT7 consent banner -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GT-TWM74JTS"></script>
-    <script>
-      gtag('js', new Date());
-      gtag('config', 'GT-TWM74JTS');
-      gtag('config', 'AW-17684932205');
-    </script>
-    <!-- GTM / GA / Meta gated in src/utils/consentTracking.ts after custom cookie consent -->
+    <!-- GTM / GA / Google tag / Meta gated in src/utils/consentTracking.ts -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/pt7logo.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/pt7logo.png" />
@@ -139,16 +132,22 @@
       </style>
     </noscript>
     
-    <!-- Preload critical assets for better LCP -->
-    <link rel="preload" as="image" href="/assets/images/studio.webp" fetchpriority="high" type="image/webp">
+    <!-- Preload LCP hero with responsive candidates -->
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      imagesrcset="/assets/images/studio-800.webp 800w, /assets/images/studio-1200.webp 1200w, /assets/images/studio.webp 1600w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    >
     
     <!-- Optimized Google Fonts - Non-blocking with font-display swap -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
     
-    <!-- MindBody Healcode Widget Script - Deferred to not block rendering -->
-    <script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript" defer></script>
-    
+    <!-- Healcode loaded on demand via src/utils/healcode.ts (Navbar idle + booking pages) -->
+
     <!-- Structured Data - Organization Schema -->
     <script type="application/ld+json">
     {

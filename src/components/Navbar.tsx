@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { trackBookNowClick, trackNavClick } from '../utils/gtmTracking';
+import { loadHealcodeWhenIdle } from '../utils/healcode';
 import '../styles/Navbar.css';
 
 export const Navbar: React.FC = () => {
@@ -13,6 +14,9 @@ export const Navbar: React.FC = () => {
     if (isMenuOpen) setMoreOpen(false);
     setIsMenuOpen(!isMenuOpen);
   };
+
+  // Login | Register healcode widget — load after idle so Home LCP is not competing
+  useEffect(() => loadHealcodeWhenIdle(), []);
 
   // Close More dropdown when clicking outside (desktop)
   useEffect(() => {

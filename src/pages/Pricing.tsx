@@ -3,6 +3,7 @@ import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { trackPricingView, trackPageView } from '../utils/gtmTracking';
+import { ensureHealcodeLoaded } from '../utils/healcode';
 import '../styles/Pricing.css';
 
 declare global {
@@ -10,11 +11,6 @@ declare global {
     interface IntrinsicElements {
       'healcode-widget': any;
     }
-  }
-  interface Window {
-    HealcodeWidget?: {
-      init: () => void;
-    };
   }
 }
 
@@ -58,8 +54,7 @@ export const Pricing: React.FC = () => {
   }, [openFaqIndex]);
 
   useEffect(() => {
-    // Healcode widgets auto-initialize when they detect healcode-widget elements in DOM
-    // No manual initialization needed - the script in index.html handles this automatically
+    void ensureHealcodeLoaded();
   }, [activeTab]);
 
   const pricingFaqs = [
@@ -274,7 +269,7 @@ export const Pricing: React.FC = () => {
                 <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
-                    __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100002" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100002" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
                   }}
                 />
               </div>
@@ -289,7 +284,7 @@ export const Pricing: React.FC = () => {
                 <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
-                    __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100003" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100003" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
                   }}
                 />
               </div>
@@ -305,7 +300,7 @@ export const Pricing: React.FC = () => {
                 <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
-                    __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100004" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100004" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
                   }}
                 />
               </div>
@@ -320,7 +315,7 @@ export const Pricing: React.FC = () => {
                 <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
-                    __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100005" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100005" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
                   }}
                 />
               </div>
@@ -576,7 +571,7 @@ export const Pricing: React.FC = () => {
                 <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
-                    __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100033" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100033" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
                   }}
                 />
               </div>
@@ -591,7 +586,7 @@ export const Pricing: React.FC = () => {
                 <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
-                    __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100034" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100034" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
                   }}
                 />
               </div>
@@ -607,7 +602,7 @@ export const Pricing: React.FC = () => {
                 <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
-                    __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100035" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100035" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
                   }}
                 />
               </div>
@@ -622,7 +617,7 @@ export const Pricing: React.FC = () => {
                 <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
-                    __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100036" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100036" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
                   }}
                 />
               </div>
@@ -646,7 +641,7 @@ export const Pricing: React.FC = () => {
                 <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
-                    __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100037" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100037" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
                   }}
                 />
               </div>
@@ -661,7 +656,7 @@ export const Pricing: React.FC = () => {
                 <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
-                    __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100038" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100038" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
                   }}
                 />
               </div>
@@ -677,7 +672,7 @@ export const Pricing: React.FC = () => {
                 <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
-                    __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100039" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100039" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
                   }}
                 />
               </div>
@@ -692,7 +687,7 @@ export const Pricing: React.FC = () => {
                 <div 
                   className="buy-button healcode-pricing-option-text-link"
                   dangerouslySetInnerHTML={{
-                    __html: '<script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100040" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
+                    __html: '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100040" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>'
                   }}
                 />
               </div>

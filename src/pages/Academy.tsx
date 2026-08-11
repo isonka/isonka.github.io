@@ -36,15 +36,8 @@ import {
   trackAcademyInquiryClick,
   trackPageView,
 } from '../utils/gtmTracking';
+import { ensureHealcodeLoaded } from '../utils/healcode';
 import '../styles/Academy.css';
-
-declare global {
-  interface Window {
-    HealcodeWidget?: {
-      init: () => void;
-    };
-  }
-}
 
 const exerciseAssessmentNote =
   'The exercise assessment is mandatory for certification, costs EUR 250 including BTW.';
@@ -60,11 +53,11 @@ export const Academy: React.FC = () => {
 
   useEffect(() => {
     trackPageView('/academy', 'Pilates Instructor Course Amsterdam | PT7 Academy');
-    window.HealcodeWidget?.init?.();
+    void ensureHealcodeLoaded();
   }, []);
 
   useEffect(() => {
-    window.HealcodeWidget?.init?.();
+    void ensureHealcodeLoaded();
   }, [activeTab]);
 
   useEffect(() => {

@@ -47,6 +47,15 @@ function RedirectHandler() {
   return null;
 }
 
+function RouteFallback() {
+  return (
+    <div className="route-fallback" role="status" aria-live="polite" aria-busy="true">
+      <span className="route-fallback-spinner" aria-hidden="true" />
+      <span className="route-fallback-label">Loading…</span>
+    </div>
+  );
+}
+
 function App() {
   return (
     <Router>
@@ -56,7 +65,7 @@ function App() {
       <div className="app">
         <Navbar />
         <main className="main-content">
-          <Suspense fallback={null}>
+          <Suspense fallback={<RouteFallback />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/pricing" element={<Pricing />} />

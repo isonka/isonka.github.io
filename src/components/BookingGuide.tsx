@@ -23,7 +23,7 @@ export const BookingGuide: React.FC = () => {
         '👤 "Private Classes" tab shows one-on-one appointments',
         '✨ The active tab will be highlighted in gold/yellow'
       ],
-      screenshot: 'tabs-selection.jpeg',
+      screenshot: 'tabs-selection.webp',
       tips: [
         '⚠️ Common mistake: Don\'t scroll past the tabs - they\'re at the very top',
         '💡 First time? We recommend starting with a private class',
@@ -41,7 +41,7 @@ export const BookingGuide: React.FC = () => {
         '🚫 "UNAVAILABLE" = Class is not bookable (past date or cancelled)',
         '📝 Each slot shows: Time, Instructor Name, Duration, Spots Available'
       ],
-      screenshot: 'calendar-selection.jpeg',
+      screenshot: 'calendar-selection.webp',
       tips: [
         '⚠️ Don\'t see your preferred time? Check the BOOK button - it means there ARE spots',
         '💡 Waitlist: You\'ll get notified by email if someone cancels',
@@ -65,7 +65,7 @@ export const BookingGuide: React.FC = () => {
         '✅ Click checkbox to agree to terms',
         '🚀 Click "Continue" or "Create Account"'
       ],
-      screenshot: 'signup-form.jpeg',
+      screenshot: 'signup-form.webp',
       tips: [
         '⚠️ Start with email first - MindBody uses this to check if you exist',
         '🔐 New password? Write it down! You\'ll need it for future bookings',
@@ -83,7 +83,7 @@ export const BookingGuide: React.FC = () => {
         '🔄 Membership: Unlimited monthly (best for regulars)',
         '✅ Click the "Select" or "Purchase" button next to your choice'
       ],
-      screenshot: 'pricing-selection.jpeg',
+      screenshot: 'pricing-selection.webp',
       tips: [
         '⚠️ First time? Look for "Intro Offer" or "Trial Class"',
         '💰 Class packs offer better value than single classes',
@@ -103,7 +103,7 @@ export const BookingGuide: React.FC = () => {
         '📍 Billing address must match your card',
         '✅ Click "Complete Purchase" or "Book Now"'
       ],
-      screenshot: 'payment-form.jpeg',
+      screenshot: 'payment-form.webp',
       tips: [
         '🇳🇱 iDEAL is available for Dutch bank accounts',
         '⚠️ Error message? Check card details or try iDEAL',
@@ -121,7 +121,7 @@ export const BookingGuide: React.FC = () => {
         '🔔 You\'ll get a reminder 24 hours before class',
         '📲 Download MindBody app for easy future bookings'
       ],
-      screenshot: 'confirmation.jpeg',
+      screenshot: 'confirmation.webp',
       tips: [
         '⚠️ No email? Check spam/junk folder first',
         '🕐 Arrive 10 minutes early for your first visit',

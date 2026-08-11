@@ -1,13 +1,6 @@
 import { useEffect } from 'react';
 import { ACADEMY_INQUIRY_WIDGET } from '../data/academy';
-
-declare global {
-  interface Window {
-    HealcodeWidget?: {
-      init: () => void;
-    };
-  }
-}
+import { ensureHealcodeLoaded } from '../utils/healcode';
 
 type AcademyInquiryProps = {
   locale: 'en' | 'nl';
@@ -17,7 +10,7 @@ export const AcademyInquiry: React.FC<AcademyInquiryProps> = ({ locale }) => {
   const isNl = locale === 'nl';
 
   useEffect(() => {
-    window.HealcodeWidget?.init?.();
+    void ensureHealcodeLoaded();
   }, []);
 
   return (

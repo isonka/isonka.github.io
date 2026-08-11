@@ -10,8 +10,22 @@ import { WorkoutCard } from '../components/WorkoutCard';
 import '../styles/Home.css';
 
 const heroImages = [
-  { src: '/assets/images/studio.webp', alt: 'PT Studio 7 - Pilates Reformer Studio' },
-  { src: '/assets/images/nike_strength_studio.webp', alt: 'PT Studio 7 - Nike Strength Training Area' },
+  {
+    src: '/assets/images/studio.webp',
+    srcSet:
+      '/assets/images/studio-800.webp 800w, /assets/images/studio-1200.webp 1200w, /assets/images/studio.webp 1600w',
+    width: 1600,
+    height: 1066,
+    alt: 'PT Studio 7 - Pilates Reformer Studio',
+  },
+  {
+    src: '/assets/images/nike_strength_studio.webp',
+    srcSet:
+      '/assets/images/nike_strength_studio-800.webp 800w, /assets/images/nike_strength_studio.webp 1200w',
+    width: 1200,
+    height: 800,
+    alt: 'PT Studio 7 - Nike Strength Training Area',
+  },
 ];
 
 
@@ -63,6 +77,7 @@ const reviewsData = [
 
 export const Home: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [secondHeroReady, setSecondHeroReady] = useState(false);
 
   useEffect(() => {
     // Track page view
@@ -70,13 +85,26 @@ export const Home: React.FC = () => {
     trackFBPageView('Home - PT Studio 7 Amsterdam');
   }, []);
 
-  // Rotate hero background images every 5 seconds
+  // Prefetch second carousel frame after idle so it does not compete with LCP
   useEffect(() => {
+    const enable = () => setSecondHeroReady(true);
+    const ric = window.requestIdleCallback?.bind(window);
+    if (ric) {
+      const id = ric(enable, { timeout: 4000 });
+      return () => window.cancelIdleCallback?.(id);
+    }
+    const timer = window.setTimeout(enable, 2500);
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  // Rotate hero only after second image can participate
+  useEffect(() => {
+    if (!secondHeroReady) return;
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [secondHeroReady]);
 
   return (
     <>
@@ -95,19 +123,25 @@ export const Home: React.FC = () => {
 
       {/* Hero Section with Rotating Background Images */}
       <section className="hero-video">
-        {heroImages.map((image, index) => (
-          <img 
-            key={image.src}
-            src={image.src}
-            alt={image.alt}
-            className={`hero-video-bg ${index === currentImageIndex ? 'active' : ''}`}
-            width="2304"
-            height="1536"
-            fetchPriority={index === 0 ? "high" : "low"}
-            loading={index === 0 ? "eager" : "lazy"}
-            decoding="async"
-          />
-        ))}
+        {heroImages.map((image, index) => {
+          if (index > 0 && !secondHeroReady) return null;
+          const isActive = index === currentImageIndex;
+          return (
+            <img
+              key={image.src}
+              src={image.src}
+              srcSet={image.srcSet}
+              sizes="100vw"
+              alt={image.alt}
+              className={`hero-video-bg ${isActive ? 'active' : ''}`}
+              width={image.width}
+              height={image.height}
+              fetchPriority={index === 0 ? 'high' : 'low'}
+              loading={index === 0 ? 'eager' : 'lazy'}
+              decoding="async"
+            />
+          );
+        })}
         <div className="hero-overlay">
           <div className="hero-content-wrapper">
             <h1 className="hero-title">Pilates & Personal Training Amsterdam</h1>

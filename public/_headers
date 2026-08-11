@@ -40,15 +40,6 @@
 /assets/images/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Videos - long cache (1 year)
-/assets/video/*
-  Cache-Control: public, max-age=31536000, immutable
-
-# Fonts - long cache (1 year)
-/assets/fonts/*
-  Cache-Control: public, max-age=31536000, immutable
-  Access-Control-Allow-Origin: *
-
 # Sitemap and robots - short cache (1 day)
 /sitemap.xml
   Cache-Control: public, max-age=86400
