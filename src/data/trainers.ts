@@ -147,8 +147,8 @@ export const trainerProfiles: TrainerProfile[] = [
   },
   {
     slug: 'gulce',
-    name: 'Gülce',
-    displayName: 'Gülce',
+    name: 'Gülce Koç',
+    displayName: 'Gülce Koç',
     title: 'Reformer Pilates',
     heroTitle: 'Reformer Pilates',
     tier: 'junior',
@@ -157,9 +157,9 @@ export const trainerProfiles: TrainerProfile[] = [
     specialties: ['Reformer Pilates'],
     available: true,
     seo: {
-      title: 'Gülce - Pilates Instructor | PT Studio 7',
-      description: 'Meet Gülce, certified Reformer Pilates instructor at PT Studio 7 Amsterdam. Passionate about sharing strength, balance, and joy through Pilates.',
-      keywords: 'Gülce, Reformer Pilates, Pilates instructor Amsterdam, PT Studio 7, Pilates leraar',
+      title: 'Gülce Koç - Pilates Instructor | PT Studio 7',
+      description: 'Meet Gülce Koç, certified Reformer Pilates instructor at PT Studio 7 Amsterdam. Passionate about sharing strength, balance, and joy through Pilates.',
+      keywords: 'Gülce Koç, Gülce, Reformer Pilates, Pilates instructor Amsterdam, PT Studio 7, Pilates leraar',
     },
     structuredData: {
       jobTitle: 'Reformer Pilates Instructor',
@@ -179,8 +179,8 @@ export const trainerProfiles: TrainerProfile[] = [
   },
   {
     slug: 'lal',
-    name: 'Lal',
-    displayName: 'Lal',
+    name: 'Lal Avgen',
+    displayName: 'Lal Avgen',
     title: 'Reformer Pilates',
     heroTitle: 'Reformer Pilates',
     tier: 'junior',
@@ -189,9 +189,9 @@ export const trainerProfiles: TrainerProfile[] = [
     specialties: ['Reformer Pilates'],
     available: true,
     seo: {
-      title: 'Lal - Pilates Instructor | PT Studio 7',
-      description: 'Meet Lal, certified Reformer Pilates instructor at PT Studio 7 Amsterdam. Visual artist and creative technologist bringing mindful movement to her teaching.',
-      keywords: 'Lal, Reformer Pilates, Pilates instructor Amsterdam, PT Studio 7, Pilates leraar',
+      title: 'Lal Avgen - Pilates Instructor | PT Studio 7',
+      description: 'Meet Lal Avgen, certified Reformer Pilates instructor at PT Studio 7 Amsterdam. Visual artist and creative technologist bringing mindful movement to her teaching.',
+      keywords: 'Lal Avgen, Lal, Reformer Pilates, Pilates instructor Amsterdam, PT Studio 7, Pilates leraar',
     },
     structuredData: {
       jobTitle: 'Reformer Pilates Instructor',
@@ -212,8 +212,8 @@ export const trainerProfiles: TrainerProfile[] = [
   },
   {
     slug: 'nisan',
-    name: 'Nisan',
-    displayName: 'Nisan',
+    name: 'Nisan Atalay',
+    displayName: 'Nisan Atalay',
     title: 'Reformer Pilates',
     heroTitle: 'Reformer Pilates',
     tier: 'junior',
@@ -222,9 +222,9 @@ export const trainerProfiles: TrainerProfile[] = [
     specialties: ['Reformer Pilates'],
     available: true,
     seo: {
-      title: 'Nisan - Pilates Instructor | PT Studio 7',
-      description: 'Meet Nisan, certified Reformer Pilates instructor at PT Studio 7 Amsterdam. Dutch-speaking instructor passionate about mindful movement.',
-      keywords: 'Nisan, Reformer Pilates, Pilates instructor Amsterdam, PT Studio 7, Nederlands sprekende Pilates instructeur, Pilates leraar',
+      title: 'Nisan Atalay - Pilates Instructor | PT Studio 7',
+      description: 'Meet Nisan Atalay, certified Reformer Pilates instructor at PT Studio 7 Amsterdam. Dutch-speaking instructor passionate about mindful movement.',
+      keywords: 'Nisan Atalay, Nisan, Reformer Pilates, Pilates instructor Amsterdam, PT Studio 7, Nederlands sprekende Pilates instructeur, Pilates leraar',
     },
     structuredData: {
       jobTitle: 'Reformer Pilates Instructor',
@@ -240,5 +240,37 @@ export const trainerProfiles: TrainerProfile[] = [
       'Emphasis on building strength, mobility, and balance',
     ],
     ctaText: 'Book a session with Nisan and experience mindful movement at its finest.',
+  },
+  {
+    slug: 'kelly',
+    name: 'Kelly Tin',
+    displayName: 'Kelly Tin',
+    title: 'Reformer Pilates',
+    heroTitle: 'Reformer Pilates',
+    tier: 'junior',
+    image: '/assets/images/kelly.webp',
+    languages: ['English', 'Dutch'],
+    specialties: ['Reformer Pilates'],
+    available: true,
+    seo: {
+      title: 'Kelly Tin - Pilates Instructor | PT Studio 7',
+      description: 'Meet Kelly Tin, certified Reformer Pilates instructor at PT Studio 7 Amsterdam. English- and Dutch-speaking coach with a strength and HIIT background.',
+      keywords: 'Kelly Tin, Kelly, Reformer Pilates, Pilates instructor Amsterdam, PT Studio 7, Nederlands sprekende Pilates instructeur, Pilates leraar',
+    },
+    structuredData: {
+      jobTitle: 'Reformer Pilates Instructor',
+      description: 'English- and Dutch-speaking certified Reformer Pilates instructor with a strength and HIIT background at PT Studio 7 Amsterdam.',
+    },
+    bio: [
+      'Kelly started practicing Pilates regularly in 2024, alongside her experience with strength and HIIT training. She quickly noticed how Pilates helped her feel calmer, stronger and more aware of her body, posture and mind.',
+      'After each class, she felt refreshed and connected to herself. This inspired her to become an instructor and bring that same feeling to others, helping people move more, build strength and feel good and confident in their bodies.',
+    ],
+    qualifications: [
+      'PT 7 Academy Comprehensive Reformer Instructor Course',
+      'Experience with strength and HIIT training',
+      'Professional background in marketing within the software industry',
+      'Specializes in Reformer Pilates',
+    ],
+    ctaText: 'Book a session with Kelly and feel stronger, calmer, and more confident in your body.',
   },
 ];

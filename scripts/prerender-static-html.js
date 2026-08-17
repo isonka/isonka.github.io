@@ -36,6 +36,7 @@ const routes = [
   '/trainer/gulce/',
   '/trainer/lal/',
   '/trainer/nisan/',
+  '/trainer/kelly/',
   '/academy/',
   '/academy/nl/',
   '/healthcare-providers/',

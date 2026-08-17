@@ -36,6 +36,10 @@ export const TrainerDetail: React.FC = () => {
       { to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' },
       { to: '/academy', label: 'Become a Pilates instructor — PT7 Academy' },
     ],
+    kelly: [
+      { to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' },
+      { to: '/academy', label: 'Become a Pilates instructor — PT7 Academy' },
+    ],
   };
 
   const relatedLinks = relatedLinksByTrainer[trainer.slug] || [];

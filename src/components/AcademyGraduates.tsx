@@ -9,8 +9,8 @@ export const AcademyGraduates: React.FC<AcademyGraduatesProps> = ({ locale }) =>
   const isNl = locale === 'nl';
   const heading = isNl ? 'Afgestudeerden van PT7 Academy' : 'PT7 Academy graduates';
   const intro = isNl
-    ? 'Nisan, Lal en Gülce rondden de Reformer-opleiding af en lesgeven nu bij PT Studio 7.'
-    : 'Nisan, Lal, and Gülce completed the Reformer instructor course and now teach at PT Studio 7.';
+    ? 'Kelly Tin, Nisan Atalay, Lal Avgen en Gülce Koç rondden de Reformer-opleiding af en lesgeven nu bij PT Studio 7.'
+    : 'Kelly Tin, Nisan Atalay, Lal Avgen, and Gülce Koç completed the Reformer instructor course and now teach at PT Studio 7.';
 
   return (
     <section className="academy-graduates" aria-labelledby="academy-graduates-heading">

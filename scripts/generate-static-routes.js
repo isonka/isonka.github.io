@@ -169,19 +169,24 @@ const routeMeta = {
     image: DEFAULT_IMAGE,
   },
   'trainer/gulce': {
-    title: 'Gülce — Pilates Instructor | PT Studio 7 Amsterdam',
-    description: 'Gülce, certified Pilates instructor at PT Studio 7 Museumplein Amsterdam. Expert guidance in Reformer Pilates and functional training.',
+    title: 'Gülce Koç — Pilates Instructor | PT Studio 7 Amsterdam',
+    description: 'Gülce Koç, certified Pilates instructor at PT Studio 7 Museumplein Amsterdam. Expert guidance in Reformer Pilates and functional training.',
     image: DEFAULT_IMAGE,
   },
   'trainer/lal': {
-    title: 'Lal — Pilates Instructor | PT Studio 7 Amsterdam',
-    description: 'Lal, certified Pilates instructor at PT Studio 7 Museumplein Amsterdam. Specialised in Reformer Pilates and strength training.',
+    title: 'Lal Avgen — Pilates Instructor | PT Studio 7 Amsterdam',
+    description: 'Lal Avgen, certified Pilates instructor at PT Studio 7 Museumplein Amsterdam. Specialised in Reformer Pilates and strength training.',
     image: DEFAULT_IMAGE,
   },
   'trainer/nisan': {
-    title: 'Nisan — Pilates Instructor | PT Studio 7 Amsterdam',
-    description: 'Nisan, certified Pilates instructor at PT Studio 7 Museumplein Amsterdam. Expert in Reformer Pilates, TRX, and small group classes.',
+    title: 'Nisan Atalay — Pilates Instructor | PT Studio 7 Amsterdam',
+    description: 'Nisan Atalay, certified Pilates instructor at PT Studio 7 Museumplein Amsterdam. Expert in Reformer Pilates, TRX, and small group classes.',
     image: DEFAULT_IMAGE,
+  },
+  'trainer/kelly': {
+    title: 'Kelly Tin — Pilates Instructor | PT Studio 7 Amsterdam',
+    description: 'Kelly Tin, certified Reformer Pilates instructor at PT Studio 7 Museumplein Amsterdam. English- and Dutch-speaking coach with a strength and HIIT background.',
+    image: '/assets/images/kelly.webp',
   },
   'blog/prenatal-pilates-supporting-body-through-every-trimester': {
     title: 'Prenatal Pilates: Supporting Your Body Through Every Trimester | PT Studio 7',
@@ -218,6 +223,7 @@ const routes = [
   'trainer/gulce',
   'trainer/lal',
   'trainer/nisan',
+  'trainer/kelly',
   'academy',
   'academy/nl',
   'healthcare-providers',

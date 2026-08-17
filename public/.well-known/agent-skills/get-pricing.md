@@ -29,7 +29,7 @@ Return current package and session pricing for PT Studio 7 Amsterdam.
 
 ### Private sessions (45 min)
 
-- Junior instructors (Gülce, Lal, Nisan): from €70 single
+- Junior instructors (Gülce Koç, Lal Avgen, Nisan Atalay, Kelly Tin): from €70 single
 - Senior / Master tiers: higher — see pricing page tabs
 
 ### Academy (teacher training)

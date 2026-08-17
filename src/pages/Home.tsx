@@ -33,9 +33,10 @@ const trainers = [
   { to: '/trainer/elif', src: '/assets/images/elif.webp', alt: 'Elif Arzu Ogan - Pilates Instructor', name: 'Elif Arzu Ogan', specialties: 'Comprehensive Pilates\nStrength Training\nPrenatal Pilates' },
   { to: '/trainer/gokben', src: '/assets/images/gokben.webp', alt: 'Gökben Öztekin - Pilates Instructor', name: 'Gökben Öztekin', specialties: 'Comprehensive Pilates' },
   { to: '/trainer/goknur', src: '/assets/images/goknur.webp', alt: 'Göknur Dipli - Pilates Instructor', name: 'Göknur Dipli', specialties: 'Comprehensive Pilates\nStrength Training\nPrenatal Pilates' },
-  { to: '/trainer/gulce', src: '/assets/images/gulce.webp', alt: 'Gülce - Pilates Instructor', name: 'Gülce', specialties: 'Reformer Pilates' },
-  { to: '/trainer/lal', src: '/assets/images/lal.webp', alt: 'Lal - Pilates Instructor', name: 'Lal', specialties: 'Reformer Pilates' },
-  { to: '/trainer/nisan', src: '/assets/images/nisan.webp', alt: 'Nisan - Pilates Instructor', name: 'Nisan', specialties: 'Reformer Pilates' },
+  { to: '/trainer/gulce/', src: '/assets/images/gulce.webp', alt: 'Gülce Koç - Pilates Instructor', name: 'Gülce Koç', specialties: 'Reformer Pilates' },
+  { to: '/trainer/lal/', src: '/assets/images/lal.webp', alt: 'Lal Avgen - Pilates Instructor', name: 'Lal Avgen', specialties: 'Reformer Pilates' },
+  { to: '/trainer/nisan/', src: '/assets/images/nisan.webp', alt: 'Nisan Atalay - Pilates Instructor', name: 'Nisan Atalay', specialties: 'Reformer Pilates' },
+  { to: '/trainer/kelly/', src: '/assets/images/kelly.webp', alt: 'Kelly Tin - Pilates Instructor', name: 'Kelly Tin', specialties: 'Reformer Pilates' },
 ];
 
 const reviews = [

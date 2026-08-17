@@ -174,23 +174,30 @@ export type AcademyGraduate = {
 
 export const academyGraduates: AcademyGraduate[] = [
   {
-    name: 'Nisan',
+    name: 'Kelly Tin',
+    image: '/assets/images/kelly.webp',
+    href: '/trainer/kelly/',
+    outcomeEn: 'PT7 Academy graduate · Instructor at PT Studio 7',
+    outcomeNl: 'Afgestudeerd bij PT7 Academy · Instructeur bij PT Studio 7',
+  },
+  {
+    name: 'Nisan Atalay',
     image: '/assets/images/nisan.webp',
-    href: '/trainer/nisan',
+    href: '/trainer/nisan/',
     outcomeEn: 'PT7 Academy graduate · Instructor at PT Studio 7',
     outcomeNl: 'Afgestudeerd bij PT7 Academy · Instructeur bij PT Studio 7',
   },
   {
-    name: 'Lal',
+    name: 'Lal Avgen',
     image: '/assets/images/lal.webp',
-    href: '/trainer/lal',
+    href: '/trainer/lal/',
     outcomeEn: 'PT7 Academy graduate · Instructor at PT Studio 7',
     outcomeNl: 'Afgestudeerd bij PT7 Academy · Instructeur bij PT Studio 7',
   },
   {
-    name: 'Gülce',
+    name: 'Gülce Koç',
     image: '/assets/images/gulce.webp',
-    href: '/trainer/gulce',
+    href: '/trainer/gulce/',
     outcomeEn: 'PT7 Academy graduate · Instructor at PT Studio 7',
     outcomeNl: 'Afgestudeerd bij PT7 Academy · Instructeur bij PT Studio 7',
   },
