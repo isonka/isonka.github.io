@@ -354,7 +354,7 @@ export const Pricing: React.FC = () => {
             {/* Junior Instructor */}
             {instructorTier === 'junior' && (
             <>
-            <p className="instructor-info">Junior Instructors: <strong>Gülce Koç</strong>, <strong>Lal Avgen</strong>, <strong>Nisan Atalay</strong>, <strong>Kelly Tin</strong></p>
+            <p className="instructor-info">Junior Instructors: <strong>Gülce Koç</strong>, <strong>Lal Avgen</strong>, <strong>Nisan Atalay</strong>, <strong>Kelly Tin</strong>, <strong>E. Gamze Karadağ</strong></p>
             <div className="packages-grid">
               <div className="package-card">
                 <div className="price-display">

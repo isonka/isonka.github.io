@@ -162,7 +162,7 @@ export const Chatbot: React.FC = () => {
           instructorReason = 'For group classes, all our instructors — from Junior to Master level — can help you build strength. We also offer Nike Strength Training with premium equipment for personal training.';
         }
       } else if (profile.experience === "I'm a beginner") {
-        recommendedInstructor = 'Gülce Koç, Lal Avgen, Nisan Atalay, or Kelly Tin (Junior Instructors)';
+        recommendedInstructor = 'Gülce Koç, Lal Avgen, Nisan Atalay, Kelly Tin, or E. Gamze Karadağ (Junior Instructors)';
         instructorReason = 'Our Junior instructors are PT 7 Academy certified and excellent with beginners — they focus on fundamentals, proper form, and making you feel comfortable.';
       } else if (profile.goal === 'General wellness' || profile.goal === 'Just curious') {
         recommendedInstructor = 'Gökben Öztekin (Senior Instructor)';

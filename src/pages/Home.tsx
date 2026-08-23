@@ -37,6 +37,7 @@ const trainers = [
   { to: '/trainer/lal/', src: '/assets/images/lal.webp', alt: 'Lal Avgen - Pilates Instructor', name: 'Lal Avgen', specialties: 'Reformer Pilates' },
   { to: '/trainer/nisan/', src: '/assets/images/nisan.webp', alt: 'Nisan Atalay - Pilates Instructor', name: 'Nisan Atalay', specialties: 'Reformer Pilates' },
   { to: '/trainer/kelly/', src: '/assets/images/kelly.webp', alt: 'Kelly Tin - Pilates Instructor', name: 'Kelly Tin', specialties: 'Reformer Pilates' },
+  { to: '/trainer/gamze/', src: '/assets/images/gamze.webp', alt: 'E. Gamze Karadağ - Pilates Instructor', name: 'E. Gamze Karadağ', specialties: 'Reformer Pilates' },
 ];
 
 const reviews = [

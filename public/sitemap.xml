@@ -182,6 +182,16 @@
       <image:title>Kelly Tin - Reformer Pilates Instructor PT Studio 7</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://www.pt7.nl/trainer/gamze/</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.pt7.nl/assets/images/gamze.webp</image:loc>
+      <image:title>E. Gamze Karadağ - Reformer Pilates Instructor PT Studio 7</image:title>
+    </image:image>
+  </url>
   
   <!-- Service Landing Pages (local SEO) -->
   <!-- /pregnancy-pilates-amsterdam is a legacy keyword alias → client redirect to /prenatal-pilates-amsterdam; do not list in sitemap -->

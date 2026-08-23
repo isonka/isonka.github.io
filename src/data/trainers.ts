@@ -273,4 +273,36 @@ export const trainerProfiles: TrainerProfile[] = [
     ],
     ctaText: 'Book a session with Kelly and feel stronger, calmer, and more confident in your body.',
   },
+  {
+    slug: 'gamze',
+    name: 'E. Gamze Karadağ',
+    displayName: 'E. Gamze Karadağ',
+    title: 'Reformer Pilates',
+    heroTitle: 'Reformer Pilates',
+    tier: 'junior',
+    image: '/assets/images/gamze.webp',
+    languages: ['English', 'Turkish'],
+    specialties: ['Reformer Pilates'],
+    available: true,
+    seo: {
+      title: 'E. Gamze Karadağ - Pilates Instructor | PT Studio 7',
+      description: 'Meet E. Gamze Karadağ, certified Reformer Pilates instructor at PT Studio 7 Amsterdam. Yoga background and PT7 Academy graduate.',
+      keywords: 'E. Gamze Karadağ, Gamze Karadağ, Gamze, Reformer Pilates, Pilates instructor Amsterdam, PT Studio 7, Pilates leraar',
+    },
+    structuredData: {
+      jobTitle: 'Reformer Pilates Instructor',
+      description: 'Certified Reformer Pilates instructor with a yoga background, mentoring students toward better mobility, body awareness, and wellbeing at PT Studio 7 Amsterdam.',
+    },
+    bio: [
+      'Gamze has been practicing yoga for over 7 years and has been a familiar face in our studio community for the past two years before transitioning into an instructor.',
+      'Driven by a deep belief in movement as a tool for transformation, she is passionate about mentoring students toward an improved quality of life through Reformer Pilates.',
+    ],
+    qualifications: [
+      'PT 7 Academy Comprehensive Reformer Instructor Course',
+      'Background in yoga',
+      'Specializes in Reformer Pilates',
+      'Focus on improving mobility, body awareness, balance and overall wellbeing',
+    ],
+    ctaText: 'Book a session with Gamze and improve mobility, balance, and body awareness through Reformer Pilates.',
+  },
 ];

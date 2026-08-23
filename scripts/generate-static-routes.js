@@ -188,6 +188,11 @@ const routeMeta = {
     description: 'Kelly Tin, certified Reformer Pilates instructor at PT Studio 7 Museumplein Amsterdam. English- and Dutch-speaking coach with a strength and HIIT background.',
     image: '/assets/images/kelly.webp',
   },
+  'trainer/gamze': {
+    title: 'E. Gamze Karadağ — Pilates Instructor | PT Studio 7 Amsterdam',
+    description: 'E. Gamze Karadağ, certified Reformer Pilates instructor at PT Studio 7 Museumplein Amsterdam. Yoga background and PT7 Academy graduate.',
+    image: '/assets/images/gamze.webp',
+  },
   'blog/prenatal-pilates-supporting-body-through-every-trimester': {
     title: 'Prenatal Pilates: Supporting Your Body Through Every Trimester | PT Studio 7',
     description: 'How Reformer Pilates supports expectant mothers through each trimester. Expert guidance from certified prenatal Pilates instructors in Amsterdam.',
@@ -224,6 +229,7 @@ const routes = [
   'trainer/lal',
   'trainer/nisan',
   'trainer/kelly',
+  'trainer/gamze',
   'academy',
   'academy/nl',
   'healthcare-providers',

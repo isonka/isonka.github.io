@@ -174,6 +174,13 @@ export type AcademyGraduate = {
 
 export const academyGraduates: AcademyGraduate[] = [
   {
+    name: 'E. Gamze Karadağ',
+    image: '/assets/images/gamze.webp',
+    href: '/trainer/gamze/',
+    outcomeEn: 'PT7 Academy graduate · Instructor at PT Studio 7',
+    outcomeNl: 'Afgestudeerd bij PT7 Academy · Instructeur bij PT Studio 7',
+  },
+  {
     name: 'Kelly Tin',
     image: '/assets/images/kelly.webp',
     href: '/trainer/kelly/',
