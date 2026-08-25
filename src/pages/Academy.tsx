@@ -128,7 +128,7 @@ export const Academy: React.FC = () => {
     {
       question: 'When are classes held?',
       answer:
-        `Lectures are held on selected weekends, not every week. Reformer terms: Autumn 2026 (September–November): ${formatTermSchedule(termSchedule2026)}; Spring 2027 (March–May): ${formatTermSchedule(termSchedule2027)}. Mat & Trapeze Table (November 2026–January 2027): ${formatTermSchedule(matTrapezeSchedule)}. Each lecture weekend runs ${lectureHours}, so you can keep your weekday job while you train.`,
+        `Lectures are held on selected weekends, not every week. Reformer: Autumn 2026 (September–November) is fully booked. Next open Reformer term is Spring 2027 (March–May): ${formatTermSchedule(termSchedule2027)}. Mat & Trapeze Table (November 2026–January 2027): ${formatTermSchedule(matTrapezeSchedule)}. Each lecture weekend runs ${lectureHours}, so you can keep your weekday job while you train.`,
     },
     {
       question: 'What courses does PT7 Academy offer?',
@@ -200,14 +200,14 @@ export const Academy: React.FC = () => {
         type="Course"
         data={{
           course: {
-            name: COURSE_TITLE,
+            name: `${COURSE_TITLE} (Autumn 2026 — fully booked)`,
             description:
-              '300 hours Reformer Pilates Instructor Course, ITTAP approved by the Pilates Method Alliance (PMA) in Amsterdam. Lectures, observation, self practice, teaching practice, and master trainer sessions.',
+              '300 hours Reformer Pilates Instructor Course, ITTAP approved by the Pilates Method Alliance (PMA) in Amsterdam. Autumn 2026 term (September–November) is fully booked. Lectures, observation, self practice, teaching practice, and master trainer sessions.',
             price: '2000',
             priceCurrency: 'EUR',
             startDate: '2026-09-12',
             endDate: '2026-11-08',
-            schedule: 'Selected weekends Sep–Nov 2026, 12:00-18:00',
+            schedule: 'Selected weekends Sep–Nov 2026, 12:00-18:00 (fully booked)',
             startTime: '12:00',
             endTime: '18:00',
             locationName: 'PT Studio 7 Amsterdam - Museumplein',
@@ -284,7 +284,7 @@ export const Academy: React.FC = () => {
                 <div className="academy-offer-facts">
                   <div className="academy-offer-fact">
                     <span className="academy-offer-label">Next Reformer term</span>
-                    <span className="academy-offer-value">12 Sep – 8 Nov 2026</span>
+                    <span className="academy-offer-value">13 Mar – 16 May 2027</span>
                   </div>
                   <div className="academy-offer-fact">
                     <span className="academy-offer-label">Format</span>
@@ -327,7 +327,7 @@ export const Academy: React.FC = () => {
                   </button>
                 </div>
                 <p className="academy-offer-note">
-                  Spring 2027 term also open (13 Mar – 16 May). Mat &amp; Trapeze Table track below.
+                  September 2026 term fully booked. Spring 2027 now enrolling. Mat &amp; Trapeze Table track below.
                 </p>
               </div>
 
@@ -478,7 +478,7 @@ export const Academy: React.FC = () => {
                   <span>4 weekend intensives</span>
                 </div>
                 <div className="highlight-item">
-                  <span>2026 &amp; 2027 terms</span>
+                  <span>Spring 2027 term</span>
                 </div>
                 <div className="highlight-item">
                   <span>3 installment plan</span>
@@ -492,11 +492,14 @@ export const Academy: React.FC = () => {
                 <h3>Upcoming Term Schedules</h3>
                 <p>
                   Lectures are not held every weekend. Each term runs on four selected weekends at PT Studio 7,
-                  Museumplein, Amsterdam. Each lecture weekend runs {lectureHours}. Same course fee and enroll options
-                  for both terms. Anatomy is included in the Reformer course (Pilates Introduction &amp; Anatomy weekend).
+                  Museumplein, Amsterdam. Each lecture weekend runs {lectureHours}. Autumn 2026 is fully booked;
+                  enroll now for Spring 2027. Anatomy is included in the Reformer course (Pilates Introduction &amp; Anatomy weekend).
                 </p>
 
-                <h4 className="term-schedule-heading">Autumn 2026 (September–November)</h4>
+                <h4 className="term-schedule-heading">
+                  Autumn 2026 (September–November)
+                  <span className="term-schedule-status">Fully booked</span>
+                </h4>
                 <div className="term-schedule-grid">
                   {termSchedule2026.map((item) => (
                     <div key={item.dates} className="term-schedule-item">
@@ -835,7 +838,7 @@ export const Academy: React.FC = () => {
               <div className="benefit-card">
                 <h3>Weekend Pilates teacher training</h3>
                 <p>
-                  Train on four scheduled weekends per term (Sep–Nov 2026 or Mar–May 2027), {lectureHours}, and keep your
+                  Train on four scheduled weekends per term (Mar–May 2027), {lectureHours}, and keep your
                   day job while becoming a certified Reformer instructor.
                 </p>
               </div>

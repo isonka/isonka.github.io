@@ -128,7 +128,7 @@ export const AcademyNl: React.FC = () => {
     {
       question: 'Wanneer vinden de lessen plaats?',
       answer:
-        `Colleges vinden plaats op geselecteerde weekenden, niet elke week. Reformer-termijnen: Herfst 2026 (september–november): ${formatTermSchedule(termSchedule2026, true)}; Lente 2027 (maart–mei): ${formatTermSchedule(termSchedule2027, true)}. Mat & Trapeze Table (november 2026–januari 2027): ${formatTermSchedule(matTrapezeSchedule, true)}. Elk college-weekend duurt ${lectureHoursNl}, zodat je doordeweeks kunt blijven werken.`,
+        `Colleges vinden plaats op geselecteerde weekenden, niet elke week. Reformer: Herfst 2026 (september–november) is volgeboekt. Volgende open Reformer-termijn is Lente 2027 (maart–mei): ${formatTermSchedule(termSchedule2027, true)}. Mat & Trapeze Table (november 2026–januari 2027): ${formatTermSchedule(matTrapezeSchedule, true)}. Elk college-weekend duurt ${lectureHoursNl}, zodat je doordeweeks kunt blijven werken.`,
     },
     {
       question: 'Welke cursussen biedt PT7 Academy aan?',
@@ -200,14 +200,14 @@ export const AcademyNl: React.FC = () => {
         type="Course"
         data={{
           course: {
-            name: COURSE_TITLE_NL,
+            name: `${COURSE_TITLE_NL} (Herfst 2026 — volgeboekt)`,
             description:
-              '300 uur Reformer Pilates Instructeurscursus, ITTAP goedgekeurd door de Pilates Method Alliance (PMA) in Amsterdam. Colleges, observatie, zelfpraktijk, lesgeven in de praktijk en sessies met master trainer.',
+              '300 uur Reformer Pilates Instructeurscursus, ITTAP goedgekeurd door de Pilates Method Alliance (PMA) in Amsterdam. Herfst 2026-termijn (september–november) is volgeboekt. Colleges, observatie, zelfpraktijk, lesgeven in de praktijk en sessies met master trainer.',
             price: '2000',
             priceCurrency: 'EUR',
             startDate: '2026-09-12',
             endDate: '2026-11-08',
-            schedule: 'Geselecteerde weekenden sep–nov 2026, 12:00-18:00',
+            schedule: 'Geselecteerde weekenden sep–nov 2026, 12:00-18:00 (volgeboekt)',
             startTime: '12:00',
             endTime: '18:00',
             locationName: 'PT Studio 7 Amsterdam - Museumplein',
@@ -287,7 +287,7 @@ export const AcademyNl: React.FC = () => {
                 <div className="academy-offer-facts">
                   <div className="academy-offer-fact">
                     <span className="academy-offer-label">Volgende Reformer-termijn</span>
-                    <span className="academy-offer-value">12 sep – 8 nov 2026</span>
+                    <span className="academy-offer-value">13 mrt – 16 mei 2027</span>
                   </div>
                   <div className="academy-offer-fact">
                     <span className="academy-offer-label">Formaat</span>
@@ -330,7 +330,7 @@ export const AcademyNl: React.FC = () => {
                   </button>
                 </div>
                 <p className="academy-offer-note">
-                  Lente 2027-termijn ook open (13 mrt – 16 mei). Mat &amp; Trapeze Table route hieronder.
+                  September 2026-termijn volgeboekt. Lente 2027 nu open voor inschrijving. Mat &amp; Trapeze Table route hieronder.
                 </p>
               </div>
 
@@ -481,7 +481,7 @@ export const AcademyNl: React.FC = () => {
                   <span>4 weekendintensieven</span>
                 </div>
                 <div className="highlight-item">
-                  <span>2026 &amp; 2027 termijnen</span>
+                  <span>Lente 2027-termijn</span>
                 </div>
                 <div className="highlight-item">
                   <span>3-termijnen betalingsplan</span>
@@ -495,12 +495,15 @@ export const AcademyNl: React.FC = () => {
                 <h3>Komende termijnroosters</h3>
                 <p>
                   Colleges vinden niet elk weekend plaats. Elke termijn loopt over vier geselecteerde weekenden bij PT
-                  Studio 7, Museumplein, Amsterdam. Elk college-weekend duurt {lectureHoursNl}. Dezelfde cursusprijs
-                  en inschrijfopties voor beide termijnen. Anatomie is inbegrepen in de Reformer-cursus (Pilates
+                  Studio 7, Museumplein, Amsterdam. Elk college-weekend duurt {lectureHoursNl}. Herfst 2026 is
+                  volgeboekt; schrijf nu in voor Lente 2027. Anatomie is inbegrepen in de Reformer-cursus (Pilates
                   Introductie &amp; Anatomie-weekend).
                 </p>
 
-                <h4 className="term-schedule-heading">Herfst 2026 (september–november)</h4>
+                <h4 className="term-schedule-heading">
+                  Herfst 2026 (september–november)
+                  <span className="term-schedule-status">Volgeboekt</span>
+                </h4>
                 <div className="term-schedule-grid">
                   {termSchedule2026.map((item) => (
                     <div key={item.datesNl} className="term-schedule-item">
@@ -840,7 +843,7 @@ export const AcademyNl: React.FC = () => {
               <div className="benefit-card">
                 <h3>Geselecteerd weekendrooster</h3>
                 <p>
-                  Train op vier geplande weekenden per termijn (sep–nov 2026 of mrt–mei 2027), {lectureHoursNl}, en
+                  Train op vier geplande weekenden per termijn (mrt–mei 2027), {lectureHoursNl}, en
                   behoud je dagbaan terwijl je een gecertificeerde Reformer-instructeur wordt.
                 </p>
               </div>

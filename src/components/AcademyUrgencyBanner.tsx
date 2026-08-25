@@ -10,8 +10,8 @@ export const AcademyUrgencyBanner: React.FC = () => (
     <div className="urgency-content">
       <span className="urgency-text">
         <strong>Become a Pilates instructor</strong>
-        <span className="urgency-text-full"> · Pilates teacher training · PMA ITTAP Approved · Last spots</span>
-        <span className="urgency-text-short"> · Teacher training · Last spots</span>
+        <span className="urgency-text-full"> · Pilates teacher training · PMA ITTAP Approved · Sep term full · Next: Mar 2027</span>
+        <span className="urgency-text-short"> · Teacher training · Next: Mar 2027</span>
       </span>
       <span className="urgency-cta">View Course →</span>
     </div>
