@@ -1,151 +1,96 @@
-import { useEffect, lazy, Suspense } from 'react';
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Navigate,
-  Outlet,
-  useNavigate,
-  useLocation,
-} from 'react-router-dom';
-import { Navbar } from './components/Navbar';
-import { Footer } from './components/Footer';
-import { ScrollToTop } from './components/ScrollToTop';
-import { CookieConsent } from './components/CookieConsent';
-import { withTrailingSlash } from './utils/urls';
-import { Home } from './pages/Home';
-import './App.css';
-
-const Chatbot = lazy(() => import('./components/Chatbot').then(m => ({ default: m.Chatbot })));
-const Pricing = lazy(() => import('./pages/Pricing').then(m => ({ default: m.Pricing })));
-const Schedule = lazy(() => import('./pages/Schedule').then(m => ({ default: m.Schedule })));
-const Equipment = lazy(() => import('./pages/Equipment').then(m => ({ default: m.Equipment })));
-const EquipmentDetail = lazy(() => import('./pages/EquipmentDetail').then(m => ({ default: m.EquipmentDetail })));
-const Congrats = lazy(() => import('./pages/Congrats').then(m => ({ default: m.Congrats })));
-const Trainers = lazy(() => import('./pages/Trainers').then(m => ({ default: m.Trainers })));
-const TrainerDetail = lazy(() => import('./pages/TrainerDetail').then(m => ({ default: m.TrainerDetail })));
-const Academy = lazy(() => import('./pages/Academy').then(m => ({ default: m.Academy })));
-const AcademyNl = lazy(() => import('./pages/AcademyNl').then(m => ({ default: m.AcademyNl })));
-const Blog = lazy(() => import('./pages/Blog').then(m => ({ default: m.Blog })));
-const BlogPost = lazy(() => import('./pages/BlogPost').then(m => ({ default: m.BlogPost })));
-const WorkoutDetail = lazy(() => import('./pages/WorkoutDetail').then(m => ({ default: m.WorkoutDetail })));
-const ClassPassOffer = lazy(() => import('./pages/ClassPassOffer').then(m => ({ default: m.ClassPassOffer })));
-const HealthcareProviders = lazy(() => import('./pages/HealthcareProviders').then(m => ({ default: m.HealthcareProviders })));
-const PregnancyPilates = lazy(() => import('./pages/PregnancyPilates').then(m => ({ default: m.PregnancyPilates })));
-const PrenatalPilatesAmsterdam = lazy(() => import('./pages/PrenatalPilatesAmsterdam').then(m => ({ default: m.PrenatalPilatesAmsterdam })));
-const PrivatePilates = lazy(() => import('./pages/PrivatePilates').then(m => ({ default: m.PrivatePilates })));
-const TRXTrainingAmsterdam = lazy(() => import('./pages/TRXTrainingAmsterdam').then(m => ({ default: m.TRXTrainingAmsterdam })));
-const StrengthTrainingAmsterdam = lazy(() => import('./pages/StrengthTrainingAmsterdam').then(m => ({ default: m.StrengthTrainingAmsterdam })));
-const ReformerPilatesAmsterdam = lazy(() => import('./pages/ReformerPilatesAmsterdam').then(m => ({ default: m.ReformerPilatesAmsterdam })));
-
-/** Keep SPA URLs on trailing-slash form (matches GH Pages 200 URLs). */
-function TrailingSlashNormalizer() {
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const normalized = withTrailingSlash(location.pathname);
-    if (normalized !== location.pathname) {
-      navigate(`${normalized}${location.search}${location.hash}`, { replace: true });
-    }
-  }, [location.pathname, location.search, location.hash, navigate]);
-
-  return null;
-}
-
-/** GitHub Pages SPA fallback: 404.html stores intended path in sessionStorage */
-function RedirectHandler() {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const redirect = sessionStorage.getItem('ghPagesRedirect');
-    if (!redirect || redirect === '/') return;
-
-    sessionStorage.removeItem('ghPagesRedirect');
-
-    const qIndex = redirect.indexOf('?');
-    const hIndex = redirect.indexOf('#');
-    let pathEnd = redirect.length;
-    if (qIndex !== -1) pathEnd = Math.min(pathEnd, qIndex);
-    if (hIndex !== -1) pathEnd = Math.min(pathEnd, hIndex);
-
-    const path = withTrailingSlash(redirect.slice(0, pathEnd) || '/');
-    const rest = redirect.slice(pathEnd);
-    navigate(`${path}${rest}`, { replace: true });
-  }, [navigate]);
-
-  return null;
-}
-
-function RouteFallback() {
-  return (
-    <div className="route-fallback" role="status" aria-live="polite" aria-busy="true">
-      <span className="route-fallback-spinner" aria-hidden="true" />
-      <span className="route-fallback-label">Loading…</span>
-    </div>
-  );
-}
-
-function Layout() {
-  return (
-    <>
-      <CookieConsent />
-      <ScrollToTop />
-      <TrailingSlashNormalizer />
-      <RedirectHandler />
-      <div className="app">
-        <Navbar />
-        <main className="main-content">
-          <Suspense fallback={<RouteFallback />}>
-            <Outlet />
-          </Suspense>
-        </main>
-        <Footer />
-        <Suspense fallback={null}>
-          <Chatbot />
-        </Suspense>
-      </div>
-    </>
-  );
-}
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Layout />,
-    children: [
-      { index: true, element: <Home /> },
-      { path: 'pricing', element: <Pricing /> },
-      { path: 'schedule', element: <Schedule /> },
-      { path: 'equipment', element: <Equipment /> },
-      { path: 'equipment/:slug', element: <EquipmentDetail /> },
-      { path: 'workouts/:slug', element: <WorkoutDetail /> },
-      { path: 'congrats', element: <Congrats /> },
-      { path: 'index.html', element: <Navigate to="/" replace /> },
-      { path: 'congrats.html', element: <Navigate to="/congrats/" replace /> },
-      { path: 'instructors', element: <Trainers /> },
-      { path: 'trainer/:slug', element: <TrainerDetail /> },
-      { path: 'academy', element: <Academy /> },
-      { path: 'academy/nl', element: <AcademyNl /> },
-      {
-        path: 'pilates-instructor-course-amsterdam',
-        element: <Navigate to="/academy/" replace />,
-      },
-      { path: 'blog', element: <Blog /> },
-      { path: 'blog/:slug', element: <BlogPost /> },
-      { path: 'classpass-offer', element: <ClassPassOffer /> },
-      { path: 'healthcare-providers', element: <HealthcareProviders /> },
-      { path: 'prenatal-pilates-amsterdam', element: <PrenatalPilatesAmsterdam /> },
-      { path: 'pregnancy-pilates-amsterdam', element: <PregnancyPilates /> },
-      { path: 'private-pilates-amsterdam', element: <PrivatePilates /> },
-      { path: 'trx-training-amsterdam', element: <TRXTrainingAmsterdam /> },
-      { path: 'strength-training-amsterdam', element: <StrengthTrainingAmsterdam /> },
-      { path: 'reformer-pilates-amsterdam', element: <ReformerPilatesAmsterdam /> },
-    ],
-  },
-]);
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Trainers from './pages/Trainers';
+import TrainerDetail from './pages/TrainerDetail';
+import Pricing from './pages/Pricing';
+import Schedule from './pages/Schedule';
+import Workouts from './pages/WorkoutDetail';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
+import Congrats from './pages/Congrats';
+import Academy from './pages/Academy';
+import AcademyNl from './pages/AcademyNl';
+import ClassPassOffer from './pages/ClassPassOffer';
+import HealthcareProviders from './pages/HealthcareProviders';
+import Equipment from './pages/Equipment';
+import EquipmentDetail from './pages/EquipmentDetail';
+import PregnancyPilates from './pages/PregnancyPilates';
+import ReformerPilatesAmsterdam from './pages/ReformerPilatesAmsterdam';
+import StrengthTrainingAmsterdam from './pages/StrengthTrainingAmsterdam';
+import TRXTrainingAmsterdam from './pages/TRXTrainingAmsterdam';
+import PrivatePilates from './pages/PrivatePilates';
+import PrenatalPilatesAmsterdam from './pages/PrenatalPilatesAmsterdam';
+import ScrollToTop from './components/ScrollToTop';
+import CookieConsent from './components/CookieConsent';
+import Chatbot from './components/Chatbot';
+import Breadcrumbs from './components/Breadcrumbs';
+import SEOHead from './components/SEOHead';
+import StructuredData from './components/StructuredData';
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <Router>
+      <SEOHead />
+      <StructuredData />
+      <ScrollToTop />
+      <Navbar />
+      <Breadcrumbs />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/trainers" element={<Trainers />} />
+        <Route path="/trainer/:id" element={<TrainerDetail />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/schedule" element={<Schedule />} />
+        <Route path="/workout/:id" element={<Workouts />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
+        <Route path="/congrats" element={<Congrats />} />
+        <Route path="/academy" element={<Academy />} />
+        <Route path="/academy-nl" element={<AcademyNl />} />
+        <Route path="/classpass" element={<ClassPassOffer />} />
+        <Route path="/healthcare" element={<HealthcareProviders />} />
+        <Route path="/equipment" element={<Equipment />} />
+        <Route path="/equipment/:id" element={<EquipmentDetail />} />
+        <Route path="/pregnancy-pilates" element={<PregnancyPilates />} />
+        <Route path="/reformer-pilates-amsterdam" element={<ReformerPilatesAmsterdam />} />
+        <Route path="/strength-training-amsterdam" element={<StrengthTrainingAmsterdam />} />
+        <Route path="/trx-training-amsterdam" element={<TRXTrainingAmsterdam />} />
+        <Route path="/private-pilates" element={<PrivatePilates />} />
+        <Route path="/prenatal-pilates-amsterdam" element={<PrenatalPilatesAmsterdam />} />
+        {/* New experimental homepage route */}
+        <Route path="/experiment-homepage" element={
+          <div style={{ padding: '2rem' }}>
+            <h1>Experimental Homepage Variant</h1>
+            <p>This is a placeholder for the new homepage design.</p>
+            <div style={{ 
+              display: 'flex', 
+              flexDirection: 'column', 
+              gap: '1rem',
+              marginTop: '2rem'
+            }}>
+              {[...Array(5)].map((_, i) => (
+                <div 
+                  key={i} 
+                  style={{ 
+                    height: '100px', 
+                    backgroundColor: '#f0f0f0', 
+                    borderRadius: '4px',
+                    animation: 'pulse 1.5s infinite'
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+        } />
+      </Routes>
+      <CookieConsent />
+      <Chatbot />
+      <Footer />
+    </Router>
+  );
 }
 
 export default App;
