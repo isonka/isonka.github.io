@@ -7,6 +7,7 @@ import { trackPageView, trackPhoneClick, trackEmailClick, trackSocialClick } fro
 import { trackFBPageView, trackFBPhoneClick, trackFBEmailClick, trackFBWhatsAppClick, trackFBBookingClick } from '../utils/fbPixelTracking';
 import { workouts } from '../data/workouts';
 import { WorkoutCard } from '../components/WorkoutCard';
+import { ContactMap } from '../components/ContactMap';
 import '../styles/Home.css';
 
 const heroImages = [
@@ -315,18 +316,7 @@ export const Home: React.FC = () => {
         </div>
 
         <div className="contact-body">
-          <div className="contact-map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.7239958408204!2d4.876257777138345!3d52.3572909720188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6090de92c90df%3A0xe44c5d7c1eae1d19!2sPT%20Studio%207!5e0!3m2!1sen!2snl!4v1732445893649!5m2!1sen!2snl"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="PT Studio 7 Location"
-            ></iframe>
-          </div>
+          <ContactMap />
 
           <div className="contact-actions">
             <a href="tel:+31685162693" className="contact-action-btn" onClick={() => { trackPhoneClick(); trackFBPhoneClick(); }}>

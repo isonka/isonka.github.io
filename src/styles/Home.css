@@ -549,6 +549,7 @@
 }
 
 .contact-map {
+  position: relative;
   border-radius: var(--radius-lg) 0 0 var(--radius-lg);
   overflow: hidden;
   min-height: 380px;
@@ -556,6 +557,10 @@
 
 .contact-map iframe {
   display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .contact-actions {
