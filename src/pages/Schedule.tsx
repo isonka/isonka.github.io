@@ -131,7 +131,7 @@ export const Schedule: React.FC = () => {
                 <div
                   className="mindbody-widget"
                   data-widget-type="Schedules"
-                  data-widget-id="2b9312c036"
+                  data-widget-id="2b8825c036"
                   style={{ width: '100%' }}
                   hidden={widgetsError}
                 />

@@ -172,7 +172,7 @@ Edit `src/pages/Schedule.tsx` - Update class duration, group size, etc.
 
 ## 🔗 MindBody Widget IDs
 
-- Group Classes (Schedules): `2b9312c036`
+- Group Classes (Schedules): `2b8825c036`
 - Private Lessons (Appointments): `2b18450c036`
 
 ## 🎯 Brand Colors

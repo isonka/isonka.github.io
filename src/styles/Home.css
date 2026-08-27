@@ -433,6 +433,7 @@
   column-gap: 36px;
   row-gap: 64px;
   margin-top: 48px;
+  padding-bottom: 56px;
 }
 
 .home-person {
@@ -514,7 +515,7 @@
 }
 
 .home-footnote {
-  margin: 24px 0 0;
+  margin: 8px 0 0;
   font-size: 1rem;
   color: #555;
   line-height: 1.6;
@@ -714,6 +715,7 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 20px;
     row-gap: 40px;
+    padding-bottom: 28px;
   }
 
   .home-person:nth-child(3n+2),
@@ -759,6 +761,7 @@
   .home-team-grid {
     column-gap: 16px;
     row-gap: 32px;
+    padding-bottom: 20px;
   }
 
   .home-person:nth-child(2n),
