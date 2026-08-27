@@ -36,9 +36,13 @@ let lastGaPageKey = '';
 let lastGaPageAt = 0;
 
 function getTrackingState(): TrackingState {
-  const win = window as Window & { __pt7TrackingLoaded?: TrackingState };
+  const win = window as Window & { __pt7TrackingLoaded?: Partial<TrackingState> };
   const current = win.__pt7TrackingLoaded;
-  if (!current || !('gtagScript' in current) || !('ga' in current) || !('ads' in current)) {
+  if (
+    current?.gtagScript === undefined ||
+    current.ga === undefined ||
+    current.ads === undefined
+  ) {
     win.__pt7TrackingLoaded = {
       gtm: Boolean(current?.gtm),
       gtagScript: false,
@@ -47,7 +51,7 @@ function getTrackingState(): TrackingState {
       meta: Boolean(current?.meta),
     };
   }
-  return win.__pt7TrackingLoaded!;
+  return win.__pt7TrackingLoaded as TrackingState;
 }
 
 function ensureGtagStub() {
