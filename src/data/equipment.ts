@@ -16,7 +16,6 @@ export interface EquipmentSpec {
 export interface EquipmentProduct {
   slug: string;
   name: string;
-  price: string;
   seo: {
     title: string;
     description: string;
@@ -53,9 +52,8 @@ export const equipmentProducts: EquipmentProduct[] = [
   {
     slug: 'reformer',
     name: 'Pilates Reformer',
-    price: '€2,200',
     seo: {
-      title: 'Buy Pilates Reformer Amsterdam | €2,200 | PT Studio 7',
+      title: 'Buy Pilates Reformer Amsterdam | PT Studio 7',
       description: 'Professional-grade Pilates Reformer for sale. Solid beech wood frame, smooth-gliding carriage, complete with accessories. Studio-quality equipment available in Amsterdam.',
       keywords: 'Pilates Reformer for sale, professional Pilates equipment, reformer Amsterdam, studio equipment, Pilates apparatus',
     },
@@ -108,7 +106,6 @@ export const equipmentProducts: EquipmentProduct[] = [
   {
     slug: 'tower-reformer',
     name: 'Tower Reformer',
-    price: '€2,500',
     seo: {
       title: 'Tower Reformer - PT Studio 7 Amsterdam',
       description: 'Professional-grade Tower Reformer combining reformer and tower for expanded exercise options. Studio-quality Pilates equipment available in Amsterdam.',
@@ -163,7 +160,6 @@ export const equipmentProducts: EquipmentProduct[] = [
   {
     slug: 'cadillac',
     name: 'Combo Cadillac',
-    price: '€3,000',
     seo: {
       title: 'Combo Cadillac - PT Studio 7 Amsterdam',
       description: 'Professional Pilates Cadillac for sale. The ultimate apparatus for endless exercise possibilities. Studio-grade equipment available in Amsterdam.',
@@ -216,7 +212,6 @@ export const equipmentProducts: EquipmentProduct[] = [
   {
     slug: 'wunda-chair',
     name: 'Wunda Chair',
-    price: '€1,000',
     seo: {
       title: 'Wunda Chair - PT Studio 7 Amsterdam',
       description: 'Professional Pilates Wunda Chair for sale. Versatile equipment for challenging workouts in compact space. Studio-grade quality available in Amsterdam.',
@@ -265,10 +260,9 @@ export const equipmentProducts: EquipmentProduct[] = [
   {
     slug: 'ladder-barrel',
     name: 'Ladder Barrel',
-    price: '€1,000',
     seo: {
       title: 'Ladder Barrel for Sale | PT Studio 7 Amsterdam',
-      description: 'Buy a professional Pilates Ladder Barrel in Amsterdam. Specs, pricing, and ordering for home or studio use. Sold by PT Studio 7; not used in our client training sessions.',
+      description: 'Buy a professional Pilates Ladder Barrel in Amsterdam. Specs and ordering for home or studio use. Sold by PT Studio 7; not used in our client training sessions.',
       keywords: 'Ladder Barrel for sale, Pilates barrel for sale Amsterdam, buy Pilates equipment Netherlands, professional Pilates apparatus',
     },
     images: [

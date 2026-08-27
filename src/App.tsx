@@ -11,9 +11,10 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
 import { CookieConsent } from './components/CookieConsent';
-import { withTrailingSlash } from './utils/urls';
+import { withTrailingSlash, safeInternalRedirect } from './utils/urls';
 import { Home } from './pages/Home';
 import './App.css';
+import './styles/design.css';
 
 const Chatbot = lazy(() => import('./components/Chatbot').then(m => ({ default: m.Chatbot })));
 const Pricing = lazy(() => import('./pages/Pricing').then(m => ({ default: m.Pricing })));
@@ -30,14 +31,15 @@ const BlogPost = lazy(() => import('./pages/BlogPost').then(m => ({ default: m.B
 const WorkoutDetail = lazy(() => import('./pages/WorkoutDetail').then(m => ({ default: m.WorkoutDetail })));
 const ClassPassOffer = lazy(() => import('./pages/ClassPassOffer').then(m => ({ default: m.ClassPassOffer })));
 const HealthcareProviders = lazy(() => import('./pages/HealthcareProviders').then(m => ({ default: m.HealthcareProviders })));
+const Corporate = lazy(() => import('./pages/Corporate').then(m => ({ default: m.Corporate })));
 const PregnancyPilates = lazy(() => import('./pages/PregnancyPilates').then(m => ({ default: m.PregnancyPilates })));
 const PrenatalPilatesAmsterdam = lazy(() => import('./pages/PrenatalPilatesAmsterdam').then(m => ({ default: m.PrenatalPilatesAmsterdam })));
 const PrivatePilates = lazy(() => import('./pages/PrivatePilates').then(m => ({ default: m.PrivatePilates })));
 const TRXTrainingAmsterdam = lazy(() => import('./pages/TRXTrainingAmsterdam').then(m => ({ default: m.TRXTrainingAmsterdam })));
 const StrengthTrainingAmsterdam = lazy(() => import('./pages/StrengthTrainingAmsterdam').then(m => ({ default: m.StrengthTrainingAmsterdam })));
 const ReformerPilatesAmsterdam = lazy(() => import('./pages/ReformerPilatesAmsterdam').then(m => ({ default: m.ReformerPilatesAmsterdam })));
+const Privacy = lazy(() => import('./pages/Privacy').then(m => ({ default: m.Privacy })));
 
-/** Keep SPA URLs on trailing-slash form (matches GH Pages 200 URLs). */
 function TrailingSlashNormalizer() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -52,7 +54,6 @@ function TrailingSlashNormalizer() {
   return null;
 }
 
-/** GitHub Pages SPA fallback: 404.html stores intended path in sessionStorage */
 function RedirectHandler() {
   const navigate = useNavigate();
 
@@ -62,15 +63,10 @@ function RedirectHandler() {
 
     sessionStorage.removeItem('ghPagesRedirect');
 
-    const qIndex = redirect.indexOf('?');
-    const hIndex = redirect.indexOf('#');
-    let pathEnd = redirect.length;
-    if (qIndex !== -1) pathEnd = Math.min(pathEnd, qIndex);
-    if (hIndex !== -1) pathEnd = Math.min(pathEnd, hIndex);
+    const safe = safeInternalRedirect(redirect);
+    if (!safe) return;
 
-    const path = withTrailingSlash(redirect.slice(0, pathEnd) || '/');
-    const rest = redirect.slice(pathEnd);
-    navigate(`${path}${rest}`, { replace: true });
+    navigate(`${safe.path}${safe.rest}`, { replace: true });
   }, [navigate]);
 
   return null;
@@ -92,7 +88,7 @@ function Layout() {
       <ScrollToTop />
       <TrailingSlashNormalizer />
       <RedirectHandler />
-      <div className="app">
+      <div className="app instructors-silk-host">
         <Navbar />
         <main className="main-content">
           <Suspense fallback={<RouteFallback />}>
@@ -134,12 +130,14 @@ const router = createBrowserRouter([
       { path: 'blog/:slug', element: <BlogPost /> },
       { path: 'classpass-offer', element: <ClassPassOffer /> },
       { path: 'healthcare-providers', element: <HealthcareProviders /> },
+      { path: 'corporate', element: <Corporate /> },
       { path: 'prenatal-pilates-amsterdam', element: <PrenatalPilatesAmsterdam /> },
       { path: 'pregnancy-pilates-amsterdam', element: <PregnancyPilates /> },
       { path: 'private-pilates-amsterdam', element: <PrivatePilates /> },
       { path: 'trx-training-amsterdam', element: <TRXTrainingAmsterdam /> },
       { path: 'strength-training-amsterdam', element: <StrengthTrainingAmsterdam /> },
       { path: 'reformer-pilates-amsterdam', element: <ReformerPilatesAmsterdam /> },
+      { path: 'privacy', element: <Privacy /> },
     ],
   },
 ]);

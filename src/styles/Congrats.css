@@ -1,7 +1,6 @@
-/* Congrats Page */
 .congrats-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f8f8f8 0%, #e0e0e0 100%);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,10 +9,10 @@
 
 .congrats-container {
   max-width: 700px;
-  background: #fff;
-  border-radius: var(--radius-xl);
-  padding: 60px 40px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  background: transparent;
+  border-radius: 0;
+  padding: 60px 24px;
+  box-shadow: none;
   text-align: center;
 }
 
@@ -183,11 +182,12 @@
   color: #222;
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 2px solid #ffd700;
+  border-bottom: none;
+  transition: color 0.2s ease;
 }
 
 .contact-support a:hover {
-  color: #ffd700;
+  color: #c9a800;
 }
 
 @media (max-width: 768px) {

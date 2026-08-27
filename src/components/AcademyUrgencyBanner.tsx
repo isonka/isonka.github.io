@@ -5,7 +5,7 @@ export const AcademyUrgencyBanner: React.FC = () => (
   <Link
     to="/academy/"
     className="academy-urgency-banner"
-    aria-label="Become a Pilates instructor — Pilates teacher training at PT7 Academy"
+    aria-label="Become a Pilates instructor | Pilates teacher training at PT7 Academy"
   >
     <div className="urgency-content">
       <span className="urgency-text">

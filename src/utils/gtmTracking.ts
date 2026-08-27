@@ -1,19 +1,18 @@
-// GTM Event tracking utility functions
 import { sendGaPageView } from './consentTracking';
+
+type DataLayerItem = Record<string, unknown> | unknown[];
 
 declare global {
   interface Window {
-    dataLayer?: any[];
+    dataLayer?: DataLayerItem[];
   }
 }
 
-// Initialize dataLayer if it doesn't exist
 if (typeof window !== 'undefined' && !window.dataLayer) {
   window.dataLayer = [];
 }
 
-// Generic GTM event function
-export const trackEvent = (eventName: string, eventParams?: Record<string, any>) => {
+export const trackEvent = (eventName: string, eventParams?: Record<string, unknown>) => {
   if (typeof window !== 'undefined' && window.dataLayer) {
     window.dataLayer.push({
       event: eventName,
@@ -23,18 +22,14 @@ export const trackEvent = (eventName: string, eventParams?: Record<string, any>)
   }
 };
 
-// Specific tracking functions for common events
-
-// Track "Book Now" button clicks
 export const trackBookNowClick = (location: string) => {
   trackEvent('book_now_click', {
-    button_location: location, // e.g., 'navbar', 'hero', 'pricing_page'
+    button_location: location,
     event_category: 'engagement',
     event_label: 'Book Now Button',
   });
 };
 
-// Track page views (for SPA) — dataLayer for GTM + gtag for GA4
 export const trackPageView = (pagePath: string, pageTitle: string) => {
   trackEvent('page_view', {
     page_path: pagePath,
@@ -44,7 +39,6 @@ export const trackPageView = (pagePath: string, pageTitle: string) => {
   sendGaPageView(pagePath, pageTitle);
 };
 
-// Track schedule page visit
 export const trackScheduleVisit = () => {
   trackEvent('view_schedule', {
     event_category: 'engagement',
@@ -52,7 +46,6 @@ export const trackScheduleVisit = () => {
   });
 };
 
-// Track phone number clicks
 export const trackPhoneClick = () => {
   trackEvent('phone_click', {
     event_category: 'contact',
@@ -61,7 +54,6 @@ export const trackPhoneClick = () => {
   });
 };
 
-// Track email clicks
 export const trackEmailClick = () => {
   trackEvent('email_click', {
     event_category: 'contact',
@@ -70,7 +62,6 @@ export const trackEmailClick = () => {
   });
 };
 
-// Track pricing page visit
 export const trackPricingView = () => {
   trackEvent('view_pricing', {
     event_category: 'engagement',
@@ -78,7 +69,6 @@ export const trackPricingView = () => {
   });
 };
 
-// Track blog post views
 export const trackBlogPostView = (postTitle: string, postSlug: string) => {
   trackEvent('view_blog_post', {
     event_category: 'content',
@@ -87,7 +77,6 @@ export const trackBlogPostView = (postTitle: string, postSlug: string) => {
   });
 };
 
-// Track blog post read time (call when user scrolls to bottom)
 export const trackBlogPostRead = (postTitle: string, readTime: number) => {
   trackEvent('blog_post_read', {
     event_category: 'content_engagement',
@@ -96,7 +85,6 @@ export const trackBlogPostRead = (postTitle: string, readTime: number) => {
   });
 };
 
-// Track equipment page views
 export const trackEquipmentView = (equipmentType: string) => {
   trackEvent('view_equipment', {
     event_category: 'engagement',
@@ -105,7 +93,6 @@ export const trackEquipmentView = (equipmentType: string) => {
   });
 };
 
-// Track video plays (if you add videos)
 export const trackVideoPlay = (videoName: string) => {
   trackEvent('video_play', {
     event_category: 'media',
@@ -114,7 +101,6 @@ export const trackVideoPlay = (videoName: string) => {
   });
 };
 
-// Track form submissions (if you add forms)
 export const trackFormSubmission = (formName: string) => {
   trackEvent('form_submission', {
     event_category: 'conversion',
@@ -123,7 +109,6 @@ export const trackFormSubmission = (formName: string) => {
   });
 };
 
-// Track scroll depth (25%, 50%, 75%, 100%)
 export const trackScrollDepth = (percentage: number, pagePath: string) => {
   trackEvent('scroll_depth', {
     event_category: 'engagement',
@@ -133,7 +118,6 @@ export const trackScrollDepth = (percentage: number, pagePath: string) => {
   });
 };
 
-// Track outbound link clicks
 export const trackOutboundLink = (url: string, linkText: string) => {
   trackEvent('outbound_link_click', {
     event_category: 'engagement',
@@ -142,7 +126,6 @@ export const trackOutboundLink = (url: string, linkText: string) => {
   });
 };
 
-// Track social media clicks
 export const trackSocialClick = (platform: string) => {
   trackEvent('social_click', {
     event_category: 'social_media',
@@ -151,7 +134,6 @@ export const trackSocialClick = (platform: string) => {
   });
 };
 
-// Track booking confirmation (Congrats page)
 export const trackBookingConfirmation = () => {
   trackEvent('booking_confirmed', {
     event_category: 'conversion',
@@ -160,7 +142,6 @@ export const trackBookingConfirmation = () => {
   });
 };
 
-// Track navigation menu clicks
 export const trackNavClick = (menuItem: string) => {
   trackEvent('navigation_click', {
     event_category: 'navigation',
@@ -169,7 +150,6 @@ export const trackNavClick = (menuItem: string) => {
   });
 };
 
-// Academy / Google Ads conversion helpers
 export const trackAcademyEnrollClick = (
   paymentType: 'full' | 'installments',
   course: 'reformer' | 'mat' = 'reformer',
@@ -199,4 +179,3 @@ export const trackAcademyInquiryClick = (
     button_location: location,
   });
 };
-

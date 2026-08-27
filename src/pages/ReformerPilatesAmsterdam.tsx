@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { Reveal } from '../components/Reveal';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/ServicePage.css';
 
@@ -84,8 +85,9 @@ export const ReformerPilatesAmsterdam: React.FC = () => {
       />
 
       <div className="service-page">
-        <section className="service-hero">
+        <Reveal className="service-hero">
           <div className="service-hero-content">
+            <p className="kicker">Reformer</p>
             <h1>Reformer Pilates Amsterdam</h1>
             <p>
               Boutique Reformer Pilates at Museumplein: small groups of maximum 5, private
@@ -101,9 +103,9 @@ export const ReformerPilatesAmsterdam: React.FC = () => {
               Book a Reformer Class
             </Link>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-section">
+        <Reveal className="service-section">
           <div className="service-container">
             <h2>Reformer Pilates at Museumplein</h2>
             <p>
@@ -127,9 +129,9 @@ export const ReformerPilatesAmsterdam: React.FC = () => {
               <Link to="/schedule/">live schedule</Link>.
             </p>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-section">
+        <Reveal className="service-section">
           <div className="service-container">
             <h2>Your first Reformer visit</h2>
             <p>
@@ -167,9 +169,9 @@ export const ReformerPilatesAmsterdam: React.FC = () => {
               </div>
             </div>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-section">
+        <Reveal className="service-section">
           <div className="service-container">
             <h2>Who Reformer at PT Studio 7 is for</h2>
             <div className="service-benefits-grid">
@@ -206,9 +208,9 @@ export const ReformerPilatesAmsterdam: React.FC = () => {
               </div>
             </div>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-section">
+        <Reveal className="service-section">
           <div className="service-container">
             <h2>Why train Reformer with us</h2>
             <div className="service-benefits-grid">
@@ -241,9 +243,9 @@ export const ReformerPilatesAmsterdam: React.FC = () => {
               </div>
             </div>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-section">
+        <Reveal className="service-section">
           <div className="service-container">
             <h2>Frequently asked questions</h2>
             <div className="service-faq-list">
@@ -255,9 +257,9 @@ export const ReformerPilatesAmsterdam: React.FC = () => {
               ))}
             </div>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-cta-section">
+        <Reveal className="service-cta-section">
           <h2>Book Reformer Pilates in Amsterdam</h2>
           <p>
             Reserve a small group or private Reformer session at Museumplein, or explore PT7
@@ -274,7 +276,7 @@ export const ReformerPilatesAmsterdam: React.FC = () => {
               Pilates teacher training
             </Link>
           </div>
-        </section>
+        </Reveal>
       </div>
     </>
   );

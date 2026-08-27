@@ -1,0 +1,66 @@
+.instructors-silk-host {
+  position: relative;
+  min-height: 100vh;
+  isolation: isolate;
+  background: #fffdf4;
+}
+
+.instructors-silk-wrap,
+.instructors-silk-fallback,
+.instructors-silk {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100dvh;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.instructors-silk-fallback {
+  background:
+    radial-gradient(ellipse 100% 75% at 5% 15%, rgba(255, 215, 0, 0.32), transparent 55%),
+    radial-gradient(ellipse 90% 60% at 95% 80%, rgba(229, 193, 0, 0.24), transparent 50%),
+    radial-gradient(ellipse 60% 50% at 45% 40%, rgba(255, 215, 0, 0.16), transparent 58%),
+    radial-gradient(ellipse 45% 40% at 72% 22%, rgba(230, 200, 80, 0.12), transparent 52%),
+    #fffdf4;
+  background-size: 190% 190%, 180% 180%, 220% 220%, 160% 160%, 100% 100%;
+  animation:
+    silk-drift-a 18s ease-in-out infinite alternate,
+    silk-drift-b 26s ease-in-out infinite alternate,
+    silk-breathe 11s ease-in-out infinite;
+}
+
+.instructors-silk-wrap--gl .instructors-silk-fallback {
+  display: none;
+  animation: none;
+}
+
+.instructors-silk {
+  display: block;
+  background: transparent;
+}
+
+@keyframes silk-drift-a {
+  from { background-position: 0% 25%, 100% 75%, 40% 45%, 70% 25%, 0 0; }
+  to { background-position: 85% 8%, 5% 92%, 70% 25%, 35% 60%, 0 0; }
+}
+
+@keyframes silk-drift-b {
+  from { background-size: 190% 190%, 180% 180%, 220% 220%, 160% 160%, 100% 100%; }
+  to { background-size: 230% 210%, 210% 200%, 260% 240%, 190% 175%, 100% 100%; }
+}
+
+@keyframes silk-breathe {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.93; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .instructors-silk-wrap,
+  .instructors-silk-fallback,
+  .instructors-silk {
+    display: none;
+    animation: none;
+  }
+}

@@ -15,10 +15,8 @@ export const Navbar: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Login | Register healcode widget — load after idle so Home LCP is not competing
   useEffect(() => loadHealcodeWhenIdle(), []);
 
-  // Close More dropdown when clicking outside (desktop)
   useEffect(() => {
     if (!moreOpen) return;
     const handleClickOutside = (e: MouseEvent) => {
@@ -29,7 +27,6 @@ export const Navbar: React.FC = () => {
     return () => document.removeEventListener('click', handleClickOutside);
   }, [moreOpen]);
 
-  // Close menu when scrolling on mobile (menu overlays screen and blocks content)
   useEffect(() => {
     if (!isMenuOpen) return;
     const handleScroll = () => {
@@ -48,10 +45,8 @@ export const Navbar: React.FC = () => {
     closeMenu();
     trackNavClick(sectionId);
     
-    // If we're not on the home page, navigate there first
     if (location.pathname !== '/') {
       navigate('/');
-      // Wait for navigation to complete before scrolling
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -59,7 +54,6 @@ export const Navbar: React.FC = () => {
         }
       }, 100);
     } else {
-      // If already on home page, just scroll
       const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -105,7 +99,7 @@ export const Navbar: React.FC = () => {
           <li><a href="#reviews" aria-label="Read reviews" onClick={(e) => { e.preventDefault(); scrollToSection('reviews'); }}>Reviews</a></li>
           <li><Link to="/instructors/" aria-label="Meet our instructors" onClick={closeMenu}>Instructors</Link></li>
           <li><Link to="/pricing/" aria-label="View pricing" onClick={closeMenu}>Prices</Link></li>
-          <li><Link to="/academy/" aria-label="Pilates teacher training — PT7 Academy" onClick={closeMenu}>Academy</Link></li>
+          <li><Link to="/academy/" aria-label="Pilates teacher training | PT7 Academy" onClick={closeMenu}>Academy</Link></li>
           <li className="navbar-dropdown">
             <button
               type="button"
@@ -120,6 +114,7 @@ export const Navbar: React.FC = () => {
               <li><a href="#workouts" onClick={(e) => { e.preventDefault(); closeMenu(); setMoreOpen(false); scrollToSection('workouts'); }}>Workouts</a></li>
               <li><Link to="/equipment/" onClick={() => { closeMenu(); setMoreOpen(false); }}>Shop Equipment</Link></li>
               <li><Link to="/healthcare-providers/" onClick={() => { closeMenu(); setMoreOpen(false); }}>For Healthcare</Link></li>
+              <li><Link to="/corporate/" onClick={() => { closeMenu(); setMoreOpen(false); }}>For Business</Link></li>
               <li><Link to="/blog/" onClick={() => { closeMenu(); setMoreOpen(false); }}>Blog</Link></li>
             </ul>
           </li>

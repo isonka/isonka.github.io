@@ -17,7 +17,6 @@ export const ClassPassOffer = () => {
       <Breadcrumbs items={[{ name: 'ClassPass Offer', path: '/classpass-offer' }]} />
 
       <div className="classpass-offer-page">
-        {/* Hero Section */}
         <section className="cp-hero">
           <div className="cp-hero-overlay">
             <div className="cp-hero-content">
@@ -31,7 +30,6 @@ export const ClassPassOffer = () => {
           </div>
         </section>
 
-        {/* Price Comparison */}
         <section className="cp-comparison" id="offer">
           <h2>Cost Comparison</h2>
           <p className="section-subtitle">Our classes typically cost 13-20 credits on ClassPass. Here is a direct monthly comparison.</p>
@@ -102,7 +100,6 @@ export const ClassPassOffer = () => {
           </div>
         </section>
 
-        {/* Exclusive Offer */}
         <section className="cp-exclusive-offer">
           <div className="offer-container">
             <span className="offer-badge">Transition Offer</span>
@@ -129,7 +126,6 @@ export const ClassPassOffer = () => {
           </div>
         </section>
 
-        {/* Why Switch */}
         <section className="cp-benefits">
           <h2>Why Clients Switch to Direct Booking</h2>
           <div className="benefits-grid">
@@ -166,7 +162,6 @@ export const ClassPassOffer = () => {
           </div>
         </section>
 
-        {/* Client Observations */}
         <section className="cp-testimonials">
           <h2>What We Hear Most Often</h2>
           <div className="testimonials-grid">
@@ -188,7 +183,6 @@ export const ClassPassOffer = () => {
           </div>
         </section>
 
-        {/* FAQ */}
         <section className="cp-faq">
           <h2>Frequently Asked Questions</h2>
           <div className="faq-grid">
@@ -211,7 +205,6 @@ export const ClassPassOffer = () => {
           </div>
         </section>
 
-        {/* Final CTA */}
         <section className="cp-final-cta">
           <h2>Ready to Switch to Direct?</h2>
           <p>Review pricing options and choose the format that fits your schedule.</p>

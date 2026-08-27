@@ -12,6 +12,7 @@
     "build": "tsc -b && vite build && node scripts/generate-static-routes.js && node scripts/prerender-static-html.js",
     "build:only": "tsc -b && vite build",
     "lint": "eslint .",
+    "fonts": "node scripts/fetch-fonts.js",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"

@@ -5,11 +5,27 @@ import { equipmentProducts } from '../data/equipment';
 import '../styles/Equipment.css';
 
 const equipmentMeta: Record<string, { description: string; tag?: string }> = {
-  'reformer': { description: 'The quintessential Pilates apparatus featuring a sliding carriage, springs, and straps for full-body conditioning.', tag: 'Most Popular' },
-  'tower-reformer': { description: 'Combines the reformer with a tower for added vertical spring resistance and exercise variety.' },
-  'cadillac': { description: 'Versatile equipment with overhead bars and springs for advanced stretching and strength work.' },
-  'wunda-chair': { description: 'Compact yet powerful equipment for balance, strength, and functional movement training.' },
-  'ladder-barrel': { description: 'Available for purchase for home or studio use. Sold by PT Studio 7; not used in our client trainings.' },
+  reformer: {
+    description:
+      'The quintessential Pilates apparatus featuring a sliding carriage, springs, and straps for full-body conditioning.',
+    tag: 'Most popular',
+  },
+  'tower-reformer': {
+    description:
+      'Combines the reformer with a tower for added vertical spring resistance and exercise variety.',
+  },
+  cadillac: {
+    description:
+      'Versatile equipment with overhead bars and springs for advanced stretching and strength work.',
+  },
+  'wunda-chair': {
+    description:
+      'Compact yet powerful equipment for balance, strength, and functional movement training.',
+  },
+  'ladder-barrel': {
+    description:
+      'Available for purchase for home or studio use. Sold by PT Studio 7; not used in our client trainings.',
+  },
 };
 
 export const Equipment: React.FC = () => {
@@ -26,11 +42,11 @@ export const Equipment: React.FC = () => {
     }, 100);
   };
 
-  const equipment = equipmentProducts.map(p => ({
+  const equipment = equipmentProducts.map((p) => ({
     name: p.name,
     image: p.images[0].src,
     description: equipmentMeta[p.slug]?.description || p.shortDesc,
-    link: `/equipment/${p.slug}`,
+    link: `/equipment/${p.slug}/`,
     tag: equipmentMeta[p.slug]?.tag,
   }));
 
@@ -38,11 +54,11 @@ export const Equipment: React.FC = () => {
     <>
       <SEOHead
         title="Buy Pilates Equipment Amsterdam | Reformers & More | PT Studio 7"
-        description="Buy professional Pilates equipment in Amsterdam: Reformer (€2,200), Tower Reformer, Cadillac, Wunda Chair, and Ladder Barrel. Specs, warranty, and 3-8 week delivery in the Netherlands."
-        keywords="buy pilates equipment amsterdam, pilates reformer kopen nederland, pilates equipment for sale netherlands, buy reformer amsterdam, cadillac pilates for sale, tower reformer price"
+        description="Buy professional Pilates equipment in Amsterdam: Reformer, Tower Reformer, Cadillac, Wunda Chair, and Ladder Barrel. Specs, warranty, and 3-8 week delivery in the Netherlands."
+        keywords="buy pilates equipment amsterdam, pilates reformer kopen nederland, pilates equipment for sale netherlands, buy reformer amsterdam, cadillac pilates for sale"
         canonical="https://www.pt7.nl/equipment/"
         ogTitle="Buy Pilates Equipment Amsterdam | PT Studio 7"
-        ogDescription="Transactional Pilates equipment catalog: Reformer, Tower Reformer, Cadillac, Wunda Chair, and Ladder Barrel with pricing and ordering support."
+        ogDescription="Transactional Pilates equipment catalog: Reformer, Tower Reformer, Cadillac, Wunda Chair, and Ladder Barrel with ordering support."
       />
       <StructuredData
         type="ItemList"
@@ -59,45 +75,54 @@ export const Equipment: React.FC = () => {
       />
 
       <div className="equipment-page">
+        <header className="equipment-hero">
+          <p className="kicker">Equipment</p>
+          <h1>Buy Pilates Equipment Amsterdam</h1>
+          <p className="equipment-hero-line">
+            Professional Reformers and classical apparatus for home or studio, with specs, warranty, and delivery in the Netherlands.
+          </p>
+        </header>
 
         <div className="equipment-content">
-          <div className="equipment-grid">
+          <ul className="equipment-list">
             {equipment.map((item) => (
-              <Link 
-                key={item.name} 
-                to={item.link} 
-                className="equipment-card"
-                style={{ textDecoration: 'none', color: 'inherit' }}
-              >
-                {item.tag && <div className="equipment-tag">{item.tag}</div>}
-                <img 
-                  src={item.image} 
-                  alt={`${item.name} Pilates Equipment`} 
-                  width="400" 
-                  height="280" 
-                  loading="lazy" 
-                  decoding="async" 
-                />
-                <div className="equipment-info">
-                  <h3>{item.name}</h3>
-                  <p>{item.description}</p>
-                  <span className="learn-more">Learn More →</span>
-                </div>
-              </Link>
+              <li key={item.name} className="equipment-item">
+                <Link to={item.link} className="equipment-link">
+                  <div className="equipment-media">
+                    <img
+                      src={item.image}
+                      alt={`${item.name} Pilates Equipment`}
+                      width="640"
+                      height="480"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  {item.tag ? <span className="equipment-note">{item.tag}</span> : null}
+                  <h2 className="equipment-title">{item.name}</h2>
+                  <p className="equipment-desc">{item.description}</p>
+                  <span className="prose-link equipment-more">Learn more</span>
+                </Link>
+              </li>
             ))}
-          </div>
-
-          <div className="equipment-cta">
-            <h2>Pilates Equipment for Sale in Amsterdam</h2>
-            <p>Compare equipment models, review specs, and request an order for home or studio use. Need guidance? We can help you choose the right setup based on your space and goals.</p>
-            <div className="cta-buttons">
-              <Link to="/schedule/" className="cta-button">Book a Class</Link>
-              <a href="#contact" onClick={handleContactClick} className="cta-button cta-button-secondary">Contact Us</a>
-            </div>
-          </div>
+          </ul>
         </div>
+
+        <section className="cta-band equipment-cta-band">
+          <h2>Need help choosing?</h2>
+          <p>
+            Compare models, review specs, and request an order for home or studio use. We can advise based on your space and goals.
+          </p>
+          <div className="equipment-cta-actions">
+            <Link to="/schedule/" className="btn-gold">
+              Book a Class
+            </Link>
+            <a href="#contact" onClick={handleContactClick} className="btn-ghost">
+              Contact Us
+            </a>
+          </div>
+        </section>
       </div>
     </>
   );
 };
-

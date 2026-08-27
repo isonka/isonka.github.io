@@ -1,5 +1,5 @@
 .academy-urgency-banner {
-  background: linear-gradient(90deg, #ffd700 0%, #ffb800 100%);
+  background: #ffd700;
   padding: 14px 20px;
   position: relative;
   overflow: hidden;
@@ -9,27 +9,6 @@
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-}
-
-.academy-urgency-banner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.3) 50%,
-    transparent 100%
-  );
-  animation: academy-banner-shimmer 3s infinite;
-}
-
-@keyframes academy-banner-shimmer {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(50%); }
 }
 
 .urgency-content {
@@ -73,8 +52,8 @@
 
 .urgency-cta:hover {
   background: #000;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: none;
+  box-shadow: none;
 }
 
 @media (max-width: 768px) {

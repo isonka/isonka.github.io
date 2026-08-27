@@ -7,7 +7,7 @@ Return current package and session pricing for PT Studio 7 Amsterdam.
 - Always verify live prices on https://www.pt7.nl/pricing/ (MindBody checkout is source of truth).
 - Academy course fees: https://www.pt7.nl/academy/
 
-## Snapshot (EUR, as published on site — re-check pricing page)
+## Snapshot (EUR, as published on site, re-check pricing page)
 
 ### Introduction offer
 
@@ -30,7 +30,7 @@ Return current package and session pricing for PT Studio 7 Amsterdam.
 ### Private sessions (45 min)
 
 - Junior instructors (Gülce Koç, Lal Avgen, Nisan Atalay, Kelly Tin, E. Gamze Karadağ): from €70 single
-- Senior / Master tiers: higher — see pricing page tabs
+- Senior / Master tiers: higher, see pricing page tabs
 
 ### Academy (teacher training)
 

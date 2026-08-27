@@ -51,6 +51,16 @@ const routeMeta = {
     description: 'Physiotherapists and healthcare providers: refer your clients to PT Studio 7 for post-rehab Pilates and functional training. Small groups, expert instructors.',
     image: DEFAULT_IMAGE,
   },
+  corporate: {
+    title: 'Corporate Pilates Amsterdam | Bedrijfsfitness | PT Studio 7',
+    description: 'Corporate Pilates and bedrijfsfitness Amsterdam for teams. Boutique Reformer at Museumplein or on-site mat sessions. Tax-friendly WKR options.',
+    image: DEFAULT_IMAGE,
+  },
+  privacy: {
+    title: 'Privacy Policy | PT Studio 7 Amsterdam',
+    description: 'How PT Studio 7 Amsterdam uses cookies, analytics, advertising, booking widgets, and contact data.',
+    image: DEFAULT_IMAGE,
+  },
   'prenatal-pilates-amsterdam': {
     title: 'Prenatal & Pregnancy Pilates Amsterdam | Private Reformer | PT Studio 7',
     description: 'Private prenatal Reformer Pilates at Museumplein (Oud-Zuid). 45-minute 1:1 sessions, trimester adaptations, pelvic floor focus. Train with Elif or Göknur through pregnancy.',
@@ -95,7 +105,7 @@ const routeMeta = {
   },
   'equipment': {
     title: 'Buy Pilates Equipment Amsterdam | Reformers & More | PT Studio 7',
-    description: 'Buy Pilates equipment in Amsterdam: Reformer, Tower Reformer, Cadillac, Wunda Chair, and Ladder Barrel with pricing, specs, and ordering support.',
+    description: 'Buy Pilates equipment in Amsterdam: Reformer, Tower Reformer, Cadillac, Wunda Chair, and Ladder Barrel with specs and ordering support.',
     image: DEFAULT_IMAGE,
   },
   'blog': {
@@ -129,7 +139,7 @@ const routeMeta = {
     image: DEFAULT_IMAGE,
   },
   'equipment/reformer': {
-    title: 'Buy Pilates Reformer Amsterdam | €2,200 | PT Studio 7',
+    title: 'Buy Pilates Reformer Amsterdam | PT Studio 7',
     description: 'Professional Pilates Reformer at PT Studio 7 Museumplein. Train on premium equipment with certified instructors in small groups of max 5.',
     image: DEFAULT_IMAGE,
   },
@@ -150,46 +160,46 @@ const routeMeta = {
   },
   'equipment/ladder-barrel': {
     title: 'Ladder Barrel for Sale | PT Studio 7 Amsterdam',
-    description: 'Professional Pilates Ladder Barrel for sale. Specs, pricing, and ordering for home or studio use. Sold by PT Studio 7; not used in our client training sessions.',
+    description: 'Professional Pilates Ladder Barrel for sale. Specs and ordering for home or studio use. Sold by PT Studio 7; not used in our client training sessions.',
     image: DEFAULT_IMAGE,
   },
   'trainer/elif': {
-    title: 'Elif Arzu Ogan — Owner & Head Instructor | PT Studio 7',
+    title: 'Elif Arzu Ogan | Owner & Head Instructor | PT Studio 7',
     description: 'Elif Arzu Ogan, owner and head instructor at PT Studio 7 Amsterdam. 15+ years of Pilates expertise at Museumplein. Book a session with Elif.',
     image: '/assets/images/elif.jpg',
   },
   'trainer/gokben': {
-    title: 'Gökben Öztekin — Pilates Instructor | PT Studio 7 Amsterdam',
+    title: 'Gökben Öztekin | Pilates Instructor | PT Studio 7 Amsterdam',
     description: 'Gökben Öztekin, certified Pilates instructor at PT Studio 7 Museumplein Amsterdam. Expert in Reformer Pilates and small group classes.',
     image: DEFAULT_IMAGE,
   },
   'trainer/goknur': {
-    title: 'Göknur Dipli — Pilates Instructor | PT Studio 7 Amsterdam',
+    title: 'Göknur Dipli | Pilates Instructor | PT Studio 7 Amsterdam',
     description: 'Göknur Dipli, certified Pilates instructor at PT Studio 7 Museumplein Amsterdam. Specialist in Reformer Pilates and personal training.',
     image: DEFAULT_IMAGE,
   },
   'trainer/gulce': {
-    title: 'Gülce Koç — Pilates Instructor | PT Studio 7 Amsterdam',
+    title: 'Gülce Koç | Pilates Instructor | PT Studio 7 Amsterdam',
     description: 'Gülce Koç, certified Pilates instructor at PT Studio 7 Museumplein Amsterdam. Expert guidance in Reformer Pilates and functional training.',
     image: DEFAULT_IMAGE,
   },
   'trainer/lal': {
-    title: 'Lal Avgen — Pilates Instructor | PT Studio 7 Amsterdam',
+    title: 'Lal Avgen | Pilates Instructor | PT Studio 7 Amsterdam',
     description: 'Lal Avgen, certified Pilates instructor at PT Studio 7 Museumplein Amsterdam. Specialised in Reformer Pilates and strength training.',
     image: DEFAULT_IMAGE,
   },
   'trainer/nisan': {
-    title: 'Nisan Atalay — Pilates Instructor | PT Studio 7 Amsterdam',
+    title: 'Nisan Atalay | Pilates Instructor | PT Studio 7 Amsterdam',
     description: 'Nisan Atalay, certified Pilates instructor at PT Studio 7 Museumplein Amsterdam. Expert in Reformer Pilates, TRX, and small group classes.',
     image: DEFAULT_IMAGE,
   },
   'trainer/kelly': {
-    title: 'Kelly Tin — Pilates Instructor | PT Studio 7 Amsterdam',
+    title: 'Kelly Tin | Pilates Instructor | PT Studio 7 Amsterdam',
     description: 'Kelly Tin, certified Reformer Pilates instructor at PT Studio 7 Museumplein Amsterdam. English- and Dutch-speaking coach with a strength and HIIT background.',
     image: '/assets/images/kelly.webp',
   },
   'trainer/gamze': {
-    title: 'E. Gamze Karadağ — Pilates Instructor | PT Studio 7 Amsterdam',
+    title: 'E. Gamze Karadağ | Pilates Instructor | PT Studio 7 Amsterdam',
     description: 'E. Gamze Karadağ, certified Reformer Pilates instructor at PT Studio 7 Museumplein Amsterdam. Yoga background and PT7 Academy graduate.',
     image: '/assets/images/gamze.webp',
   },
@@ -233,6 +243,8 @@ const routes = [
   'academy',
   'academy/nl',
   'healthcare-providers',
+  'corporate',
+  'privacy',
   'prenatal-pilates-amsterdam',
   'pregnancy-pilates-amsterdam',
   'private-pilates-amsterdam',

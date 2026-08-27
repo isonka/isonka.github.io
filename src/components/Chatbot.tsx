@@ -1,4 +1,17 @@
 import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { trainerProfiles } from '../data/trainers';
+import {
+  CLASS_MINUTES,
+  COUPLE,
+  GROUP,
+  GROUP_MAX,
+  INTRO,
+  MEMBERSHIP,
+  TRIO,
+  formatEur,
+  privatePackLine,
+} from '../data/pricing';
 import '../styles/Chatbot.css';
 
 interface Message {
@@ -18,11 +31,30 @@ interface UserProfile {
 }
 
 export const Chatbot: React.FC = () => {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [userProfile, setUserProfile] = useState<UserProfile>({});
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [isTyping, setIsTyping] = useState(false);
+  const timersRef = useRef<number[]>([]);
+
+  const juniors = trainerProfiles.filter((t) => t.tier === 'junior').map((t) => t.name);
+  const seniors = trainerProfiles.filter((t) => t.tier === 'senior');
+  const master = trainerProfiles.find((t) => t.tier === 'master');
+  const instructorCount = trainerProfiles.length;
+
+  const clearTimers = () => {
+    timersRef.current.forEach((id) => window.clearTimeout(id));
+    timersRef.current = [];
+  };
+
+  const later = (fn: () => void, ms: number) => {
+    const id = window.setTimeout(fn, ms);
+    timersRef.current.push(id);
+  };
+
+  useEffect(() => () => clearTimers(), []);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -34,13 +66,12 @@ export const Chatbot: React.FC = () => {
 
   useEffect(() => {
     if (isOpen && messages.length === 0) {
-      // Initial greeting
       addBotMessage(
-        "Hi! 👋 I'm here to help you find the perfect class and instructor at PT Studio 7! Let me ask you a few quick questions.",
+        "Hi! I'm here to help you find a class and instructor at PT Studio 7. A few quick questions.",
         500
       );
-      
-      setTimeout(() => {
+
+      later(() => {
         addBotMessage(
           "What brings you to PT Studio 7?",
           1500,
@@ -55,12 +86,15 @@ export const Chatbot: React.FC = () => {
         );
       }, 1500);
     }
+    // Only isOpen: addBotMessage is recreated each render; messages.length
+    // hits 0 on Start over and would duplicate this greeting.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
   const addBotMessage = (text: string, delay: number = 0, options?: string[]) => {
-    setTimeout(() => {
+    later(() => {
       setIsTyping(true);
-      setTimeout(() => {
+      later(() => {
         setIsTyping(false);
         setMessages(prev => [
           ...prev,
@@ -92,7 +126,6 @@ export const Chatbot: React.FC = () => {
     const newProfile = { ...userProfile, [field]: response };
     setUserProfile(newProfile);
 
-    // Progress through conversation flow
     if (field === 'goal') {
       if (response === "Pregnancy fitness") {
         setUserProfile({ ...newProfile, isPregnant: 'yes' });
@@ -114,7 +147,6 @@ export const Chatbot: React.FC = () => {
       }
     } else if (field === 'experience') {
       if (newProfile.isPregnant === 'yes') {
-        // Skip group size for pregnancy
         addBotMessage(
           "Do you have any specific concerns or areas you'd like to focus on during pregnancy?",
           1000,
@@ -134,81 +166,85 @@ export const Chatbot: React.FC = () => {
         ["Yes, I have injuries", "No injuries", "Some minor concerns"]
       );
     } else if (field === 'hasInjuries' || field === 'budget') {
-      // Generate final recommendation
       generateRecommendation(newProfile);
     }
   };
 
   const generateRecommendation = (profile: UserProfile) => {
-    addBotMessage("Let me find the perfect match for you! 🎯", 1000);
+    addBotMessage("Let me find the perfect match for you!", 1000);
 
-    setTimeout(() => {
-      // Determine best instructor
+    later(() => {
       let recommendedInstructor = '';
       let instructorReason = '';
-      
+
       if (profile.isPregnant === 'yes' || profile.goal === 'Pregnancy fitness') {
-        recommendedInstructor = 'Elif Arzu Ogan (Master Instructor)';
-        instructorReason = 'Elif is our Master instructor with specialized training in pregnancy Pilates. She offers safe, personalized one-on-one sessions for expectant mothers.';
+        recommendedInstructor = master ? `${master.name} (Master Instructor)` : 'Our master instructor';
+        instructorReason = `${master?.displayName ?? 'Our master instructor'} offers specialized pregnancy Pilates in one-on-one private classes.`;
       } else if (profile.hasInjuries === 'Yes, I have injuries' || profile.goal === 'Rehabilitation/injury recovery') {
-        recommendedInstructor = 'Elif (Master) or Göknur (Senior)';
-        instructorReason = 'Our Master and Senior instructors have extensive experience in rehabilitation, working with injuries including spinal disorders and low back care.';
+        recommendedInstructor = master
+          ? `${master.displayName} (Master) or ${seniors.map((s) => s.displayName).join(' / ')} (Senior)`
+          : 'Master or Senior instructor';
+        instructorReason = 'Master and Senior instructors have extensive experience in rehabilitation, including spinal disorders and low back care.';
       } else if (profile.goal === 'Improve strength & fitness' || profile.goal === 'Lose weight & tone') {
         if (profile.groupSize === 'Private (just me)') {
-          recommendedInstructor = 'Göknur Dipli (Senior Instructor)';
-          instructorReason = 'Göknur is a Senior instructor who specializes in functional training and strength building. Train on our premium Nike Strength equipment — half rack, Olympic barbell, and dumbbells!';
+          const strengthSenior = seniors.find((s) => s.slug === 'goknur') ?? seniors[0];
+          recommendedInstructor = strengthSenior
+            ? `${strengthSenior.name} (Senior Instructor)`
+            : 'A senior instructor';
+          instructorReason = 'Senior instructors specialize in functional training and strength building on Nike Strength equipment.';
         } else {
-          recommendedInstructor = 'Any of our instructors';
-          instructorReason = 'For group classes, all our instructors — from Junior to Master level — can help you build strength. We also offer Nike Strength Training with premium equipment for personal training.';
+          recommendedInstructor = `Any of our ${instructorCount} instructors`;
+          instructorReason = 'For group classes, all instructors can help you build strength.';
         }
       } else if (profile.experience === "I'm a beginner") {
-        recommendedInstructor = 'Gülce Koç, Lal Avgen, Nisan Atalay, Kelly Tin, or E. Gamze Karadağ (Junior Instructors)';
-        instructorReason = 'Our Junior instructors are PT 7 Academy certified and excellent with beginners — they focus on fundamentals, proper form, and making you feel comfortable.';
+        recommendedInstructor = juniors.length
+          ? `${juniors.slice(0, -1).join(', ')}, or ${juniors[juniors.length - 1]} (Junior Instructors)`
+          : 'A junior instructor';
+        instructorReason = 'Junior instructors are PT7 Academy certified and work well with beginners.';
       } else if (profile.goal === 'General wellness' || profile.goal === 'Just curious') {
-        recommendedInstructor = 'Gökben Öztekin (Senior Instructor)';
-        instructorReason = 'Gökben is a Senior Basi Pilates instructor who creates a welcoming environment for all fitness levels. Great for exploring what Pilates can do for you.';
+        const host = seniors[0];
+        recommendedInstructor = host ? `${host.name} (Senior Instructor)` : 'A senior instructor';
+        instructorReason = 'Senior instructors create a welcoming environment for all fitness levels.';
       } else {
-        recommendedInstructor = 'Any of our 7 instructors';
-        instructorReason = 'We have Master, Senior, and Junior instructors to match your needs and budget. Visit our instructors page to learn more about each one.';
+        recommendedInstructor = `Any of our ${instructorCount} instructors`;
+        instructorReason = 'Master, Senior, and Junior instructors to match your needs and budget.';
       }
 
-      // Determine class type
       let classType = '';
       let pricing = '';
 
       if (profile.isPregnant === 'yes') {
-        classType = '**Private Classes** (Required for pregnancy)';
-        pricing = '• Master (Elif): €85 single, €80/class (5-pack), €77.50/class (10-pack)\n• Senior: €80 single, €75/class (5-pack), €72.50/class (10-pack)';
+        classType = `**Private Classes** (required for pregnancy, ${CLASS_MINUTES} min)`;
+        pricing = `• Master: ${privatePackLine('master').replace(/^• /, '')}\n• Senior: ${privatePackLine('senior').replace(/^• /, '')}`;
       } else if (profile.groupSize === 'Private (just me)') {
         classType = '**Private Classes**';
-        pricing = '• Junior: €70 single, €65/class (5-pack), €62.50/class (10-pack)\n• Senior: €80 single, €75/class (5-pack), €72.50/class (10-pack)\n• Master: €85 single, €80/class (5-pack), €77.50/class (10-pack)';
+        pricing = `• Junior: ${privatePackLine('junior').replace(/^• /, '')}\n• Senior: ${privatePackLine('senior').replace(/^• /, '')}\n• Master: ${privatePackLine('master').replace(/^• /, '')}`;
       } else if (profile.groupSize === 'With a partner (couple)') {
         classType = '**Couple Classes**';
-        pricing = '• Single class: €50/person\n• 5-class pack: €45/person (€225 total)\n• 10-class pack: €43/person (€430 total) - Best Value';
+        pricing = `• Single class: ${formatEur(COUPLE.single)}/person\n• 5-class pack: ${formatEur(COUPLE.pack5.perClass)}/person (${formatEur(COUPLE.pack5.total)} total)\n• 10-class pack: ${formatEur(COUPLE.pack10.perClass)}/person (${formatEur(COUPLE.pack10.total)} total)`;
       } else if (profile.groupSize === 'Small group (3 people)') {
         classType = '**Trio Classes**';
-        pricing = '• Single class: €45/person\n• 5-class pack: €42/person (€210 total)\n• 10-class pack: €40/person (€400 total) - Best Value';
+        pricing = `• Single class: ${formatEur(TRIO.single)}/person\n• 5-class pack: ${formatEur(TRIO.pack5.perClass)}/person (${formatEur(TRIO.pack5.total)} total)\n• 10-class pack: ${formatEur(TRIO.pack10.perClass)}/person (${formatEur(TRIO.pack10.total)} total)`;
       } else {
-        classType = '**Small Group Classes** (max 5 people)';
-        pricing = '• Single class: €37\n• 5-class pack: €35/class (€175 total)\n• 10-class pack: €30/class (€300 total) - Most Popular\n\n💡 **Or try our Membership** (All days 9am-6pm):\n• 4 classes/month: €21.50/class (€86/month)\n• 8 classes/month: €20/class (€160/month)\n• Unlimited 3 months: €350/month';
+        classType = `**Small Group Classes** (max ${GROUP_MAX})`;
+        pricing = `• Single class: ${formatEur(GROUP.single)}\n• 5-class pack: ${formatEur(GROUP.pack5.perClass)}/class (${formatEur(GROUP.pack5.total)} total)\n• 10-class pack: ${formatEur(GROUP.pack10.perClass)}/class (${formatEur(GROUP.pack10.total)} total)\n• 20-class pack: ${formatEur(GROUP.pack20.perClass)}/class (${formatEur(GROUP.pack20.total)} total)\n\nMembership (all days, 1 class/day):\n• ${MEMBERSHIP.four.classes} classes/month: ${formatEur(MEMBERSHIP.four.perClass)}/class (${formatEur(MEMBERSHIP.four.total)}/month)\n• ${MEMBERSHIP.eight.classes} classes/month: ${formatEur(MEMBERSHIP.eight.perClass)}/class (${formatEur(MEMBERSHIP.eight.total)}/month)\n• Unlimited 3 months: ${formatEur(MEMBERSHIP.unlimited3.perMonth)}/month\n• Annual unlimited: ${formatEur(MEMBERSHIP.annual.perMonth)}/month (${formatEur(MEMBERSHIP.annual.yearTotal)}/year)`;
       }
 
-      const recommendation = `✨ **Your Perfect Match:**
+      const recommendation = `**Your match:**
 
-👨‍🏫 **Recommended Instructor:** ${recommendedInstructor}
+**Recommended instructor:** ${recommendedInstructor}
 ${instructorReason}
 
-📋 **Best Class Type:** ${classType}
+**Best class type:** ${classType}
 
-💰 **Pricing Options:**
+**Pricing:**
 ${pricing}
 
-🎁 **Special Offer:** New clients — Introduction Package: 3 group classes for €50!`;
+**Special offer:** New clients, introduction package: ${INTRO.classes} group classes for ${formatEur(INTRO.price)}.`;
 
       addBotMessage(recommendation, 2000);
-
       addBotMessage(
-        "All classes are 45 minutes and you can book directly through our schedule. Would you like me to help you with anything else?",
+        `All classes are ${CLASS_MINUTES} minutes. You can book on the schedule. Anything else?`,
         4000,
         ["Book a class now", "Tell me about equipment", "View all trainers", "Start over"]
       );
@@ -220,32 +256,33 @@ ${pricing}
 
     switch (response) {
       case "Book a class now":
-        addBotMessage("Perfect! I'll take you to our booking page where you can see our full schedule and book directly.", 500);
-        setTimeout(() => {
-          window.location.href = '/schedule';
-        }, 2000);
-        break;
-      
-      case "Tell me about equipment":
-        addBotMessage("We train in one boutique studio at Museumplein with:\n\n**Pilates apparatus:** Reformers, Tower Reformer, Cadillac/Trapeze Table, Wunda Chair\n\n**Strength & cardio:** Nike Strength Half Rack, Olympic barbell, dumbbells, Concept2 RowErg, TRX", 500);
-        addBotMessage("Would you like to see our equipment page?", 2000, ["Yes, show me", "No thanks", "Start over"]);
-        break;
-      
-      case "Yes, show me":
-        addBotMessage("Great! I'll take you to our equipment page.", 500);
-        setTimeout(() => {
-          window.location.href = '/equipment';
-        }, 1500);
-        break;
-      
-      case "View all trainers":
-        addBotMessage("I'll take you to our instructors page where you can meet all 6 of our trainers — 1 Master, 2 Senior, and 3 Junior instructors!", 500);
-        setTimeout(() => {
-          window.location.href = '/instructors';
-        }, 1500);
+        addBotMessage("Taking you to the booking page.", 500);
+        later(() => navigate('/schedule/'), 2000);
         break;
 
+      case "Tell me about equipment":
+        addBotMessage("We train in one boutique studio at Museumplein with:\n\n**Pilates apparatus:** Reformers, Tower Reformer, Cadillac/Trapeze Table, Wunda Chair\n\n**Strength & cardio:** Nike Strength Half Rack, Olympic barbell, dumbbells, Concept2 RowErg, TRX", 500);
+        addBotMessage("See the equipment page?", 2000, ["Yes, show me", "No thanks", "Start over"]);
+        break;
+
+      case "Yes, show me":
+        addBotMessage("Opening equipment.", 500);
+        later(() => navigate('/equipment/'), 1500);
+        break;
+
+      case "View all trainers": {
+        const juniorCount = juniors.length;
+        const seniorCount = seniors.length;
+        addBotMessage(
+          `Opening instructors: ${instructorCount} trainers, ${master ? 1 : 0} Master, ${seniorCount} Senior, ${juniorCount} Junior.`,
+          500,
+        );
+        later(() => navigate('/instructors/'), 1500);
+        break;
+      }
+
       case "Start over":
+        clearTimers();
         setMessages([]);
         setUserProfile({});
         addBotMessage("Let's start fresh! What brings you to PT Studio 7?", 500, [
@@ -257,18 +294,17 @@ ${pricing}
           "Just curious"
         ]);
         break;
-      
+
       case "No thanks":
-        addBotMessage("No problem! Feel free to reach out anytime. You can call us at +31 685 162693 or email info@pt7.nl. See you at the studio! 💪", 500);
+        addBotMessage("Call +31 685 162693 or email info@pt7.nl anytime.", 500);
         break;
-      
+
       default:
         break;
     }
   };
 
   const handleOptionClick = (option: string) => {
-    // Determine which field this option belongs to
     const goalOptions = ["Improve strength & fitness", "Lose weight & tone", "Rehabilitation/injury recovery", "Pregnancy fitness", "General wellness", "Just curious"];
     const experienceOptions = ["Yes, I'm experienced", "Some experience", "I'm a beginner"];
     const groupOptions = ["Private (just me)", "With a partner (couple)", "Small group (3 people)", "Group class (max 5)"];
@@ -290,7 +326,6 @@ ${pricing}
 
   return (
     <>
-      {/* Chatbot Button */}
       {!isOpen && (
         <button
           className="chatbot-button"
@@ -304,7 +339,6 @@ ${pricing}
         </button>
       )}
 
-      {/* Chatbot Window */}
       {isOpen && (
         <div className="chatbot-window">
           <div className="chatbot-header">
@@ -321,7 +355,10 @@ ${pricing}
             </div>
             <button
               className="chatbot-close"
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                clearTimers();
+                setIsOpen(false);
+              }}
               aria-label="Close chat"
             >
               ✕
@@ -333,7 +370,6 @@ ${pricing}
               <div key={message.id} className={`message ${message.sender}`}>
                 <div className="message-content">
                   {message.text.split('\n').map((line, i) => {
-                    // Handle markdown-style bold
                     const parts = line.split(/(\*\*.*?\*\*)/g);
                     return (
                       <p key={i}>

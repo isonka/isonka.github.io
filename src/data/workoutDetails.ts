@@ -60,6 +60,7 @@ export interface WorkoutDetailData {
     ctaLabel: string;
     ctaTo: string;
     usePosterHero?: boolean;
+    imagePosition?: string;
   };
   announcementBanner?: {
     label: string;
@@ -140,11 +141,12 @@ export const workoutDetails: WorkoutDetailData[] = [
       canonical: 'https://www.pt7.nl/workouts/reformer-pilates/',
       ogTitle: 'Reformer Pilates Amsterdam | PT Studio 7 Museumplein',
       ogDescription: 'Premium Reformer Pilates studio at Museumplein. Small groups (max 5), expert instructors. Build core strength, flexibility & perfect posture.',
-      ogImage: '/assets/images/reformer_1.png',
+      ogImage: '/assets/images/studio.webp',
     },
     breadcrumbName: 'Reformer Pilates',
     hero: {
-      image: '/assets/images/reformer_1.webp',
+      image: '/assets/images/studio.webp',
+      imagePosition: 'center 40%',
       title: 'Reformer Pilates Amsterdam Oud-Zuid',
       tagline: 'Full-body workout focusing on core strength, flexibility, and posture',
       ctaLabel: 'Book a Class',
@@ -261,6 +263,7 @@ export const workoutDetails: WorkoutDetailData[] = [
     breadcrumbName: 'TRX Training',
     hero: {
       image: '/assets/images/trx.webp',
+      imagePosition: 'center 38%',
       title: 'TRX Suspension Training',
       tagline: 'Suspension training for strength, balance, and functional fitness',
       ctaLabel: 'Book a Class',
@@ -359,7 +362,7 @@ export const workoutDetails: WorkoutDetailData[] = [
     },
     intro: {
       title: 'Premium Nike Strength Equipment',
-      lead: 'Experience strength training with professional-grade Nike equipment — including our Nike Strength Half Rack, Olympic barbell, recycled Nike Grind weight plates, and premium hex dumbbells. Combined with expert coaching, you\'ll build real-world strength, stability, and mobility that translates directly to your daily life.',
+      lead: 'Experience strength training with professional-grade Nike equipment, including our Nike Strength Half Rack, Olympic barbell, recycled Nike Grind weight plates, and premium hex dumbbells. Combined with expert coaching, you\'ll build real-world strength, stability, and mobility that translates directly to your daily life.',
     },
     equipmentGallery: {
       title: 'Our Nike Strength Equipment',

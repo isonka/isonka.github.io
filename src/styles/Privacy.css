@@ -1,0 +1,33 @@
+.privacy-prose {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px 88px;
+}
+
+.privacy-prose h2 {
+  margin: 2rem 0 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.privacy-prose p,
+.privacy-prose li {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.privacy-prose ul {
+  margin: 0 0 1rem;
+  padding-left: 1.2rem;
+}
+
+.privacy-prose li {
+  margin: 0.35rem 0;
+}
+
+.privacy-prose a {
+  color: #111;
+  font-weight: 500;
+}

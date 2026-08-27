@@ -15,10 +15,6 @@ const defaultFAQItems: FAQItem[] = [
     answer: 'You can contact us directly via email or phone to place your order or request more information about our Pilates equipment.'
   },
   {
-    question: 'What does the price include?*',
-    answer: 'The listed price includes VAT (BTW) and delivery to your door within the Netherlands. Installation is not included. For other locations or special delivery needs, please contact us.'
-  },
-  {
     question: 'Is installation included?',
     answer: 'We do not arrange installation, but the equipment is delivered with clear instructions and can be assembled by two people.'
   },
@@ -44,7 +40,6 @@ export const EquipmentFAQ: React.FC<EquipmentFAQProps> = ({ items = defaultFAQIt
       const answer = this.nextElementSibling as HTMLElement;
       const isActive = this.classList.contains('active');
       
-      // Close all FAQs
       faqQuestions.forEach(q => {
         q.classList.remove('active');
         const ans = q.nextElementSibling as HTMLElement;
@@ -54,7 +49,6 @@ export const EquipmentFAQ: React.FC<EquipmentFAQProps> = ({ items = defaultFAQIt
         }
       });
       
-      // Open clicked FAQ if it wasn't active
       if (!isActive && answer) {
         this.classList.add('active');
         answer.classList.add('open');

@@ -2,6 +2,8 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { StructuredData } from '../components/StructuredData';
+import { Reveal } from '../components/Reveal';
+import { PHOTO_FOCUS } from '../data/photoFocus';
 import { trainerProfiles } from '../data/trainers';
 import '../styles/Trainer.css';
 
@@ -26,27 +28,28 @@ export const TrainerDetail: React.FC = () => {
     ],
     gulce: [
       { to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' },
-      { to: '/academy', label: 'Become a Pilates instructor — PT7 Academy' },
+      { to: '/academy', label: 'Become a Pilates instructor | PT7 Academy' },
     ],
     lal: [
       { to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' },
-      { to: '/academy', label: 'Become a Pilates instructor — PT7 Academy' },
+      { to: '/academy', label: 'Become a Pilates instructor | PT7 Academy' },
     ],
     nisan: [
       { to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' },
-      { to: '/academy', label: 'Become a Pilates instructor — PT7 Academy' },
+      { to: '/academy', label: 'Become a Pilates instructor | PT7 Academy' },
     ],
     kelly: [
       { to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' },
-      { to: '/academy', label: 'Become a Pilates instructor — PT7 Academy' },
+      { to: '/academy', label: 'Become a Pilates instructor | PT7 Academy' },
     ],
     gamze: [
       { to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' },
-      { to: '/academy', label: 'Become a Pilates instructor — PT7 Academy' },
+      { to: '/academy', label: 'Become a Pilates instructor | PT7 Academy' },
     ],
   };
 
   const relatedLinks = relatedLinksByTrainer[trainer.slug] || [];
+  const role = trainer.heroTitle.replace(/\n/g, ' · ');
 
   return (
     <>
@@ -79,71 +82,82 @@ export const TrainerDetail: React.FC = () => {
       ]} />
 
       <div className="trainer-page">
-        <div className="trainer-hero">
-          <div className="trainer-hero-content">
+        <Reveal className="trainer-hero">
+          <div className="trainer-hero-photo">
             <img
               src={trainer.image}
               alt={`${trainer.name} - ${trainer.structuredData.jobTitle}`}
-              className="trainer-hero-photo"
-              width="180"
-              height="180"
+              width={200}
+              height={200}
               loading="eager"
               decoding="async"
+              style={{ objectPosition: PHOTO_FOCUS[trainer.slug] ?? '50% 24%' }}
             />
-            <div className="trainer-hero-text">
-              <h1>{trainer.displayName}</h1>
-              <p className="trainer-title" style={{ whiteSpace: 'pre-line' }}>{trainer.heroTitle}</p>
-              <ul className="trainer-languages">
-                {trainer.languages.map(lang => (
-                  <li key={lang}>{lang}</li>
-                ))}
-              </ul>
-            </div>
           </div>
-        </div>
+          <div className="trainer-hero-text">
+            <p className="trainer-kicker trainer-reveal" style={{ transitionDelay: '80ms' }}>Instructor</p>
+            <h1 className="trainer-reveal" style={{ transitionDelay: '140ms' }}>{trainer.displayName}</h1>
+            <p className="trainer-title trainer-reveal" style={{ transitionDelay: '220ms' }}>{role}</p>
+            <p className="trainer-meta trainer-reveal" style={{ transitionDelay: '300ms' }}>
+              {trainer.languages.join(' · ')}
+            </p>
+          </div>
+        </Reveal>
 
         <div className="trainer-content">
-          <section className="trainer-bio">
+          <Reveal className="trainer-bio">
             {trainer.bio.map((paragraph, i) => (
-              <p key={i}>{paragraph}</p>
+              <p key={i} className="trainer-reveal" style={{ transitionDelay: `${i * 80}ms` }}>
+                {paragraph}
+              </p>
             ))}
-          </section>
+          </Reveal>
 
-          <section className="trainer-qualifications">
-            <h2>Qualifications & Experience</h2>
+          <Reveal className="trainer-qualifications">
+            <h2 className="trainer-reveal">Qualifications & Experience</h2>
             <ul>
               {trainer.qualifications.map((q, i) => (
-                <li key={i}>{q}</li>
+                <li
+                  key={i}
+                  className="trainer-reveal"
+                  style={{ transitionDelay: `${Math.min(i, 8) * 40 + 80}ms` }}
+                >
+                  {q}
+                </li>
               ))}
             </ul>
-          </section>
+          </Reveal>
 
           {relatedLinks.length > 0 && (
-            <section className="trainer-qualifications">
-              <h2>Explore Related Pages</h2>
+            <Reveal className="trainer-related">
+              <h2 className="trainer-reveal">Explore Related Pages</h2>
               <ul>
-                {relatedLinks.map((link) => (
-                  <li key={link.to}>
+                {relatedLinks.map((link, i) => (
+                  <li
+                    key={link.to}
+                    className="trainer-reveal"
+                    style={{ transitionDelay: `${i * 60 + 80}ms` }}
+                  >
                     <Link to={link.to}>{link.label}</Link>
                   </li>
                 ))}
               </ul>
-            </section>
+            </Reveal>
           )}
-
-          <section className="trainer-cta">
-            <h2>Ready to Start Your Journey?</h2>
-            <p>{trainer.ctaText}</p>
-            <div className="cta-buttons">
-              <Link to="/schedule/" className="btn-primary">Book a Session</Link>
-              <Link to="/pricing/" className="btn-secondary">View Pricing</Link>
-            </div>
-          </section>
-
-          <div className="back-link">
-            <Link to="/instructors/">&larr; Back to All Instructors</Link>
-          </div>
         </div>
+
+        <Reveal className="trainer-cta">
+          <h2 className="trainer-reveal">Ready to Start Your Journey?</h2>
+          <p className="trainer-reveal" style={{ transitionDelay: '80ms' }}>{trainer.ctaText}</p>
+          <div className="trainer-cta-buttons trainer-reveal" style={{ transitionDelay: '160ms' }}>
+            <Link to="/schedule/" className="trainer-btn-primary">Book a Session</Link>
+            <Link to="/pricing/" className="trainer-btn-secondary">View Pricing</Link>
+          </div>
+        </Reveal>
+
+        <p className="trainer-back">
+          <Link to="/instructors/">← Back to All Instructors</Link>
+        </p>
       </div>
     </>
   );

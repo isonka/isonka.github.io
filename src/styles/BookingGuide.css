@@ -1,4 +1,3 @@
-/* Booking Guide Styles */
 .booking-guide-container {
   position: fixed;
   bottom: 80px;
@@ -38,7 +37,6 @@
   50% { transform: scale(1.1); }
 }
 
-/* Modal */
 .booking-guide-modal {
   position: fixed;
   top: 0;
@@ -110,12 +108,10 @@
   color: #1a1a1a;
 }
 
-/* Body */
 .booking-guide-body {
   padding: 30px;
 }
 
-/* Progress Indicator */
 .progress-indicator {
   display: flex;
   justify-content: center;
@@ -146,7 +142,6 @@
   transform: scale(1.2);
 }
 
-/* Step Content */
 .step-content {
   margin-bottom: 30px;
 }
@@ -172,7 +167,6 @@
   font-size: 1.05rem;
 }
 
-/* Screenshot Container */
 .screenshot-container {
   margin: 20px 0;
   border-radius: var(--radius-lg);
@@ -192,7 +186,6 @@
   transform: scale(1.02);
 }
 
-/* Instructions */
 .step-instructions {
   background: #e3f2fd;
   padding: 20px;
@@ -251,7 +244,6 @@
   font-weight: 500;
 }
 
-/* Navigation */
 .step-navigation {
   display: flex;
   justify-content: space-between;
@@ -300,7 +292,6 @@
   font-weight: 600;
 }
 
-/* Quick Help */
 .quick-help {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
   padding: 25px 30px;
@@ -335,7 +326,6 @@
   transform: translateX(5px);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .booking-guide-container {
     bottom: 70px;

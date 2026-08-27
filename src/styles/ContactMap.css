@@ -2,6 +2,72 @@
   position: relative;
 }
 
+.contact-map-consent {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 28px;
+  background: #1c1c1c;
+  color: #f2f2f2;
+}
+
+.contact-map-consent-kicker {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #c9a800;
+}
+
+.contact-map-consent-address {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.contact-map-consent-note {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #b5b5b8;
+  max-width: 28rem;
+}
+
+.contact-map-consent-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  align-items: center;
+}
+
+.contact-map-consent-btn {
+  background: #ffd700;
+  color: #111;
+  border: 0;
+  border-radius: 1000px;
+  padding: 12px 20px;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.contact-map-consent-actions a {
+  color: #ffd700;
+  font-weight: 500;
+}
+
+.contact-map-slot {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .contact-map-legend {
   position: absolute;
   width: 1px;

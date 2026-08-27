@@ -71,8 +71,4 @@ const app = (
   </StrictMode>
 );
 
-// Keep prerendered (or static-fallback) markup in #root until React commits —
-// clearing first caused a blank/spinner gap and threw away LCP wins.
-// Prefer createRoot over hydrateRoot: hydrateRoot hit Safari blank screens with
-// this Puppeteer prerender pipeline (see commit 5201599).
 createRoot(rootElement).render(app);

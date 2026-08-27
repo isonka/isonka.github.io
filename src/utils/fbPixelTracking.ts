@@ -1,13 +1,9 @@
-// Facebook Pixel Event Tracking
-// Track key user actions for retargeting and conversion optimization
-
 declare global {
   interface Window {
-    fbq?: (action: string, event: string, params?: Record<string, any>) => void;
+    fbq?: (action: string, event: string, params?: Record<string, unknown>) => void;
   }
 }
 
-// Track when user views a specific page
 export const trackFBPageView = (pageName: string) => {
   if (typeof window !== 'undefined' && window.fbq) {
     window.fbq('trackCustom', 'ViewPage', {
@@ -17,7 +13,6 @@ export const trackFBPageView = (pageName: string) => {
   }
 };
 
-// Track when user clicks "Book a Class" button
 export const trackFBBookingClick = () => {
   if (typeof window !== 'undefined' && window.fbq) {
     window.fbq('track', 'InitiateCheckout', {
@@ -27,7 +22,6 @@ export const trackFBBookingClick = () => {
   }
 };
 
-// Track when user views pricing page
 export const trackFBViewPricing = () => {
   if (typeof window !== 'undefined' && window.fbq) {
     window.fbq('track', 'ViewContent', {
@@ -37,7 +31,6 @@ export const trackFBViewPricing = () => {
   }
 };
 
-// Track phone click for call tracking
 export const trackFBPhoneClick = () => {
   if (typeof window !== 'undefined' && window.fbq) {
     window.fbq('track', 'Contact', {
@@ -46,7 +39,6 @@ export const trackFBPhoneClick = () => {
   }
 };
 
-// Track email click
 export const trackFBEmailClick = () => {
   if (typeof window !== 'undefined' && window.fbq) {
     window.fbq('track', 'Contact', {
@@ -55,7 +47,6 @@ export const trackFBEmailClick = () => {
   }
 };
 
-// Track WhatsApp click
 export const trackFBWhatsAppClick = () => {
   if (typeof window !== 'undefined' && window.fbq) {
     window.fbq('track', 'Contact', {
@@ -64,7 +55,6 @@ export const trackFBWhatsAppClick = () => {
   }
 };
 
-// Track when user views trainer profile
 export const trackFBViewTrainer = (trainerName: string) => {
   if (typeof window !== 'undefined' && window.fbq) {
     window.fbq('trackCustom', 'ViewTrainer', {
@@ -73,7 +63,6 @@ export const trackFBViewTrainer = (trainerName: string) => {
   }
 };
 
-// Track when user views workout details
 export const trackFBViewWorkout = (workoutType: string) => {
   if (typeof window !== 'undefined' && window.fbq) {
     window.fbq('track', 'ViewContent', {
@@ -83,14 +72,12 @@ export const trackFBViewWorkout = (workoutType: string) => {
   }
 };
 
-// Track lead generation (form submission if you add one later)
 export const trackFBLead = () => {
   if (typeof window !== 'undefined' && window.fbq) {
     window.fbq('track', 'Lead');
   }
 };
 
-// Track successful booking completion
 export const trackFBPurchase = (value: number, packageType: string) => {
   if (typeof window !== 'undefined' && window.fbq) {
     window.fbq('track', 'Purchase', {
@@ -101,4 +88,3 @@ export const trackFBPurchase = (value: number, packageType: string) => {
     });
   }
 };
-

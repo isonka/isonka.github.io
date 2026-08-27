@@ -6,6 +6,7 @@ const META_PIXEL_ID = '1197758608916828';
 
 export const CONSENT_STORAGE_KEY = 'pt7_cookie_consent';
 export const OPEN_COOKIE_SETTINGS_EVENT = 'pt7-open-cookie-settings';
+export const CONSENT_UPDATED_EVENT = 'pt7-consent-updated';
 
 export type Pt7Consent = {
   necessary: true;
@@ -17,7 +18,9 @@ export type Pt7Consent = {
 
 type TrackingState = {
   gtm: boolean;
-  gtag: boolean;
+  gtagScript: boolean;
+  ga: boolean;
+  ads: boolean;
   meta: boolean;
 };
 
@@ -34,8 +37,27 @@ let lastGaPageAt = 0;
 
 function getTrackingState(): TrackingState {
   const win = window as Window & { __pt7TrackingLoaded?: TrackingState };
-  win.__pt7TrackingLoaded ??= { gtm: false, gtag: false, meta: false };
-  return win.__pt7TrackingLoaded;
+  const current = win.__pt7TrackingLoaded;
+  if (!current || !('gtagScript' in current) || !('ga' in current) || !('ads' in current)) {
+    win.__pt7TrackingLoaded = {
+      gtm: Boolean(current?.gtm),
+      gtagScript: false,
+      ga: false,
+      ads: false,
+      meta: Boolean(current?.meta),
+    };
+  }
+  return win.__pt7TrackingLoaded!;
+}
+
+function ensureGtagStub() {
+  const win = window as Window & { gtag?: GtagFn };
+  window.dataLayer = window.dataLayer || [];
+  if (!win.gtag) {
+    win.gtag = (...args: unknown[]) => {
+      window.dataLayer!.push(args);
+    };
+  }
 }
 
 function getGtag(): GtagFn | undefined {
@@ -78,7 +100,6 @@ export function openCookieSettings() {
   window.dispatchEvent(new Event(OPEN_COOKIE_SETTINGS_EVENT));
 }
 
-/** Map PT7 consent → Google Consent Mode v2 update. */
 export function updateGoogleConsent(consent: Pt7Consent) {
   const gtag = getGtag();
   if (!gtag) return;
@@ -97,7 +118,6 @@ export function updateGoogleConsent(consent: Pt7Consent) {
   });
 }
 
-/** Send GA4 SPA page_view (deduped briefly to avoid consent/React race doubles). */
 export function sendGaPageView(pagePath: string, pageTitle: string) {
   const gtag = getGtag();
   if (!window.__pt7GaReady || !gtag) return;
@@ -123,6 +143,59 @@ function markGaReadyAndSendCurrentPage() {
   );
 }
 
+let gtagScriptPromise: Promise<void> | null = null;
+
+function ensureGtagScript(id: string): Promise<void> {
+  ensureGtagStub();
+  const loaded = getTrackingState();
+
+  if (document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
+    loaded.gtagScript = true;
+    return Promise.resolve();
+  }
+
+  if (gtagScriptPromise) return gtagScriptPromise;
+
+  gtagScriptPromise = new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.id = 'pt7-gtag';
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
+    script.onload = () => {
+      loaded.gtagScript = true;
+      getGtag()?.('js', new Date());
+      resolve();
+    };
+    script.onerror = () => {
+      gtagScriptPromise = null;
+      reject(new Error('Failed to load gtag.js'));
+    };
+    document.head.appendChild(script);
+  });
+
+  return gtagScriptPromise;
+}
+
+function configureGa() {
+  const loaded = getTrackingState();
+  if (loaded.ga) return;
+  const gtag = getGtag();
+  if (!gtag) return;
+  gtag('config', GA_ID, { send_page_view: false });
+  loaded.ga = true;
+  markGaReadyAndSendCurrentPage();
+}
+
+function configureAds() {
+  const loaded = getTrackingState();
+  if (loaded.ads) return;
+  const gtag = getGtag();
+  if (!gtag) return;
+  gtag('config', GOOGLE_TAG_ID);
+  gtag('config', GOOGLE_ADS_ID);
+  loaded.ads = true;
+}
+
 export function loadGTM() {
   const loaded = getTrackingState();
   if (loaded.gtm) return;
@@ -136,46 +209,6 @@ export function loadGTM() {
   document.head.appendChild(script);
 
   loaded.gtm = true;
-}
-
-/**
- * Load Google tag (GT), Ads (AW), and GA4 after consent.
- * Consent Mode defaults stay in index.html; this is the first network fetch of gtag.js.
- */
-export function loadGoogleTag() {
-  const loaded = getTrackingState();
-  if (loaded.gtag) return;
-
-  const win = window as Window & { gtag?: GtagFn };
-  window.dataLayer = window.dataLayer || [];
-  if (!win.gtag) {
-    win.gtag = (...args: unknown[]) => {
-      window.dataLayer!.push(args);
-    };
-  }
-
-  const configure = () => {
-    win.gtag!('js', new Date());
-    win.gtag!('config', GOOGLE_TAG_ID);
-    win.gtag!('config', GOOGLE_ADS_ID);
-    win.gtag!('config', GA_ID, { send_page_view: false });
-    markGaReadyAndSendCurrentPage();
-  };
-
-  if (document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
-    configure();
-    loaded.gtag = true;
-    return;
-  }
-
-  const script = document.createElement('script');
-  script.id = 'pt7-gtag';
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}`;
-  script.onload = configure;
-  document.head.appendChild(script);
-
-  loaded.gtag = true;
 }
 
 export function loadMetaPixel() {
@@ -200,18 +233,35 @@ export function loadMetaPixel() {
   loaded.meta = true;
 }
 
-/** Apply saved consent: Consent Mode update + load allowed tags. */
+/**
+ * Load tags that match the stored choice.
+ * Statistics → GA4 only. Marketing → GTM, Google Ads / Google tag, Meta.
+ * Already-injected scripts cannot be unloaded; Consent Mode then denies storage.
+ */
 export function applyConsent(consent: Pt7Consent) {
+  ensureGtagStub();
   updateGoogleConsent(consent);
 
   if (consent.statistics || consent.marketing) {
-    loadGTM();
-    loadGoogleTag();
+    const scriptId = consent.marketing ? GOOGLE_TAG_ID : GA_ID;
+    void ensureGtagScript(scriptId)
+      .then(() => {
+        const latest = getStoredConsent();
+        if (!latest) return;
+        if (latest.statistics) configureGa();
+        if (latest.marketing) configureAds();
+      })
+      .catch(() => {
+        /* network failure: consent is stored; tags stay unloaded */
+      });
   }
 
   if (consent.marketing) {
+    loadGTM();
     loadMetaPixel();
   }
+
+  window.dispatchEvent(new CustomEvent(CONSENT_UPDATED_EVENT, { detail: consent }));
 }
 
 export function loadTrackingIfConsented() {

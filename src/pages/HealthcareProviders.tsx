@@ -28,7 +28,7 @@ export const HealthcareProviders: React.FC = () => {
             <h1>Pilates for Rehabilitation Amsterdam</h1>
             <p className="hero-subtitle">Refer Your Clients to PT Studio 7</p>
             <p className="hero-description">
-              Partner with Amsterdam&apos;s boutique Pilates and fitness studio. We offer a trusted destination for your clients after rehabilitation — Pilates, functional training, and small-group sessions designed to support long-term recovery and strength.
+              Partner with Amsterdam&apos;s boutique Pilates and fitness studio. We offer a trusted destination for your clients after rehabilitation, Pilates, functional training, and small-group sessions designed to support long-term recovery and strength.
             </p>
           </div>
         </section>
@@ -42,11 +42,11 @@ export const HealthcareProviders: React.FC = () => {
             <div className="rehab-grid">
               <div className="rehab-card">
                 <h3>Controlled, Low-Impact Movement</h3>
-                <p>Pilates equipment provides resistance through springs, allowing clients to load tissues gradually and safely. Movement is guided and adjustable — ideal for post-surgery, chronic back pain, or joint limitations.</p>
+                <p>Pilates equipment provides resistance through springs, allowing clients to load tissues gradually and safely. Movement is guided and adjustable, ideal for post-surgery, chronic back pain, or joint limitations.</p>
               </div>
               <div className="rehab-card">
                 <h3>Core Stability & Posture</h3>
-                <p>Pilates targets deep stabilisers and alignment. This supports spinal health, reduces compensatory patterns, and builds the foundation for functional movement — directly reinforcing what you work on in treatment.</p>
+                <p>Pilates targets deep stabilisers and alignment. This supports spinal health, reduces compensatory patterns, and builds the foundation for functional movement, directly reinforcing what you work on in treatment.</p>
               </div>
               <div className="rehab-card">
                 <h3>Body Awareness & Proprioception</h3>
@@ -108,7 +108,7 @@ export const HealthcareProviders: React.FC = () => {
             <div className="offer-grid">
               <div className="offer-card">
                 <h3>Equipment Pilates</h3>
-                <p>Spring-based resistance allows gradual, controlled loading — ideal for post-rehab. Builds core stability, posture, and flexibility. Every exercise can be modified for injuries and limitations.</p>
+                <p>Spring-based resistance allows gradual, controlled loading, ideal for post-rehab. Builds core stability, posture, and flexibility. Every exercise can be modified for injuries and limitations.</p>
               </div>
               <div className="offer-card">
                 <h3>Functional Training</h3>
@@ -130,10 +130,10 @@ export const HealthcareProviders: React.FC = () => {
           <div className="healthcare-container">
             <h2>Benefits for You</h2>
             <ul className="benefits-list">
-              <li>Pilates reinforces your treatment goals — controlled movement, core stability, progressive loading</li>
+              <li>Pilates reinforces your treatment goals, controlled movement, core stability, progressive loading</li>
               <li>A trusted destination for clients after discharge</li>
-              <li>Continuity of care — clients stay active and reduce relapse risk</li>
-              <li>Simple referral process — no paperwork, just a quick message</li>
+              <li>Continuity of care, clients stay active and reduce relapse risk</li>
+              <li>Simple referral process, no paperwork, just a quick message</li>
               <li>Professional studio with qualified instructors and 15+ years experience</li>
             </ul>
           </div>

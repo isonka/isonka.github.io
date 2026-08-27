@@ -2,6 +2,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 import { getBlogPostBySlug, getRecentPosts } from '../data/blogPosts';
 import { trackBlogPostView, trackBlogPostRead, trackPageView } from '../utils/gtmTracking';
 import '../styles/BlogPost.css';
@@ -9,7 +10,7 @@ import '../styles/BlogPost.css';
 export const BlogPost: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getBlogPostBySlug(slug) : undefined;
-  const recentPosts = getRecentPosts(3).filter(p => p.slug !== slug);
+  const recentPosts = getRecentPosts(3).filter((p) => p.slug !== slug);
   const [readStartTime] = useState(Date.now());
 
   useEffect(() => {
@@ -22,17 +23,14 @@ export const BlogPost: React.FC = () => {
   useEffect(() => {
     if (!post) return;
 
-    // Track when user scrolls to bottom (indicates they read the post)
     const handleScroll = () => {
       const scrolled = window.scrollY;
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
-      
-      // If user scrolled to 80% of the page
+
       if (scrolled + windowHeight >= documentHeight * 0.8) {
         const readTime = Math.floor((Date.now() - readStartTime) / 1000);
         trackBlogPostRead(post.title, readTime);
-        // Remove listener after tracking once
         window.removeEventListener('scroll', handleScroll);
       }
     };
@@ -41,7 +39,6 @@ export const BlogPost: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [post, readStartTime]);
 
-  // If post not found, redirect to blog page
   if (!post) {
     return <Navigate to="/blog/" replace />;
   }
@@ -74,112 +71,112 @@ export const BlogPost: React.FC = () => {
         }}
       />
 
-      <div className="blog-post-page">
-        {/* Breadcrumb */}
-        <nav className="breadcrumb">
-          <Link to="/">Home</Link>
-          <span>/</span>
-          <Link to="/blog/">Blog</Link>
-          <span>/</span>
-          <span>{post.title}</span>
-        </nav>
+      <Breadcrumbs
+        items={[
+          { name: 'Blog', path: '/blog' },
+          { name: post.title, path: `/blog/${post.slug}` },
+        ]}
+      />
 
-        {/* Article */}
+      <div className="blog-post-page">
         <article className="blog-post">
           <header className="blog-post-header">
-            <div className="blog-post-meta">
-              <span className="blog-post-date">
-                {new Date(post.date).toLocaleDateString('en-US', { 
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric' 
+            <p className="kicker">Blog</p>
+            <p className="blog-post-meta">
+              <time dateTime={post.date}>
+                {new Date(post.date).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
                 })}
-              </span>
-              <span className="blog-post-author">By {post.author}</span>
-            </div>
+              </time>
+              <span aria-hidden="true"> · </span>
+              <span>By {post.author}</span>
+            </p>
             <h1>{post.title}</h1>
-            <div className="blog-post-tags">
-              {post.tags.map((tag, index) => (
-                <span key={index} className="blog-tag">{tag}</span>
-              ))}
-            </div>
+            {post.tags.length > 0 ? (
+              <p className="blog-post-topics">
+                {post.tags.join(' · ')}
+              </p>
+            ) : null}
           </header>
 
           <div className="blog-post-image">
-            <img 
-              src={post.image} 
-              alt={post.title} 
-              width="800" 
-              height="450" 
-              loading="eager" 
-              decoding="async" 
+            <img
+              src={post.image}
+              alt={post.title}
+              width="960"
+              height="540"
+              loading="eager"
+              decoding="async"
             />
           </div>
 
-          <div 
+          <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
-
-          {/* Call to Action */}
-          <div className="blog-post-cta">
-            <h3>Experience It Yourself</h3>
-            <p>Ready to try Pilates at PT Studio 7 Amsterdam? Book your class today at our beautiful Museumplein studio.</p>
-            <Link to="/schedule/" className="cta-button">Book Your Class</Link>
-          </div>
         </article>
 
-        {/* Sidebar */}
         <aside className="blog-sidebar">
-          {/* Recent Posts */}
-          {recentPosts.length > 0 && (
+          {recentPosts.length > 0 ? (
             <div className="sidebar-section">
-              <h3>Recent Posts</h3>
-              <div className="recent-posts">
+              <h2 className="sidebar-heading">Recent posts</h2>
+              <ul className="recent-posts">
                 {recentPosts.map((recentPost) => (
-                  <Link 
-                    key={recentPost.id} 
-                    to={`/blog/${recentPost.slug}/`}
-                    className="recent-post-card"
-                  >
-                    <div className="recent-post-image">
-                      <img 
-                        src={recentPost.image} 
-                        alt={recentPost.title} 
-                        width="80" 
-                        height="80" 
-                        loading="lazy" 
-                        decoding="async" 
-                      />
-                    </div>
-                    <div className="recent-post-content">
-                      <h4>{recentPost.title}</h4>
-                      <span className="recent-post-date">
-                        {new Date(recentPost.date).toLocaleDateString('en-US', { 
-                          year: 'numeric', 
-                          month: 'short', 
-                          day: 'numeric' 
-                        })}
-                      </span>
-                    </div>
-                  </Link>
+                  <li key={recentPost.id}>
+                    <Link to={`/blog/${recentPost.slug}/`} className="recent-post-link">
+                      <div className="recent-post-image">
+                        <img
+                          src={recentPost.image}
+                          alt=""
+                          width="80"
+                          height="80"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                      <div className="recent-post-content">
+                        <span className="recent-post-title">{recentPost.title}</span>
+                        <time className="recent-post-date" dateTime={recentPost.date}>
+                          {new Date(recentPost.date).toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'short',
+                            day: 'numeric',
+                          })}
+                        </time>
+                      </div>
+                    </Link>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
-          )}
+          ) : null}
 
-          {/* About Studio */}
-          <div className="sidebar-section about-studio">
-            <h3>About PT Studio 7</h3>
+          <div className="sidebar-section">
+            <h2 className="sidebar-heading">About PT Studio 7</h2>
             <p>
-              Located at Museumplein in Amsterdam, PT Studio 7 offers premium Pilates, 
-              TRX, and functional fitness with expert instructors in an intimate setting.
+              Located at Museumplein in Amsterdam, PT Studio 7 offers premium Pilates, TRX, and
+              functional fitness with expert instructors in an intimate setting.
             </p>
-            <Link to="/pricing/" className="sidebar-link">View Our Packages →</Link>
+            <Link to="/pricing/" className="prose-link">
+              View our packages
+            </Link>
           </div>
         </aside>
       </div>
+
+      <section className="cta-band blog-post-cta-band">
+        <h2>Experience it yourself</h2>
+        <p>
+          Ready to try Pilates at PT Studio 7 Amsterdam? Book a class at our Museumplein studio.
+        </p>
+        <div className="blog-post-cta-actions">
+          <Link to="/schedule/" className="btn-gold">
+            Book Your Class
+          </Link>
+        </div>
+      </section>
     </>
   );
 };
-

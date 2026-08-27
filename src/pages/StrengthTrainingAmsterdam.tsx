@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { Reveal } from '../components/Reveal';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/ServicePage.css';
 
@@ -17,19 +18,19 @@ const faqs = [
   },
   {
     question: 'Do I need prior experience for strength training at PT Studio 7?',
-    answer: 'No prior experience is needed. We start with a movement assessment to understand your baseline, identify any imbalances or limitations, and set appropriate starting weights. Beginners are very welcome — and actually benefit enormously from the personalised instruction we offer in private and small group sessions.',
+    answer: 'No prior experience is needed. We start with a movement assessment to understand your baseline, identify any imbalances or limitations, and set appropriate starting weights. Beginners are very welcome, and actually benefit enormously from the personalised instruction we offer in private and small group sessions.',
   },
   {
     question: 'Is strength training suitable for women who want to tone without bulk?',
-    answer: 'Absolutely. Gaining large amounts of muscle mass requires very specific training conditions, high caloric intake, and often years of dedicated effort. What most women experience from strength training is a leaner, more defined physique — not bulk. Our instructors are experienced in programming for body composition goals in a way that is both effective and sustainable.',
+    answer: 'Absolutely. Gaining large amounts of muscle mass requires very specific training conditions, high caloric intake, and often years of dedicated effort. What most women experience from strength training is a leaner, more defined physique, not bulk. Our instructors are experienced in programming for body composition goals in a way that is both effective and sustainable.',
   },
   {
     question: 'Can strength training help with back pain?',
-    answer: 'Yes — in many cases, targeted strength training is one of the most effective interventions for chronic back pain. Strengthening the posterior chain (glutes, hamstrings, lower back), hip stabilisers, and core reduces load on the lumbar spine and improves posture. Our instructors work with clients recovering from back issues regularly and know how to progress safely.',
+    answer: 'Yes, in many cases, targeted strength training is one of the most effective interventions for chronic back pain. Strengthening the posterior chain (glutes, hamstrings, lower back), hip stabilisers, and core reduces load on the lumbar spine and improves posture. Our instructors work with clients recovering from back issues regularly and know how to progress safely.',
   },
   {
     question: 'How does personal training at PT Studio 7 differ from a commercial gym?',
-    answer: 'At PT Studio 7 you train in a private, boutique environment with a maximum of 5 people in group sessions — or one-on-one in private sessions. Your instructor designs your program, monitors your technique every repetition, and adjusts load and exercise selection session by session. It is incomparable to training alone in a large gym.',
+    answer: 'At PT Studio 7 you train in a private, boutique environment with a maximum of 5 people in group sessions, or one-on-one in private sessions. Your instructor designs your program, monitors your technique every repetition, and adjusts load and exercise selection session by session. It is incomparable to training alone in a large gym.',
   },
 ];
 
@@ -55,8 +56,9 @@ export const StrengthTrainingAmsterdam: React.FC = () => {
       <Breadcrumbs items={[{ name: 'Strength Training Amsterdam', path: '/strength-training-amsterdam' }]} />
 
       <div className="service-page">
-        <section className="service-hero">
+        <Reveal className="service-hero">
           <div className="service-hero-content">
+            <p className="kicker">Strength</p>
             <h1>Strength Training Amsterdam</h1>
             <p>
               Expert-led personal strength training with premium Nike equipment at
@@ -70,9 +72,9 @@ export const StrengthTrainingAmsterdam: React.FC = () => {
             </div>
             <Link to="/schedule/" className="service-hero-btn">Book a Session</Link>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-section">
+        <Reveal className="service-section">
           <div className="service-container">
             <h2>Strength training in Amsterdam Oud-Zuid</h2>
             <p>
@@ -88,26 +90,26 @@ export const StrengthTrainingAmsterdam: React.FC = () => {
               figure it out alone.
             </p>
             <p>
-              Our approach combines classical strength training principles — compound lifts, progressive
-              overload, periodisation — with the movement quality and body awareness we develop through
+              Our approach combines classical strength training principles, compound lifts, progressive
+              overload, periodisation, with the movement quality and body awareness we develop through
               Pilates. The result is a body that is not just strong in isolated movements, but
               functionally powerful, balanced, and resilient.
             </p>
             <p>
               Whether your goal is building muscle, losing weight, improving athletic performance,
-              recovering from injury, or simply feeling stronger in daily life — we design a program
+              recovering from injury, or simply feeling stronger in daily life, we design a program
               specific to you.
             </p>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-section">
+        <Reveal className="service-section">
           <div className="service-container">
             <h2>Why strength training at PT Studio 7?</h2>
             <div className="service-benefits-grid">
               <div className="service-benefit-card">
                 <h3>Premium equipment</h3>
-                <p>Nike half rack, Olympic barbell, full dumbbell range, kettlebells, and Concept2 RowErg — professional tools for serious training.</p>
+                <p>Nike half rack, Olympic barbell, full dumbbell range, kettlebells, and Concept2 RowErg, professional tools for serious training.</p>
               </div>
               <div className="service-benefit-card">
                 <h3>Expert guidance every session</h3>
@@ -123,7 +125,7 @@ export const StrengthTrainingAmsterdam: React.FC = () => {
               </div>
               <div className="service-benefit-card">
                 <h3>Goal-specific programming</h3>
-                <p>Muscle building, fat loss, sports performance, injury rehab — your program is built around your specific outcome, not a generic template.</p>
+                <p>Muscle building, fat loss, sports performance, injury rehab, your program is built around your specific outcome, not a generic template.</p>
               </div>
               <div className="service-benefit-card">
                 <h3>Boutique privacy</h3>
@@ -131,9 +133,9 @@ export const StrengthTrainingAmsterdam: React.FC = () => {
               </div>
             </div>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-section">
+        <Reveal className="service-section">
           <div className="service-container">
             <h2>Frequently asked questions</h2>
             <div className="service-faq-list">
@@ -145,9 +147,9 @@ export const StrengthTrainingAmsterdam: React.FC = () => {
               ))}
             </div>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-cta-section">
+        <Reveal className="service-cta-section">
           <h2>Build real strength in Amsterdam</h2>
           <p>
             Book a private or small group strength training session at our Museumplein studio and
@@ -157,7 +159,7 @@ export const StrengthTrainingAmsterdam: React.FC = () => {
             <Link to="/schedule/" className="service-cta-btn-primary">Book a Session</Link>
             <Link to="/pricing/" className="service-cta-btn-secondary">View Pricing</Link>
           </div>
-        </section>
+        </Reveal>
       </div>
     </>
   );

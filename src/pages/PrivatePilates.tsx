@@ -3,13 +3,14 @@ import { useEffect } from 'react';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { Reveal } from '../components/Reveal';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/ServicePage.css';
 
 const faqs = [
   {
     question: 'What is the difference between private and group Pilates?',
-    answer: 'In a private session your instructor is 100% focused on you. The program is built around your specific goals, movement patterns, injuries, and fitness level. Group classes follow a set structure suitable for all participants. Private sessions allow for deeper technical work, more frequent adjustments, and faster progress — especially for beginners, people recovering from injury, or clients with specific goals like pregnancy, back pain, or athletic performance.',
+    answer: 'In a private session your instructor is 100% focused on you. The program is built around your specific goals, movement patterns, injuries, and fitness level. Group classes follow a set structure suitable for all participants. Private sessions allow for deeper technical work, more frequent adjustments, and faster progress, especially for beginners, people recovering from injury, or clients with specific goals like pregnancy, back pain, or athletic performance.',
   },
   {
     question: 'How many people are in a private session?',
@@ -55,11 +56,12 @@ export const PrivatePilates: React.FC = () => {
       <Breadcrumbs items={[{ name: 'Private Pilates Amsterdam', path: '/private-pilates-amsterdam' }]} />
 
       <div className="service-page">
-        <section className="service-hero">
+        <Reveal className="service-hero">
           <div className="service-hero-content">
+            <p className="kicker">Private</p>
             <h1>Private Reformer Pilates Sessions Amsterdam</h1>
             <p>
-              100% personalised training — your goals, your pace, your program. One-on-one or
+              100% personalised training, your goals, your pace, your program. One-on-one or
               small private groups at our boutique studio at Museumplein.
             </p>
             <div className="service-hero-badges">
@@ -70,13 +72,13 @@ export const PrivatePilates: React.FC = () => {
             </div>
             <Link to="/schedule/" className="service-hero-btn">Book a Private Session</Link>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-section">
+        <Reveal className="service-section">
           <div className="service-container">
             <h2>Why private Pilates?</h2>
             <p>
-              Group classes are energising and social — but there is a ceiling to how much attention
+              Group classes are energising and social, but there is a ceiling to how much attention
               one instructor can give to five people at once. Private sessions remove that ceiling
               entirely. Your instructor has one job: to make your session as effective as possible
               for you, specifically.
@@ -90,7 +92,7 @@ export const PrivatePilates: React.FC = () => {
             <p>
               Whether you are a complete beginner wanting to learn proper technique, an athlete
               looking to improve performance and prevent injury, someone recovering from a back
-              injury or surgery, or a pregnant or postpartum woman needing specialist guidance —
+              injury or surgery, or a pregnant or postpartum woman needing specialist guidance,
               private sessions at PT Studio 7 are designed to deliver real results, not just a
               good workout.
             </p>
@@ -100,9 +102,9 @@ export const PrivatePilates: React.FC = () => {
               the right tools for each phase of your program.
             </p>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-section">
+        <Reveal className="service-section">
           <div className="service-container">
             <h2>Private session formats</h2>
             <div className="service-benefits-grid">
@@ -112,7 +114,7 @@ export const PrivatePilates: React.FC = () => {
               </div>
               <div className="service-benefit-card">
                 <h3>Duo Session</h3>
-                <p>Train with a partner — friend, spouse, or colleague. You share the cost while still receiving far more personal attention than in a group class. Programs can be shared or partially individualised.</p>
+                <p>Train with a partner, friend, spouse, or colleague. You share the cost while still receiving far more personal attention than in a group class. Programs can be shared or partially individualised.</p>
               </div>
               <div className="service-benefit-card">
                 <h3>Trio Session</h3>
@@ -132,9 +134,9 @@ export const PrivatePilates: React.FC = () => {
               </div>
             </div>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-section">
+        <Reveal className="service-section">
           <div className="service-container">
             <h2>Frequently asked questions</h2>
             <div className="service-faq-list">
@@ -146,9 +148,9 @@ export const PrivatePilates: React.FC = () => {
               ))}
             </div>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-cta-section">
+        <Reveal className="service-cta-section">
           <h2>Ready to start?</h2>
           <p>
             Book your first private session online, or contact us if you have questions about which
@@ -158,7 +160,7 @@ export const PrivatePilates: React.FC = () => {
             <Link to="/schedule/" className="service-cta-btn-primary">Book a Private Session</Link>
             <Link to="/pricing/" className="service-cta-btn-secondary">View Pricing</Link>
           </div>
-        </section>
+        </Reveal>
       </div>
     </>
   );

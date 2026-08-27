@@ -1,10 +1,3 @@
-/**
- * MindBody Healcode (widgets.mindbodyonline.com/javascripts/healcode.js).
- * Load on demand — not from index.html — so Home/LCP are not competing with it.
- * Navbar Login | Register still needs it site-wide; callers should idle-defer
- * when the widget is non-critical for first paint.
- */
-
 const HEALCODE_SCRIPT_ID = 'mindbody-healcode';
 const HEALCODE_SRC = 'https://widgets.mindbodyonline.com/javascripts/healcode.js';
 
@@ -22,7 +15,6 @@ export function reinitHealcodeWidgets(): void {
   window.HealcodeWidget?.init?.();
 }
 
-/** Inject healcode.js once; re-init widgets after load (and when already present). */
 export function ensureHealcodeLoaded(): Promise<void> {
   const existing =
     document.getElementById(HEALCODE_SCRIPT_ID) ||
@@ -54,27 +46,21 @@ export function ensureHealcodeLoaded(): Promise<void> {
   return loadPromise;
 }
 
-/** Schedule ensureHealcodeLoaded after first paint / idle (Navbar login). */
 export function loadHealcodeWhenIdle(timeoutMs = 3000): () => void {
-  let idleId: number | undefined;
-  let timerId: ReturnType<typeof setTimeout> | undefined;
-
   const run = () => {
-    void ensureHealcodeLoaded().catch(() => {
-      /* Login/buy widgets stay as inert custom elements until retry navigation */
-    });
+    void ensureHealcodeLoaded().catch(() => {});
   };
 
   const ric = window.requestIdleCallback?.bind(window);
   if (ric) {
-    idleId = ric(run, { timeout: timeoutMs });
+    const idleId = ric(run, { timeout: timeoutMs });
     return () => {
-      window.cancelIdleCallback?.(idleId!);
+      window.cancelIdleCallback?.(idleId);
     };
   }
 
-  timerId = setTimeout(run, 1);
+  const timeoutId = setTimeout(run, 1);
   return () => {
-    if (timerId !== undefined) clearTimeout(timerId);
+    clearTimeout(timeoutId);
   };
 }

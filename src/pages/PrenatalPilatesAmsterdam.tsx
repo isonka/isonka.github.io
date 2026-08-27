@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { Reveal } from '../components/Reveal';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/ServicePage.css';
 
@@ -99,8 +100,9 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
       <Breadcrumbs items={[{ name: 'Prenatal Pilates Amsterdam', path: '/prenatal-pilates-amsterdam' }]} />
 
       <div className="service-page">
-        <section className="service-hero">
+        <Reveal className="service-hero">
           <div className="service-hero-content">
+            <p className="kicker">Prenatal</p>
             <h1>Prenatal &amp; Pregnancy Pilates Amsterdam</h1>
             <p>
               Expert-led Reformer Pilates for pregnancy at Museumplein (Oud-Zuid). Every session is private and adapted to your trimester, your body, and your goals so you can train safely with confidence.
@@ -113,9 +115,9 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
             </div>
             <Link to="/schedule/" className="service-hero-btn">Book a Prenatal Session</Link>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-section">
+        <Reveal className="service-section">
           <div className="service-container">
             <h2>Why prenatal Pilates at PT Studio 7</h2>
             <p>
@@ -131,9 +133,9 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
               </Link>.
             </p>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-section">
+        <Reveal className="service-section">
           <div className="service-container">
             <h2>Who this is for</h2>
             <p>
@@ -161,9 +163,9 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
               </div>
             </div>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-section">
+        <Reveal className="service-section">
           <div className="service-container">
             <h2>What a private prenatal session looks like</h2>
             <p>
@@ -204,9 +206,9 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
               </div>
             </div>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-section">
+        <Reveal className="service-section">
           <div className="service-container">
             <h2>From our prenatal clients</h2>
             <blockquote className="service-quote">
@@ -223,9 +225,9 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
               instructors who stay with you through pregnancy when it is appropriate for you.
             </p>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-section">
+        <Reveal className="service-section">
           <div className="service-container">
             <h2>Meet your prenatal specialists</h2>
             <p>
@@ -259,9 +261,9 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
               </Link>
             </div>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-section">
+        <Reveal className="service-section">
           <div className="service-container">
             <h2>Related studio pages</h2>
             <p>
@@ -271,9 +273,9 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
               <Link to="/schedule/">class schedule</Link>.
             </p>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-section">
+        <Reveal className="service-section">
           <div className="service-container">
             <h2>Frequently Asked Questions</h2>
             <div className="service-faq-list">
@@ -298,9 +300,9 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
               ))}
             </div>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="service-cta-section">
+        <Reveal className="service-cta-section">
           <h2>Start safely, train confidently</h2>
           <p>
             Book your private prenatal intake and we will design a program that supports you through pregnancy and beyond.
@@ -309,7 +311,7 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
             <Link to="/schedule/" className="service-cta-btn-primary">Book Prenatal Intake</Link>
             <Link to="/pricing/" className="service-cta-btn-secondary">View Private Session Pricing</Link>
           </div>
-        </section>
+        </Reveal>
       </div>
     </>
   );

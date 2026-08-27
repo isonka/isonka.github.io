@@ -1,74 +1,74 @@
-/* ClassPass Offer Page */
 .classpass-offer-page {
   min-height: 100vh;
   width: 100%;
 }
 
-/* Hero Section */
 .cp-hero {
   position: relative;
-  min-height: 70vh;
-  background: #1f2a37;
+  min-height: 0;
+  background: transparent;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .cp-hero-overlay {
-  text-align: center;
-  padding: 60px 20px;
-  max-width: 800px;
+  text-align: left;
+  padding: 56px 24px 32px;
+  max-width: 720px;
 }
 
 .cp-hero-content {
-  color: white;
+  color: #111;
 }
 
 .cp-badge {
   display: block;
   width: fit-content;
   background: transparent;
-  color: #e5ebf2;
+  color: #c9a800;
   padding: 0;
   border-radius: 0;
-  font-weight: 600;
-  font-size: 0.92rem;
+  font-weight: 500;
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin: 0 auto 18px;
+  letter-spacing: 0.22em;
+  margin: 0 0 12px;
   border: none;
-  opacity: 0.92;
+  opacity: 1;
 }
 
 .cp-hero h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  margin: 0 0 24px;
-  line-height: 1.2;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 600;
+  margin: 0 0 16px;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
 }
 
 .cp-hero-subtitle {
-  font-size: 1.3rem;
-  opacity: 0.9;
-  max-width: 600px;
-  margin: 0 auto 32px;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  color: #555;
+  max-width: 38em;
+  margin: 0 0 28px;
+  line-height: 1.7;
+  opacity: 1;
 }
 
 .cp-cta-button {
   display: inline-block;
-  background: #e9edf2;
-  color: #1f2a37;
-  padding: 14px 28px;
+  background: #111;
+  color: #fff;
+  padding: 16px 40px;
   border-radius: var(--radius-pill);
   font-weight: 600;
   font-size: 1rem;
   text-decoration: none;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background 0.2s ease;
 }
 
 .cp-cta-button:hover {
-  background: #dce3eb;
+  background: #333;
 }
 
 .cp-cta-button.secondary {
@@ -82,7 +82,6 @@
   color: #364657;
 }
 
-/* Comparison Section */
 .cp-comparison {
   padding: 80px 20px;
   background: #f8f9fa;
@@ -213,7 +212,6 @@
   opacity: 0.95;
 }
 
-/* Exclusive Offer Section */
 .cp-exclusive-offer {
   padding: 80px 20px;
   background: #2a3644;
@@ -320,7 +318,6 @@
   font-style: italic;
 }
 
-/* Benefits Section */
 .cp-benefits {
   padding: 80px 20px;
   background: white;
@@ -373,7 +370,6 @@
   margin: 0;
 }
 
-/* Testimonials Section */
 .cp-testimonials {
   padding: 80px 20px;
   background: #f8f9fa;
@@ -409,7 +405,6 @@
   margin: 0;
 }
 
-/* FAQ Section */
 .cp-faq {
   padding: 80px 20px;
   background: white;
@@ -443,22 +438,22 @@
   margin: 0;
 }
 
-/* Final CTA Section */
 .cp-final-cta {
-  padding: 80px 20px;
-  background: #f2f5f8;
+  padding: 80px 24px;
+  background: #111;
   text-align: center;
 }
 
 .cp-final-cta h2 {
-  font-size: 2.5rem;
-  margin: 0 0 16px;
-  color: #1a1a2e;
+  font-size: 2.2rem;
+  margin: 0 0 12px;
+  color: #fff;
+  letter-spacing: -0.01em;
 }
 
 .cp-final-cta p {
-  font-size: 1.2rem;
-  color: #333;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
   margin: 0 0 32px;
 }
 
@@ -470,26 +465,26 @@
 }
 
 .cp-final-cta .cp-cta-button.primary {
-  background: #2a3644;
-  color: #ffffff;
+  background: #fff;
+  color: #111;
 }
 
 .cp-final-cta .cp-cta-button.primary:hover {
-  background: #1f2a37;
+  background: #f5f5f5;
 }
 
 .cp-final-cta .cp-cta-button.secondary {
   background: transparent;
-  border: 1px solid #2a3644;
-  color: #2a3644;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
 }
 
 .cp-final-cta .cp-cta-button.secondary:hover {
-  background: #e3e9ef;
-  color: #1f2a37;
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .cp-hero h1 {
     font-size: 2.5rem;

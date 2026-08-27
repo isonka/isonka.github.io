@@ -56,66 +56,66 @@ export const Schedule: React.FC = () => {
       <Breadcrumbs items={[{ name: 'Book Classes', path: '/schedule' }]} />
 
       <div className="schedule-page">
-        {/* Hero Section */}
         <section className="schedule-hero">
           <div className="schedule-hero-content">
-            <h1>Schedule & Book Your Session</h1>
-            <p>Pilates • TRX • Strength Training • Cardio<br/>
-            Small group classes (max 5) or private classes with expert trainers</p>
-            <div className="location-highlight">
-              <span className="location-icon">📍</span>
-              <span>Premium location at <strong>Museumplein</strong> - across from Stedelijk Museum</span>
-            </div>
+            <p className="schedule-kicker">Book</p>
+            <h1>Schedule &amp; book your session</h1>
+            <p>
+              Pilates, TRX, strength, and cardio, small groups (max 5) or private sessions with expert trainers.
+            </p>
+            <p className="location-highlight">
+              Museumplein, Van Baerlestraat 76C, across from Stedelijk Museum
+            </p>
           </div>
         </section>
 
-        {/* Main Content */}
         <section className="schedule-main">
           <div className="tabs-container">
-            {/* Tab Navigation */}
             <div className="tab-navigation">
               <button
+                type="button"
                 className={`tab-button ${activeTab === 'group' ? 'active' : ''}`}
                 onClick={() => setActiveTab('group')}
               >
-                <span className="label">Small Group</span>
-                Group Classes
+                Group classes
               </button>
               <button
+                type="button"
                 className={`tab-button ${activeTab === 'private' ? 'active' : ''}`}
                 onClick={() => setActiveTab('private')}
               >
-                <span className="label">Private Training</span>
-                Private Classes
+                Private classes
               </button>
             </div>
 
-            {/* Group Classes Tab */}
             <div className={`tab-content ${activeTab === 'group' ? 'active' : ''}`}>
-              <h2>Group Classes</h2>
-              <p className="subtitle">Small group training with maximum 5 participants. Expert instruction in an energizing environment.</p>
+              <h2>Group classes</h2>
+              <p className="subtitle">
+                Small group training with maximum 5 participants. Expert instruction in an energizing environment.
+              </p>
 
               <div className="info-banner">
-                <span className="icon">ℹ</span>
-                <p><strong>New to group classes?</strong> First-timers arrive 10 minutes early for orientation. Our trainers will guide you through everything!</p>
+                <p>
+                  <strong>New to group classes?</strong> First-timers arrive 10 minutes early for orientation. Our
+                  trainers will guide you through everything.
+                </p>
               </div>
 
               <div className="quick-info">
                 <div className="info-card">
-                  <h3>Class Duration</h3>
-                  <p>45 minutes of comprehensive Pilates workout</p>
+                  <h3>Class duration</h3>
+                  <p>45 minutes</p>
                 </div>
                 <div className="info-card">
-                  <h3>Group Size</h3>
-                  <p>Maximum 5 people for personalized attention</p>
+                  <h3>Group size</h3>
+                  <p>Maximum 5 people</p>
                 </div>
                 <div className="info-card">
-                  <h3>What to Bring</h3>
-                  <p>Water bottle, towel, grip socks (recommended, available for purchase at studio)</p>
+                  <h3>What to bring</h3>
+                  <p>Water bottle, towel, grip socks (recommended; available at the studio)</p>
                 </div>
               </div>
 
-              {/* MindBody Widget for Group Classes */}
               <div className="widget-container">
                 {widgetsLoading && (
                   <p className="widget-loading" role="status">
@@ -138,36 +138,38 @@ export const Schedule: React.FC = () => {
               </div>
             </div>
 
-            {/* Private Classes Tab */}
             <div className={`tab-content ${activeTab === 'private' ? 'active' : ''}`}>
-              <h2>Private Classes</h2>
-              <p className="subtitle">Personalized training tailored to your specific goals and fitness level. Available as one-on-one, couple, or trio classes.</p>
+              <h2>Private classes</h2>
+              <p className="subtitle">
+                Personalized training for your goals and level, one-on-one, couple, or trio.
+              </p>
 
               <div className="info-banner">
-                <span className="icon">ℹ</span>
-                <p><strong>Personalized attention guaranteed!</strong> Private classes are customized to your goals, injuries, or specific needs. Train solo, with a partner, or with two friends.</p>
+                <p>
+                  <strong>Personalized attention.</strong> Sessions adapt to your goals, injuries, or specific needs.
+                  Train solo, with a partner, or with two friends.
+                </p>
               </div>
 
               <div className="quick-info">
                 <div className="info-card">
-                  <h3>Class Duration</h3>
-                  <p>45 minutes of focused, personalized training</p>
+                  <h3>Class duration</h3>
+                  <p>45 minutes of focused training</p>
                 </div>
                 <div className="info-card">
-                  <h3>Class Options</h3>
-                  <p>One-on-One, Couple, or Trio (3 people)</p>
+                  <h3>Class options</h3>
+                  <p>One-on-one, couple, or trio (3 people)</p>
                 </div>
                 <div className="info-card">
-                  <h3>Customized Program</h3>
+                  <h3>Customized program</h3>
                   <p>Workout adapted to your goals and level</p>
                 </div>
                 <div className="info-card">
-                  <h3>What to Bring</h3>
-                  <p>Comfortable fitted clothing, socks (grip socks recommended), water bottle, towel (recommended)</p>
+                  <h3>What to bring</h3>
+                  <p>Fitted clothing, socks (grip socks recommended), water bottle, towel</p>
                 </div>
               </div>
 
-              {/* MindBody Widget for Private Classes */}
               <div className="widget-container">
                 {widgetsLoading && (
                   <p className="widget-loading" role="status">
@@ -190,17 +192,22 @@ export const Schedule: React.FC = () => {
               </div>
             </div>
           </div>
+        </section>
 
-          {/* CTA Section */}
-          <div className="cta-section">
-            <h2>Need Help Choosing?</h2>
-            <p>Not sure whether group classes or private classes are right for you? Check out our pricing or contact us for guidance.</p>
-            <Link to="/pricing/" className="cta-button">View Pricing & Packages</Link>
+        <section className="cta-section" aria-labelledby="schedule-cta-heading">
+          <div className="cta-section-inner">
+            <p className="schedule-kicker schedule-kicker-on-dark">Next step</p>
+            <h2 id="schedule-cta-heading">Need help choosing?</h2>
+            <p>
+              Not sure between group and private? Check pricing or contact us for guidance.
+            </p>
+            <Link to="/pricing/" className="cta-button">
+              View pricing &amp; packages
+            </Link>
           </div>
         </section>
       </div>
 
-      {/* Floating Booking Help */}
       <BookingGuide />
     </>
   );

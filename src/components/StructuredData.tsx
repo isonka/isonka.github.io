@@ -82,8 +82,8 @@ interface StructuredDataProps {
       sku: string;
       brand: string;
       url: string;
-      price: string;
-      priceCurrency: string;
+      price?: string;
+      priceCurrency?: string;
       availability: string;
       itemCondition?: string;
       category?: string;
@@ -275,8 +275,8 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
       offers: {
         '@type': 'Offer',
         url: p.url,
-        priceCurrency: p.priceCurrency,
-        price: p.price,
+        ...(p.priceCurrency ? { priceCurrency: p.priceCurrency } : {}),
+        ...(p.price ? { price: p.price } : {}),
         availability: p.availability,
         ...(p.itemCondition ? { itemCondition: p.itemCondition } : {}),
         seller: {
@@ -481,6 +481,6 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
 
   if (!schema) return null;
 
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }} />;
 };
 

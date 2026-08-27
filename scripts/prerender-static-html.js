@@ -41,6 +41,8 @@ const routes = [
   '/academy/',
   '/academy/nl/',
   '/healthcare-providers/',
+  '/corporate/',
+  '/privacy/',
   '/classpass-offer/',
   '/prenatal-pilates-amsterdam/',
   '/pregnancy-pilates-amsterdam/',
@@ -279,11 +281,11 @@ async function prerenderRoutes() {
   }
 
   if (skippedCount > 0) {
-    console.log(`\n⚠ Prerender completed with ${skippedCount} skipped route(s).`);
-    console.log(`ℹ️  Successfully prerendered ${successCount}/${routes.length} routes.`);
-  } else {
-    console.log(`\n✅ Prerendered ${successCount}/${routes.length} routes.`);
+    console.error(`\n❌ Prerender skipped ${skippedCount} route(s) (${successCount}/${routes.length} ok).`);
+    process.exit(1);
   }
+
+  console.log(`\n✅ Prerendered ${successCount}/${routes.length} routes.`);
 }
 
 prerenderRoutes()

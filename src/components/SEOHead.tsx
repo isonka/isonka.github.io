@@ -14,13 +14,9 @@ interface SEOHeadProps {
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
-  /** Open Graph locale, e.g. en_US or nl_NL */
   ogLocale?: string;
-  /** Alternate OG locales */
   ogLocaleAlternates?: string[];
-  /** HTML lang attribute on <html> */
   htmlLang?: string;
-  /** link rel="alternate" hreflang entries */
   hreflangAlternates?: HreflangAlternate[];
 }
 

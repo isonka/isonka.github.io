@@ -4,7 +4,6 @@ import { SEOHead } from '../components/SEOHead';
 import { trackBookingConfirmation, trackPageView } from '../utils/gtmTracking';
 import '../styles/Congrats.css';
 
-// Declare gtag function for TypeScript
 declare global {
   interface Window {
     gtag?: (command: string, eventName: string, params?: Record<string, unknown>) => void;
@@ -13,21 +12,16 @@ declare global {
 
 export const Congrats: React.FC = () => {
   useEffect(() => {
-    // Track page view
     trackPageView('/congrats', 'Booking Confirmed');
     
-    // Track booking confirmation in GTM
     trackBookingConfirmation();
 
-    // Fire Google Ads conversion events when page loads
     if (window.gtag) {
-      // Primary conversion event (original)
       window.gtag('event', 'ads_conversion_Book_appointment_1', {});
       
-      // Purchase conversion tracking (new)
       window.gtag('event', 'conversion', {
         'send_to': 'AW-17684932205/G4r3CKjwirkbEO3M6vBB',
-        'transaction_id': '' // Optional: can add unique booking ID if available
+        'transaction_id': ''
       });
     }
   }, []);

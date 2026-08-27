@@ -1,0 +1,341 @@
+.corporate-page {
+  min-height: 100vh;
+}
+
+.corporate-hero {
+  background: transparent;
+  padding: 56px 24px 32px;
+  text-align: left;
+  color: #111;
+}
+
+.corporate-hero-content {
+  max-width: 720px;
+  margin: 0;
+}
+
+.corporate-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin: 0 0 12px;
+  color: #111;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.corporate-hero .hero-subtitle {
+  font-size: 1.15rem;
+  margin: 0 0 16px;
+  color: #444;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
+.corporate-hero .hero-description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.corporate-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.corporate-pilates-rehab {
+  padding: 56px 24px;
+  background: transparent;
+}
+
+.corporate-pilates-rehab h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.corporate-page .rehab-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.corporate-page .rehab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.corporate-page .rehab-card {
+  background: #f8f8f8;
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  border: 1px solid #eee;
+}
+
+.corporate-page .rehab-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.corporate-page .rehab-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.corporate-who {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.corporate-who h2,
+.corporate-how h2,
+.corporate-offer h2,
+.corporate-cta h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.corporate-page .who-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.corporate-page .who-card {
+  background: #f8f8f8;
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  border: 1px solid #eee;
+  transition: box-shadow 0.2s ease;
+}
+
+.corporate-page .who-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.corporate-page .who-icon {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #bfa100;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.corporate-page .who-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.corporate-page .who-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.corporate-how {
+  padding: 56px 24px;
+  background: transparent;
+}
+
+.corporate-page .how-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+}
+
+.corporate-page .how-step {
+  text-align: center;
+  position: relative;
+}
+
+.corporate-page .step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #bfa100;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.25rem;
+  border-radius: var(--radius-circle);
+  margin-bottom: 16px;
+}
+
+.corporate-page .step-title {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.corporate-page .how-step p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.corporate-offer {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.corporate-page .offer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.corporate-page .offer-card {
+  background: #f8f8f8;
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  border: 1px solid #eee;
+}
+
+.corporate-page .offer-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.corporate-page .offer-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.corporate-disclaimer {
+  max-width: 700px;
+  margin: 28px auto 0;
+  text-align: center;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #888;
+}
+
+.corporate-cta {
+  padding: 80px 24px;
+  background: #111;
+  text-align: center;
+  color: #fff;
+}
+
+.corporate-cta h2 {
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.corporate-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.corporate-page .cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.corporate-cta .cta-button {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.corporate-cta .cta-button.primary {
+  background: #ffd700;
+  color: #222;
+}
+
+.corporate-cta .cta-button.primary:hover {
+  background: #ffb800;
+  transform: translateY(-2px);
+}
+
+.corporate-cta .cta-button.secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #ffd700;
+}
+
+.corporate-cta .cta-button.secondary:hover {
+  background: #ffd700;
+  color: #222;
+  transform: translateY(-2px);
+}
+
+.corporate-page .cta-note {
+  font-size: 0.9rem !important;
+  color: #999 !important;
+  margin-bottom: 0 !important;
+}
+
+.corporate-back {
+  padding: 24px 20px;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+.corporate-pilates-rehab a,
+.corporate-back a {
+  color: #bfa100;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: none;
+  transition: color 0.2s ease;
+}
+
+.corporate-pilates-rehab a:hover,
+.corporate-back a:hover {
+  color: #9e8500;
+}
+
+.corporate-page .back-link {
+  display: inline-block;
+  color: #555;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.corporate-page .back-link:hover {
+  color: #bfa100;
+}
+
+@media (max-width: 600px) {
+  .corporate-hero h1 {
+    font-size: 2rem;
+  }
+
+  .corporate-hero .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .corporate-who h2,
+  .corporate-how h2,
+  .corporate-offer h2,
+  .corporate-cta h2 {
+    font-size: 1.5rem;
+  }
+}

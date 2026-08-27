@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   OPEN_COOKIE_SETTINGS_EVENT,
   applyConsent,
@@ -73,8 +74,8 @@ export const CookieConsent: React.FC = () => {
         </h2>
         <p className="pt7-consent-text">
           We use necessary cookies to run the site. With your OK we also use statistics (Google Analytics)
-          and marketing cookies (Google Ads, Meta) to measure visits and improve ads. You can change this anytime
-          via Cookie Settings in the footer.
+          and marketing cookies (Google Ads, Meta) to measure visits and improve ads. Details in our{' '}
+          <Link to="/privacy/">privacy policy</Link>. Change this anytime via Cookie Settings in the footer.
         </p>
 
         {mode === 'settings' && (
@@ -83,7 +84,7 @@ export const CookieConsent: React.FC = () => {
               <input type="checkbox" checked disabled readOnly />
               <span>
                 <strong>Necessary</strong>
-                <small>Always on — security and basic site function</small>
+                <small>Always on: security and basic site function</small>
               </span>
             </label>
             <label className="pt7-consent-option">
@@ -94,7 +95,7 @@ export const CookieConsent: React.FC = () => {
               />
               <span>
                 <strong>Statistics</strong>
-                <small>Google Analytics — understand how the site is used</small>
+                <small>Google Analytics only. No ads or Meta tags.</small>
               </span>
             </label>
             <label className="pt7-consent-option">
@@ -105,7 +106,7 @@ export const CookieConsent: React.FC = () => {
               />
               <span>
                 <strong>Marketing</strong>
-                <small>Google Ads and Meta — measure ads and remarketing</small>
+                <small>Google Ads and Meta: measure ads and remarketing</small>
               </span>
             </label>
           </div>

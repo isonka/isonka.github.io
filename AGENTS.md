@@ -62,7 +62,7 @@ The home route is implemented in **`src/pages/Home.tsx`**. SEO work here include
 
 ### Route reference (sync with `src/App.tsx`)
 
-Core paths include: `/`, `/pricing/`, `/schedule/`, `/equipment/`, `/equipment/:slug/`, `/workouts/:slug/`, `/instructors/`, `/trainer/:slug/`, `/academy/`, `/blog/`, `/blog/:slug/`, `/congrats/`, `/classpass-offer/`, `/healthcare-providers/`, `/prenatal-pilates-amsterdam/`, `/pregnancy-pilates-amsterdam/`, `/private-pilates-amsterdam/`, `/trx-training-amsterdam/`, `/strength-training-amsterdam/`. Prefer **trailing-slash** form in sitemap, canonicals, and internal links (GitHub Pages 301s bare paths to `/path/`). Legacy redirects: `/index.html` → `/`, `/congrats.html` → `/congrats/`, `/pregnancy-pilates-amsterdam/` → `/prenatal-pilates-amsterdam/` (canonical pregnancy/prenatal lander).
+Core paths include: `/`, `/pricing/`, `/schedule/`, `/equipment/`, `/equipment/:slug/`, `/workouts/:slug/`, `/instructors/`, `/trainer/:slug/`, `/academy/`, `/blog/`, `/blog/:slug/`, `/congrats/`, `/classpass-offer/`, `/healthcare-providers/`, `/corporate/`, `/prenatal-pilates-amsterdam/`, `/pregnancy-pilates-amsterdam/`, `/private-pilates-amsterdam/`, `/trx-training-amsterdam/`, `/strength-training-amsterdam/`. Prefer **trailing-slash** form in sitemap, canonicals, and internal links (GitHub Pages 301s bare paths to `/path/`). Legacy redirects: `/index.html` → `/`, `/congrats.html` → `/congrats/`, `/pregnancy-pilates-amsterdam/` → `/prenatal-pilates-amsterdam/` (canonical pregnancy/prenatal lander).
 
 ### Checklist when adding or renaming a page
 

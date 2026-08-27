@@ -1,8 +1,58 @@
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
-import { trainerProfiles } from '../data/trainers';
+import { PHOTO_FOCUS } from '../data/photoFocus';
+import { trainerProfiles, type TrainerProfile } from '../data/trainers';
+import { useInViewOnce } from '../hooks/useInViewOnce';
 import '../styles/Trainers.css';
+
+const InstructorRow: React.FC<{ instructor: TrainerProfile; index: number; eager: boolean }> = ({
+  instructor,
+  index,
+  eager,
+}) => {
+  const { ref, inView } = useInViewOnce<HTMLAnchorElement>();
+  const role = instructor.heroTitle.replace(/\n/g, ' · ');
+  const bio = instructor.bio[0];
+
+  return (
+    <Link
+      ref={ref}
+      to={`/trainer/${instructor.slug}/`}
+      className={`instructor-row${index % 2 === 1 ? ' instructor-row--flip' : ''}${inView ? ' is-in' : ''}`}
+      style={{ '--row-delay': `${(index % 4) * 90}ms` } as React.CSSProperties}
+    >
+      <div className="instructor-row-photo">
+        <img
+          src={instructor.image}
+          alt={instructor.name}
+          width={200}
+          height={200}
+          loading={eager ? 'eager' : 'lazy'}
+          decoding="async"
+          style={{ objectPosition: PHOTO_FOCUS[instructor.slug] ?? '50% 24%' }}
+        />
+      </div>
+      <div className="instructor-row-info">
+        <h2 className="instructor-name instructor-reveal" style={{ transitionDelay: 'calc(var(--row-delay) + 80ms)' }}>
+          {instructor.name}
+        </h2>
+        <p className="instructor-role instructor-reveal" style={{ transitionDelay: 'calc(var(--row-delay) + 160ms)' }}>
+          {role}
+        </p>
+        <p className="instructor-bio instructor-reveal" style={{ transitionDelay: 'calc(var(--row-delay) + 240ms)' }}>
+          {bio}
+        </p>
+        <p className="instructor-meta instructor-reveal" style={{ transitionDelay: 'calc(var(--row-delay) + 320ms)' }}>
+          {instructor.languages.join(' · ')}
+        </p>
+        <span className="instructor-link instructor-reveal" style={{ transitionDelay: 'calc(var(--row-delay) + 400ms)' }}>
+          View profile →
+        </span>
+      </div>
+    </Link>
+  );
+};
 
 export const Trainers: React.FC = () => {
   const availableInstructors = trainerProfiles.filter(t => t.available);
@@ -19,39 +69,26 @@ export const Trainers: React.FC = () => {
       <Breadcrumbs items={[{ name: 'Instructors', path: '/instructors' }]} />
 
       <div className="trainers-page">
-        {/* All Instructors */}
+
         {availableInstructors.length > 0 && (
-          <section className="trainers-section trainers-section-main">
-            <div className="trainers-section-header">
-              <h1>Meet Our Team</h1>
+          <section className="instructors-stack" aria-labelledby="instructors-heading">
+            <header className="instructors-header">
+              <p className="instructors-kicker">The team</p>
+              <h1 id="instructors-heading">Meet Our Team</h1>
               <p>Experienced professionals with advanced certifications</p>
-            </div>
-            <div className="trainers-grid">
-              {availableInstructors.map(instructor => (
-                <Link to={`/trainer/${instructor.slug}/`} key={instructor.slug} className="trainer-card">
-                  <div className="trainer-card-image">
-                    <img src={instructor.image} alt={instructor.name} loading="lazy" />
-                    <span className={`trainer-tier-badge tier-${instructor.tier}`}>
-                      {instructor.tier === 'master' ? 'Master' : instructor.tier === 'senior' ? 'Senior' : 'Junior'}
-                    </span>
-                  </div>
-                  <div className="trainer-card-content">
-                    <h3>{instructor.name}</h3>
-                    <p className="trainer-card-title" style={{ whiteSpace: 'pre-line' }}>{instructor.title}</p>
-                    <div className="trainer-card-languages">
-                      {instructor.languages.map(lang => (
-                        <span key={lang} className="language-tag">{lang}</span>
-                      ))}
-                    </div>
-                    <span className="trainer-card-link">View Profile →</span>
-                  </div>
-                </Link>
-              ))}
-            </div>
+            </header>
+
+            {availableInstructors.map((instructor, index) => (
+              <InstructorRow
+                key={instructor.slug}
+                instructor={instructor}
+                index={index}
+                eager={index === 0}
+              />
+            ))}
           </section>
         )}
 
-        {/* Growing Team Banner */}
         {hasComingSoon && (
           <section className="trainers-growing-banner">
             <div className="growing-banner-inner">
@@ -66,7 +103,6 @@ export const Trainers: React.FC = () => {
           </section>
         )}
 
-        {/* CTA Section */}
         <section className="trainers-cta">
           <h2>Ready to Train with Our Instructors?</h2>
           <p>Book a session and experience personalized training at its finest</p>
@@ -79,4 +115,3 @@ export const Trainers: React.FC = () => {
     </>
   );
 };
-

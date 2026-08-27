@@ -15,6 +15,7 @@ export const AcademyGraduates: React.FC<AcademyGraduatesProps> = ({ locale }) =>
   return (
     <section className="academy-graduates" aria-labelledby="academy-graduates-heading">
       <div className="academy-container">
+        <p className="academy-kicker">{isNl ? 'Afgestudeerden' : 'Graduates'}</p>
         <h2 id="academy-graduates-heading">{heading}</h2>
         <p className="academy-graduates-intro">{intro}</p>
         <ul className="academy-graduates-grid">

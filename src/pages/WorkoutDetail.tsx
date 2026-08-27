@@ -83,7 +83,7 @@ export const WorkoutDetail: React.FC = () => {
           <section className="ssl-hero">
             <img
               src={workout.hero.image}
-              alt={`${workout.hero.title} — PT Studio 7`}
+              alt={`${workout.hero.title} | PT Studio 7`}
               className="ssl-hero-image"
             />
             <div className="ssl-hero-cta">
@@ -95,7 +95,13 @@ export const WorkoutDetail: React.FC = () => {
             </div>
           </section>
         ) : (
-          <section className="workout-hero" style={{ backgroundImage: `url(${workout.hero.image})` }}>
+          <section
+            className="workout-hero"
+            style={{
+              backgroundImage: `url(${workout.hero.image})`,
+              backgroundPosition: workout.hero.imagePosition ?? 'center',
+            }}
+          >
             <div className="workout-hero-overlay">
               <div className="workout-hero-content">
                 <h1>{workout.hero.title}</h1>

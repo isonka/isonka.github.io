@@ -15,52 +15,65 @@ export const Blog: React.FC = () => {
         ogDescription="Expert articles about Pilates, prenatal fitness, and wellness from PT Studio 7 Amsterdam's certified trainers."
       />
 
-      <div className="blog-page">        
+      <div className="blog-page">
+        <header className="blog-hero">
+          <p className="kicker">Blog</p>
+          <h1>Pilates &amp; Fitness Blog</h1>
+          <p className="blog-hero-line">
+            Tips, guides, and studio notes from our trainers at Museumplein.
+          </p>
+        </header>
 
-        {/* Blog Posts Grid */}
         <section className="blog-content">
-          <div className="blog-grid">
+          <ul className="blog-list">
             {blogPosts.map((post) => (
-              <article key={post.id} className="blog-card">
-                <Link to={`/blog/${post.slug}/`} className="blog-card-link">
-                  <div className="blog-card-image">
-                    <img 
-                      src={post.image} 
-                      alt={post.title} 
-                      width="400" 
-                      height="240" 
-                      loading="lazy" 
-                      decoding="async" 
+              <li key={post.id} className="blog-item">
+                <Link to={`/blog/${post.slug}/`} className="blog-link">
+                  <div className="blog-media">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      width="640"
+                      height="400"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
-                  <div className="blog-card-content">
-                    <div className="blog-card-meta">
-                      <span className="blog-date">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                      <span className="blog-author">By {post.author}</span>
-                    </div>
-                    <h2>{post.title}</h2>
-                    <p className="blog-excerpt">{post.excerpt}</p>
-                    <div className="blog-tags">
-                      {post.tags.map((tag, index) => (
-                        <span key={index} className="blog-tag">{tag}</span>
-                      ))}
-                    </div>
-                    <span className="read-more">Read More →</span>
-                  </div>
+                  <p className="blog-meta">
+                    <time dateTime={post.date}>
+                      {new Date(post.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                      })}
+                    </time>
+                    <span aria-hidden="true"> · </span>
+                    <span>{post.author}</span>
+                  </p>
+                  {post.tags[0] ? (
+                    <span className="blog-note">{post.tags[0]}</span>
+                  ) : null}
+                  <h2 className="blog-title">{post.title}</h2>
+                  <p className="blog-excerpt">{post.excerpt}</p>
+                  <span className="prose-link blog-more">Read more</span>
                 </Link>
-              </article>
+              </li>
             ))}
-          </div>
+          </ul>
+        </section>
 
-          {/* CTA Section */}
-          <div className="blog-cta">
-            <h2>Ready to Start Your Pilates Journey?</h2>
-            <p>Join us at PT Studio 7 Amsterdam for expert-led Pilates classes in our beautiful Museumplein studio.</p>
-            <Link to="/schedule/" className="cta-button">Book Your Class</Link>
+        <section className="cta-band blog-cta-band">
+          <h2>Ready to start training?</h2>
+          <p>
+            Join us at PT Studio 7 Amsterdam for expert-led Pilates in our Museumplein studio.
+          </p>
+          <div className="blog-cta-actions">
+            <Link to="/schedule/" className="btn-gold">
+              Book Your Class
+            </Link>
           </div>
         </section>
       </div>
     </>
   );
 };
-

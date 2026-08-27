@@ -6,7 +6,6 @@ export const BookingGuide: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0);
   const contentRef = useRef<HTMLDivElement>(null);
 
-  // Scroll to top when step changes
   useEffect(() => {
     if (contentRef.current) {
       contentRef.current.scrollTop = 0;
@@ -157,7 +156,6 @@ export const BookingGuide: React.FC = () => {
             </div>
 
             <div className="booking-guide-body">
-              {/* Progress Indicator */}
               <div className="progress-indicator">
                 {steps.map((_, index) => (
                   <div 
@@ -168,13 +166,11 @@ export const BookingGuide: React.FC = () => {
                 ))}
               </div>
 
-              {/* Current Step */}
               <div className="step-content">
                 <div className="step-number">Step {activeStep + 1} of {steps.length}</div>
                 <h4>{steps[activeStep].title}</h4>
                 <p className="step-description">{steps[activeStep].description}</p>
                 
-                {/* Screenshot */}
                 <div className="screenshot-container">
                   <img 
                     src={`/assets/images/booking-guide/${steps[activeStep].screenshot}`}
@@ -183,7 +179,6 @@ export const BookingGuide: React.FC = () => {
                   />
                 </div>
 
-                {/* Detailed Instructions */}
                 <div className="step-instructions">
                   <strong>📋 What to do:</strong>
                   <ul>
@@ -193,7 +188,6 @@ export const BookingGuide: React.FC = () => {
                   </ul>
                 </div>
                 
-                {/* Tips */}
                 <div className="step-tips">
                   <strong>💡 Important Tips:</strong>
                   <ul>
@@ -204,7 +198,6 @@ export const BookingGuide: React.FC = () => {
                 </div>
               </div>
 
-              {/* Navigation */}
               <div className="step-navigation">
                 <button 
                   className="nav-button prev"
@@ -234,7 +227,6 @@ export const BookingGuide: React.FC = () => {
               </div>
             </div>
 
-            {/* Quick Help Section */}
             <div className="quick-help">
               <h5>Still need help?</h5>
               <div className="help-options">

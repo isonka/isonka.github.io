@@ -5,9 +5,8 @@ import { AcademyInquiry } from '../components/AcademyInquiry';
 import { AcademyLangSwitch } from '../components/AcademyLangSwitch';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
+import { AcademyEnrollButtons } from '../components/AcademyEnrollButtons';
 import {
-  ACADEMY_ENROLL_WIDGET,
-  ACADEMY_INSTALLMENTS_WIDGET,
   ACADEMY_URL_EN,
   ACADEMY_URL_NL,
   ANATOMY_COURSE_FEE,
@@ -200,7 +199,7 @@ export const AcademyNl: React.FC = () => {
         type="Course"
         data={{
           course: {
-            name: `${COURSE_TITLE_NL} (Herfst 2026 — volgeboekt)`,
+            name: `${COURSE_TITLE_NL} (Herfst 2026, volgeboekt)`,
             description:
               '300 uur Reformer Pilates Instructeurscursus, ITTAP goedgekeurd door de Pilates Method Alliance (PMA) in Amsterdam. Herfst 2026-termijn (september–november) is volgeboekt. Colleges, observatie, zelfpraktijk, lesgeven in de praktijk en sessies met master trainer.',
             price: '2000',
@@ -273,11 +272,9 @@ export const AcademyNl: React.FC = () => {
             <div className="ittap-accreditation">
               <AcademyLangSwitch current="nl" />
               <p className="ittap-accreditation-eyebrow">PT7 Academy · Museumplein, Amsterdam</p>
-              <h1 className="academy-page-title">
-                Pilates Opleiding Amsterdam — PMA ITTAP Goedgekeurde Docentenopleiding
-              </h1>
+              <h1 className="academy-page-title">Pilates opleiding Amsterdam</h1>
               <p className="academy-pma-subtitle">
-                Pilates docentenopleiding · 300 uur Reformer · PMA ITTAP goedgekeurd · Weekendrooster
+                PMA ITTAP goedgekeurde Reformer docentenopleiding. Weekendrooster bij Museumplein.
               </p>
               <p className="academy-lang-note">
                 <strong>Alle lessen en trainingen worden in het Engels gegeven.</strong>
@@ -303,18 +300,7 @@ export const AcademyNl: React.FC = () => {
                   </div>
                 </div>
                 <div className="academy-offer-actions">
-                  <div
-                    className="course-btn primary academy-enroll-btn"
-                    data-course="reformer"
-                    data-location="offer_strip"
-                    dangerouslySetInnerHTML={{ __html: ACADEMY_ENROLL_WIDGET }}
-                  />
-                  <div
-                    className="course-btn secondary academy-enroll-btn academy-enroll-btn--installments"
-                    data-course="reformer"
-                    data-location="offer_strip"
-                    dangerouslySetInnerHTML={{ __html: ACADEMY_INSTALLMENTS_WIDGET }}
-                  />
+                  <AcademyEnrollButtons course="reformer" location="offer_strip" />
                   <button type="button" className="course-btn secondary" onClick={scrollToEnroll}>
                     Bekijk volledig rooster
                   </button>
@@ -391,7 +377,8 @@ export const AcademyNl: React.FC = () => {
             </div>
 
             <section className="academy-audience" aria-labelledby="academy-audience-heading">
-              <h2 id="academy-audience-heading">Voor wie is deze pilates docentenopleiding bedoeld</h2>
+              <p className="academy-kicker">Voor wie</p>
+              <h2 id="academy-audience-heading">Word pilatesinstructeur in Amsterdam</h2>
               <p>
                 PT7 Academy is opgezet voor mensen die Reformer Pilates (en optioneel Mat &amp; Trapeze Table) willen
                 onderwijzen zonder eerst hun baan op te zeggen. Colleges vinden alleen plaats op geselecteerde
@@ -411,22 +398,22 @@ export const AcademyNl: React.FC = () => {
                   </p>
                 </div>
                 <div className="benefit-card">
-                  <h3>Weekendrooster in centraal Amsterdam</h3>
+                  <h3>Weekendrooster</h3>
                   <p>
                     Vier Reformer college-weekenden per termijn ({lectureHoursNl}), plus observatie, zelfpraktijk en
                     lesuren. Train bij Museumplein en behoud je doordeweekse werk.
                   </p>
                 </div>
                 <div className="benefit-card">
-                  <h3>Serieuze Reformer-route</h3>
+                  <h3>300-uur Reformer-route</h3>
                   <p>
-                    De Reformer-cursus omvat 300 uur en is PMA ITTAP goedgekeurd. Dat is een andere diepgang dan korte
-                    mat-only intensieven. Afgestudeerden ontvangen het PT7 Academy Reformer Pilates Instructeurscertificaat
-                    (programma-ITTAP-goedkeuring is niet hetzelfde als een persoonlijke PMA-lidmaatschapskaart).
+                    De Reformer-cursus is PMA ITTAP goedgekeurd, dieper dan korte mat-only intensieven. Afgestudeerden
+                    ontvangen het PT7 Academy Reformer Pilates Instructeurscertificaat (programma-ITTAP-goedkeuring is
+                    niet hetzelfde als een persoonlijke PMA-lidmaatschapskaart).
                   </p>
                 </div>
                 <div className="benefit-card">
-                  <h3>Mat &amp; Trapeze Table route</h3>
+                  <h3>Mat &amp; Trapeze Table</h3>
                   <p>
                     Breid je apparatuuronderwijs uit met onze {MAT_COURSE_TOTAL_HOURS}-urige Mat &amp; Trapeze Table
                     cursus. Curriculum volgt internationale standaarden; PMA/ITTAP-accreditatie voor deze route is nog
@@ -461,35 +448,12 @@ export const AcademyNl: React.FC = () => {
               {activeTab === 'reformer' && (
                 <div role="tabpanel" aria-label="Reformer Pilates Instructeurscursus">
             <div className="course-card featured full-width">
-              <div className="course-badge">Inschrijving open</div>
+              <p className="course-badge">Inschrijving · Lente 2027</p>
               <h2 className="course-card-title">{COURSE_TITLE_NL}</h2>
               <p className="academy-course-accreditation">
-                300 uur · ITTAP Goedgekeurd · <strong>Pilates Method Alliance (PMA)</strong>
+                300 uur · ITTAP goedgekeurd door de <strong>Pilates Method Alliance (PMA)</strong> · 4 weekenden ·{' '}
+                {lectureHoursNl}
               </p>
-
-              <div className="course-highlights">
-                <div className="highlight-item">
-                  <span>PMA ITTAP goedgekeurd</span>
-                </div>
-                <div className="highlight-item">
-                  <span>Pilates Method Alliance geaccrediteerd</span>
-                </div>
-                <div className="highlight-item">
-                  <span>300 uur totaal</span>
-                </div>
-                <div className="highlight-item">
-                  <span>4 weekendintensieven</span>
-                </div>
-                <div className="highlight-item">
-                  <span>Lente 2027-termijn</span>
-                </div>
-                <div className="highlight-item">
-                  <span>3-termijnen betalingsplan</span>
-                </div>
-                <div className="highlight-item">
-                  <span>{lectureHoursNl}</span>
-                </div>
-              </div>
 
               <div className="academy-course-section">
                 <h3>Komende termijnroosters</h3>
@@ -547,18 +511,7 @@ export const AcademyNl: React.FC = () => {
                 </div>
                 <div className="academy-enroll-action">
                   <div className="academy-enroll-buttons">
-                    <div
-                      className="course-btn primary academy-enroll-btn"
-                      data-course="reformer"
-                      data-location="reformer_fee"
-                      dangerouslySetInnerHTML={{ __html: ACADEMY_ENROLL_WIDGET }}
-                    />
-                    <div
-                      className="course-btn secondary academy-enroll-btn academy-enroll-btn--installments"
-                      data-course="reformer"
-                      data-location="reformer_fee"
-                      dangerouslySetInnerHTML={{ __html: ACADEMY_INSTALLMENTS_WIDGET }}
-                    />
+                    <AcademyEnrollButtons course="reformer" location="reformer_fee" />
                   </div>
                 </div>
               </div>
@@ -632,18 +585,7 @@ export const AcademyNl: React.FC = () => {
 
               <div className="course-cta">
                 <div className="course-cta-buttons">
-                  <div
-                    className="course-btn primary academy-enroll-btn"
-                    data-course="reformer"
-                    data-location="reformer_cta"
-                    dangerouslySetInnerHTML={{ __html: ACADEMY_ENROLL_WIDGET }}
-                  />
-                  <div
-                    className="course-btn secondary academy-enroll-btn academy-enroll-btn--installments"
-                    data-course="reformer"
-                    data-location="reformer_cta"
-                    dangerouslySetInnerHTML={{ __html: ACADEMY_INSTALLMENTS_WIDGET }}
-                  />
+                  <AcademyEnrollButtons course="reformer" location="reformer_cta" />
                   <button
                     type="button"
                     className="course-btn secondary"
@@ -664,39 +606,12 @@ export const AcademyNl: React.FC = () => {
               {activeTab === 'mat' && (
                 <div role="tabpanel" aria-label="Mat en Trapeze Table Instructeurscursus">
             <div className="course-card full-width">
-              <div className="course-badge">Inschrijving open</div>
+              <p className="course-badge">Inschrijving · nov 2026 – jan 2027</p>
               <h2 className="course-card-title">{MAT_COURSE_TITLE_NL}</h2>
               <p className="academy-course-accreditation">
-                Mat Pilates &amp; Trapeze Table (Cadillac) · Volgt internationale standaarden ·{' '}
-                <strong>PMA / ITTAP-accreditatie in behandeling</strong>
+                {MAT_COURSE_TOTAL_HOURS} uur · Mat &amp; Trapeze Table (Cadillac) · Internationale standaarden ·{' '}
+                <strong>PMA / ITTAP-accreditatie in behandeling</strong> · {lectureHoursNl}
               </p>
-
-              <div className="course-highlights">
-                <div className="highlight-item">
-                  <span>Internationale standaarden</span>
-                </div>
-                <div className="highlight-item">
-                  <span>Accreditatie in behandeling</span>
-                </div>
-                <div className="highlight-item">
-                  <span>125 uur totaal</span>
-                </div>
-                <div className="highlight-item">
-                  <span>48 uur colleges</span>
-                </div>
-                <div className="highlight-item">
-                  <span>4 weekendintensieven</span>
-                </div>
-                <div className="highlight-item">
-                  <span>Nov 2026 – jan 2027</span>
-                </div>
-                <div className="highlight-item">
-                  <span>3-termijnen betalingsplan</span>
-                </div>
-                <div className="highlight-item">
-                  <span>{lectureHoursNl}</span>
-                </div>
-              </div>
 
               <div className="academy-course-section">
                 <h3>Termijnrooster</h3>
@@ -747,18 +662,7 @@ export const AcademyNl: React.FC = () => {
                 </div>
                 <div className="academy-enroll-action">
                   <div className="academy-enroll-buttons">
-                    <div
-                      className="course-btn primary academy-enroll-btn"
-                      data-course="mat"
-                      data-location="mat_fee"
-                      dangerouslySetInnerHTML={{ __html: ACADEMY_ENROLL_WIDGET }}
-                    />
-                    <div
-                      className="course-btn secondary academy-enroll-btn academy-enroll-btn--installments"
-                      data-course="mat"
-                      data-location="mat_fee"
-                      dangerouslySetInnerHTML={{ __html: ACADEMY_INSTALLMENTS_WIDGET }}
-                    />
+                    <AcademyEnrollButtons course="mat" location="mat_fee" />
                   </div>
                 </div>
               </div>
@@ -796,18 +700,7 @@ export const AcademyNl: React.FC = () => {
 
               <div className="course-cta">
                 <div className="course-cta-buttons">
-                  <div
-                    className="course-btn primary academy-enroll-btn"
-                    data-course="mat"
-                    data-location="mat_cta"
-                    dangerouslySetInnerHTML={{ __html: ACADEMY_ENROLL_WIDGET }}
-                  />
-                  <div
-                    className="course-btn secondary academy-enroll-btn academy-enroll-btn--installments"
-                    data-course="mat"
-                    data-location="mat_cta"
-                    dangerouslySetInnerHTML={{ __html: ACADEMY_INSTALLMENTS_WIDGET }}
-                  />
+                  <AcademyEnrollButtons course="mat" location="mat_cta" />
                   <button
                     type="button"
                     className="course-btn secondary"
@@ -830,54 +723,53 @@ export const AcademyNl: React.FC = () => {
 
         <section className="academy-benefits">
           <div className="academy-container">
-            <h2>Waarom PT7 Academy voor pilates opleiding Amsterdam</h2>
+            <p className="academy-kicker">Waarom PT7 Academy</p>
+            <h2>Docentenopleiding in een werkende studio</h2>
             <div className="benefits-grid">
               <div className="benefit-card">
-                <h3>300 uur uitgebreide training</h3>
+                <h3>300 uur, geen shortcut</h3>
                 <p>
-                  Een volledige route van theorie naar lesgeven in de praktijk, observatie en sessies met master
-                  trainer — geen verkort weekend-only certificaat.
+                  Volledige route van theorie naar lesgeven, observatie en sessies met master trainer, geen verkort
+                  weekend-only certificaat.
                 </p>
               </div>
 
               <div className="benefit-card">
-                <h3>Geselecteerd weekendrooster</h3>
+                <h3>Weekendcolleges</h3>
                 <p>
-                  Train op vier geplande weekenden per termijn (mrt–mei 2027), {lectureHoursNl}, en
-                  behoud je dagbaan terwijl je een gecertificeerde Reformer-instructeur wordt.
+                  Vier geplande weekenden per Reformer-termijn (mrt–mei 2027), {lectureHoursNl}. Behoud je dagbaan
+                  tijdens de opleiding.
                 </p>
               </div>
 
               <div className="benefit-card benefit-card--pma">
-                <h3>PMA ITTAP geaccrediteerd Reformer-programma</h3>
+                <h3>PMA ITTAP Reformer-programma</h3>
                 <p>
                   De {COURSE_TITLE_NL} is ITTAP goedgekeurd door de Pilates Method Alliance (PMA). De{' '}
-                  {MAT_COURSE_TITLE_NL} volgt internationale standaarden, met PMA/ITTAP-accreditatie momenteel in
-                  behandeling.
+                  {MAT_COURSE_TITLE_NL} volgt internationale standaarden; PMA/ITTAP-accreditatie is in behandeling.
                 </p>
               </div>
 
               <div className="benefit-card">
-                <h3>Lesgeven in een echt boutique studio</h3>
+                <h3>Echte boutique studio</h3>
                 <p>
-                  Training vindt plaats bij PT Studio 7 Museumplein, waar klanten wekelijks Reformer, private en
-                  kleine-groepssessies boeken. Je leert in dezelfde omgeving waarin je straks lesgeeft.
+                  Training bij PT Studio 7 Museumplein, waar klanten wekelijks Reformer, private en
+                  kleine-groepssessies boeken. Je leert waar je straks lesgeeft.
                 </p>
               </div>
 
               <div className="benefit-card">
-                <h3>Gestructureerde assessment</h3>
+                <h3>Duidelijk assessmentpad</h3>
                 <p>
                   Theoretische en praktische examens, plus een verplichte oefeningsevaluatie (EUR 250 inclusief BTW),
-                  met een duidelijk pad naar het PT7 Academy Reformer Pilates Instructeurscertificaat.
+                  richting het PT7 Academy Reformer Pilates Instructeurscertificaat.
                 </p>
               </div>
 
               <div className="benefit-card">
-                <h3>Flexibele betaling</h3>
+                <h3>Betaal in één keer of in 3</h3>
                 <p>
-                  Betaal in één keer bij checkout, of spreid de cursusprijs over 3 gelijke termijnen via MindBody
-                  (3 × EUR 667 + BTW).
+                  MindBody checkout: in één keer, of 3 × EUR 667 + BTW.
                 </p>
               </div>
             </div>
@@ -890,7 +782,8 @@ export const AcademyNl: React.FC = () => {
 
         <section className="academy-benefits">
           <div className="academy-container">
-            <h2>Veelgestelde vragen</h2>
+            <p className="academy-kicker">FAQ</p>
+            <h2>Vragen vóór inschrijving</h2>
             <div className="benefits-grid">
               {academyFaqs.map((faq) => (
                 <div key={faq.question} className="benefit-card">
@@ -904,24 +797,14 @@ export const AcademyNl: React.FC = () => {
 
         <section className="academy-cta">
           <div className="academy-container">
-            <h2>Klaar voor een pilates docentenopleiding in Amsterdam?</h2>
+            <p className="academy-kicker home-kicker-on-dark">Volgende stap</p>
+            <h2>Inschrijven of een vraag stellen</h2>
             <p>
-              Kies de PMA ITTAP goedgekeurde {COURSE_TITLE_NL} of de {MAT_COURSE_TITLE_NL} bij PT7 Academy.
-              Weekendintensieven bij Museumplein — zie cursusprijs en betalingsopties hierboven.
+              Reformer (PMA ITTAP goedgekeurd) of Mat &amp; Trapeze Table bij PT7 Academy, Museumplein. Prijzen en
+              betaling hierboven.
             </p>
             <div className="cta-buttons">
-              <div
-                className="cta-btn primary academy-enroll-btn"
-                data-course="reformer"
-                data-location="bottom_cta"
-                dangerouslySetInnerHTML={{ __html: ACADEMY_ENROLL_WIDGET }}
-              />
-              <div
-                className="cta-btn secondary academy-enroll-btn academy-enroll-btn--installments"
-                data-course="reformer"
-                data-location="bottom_cta"
-                dangerouslySetInnerHTML={{ __html: ACADEMY_INSTALLMENTS_WIDGET }}
-              />
+              <AcademyEnrollButtons course="reformer" location="bottom_cta" variant="cta" />
               <button
                 type="button"
                 className="cta-btn secondary"

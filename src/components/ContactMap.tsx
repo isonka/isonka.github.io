@@ -1,8 +1,15 @@
-import type { FC, ReactNode } from 'react';
+import { useEffect, useState, type FC, type ReactNode } from 'react';
+import { CONSENT_UPDATED_EVENT, getStoredConsent, type Pt7Consent } from '../utils/consentTracking';
 import '../styles/ContactMap.css';
 
 const MAP_SRC =
   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.7239958408204!2d4.876257777138345!3d52.3572909720188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6090de92c90df%3A0xe44c5d7c1eae1d19!2sPT%20Studio%207!5e0!3m2!1sen!2snl!4v1732445893649!5m2!1sen!2snl';
+
+const MAPS_APP = 'https://maps.app.goo.gl/wrhyzYbov9eiGQJw5';
+
+function googleEmbedAllowed(consent: Pt7Consent | null): boolean {
+  return Boolean(consent?.statistics || consent?.marketing);
+}
 
 const stroke = {
   fill: 'none',
@@ -79,39 +86,80 @@ function Vehicle({ mode, children }: { mode: string; children: ReactNode }) {
   );
 }
 
-export const ContactMap: FC = () => (
-  <div className="contact-map">
-    <iframe
-      src={MAP_SRC}
-      width="100%"
-      height="100%"
-      style={{ border: 0 }}
-      allowFullScreen
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-      title="PT Studio 7 Location"
-    />
-    <p className="contact-map-legend">
-      Tram lines 5, 12 and 24, night buses, and cycle routes serve Museumplein.
-    </p>
-    <div className="contact-map-overlay" aria-hidden="true">
-      <svg className="contact-map-routes" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <line className="contact-map-route contact-map-route--tram" x1="7" y1="62" x2="50" y2="47" />
-        <line className="contact-map-route contact-map-route--bus" x1="93" y1="22" x2="50" y2="47" />
-        <line className="contact-map-route contact-map-route--bike" x1="50" y1="92" x2="50" y2="47" />
-      </svg>
-      <Chip mode="tram" label="Tram" sub="5 · 12 · 24" />
-      <Chip mode="bus" label="Bus" sub="N84 · N88" />
-      <Chip mode="bike" label="Bike" sub="cycle route" />
-      <Vehicle mode="tram">
-        <TramGlyph />
-      </Vehicle>
-      <Vehicle mode="bus">
-        <BusGlyph />
-      </Vehicle>
-      <Vehicle mode="bike">
-        <BikeGlyph />
-      </Vehicle>
+export const ContactMap: FC = () => {
+  const [ready, setReady] = useState(false);
+  const [showMap, setShowMap] = useState(false);
+
+  useEffect(() => {
+    const sync = () => {
+      if (googleEmbedAllowed(getStoredConsent())) setShowMap(true);
+    };
+    sync();
+    setReady(true);
+    window.addEventListener(CONSENT_UPDATED_EVENT, sync);
+    return () => window.removeEventListener(CONSENT_UPDATED_EVENT, sync);
+  }, []);
+
+  return (
+    <div className="contact-map">
+      {showMap ? (
+        <iframe
+          src={MAP_SRC}
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="PT Studio 7 Location"
+        />
+      ) : (
+        <div className="contact-map-consent">
+          {ready ? (
+            <>
+              <p className="contact-map-consent-kicker">Museumplein</p>
+              <p className="contact-map-consent-address">Van Baerlestraat 76C</p>
+              <p className="contact-map-consent-note">
+                Google Map loads after statistics or marketing cookies, or if you show it here.
+              </p>
+              <div className="contact-map-consent-actions">
+                <button type="button" className="contact-map-consent-btn" onClick={() => setShowMap(true)}>
+                  Show map
+                </button>
+                <a href={MAPS_APP} target="_blank" rel="noopener noreferrer">
+                  Open in Google Maps
+                </a>
+              </div>
+            </>
+          ) : (
+            <span className="contact-map-slot" aria-hidden="true" />
+          )}
+        </div>
+      )}
+      <p className="contact-map-legend">
+        Tram lines 5, 12 and 24, night buses, and cycle routes serve Museumplein.
+      </p>
+      {showMap ? (
+        <div className="contact-map-overlay" aria-hidden="true">
+          <svg className="contact-map-routes" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <line className="contact-map-route contact-map-route--tram" x1="7" y1="62" x2="50" y2="47" />
+            <line className="contact-map-route contact-map-route--bus" x1="93" y1="22" x2="50" y2="47" />
+            <line className="contact-map-route contact-map-route--bike" x1="50" y1="92" x2="50" y2="47" />
+          </svg>
+          <Chip mode="tram" label="Tram" sub="5 · 12 · 24" />
+          <Chip mode="bus" label="Bus" sub="N84 · N88" />
+          <Chip mode="bike" label="Bike" sub="cycle route" />
+          <Vehicle mode="tram">
+            <TramGlyph />
+          </Vehicle>
+          <Vehicle mode="bus">
+            <BusGlyph />
+          </Vehicle>
+          <Vehicle mode="bike">
+            <BikeGlyph />
+          </Vehicle>
+        </div>
+      ) : null}
     </div>
-  </div>
-);
+  );
+};

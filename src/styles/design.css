@@ -1,0 +1,134 @@
+:root {
+  --ink: #111;
+  --muted: #8e8e95;
+  --gold: #ffd700;
+  --gold-text: #c9a800;
+  --accent: #e5c100;
+  --pebble: #d5d3d4;
+  --canvas: #ffffff;
+
+  --color-deep-ink: #111;
+  --color-pure-white: #ffffff;
+  --color-cool-ash: #8e8e95;
+  --color-pebble: #d5d3d4;
+  --color-gold: #ffd700;
+  --color-gold-deep: #e5c100;
+  --color-gold-text: #c9a800;
+
+  --text-caption: 17px;
+  --text-nav: 20px;
+  --text-subheading: 23px;
+  --text-heading: 37px;
+  --text-heading-lg: 52px;
+  --text-display: 63px;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --page-max-width: 1200px;
+  --section-gap: 80px;
+  --card-padding: 22px;
+  --element-gap: 16px;
+
+  --radius-buttons: 1000px;
+  --radius-nav: 1000px;
+  --radius-heropanels: 0px;
+  --radius-media: 14px;
+}
+
+.kicker {
+  margin: 0 0 12px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+}
+
+.cta-band {
+  text-align: center;
+  padding: 80px 24px;
+  background: var(--ink);
+  color: #fff;
+}
+
+.btn-ink,
+a.btn-ink {
+  display: inline-block;
+  background: var(--ink);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 15px 22px 16px;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.btn-ink:hover,
+a.btn-ink:hover {
+  background: #000;
+  color: #fff;
+}
+
+.btn-gold,
+a.btn-gold {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--ink);
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 15px 22px 16px;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1;
+  box-shadow: none;
+}
+
+.btn-gold:hover,
+a.btn-gold:hover {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+.btn-ghost,
+a.btn-ghost {
+  display: inline-block;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: var(--radius-pill);
+  padding: 15px 22px 16px;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.btn-ghost:hover,
+a.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.hairline {
+  border: none;
+  border-top: 1px solid var(--pebble);
+  margin: 0;
+}
+
+.prose-link,
+a.prose-link {
+  color: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: none;
+  transition: color 0.2s ease;
+}
+
+.prose-link:hover,
+a.prose-link:hover {
+  color: var(--gold-text);
+}

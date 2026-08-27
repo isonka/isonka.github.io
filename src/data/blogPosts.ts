@@ -59,18 +59,17 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   */
-  // CAREER CHANGE POST - NOW LIVE
   {
     id: '5',
     slug: 'career-change-banker-to-pilates-instructor',
     title: 'From Banker to Pilates Instructor: How to Make the Career Switch',
-    excerpt: 'Tired of spreadsheets and stress? Discover how professionals from banking, tech, and corporate careers are becoming certified Pilates instructors — without quitting their day job first.',
+    excerpt: 'Tired of spreadsheets and stress? Discover how professionals from banking, tech, and corporate careers are becoming certified Pilates instructors, without quitting their day job first.',
     content: `
       <p>Five years ago, I was sitting in a corner office at a major bank in Amsterdam. Twelve-hour days, endless meetings, and a growing sense that something was missing. Sound familiar?</p>
 
       <p>Today, I teach Pilates. And I've never been happier.</p>
 
-      <p>If you're reading this, you're probably where I was — successful on paper, but wondering if there's more to life than quarterly reports. The good news? Making the switch is more achievable than you think.</p>
+      <p>If you're reading this, you're probably where I was, successful on paper, but wondering if there's more to life than quarterly reports. The good news? Making the switch is more achievable than you think.</p>
 
       <h2>Why Corporate Professionals Make Great Pilates Instructors</h2>
       
@@ -79,11 +78,11 @@ export const blogPosts: BlogPost[] = [
       <p>Why do they excel? Because the skills that made you successful in business translate directly:</p>
 
       <ul>
-        <li><strong>Attention to detail</strong> — Essential for correcting form and preventing injuries</li>
-        <li><strong>Client management</strong> — You already know how to build relationships and understand needs</li>
-        <li><strong>Discipline and work ethic</strong> — The certification process requires commitment</li>
-        <li><strong>Problem-solving</strong> — Every body is different; adapting exercises requires analytical thinking</li>
-        <li><strong>Communication skills</strong> — Explaining complex movements clearly is crucial</li>
+        <li><strong>Attention to detail</strong>: Essential for correcting form and preventing injuries</li>
+        <li><strong>Client management</strong>: You already know how to build relationships and understand needs</li>
+        <li><strong>Discipline and work ethic</strong>: The certification process requires commitment</li>
+        <li><strong>Problem-solving</strong>: Every body is different; adapting exercises requires analytical thinking</li>
+        <li><strong>Communication skills</strong>: Explaining complex movements clearly is crucial</li>
       </ul>
 
       <h2>The Biggest Fear: "Can I Afford to Make This Change?"</h2>
@@ -110,7 +109,7 @@ export const blogPosts: BlogPost[] = [
         <li>PT7 Academy Reformer Pilates Instructor Certificate upon successful completion</li>
       </ul>
 
-      <p>The investment is €2,000 + VAT — significantly less than many comprehensive programs from BASI (€5,000+) or Polestar (€7,000+). You can pay in full or in three installments if needed. A mandatory exercise assessment for certification costs €250 including BTW.</p>
+      <p>The investment is €2,000 + VAT, significantly less than many comprehensive programs from BASI (€5,000+) or Polestar (€7,000+). You can pay in full or in three installments if needed. A mandatory exercise assessment for certification costs €250 including BTW.</p>
 
       <h2>The Part Nobody Talks About: Building Your Client Base</h2>
 
@@ -125,18 +124,18 @@ export const blogPosts: BlogPost[] = [
       <p>Let me paint you a picture of my typical day now:</p>
 
       <ul>
-        <li><strong>7:00 AM</strong> — Morning walk, coffee, actually enjoying breakfast</li>
-        <li><strong>9:00 AM</strong> — First client session. Watching someone's posture improve, seeing their confidence grow</li>
-        <li><strong>12:00 PM</strong> — Lunch break. A real break, not eating at my desk</li>
-        <li><strong>2:00 PM</strong> — Small group class. Energy, laughter, connection</li>
-        <li><strong>5:00 PM</strong> — Done. Home for dinner. Present for my family</li>
+        <li><strong>7:00 AM</strong>: Morning walk, coffee, actually enjoying breakfast</li>
+        <li><strong>9:00 AM</strong>: First client session. Watching someone's posture improve, seeing their confidence grow</li>
+        <li><strong>12:00 PM</strong>: Lunch break. A real break, not eating at my desk</li>
+        <li><strong>2:00 PM</strong>: Small group class. Energy, laughter, connection</li>
+        <li><strong>5:00 PM</strong>: Done. Home for dinner. Present for my family</li>
       </ul>
 
       <p>Compare that to my banking days: rushed mornings, lunch meetings, late nights, weekends checking emails. The salary was higher, but the cost was everything else.</p>
 
       <h2>Is the Money Really Enough?</h2>
 
-      <p>Let's be honest about finances. You probably won't match your corporate salary immediately — maybe never. But consider:</p>
+      <p>Let's be honest about finances. You probably won't match your corporate salary immediately, maybe never. But consider:</p>
 
       <ul>
         <li>Lower stress means fewer health costs</li>
@@ -154,17 +153,17 @@ export const blogPosts: BlogPost[] = [
       <p>Here's what I'd suggest:</p>
 
       <ol>
-        <li><strong>Take some Pilates classes</strong> — If you haven't already, experience what you'd be teaching</li>
-        <li><strong>Talk to instructors</strong> — Ask about their journey, especially those who changed careers</li>
-        <li><strong>Attend an information session</strong> — Learn about the certification process with no commitment</li>
-        <li><strong>Imagine your life in one year</strong> — Same desk, or something new?</li>
+        <li><strong>Take some Pilates classes</strong>: If you haven't already, experience what you'd be teaching</li>
+        <li><strong>Talk to instructors</strong>: Ask about their journey, especially those who changed careers</li>
+        <li><strong>Attend an information session</strong>: Learn about the certification process with no commitment</li>
+        <li><strong>Imagine your life in one year</strong>: Same desk, or something new?</li>
       </ol>
 
       <h2>The Next Term Starts September 2026</h2>
 
-      <p>PT 7 Academy's Reformer Pilates Instructor Course runs September–November 2026 on selected weekends at our Museumplein studio. Lectures are weekend-only (12:00–18:00), so you can keep your weekday job while you train — taught by instructors with 15+ years of experience.</p>
+      <p>PT 7 Academy's Reformer Pilates Instructor Course runs September–November 2026 on selected weekends at our Museumplein studio. Lectures are weekend-only (12:00–18:00), so you can keep your weekday job while you train, taught by instructors with 15+ years of experience.</p>
 
-      <p>If you're curious, reach out. No pressure, no sales pitch — just an honest conversation about whether this path might be right for you.</p>
+      <p>If you're curious, reach out. No pressure, no sales pitch, just an honest conversation about whether this path might be right for you.</p>
 
       <p>Because five years from now, you'll be somewhere. The question is: will it be the same corner office, or somewhere that makes you come alive?</p>
 
@@ -284,9 +283,7 @@ export const blogPosts: BlogPost[] = [
       'reformer instructor accreditation'
     ]
   },
-  // END OF HIDDEN BLOG POSTS
   
-  // LINKABLE CONTENT - DESIGNED TO EARN BACKLINKS
   {
     id: '10',
     slug: 'pilates-prices-amsterdam-2026-complete-guide',
@@ -415,7 +412,7 @@ export const blogPosts: BlogPost[] = [
       <h2>The Real Question: Is Pilates Worth the Investment?</h2>
       <p>At €30-40 per class, Pilates isn't cheap. But consider what you're getting: 45-60 minutes of expert guidance, proper form correction (preventing injuries that cost far more to treat), and progressive training that actually delivers results.</p>
       
-      <p>Beyond the immediate workout, Pilates builds functional strength that translates to everyday life — carrying groceries, climbing stairs, playing with your kids. You'll develop better control over your body, improved posture, and a stronger core that supports everything you do. Many clients are surprised by how much stronger they feel after just a few weeks, even if they've been going to the gym for years.</p>
+      <p>Beyond the immediate workout, Pilates builds functional strength that translates to everyday life, carrying groceries, climbing stairs, playing with your kids. You'll develop better control over your body, improved posture, and a stronger core that supports everything you do. Many clients are surprised by how much stronger they feel after just a few weeks, even if they've been going to the gym for years.</p>
       
       <p>Our clients at PT Studio 7 report that consistent Pilates has reduced their physiotherapy visits, improved their sleep, eliminated chronic pain issues, and given them a level of body awareness they never had before. When viewed as an investment in strength, control, and preventive healthcare rather than "just exercise," the perspective shifts significantly.</p>
 
@@ -439,7 +436,6 @@ export const blogPosts: BlogPost[] = [
       'pilates kosten amsterdam'
     ]
   },
-  // LINKABLE CONTENT - HIDDEN FOR STAGED RELEASE
   /*
   {
     id: '11',
@@ -462,11 +458,11 @@ export const blogPosts: BlogPost[] = [
 
       <h3>What's It Good For?</h3>
       <ul>
-        <li><strong>Full-body workouts</strong> — Works every muscle group in a single session</li>
-        <li><strong>Core strengthening</strong> — The unstable carriage forces constant core engagement</li>
-        <li><strong>Low-impact exercise</strong> — Ideal for rehabilitation and those with joint issues</li>
-        <li><strong>Flexibility training</strong> — Springs assist stretching and lengthening</li>
-        <li><strong>Progressive resistance</strong> — Springs can be adjusted as you get stronger</li>
+        <li><strong>Full-body workouts</strong>: Works every muscle group in a single session</li>
+        <li><strong>Core strengthening</strong>: The unstable carriage forces constant core engagement</li>
+        <li><strong>Low-impact exercise</strong>: Ideal for rehabilitation and those with joint issues</li>
+        <li><strong>Flexibility training</strong>: Springs assist stretching and lengthening</li>
+        <li><strong>Progressive resistance</strong>: Springs can be adjusted as you get stronger</li>
       </ul>
 
       <h3>Who Should Use It?</h3>
@@ -482,15 +478,15 @@ export const blogPosts: BlogPost[] = [
       </div>
 
       <h3>What Is It?</h3>
-      <p>The Cadillac (also called Trapeze Table) is a raised mat with a four-poster frame. Springs, bars, and straps attach to the frame, allowing exercises in virtually any position — lying, sitting, standing, or hanging.</p>
+      <p>The Cadillac (also called Trapeze Table) is a raised mat with a four-poster frame. Springs, bars, and straps attach to the frame, allowing exercises in virtually any position, lying, sitting, standing, or hanging.</p>
 
       <h3>What's It Good For?</h3>
       <ul>
-        <li><strong>Spinal decompression</strong> — Hanging exercises relieve pressure on discs</li>
-        <li><strong>Deep stretching</strong> — The overhead frame allows stretches impossible on other equipment</li>
-        <li><strong>Rehabilitation</strong> — Gentle, supported movements for injury recovery</li>
-        <li><strong>Advanced acrobatics</strong> — Experienced practitioners use it for challenging inversions</li>
-        <li><strong>Core and back work</strong> — Exceptional for targeting deep stabilizing muscles</li>
+        <li><strong>Spinal decompression</strong>: Hanging exercises relieve pressure on discs</li>
+        <li><strong>Deep stretching</strong>: The overhead frame allows stretches impossible on other equipment</li>
+        <li><strong>Rehabilitation</strong>: Gentle, supported movements for injury recovery</li>
+        <li><strong>Advanced acrobatics</strong>: Experienced practitioners use it for challenging inversions</li>
+        <li><strong>Core and back work</strong>: Exceptional for targeting deep stabilizing muscles</li>
       </ul>
 
       <h3>Who Should Use It?</h3>
@@ -507,9 +503,9 @@ export const blogPosts: BlogPost[] = [
 
       <h3>What's It Good For?</h3>
       <ul>
-        <li><strong>Variety</strong> — Hundreds of exercise options in one machine</li>
-        <li><strong>Space efficiency</strong> — Studios can offer Cadillac-style work without needing both machines</li>
-        <li><strong>Seamless transitions</strong> — Flow between Reformer and tower exercises</li>
+        <li><strong>Variety</strong>: Hundreds of exercise options in one machine</li>
+        <li><strong>Space efficiency</strong>: Studios can offer Cadillac-style work without needing both machines</li>
+        <li><strong>Seamless transitions</strong>: Flow between Reformer and tower exercises</li>
       </ul>
 
       <h2>The Wunda Chair: Compact but Challenging</h2>
@@ -519,14 +515,14 @@ export const blogPosts: BlogPost[] = [
       </div>
 
       <h3>What Is It?</h3>
-      <p>The Wunda Chair (or Pilates Chair) looks deceptively simple — a small box with a spring-loaded pedal. But this compact equipment delivers some of the most challenging Pilates exercises available.</p>
+      <p>The Wunda Chair (or Pilates Chair) looks deceptively simple, a small box with a spring-loaded pedal. But this compact equipment delivers some of the most challenging Pilates exercises available.</p>
 
       <h3>What's It Good For?</h3>
       <ul>
-        <li><strong>Single-leg work</strong> — Excellent for addressing strength imbalances</li>
-        <li><strong>Balance challenges</strong> — Small base of support forces stabilization</li>
-        <li><strong>Functional strength</strong> — Movements mimic real-life activities like climbing stairs</li>
-        <li><strong>Upper body strength</strong> — Push-ups and dips with spring resistance</li>
+        <li><strong>Single-leg work</strong>: Excellent for addressing strength imbalances</li>
+        <li><strong>Balance challenges</strong>: Small base of support forces stabilization</li>
+        <li><strong>Functional strength</strong>: Movements mimic real-life activities like climbing stairs</li>
+        <li><strong>Upper body strength</strong>: Push-ups and dips with spring resistance</li>
       </ul>
 
       <h3>Who Should Use It?</h3>
@@ -543,10 +539,10 @@ export const blogPosts: BlogPost[] = [
 
       <h3>What's It Good For?</h3>
       <ul>
-        <li><strong>Spinal extension</strong> — Opens the chest and counteracts hunched posture</li>
-        <li><strong>Hip flexor stretching</strong> — Deep stretches for tight hip flexors (common in desk workers)</li>
-        <li><strong>Core strengthening</strong> — Challenging exercises using the ladder for support</li>
-        <li><strong>Back flexibility</strong> — Improves thoracic mobility safely</li>
+        <li><strong>Spinal extension</strong>: Opens the chest and counteracts hunched posture</li>
+        <li><strong>Hip flexor stretching</strong>: Deep stretches for tight hip flexors (common in desk workers)</li>
+        <li><strong>Core strengthening</strong>: Challenging exercises using the ladder for support</li>
+        <li><strong>Back flexibility</strong>: Improves thoracic mobility safely</li>
       </ul>
 
       <h3>Who Should Use It?</h3>
@@ -563,10 +559,10 @@ export const blogPosts: BlogPost[] = [
 
       <h3>What's It Good For?</h3>
       <ul>
-        <li><strong>Gentle back extension</strong> — Safer than Ladder Barrel for beginners</li>
-        <li><strong>Core work with support</strong> — The curve supports your back during abdominal exercises</li>
-        <li><strong>Stretching</strong> — Opens the chest and shoulders</li>
-        <li><strong>Postural correction</strong> — Helps establish proper spinal alignment</li>
+        <li><strong>Gentle back extension</strong>: Safer than Ladder Barrel for beginners</li>
+        <li><strong>Core work with support</strong>: The curve supports your back during abdominal exercises</li>
+        <li><strong>Stretching</strong>: Opens the chest and shoulders</li>
+        <li><strong>Postural correction</strong>: Helps establish proper spinal alignment</li>
       </ul>
 
       <h2>Equipment Comparison: Which Should You Use?</h2>
@@ -642,7 +638,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Pilates vs Yoga: Which is Better for You? Complete Comparison Guide',
     excerpt: 'Pilates or yoga? This honest comparison breaks down the differences in benefits, techniques, and results to help you choose the right practice for your goals.',
     content: `
-      <p>"Should I do Pilates or yoga?" It's one of the most common questions people ask when starting a fitness journey. Both practices emphasize mindful movement, breath, and body awareness — but they're quite different in approach, benefits, and what you'll actually do in class.</p>
+      <p>"Should I do Pilates or yoga?" It's one of the most common questions people ask when starting a fitness journey. Both practices emphasize mindful movement, breath, and body awareness, but they're quite different in approach, benefits, and what you'll actually do in class.</p>
 
       <p>This guide offers an honest comparison to help you decide which is right for your goals.</p>
 
@@ -714,7 +710,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Benefits Comparison</h2>
 
       <h3>Core Strength: Advantage Pilates</h3>
-      <p>Pilates was specifically designed to strengthen the deep core muscles — transverse abdominis, pelvic floor, and multifidus. Every Pilates exercise engages the core, and the Reformer's unstable carriage forces constant stabilization. If core strength is your primary goal, Pilates delivers faster, more targeted results.</p>
+      <p>Pilates was specifically designed to strengthen the deep core muscles, transverse abdominis, pelvic floor, and multifidus. Every Pilates exercise engages the core, and the Reformer's unstable carriage forces constant stabilization. If core strength is your primary goal, Pilates delivers faster, more targeted results.</p>
 
       <h3>Flexibility: Advantage Yoga</h3>
       <p>Yoga's held stretches (especially in Yin yoga) create deeper flexibility gains. Holding poses for 1-5 minutes allows connective tissue to release in ways that dynamic Pilates stretching doesn't achieve. For serious flexibility goals, yoga is more effective.</p>
@@ -723,7 +719,7 @@ export const blogPosts: BlogPost[] = [
       <p>Pilates explicitly targets postural muscles with exercises designed to correct imbalances. Instructors cue spinal alignment constantly. While yoga improves body awareness, Pilates' biomechanical focus makes it more effective for postural correction.</p>
 
       <h3>Stress Relief: Advantage Yoga</h3>
-      <p>Yoga's meditation, breathwork, and held poses activate the parasympathetic nervous system (rest and digest). The spiritual elements — even in secular classes — create mental calm that Pilates' dynamic, workout-focused approach doesn't match.</p>
+      <p>Yoga's meditation, breathwork, and held poses activate the parasympathetic nervous system (rest and digest). The spiritual elements, even in secular classes, create mental calm that Pilates' dynamic, workout-focused approach doesn't match.</p>
 
       <h3>Injury Rehabilitation: Advantage Pilates</h3>
       <p>Pilates was literally designed for rehabilitation. The Reformer's adjustable resistance allows precise loading of healing tissues. Physiotherapists frequently recommend Pilates for back pain, post-surgical recovery, and chronic injuries.</p>
@@ -738,7 +734,7 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Vinyasa Yoga:</strong> ~200-350 calories per hour</li>
         <li><strong>Restorative/Yin Yoga:</strong> ~100-150 calories per hour</li>
       </ul>
-      <p>If weight loss is your goal, neither replaces cardio or strength training — but both support recovery and prevent the injuries that derail training programs.</p>
+      <p>If weight loss is your goal, neither replaces cardio or strength training, but both support recovery and prevent the injuries that derail training programs.</p>
 
       <h2>Cost Comparison in Amsterdam</h2>
       <ul>
@@ -748,7 +744,7 @@ export const blogPosts: BlogPost[] = [
       <p>Pilates costs more because of equipment costs, smaller class sizes, and more specialized instructor training. Yoga's accessibility (just need a mat) keeps prices lower.</p>
 
       <h2>Can You Do Both?</h2>
-      <p>Absolutely — and many people find they complement each other perfectly:</p>
+      <p>Absolutely, and many people find they complement each other perfectly:</p>
       <ul>
         <li>Pilates builds the core strength that makes yoga poses safer and more stable</li>
         <li>Yoga provides the flexibility that enhances Pilates movement range</li>
@@ -785,7 +781,7 @@ export const blogPosts: BlogPost[] = [
     date: '2026-01-24',
     image: '/assets/images/pilates.webp',
     tags: ['Pilates vs Yoga', 'Comparison', 'Fitness Guide', 'Beginners'],
-    metaDescription: 'Pilates vs Yoga: Which is better? Honest comparison of benefits, costs, and results. Core strength, flexibility, stress relief — find which practice matches your goals.',
+    metaDescription: 'Pilates vs Yoga: Which is better? Honest comparison of benefits, costs, and results. Core strength, flexibility, stress relief, find which practice matches your goals.',
     keywords: [
       'pilates vs yoga',
       'pilates or yoga which is better',
@@ -803,9 +799,9 @@ export const blogPosts: BlogPost[] = [
     id: '13',
     slug: 'wellness-day-amsterdam-oud-zuid-museumplein-guide',
     title: 'Your Perfect Wellness Day in Amsterdam Oud-Zuid: Museumplein Area Guide',
-    excerpt: 'Plan the ultimate self-care day in Amsterdam\'s most beautiful neighborhood. From morning Pilates to healthy lunch spots and afternoon relaxation — your complete Oud-Zuid wellness itinerary.',
+    excerpt: 'Plan the ultimate self-care day in Amsterdam\'s most beautiful neighborhood. From morning Pilates to healthy lunch spots and afternoon relaxation, your complete Oud-Zuid wellness itinerary.',
     content: `
-      <p>Amsterdam's Oud-Zuid neighborhood — home to Museumplein, the Rijksmuseum, and Van Gogh Museum — isn't just culturally rich. It's also one of the city's best areas for wellness and self-care. Here's how to spend a perfect wellness day in this beautiful part of Amsterdam.</p>
+      <p>Amsterdam's Oud-Zuid neighborhood, home to Museumplein, the Rijksmuseum, and Van Gogh Museum, isn't just culturally rich. It's also one of the city's best areas for wellness and self-care. Here's how to spend a perfect wellness day in this beautiful part of Amsterdam.</p>
 
       <h2>Morning: Move Your Body (9:00 - 10:30)</h2>
 
@@ -825,10 +821,10 @@ export const blogPosts: BlogPost[] = [
       <p>After your workout, refuel at one of Oud-Zuid's excellent healthy eateries:</p>
 
       <h3>The Avocado Show (PC Hooftstraat)</h3>
-      <p>Instagram-famous but genuinely good. Everything is avocado-based — from avocado burgers to avocado smoothie bowls. Expect a short wait on weekends.</p>
+      <p>Instagram-famous but genuinely good. Everything is avocado-based, from avocado burgers to avocado smoothie bowls. Expect a short wait on weekends.</p>
       <p><em>Distance from Museumplein: 5-minute walk</em></p>
 
-      <h3>Pluk (Reestraat — nearby Jordaan)</h3>
+      <h3>Pluk (Reestraat, nearby Jordaan)</h3>
       <p>Bright, plant-filled café with excellent açaí bowls, smoothies, and healthy lunches. The interior is a visual treat.</p>
 
       <h3>Bakers & Roasters (De Pijp area)</h3>
@@ -839,7 +835,7 @@ export const blogPosts: BlogPost[] = [
 
       <h2>Midday: Culture Break (12:00 - 14:00)</h2>
 
-      <p>Wellness isn't just physical — feed your mind too:</p>
+      <p>Wellness isn't just physical, feed your mind too:</p>
 
       <h3>Van Gogh Museum</h3>
       <p>The world's largest collection of Van Gogh's work. Book tickets in advance. Allow 2 hours.</p>
@@ -946,7 +942,6 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   */
-  // END OF HIDDEN LINKABLE CONTENT
   {
     id: '1',
     slug: 'prenatal-pilates-supporting-body-through-every-trimester',
@@ -1161,9 +1156,9 @@ export const blogPosts: BlogPost[] = [
 
       <h3>Related Pages for Pregnancy Support in Amsterdam</h3>
       <ul>
-        <li><a href="/workouts/reformer-pilates/">Reformer Pilates Amsterdam</a> — see how classes are structured and what to expect.</li>
-        <li><a href="/pricing/">Private session pricing</a> — compare one-on-one packages for trimester-specific support.</li>
-        <li><a href="/healthcare-providers/">For healthcare providers</a> — referral information for physiotherapists, GPs, and specialists.</li>
+        <li><a href="/workouts/reformer-pilates/">Reformer Pilates Amsterdam</a>, see how classes are structured and what to expect.</li>
+        <li><a href="/pricing/">Private session pricing</a>, compare one-on-one packages for trimester-specific support.</li>
+        <li><a href="/healthcare-providers/">For healthcare providers</a>, referral information for physiotherapists, GPs, and specialists.</li>
       </ul>
 
       <p><em>Ready for personalized prenatal support? See our <a href="/pricing/">private session pricing</a>, then <a href="/schedule/">book your session</a> at PT Studio 7 Museumplein.</em></p>
@@ -1192,7 +1187,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Pilates for Men: Building Strength, Flexibility, and Athletic Performance',
     excerpt: 'Discover why professional athletes and fitness enthusiasts are turning to Reformer Pilates for core strength, injury prevention, and performance enhancement.',
     content: `
-      <p>When people think of Pilates, they often imagine a workout primarily for women. However, Reformer Pilates was actually developed by Joseph Pilates—a man who designed the practice for male athletes, injured soldiers, and boxers. Today, professional athletes from the NBA, NFL, and Olympic teams incorporate Pilates into their training regimens.</p>
+      <p>When people think of Pilates, they often imagine a workout primarily for women. However, Reformer Pilates was actually developed by Joseph Pilates, a man who designed the practice for male athletes, injured soldiers, and boxers. Today, professional athletes from the NBA, NFL, and Olympic teams incorporate Pilates into their training regimens.</p>
 
       <div style="text-align: center; margin: 40px 0;">
         <img src="/assets/images/men-pilates.webp" alt="Men's Pilates training at PT Studio 7" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
@@ -1202,7 +1197,7 @@ export const blogPosts: BlogPost[] = [
       <p>Reformer Pilates offers unique benefits that complement traditional strength training and sports performance:</p>
 
       <h3>1. Core Strength Beyond Sit-Ups</h3>
-      <p>The Reformer's resistance system targets deep core muscles that regular gym workouts often miss. A strong core translates to better performance in every sport—from golf to football to cycling.</p>
+      <p>The Reformer's resistance system targets deep core muscles that regular gym workouts often miss. A strong core translates to better performance in every sport, from golf to football to cycling.</p>
 
       <h3>2. Injury Prevention and Recovery</h3>
       <p>Many men come to Pilates after experiencing sports injuries or chronic pain. The controlled, low-impact movements help strengthen stabilizing muscles, improve joint mobility, and prevent future injuries. It's particularly effective for addressing imbalances created by repetitive sports motions.</p>
@@ -1214,7 +1209,7 @@ export const blogPosts: BlogPost[] = [
       <p>For professionals spending hours at a desk, Pilates counteracts poor posture, tight hip flexors, and weak glutes. It's an efficient full-body workout that corrects imbalances and builds functional strength.</p>
 
       <h2>What to Expect in Your First Session</h2>
-      <p>At PT Studio 7 Amsterdam, our instructors work with male clients of all fitness levels—from complete beginners to professional athletes. Sessions are challenging, focusing on:</p>
+      <p>At PT Studio 7 Amsterdam, our instructors work with male clients of all fitness levels, from complete beginners to professional athletes. Sessions are challenging, focusing on:</p>
       <ul>
         <li>Progressive resistance training on the Reformer</li>
         <li>Core stability and rotational strength</li>
@@ -1233,7 +1228,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h2>Private Sessions for Personalized Goals</h2>
-      <p>Many men prefer starting with private sessions to address specific needs—whether it's injury recovery, performance goals, or simply learning proper form. Our instructors create customized programs that align with your fitness objectives.</p>
+      <p>Many men prefer starting with private sessions to address specific needs, whether it's injury recovery, performance goals, or simply learning proper form. Our instructors create customized programs that align with your fitness objectives.</p>
 
       <p>Ready to experience why elite athletes trust Reformer Pilates? Book your session at PT Studio 7 Amsterdam and discover a workout that challenges your strength while protecting your body.</p>
     `,
@@ -1255,12 +1250,10 @@ export const blogPosts: BlogPost[] = [
   }
 ];
 
-// Helper function to get a blog post by slug
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined => {
   return blogPosts.find(post => post.slug === slug);
 };
 
-// Helper function to get recent posts
 export const getRecentPosts = (limit: number = 3): BlogPost[] => {
   return blogPosts
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())

@@ -16,6 +16,7 @@ export const AcademyInquiry: React.FC<AcademyInquiryProps> = ({ locale }) => {
   return (
     <section className="academy-inquiry" id="academy-inquiry" aria-labelledby="academy-inquiry-heading">
       <div className="academy-container">
+        <p className="academy-kicker">{isNl ? 'Contact' : 'Contact'}</p>
         <h2 id="academy-inquiry-heading">
           {isNl ? 'Vraag stellen of inschrijven bespreken' : 'Ask a question or discuss enrollment'}
         </h2>
