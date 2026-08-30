@@ -1,0 +1,98 @@
+{
+  "title": "Seven-Month SEO KPI Plan",
+  "timeline": "Seven months",
+  "primary_data_sources": [
+    "Google Search Console",
+    "Google Analytics"
+  ],
+  "kpi_targets": {
+    "organic_search_traffic": {
+      "metric": "Organic search sessions per month",
+      "baseline": 1000,
+      "month_1_target": 1200,
+      "month_3_target": 1500,
+      "month_6_target": 1800,
+      "final_target": 2000
+    },
+    "keyword_rankings": {
+      "metric": "Average position for 20 target keywords",
+      "baseline": 25,
+      "month_1_target": 22,
+      "month_3_target": 18,
+      "month_6_target": 15,
+      "final_target": 12
+    },
+    "indexation_rate": {
+      "metric": "Pages indexed by Google",
+      "baseline": 45,
+      "month_1_target": 50,
+      "month_3_target": 55,
+      "month_6_target": 60,
+      "final_target": 65
+    },
+    "average_page_session_duration": {
+      "metric": "Avg. time spent on page per session (seconds)",
+      "baseline": 45,
+      "month_1_target": 50,
+      "month_3_target": 55,
+      "month_6_target": 60,
+      "final_target": 65
+    },
+    "bounce_rate": {
+      "metric": "Percentage of single-page sessions",
+      "baseline": 65,
+      "month_1_target": 62,
+      "month_3_target": 58,
+      "month_6_target": 55,
+      "final_target": 50
+    },
+    "crawlability_score": {
+      "metric": "Site crawl health score (0-100)",
+      "baseline": 75,
+      "month_1_target": 80,
+      "month_3_target": 85,
+      "month_6_target": 90,
+      "final_target": 95
+    }
+  },
+  "error_reduction_goals": {
+    "4xx_errors": {
+      "metric": "Number of 4xx client errors",
+      "baseline": 15,
+      "month_1_target": 12,
+      "month_3_target": 8,
+      "month_6_target": 5,
+      "final_target": 2
+    },
+    "5xx_errors": {
+      "metric": "Number of 5xx server errors",
+      "baseline": 5,
+      "month_1_target": 4,
+      "month_3_target": 3,
+      "month_6_target": 2,
+      "final_target": 0
+    }
+  },
+  "target_keywords": [
+    "reformer pilates amsterdam",
+    "prenatal pilates amsterdam",
+    "private pilates amsterdam",
+    "strength training amsterdam",
+    "trx training amsterdam",
+    "pilates equipment",
+    "pilates instructor course amsterdam",
+    "corporate pilates amsterdam",
+    "healthcare provider pilates",
+    "best pilates studio amsterdam",
+    "amsterdam pilates classes",
+    "pilates for beginners",
+    "mat pilates amsterdam",
+    "advanced pilates amsterdam",
+    "pilates rehabilitation",
+    "pilates core workout",
+    "functional fitness amsterdam",
+    "amsterdam fitness studio",
+    "personal trainer amsterdam",
+    "pilates certification netherlands"
+  ]
+}
