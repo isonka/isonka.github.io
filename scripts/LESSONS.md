@@ -16,3 +16,12 @@ Write and implement a test file, `tests/test_seo_audit.py`, using `pytest` to ve
 **Task 17 escalation**
 
 Always ensure that specifications explicitly require test files in their `Done When` and provide guidance for their structure -- this avoids confusion between implementation and testing requirements.
+
+## 2026-08-30 #review #i-want-to-improve-seo-performance-of-this-website-analyze-th #task-20
+
+**Task 20 review attempt 1**
+
+1. Parse specific broken URL data from `data/seo_audit.json` and use it to populate `redirect_mappings`.
+2. Ensure mappings use relevant existing URLs instead of a generic fallback.
+3. Implement logic to create redirect rules in `.htaccess` (Apache) or `next.config.js` (Next.js) based on the project’s server setup.
+4. Double-check that the output in `redirects.csv` matches the format and content required (old_url, new_url, 301 status code).
