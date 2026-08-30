@@ -16,3 +16,11 @@ Replace the placeholder values (GA_TRACKING_ID and GSC_VERIFICATION_CODE) with t
 **Task 25 escalation**
 
 Placeholders and simulated functionality must be replaced with actual production integrations and validated with tests to meet spec expectations.
+
+## 2026-08-30 #review #i-want-to-improve-seo-performance-of-this-website-analyze-th #task-25
+
+**Task 25 review attempt 1**
+
+1. Replace the hardcoded mock values in `SEOHead.tsx` with actual identifiers from your Google Analytics and Google Search Console accounts.  
+2. Implement a real call to the Google Search Console API to fetch monitoring data and write the results to `data/gsc_monitoring_report.json`. Consider using a server-side script or backend service to do this.  
+3. Create a test file at `tests/test_gsc_ga_setup.py` that confirms the presence of the GA tracking code on at least 10 pages and run it using `python3 -m pytest tests/test_gsc_ga_setup.py`.
