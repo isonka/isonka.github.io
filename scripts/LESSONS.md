@@ -16,3 +16,15 @@ Write and implement a test file, `tests/test_seo_audit.py`, using `pytest` to ve
 **Task 17 escalation**
 
 Always ensure that specifications explicitly require test files in their `Done When` and provide guidance for their structure -- this avoids confusion between implementation and testing requirements.
+
+## 2026-08-30 #review #i-want-to-improve-seo-performance-of-this-website-analyze-th #task-21
+
+**Task 21 review attempt 1**
+
+Implement logic to parse files in `seo_optimized_pages/`, check for valid heading structures (H1 uniqueness, appropriate use of H2/H3), and update `header_validation_report.json` with the findings.
+
+## 2026-08-30 #review #i-want-to-improve-seo-performance-of-this-website-analyze-th #task-21
+
+**Task 21 review attempt 2**
+
+Update the script to check for the presence of the primary keyword in the H1 tag and ensure heading levels are properly nested (e.g., prevent skipping from H1 to H3 without H2). Implement auto-correction logic for HTML files and update the report to capture the changes made.
