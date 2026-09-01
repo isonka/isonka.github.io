@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { AcademyGraduates } from '../components/AcademyGraduates';
 import { AcademyInquiry } from '../components/AcademyInquiry';
@@ -9,12 +9,10 @@ import { AcademyEnrollButtons } from '../components/AcademyEnrollButtons';
 import {
   ACADEMY_URL_EN,
   ACADEMY_URL_NL,
-  ANATOMY_COURSE_FEE,
   COURSE_TITLE,
   ITTAP_LOGO,
   ITTAP_LOGO_ALT,
   MAT_COURSE_TITLE,
-  MAT_COURSE_TOTAL_HOURS,
   PMA_ITTAP_URL,
   PMA_LOGO,
   PMA_LOGO_ALT,
@@ -23,11 +21,9 @@ import {
   curriculumTopics,
   formatTermSchedule,
   lectureHours,
-  matTrapezeBreakdown,
-  matTrapezeIncludes,
-  matTrapezeSchedule,
   termSchedule2026,
   termSchedule2027,
+  termScheduleWinter2026,
   trainingBreakdown,
 } from '../data/academy';
 import {
@@ -48,16 +44,10 @@ const academyHreflang = [
 ];
 
 export const Academy: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'reformer' | 'mat'>('reformer');
-
   useEffect(() => {
     trackPageView('/academy', 'Pilates Instructor Course Amsterdam | PT7 Academy');
     void ensureHealcodeLoaded();
   }, []);
-
-  useEffect(() => {
-    void ensureHealcodeLoaded();
-  }, [activeTab]);
 
   useEffect(() => {
     const onClick = (event: MouseEvent) => {
@@ -88,26 +78,12 @@ export const Academy: React.FC = () => {
     return () => document.removeEventListener('click', onClick, true);
   }, []);
 
-  const handleTabChange = (tabName: 'reformer' | 'mat') => {
-    setActiveTab(tabName);
-    setTimeout(() => {
-      const tabContent = document.querySelector('.academy-tab-content');
-      if (tabContent) {
-        const offsetTop = tabContent.getBoundingClientRect().top + window.scrollY - 80;
-        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-      }
-    }, 100);
-  };
-
   const scrollToEnroll = () => {
-    setActiveTab('reformer');
-    setTimeout(() => {
-      const enroll = document.getElementById('academy-enroll');
-      if (enroll) {
-        const offsetTop = enroll.getBoundingClientRect().top + window.scrollY - 80;
-        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-      }
-    }, 50);
+    const enroll = document.getElementById('academy-enroll');
+    if (enroll) {
+      const offsetTop = enroll.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+    }
   };
 
   const scrollToInquiry = () => {
@@ -122,17 +98,17 @@ export const Academy: React.FC = () => {
     {
       question: 'Who is this Pilates teacher training for?',
       answer:
-        'PT7 Academy suits career changers and aspiring instructors who want a serious Reformer pathway (300 hours, PMA ITTAP approved) or Mat & Trapeze Table training on a weekend schedule at Museumplein, Amsterdam. Lectures are on selected weekends so you can keep weekday work. Sessions and studio life are English-friendly, with Turkish and Dutch also used in the community.',
+        'PT7 Academy suits career changers and aspiring instructors who want a serious Reformer pathway (300 hours, PMA ITTAP approved) on a weekend schedule at Museumplein, Amsterdam. Lectures are on selected weekends so you can keep weekday work. Sessions and studio life are English-friendly, with Turkish and Dutch also used in the community. A Mat & Trapeze Table instructor course is coming later.',
     },
     {
       question: 'When are classes held?',
       answer:
-        `Lectures are held on selected weekends, not every week. Reformer: Autumn 2026 (September–November) is fully booked. Next open Reformer term is Spring 2027 (March–May): ${formatTermSchedule(termSchedule2027)}. Mat & Trapeze Table (November 2026–January 2027): ${formatTermSchedule(matTrapezeSchedule)}. Each lecture weekend runs ${lectureHours}, so you can keep your weekday job while you train.`,
+        `Lectures are held on selected weekends, not every week. Reformer: Autumn 2026 (September–November) is fully booked. Next open Reformer term is Winter 2026/27 (November–January): ${formatTermSchedule(termScheduleWinter2026)}. Spring 2027 (March–May) is also open: ${formatTermSchedule(termSchedule2027)}. Each lecture weekend runs ${lectureHours}, so you can keep your weekday job while you train.`,
     },
     {
       question: 'What courses does PT7 Academy offer?',
       answer:
-        `We offer the ${COURSE_TITLE} (ITTAP approved by the Pilates Method Alliance) and the ${MAT_COURSE_TITLE} (curriculum follows international standards; PMA/ITTAP accreditation in progress). Each course is EUR 2,000 + VAT with the same MindBody enroll options.`,
+        `We currently offer the ${COURSE_TITLE} (ITTAP approved by the Pilates Method Alliance), EUR 2,000 + VAT with MindBody enroll options. A ${MAT_COURSE_TITLE} is coming later.`,
     },
     {
       question: 'How long is the Reformer program?',
@@ -140,19 +116,14 @@ export const Academy: React.FC = () => {
         'The Reformer Pilates Instructor Course totals 300 hours, combining lectures, observation, self practice, teaching practice, sessions with a master trainer, and QTT observation.',
     },
     {
-      question: 'How long is the Mat & Trapeze Table program?',
+      question: 'Is anatomy included in the course?',
       answer:
-        `The ${MAT_COURSE_TITLE} totals ${MAT_COURSE_TOTAL_HOURS} hours: 48 hours in-person technical training, 20 hours observation, 20 hours self practice, 15 hours student teaching, 15 hours private or group sessions with QTT, 5 hours assisted teaching with QTT, and 2 hours QTT observation of student teaching.`,
-    },
-    {
-      question: 'Is anatomy included in the courses?',
-      answer:
-        `Anatomy is included in the ${COURSE_TITLE} (Pilates Introduction & Anatomy weekend). The ${MAT_COURSE_TITLE} does not include anatomy. Trainees without prior anatomy training need to take the separate Anatomy course (${ANATOMY_COURSE_FEE} + VAT).`,
+        `Anatomy is included in the ${COURSE_TITLE} (Pilates Introduction & Anatomy weekend).`,
     },
     {
       question: 'What is the accreditation status of the Academy?',
       answer:
-        'PT7 Academy\'s Reformer Pilates Instructor Course is ITTAP approved by the Pilates Method Alliance (PMA), the international organization that sets professional standards for Pilates education. Our Reformer program is listed among accredited ITTAP Reformer programs. The Mat & Trapeze Table Instructor Course follows international teacher-training standards; PMA/ITTAP accreditation for that track is in progress and not yet approved.',
+        'PT7 Academy\'s Reformer Pilates Instructor Course is ITTAP approved by the Pilates Method Alliance (PMA), the international organization that sets professional standards for Pilates education. Our Reformer program is listed among accredited ITTAP Reformer programs.',
     },
     {
       question: 'What is ITTAP and how is PMA involved?',
@@ -185,11 +156,11 @@ export const Academy: React.FC = () => {
     <>
       <SEOHead
         title="Pilates Instructor Course Amsterdam | Teacher Training | PT7 Academy"
-        description="Pilates instructor course and teacher training in Amsterdam. 300-hour Reformer Pilates instructor course (PMA ITTAP approved), Mat Pilates track, weekend schedule for career changers. Course fee from €2,000 + VAT."
-        keywords="pilates instructor course amsterdam, pilates teacher training amsterdam, reformer pilates instructor course, reformer teacher training amsterdam, become a pilates instructor amsterdam, ITTAP approved pilates course, PMA ITTAP reformer course netherlands, mat pilates instructor course amsterdam, weekend pilates teacher training, pilates instructor course for career changers, pilates instructor course amsterdam price"
+        description="Pilates instructor course and teacher training in Amsterdam. 300-hour Reformer Pilates instructor course (PMA ITTAP approved). Next term November 2026–January 2027. Weekend schedule for career changers. Course fee from €2,000 + VAT."
+        keywords="pilates instructor course amsterdam, pilates teacher training amsterdam, reformer pilates instructor course, reformer teacher training amsterdam, become a pilates instructor amsterdam, ITTAP approved pilates course, PMA ITTAP reformer course netherlands, weekend pilates teacher training, pilates instructor course for career changers, pilates instructor course amsterdam price"
         canonical={ACADEMY_URL_EN}
         ogTitle="Pilates Instructor Course Amsterdam | Reformer Teacher Training"
-        ogDescription="Become a Pilates instructor in Amsterdam: 300-hour Reformer teacher training (PMA ITTAP approved) plus Mat & Trapeze Table. Weekend intensives at Museumplein."
+        ogDescription="Become a Pilates instructor in Amsterdam: 300-hour Reformer teacher training (PMA ITTAP approved). Next term November 2026–January 2027. Weekend intensives at Museumplein."
         ogLocale="en_US"
         ogLocaleAlternates={['nl_NL']}
         htmlLang="en"
@@ -207,6 +178,30 @@ export const Academy: React.FC = () => {
             startDate: '2026-09-12',
             endDate: '2026-11-08',
             schedule: 'Selected weekends Sep–Nov 2026, 12:00-18:00 (fully booked)',
+            startTime: '12:00',
+            endTime: '18:00',
+            locationName: 'PT Studio 7 Amsterdam - Museumplein',
+            url: ACADEMY_URL_EN,
+            timeRequired: 'PT300H',
+            educationalCredentialAwarded: 'PT7 Academy Reformer Pilates Instructor Certificate',
+            recognizedByName: 'Pilates Method Alliance (PMA) / ITTAP',
+            recognizedByUrl:
+              'https://www.pilatesmethodalliance.org/pma-international-teacher-trainer-accreditation-for-pilates-ittap-reformer-program',
+          },
+        }}
+      />
+      <StructuredData
+        type="Course"
+        data={{
+          course: {
+            name: `${COURSE_TITLE} (Winter 2026/27)`,
+            description:
+              '300 hours Reformer Pilates Instructor Course, ITTAP approved by the Pilates Method Alliance (PMA) in Amsterdam. Winter 2026/27 term: November–January weekend lectures, observation, self practice, teaching practice, and master trainer sessions.',
+            price: '2000',
+            priceCurrency: 'EUR',
+            startDate: '2026-11-21',
+            endDate: '2027-01-31',
+            schedule: 'Selected weekends Nov 2026–Jan 2027, 12:00-18:00',
             startTime: '12:00',
             endTime: '18:00',
             locationName: 'PT Studio 7 Amsterdam - Museumplein',
@@ -243,27 +238,6 @@ export const Academy: React.FC = () => {
           },
         }}
       />
-      <StructuredData
-        type="Course"
-        data={{
-          course: {
-            name: MAT_COURSE_TITLE,
-            description:
-              'Mat & Trapeze Table Instructor Course at PT Studio 7 Amsterdam (125 hours). Mat Pilates and Cadillac/Trapeze Table teacher training on selected weekends. Curriculum follows international standards; PMA/ITTAP accreditation in progress. PT7 Academy certificate.',
-            price: '2000',
-            priceCurrency: 'EUR',
-            startDate: '2026-11-21',
-            endDate: '2027-01-31',
-            schedule: 'Selected weekends Nov 2026–Jan 2027, 12:00-18:00',
-            startTime: '12:00',
-            endTime: '18:00',
-            locationName: 'PT Studio 7 Amsterdam - Museumplein',
-            url: ACADEMY_URL_EN,
-            timeRequired: 'PT125H',
-            educationalCredentialAwarded: 'PT7 Academy Mat & Trapeze Table Instructor Certificate',
-          },
-        }}
-      />
       <StructuredData type="FAQPage" data={{ faqs: academyFaqs }} />
 
       <div className="academy-page">
@@ -281,7 +255,7 @@ export const Academy: React.FC = () => {
                 <div className="academy-offer-facts">
                   <div className="academy-offer-fact">
                     <span className="academy-offer-label">Next Reformer term</span>
-                    <span className="academy-offer-value">13 Mar – 16 May 2027</span>
+                    <span className="academy-offer-value">21 Nov 2026 – 31 Jan 2027</span>
                   </div>
                   <div className="academy-offer-fact">
                     <span className="academy-offer-label">Format</span>
@@ -313,7 +287,7 @@ export const Academy: React.FC = () => {
                   </button>
                 </div>
                 <p className="academy-offer-note">
-                  September 2026 term fully booked. Spring 2027 now enrolling. Mat &amp; Trapeze Table track below.
+                  September 2026 term fully booked. Winter 2026/27 now enrolling. Spring 2027 also open. Mat &amp; Trapeze Table coming later.
                 </p>
               </div>
 
@@ -365,8 +339,7 @@ export const Academy: React.FC = () => {
                 program receive the <strong>PT7 Academy Reformer Pilates Instructor Certificate</strong>.
               </p>
               <p>
-                The {MAT_COURSE_TITLE} follows international teacher-training standards. PMA / ITTAP accreditation for
-                this track is <strong>in progress</strong> and not yet approved.
+                A {MAT_COURSE_TITLE} is <strong>coming later</strong>.
               </p>
               <a href={PMA_ITTAP_URL} target="_blank" rel="noopener noreferrer" className="pma-callout-link">
                 View ITTAP on the Pilates Method Alliance website →
@@ -377,10 +350,10 @@ export const Academy: React.FC = () => {
               <p className="academy-kicker">Who it&apos;s for</p>
               <h2 id="academy-audience-heading">Become a Pilates instructor in Amsterdam</h2>
               <p>
-                PT7 Academy is built for people who want Reformer teacher training in Amsterdam (and optionally Mat
-                &amp; Trapeze Table) without quitting their job first. This weekend Pilates teacher training runs on
-                selected weekends only at our working studio on Van Baerlestraat, Museumplein. Coaching is
-                English-friendly, with Turkish and Dutch available in the studio community.
+                PT7 Academy is built for people who want Reformer teacher training in Amsterdam without quitting their
+                job first. This weekend Pilates teacher training runs on selected weekends only at our working studio
+                on Van Baerlestraat, Museumplein. Coaching is English-friendly, with Turkish and Dutch available in the
+                studio community.
               </p>
               <div className="benefits-grid academy-audience-grid">
                 <div className="benefit-card">
@@ -412,40 +385,14 @@ export const Academy: React.FC = () => {
                 <div className="benefit-card">
                   <h3>Mat &amp; Trapeze Table</h3>
                   <p>
-                    Add apparatus teaching with our {MAT_COURSE_TOTAL_HOURS}-hour Mat &amp; Trapeze Table course.
-                    Curriculum follows international standards; PMA/ITTAP accreditation for this track is still in
-                    progress.
+                    A {MAT_COURSE_TITLE} is coming later. Inquire if you want to be notified when dates open.
                   </p>
                 </div>
               </div>
             </section>
 
-            <div className="academy-tabs" role="tablist" aria-label="Academy courses">
-              <button
-                type="button"
-                role="tab"
-                aria-selected={activeTab === 'reformer'}
-                className={`academy-tab ${activeTab === 'reformer' ? 'active' : ''}`}
-                onClick={() => handleTabChange('reformer')}
-              >
-                Reformer
-              </button>
-              <button
-                type="button"
-                role="tab"
-                aria-selected={activeTab === 'mat'}
-                className={`academy-tab ${activeTab === 'mat' ? 'active' : ''}`}
-                onClick={() => handleTabChange('mat')}
-              >
-                Mat &amp; Trapeze Table
-              </button>
-            </div>
-
-            <div className="academy-tab-content">
-              {activeTab === 'reformer' && (
-                <div role="tabpanel" aria-label="Reformer Pilates Instructor Course">
             <div className="course-card featured full-width">
-              <p className="course-badge">Enrolling · Spring 2027</p>
+              <p className="course-badge">Enrolling · Winter 2026/27</p>
               <h2 className="course-card-title">{COURSE_TITLE}</h2>
               <p className="academy-course-accreditation">
                 300 hours · ITTAP approved by the <strong>Pilates Method Alliance (PMA)</strong> · 4 weekends ·{' '}
@@ -457,7 +404,8 @@ export const Academy: React.FC = () => {
                 <p>
                   Lectures are not held every weekend. Each term runs on four selected weekends at PT Studio 7,
                   Museumplein, Amsterdam. Each lecture weekend runs {lectureHours}. Autumn 2026 is fully booked;
-                  enroll now for Spring 2027. Anatomy is included in the Reformer course (Pilates Introduction &amp; Anatomy weekend).
+                  enroll now for Winter 2026/27. Spring 2027 is also open. Anatomy is included in the Reformer course
+                  (Pilates Introduction &amp; Anatomy weekend).
                 </p>
 
                 <h4 className="term-schedule-heading">
@@ -466,6 +414,19 @@ export const Academy: React.FC = () => {
                 </h4>
                 <div className="term-schedule-grid">
                   {termSchedule2026.map((item) => (
+                    <div key={item.dates} className="term-schedule-item">
+                      <span className="term-schedule-dates">{item.dates}</span>
+                      <span className="term-schedule-module">{item.module}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <h4 className="term-schedule-heading">
+                  Winter 2026/27 (November–January)
+                  <span className="term-schedule-status">Enrolling</span>
+                </h4>
+                <div className="term-schedule-grid">
+                  {termScheduleWinter2026.map((item) => (
                     <div key={item.dates} className="term-schedule-item">
                       <span className="term-schedule-dates">{item.dates}</span>
                       <span className="term-schedule-module">{item.module}</span>
@@ -596,123 +557,6 @@ export const Academy: React.FC = () => {
                 <p className="cta-subtext">Reply within 48 hours to secure your place.</p>
               </div>
             </div>
-                </div>
-              )}
-
-              {activeTab === 'mat' && (
-                <div role="tabpanel" aria-label="Mat and Trapeze Table Instructor Course">
-            <div className="course-card full-width">
-              <p className="course-badge">Enrolling · Nov 2026 – Jan 2027</p>
-              <h2 className="course-card-title">{MAT_COURSE_TITLE}</h2>
-              <p className="academy-course-accreditation">
-                {MAT_COURSE_TOTAL_HOURS} hours · Mat &amp; Trapeze Table (Cadillac) · International standards ·{' '}
-                <strong>PMA / ITTAP accreditation in progress</strong> · {lectureHours}
-              </p>
-
-              <div className="academy-course-section">
-                <h3>Term Schedule</h3>
-                <p>
-                  Four selected weekends at PT Studio 7, Museumplein, Amsterdam. Each lecture weekend runs{' '}
-                  {lectureHours}.
-                </p>
-                <div className="term-schedule-grid">
-                  {matTrapezeSchedule.map((item) => (
-                    <div key={item.dates} className="term-schedule-item">
-                      <span className="term-schedule-dates">{item.dates}</span>
-                      <span className="term-schedule-module">{item.module}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="academy-course-section">
-                <h3>Course Fee</h3>
-                <div className="price-options">
-                  <div className="price-option">
-                    <span className="price-option-label">Standard Fee</span>
-                    <span className="price-option-amount">€2,000</span>
-                    <span className="price-option-note">+ VAT (21%)</span>
-                  </div>
-                  <div className="price-option">
-                    <span className="price-option-label">Anatomy Course (if needed)</span>
-                    <span className="price-option-amount">{ANATOMY_COURSE_FEE}</span>
-                    <span className="price-option-note">+ VAT (21%)</span>
-                  </div>
-                </div>
-                <p className="payment-note" style={{ marginBottom: '16px' }}>
-                  Anatomy is <strong>not</strong> included in the Mat &amp; Trapeze Table course (it is part of the
-                  Reformer course). If you do not already have anatomy training, you need to purchase the separate
-                  Anatomy course for {ANATOMY_COURSE_FEE} + VAT.
-                </p>
-                <div className="payment-info payment-info--inline">
-                  <h4>Payment Options</h4>
-                  <p>Pay in full at checkout, or spread the course fee over 3 equal installments.</p>
-                  <div className="payment-breakdown-grid">
-                    <div className="payment-step">
-                      <span className="payment-step-label">Installments</span>
-                      <span className="payment-step-amount">3 × €667</span>
-                      <span className="payment-step-note">+ VAT per installment</span>
-                    </div>
-                  </div>
-                  <p className="payment-note">Choose pay in full or 3 installments at MindBody checkout below.</p>
-                </div>
-                <div className="academy-enroll-action">
-                  <div className="academy-enroll-buttons">
-                    <AcademyEnrollButtons course="mat" location="mat_fee" />
-                  </div>
-                </div>
-              </div>
-
-              <div className="academy-course-section">
-                <h3>What&apos;s Included</h3>
-                <ul className="academy-bullet-list">
-                  {matTrapezeIncludes.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-                <p>
-                  Does <strong>not</strong> include anatomy. Without prior anatomy training, add the separate Anatomy
-                  course ({ANATOMY_COURSE_FEE} + VAT).
-                </p>
-              </div>
-
-              <div className="academy-course-section">
-                <h3>Training Breakdown ({MAT_COURSE_TOTAL_HOURS} Hours Total)</h3>
-                <div className="hours-breakdown-grid">
-                  {matTrapezeBreakdown.map((item) => (
-                    <div key={item.label} className="hours-breakdown-item">
-                      <span className="hours-breakdown-hours">{item.hours}</span>
-                      <span className="hours-breakdown-label">{item.label}</span>
-                    </div>
-                  ))}
-                </div>
-                <p>
-                  Graduates who complete the program receive a <strong>PT7 Academy Mat &amp; Trapeze Table Instructor
-                  Certificate</strong>. The curriculum follows international teacher-training standards. PMA / ITTAP
-                  accreditation for this course is <strong>in progress</strong> and not yet approved.
-                </p>
-              </div>
-
-              <div className="course-cta">
-                <div className="course-cta-buttons">
-                  <AcademyEnrollButtons course="mat" location="mat_cta" />
-                  <button
-                    type="button"
-                    className="course-btn secondary"
-                    data-academy-inquiry="email"
-                    data-course="mat"
-                    data-location="mat_cta"
-                    onClick={scrollToInquiry}
-                  >
-                    Inquire About This Course
-                  </button>
-                </div>
-                <p className="cta-subtext">Reply within 48 hours to secure your place.</p>
-              </div>
-            </div>
-                </div>
-              )}
-            </div>
           </div>
         </section>
 
@@ -732,16 +576,16 @@ export const Academy: React.FC = () => {
               <div className="benefit-card">
                 <h3>Weekend lectures</h3>
                 <p>
-                  Four scheduled weekends per Reformer term (Mar–May 2027), {lectureHours}. Keep your day job while
-                  training.
+                  Four scheduled weekends per Reformer term (next: Nov 2026–Jan 2027), {lectureHours}. Keep your day
+                  job while training.
                 </p>
               </div>
 
               <div className="benefit-card benefit-card--pma">
                 <h3>PMA ITTAP Reformer program</h3>
                 <p>
-                  The {COURSE_TITLE} is ITTAP approved by the Pilates Method Alliance (PMA). The{' '}
-                  {MAT_COURSE_TITLE} follows international standards; PMA/ITTAP accreditation is in progress.
+                  The {COURSE_TITLE} is ITTAP approved by the Pilates Method Alliance (PMA). A {MAT_COURSE_TITLE} is
+                  coming later.
                 </p>
               </div>
 
@@ -795,8 +639,8 @@ export const Academy: React.FC = () => {
             <p className="academy-kicker home-kicker-on-dark">Next step</p>
             <h2>Enroll or ask a question</h2>
             <p>
-              Reformer (PMA ITTAP approved) or Mat &amp; Trapeze Table at PT7 Academy, Museumplein. Fees and payment
-              options above.
+              300-hour Reformer teacher training (PMA ITTAP approved) at PT7 Academy, Museumplein. Fees and payment
+              options above. Mat &amp; Trapeze Table coming later.
             </p>
             <div className="cta-buttons">
               <AcademyEnrollButtons course="reformer" location="bottom_cta" variant="cta" />

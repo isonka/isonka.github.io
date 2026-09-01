@@ -27,8 +27,6 @@ export const PMA_NAME = 'Pilates Method Alliance (PMA)';
 
 export const lectureHours = '12:00 to 18:00';
 export const lectureHoursNl = '12:00 tot 18:00';
-export const ANATOMY_COURSE_FEE = '€500';
-export const MAT_COURSE_TOTAL_HOURS = 125;
 
 export const termSchedule2026 = [
   { dates: '12–13 September 2026', datesNl: '12–13 september 2026', module: 'Pilates Introduction & Anatomy', moduleNl: 'Pilates Introductie & Anatomie' },
@@ -37,18 +35,18 @@ export const termSchedule2026 = [
   { dates: '7–8 November 2026', datesNl: '7–8 november 2026', module: 'Reformer 3', moduleNl: 'Reformer 3' },
 ];
 
+export const termScheduleWinter2026 = [
+  { dates: '21–22 November 2026', datesNl: '21–22 november 2026', module: 'Pilates Introduction & Anatomy', moduleNl: 'Pilates Introductie & Anatomie' },
+  { dates: '12–13 December 2026', datesNl: '12–13 december 2026', module: 'Reformer 1', moduleNl: 'Reformer 1' },
+  { dates: '9–10 January 2027', datesNl: '9–10 januari 2027', module: 'Reformer 2', moduleNl: 'Reformer 2' },
+  { dates: '30–31 January 2027', datesNl: '30–31 januari 2027', module: 'Reformer 3', moduleNl: 'Reformer 3' },
+];
+
 export const termSchedule2027 = [
   { dates: '13–14 March 2027', datesNl: '13–14 maart 2027', module: 'Pilates Introduction & Anatomy', moduleNl: 'Pilates Introductie & Anatomie' },
   { dates: '3–4 April 2027', datesNl: '3–4 april 2027', module: 'Reformer 1', moduleNl: 'Reformer 1' },
   { dates: '24–25 April 2027', datesNl: '24–25 april 2027', module: 'Reformer 2', moduleNl: 'Reformer 2' },
   { dates: '15–16 May 2027', datesNl: '15–16 mei 2027', module: 'Reformer 3', moduleNl: 'Reformer 3' },
-];
-
-export const matTrapezeSchedule = [
-  { dates: '21–22 November 2026', datesNl: '21–22 november 2026', module: 'Mat 1', moduleNl: 'Mat 1' },
-  { dates: '12–13 December 2026', datesNl: '12–13 december 2026', module: 'Trapeze Table 1', moduleNl: 'Trapeze Table 1' },
-  { dates: '9–10 January 2027', datesNl: '9–10 januari 2027', module: 'Mat 2 & Trapeze Table 2', moduleNl: 'Mat 2 & Trapeze Table 2' },
-  { dates: '30–31 January 2027', datesNl: '30–31 januari 2027', module: 'Mat 3 & Trapeze Table 3', moduleNl: 'Mat 3 & Trapeze Table 3' },
 ];
 
 export type AcademyScheduleItem = {
@@ -91,24 +89,6 @@ export const curriculumTopicsNl = [
   'Regressies, progressies, modificaties en contra-indicaties voor alle oefeningen',
 ];
 
-export const matTrapezeIncludes = [
-  '48 hours of in-person technical training',
-  'Comprehensive Mat Pilates curriculum (Mat 1–3)',
-  'Trapeze Table (Cadillac) training (Trapeze Table 1–3)',
-  '2 exams (theoretical & practical)',
-  'One-on-one final assessment',
-  'PT7 Academy completion certificate',
-];
-
-export const matTrapezeIncludesNl = [
-  '48 uur technische training op locatie',
-  'Uitgebreid Mat Pilates curriculum (Mat 1–3)',
-  'Trapeze Table (Cadillac) training (Trapeze Table 1–3)',
-  '2 examens (theorie & praktijk)',
-  'Individuele eindbeoordeling',
-  'PT7 Academy certificaat',
-];
-
 export const trainingBreakdown = [
   { hours: '85 hours', hoursNl: '85 uur', label: 'Lectures & Theory', labelNl: 'Colleges & theorie' },
   { hours: '60 hours', hoursNl: '60 uur', label: 'Observation', labelNl: 'Observatie' },
@@ -131,36 +111,6 @@ export const trainingBreakdown = [
     hoursNl: '5 uur',
     label: 'QTT Observation of Student Teaching & Assessment',
     labelNl: 'QTT-observatie van studentlessen & assessment',
-  },
-];
-
-export const matTrapezeBreakdown = [
-  {
-    hours: '48 hours',
-    hoursNl: '48 uur',
-    label: 'In-person technical training (lectures)',
-    labelNl: 'Technische training op locatie (colleges)',
-  },
-  { hours: '20 hours', hoursNl: '20 uur', label: 'Observation', labelNl: 'Observatie' },
-  { hours: '20 hours', hoursNl: '20 uur', label: 'Self Practice', labelNl: 'Zelfpraktijk' },
-  { hours: '15 hours', hoursNl: '15 uur', label: 'Student Teaching', labelNl: 'Studentlesgeven' },
-  {
-    hours: '15 hours',
-    hoursNl: '15 uur',
-    label: 'Private or Group Sessions with QTT',
-    labelNl: 'Private of groepssessies met QTT',
-  },
-  {
-    hours: '5 hours',
-    hoursNl: '5 uur',
-    label: 'Assisted Teaching with QTT',
-    labelNl: 'Begeleid lesgeven met QTT',
-  },
-  {
-    hours: '2 hours',
-    hoursNl: '2 uur',
-    label: 'QTT Observation of Student Teaching',
-    labelNl: 'QTT-observatie van studentlessen',
   },
 ];
 

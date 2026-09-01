@@ -159,9 +159,9 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Imagine your life in one year</strong>: Same desk, or something new?</li>
       </ol>
 
-      <h2>The Next Term Starts September 2026</h2>
+      <h2>The Next Open Term Starts November 2026</h2>
 
-      <p>PT 7 Academy's Reformer Pilates Instructor Course runs September–November 2026 on selected weekends at our Museumplein studio. Lectures are weekend-only (12:00–18:00), so you can keep your weekday job while you train, taught by instructors with 15+ years of experience.</p>
+      <p>PT 7 Academy's Reformer Pilates Instructor Course has an Autumn 2026 term (September–November) that is fully booked. The next open term runs November 2026–January 2027 on selected weekends at our Museumplein studio, with a further Spring 2027 term (March–May). Lectures are weekend-only (12:00–18:00), so you can keep your weekday job while you train, taught by instructors with 15+ years of experience.</p>
 
       <p>If you're curious, reach out. No pressure, no sales pitch, just an honest conversation about whether this path might be right for you.</p>
 
@@ -173,7 +173,7 @@ export const blogPosts: BlogPost[] = [
     date: '2026-01-23',
     image: '/assets/images/reformer_1.webp',
     tags: ['Career Change', 'Pilates Certification', 'PT 7 Academy', 'Lifestyle', 'Work-Life Balance'],
-    metaDescription: 'How to switch careers from banking, tech, or corporate jobs to becoming a Reformer Pilates instructor. 300-hour weekend training in Amsterdam (Sep–Nov 2026), PMA ITTAP-approved program. PT 7 Academy.',
+    metaDescription: 'How to switch careers from banking, tech, or corporate jobs to becoming a Reformer Pilates instructor. 300-hour weekend training in Amsterdam (next term Nov 2026–Jan 2027), PMA ITTAP-approved program. PT 7 Academy.',
     keywords: [
       'career change pilates instructor',
       'banker to pilates instructor',
