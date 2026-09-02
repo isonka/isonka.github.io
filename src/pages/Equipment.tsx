@@ -81,7 +81,6 @@ export const Equipment: React.FC = () => {
           <p className="equipment-hero-line">
             Professional Reformers and classical apparatus for home or studio purchase: specs, warranty, and delivery in the Netherlands. Not a class booking page.
           </p>
-          </p>
         </header>
 
         <div className="equipment-intent-notice">
