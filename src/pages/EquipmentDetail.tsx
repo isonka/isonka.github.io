@@ -22,10 +22,10 @@ export const EquipmentDetail: React.FC = () => {
   const currentImage = product.images[activeImage] || product.images[0];
   const productUrl = `https://www.pt7.nl/equipment/${product.slug}/`;
   const workoutByEquipment: Record<string, { to: string; label: string }> = {
-    reformer: { to: '/workouts/reformer-pilates/', label: 'Try Reformer Pilates classes' },
-    'tower-reformer': { to: '/workouts/reformer-pilates/', label: 'Try Tower/Reformer-style classes' },
-    cadillac: { to: '/workouts/reformer-pilates/', label: 'Try equipment-based Pilates classes' },
-    'wunda-chair': { to: '/workouts/reformer-pilates/', label: 'Try Pilates classes using this equipment family' },
+    reformer: { to: '/reformer-pilates-amsterdam/', label: 'Book Reformer Pilates classes in Amsterdam' },
+    'tower-reformer': { to: '/reformer-pilates-amsterdam/', label: 'Book Reformer Pilates classes in Amsterdam' },
+    cadillac: { to: '/reformer-pilates-amsterdam/', label: 'Book equipment-based Pilates classes' },
+    'wunda-chair': { to: '/reformer-pilates-amsterdam/', label: 'Book Pilates classes at our studio' },
   };
   const relatedWorkout = workoutByEquipment[product.slug];
 
@@ -60,8 +60,8 @@ export const EquipmentDetail: React.FC = () => {
 
       <Breadcrumbs
         items={[
-          { name: 'Equipment', path: '/equipment' },
-          { name: product.name, path: `/equipment/${product.slug}` },
+          { name: 'Equipment for Sale', path: '/equipment/' },
+          { name: product.name, path: `/equipment/${product.slug}/` },
         ]}
       />
 
@@ -95,8 +95,18 @@ export const EquipmentDetail: React.FC = () => {
           </div>
 
           <div className="product-info">
-            <p className="kicker">Equipment</p>
-            <h1>{product.name}</h1>
+            <p className="kicker">Equipment for sale</p>
+            <h1>{product.name} for sale</h1>
+            <p className="product-intent-notice">
+              This page is for purchasing apparatus. Want to take a class instead?{' '}
+              <Link to="/reformer-pilates-amsterdam/" className="prose-link">
+                Book Reformer Pilates in Amsterdam
+              </Link>
+              {' · '}
+              <Link to="/schedule/" className="prose-link">
+                View schedule
+              </Link>
+            </p>
             <p className="product-short-desc">{product.shortDesc}</p>
             <ul className="product-features">
               {product.features.map((f) => (
@@ -125,11 +135,11 @@ export const EquipmentDetail: React.FC = () => {
             </ul>
             {relatedWorkout ? (
               <p className="product-related">
-                Want to experience this equipment before buying?{' '}
+                Want to try this equipment in a class before buying?{' '}
                 <Link to={relatedWorkout.to} className="prose-link">
                   {relatedWorkout.label}
                 </Link>{' '}
-                at our Amsterdam studio.
+                at our Museumplein studio. Equipment sales on this page are separate from class bookings.
               </p>
             ) : null}
           </div>

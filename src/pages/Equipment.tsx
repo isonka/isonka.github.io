@@ -53,12 +53,12 @@ export const Equipment: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Buy Pilates Equipment Amsterdam | Reformers & More | PT Studio 7"
-        description="Buy professional Pilates equipment in Amsterdam: Reformer, Tower Reformer, Cadillac, Wunda Chair, and Ladder Barrel. Specs, warranty, and 3-8 week delivery in the Netherlands."
-        keywords="buy pilates equipment amsterdam, pilates reformer kopen nederland, pilates equipment for sale netherlands, buy reformer amsterdam, cadillac pilates for sale"
+        title="Buy Pilates Equipment for Sale | Amsterdam | PT Studio 7"
+        description="Pilates equipment for sale in Amsterdam and the Netherlands: Reformer, Tower Reformer, Cadillac, Wunda Chair, and Ladder Barrel. Specs, 2-year warranty, 3-8 week delivery. This page is for purchasing apparatus, not class bookings."
+        keywords="buy pilates equipment amsterdam, pilates reformer for sale, pilates reformer kopen nederland, pilates equipment for sale netherlands, buy reformer amsterdam, cadillac pilates for sale"
         canonical="https://www.pt7.nl/equipment/"
-        ogTitle="Buy Pilates Equipment Amsterdam | PT Studio 7"
-        ogDescription="Transactional Pilates equipment catalog: Reformer, Tower Reformer, Cadillac, Wunda Chair, and Ladder Barrel with ordering support."
+        ogTitle="Buy Pilates Equipment for Sale | PT Studio 7 Amsterdam"
+        ogDescription="Transactional catalog: professional Reformers and classical apparatus for home or studio purchase, not class bookings."
       />
       <StructuredData
         type="ItemList"
@@ -77,11 +77,21 @@ export const Equipment: React.FC = () => {
       <div className="equipment-page">
         <header className="equipment-hero">
           <p className="kicker">Equipment</p>
-          <h1>Buy Pilates Equipment Amsterdam</h1>
+          <h1>Buy Pilates Equipment for Sale in Amsterdam</h1>
           <p className="equipment-hero-line">
-            Professional Reformers and classical apparatus for home or studio, with specs, warranty, and delivery in the Netherlands.
+            Professional Reformers and classical apparatus for home or studio purchase: specs, warranty, and delivery in the Netherlands. Not a class booking page.
+          </p>
           </p>
         </header>
+
+        <div className="equipment-intent-notice">
+          <p>
+            <strong>Looking for Pilates classes?</strong> This section is for buying equipment.{' '}
+            <Link to="/reformer-pilates-amsterdam/">Book Reformer Pilates classes in Amsterdam</Link>
+            {' · '}
+            <Link to="/schedule/">View class schedule</Link>
+          </p>
+        </div>
 
         <div className="equipment-content">
           <ul className="equipment-list">
@@ -114,12 +124,12 @@ export const Equipment: React.FC = () => {
             Compare models, review specs, and request an order for home or studio use. We can advise based on your space and goals.
           </p>
           <div className="equipment-cta-actions">
-            <Link to="/schedule/" className="btn-gold">
-              Book a Class
-            </Link>
-            <a href="#contact" onClick={handleContactClick} className="btn-ghost">
-              Contact Us
+            <a href="#contact" onClick={handleContactClick} className="btn-gold">
+              Contact for Order
             </a>
+            <Link to="/reformer-pilates-amsterdam/" className="btn-ghost">
+              Book Pilates Classes
+            </Link>
           </div>
         </section>
       </div>

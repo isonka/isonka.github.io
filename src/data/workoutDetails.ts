@@ -135,26 +135,36 @@ export const workoutDetails: WorkoutDetailData[] = [
   {
     slug: 'reformer-pilates',
     seo: {
-      title: 'Reformer Pilates Amsterdam Museumplein | PT Studio 7',
-      description: 'Expert Reformer Pilates classes in Amsterdam at Museumplein. Small group classes (max 5) & private sessions. Strengthen core, improve flexibility, perfect posture. Book now!',
-      keywords: 'Reformer Pilates Amsterdam, Pilates Museumplein, Reformer classes Amsterdam, core strength training, flexibility training Amsterdam, posture correction, small group Pilates, Reformer Pilates lessen, buikspieren training Amsterdam, houding verbeteren',
+      title: 'What is Reformer Pilates? Benefits & Guide | PT Studio 7 Amsterdam',
+      description:
+        'Learn what Reformer Pilates is, how the equipment works, and who it suits. Core strength, flexibility, and posture benefits explained. Ready to try a class? Book at our Reformer Pilates Amsterdam studio page.',
+      keywords:
+        'what is reformer pilates, reformer pilates benefits, reformer pilates equipment, reformer vs mat pilates, pilates reformer workout, core strength pilates, flexibility training, posture correction pilates',
       canonical: 'https://www.pt7.nl/workouts/reformer-pilates/',
-      ogTitle: 'Reformer Pilates Amsterdam | PT Studio 7 Museumplein',
-      ogDescription: 'Premium Reformer Pilates studio at Museumplein. Small groups (max 5), expert instructors. Build core strength, flexibility & perfect posture.',
+      ogTitle: 'What is Reformer Pilates? | PT Studio 7',
+      ogDescription:
+        'Guide to Reformer Pilates: benefits, equipment, and who it suits. Book Reformer classes at our Amsterdam Museumplein studio.',
       ogImage: '/assets/images/studio.webp',
     },
-    breadcrumbName: 'Reformer Pilates',
+    announcementBanner: {
+      label: 'Book classes',
+      text: 'Looking for Reformer Pilates classes in Amsterdam?',
+      ctaHref: '/reformer-pilates-amsterdam/',
+      ctaLabel: 'Reformer Pilates Amsterdam →',
+    },
+    breadcrumbName: 'Reformer Pilates Guide',
     hero: {
       image: '/assets/images/studio.webp',
       imagePosition: 'center 40%',
-      title: 'Reformer Pilates Amsterdam Oud-Zuid',
-      tagline: 'Full-body workout focusing on core strength, flexibility, and posture',
-      ctaLabel: 'Book a Class',
-      ctaTo: '/schedule',
+      title: 'What is Reformer Pilates?',
+      tagline: 'Full-body resistance training on the Reformer: benefits, who it suits, and how to get started',
+      ctaLabel: 'Book Reformer Classes in Amsterdam',
+      ctaTo: '/reformer-pilates-amsterdam/',
     },
     intro: {
       title: 'Transform Your Body with Reformer Pilates',
-      lead: 'Reformer Pilates is a dynamic, full-body workout that uses specialized equipment to create resistance and support. At PT Studio 7, our expert instructors guide you through controlled, precise movements that strengthen your core, improve flexibility, and enhance your overall body awareness.',
+      lead:
+        'Reformer Pilates is a dynamic, full-body workout that uses specialized equipment to create resistance and support. At PT Studio 7, our expert instructors guide you through controlled, precise movements that strengthen your core, improve flexibility, and enhance your overall body awareness. To book a class at our Museumplein studio, visit our Reformer Pilates Amsterdam page.',
     },
     benefits: {
       title: 'Why Choose Reformer Pilates?',
@@ -222,7 +232,7 @@ export const workoutDetails: WorkoutDetailData[] = [
         '✓ Regularly maintained for safety and performance',
       ],
       linkTo: '/equipment/reformer/',
-      linkLabel: 'Learn More About Our Equipment →',
+      linkLabel: 'Buy a Reformer for home or studio →',
     },
     trainers: {
       title: 'Meet Your Expert Instructors',
@@ -242,11 +252,11 @@ export const workoutDetails: WorkoutDetailData[] = [
     ],
     finalCta: {
       title: 'Ready to Transform Your Body?',
-      subtitle: 'Join us for a Reformer Pilates class at our premium Museumplein location',
-      primaryLabel: 'Book Your Class',
-      primaryTo: '/schedule',
+      subtitle: 'Book Reformer Pilates classes at our Museumplein studio in Amsterdam Oud-Zuid',
+      primaryLabel: 'Reformer Pilates Amsterdam',
+      primaryTo: '/reformer-pilates-amsterdam/',
       secondaryLabel: 'View Pricing',
-      secondaryTo: '/pricing',
+      secondaryTo: '/pricing/',
     },
   },
   {

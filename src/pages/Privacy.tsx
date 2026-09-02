@@ -52,11 +52,11 @@ export const Privacy: React.FC = () => {
           </p>
           <ul>
             <li>
-              <strong>Statistics</strong> — Google Analytics 4 only. Used to understand page use. Does not load Google
+              <strong>Statistics</strong>: Google Analytics 4 only. Used to understand page use. Does not load Google
               Tag Manager, Google Ads, or Meta.
             </li>
             <li>
-              <strong>Marketing</strong> — Google Tag Manager, Google Ads, and Meta Pixel. Used for ads measurement and
+              <strong>Marketing</strong>: Google Tag Manager, Google Ads, and Meta Pixel. Used for ads measurement and
               remarketing.
             </li>
           </ul>

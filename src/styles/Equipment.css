@@ -29,6 +29,22 @@
   color: #555;
 }
 
+.equipment-intent-notice {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px 24px;
+}
+
+.equipment-intent-notice p {
+  margin: 0;
+  max-width: 42em;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #555;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--pebble, #d5d3d4);
+}
+
 .equipment-content {
   max-width: 1100px;
   margin: 0 auto;

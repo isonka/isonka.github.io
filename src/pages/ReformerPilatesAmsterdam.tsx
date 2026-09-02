@@ -45,10 +45,20 @@ const faqs = [
   },
 ];
 
+const reformerSeoOnlyFaqs = [
+  {
+    question: 'Is there Reformer Pilates in Amsterdam Oud-Zuid?',
+    answer:
+      'Yes. Our studio sits in Oud-Zuid at Museumplein (Van Baerlestraat 76C). We run small group and private Reformer sessions for clients in Amsterdam Zuid, the Museum District, and nearby neighborhoods.',
+  },
+];
+
+const reformerSchemaFaqs = [...faqs, ...reformerSeoOnlyFaqs];
+
 export const ReformerPilatesAmsterdam: React.FC = () => {
   useEffect(() => {
     trackPageView(
-      '/reformer-pilates-amsterdam',
+      '/reformer-pilates-amsterdam/',
       'Reformer Pilates Amsterdam Museumplein | PT Studio 7'
     );
   }, []);
@@ -63,7 +73,7 @@ export const ReformerPilatesAmsterdam: React.FC = () => {
         ogTitle="Reformer Pilates Amsterdam | PT Studio 7 Museumplein"
         ogDescription="Boutique Reformer Pilates at Museumplein. Small groups (max 5), private sessions, expert instructors in Amsterdam Oud-Zuid."
       />
-      <StructuredData type="FAQPage" data={{ faqs }} />
+      <StructuredData type="FAQPage" data={{ faqs: reformerSchemaFaqs }} />
       <StructuredData
         type="Service"
         data={{
@@ -81,7 +91,7 @@ export const ReformerPilatesAmsterdam: React.FC = () => {
         }}
       />
       <Breadcrumbs
-        items={[{ name: 'Reformer Pilates Amsterdam', path: '/reformer-pilates-amsterdam' }]}
+        items={[{ name: 'Reformer Pilates Amsterdam', path: '/reformer-pilates-amsterdam/' }]}
       />
 
       <div className="service-page">

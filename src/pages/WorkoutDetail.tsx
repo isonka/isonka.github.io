@@ -13,7 +13,7 @@ export const WorkoutDetail: React.FC = () => {
 
   useEffect(() => {
     if (workout) {
-      trackPageView(`/workouts/${workout.slug}`, `${workout.hero.title} - PT Studio 7`);
+      trackPageView(`/workouts/${workout.slug}/`, `${workout.hero.title} - PT Studio 7`);
     }
   }, [workout]);
 

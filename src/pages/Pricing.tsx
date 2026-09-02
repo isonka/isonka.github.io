@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
@@ -19,6 +20,65 @@ import {
 } from '../data/pricing';
 import '../styles/Pricing.css';
 
+const pricingSeoOnlyFaqs = (formatPrice: typeof formatEur) => [
+  {
+    question: 'How much do Pilates classes cost in Amsterdam?',
+    answer: `Group Reformer Pilates classes start from ${formatPrice(GROUP.pack20.perClass)} per class with a 20-class pack (${formatPrice(GROUP.pack20.total)} total). Single group classes are ${formatPrice(GROUP.single)}. Private sessions start from ${formatPrice(PRIVATE.junior.single)}. Full packages are listed on this page.`,
+  },
+  {
+    question: 'Is there an intro offer for new clients?',
+    answer: `Yes. New clients can start with our introduction package: ${INTRO.classes} group classes for ${formatPrice(INTRO.price)} (new clients only).`,
+  },
+];
+
+const pricingVisibleFaqs = (formatPrice: typeof formatEur) => [
+  {
+    question: 'How long are the packages valid?',
+    answer:
+      'Each package has a valid period of weeks equal to the number of lessons. For example, a 5-class package is valid for 5 weeks from the purchase date.',
+  },
+  {
+    question: 'Can I attend during pregnancy?',
+    answer:
+      'Pregnant clients are only accepted for one-on-one classes where we can provide personalized attention to ensure safety.',
+  },
+  {
+    question: 'What if I have injuries?',
+    answer:
+      'Please inform us if you have any injuries or joint problems before booking. Our trainers can modify exercises to accommodate your needs.',
+  },
+  {
+    question: 'Can I try before I commit to a package?',
+    answer:
+      'Yes! We offer single class options for all training types, and we recommend starting with a smaller package to try our classes.',
+  },
+  {
+    question: 'How do membership renewals work?',
+    answer:
+      "1-Month Memberships (4 & 8 classes): 1-month period. You can cancel after the first month. Auto-renews monthly unless cancelled. 3-Month Membership: 3-month commitment. You can cancel after 3 months. Auto-renews unless cancelled. Annual Membership: 12-month commitment. You can cancel after 12 months. Auto-renews unless cancelled. If you don't cancel before the renewal date, payments will be processed automatically.",
+  },
+  {
+    question: 'Can I cancel my membership?',
+    answer:
+      'Yes! In 1-month memberships (4 & 8 classes), you have the right to cancel after the first month. The 3-month and annual memberships can be cancelled after you complete your initial commitment period (3 or 12 months). To cancel, contact us via email at info@pt7.nl or call +31 685 162693 before your renewal date.',
+  },
+  {
+    question: 'Is the annual membership unlimited classes?',
+    answer:
+      `Yes! The annual membership at ${formatPrice(MEMBERSHIP.annual.perMonth)} per month (${formatPrice(MEMBERSHIP.annual.yearTotal)} for 12 months total) gives you unlimited classes (all days, 7:00-18:00), with a maximum of 1 class per day. This is our best value option and includes a 4-week freeze option.`,
+  },
+  {
+    question: "What's the class duration?",
+    answer:
+      `All our classes are ${CLASS_MINUTES} minutes long, providing an effective and efficient workout that fits into your busy schedule.`,
+  },
+  {
+    question: 'How many people in group classes?',
+    answer:
+      `Our group classes have a maximum of ${GROUP_MAX} participants, ensuring you receive personalized attention while enjoying the energy of a group setting.`,
+  },
+];
+
 export const Pricing: React.FC = () => {
   const [instructorTier, setInstructorTier] = useState<keyof typeof PRIVATE>('master');
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -28,7 +88,7 @@ export const Pricing: React.FC = () => {
   };
 
   useEffect(() => {
-    trackPageView('/pricing', 'Pricing & Packages');
+    trackPageView('/pricing/', 'Pilates Class Prices Amsterdam | PT Studio 7');
     trackPricingView();
     void ensureHealcodeLoaded();
   }, []);
@@ -45,73 +105,30 @@ export const Pricing: React.FC = () => {
     });
   }, [openFaqIndex]);
 
-  const pricingFaqs = [
-    {
-      question: 'How long are the packages valid?',
-      answer:
-        'Each package has a valid period of weeks equal to the number of lessons. For example, a 5-class package is valid for 5 weeks from the purchase date.',
-    },
-    {
-      question: 'Can I attend during pregnancy?',
-      answer:
-        'Pregnant clients are only accepted for one-on-one classes where we can provide personalized attention to ensure safety.',
-    },
-    {
-      question: 'What if I have injuries?',
-      answer:
-        'Please inform us if you have any injuries or joint problems before booking. Our trainers can modify exercises to accommodate your needs.',
-    },
-    {
-      question: 'Can I try before I commit to a package?',
-      answer:
-        'Yes! We offer single class options for all training types, and we recommend starting with a smaller package to try our classes.',
-    },
-    {
-      question: 'How do membership renewals work?',
-      answer:
-        "1-Month Memberships (4 & 8 classes): 1-month period. You can cancel after the first month. Auto-renews monthly unless cancelled. 3-Month Membership: 3-month commitment. You can cancel after 3 months. Auto-renews unless cancelled. Annual Membership: 12-month commitment. You can cancel after 12 months. Auto-renews unless cancelled. If you don't cancel before the renewal date, payments will be processed automatically.",
-    },
-    {
-      question: 'Can I cancel my membership?',
-      answer:
-        'Yes! In 1-month memberships (4 & 8 classes), you have the right to cancel after the first month. The 3-month and annual memberships can be cancelled after you complete your initial commitment period (3 or 12 months). To cancel, contact us via email at info@pt7.nl or call +31 685 162693 before your renewal date.',
-    },
-    {
-      question: 'Is the annual membership unlimited classes?',
-      answer:
-        `Yes! The annual membership at ${formatEur(MEMBERSHIP.annual.perMonth)} per month (${formatEur(MEMBERSHIP.annual.yearTotal)} for 12 months total) gives you unlimited classes (all days, 7:00-18:00), with a maximum of 1 class per day. This is our best value option and includes a 4-week freeze option.`,
-    },
-    {
-      question: "What's the class duration?",
-      answer:
-        `All our classes are ${CLASS_MINUTES} minutes long, providing an effective and efficient workout that fits into your busy schedule.`,
-    },
-    {
-      question: 'How many people in group classes?',
-      answer:
-        `Our group classes have a maximum of ${GROUP_MAX} participants, ensuring you receive personalized attention while enjoying the energy of a group setting.`,
-    },
-  ];
+  const pricingVisible = pricingVisibleFaqs(formatEur);
+  const pricingSchema = [...pricingSeoOnlyFaqs(formatEur), ...pricingVisible];
 
   return (
     <>
       <SEOHead
-        title="Pricing - Pilates Classes & Memberships | PT Studio 7 Museumplein"
-        description={`Flexible Pilates pricing at Museumplein. Small group classes (max ${GROUP_MAX}), memberships, private classes. Expert instructors. Premium location. TRX & Strength Training. From ${formatEur(GROUP.pack20.perClass)}/class.`}
-        keywords="Pilates prijzen Amsterdam, Pilates abonnement Amsterdam, Pilates prices Museumplein, reformer pilates prive amsterdam, kleine groep pilates amsterdam, private Pilates kosten, small group Pilates pricing, proefles Pilates Amsterdam, strippenkaart Pilates"
+        title="Pilates Class Prices Amsterdam | Packages & Memberships | PT Studio 7"
+        description={`Pilates class prices in Amsterdam at Museumplein. Small group classes (max ${GROUP_MAX}) from ${formatEur(GROUP.pack20.perClass)}/class, memberships, and private sessions. Reformer, TRX & strength.`}
+        keywords="pilates class prices amsterdam, pilates prices amsterdam, Pilates prijzen Amsterdam, Pilates abonnement Amsterdam, Pilates prices Museumplein, reformer pilates prive amsterdam, kleine groep pilates amsterdam, private Pilates kosten, small group Pilates pricing, proefles Pilates Amsterdam, strippenkaart Pilates"
         canonical="https://www.pt7.nl/pricing/"
-        ogTitle="PT Studio 7 Pricing | Pilates Packages at Museumplein"
-        ogDescription={`Small group Pilates (max ${GROUP_MAX}) from ${formatEur(GROUP.pack20.perClass)}/class. Memberships & private classes available. Expert instructors at Amsterdam's most exclusive Museumplein Pilates studio.`}
+        ogTitle="Pilates Class Prices Amsterdam | PT Studio 7 Museumplein"
+        ogDescription={`Pilates class prices in Amsterdam: small groups (max ${GROUP_MAX}) from ${formatEur(GROUP.pack20.perClass)}/class. Memberships and private sessions at Museumplein.`}
       />
-      <StructuredData type="FAQPage" data={{ faqs: pricingFaqs }} />
-      <Breadcrumbs items={[{ name: 'Pricing', path: '/pricing' }]} />
+      <StructuredData type="FAQPage" data={{ faqs: pricingSchema }} />
+      <Breadcrumbs items={[{ name: 'Pilates Class Prices Amsterdam', path: '/pricing/' }]} />
 
       <div className="pricing-page">
         <header className="pricing-hero">
           <p className="pricing-kicker">Pricing</p>
-          <h1>Pilates classes &amp; memberships</h1>
+          <h1>Pilates class prices &amp; memberships in Amsterdam</h1>
           <p className="pricing-lead">
             Small groups (max {GROUP_MAX}), memberships, and private sessions at Museumplein.
+            Ready to book?{' '}
+            <Link to="/schedule/">View the class schedule</Link>.
           </p>
         </header>
         <div className="special-offer-container">
@@ -640,100 +657,18 @@ export const Pricing: React.FC = () => {
           <div className="faq-container">
             <p className="pricing-kicker">FAQ</p>
             <h2>Questions before you book</h2>
-            
-            <div className={`faq-item ${openFaqIndex === 0 ? 'active' : ''}`}>
-              <div className="faq-header" onClick={() => toggleFaq(0)}>
-                <h3>How long are the packages valid?</h3>
-                <span className="faq-icon">{openFaqIndex === 0 ? '−' : '+'}</span>
-              </div>
-              <div className="faq-content">
-                <p>Each package has a valid period of weeks equal to the number of lessons. For example, a 5-class package is valid for 5 weeks from the purchase date.</p>
-              </div>
-            </div>
 
-            <div className={`faq-item ${openFaqIndex === 1 ? 'active' : ''}`}>
-              <div className="faq-header" onClick={() => toggleFaq(1)}>
-                <h3>Can I attend during pregnancy?</h3>
-                <span className="faq-icon">{openFaqIndex === 1 ? '−' : '+'}</span>
+            {pricingVisible.map((faq, index) => (
+              <div key={faq.question} className={`faq-item ${openFaqIndex === index ? 'active' : ''}`}>
+                <div className="faq-header" onClick={() => toggleFaq(index)}>
+                  <h3>{faq.question}</h3>
+                  <span className="faq-icon">{openFaqIndex === index ? '−' : '+'}</span>
+                </div>
+                <div className="faq-content">
+                  <p>{faq.answer}</p>
+                </div>
               </div>
-              <div className="faq-content">
-                <p>Pregnant clients are only accepted for one-on-one classes where we can provide personalized attention to ensure safety.</p>
-              </div>
-            </div>
-
-            <div className={`faq-item ${openFaqIndex === 2 ? 'active' : ''}`}>
-              <div className="faq-header" onClick={() => toggleFaq(2)}>
-                <h3>What if I have injuries?</h3>
-                <span className="faq-icon">{openFaqIndex === 2 ? '−' : '+'}</span>
-              </div>
-              <div className="faq-content">
-                <p>Please inform us if you have any injuries or joint problems before booking. Our trainers can modify exercises to accommodate your needs.</p>
-              </div>
-            </div>
-
-            <div className={`faq-item ${openFaqIndex === 3 ? 'active' : ''}`}>
-              <div className="faq-header" onClick={() => toggleFaq(3)}>
-                <h3>Can I try before I commit to a package?</h3>
-                <span className="faq-icon">{openFaqIndex === 3 ? '−' : '+'}</span>
-              </div>
-              <div className="faq-content">
-                <p>Yes! We offer single class options for all training types, and we recommend starting with a smaller package to try our classes.</p>
-              </div>
-            </div>
-
-            <div className={`faq-item ${openFaqIndex === 4 ? 'active' : ''}`}>
-              <div className="faq-header" onClick={() => toggleFaq(4)}>
-                <h3>How do membership renewals work?</h3>
-                <span className="faq-icon">{openFaqIndex === 4 ? '−' : '+'}</span>
-              </div>
-              <div className="faq-content">
-                <p><strong>1-Month Memberships (4 & 8 classes):</strong> 1-month period. You can cancel after the first month. Auto-renews monthly unless cancelled.</p>
-                <p><strong>3-Month Membership:</strong> 3-month commitment. You can cancel after 3 months. Auto-renews unless cancelled.</p>
-                <p><strong>Annual Membership:</strong> 12-month commitment. You can cancel after 12 months. Auto-renews unless cancelled.</p>
-                <p>If you don't cancel before the renewal date, payments will be processed automatically.</p>
-              </div>
-            </div>
-
-            <div className={`faq-item ${openFaqIndex === 5 ? 'active' : ''}`}>
-              <div className="faq-header" onClick={() => toggleFaq(5)}>
-                <h3>Can I cancel my membership?</h3>
-                <span className="faq-icon">{openFaqIndex === 5 ? '−' : '+'}</span>
-              </div>
-              <div className="faq-content">
-                <p>Yes! In 1-month memberships (4 & 8 classes), you have the right to cancel after the first month. The 3-month and annual memberships can be cancelled after you complete your initial commitment period (3 or 12 months).</p>
-                <p>To cancel, contact us via email at <a href="mailto:info@pt7.nl">info@pt7.nl</a> or call <a href="tel:+31685162693">+31 685 162693</a> before your renewal date.</p>
-              </div>
-            </div>
-
-            <div className={`faq-item ${openFaqIndex === 6 ? 'active' : ''}`}>
-              <div className="faq-header" onClick={() => toggleFaq(6)}>
-                <h3>Is the annual membership unlimited classes?</h3>
-                <span className="faq-icon">{openFaqIndex === 6 ? '−' : '+'}</span>
-              </div>
-              <div className="faq-content">
-                <p>Yes! The annual membership at {formatEur(MEMBERSHIP.annual.perMonth)} per month ({formatEur(MEMBERSHIP.annual.yearTotal)} for 12 months total) gives you UNLIMITED classes (all days, 7:00-18:00), with a maximum of 1 class per day. This is our best value option and includes a 4-week freeze option.</p>
-              </div>
-            </div>
-
-            <div className={`faq-item ${openFaqIndex === 7 ? 'active' : ''}`}>
-              <div className="faq-header" onClick={() => toggleFaq(7)}>
-                <h3>What's the class duration?</h3>
-                <span className="faq-icon">{openFaqIndex === 7 ? '−' : '+'}</span>
-              </div>
-              <div className="faq-content">
-                <p>All our classes are {CLASS_MINUTES} minutes long, providing an effective and efficient workout that fits into your busy schedule.</p>
-              </div>
-            </div>
-
-            <div className={`faq-item ${openFaqIndex === 8 ? 'active' : ''}`}>
-              <div className="faq-header" onClick={() => toggleFaq(8)}>
-                <h3>How many people in group classes?</h3>
-                <span className="faq-icon">{openFaqIndex === 8 ? '−' : '+'}</span>
-              </div>
-              <div className="faq-content">
-                <p>Our group classes have a maximum of {GROUP_MAX} participants, ensuring you receive personalized attention while enjoying the energy of a group setting.</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 

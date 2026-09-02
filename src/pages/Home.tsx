@@ -59,6 +59,34 @@ const reviewsData = [
   { author: 'Flaminia', reviewBody: "PT Studio 7 and Elif are exactly what I was looking for...", ratingValue: 5 },
 ];
 
+const homeFaqs = [
+  {
+    question: 'Where can I take Pilates classes in Amsterdam?',
+    answer:
+      'PT Studio 7 offers Reformer Pilates, TRX, strength, and cardio at Van Baerlestraat 76C near Museumplein in Amsterdam Oud-Zuid. Book group classes (max 5) or private sessions online at pt7.nl/schedule/.',
+  },
+  {
+    question: 'How many people are in a Pilates group class?',
+    answer:
+      'Our group classes have a maximum of 5 participants so instructors can coach form and progress personally.',
+  },
+  {
+    question: 'How do I book a class at PT Studio 7?',
+    answer:
+      'Use the online schedule at pt7.nl/schedule/ to pick a group class or private appointment. View packages and intro offers at pt7.nl/pricing/.',
+  },
+  {
+    question: 'What training does PT Studio 7 offer?',
+    answer:
+      'Reformer Pilates is our core focus. We also offer TRX, strength and functional training, cardio sessions, prenatal private Pilates, and instructor training through PT7 Academy.',
+  },
+  {
+    question: 'Where is PT Studio 7 located?',
+    answer:
+      'Van Baerlestraat 76C, 1071 BB Amsterdam, across from the Stedelijk Museum at Museumplein in Oud-Zuid.',
+  },
+];
+
 function TrainerTile({
   trainer,
 }: {
@@ -125,15 +153,16 @@ export const Home: React.FC = () => {
     <>
       <SilkBackground />
       <SEOHead
-        title="Reformer Pilates & Personal Training in Amsterdam | PT Studio 7"
-        description="Reformer Pilates & personal training in Amsterdam at Museumplein, max 5 per class. Private sessions and small groups with certified instructors. 15+ years expertise. Book now."
-        keywords="Reformer Pilates Amsterdam, personal training Amsterdam, Pilates Museumplein, private Pilates Amsterdam, small group Pilates, Pilates studio Van Baerlestraat, TRX training Amsterdam, prenatal Pilates Amsterdam"
+        title="Pilates Amsterdam | Reformer Pilates & Personal Training | PT Studio 7"
+        description="Pilates classes in Amsterdam at Museumplein: Reformer Pilates, small groups (max 5), and private sessions with certified instructors. Boutique studio in Oud-Zuid. Book online."
+        keywords="Pilates Amsterdam, pilates classes Amsterdam, pilates classes near me, Reformer Pilates Amsterdam, personal training Amsterdam, Pilates Museumplein, private Pilates Amsterdam, small group Pilates, Pilates studio Van Baerlestraat, TRX training Amsterdam, prenatal Pilates Amsterdam"
         canonical="https://www.pt7.nl/"
-        ogTitle="Reformer Pilates & Personal Training in Amsterdam | PT Studio 7"
-        ogDescription="Reformer Pilates & personal training in Amsterdam at Museumplein, max 5 per class. Private sessions and small groups with certified instructors. 15+ years expertise. Book now."
+        ogTitle="Pilates Amsterdam | Reformer Pilates & Personal Training | PT Studio 7"
+        ogDescription="Pilates classes in Amsterdam at Museumplein: Reformer Pilates, small groups (max 5), and private sessions with certified instructors. Boutique studio in Oud-Zuid. Book online."
         ogImage="/assets/images/studio.jpg"
       />
       <StructuredData type="LocalBusiness" data={{ reviews: reviewsData }} />
+      <StructuredData type="FAQPage" data={{ faqs: homeFaqs }} />
 
       <AcademyUrgencyBanner />
 
@@ -164,11 +193,14 @@ export const Home: React.FC = () => {
             Reformer Pilates &amp; Personal Training in Amsterdam
           </h1>
           <p className="home-hero-line">
-            Boutique Pilates &amp; Fitness Studio at Museumplein
+            Pilates classes in Amsterdam Oud-Zuid, boutique studio at Museumplein
           </p>
           <div className="home-hero-actions">
             <Link to="/schedule/" className="home-btn home-btn-gold" onClick={() => trackFBBookingClick()}>
               Book a Class
+            </Link>
+            <Link to="/reformer-pilates-amsterdam/" className="home-btn home-btn-ghost">
+              Pilates Classes
             </Link>
             <Link to="/pricing/" className="home-btn home-btn-ghost">
               View Pricing

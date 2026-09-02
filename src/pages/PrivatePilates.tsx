@@ -36,15 +36,15 @@ const faqs = [
 
 export const PrivatePilates: React.FC = () => {
   useEffect(() => {
-    trackPageView('/private-pilates-amsterdam', 'Private Pilates Amsterdam | PT Studio 7');
+    trackPageView('/private-pilates-amsterdam/', 'Private Pilates Amsterdam | PT Studio 7');
   }, []);
 
   return (
     <>
       <SEOHead
         title="Private Reformer Pilates Sessions Amsterdam | PT Studio 7"
-        description="One-on-one private Reformer Pilates sessions at Museumplein Amsterdam. 100% personalised training with certified instructors. Duo & trio options available. Book now."
-        keywords="private pilates amsterdam, privé pilates amsterdam, one on one pilates amsterdam, personal pilates amsterdam, pilates prive les amsterdam, prive pilates museumplein, privé reformer pilates, priveles pilates amsterdam"
+        description="Private Pilates near Museumplein and Oud-Zuid in Amsterdam. One-on-one Reformer sessions with 100% personalised coaching. Duo and trio options. Book online."
+        keywords="private pilates amsterdam, pilates near me, pilates near me amsterdam, privé pilates amsterdam, one on one pilates amsterdam, personal pilates amsterdam, pilates prive les amsterdam, prive pilates museumplein, privé reformer pilates, priveles pilates amsterdam"
         canonical="https://www.pt7.nl/private-pilates-amsterdam/"
         ogTitle="Private Reformer Pilates Amsterdam | PT Studio 7 Museumplein"
         ogDescription="100% personalised private Pilates sessions at Museumplein. One-on-one, duo or trio. Certified instructors with 15+ years experience."
@@ -53,7 +53,7 @@ export const PrivatePilates: React.FC = () => {
         type="FAQPage"
         data={{ faqs }}
       />
-      <Breadcrumbs items={[{ name: 'Private Pilates Amsterdam', path: '/private-pilates-amsterdam' }]} />
+      <Breadcrumbs items={[{ name: 'Private Pilates Amsterdam', path: '/private-pilates-amsterdam/' }]} />
 
       <div className="service-page">
         <Reveal className="service-hero">
@@ -61,8 +61,9 @@ export const PrivatePilates: React.FC = () => {
             <p className="kicker">Private</p>
             <h1>Private Reformer Pilates Sessions Amsterdam</h1>
             <p>
-              100% personalised training, your goals, your pace, your program. One-on-one or
-              small private groups at our boutique studio at Museumplein.
+              100% personalised training: your goals, your pace, your program. One-on-one or
+              small private groups at our boutique studio near Museumplein in Amsterdam Oud-Zuid.
+              Looking for Pilates near you in central Amsterdam? We are across from the Stedelijk Museum.
             </p>
             <div className="service-hero-badges">
               <span className="service-badge">One-on-one</span>
