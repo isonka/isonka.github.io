@@ -1,13 +1,16 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigationType } from 'react-router-dom';
 
 export const ScrollToTop: React.FC = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
+  const navigationType = useNavigationType();
 
   useEffect(() => {
+    // Hash links scroll to their own target; POP leaves the browser's
+    // scroll restoration intact so Back returns to the previous position.
+    if (hash || navigationType === 'POP') return;
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [pathname, hash, navigationType]);
 
   return null;
 };
-

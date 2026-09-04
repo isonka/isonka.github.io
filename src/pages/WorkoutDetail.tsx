@@ -4,6 +4,7 @@ import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { trackPageView } from '../utils/gtmTracking';
+import { ensureHealcodeLoaded } from '../utils/healcode';
 import { workoutDetails } from '../data/workoutDetails';
 import '../styles/WorkoutDetail.css';
 
@@ -14,6 +15,7 @@ export const WorkoutDetail: React.FC = () => {
   useEffect(() => {
     if (workout) {
       trackPageView(`/workouts/${workout.slug}/`, `${workout.hero.title} - PT Studio 7`);
+      void ensureHealcodeLoaded();
     }
   }, [workout]);
 

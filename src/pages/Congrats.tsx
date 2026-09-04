@@ -4,12 +4,6 @@ import { SEOHead } from '../components/SEOHead';
 import { trackBookingConfirmation, trackPageView } from '../utils/gtmTracking';
 import '../styles/Congrats.css';
 
-declare global {
-  interface Window {
-    gtag?: (command: string, eventName: string, params?: Record<string, unknown>) => void;
-  }
-}
-
 export const Congrats: React.FC = () => {
   useEffect(() => {
     trackPageView('/congrats', 'Booking Confirmed');

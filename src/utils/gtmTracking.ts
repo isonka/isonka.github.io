@@ -18,7 +18,6 @@ export const trackEvent = (eventName: string, eventParams?: Record<string, unkno
       event: eventName,
       ...eventParams,
     });
-    console.log('GTM Event:', eventName, eventParams);
   }
 };
 

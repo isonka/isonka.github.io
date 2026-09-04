@@ -360,7 +360,7 @@ export const workoutDetails: WorkoutDetailData[] = [
       canonical: 'https://www.pt7.nl/workouts/functional-training/',
       ogTitle: 'Nike Strength Training Amsterdam | PT Studio 7',
       ogDescription: 'Premium Nike Strength equipment. Olympic barbell training with expert coaches at our boutique Museumplein studio.',
-      ogImage: '/assets/images/nike_strength_studio.jpg',
+      ogImage: '/assets/images/og-share.jpg',
     },
     breadcrumbName: 'Nike Strength Training',
     hero: {

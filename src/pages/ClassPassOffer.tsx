@@ -66,7 +66,7 @@ export const ClassPassOffer = () => {
 
             <div className="comparison-card direct-card">
               <div className="card-header">
-                <img src="/assets/images/ts_logo.png" alt="PT Studio 7" className="pt7-logo" />
+                <img src="/assets/images/ts_logo.webp" alt="PT Studio 7" className="pt7-logo" />
                 <span className="card-label">Direct Membership (4 classes/month)</span>
               </div>
               <div className="card-body">

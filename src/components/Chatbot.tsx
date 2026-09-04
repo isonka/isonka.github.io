@@ -21,6 +21,9 @@ interface Message {
   options?: string[];
 }
 
+let lastMessageId = 0;
+const nextMessageId = () => (lastMessageId += 1);
+
 interface UserProfile {
   goal?: string;
   experience?: string;
@@ -99,7 +102,7 @@ export const Chatbot: React.FC = () => {
         setMessages(prev => [
           ...prev,
           {
-            id: Date.now(),
+            id: nextMessageId(),
             text,
             sender: 'bot',
             options
@@ -113,7 +116,7 @@ export const Chatbot: React.FC = () => {
     setMessages(prev => [
       ...prev,
       {
-        id: Date.now(),
+        id: nextMessageId(),
         text,
         sender: 'user'
       }

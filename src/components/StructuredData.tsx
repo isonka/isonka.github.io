@@ -110,7 +110,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
       '@type': ['LocalBusiness', 'SportsActivityLocation'],
       '@id': `${baseUrl}/#localbusiness`,
       name: 'PT Studio 7 Amsterdam',
-      image: `${baseUrl}/assets/images/studio.jpg`,
+      image: `${baseUrl}/assets/images/studio.webp`,
       url: baseUrl,
       telephone: '+31685162693',
       priceRange: 'EUR 28-85',
@@ -181,7 +181,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
       url: baseUrl,
       description:
         "Boutique Pilates and personal training studio at Museumplein, Amsterdam offering Reformer Pilates, TRX, strength training, private sessions, and small group classes.",
-      image: `${baseUrl}/assets/images/studio.jpg`,
+      image: `${baseUrl}/assets/images/studio.webp`,
       telephone: '+31685162693',
       priceRange: 'EUR 28-85',
       address: {
@@ -397,7 +397,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
         name: 'PT Studio 7 Amsterdam',
         logo: {
           '@type': 'ImageObject',
-          url: `${baseUrl}/assets/images/pt7logo.png`,
+          url: `${baseUrl}/assets/images/pt7logo.webp`,
         },
       },
       articleSection: bp.articleSection || 'Pilates',

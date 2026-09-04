@@ -243,7 +243,7 @@ I came across your excellent resource page on Amsterdam fitness options
 at [URL]. Great list!
 
 I noticed you're missing Reformer Pilates options in the Museumplein 
-area. We're PT Studio 7 (www.ptstudio7amsterdam.nl), a boutique studio 
+area. We're PT Studio 7 (www.pt7.nl), a boutique studio 
 with:
 
 • 15 years experience
@@ -379,7 +379,7 @@ Would you be open to a 15-minute call to explore this?
 Best regards,
 Elif Arzu Ogan
 Owner, PT Studio 7
-www.ptstudio7amsterdam.nl
+www.pt7.nl
 +31 685 162693
 ```
 

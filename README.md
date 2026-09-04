@@ -146,7 +146,7 @@ Dynamic SEO meta tags component used on every page
   title="Page Title"
   description="Page description"
   keywords="keywords, here"
-  canonical="https://www.ptstudio7amsterdam.nl/page"
+  canonical="https://www.pt7.nl/page/"
 />
 ```
 
@@ -185,7 +185,7 @@ Edit `src/pages/Schedule.tsx` - Update class duration, group size, etc.
 ## 🆘 Support
 
 For questions or issues:
-- Email: info@ptstudio7amsterdam.nl
+- Email: info@pt7.nl
 - Location: Van Baerlestraat 76C, 1071BB Amsterdam
 
 ---

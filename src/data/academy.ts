@@ -15,8 +15,8 @@ export const MAT_COURSE_TITLE = 'Mat & Trapeze Table Instructor Course';
 export const COURSE_TITLE_NL = 'Reformer Pilates Instructeurscursus';
 export const MAT_COURSE_TITLE_NL = 'Mat & Trapeze Table Instructeurscursus';
 
-export const ITTAP_LOGO = '/assets/images/pma-ittap-reformer-approved-2026.png';
-export const PMA_LOGO = '/assets/images/pma-logo-black.png';
+export const ITTAP_LOGO = '/assets/images/pma-ittap-reformer-approved-2026.webp';
+export const PMA_LOGO = '/assets/images/pma-logo-black.webp';
 export const ITTAP_LOGO_ALT =
   'ITTAP Approved Reformer Pilates Instructor Course 2026, Pilates Method Alliance (PMA)';
 export const PMA_LOGO_ALT = 'Pilates Method Alliance (PMA)';

@@ -29,6 +29,7 @@ type GtagFn = (...args: unknown[]) => void;
 declare global {
   interface Window {
     __pt7GaReady?: boolean;
+    gtag?: GtagFn;
   }
 }
 
@@ -55,17 +56,16 @@ function getTrackingState(): TrackingState {
 }
 
 function ensureGtagStub() {
-  const win = window as Window & { gtag?: GtagFn };
   window.dataLayer = window.dataLayer || [];
-  if (!win.gtag) {
-    win.gtag = (...args: unknown[]) => {
+  if (!window.gtag) {
+    window.gtag = (...args: unknown[]) => {
       window.dataLayer!.push(args);
     };
   }
 }
 
 function getGtag(): GtagFn | undefined {
-  return (window as Window & { gtag?: GtagFn }).gtag;
+  return window.gtag;
 }
 
 export function getStoredConsent(): Pt7Consent | null {

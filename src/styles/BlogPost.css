@@ -112,6 +112,37 @@
   color: var(--gold-text, #c9a800);
 }
 
+.blog-post-content sup {
+  font-size: 0.7em;
+  line-height: 0;
+  vertical-align: super;
+}
+
+.blog-post-content sup a {
+  font-weight: 600;
+  border-bottom: none;
+  padding: 0 0.05em;
+}
+
+.blog-post-content .blog-refs {
+  margin: 1.5em 0 0;
+  padding-left: 1.4em;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #555;
+}
+
+.blog-post-content .blog-refs li {
+  margin-bottom: 0.85em;
+  padding-left: 0.25em;
+}
+
+.blog-post-content .blog-refs li:target {
+  background: rgba(201, 168, 0, 0.12);
+  outline: 2px solid transparent;
+  border-radius: 4px;
+}
+
 .blog-post-content img {
   max-width: 100%;
   height: auto;

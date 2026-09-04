@@ -27,7 +27,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
   canonical,
   ogTitle,
   ogDescription,
-  ogImage = '/assets/images/pt7logo.png',
+  ogImage = '/assets/images/og-share.jpg',
   ogLocale = 'en_US',
   ogLocaleAlternates = ['nl_NL'],
   htmlLang = 'en',

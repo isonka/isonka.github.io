@@ -1,4 +1,4 @@
-import { useEffect, lazy, Suspense } from 'react';
+import { useEffect, useState, lazy, Suspense } from 'react';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -73,6 +73,47 @@ function RedirectHandler() {
   return null;
 }
 
+const CHATBOT_DEFER_MS = 4000;
+
+/** Keeps the chatbot bundle off the critical path: fetched on first interaction or when idle. */
+function DeferredChatbot() {
+  const [shouldLoad, setShouldLoad] = useState(false);
+
+  useEffect(() => {
+    if (shouldLoad) return;
+
+    const load = () => setShouldLoad(true);
+    const events = ['pointerdown', 'keydown', 'scroll'] as const;
+    events.forEach((event) =>
+      window.addEventListener(event, load, { once: true, passive: true }),
+    );
+
+    const w = window as Window & {
+      requestIdleCallback?: (cb: IdleRequestCallback, options?: IdleRequestOptions) => number;
+      cancelIdleCallback?: (handle: number) => void;
+    };
+    const idleId = w.requestIdleCallback?.(load, { timeout: CHATBOT_DEFER_MS });
+    const timeoutId =
+      typeof w.requestIdleCallback === 'function'
+        ? undefined
+        : window.setTimeout(load, CHATBOT_DEFER_MS);
+
+    return () => {
+      events.forEach((event) => window.removeEventListener(event, load));
+      if (idleId !== undefined) w.cancelIdleCallback?.(idleId);
+      if (timeoutId !== undefined) window.clearTimeout(timeoutId);
+    };
+  }, [shouldLoad]);
+
+  if (!shouldLoad) return null;
+
+  return (
+    <Suspense fallback={null}>
+      <Chatbot />
+    </Suspense>
+  );
+}
+
 function RouteFallback() {
   return (
     <div className="route-fallback" role="status" aria-live="polite" aria-busy="true">
@@ -98,9 +139,7 @@ function Layout() {
           </Suspense>
         </main>
         <Footer />
-        <Suspense fallback={null}>
-          <Chatbot />
-        </Suspense>
+        <DeferredChatbot />
       </div>
     </>
   );
