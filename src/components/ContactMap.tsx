@@ -144,12 +144,13 @@ export const ContactMap: FC = () => {
       {showMap ? (
         <div className="contact-map-overlay" aria-hidden="true">
           <svg className="contact-map-routes" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <line className="contact-map-route contact-map-route--tram" x1="7" y1="62" x2="50" y2="47" />
-            <line className="contact-map-route contact-map-route--bus" x1="93" y1="22" x2="50" y2="47" />
-            <line className="contact-map-route contact-map-route--bike" x1="50" y1="92" x2="50" y2="47" />
+            <line className="contact-map-route contact-map-route--tram" x1="48" y1="88" x2="50" y2="47" />
+            <line className="contact-map-route contact-map-route--tram" x1="92" y1="42" x2="50" y2="47" />
+            <line className="contact-map-route contact-map-route--bus" x1="90" y1="18" x2="50" y2="47" />
+            <line className="contact-map-route contact-map-route--bike" x1="40" y1="10" x2="48" y2="47" />
           </svg>
-          <Chip mode="tram" label={t('contactMap.tram')} sub="5 · 12 · 24" />
-          <Chip mode="bus" label={t('contactMap.bus')} sub="N84 · N88" />
+          <Chip mode="tram" label={t('contactMap.tram')} sub="2 · 5 · 12 · 24" />
+          <Chip mode="bus" label={t('contactMap.bus')} sub={'357 · 397\nN84 · N88'} />
           <Chip mode="bike" label={t('contactMap.bike')} sub={t('contactMap.cycleRoute')} />
           <Vehicle mode="tram">
             <TramGlyph />

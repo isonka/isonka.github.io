@@ -56,7 +56,7 @@ export const nlCommon: DeepStringify<EnCommon> = {
       'De Google-kaart laadt na statistiek- of marketingcookies, of als je hem hier toont.',
     showMap: 'Kaart tonen',
     openMaps: 'Openen in Google Maps',
-    legend: 'Tram 5, 12 en 24, nachtbus en fietsroutes bedienen het Museumplein.',
+    legend: 'Tram 2, 5, 12 en 24, bus 357 en 397, nachtbus en fietsroutes bedienen het Museumplein.',
     tram: 'Tram',
     bus: 'Bus',
     bike: 'Fiets',

@@ -140,21 +140,20 @@
 }
 
 .contact-map-chip--tram {
-  left: 7%;
-  top: 68%;
+  left: 22%;
+  top: 82%;
   transform: translateY(-50%);
 }
 
 .contact-map-chip--bus {
   left: 93%;
-  top: 16%;
+  top: 14%;
   transform: translate(-100%, -50%);
 }
 
 .contact-map-chip--bike {
-  left: 50%;
-  top: 84%;
-  transform: translate(-50%, 0);
+  left: 12%;
+  top: 8%;
 }
 
 .contact-map-chip-row {
@@ -184,6 +183,8 @@
   color: var(--accent);
   font-weight: 600;
   padding-left: 13px;
+  white-space: pre-line;
+  line-height: 1.35;
 }
 
 .contact-map-vehicle {
@@ -229,8 +230,8 @@
 @keyframes contact-map-tram {
   0%,
   100% {
-    left: 7%;
-    top: 62%;
+    left: 48%;
+    top: 88%;
   }
   50% {
     left: 50%;
@@ -241,8 +242,8 @@
 @keyframes contact-map-bus {
   0%,
   100% {
-    left: 93%;
-    top: 22%;
+    left: 90%;
+    top: 18%;
   }
   50% {
     left: 50%;
@@ -253,11 +254,11 @@
 @keyframes contact-map-bike {
   0%,
   100% {
-    left: 50%;
-    top: 92%;
+    left: 40%;
+    top: 10%;
   }
   50% {
-    left: 50%;
+    left: 48%;
     top: 47%;
   }
 }
@@ -283,17 +284,17 @@
   }
 
   .contact-map-vehicle--tram {
-    left: 28.5%;
-    top: 54.5%;
+    left: 49%;
+    top: 67.5%;
   }
 
   .contact-map-vehicle--bus {
-    left: 71.5%;
-    top: 34.5%;
+    left: 70%;
+    top: 32.5%;
   }
 
   .contact-map-vehicle--bike {
-    left: 50%;
-    top: 70%;
+    left: 44%;
+    top: 28.5%;
   }
 }

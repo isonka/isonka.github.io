@@ -53,7 +53,7 @@ export const enCommon = {
       'Google Map loads after statistics or marketing cookies, or if you show it here.',
     showMap: 'Show map',
     openMaps: 'Open in Google Maps',
-    legend: 'Tram lines 5, 12 and 24, night buses, and cycle routes serve Museumplein.',
+    legend: 'Tram lines 2, 5, 12 and 24, buses 357 and 397, night buses, and cycle routes serve Museumplein.',
     tram: 'Tram',
     bus: 'Bus',
     bike: 'Bike',
