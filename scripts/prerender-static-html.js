@@ -13,50 +13,16 @@ const distDir = path.join(projectRoot, 'dist');
 const host = '127.0.0.1';
 let baseUrl = '';
 
-const routes = [
-  '/',
-  '/nl/',
-  '/pricing/',
-  '/schedule/',
-  '/equipment/',
-  '/equipment/reformer/',
-  '/equipment/tower-reformer/',
-  '/equipment/cadillac/',
-  '/equipment/wunda-chair/',
-  '/equipment/ladder-barrel/',
-  '/workouts/reformer-pilates/',
-  '/workouts/trx/',
-  '/workouts/functional-training/',
-  '/workouts/cardio/',
-  '/workouts/summer-shred-lab/',
-  '/congrats/',
-  '/instructors/',
-  '/trainer/elif/',
-  '/trainer/gokben/',
-  '/trainer/goknur/',
-  '/trainer/gulce/',
-  '/trainer/lal/',
-  '/trainer/nisan/',
-  '/trainer/kelly/',
-  '/trainer/gamze/',
-  '/academy/',
-  '/academy/nl/',
-  '/healthcare-providers/',
-  '/corporate/',
-  '/privacy/',
-  '/classpass-offer/',
-  '/prenatal-pilates-amsterdam/',
-  '/pregnancy-pilates-amsterdam/',
-  '/private-pilates-amsterdam/',
-  '/trx-training-amsterdam/',
-  '/strength-training-amsterdam/',
-  '/reformer-pilates-amsterdam/',
-  '/blog/',
-  '/blog/prenatal-pilates-supporting-body-through-every-trimester/',
-  '/blog/pilates-for-men-strength-flexibility-athletic-performance/',
-  '/blog/pilates-prices-amsterdam-2026-complete-guide/',
-  '/blog/career-change-banker-to-pilates-instructor/',
-];
+const manifestPath = path.join(projectRoot, '.routes-manifest.json');
+if (!fs.existsSync(manifestPath)) {
+  console.error('✗ .routes-manifest.json not found — run `npm run routes:manifest` first.');
+  process.exit(1);
+}
+
+// Routes with `prerender: false` in site/routes.ts are absent here on purpose:
+// a page that redirects client-side would be snapshotted as its redirect target.
+// generate-static-routes.js still emits a shell for those with the right canonical.
+const routes = JSON.parse(fs.readFileSync(manifestPath, 'utf-8')).prerenderPaths;
 
 function findAvailablePort(start = 4173) {
   return new Promise((resolve, reject) => {
@@ -193,6 +159,49 @@ function shouldAllowRequest(url) {
   );
 }
 
+// Text that must never reach a published snapshot. Each entry is a state that is
+// true only inside the prerender sandbox (third-party requests are blocked) or
+// only for a real visitor (per-visitor UI), never for a crawler.
+const FORBIDDEN_SNIPPETS = [
+  { needle: 'Booking calendar could not load', reason: 'MindBody widget error state' },
+  { needle: 'pt7-consent-panel', reason: 'cookie consent dialog' },
+  { needle: 'Unexpected Application Error', reason: 'router error boundary' },
+];
+
+/** Returns a list of problems; empty means the snapshot is publishable. */
+function findSnapshotProblems(html) {
+  const problems = [];
+
+  const title = html.match(/<title>([\s\S]*?)<\/title>/i);
+  if (!title || !title[1].trim()) {
+    problems.push('missing or empty <title>');
+  }
+
+  const description = html.match(/<meta\s+name="description"\s+content="([^"]*)"/i);
+  if (!description || !description[1].trim()) {
+    problems.push('missing or empty meta description');
+  }
+
+  const canonicals = html.match(/<link[^>]+rel="canonical"[^>]*>/gi) ?? [];
+  if (canonicals.length !== 1) {
+    problems.push(`expected exactly 1 canonical link, found ${canonicals.length}`);
+  } else if (!/href="https:\/\/www\.pt7\.nl\//.test(canonicals[0])) {
+    problems.push(`canonical is not an absolute www.pt7.nl URL: ${canonicals[0]}`);
+  }
+
+  if (!/<h1[\s>]/i.test(html)) {
+    problems.push('no <h1> in rendered output');
+  }
+
+  for (const { needle, reason } of FORBIDDEN_SNIPPETS) {
+    if (html.includes(needle)) {
+      problems.push(`contains ${reason} ("${needle}")`);
+    }
+  }
+
+  return problems;
+}
+
 function runCommand(command, args) {
   return new Promise((resolve, reject) => {
     const child = spawn(command, args, { cwd: projectRoot, stdio: 'inherit' });
@@ -242,11 +251,19 @@ async function prerenderRoutes() {
   let browser;
   let successCount = 0;
   let skippedCount = 0;
+  const invalid = [];
 
   try {
     browser = await launchBrowser();
     const page = await browser.newPage();
     page.setDefaultNavigationTimeout(60000);
+
+    // Tells the app it is being captured, so effect-driven UI (cookie banner,
+    // third-party widgets, idle images, scroll reveals) stays at first-paint state.
+    // See src/utils/prerender.ts.
+    await page.evaluateOnNewDocument(() => {
+      window.__PT7_PRERENDER__ = true;
+    });
 
     await page.setRequestInterception(true);
     page.on('request', (request) => {
@@ -262,7 +279,23 @@ async function prerenderRoutes() {
         const url = `${baseUrl}${route}`;
         await page.goto(url, { waitUntil: 'networkidle2' });
         await page.waitForSelector('#root *', { timeout: 30000 });
+
+        // Marks this HTML as safe to hydrate rather than re-render. src/main.tsx reads it.
+        // Files without the marker (dev server, 404.html, rejected routes) still contain
+        // the static fallback inside #root and must be rendered fresh.
+        await page.evaluate(() => {
+          document.getElementById('root')?.setAttribute('data-prerendered', 'true');
+        });
+
         const html = await page.content();
+
+        const problems = findSnapshotProblems(html);
+        if (problems.length > 0) {
+          invalid.push({ route, problems });
+          console.warn(`✗ Rejected ${route}: ${problems.join('; ')}`);
+          continue;
+        }
+
         const outputFile = outputPathForRoute(route);
         fs.mkdirSync(path.dirname(outputFile), { recursive: true });
         fs.writeFileSync(outputFile, html);
@@ -281,8 +314,23 @@ async function prerenderRoutes() {
     await stopProcess(server);
   }
 
+  if (invalid.length > 0) {
+    console.error(`\n❌ ${invalid.length} route(s) produced unpublishable HTML:\n`);
+    for (const { route, problems } of invalid) {
+      console.error(`  ${route}`);
+      for (const problem of problems) {
+        console.error(`    - ${problem}`);
+      }
+    }
+    console.error('\nThe existing file for each rejected route was left untouched.');
+  }
+
   if (skippedCount > 0) {
-    console.error(`\n❌ Prerender skipped ${skippedCount} route(s) (${successCount}/${routes.length} ok).`);
+    console.error(`\n❌ Prerender skipped ${skippedCount} route(s) (render or navigation failure).`);
+  }
+
+  if (invalid.length > 0 || skippedCount > 0) {
+    console.error(`\n${successCount}/${routes.length} routes written.`);
     process.exit(1);
   }
 

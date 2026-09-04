@@ -1,3 +1,5 @@
+import { isPrerender } from './prerender';
+
 const HEALCODE_SCRIPT_ID = 'mindbody-healcode';
 const HEALCODE_SRC = 'https://widgets.mindbodyonline.com/javascripts/healcode.js';
 
@@ -16,6 +18,8 @@ export function reinitHealcodeWidgets(): void {
 }
 
 export function ensureHealcodeLoaded(): Promise<void> {
+  if (isPrerender()) return Promise.resolve();
+
   const existing =
     document.getElementById(HEALCODE_SCRIPT_ID) ||
     document.querySelector<HTMLScriptElement>('script[src*="healcode.js"]');
@@ -47,6 +51,8 @@ export function ensureHealcodeLoaded(): Promise<void> {
 }
 
 export function loadHealcodeWhenIdle(timeoutMs = 3000): () => void {
+  if (isPrerender()) return () => {};
+
   const run = () => {
     void ensureHealcodeLoaded().catch(() => {});
   };

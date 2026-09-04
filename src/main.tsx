@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import { initI18n } from './i18n/config'
 import './index.css'
 import App from './App.tsx'
@@ -74,4 +74,11 @@ const app = (
   </StrictMode>
 );
 
-createRoot(rootElement).render(app);
+// Prerendered pages already contain the correct markup, so attach to it instead of
+// discarding and redrawing it. The marker is set by scripts/prerender-static-html.js;
+// everything else (dev server, 404.html) holds the static fallback and renders fresh.
+if (rootElement.dataset.prerendered === 'true') {
+  hydrateRoot(rootElement, app);
+} else {
+  createRoot(rootElement).render(app);
+}

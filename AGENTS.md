@@ -54,9 +54,10 @@ The home route is implemented in **`src/pages/Home.tsx`**. SEO work here include
 |------|----------|
 | Per-page title, description, keywords, canonical, OG/Twitter | `src/components/SEOHead.tsx` — consumed on each page; passes **absolute** `canonical` (typically `https://www.pt7.nl/...`). |
 | JSON-LD | `src/components/StructuredData.tsx` + page-level usage. |
-| Sitemap | `public/sitemap.xml` — update `loc`, `lastmod`, and entries when routes or priority change. |
-| Static routes for prerender | `scripts/generate-static-routes.js` — new public routes usually need inclusion so prerender generates HTML. |
-| Prerender | `scripts/prerender-static-html.js` — uses Puppeteer; CI installs Chrome (see workflow). |
+| Route manifest | `site/routes.ts` — **single source of truth** for public URLs, prerender flags, sitemap entries. Detail pages (blog, trainers, equipment, workouts) are derived from `src/data/`, so never list them by hand. |
+| Sitemap | Generated into `dist/sitemap.xml` by `scripts/generate-routes-manifest.js`. Edit `site/routes.ts`, not the XML. |
+| Static routes for prerender | `scripts/generate-static-routes.js` — reads the manifest; only holds fallback shell meta for fixed pages. |
+| Prerender | `scripts/prerender-static-html.js` — reads the manifest; uses Puppeteer, CI installs Chrome (see workflow). |
 | Breadcrumbs | `src/components/Breadcrumbs.tsx` |
 | Public hints | `public/llms.txt`, `index.html` default meta if any |
 
@@ -68,10 +69,9 @@ Core paths include: `/`, `/pricing/`, `/schedule/`, `/equipment/`, `/equipment/:
 
 1. Add route in `src/App.tsx` (and lazy import if following existing pattern).  
 2. Add `SEOHead` + any `StructuredData` on the page.  
-3. Append URL(s) to `public/sitemap.xml` with sensible `changefreq` / `priority`.  
-4. Ensure `scripts/generate-static-routes.js` includes new paths so prerender runs.  
-5. Run `npm run build` locally if possible; fix TypeScript and prerender errors.  
-6. Align key claims with `public/llms.txt`.
+3. Add the path to `site/routes.ts` with sensible `changefreq` / `priority` — that one entry drives the static shell, the prerender snapshot, and `sitemap.xml`. New blog posts, trainers, equipment, and workouts need nothing here; they are derived from `src/data/`.  
+4. Run `npm run build` locally if possible; fix TypeScript and prerender errors.  
+5. Align key claims with `public/llms.txt`.
 
 ### Guardrails
 
@@ -150,7 +150,7 @@ Deploy: merging to `main` triggers GitHub Actions; no separate `npm run deploy` 
 ## 6. How agents should hand off work
 
 1. **Developer** adds or changes routes and build behavior.  
-2. **SEO** updates `SEOHead` / `StructuredData` / `sitemap.xml` / prerender list.  
+2. **SEO** updates `SEOHead` / `StructuredData` and the `site/routes.ts` manifest (which drives sitemap + prerender).  
 3. **Marketing** updates page copy, `blogPosts.ts`, `trainers.ts`, and `public/llms.txt` for outward-facing facts.
 
 Any single change that spans areas should list touched files in the PR or automation summary so reviewers see SEO + content + code together.
@@ -164,9 +164,10 @@ Any single change that spans areas should list touched files in the PR or automa
 | `src/App.tsx` | Routes, lazy pages, GH Pages redirect handler |
 | `src/components/SEOHead.tsx` | Meta, OG, Twitter, canonical |
 | `src/components/StructuredData.tsx` | JSON-LD schemas |
-| `public/sitemap.xml` | URL discovery for search engines |
+| `site/routes.ts` | Route manifest: URLs, prerender flags, sitemap metadata |
 | `public/llms.txt` | Consolidated brand/service facts for LLMs |
-| `scripts/generate-static-routes.js` | URLs fed to prerender |
+| `scripts/generate-routes-manifest.js` | Builds `.routes-manifest.json` + `dist/sitemap.xml` from the manifest |
+| `scripts/generate-static-routes.js` | Static HTML shells for GitHub Pages |
 | `scripts/prerender-static-html.js` | Static HTML generation |
 | `.github/workflows/deploy.yml` | CI build and GitHub Pages deploy |
 

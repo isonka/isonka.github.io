@@ -13,6 +13,7 @@ import { ScrollToTop } from './components/ScrollToTop';
 import { CookieConsent } from './components/CookieConsent';
 import { LocaleSync } from './i18n/LocaleSync';
 import { withTrailingSlash, safeInternalRedirect } from './utils/urls';
+import { isPrerender } from './utils/prerender';
 import { Home } from './pages/Home';
 import './App.css';
 import './styles/design.css';
@@ -80,7 +81,7 @@ function DeferredChatbot() {
   const [shouldLoad, setShouldLoad] = useState(false);
 
   useEffect(() => {
-    if (shouldLoad) return;
+    if (shouldLoad || isPrerender()) return;
 
     const load = () => setShouldLoad(true);
     const events = ['pointerdown', 'keydown', 'scroll'] as const;

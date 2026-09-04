@@ -9,6 +9,7 @@ import {
   clearMindBodyWidgetContainers,
   initScheduleMindBodyWidgets,
 } from '../utils/mindbodyBrandedWeb';
+import { isPrerender } from '../utils/prerender';
 import '../styles/Schedule.css';
 
 const scheduleFaqs = [
@@ -47,6 +48,11 @@ export const Schedule: React.FC = () => {
   useEffect(() => {
     trackPageView('/schedule/', 'Pilates Classes Amsterdam | Book Online | PT Studio 7');
     trackScheduleVisit();
+
+    // MindBody is blocked during prerender, so attempting the load would freeze the
+    // widget error state into dist/schedule/index.html. Stay on the loading message,
+    // which is also what a real visitor's first paint shows.
+    if (isPrerender()) return;
 
     let cancelled = false;
 

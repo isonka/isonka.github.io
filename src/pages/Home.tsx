@@ -15,6 +15,7 @@ import { useInViewOnce } from '../hooks/useInViewOnce';
 import { SilkBackground } from '../components/SilkBackground';
 import { homePath } from '../i18n/locale';
 import { useLocale } from '../i18n/useLocale';
+import { isPrerender } from '../utils/prerender';
 import '../styles/Home.css';
 
 const HOME_HREFLANG = [
@@ -144,6 +145,8 @@ export const Home: React.FC = () => {
   }, [locale, t]);
 
   useEffect(() => {
+    if (isPrerender()) return;
+
     const enable = () => setSecondHeroReady(true);
     const ric = window.requestIdleCallback?.bind(window);
     if (ric) {

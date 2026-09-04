@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { isPrerender } from '../utils/prerender';
 import '../styles/SilkBackground.css';
 
 const VERT = `
@@ -94,6 +95,8 @@ export const SilkBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
+    if (isPrerender()) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 

@@ -1,23 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 
 // https://vite.dev/config/
+// Images live in public/, which Vite does not process. They are prepared ahead of
+// time by scripts/convert-to-webp.js and scripts/make-share-image.js (both use sharp).
 export default defineConfig({
-  plugins: [
-    react(),
-    ViteImageOptimizer({
-      jpg: { quality: 80 },
-      jpeg: { quality: 80 },
-      png: { quality: 80 },
-      webp: { quality: 80 },
-      svg: {
-        plugins: [
-          { name: 'sortAttrs' },
-        ],
-      },
-    }),
-  ],
+  plugins: [react()],
   base: '/', // Root domain
   build: {
     outDir: 'dist',
