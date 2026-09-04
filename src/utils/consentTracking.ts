@@ -318,6 +318,7 @@ function writeConversionRecords(records: ConversionRecord[]) {
   try {
     localStorage.setItem(ADS_CONVERSION_KEY, JSON.stringify(records));
   } catch {
+    // storage unavailable (private mode / quota)
   }
 }
 
@@ -327,6 +328,7 @@ function claimConversionId(key: string): string | null {
   try {
     if (sessionStorage.getItem(sessionKey)) return null;
   } catch {
+    // storage unavailable (private mode / quota)
   }
 
   const now = Date.now();
@@ -338,6 +340,7 @@ function claimConversionId(key: string): string | null {
   try {
     sessionStorage.setItem(sessionKey, id);
   } catch {
+    // storage unavailable (private mode / quota)
   }
 
   return id;
@@ -347,6 +350,7 @@ function releaseConversionId(key: string) {
   try {
     sessionStorage.removeItem(`${ADS_CONVERSION_SESSION_PREFIX}${key}`);
   } catch {
+    // storage unavailable (private mode / quota)
   }
   writeConversionRecords(readConversionRecords().filter((record) => record.key !== key));
 }
