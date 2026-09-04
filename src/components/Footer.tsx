@@ -55,7 +55,7 @@ export const Footer: React.FC = () => {
 
         <div className="footer-meta">
           <p className="footer-copyright">
-            {t('footer.copyright', { year: new Date().getFullYear() })}
+            {t('footer.copyright', { year: String(new Date().getFullYear()) })}
           </p>
           <p className="footer-credit">
             {t('footer.websiteBy')}{' '}
