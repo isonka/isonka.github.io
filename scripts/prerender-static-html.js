@@ -15,6 +15,7 @@ let baseUrl = '';
 
 const routes = [
   '/',
+  '/nl/',
   '/pricing/',
   '/schedule/',
   '/equipment/',

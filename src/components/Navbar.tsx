@@ -1,14 +1,22 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { trackBookNowClick, trackNavClick } from '../utils/gtmTracking';
 import { loadHealcodeWhenIdle } from '../utils/healcode';
+import { homePath, isHomePath } from '../i18n/locale';
+import { useLocale } from '../i18n/useLocale';
+import { LangSwitch } from './LangSwitch';
 import '../styles/Navbar.css';
 
 export const Navbar: React.FC = () => {
+  const { t } = useTranslation('common');
+  const locale = useLocale();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const home = homePath(locale);
+  const academyHref = locale === 'nl' ? '/academy/nl/' : '/academy/';
 
   const toggleMenu = () => {
     if (isMenuOpen) setMoreOpen(false);
@@ -44,9 +52,9 @@ export const Navbar: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
     closeMenu();
     trackNavClick(sectionId);
-    
-    if (location.pathname !== '/') {
-      navigate('/');
+
+    if (!isHomePath(location.pathname)) {
+      navigate(home);
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -65,7 +73,7 @@ export const Navbar: React.FC = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <Link to="/" aria-label="PT Studio 7 Home">
+          <Link to={home} aria-label={t('nav.homeAria')}>
             <img
               src="/assets/images/ts_logo.png"
               alt="PT Studio 7 Logo"
@@ -74,33 +82,37 @@ export const Navbar: React.FC = () => {
             />
           </Link>
         </div>
-        
-        <Link 
-          to="/schedule/" 
-          className="navbar-booknow-mobile" 
-          aria-label="Book a session"
+
+        <Link
+          to="/schedule/"
+          className="navbar-booknow-mobile"
+          aria-label={t('nav.bookNowAria')}
           onClick={() => trackBookNowClick('navbar-mobile')}
         >
-          Book Now
+          {t('nav.bookNow')}
         </Link>
-        
+
         <button
           type="button"
           className="navbar-toggle"
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-label={isMenuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
           aria-expanded={isMenuOpen}
           onClick={toggleMenu}
         >
           <span className="navbar-toggle-icon"></span>
         </button>
-        
+
+        <div className="navbar-lang-bar">
+          <LangSwitch />
+        </div>
+
         <ul className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
-          <li><a href="#about" aria-label="Learn about us" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About Us</a></li>
-          <li><a href="#reviews" aria-label="Read reviews" onClick={(e) => { e.preventDefault(); scrollToSection('reviews'); }}>Reviews</a></li>
-          <li><Link to="/instructors/" aria-label="Meet our instructors" onClick={closeMenu}>Instructors</Link></li>
-          <li><Link to="/reformer-pilates-amsterdam/" aria-label="Pilates classes in Amsterdam" onClick={closeMenu}>Classes</Link></li>
-          <li><Link to="/pricing/" aria-label="View pricing" onClick={closeMenu}>Prices</Link></li>
-          <li><Link to="/academy/" aria-label="Pilates teacher training | PT7 Academy" onClick={closeMenu}>Academy</Link></li>
+          <li><a href="#about" aria-label={t('nav.aboutAria')} onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>{t('nav.about')}</a></li>
+          <li><a href="#reviews" aria-label={t('nav.reviewsAria')} onClick={(e) => { e.preventDefault(); scrollToSection('reviews'); }}>{t('nav.reviews')}</a></li>
+          <li><Link to="/instructors/" aria-label={t('nav.instructorsAria')} onClick={closeMenu}>{t('nav.instructors')}</Link></li>
+          <li><Link to="/reformer-pilates-amsterdam/" aria-label={t('nav.classesAria')} onClick={closeMenu}>{t('nav.classes')}</Link></li>
+          <li><Link to="/pricing/" aria-label={t('nav.pricesAria')} onClick={closeMenu}>{t('nav.prices')}</Link></li>
+          <li><Link to={academyHref} aria-label={t('nav.academyAria')} onClick={closeMenu}>{t('nav.academy')}</Link></li>
           <li className="navbar-dropdown">
             <button
               type="button"
@@ -109,17 +121,17 @@ export const Navbar: React.FC = () => {
               aria-expanded={moreOpen}
               aria-haspopup="true"
             >
-              More
+              {t('nav.more')}
             </button>
             <ul className={`navbar-dropdown-menu ${moreOpen ? 'open' : ''}`}>
-              <li><a href="#workouts" onClick={(e) => { e.preventDefault(); closeMenu(); setMoreOpen(false); scrollToSection('workouts'); }}>Workouts</a></li>
-              <li><Link to="/equipment/" onClick={() => { closeMenu(); setMoreOpen(false); }}>Shop Equipment</Link></li>
-              <li><Link to="/healthcare-providers/" onClick={() => { closeMenu(); setMoreOpen(false); }}>For Healthcare</Link></li>
-              <li><Link to="/corporate/" onClick={() => { closeMenu(); setMoreOpen(false); }}>For Business</Link></li>
-              <li><Link to="/blog/" onClick={() => { closeMenu(); setMoreOpen(false); }}>Blog</Link></li>
+              <li><a href="#workouts" onClick={(e) => { e.preventDefault(); closeMenu(); setMoreOpen(false); scrollToSection('workouts'); }}>{t('nav.workouts')}</a></li>
+              <li><Link to="/equipment/" onClick={() => { closeMenu(); setMoreOpen(false); }}>{t('nav.shopEquipment')}</Link></li>
+              <li><Link to="/healthcare-providers/" onClick={() => { closeMenu(); setMoreOpen(false); }}>{t('nav.forHealthcare')}</Link></li>
+              <li><Link to="/corporate/" onClick={() => { closeMenu(); setMoreOpen(false); }}>{t('nav.forBusiness')}</Link></li>
+              <li><Link to="/blog/" onClick={() => { closeMenu(); setMoreOpen(false); }}>{t('nav.blog')}</Link></li>
             </ul>
           </li>
-          <li><a href="#contact" aria-label="Contact us" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</a></li>
+          <li><a href="#contact" aria-label={t('nav.contactAria')} onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>{t('nav.contact')}</a></li>
           <li className="navbar-login">
             <span
               className="navbar-login-widget"
@@ -130,8 +142,8 @@ export const Navbar: React.FC = () => {
             />
           </li>
           <li className="navbar-booknow-desktop-wrapper">
-            <Link to="/schedule/" className="navbar-booknow-desktop" aria-label="Book a class" onClick={() => { closeMenu(); trackBookNowClick('navbar-desktop'); }}>
-              Book Now
+            <Link to="/schedule/" className="navbar-booknow-desktop" aria-label={t('nav.bookClassAria')} onClick={() => { closeMenu(); trackBookNowClick('navbar-desktop'); }}>
+              {t('nav.bookNow')}
             </Link>
           </li>
         </ul>
@@ -139,4 +151,3 @@ export const Navbar: React.FC = () => {
     </nav>
   );
 };
-

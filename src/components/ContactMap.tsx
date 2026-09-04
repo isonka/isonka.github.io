@@ -1,4 +1,5 @@
 import { useEffect, useState, type FC, type ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
 import { CONSENT_UPDATED_EVENT, getStoredConsent, type Pt7Consent } from '../utils/consentTracking';
 import '../styles/ContactMap.css';
 
@@ -87,6 +88,7 @@ function Vehicle({ mode, children }: { mode: string; children: ReactNode }) {
 }
 
 export const ContactMap: FC = () => {
+  const { t } = useTranslation('common');
   const [ready, setReady] = useState(false);
   const [showMap, setShowMap] = useState(false);
 
@@ -111,7 +113,7 @@ export const ContactMap: FC = () => {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="PT Studio 7 Location"
+          title={t('contactMap.iframeTitle')}
         />
       ) : (
         <div className="contact-map-consent">
@@ -120,14 +122,14 @@ export const ContactMap: FC = () => {
               <p className="contact-map-consent-kicker">Museumplein</p>
               <p className="contact-map-consent-address">Van Baerlestraat 76C</p>
               <p className="contact-map-consent-note">
-                Google Map loads after statistics or marketing cookies, or if you show it here.
+                {t('contactMap.consentNote')}
               </p>
               <div className="contact-map-consent-actions">
                 <button type="button" className="contact-map-consent-btn" onClick={() => setShowMap(true)}>
-                  Show map
+                  {t('contactMap.showMap')}
                 </button>
                 <a href={MAPS_APP} target="_blank" rel="noopener noreferrer">
-                  Open in Google Maps
+                  {t('contactMap.openMaps')}
                 </a>
               </div>
             </>
@@ -137,7 +139,7 @@ export const ContactMap: FC = () => {
         </div>
       )}
       <p className="contact-map-legend">
-        Tram lines 5, 12 and 24, night buses, and cycle routes serve Museumplein.
+        {t('contactMap.legend')}
       </p>
       {showMap ? (
         <div className="contact-map-overlay" aria-hidden="true">
@@ -146,9 +148,9 @@ export const ContactMap: FC = () => {
             <line className="contact-map-route contact-map-route--bus" x1="93" y1="22" x2="50" y2="47" />
             <line className="contact-map-route contact-map-route--bike" x1="50" y1="92" x2="50" y2="47" />
           </svg>
-          <Chip mode="tram" label="Tram" sub="5 · 12 · 24" />
-          <Chip mode="bus" label="Bus" sub="N84 · N88" />
-          <Chip mode="bike" label="Bike" sub="cycle route" />
+          <Chip mode="tram" label={t('contactMap.tram')} sub="5 · 12 · 24" />
+          <Chip mode="bus" label={t('contactMap.bus')} sub="N84 · N88" />
+          <Chip mode="bike" label={t('contactMap.bike')} sub={t('contactMap.cycleRoute')} />
           <Vehicle mode="tram">
             <TramGlyph />
           </Vehicle>

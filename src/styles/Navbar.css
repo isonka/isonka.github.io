@@ -212,6 +212,54 @@
   color: var(--gold-text, #c9a800);
 }
 
+.navbar-lang-bar {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.navbar-lang {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(17, 17, 17, 0.15);
+  border-radius: var(--radius-pill, 999px);
+  padding: 4px;
+}
+
+.navbar-lang a,
+.navbar-lang span[aria-current='page'] {
+  color: var(--ink, #111);
+  text-decoration: none;
+  line-height: 1;
+  display: block;
+  padding: 5px 9px;
+  border-radius: var(--radius-pill, 999px);
+}
+
+.navbar-lang span[aria-hidden='true'] {
+  display: none;
+}
+
+.navbar-lang a {
+  opacity: 0.55;
+}
+
+.navbar-lang a:hover {
+  opacity: 1;
+  color: var(--ink, #111);
+  background: rgba(17, 17, 17, 0.06);
+}
+
+.navbar-lang [aria-current='page'] {
+  opacity: 1;
+  background: var(--gold, #ffd700);
+}
+
 @media (min-width: 1025px) {
   .navbar-booknow-mobile {
     display: none !important;
@@ -355,6 +403,25 @@
 
   .navbar-booknow-desktop-wrapper {
     display: none !important;
+  }
+
+  .navbar-lang-bar {
+    position: absolute;
+    left: 122px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    z-index: 104;
+  }
+
+  .navbar-lang {
+    padding: 3px;
+    font-size: 0.75rem;
+  }
+
+  .navbar-lang a,
+  .navbar-lang span[aria-current='page'] {
+    padding: 4px 7px;
   }
 
   .navbar-dropdown {

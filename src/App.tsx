@@ -11,6 +11,7 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
 import { CookieConsent } from './components/CookieConsent';
+import { LocaleSync } from './i18n/LocaleSync';
 import { withTrailingSlash, safeInternalRedirect } from './utils/urls';
 import { Home } from './pages/Home';
 import './App.css';
@@ -88,6 +89,7 @@ function Layout() {
       <ScrollToTop />
       <TrailingSlashNormalizer />
       <RedirectHandler />
+      <LocaleSync />
       <div className="app instructors-silk-host">
         <Navbar />
         <main className="main-content">
@@ -110,6 +112,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { index: true, element: <Home /> },
+      { path: 'nl', element: <Home /> },
       { path: 'pricing', element: <Pricing /> },
       { path: 'schedule', element: <Schedule /> },
       { path: 'equipment', element: <Equipment /> },

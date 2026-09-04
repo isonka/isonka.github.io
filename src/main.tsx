@@ -1,7 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { initI18n } from './i18n/config'
 import './index.css'
 import App from './App.tsx'
+
+initI18n()
 
 type WebMCPContextProvider = {
   provideContext: (context: {

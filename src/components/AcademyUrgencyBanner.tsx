@@ -1,19 +1,27 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { useLocale } from '../i18n/useLocale';
 import '../styles/AcademyUrgencyBanner.css';
 
-export const AcademyUrgencyBanner: React.FC = () => (
-  <Link
-    to="/academy/"
-    className="academy-urgency-banner"
-    aria-label="Become a Pilates instructor | Pilates teacher training at PT7 Academy"
-  >
-    <div className="urgency-content">
-      <span className="urgency-text">
-        <strong>Become a Pilates instructor</strong>
-        <span className="urgency-text-full"> · Pilates teacher training · PMA ITTAP Approved · Sep term full · Next: Nov 2026</span>
-        <span className="urgency-text-short"> · Teacher training · Next: Nov 2026</span>
-      </span>
-      <span className="urgency-cta">View Course →</span>
-    </div>
-  </Link>
-);
+export const AcademyUrgencyBanner: React.FC = () => {
+  const { t } = useTranslation('home');
+  const locale = useLocale();
+  const to = locale === 'nl' ? '/academy/nl/' : '/academy/';
+
+  return (
+    <Link
+      to={to}
+      className="academy-urgency-banner"
+      aria-label={t('banner.aria')}
+    >
+      <div className="urgency-content">
+        <span className="urgency-text">
+          <strong>{t('banner.strong')}</strong>
+          <span className="urgency-text-full">{t('banner.full')}</span>
+          <span className="urgency-text-short">{t('banner.short')}</span>
+        </span>
+        <span className="urgency-cta">{t('banner.cta')}</span>
+      </div>
+    </Link>
+  );
+};

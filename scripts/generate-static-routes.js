@@ -26,6 +26,11 @@ const DEFAULT_IMAGE = '/assets/images/studio.jpg';
 // Route-specific meta data for social sharing
 // Routes not listed here will use default homepage meta tags
 const routeMeta = {
+  'nl': {
+    title: 'Pilates Amsterdam | Reformer pilates & personal training | PT Studio 7',
+    description: 'Pilateslessen in Amsterdam aan het Museumplein: Reformer pilates, kleine groepen (max. 5) en private sessies met gecertificeerde instructeurs. Boutique studio in Oud-Zuid. Online boeken.',
+    image: DEFAULT_IMAGE,
+  },
   'classpass-offer': {
     title: 'ClassPass Members: Exclusive Offer | PT Studio 7 Amsterdam',
     description: 'Special offer for ClassPass members. Save money and get priority booking when you join PT Studio 7 directly. Same great Pilates classes, better value.',
@@ -217,6 +222,7 @@ const routeMeta = {
 
 // All routes that need static HTML files
 const routes = [
+  'nl',
   'pricing',
   'schedule',
   'equipment',

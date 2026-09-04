@@ -4,13 +4,19 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.pt7.nl/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.pt7.nl/assets/images/pt7logo.png</image:loc>
       <image:title>PT Studio 7 Amsterdam - Reformer Pilates Studio Museumplein</image:title>
     </image:image>
+  </url>
+  <url>
+    <loc>https://www.pt7.nl/nl/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   
   <!-- Core Pages -->

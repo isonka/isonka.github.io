@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Trans, useTranslation } from 'react-i18next';
 import { AcademyUrgencyBanner } from '../components/AcademyUrgencyBanner';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
@@ -12,7 +13,24 @@ import { ContactMap } from '../components/ContactMap';
 import { PHOTO_FOCUS } from '../data/photoFocus';
 import { useInViewOnce } from '../hooks/useInViewOnce';
 import { SilkBackground } from '../components/SilkBackground';
+import { homePath } from '../i18n/locale';
+import { useLocale } from '../i18n/useLocale';
 import '../styles/Home.css';
+
+const HOME_HREFLANG = [
+  { hreflang: 'en', href: 'https://www.pt7.nl/' },
+  { hreflang: 'nl', href: 'https://www.pt7.nl/nl/' },
+  { hreflang: 'x-default', href: 'https://www.pt7.nl/' },
+];
+
+const FAQ_KEYS = ['where', 'groupSize', 'booking', 'training', 'location'] as const;
+
+const WORKOUT_COPY = {
+  'reformer-pilates': 'reformerPilates',
+  trx: 'trx',
+  'functional-training': 'functionalTraining',
+  cardio: 'cardio',
+} as const;
 
 const heroImages = [
   {
@@ -21,7 +39,7 @@ const heroImages = [
       '/assets/images/studio-800.webp 800w, /assets/images/studio-1200.webp 1200w, /assets/images/studio.webp 1600w',
     width: 1600,
     height: 1066,
-    alt: 'PT Studio 7 - Pilates Reformer Studio',
+    altKey: 'heroImages.studio' as const,
   },
   {
     src: '/assets/images/nike_strength_studio.webp',
@@ -29,20 +47,20 @@ const heroImages = [
       '/assets/images/nike_strength_studio-800.webp 800w, /assets/images/nike_strength_studio.webp 1200w',
     width: 1200,
     height: 800,
-    alt: 'PT Studio 7 - Nike Strength Training Area',
+    altKey: 'heroImages.nike' as const,
   },
 ];
 
 const trainers = [
-  { to: '/trainer/elif', src: '/assets/images/elif.webp', alt: 'Elif Arzu Ogan - Pilates Instructor', name: 'Elif Arzu Ogan', specialties: 'Comprehensive Pilates\nStrength Training\nPrenatal Pilates' },
-  { to: '/trainer/gokben', src: '/assets/images/gokben.webp', alt: 'Gökben Öztekin - Pilates Instructor', name: 'Gökben Öztekin', specialties: 'Comprehensive Pilates' },
-  { to: '/trainer/goknur', src: '/assets/images/goknur.webp', alt: 'Göknur Dipli - Pilates Instructor', name: 'Göknur Dipli', specialties: 'Comprehensive Pilates\nStrength Training\nPrenatal Pilates' },
-  { to: '/trainer/gulce/', src: '/assets/images/gulce.webp', alt: 'Gülce Koç - Pilates Instructor', name: 'Gülce Koç', specialties: 'Reformer Pilates' },
-  { to: '/trainer/lal/', src: '/assets/images/lal.webp', alt: 'Lal Avgen - Pilates Instructor', name: 'Lal Avgen', specialties: 'Reformer Pilates' },
-  { to: '/trainer/nisan/', src: '/assets/images/nisan.webp', alt: 'Nisan Atalay - Pilates Instructor', name: 'Nisan Atalay', specialties: 'Reformer Pilates' },
-  { to: '/trainer/kelly/', src: '/assets/images/kelly.webp', alt: 'Kelly Tin - Pilates Instructor', name: 'Kelly Tin', specialties: 'Reformer Pilates' },
-  { to: '/trainer/gamze/', src: '/assets/images/gamze.webp', alt: 'E. Gamze Karadağ - Pilates Instructor', name: 'E. Gamze Karadağ', specialties: 'Reformer Pilates' },
-];
+  { id: 'elif', to: '/trainer/elif', src: '/assets/images/elif.webp', name: 'Elif Arzu Ogan' },
+  { id: 'gokben', to: '/trainer/gokben', src: '/assets/images/gokben.webp', name: 'Gökben Öztekin' },
+  { id: 'goknur', to: '/trainer/goknur', src: '/assets/images/goknur.webp', name: 'Göknur Dipli' },
+  { id: 'gulce', to: '/trainer/gulce/', src: '/assets/images/gulce.webp', name: 'Gülce Koç' },
+  { id: 'lal', to: '/trainer/lal/', src: '/assets/images/lal.webp', name: 'Lal Avgen' },
+  { id: 'nisan', to: '/trainer/nisan/', src: '/assets/images/nisan.webp', name: 'Nisan Atalay' },
+  { id: 'kelly', to: '/trainer/kelly/', src: '/assets/images/kelly.webp', name: 'Kelly Tin' },
+  { id: 'gamze', to: '/trainer/gamze/', src: '/assets/images/gamze.webp', name: 'E. Gamze Karadağ' },
+] as const;
 
 const reviews = [
   { author: 'Lot Canter Cremers', text: '"Through a neighbor in my building I was introduced to PT Studio 7. I have been going to this studio for the past 18 months, of which I have been pregnant for 9. During my pregnancy Elif trained me until the very end (38.5 weeks). Her training gave me and my body an extremely comfortable pregnancy and smooth delivery of birth! Her experience and knowledge about the human body, pregnant or not, makes all the difference. Of course I continued after my pregnancy and I really enjoy and recommend this studio to everyone who is looking for a Pilates studio with qualified and experienced instructors. Since the Pilates sport is getting so popular there are a lot of places where you can go but most of the instructors don\'t have enough knowledge to be able to teach and train you like they do at PT Studio 7!"' },
@@ -59,39 +77,12 @@ const reviewsData = [
   { author: 'Flaminia', reviewBody: "PT Studio 7 and Elif are exactly what I was looking for...", ratingValue: 5 },
 ];
 
-const homeFaqs = [
-  {
-    question: 'Where can I take Pilates classes in Amsterdam?',
-    answer:
-      'PT Studio 7 offers Reformer Pilates, TRX, strength, and cardio at Van Baerlestraat 76C near Museumplein in Amsterdam Oud-Zuid. Book group classes (max 5) or private sessions online at pt7.nl/schedule/.',
-  },
-  {
-    question: 'How many people are in a Pilates group class?',
-    answer:
-      'Our group classes have a maximum of 5 participants so instructors can coach form and progress personally.',
-  },
-  {
-    question: 'How do I book a class at PT Studio 7?',
-    answer:
-      'Use the online schedule at pt7.nl/schedule/ to pick a group class or private appointment. View packages and intro offers at pt7.nl/pricing/.',
-  },
-  {
-    question: 'What training does PT Studio 7 offer?',
-    answer:
-      'Reformer Pilates is our core focus. We also offer TRX, strength and functional training, cardio sessions, prenatal private Pilates, and instructor training through PT7 Academy.',
-  },
-  {
-    question: 'Where is PT Studio 7 located?',
-    answer:
-      'Van Baerlestraat 76C, 1071 BB Amsterdam, across from the Stedelijk Museum at Museumplein in Oud-Zuid.',
-  },
-];
-
 function TrainerTile({
   trainer,
 }: {
   trainer: (typeof trainers)[number];
 }) {
+  const { t } = useTranslation('home');
   const { ref, inView } = useInViewOnce<HTMLAnchorElement>();
   const slug = trainer.to.replace(/^\/trainer\//, '').replace(/\/$/, '');
   const focus = PHOTO_FOCUS[slug] ?? '50% 24%';
@@ -103,12 +94,12 @@ function TrainerTile({
       className={`home-person${inView ? ' is-inview' : ''}`}
     >
       <span className="home-person-role">
-        {trainer.specialties.split('\n').join(' · ')}
+        {t(`trainers.${trainer.id}.specialties`)}
       </span>
       <div className="home-person-media">
         <img
           src={trainer.src}
-          alt={trainer.alt}
+          alt={t(`trainers.${trainer.id}.alt`)}
           loading="lazy"
           decoding="async"
           width="280"
@@ -122,13 +113,35 @@ function TrainerTile({
 }
 
 export const Home: React.FC = () => {
+  const { t } = useTranslation('home');
+  const locale = useLocale();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [secondHeroReady, setSecondHeroReady] = useState(false);
+  const canonical = locale === 'nl' ? 'https://www.pt7.nl/nl/' : 'https://www.pt7.nl/';
+  const academyHref = locale === 'nl' ? '/academy/nl/' : '/academy/';
+
+  const homeFaqs = FAQ_KEYS.map((key) => ({
+    question: t(`faqs.${key}.question`),
+    answer: t(`faqs.${key}.answer`),
+  }));
+
+  const workoutItems = workouts.map((w) => {
+    const slug = w.to.replace(/^\/workouts\//, '').replace(/\/$/, '');
+    const copyKey = WORKOUT_COPY[slug as keyof typeof WORKOUT_COPY];
+    if (!copyKey) return w;
+    return {
+      ...w,
+      title: t(`workouts.${copyKey}.title`),
+      description: t(`workouts.${copyKey}.description`),
+      alt: t(`workouts.${copyKey}.alt`),
+    };
+  });
 
   useEffect(() => {
-    trackPageView('/', 'Home - PT Studio 7 Amsterdam');
-    trackFBPageView('Home - PT Studio 7 Amsterdam');
-  }, []);
+    const path = homePath(locale);
+    trackPageView(path, t('seo.analyticsTitle'));
+    trackFBPageView(t('seo.analyticsTitle'));
+  }, [locale, t]);
 
   useEffect(() => {
     const enable = () => setSecondHeroReady(true);
@@ -153,13 +166,17 @@ export const Home: React.FC = () => {
     <>
       <SilkBackground />
       <SEOHead
-        title="Pilates Amsterdam | Reformer Pilates & Personal Training | PT Studio 7"
-        description="Pilates classes in Amsterdam at Museumplein: Reformer Pilates, small groups (max 5), and private sessions with certified instructors. Boutique studio in Oud-Zuid. Book online."
-        keywords="Pilates Amsterdam, pilates classes Amsterdam, pilates classes near me, Reformer Pilates Amsterdam, personal training Amsterdam, Pilates Museumplein, private Pilates Amsterdam, small group Pilates, Pilates studio Van Baerlestraat, TRX training Amsterdam, prenatal Pilates Amsterdam"
-        canonical="https://www.pt7.nl/"
-        ogTitle="Pilates Amsterdam | Reformer Pilates & Personal Training | PT Studio 7"
-        ogDescription="Pilates classes in Amsterdam at Museumplein: Reformer Pilates, small groups (max 5), and private sessions with certified instructors. Boutique studio in Oud-Zuid. Book online."
+        title={t('seo.title')}
+        description={t('seo.description')}
+        keywords={t('seo.keywords')}
+        canonical={canonical}
+        ogTitle={t('seo.ogTitle')}
+        ogDescription={t('seo.ogDescription')}
         ogImage="/assets/images/studio.jpg"
+        ogLocale={locale === 'nl' ? 'nl_NL' : 'en_US'}
+        ogLocaleAlternates={locale === 'nl' ? ['en_US'] : ['nl_NL']}
+        htmlLang={locale === 'nl' ? 'nl' : 'en'}
+        hreflangAlternates={HOME_HREFLANG}
       />
       <StructuredData type="LocalBusiness" data={{ reviews: reviewsData }} />
       <StructuredData type="FAQPage" data={{ faqs: homeFaqs }} />
@@ -176,7 +193,7 @@ export const Home: React.FC = () => {
               src={image.src}
               srcSet={image.srcSet}
               sizes="100vw"
-              alt={image.alt}
+              alt={t(image.altKey)}
               className={`home-hero-bg${isActive ? ' is-active' : ''}`}
               width={image.width}
               height={image.height}
@@ -188,71 +205,55 @@ export const Home: React.FC = () => {
         })}
         <div className="home-hero-veil" />
         <div className="home-hero-inner">
-          <p className="home-hero-brand">PT Studio 7</p>
-          <h1 className="home-hero-title">
-            Reformer Pilates &amp; Personal Training in Amsterdam
-          </h1>
-          <p className="home-hero-line">
-            Pilates classes in Amsterdam Oud-Zuid, boutique studio at Museumplein
-          </p>
+          <p className="home-hero-brand">{t('hero.brand')}</p>
+          <h1 className="home-hero-title">{t('hero.title')}</h1>
+          <p className="home-hero-line">{t('hero.line')}</p>
           <div className="home-hero-actions">
             <Link to="/schedule/" className="home-btn home-btn-gold" onClick={() => trackFBBookingClick()}>
-              Book a Class
+              {t('hero.bookClass')}
             </Link>
             <Link to="/reformer-pilates-amsterdam/" className="home-btn home-btn-ghost">
-              Pilates Classes
+              {t('hero.pilatesClasses')}
             </Link>
             <Link to="/pricing/" className="home-btn home-btn-ghost">
-              View Pricing
+              {t('hero.viewPricing')}
             </Link>
           </div>
         </div>
       </section>
 
       <section id="about" className="home-section home-manifesto">
-        <p className="home-kicker">About</p>
+        <p className="home-kicker">{t('about.kicker')}</p>
         <h2 className="home-display">
-          <ManifestoLine>
-            Reformer Pilates &amp; Personal Training Studio at Museumplein
-          </ManifestoLine>
+          <ManifestoLine>{t('about.title')}</ManifestoLine>
         </h2>
         <div className="home-prose">
-          <p>
-            Reformer Pilates &amp; personal training in Amsterdam at our Museumplein studio in Oud-Zuid. With 15+ years of expertise, PT Studio 7 offers
-            a boutique fitness experience built around attention and results. Located at Van Baerlestraat 76C across from Stedelijk Museum,
-            our studio combines professional Reformers and classical Pilates apparatus with Nike strength equipment, TRX, and Concept2 machines in one space.
-          </p>
-          <p>
-            We offer one-on-one private sessions where you receive 100% of your instructor&apos;s attention.
-            We also offer intimate small group classes (maximum 5 people) for those who enjoy training
-            with friends. Each program is customized to build strength, improve flexibility, or achieve your wellness goals.
-          </p>
-          <p>
-            Our expert instructors design a personalized roadmap for your success, adapting every session
-            to your progress and celebrating each milestone with you.
-          </p>
+          <p>{t('about.p1')}</p>
+          <p>{t('about.p2')}</p>
+          <p>{t('about.p3')}</p>
           <p className="home-prose-links">
-            Start here:{' '}
-            <Link to="/reformer-pilates-amsterdam/">Reformer Pilates Amsterdam (Museumplein)</Link>
-            {' · '}
-            <Link to="/private-pilates-amsterdam/">Private Pilates</Link>
-            {' · '}
-            <Link to="/prenatal-pilates-amsterdam/">Prenatal Pilates</Link>
-            {' · '}
-            <Link to="/trx-training-amsterdam/">TRX</Link>
-            {' · '}
-            <Link to="/strength-training-amsterdam/">Strength Training</Link>
+            <Trans
+              ns="home"
+              i18nKey="about.links"
+              components={{
+                reformer: <Link to="/reformer-pilates-amsterdam/" />,
+                private: <Link to="/private-pilates-amsterdam/" />,
+                prenatal: <Link to="/prenatal-pilates-amsterdam/" />,
+                trx: <Link to="/trx-training-amsterdam/" />,
+                strength: <Link to="/strength-training-amsterdam/" />,
+              }}
+            />
           </p>
           <p className="home-signature">
-            <strong>Elif Arzu Ogan</strong>
+            <strong>{t('about.ownerName')}</strong>
             <br />
-            Owner &amp; Head Instructor, PT Studio 7
+            {t('about.signatureRole')}
           </p>
         </div>
         <div className="home-bleed-frame">
           <img
             src="/assets/images/about-us-web.webp"
-            alt="PT Studio 7 Museumplein Location - Small Group Pilates Studio"
+            alt={t('about.imageAlt')}
             width="1200"
             height="750"
             loading="lazy"
@@ -263,33 +264,37 @@ export const Home: React.FC = () => {
 
       <section id="workouts" className="home-section home-works">
         <div className="home-works-label">
-          <h2 className="home-kicker home-kicker-heading">Pilates &amp; Training Programs Amsterdam</h2>
-          <p className="home-sub">Explore our variety of training programs</p>
+          <h2 className="home-kicker home-kicker-heading">{t('workouts.heading')}</h2>
+          <p className="home-sub">{t('workouts.sub')}</p>
         </div>
-        <WorkoutGallery items={workouts} />
+        <WorkoutGallery items={workoutItems} />
       </section>
 
       <section id="trainers" className="home-section home-team">
-        <p className="home-kicker">Instructors</p>
-        <h2 className="home-section-title">Expert Personal Trainers Amsterdam</h2>
-        <p className="home-sub">Certified professionals dedicated to your fitness journey</p>
+        <p className="home-kicker">{t('trainers.kicker')}</p>
+        <h2 className="home-section-title">{t('trainers.title')}</h2>
+        <p className="home-sub">{t('trainers.sub')}</p>
         <div className="home-team-grid">
-          {trainers.map((t) => (
-            <TrainerTile key={t.to} trainer={t} />
+          {trainers.map((trainer) => (
+            <TrainerTile key={trainer.to} trainer={trainer} />
           ))}
         </div>
         <p className="home-footnote">
-          Want to teach?{' '}
-          <Link to="/academy/">Become a Pilates instructor</Link>
-          {', '}
-          <Link to="/academy/">Pilates teacher training</Link> at PT7 Academy.
+          <Trans
+            ns="home"
+            i18nKey="trainers.footnote"
+            components={{
+              become: <Link to={academyHref} />,
+              training: <Link to={academyHref} />,
+            }}
+          />
         </p>
       </section>
 
       <section id="reviews" className="home-section home-reviews">
-        <p className="home-kicker">Reviews</p>
-        <h2 className="home-section-title">Pilates Amsterdam Reviews</h2>
-        <p className="home-sub">Real experiences from our community</p>
+        <p className="home-kicker">{t('reviews.kicker')}</p>
+        <h2 className="home-section-title">{t('reviews.title')}</h2>
+        <p className="home-sub">{t('reviews.sub')}</p>
         <div className="home-quotes">
           {reviews.map((r) => (
             <blockquote key={r.author} className="home-quote">
@@ -300,23 +305,21 @@ export const Home: React.FC = () => {
         </div>
         <p className="home-ratings">
           <a href="https://maps.app.goo.gl/wrhyzYbov9eiGQJw5" target="_blank" rel="noopener noreferrer">
-            Google 4.9
+            {t('reviews.google')}
           </a>
           <span aria-hidden="true"> · </span>
           <a href="https://classpass.com/studios/pt-studio-7-amsterdam" target="_blank" rel="noopener noreferrer">
-            ClassPass 4.9 · 2,500+ reviews
+            {t('reviews.classpass')}
           </a>
         </p>
       </section>
 
       <section id="contact" className="home-contact">
         <div className="home-contact-inner">
-          <p className="home-kicker home-kicker-on-dark">Visit</p>
-          <h2 className="home-contact-title">Visit Our Studio</h2>
-          <p className="home-contact-address">
-            Van Baerlestraat 76C, 1071 BB Amsterdam Oud-Zuid
-          </p>
-          <p className="home-contact-meta">Across from Stedelijk Museum at Museumplein</p>
+          <p className="home-kicker home-kicker-on-dark">{t('contact.kicker')}</p>
+          <h2 className="home-contact-title">{t('contact.title')}</h2>
+          <p className="home-contact-address">{t('contact.address')}</p>
+          <p className="home-contact-meta">{t('contact.meta')}</p>
 
           <div className="home-contact-grid">
             <ContactMap />
@@ -328,12 +331,12 @@ export const Home: React.FC = () => {
                 WhatsApp
               </a>
               <a href="mailto:info@pt7.nl" className="home-btn home-btn-ghost" onClick={() => { trackEmailClick(); trackFBEmailClick(); }}>
-                Email Us
+                {t('contact.emailUs')}
               </a>
               <div className="home-contact-socials">
-                <a href="https://www.instagram.com/ptstudio7amsterdam" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
-                <a href="https://www.facebook.com/ptstudio7" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
-                <a href="https://www.linkedin.com/company/pt-studio-7" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://www.instagram.com/ptstudio7amsterdam" target="_blank" rel="noopener noreferrer" aria-label={t('contact.instagram')}>{t('contact.instagram')}</a>
+                <a href="https://www.facebook.com/ptstudio7" target="_blank" rel="noopener noreferrer" aria-label={t('contact.facebook')}>{t('contact.facebook')}</a>
+                <a href="https://www.linkedin.com/company/pt-studio-7" target="_blank" rel="noopener noreferrer" aria-label={t('contact.linkedin')}>{t('contact.linkedin')}</a>
               </div>
             </div>
           </div>
