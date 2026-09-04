@@ -75,7 +75,7 @@ wellness partnerships for your guests. We could offer:
 • Private sessions for hotel guests
 • Featured wellness activity on your website
 
-We've worked with [mention if any], and our 4.9-star rating reflects 
+We've worked with [mention if any], and our 4.8-star rating reflects 
 the premium experience we provide.
 
 Would you be interested in a brief call to discuss?
@@ -248,7 +248,7 @@ with:
 
 • 15 years experience
 • Small group classes (max 5)
-• 4.9-star rating
+• 4.8-star rating
 • Unique Museumplein location
 
 Would this be a valuable addition to your resource page?

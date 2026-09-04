@@ -111,7 +111,7 @@ export const nlHome: DeepStringify<EnHome> = {
     kicker: 'Reviews',
     title: 'Pilates Amsterdam reviews',
     sub: 'Echte ervaringen uit onze community',
-    google: 'Google 4.9',
+    google: 'Google 4.8',
     classpass: 'ClassPass 4.9 · 2.500+ reviews',
   },
   contact: {

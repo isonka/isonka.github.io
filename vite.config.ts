@@ -1,39 +1,28 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
-// Images live in public/, which Vite does not process. They are prepared ahead of
-// time by scripts/convert-to-webp.js and scripts/make-share-image.js (both use sharp).
 export default defineConfig({
   plugins: [react()],
-  base: '/', // Root domain
+  base: '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    // Performance optimizations
-    minify: 'esbuild', // Use esbuild for faster builds
+    minify: 'esbuild',
     rollupOptions: {
       output: {
-        // Better file naming with content hash for optimal caching
         assetFileNames: 'assets/[name]-[hash][extname]',
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
         manualChunks: {
-          // Split vendor code for better caching
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
         },
       },
     },
-    // Chunk size warnings
     chunkSizeWarningLimit: 1000,
-    // Enable CSS code splitting
     cssCodeSplit: true,
-    // Improve source map quality
-    sourcemap: false, // Disable in production for smaller files
-    // Asset inlining threshold (inline small files as base64)
-    assetsInlineLimit: 4096, // 4kb - inline smaller assets
+    sourcemap: false,
+    assetsInlineLimit: 4096,
   },
-  // Server configuration for development
   server: {
     headers: {
       'Cache-Control': 'no-cache',

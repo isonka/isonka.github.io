@@ -1,14 +1,3 @@
-/**
- * Writes a static HTML file for every route so GitHub Pages answers direct
- * URL hits with 200 instead of 404, and social crawlers see real meta tags.
- *
- * Route list comes from .routes-manifest.json (generated from
- * site/routes.ts). The meta below is only a fallback: prerender-static-html.js
- * overwrites these files with real snapshots, where SEOHead has already set
- * the head. It matters when a snapshot is skipped, e.g. the legacy
- * pregnancy-pilates alias that redirects client-side.
- */
-
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -27,8 +16,6 @@ const { baseUrl, shellPaths, canonicalOverrides, shellMeta } = JSON.parse(
   fs.readFileSync(manifestPath, 'utf-8'),
 );
 
-// Fallback meta for fixed pages. Detail pages (blog, trainers, equipment,
-// workouts) inherit theirs from the manifest or from index.html defaults.
 const fixedPageMeta = {
   '/nl/': {
     title: 'Pilates Amsterdam | Reformer pilates & personal training | PT Studio 7',
@@ -183,7 +170,6 @@ const indexHtml = fs.readFileSync(path.join(distDir, 'index.html'), 'utf-8');
 
 console.log('Generating static route files for GitHub Pages...\n');
 
-// '/' is already dist/index.html straight from Vite.
 const shellRoutes = shellPaths.filter((route) => route !== '/');
 
 for (const route of shellRoutes) {

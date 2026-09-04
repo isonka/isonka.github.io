@@ -1,3 +1,5 @@
+import { business, SCHEMA_IDS, BASE_URL } from '../data/business';
+
 interface Review {
   author: string;
   reviewBody: string;
@@ -37,8 +39,8 @@ interface CourseData {
 
 interface StructuredDataProps {
   type:
+    | 'Organization'
     | 'LocalBusiness'
-    | 'SportsActivityLocation'
     | 'Service'
     | 'Product'
     | 'ItemList'
@@ -100,60 +102,87 @@ interface StructuredDataProps {
   };
 }
 
+const postalAddress = { '@type': 'PostalAddress', ...business.address };
+const geoCoordinates = { '@type': 'GeoCoordinates', ...business.geo };
+const openingHoursSpecification = business.openingHours.map((slot) => ({
+  '@type': 'OpeningHoursSpecification',
+  ...slot,
+}));
+
 export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
   let schema: object | null = null;
-  const baseUrl = 'https://www.pt7.nl';
+  const baseUrl = BASE_URL;
+
+  if (type === 'Organization') {
+    schema = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      '@id': SCHEMA_IDS.organization,
+      name: business.name,
+      alternateName: business.alternateName,
+      url: business.url,
+      logo: business.logo,
+      image: business.images[0],
+      description: business.description,
+      foundingDate: business.foundingDate,
+      address: postalAddress,
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'customer service',
+        telephone: business.telephone,
+        email: business.email,
+        availableLanguage: business.availableLanguage,
+      },
+      founder: {
+        '@type': 'Person',
+        '@id': SCHEMA_IDS.founder,
+        name: business.founder.name,
+        givenName: business.founder.givenName,
+        familyName: business.founder.familyName,
+        jobTitle: business.founder.jobTitle,
+        description: business.founder.description,
+        image: business.founder.image,
+        url: business.founder.url,
+        knowsAbout: business.founder.knowsAbout,
+      },
+      sameAs: business.sameAs,
+    };
+  }
 
   if (type === 'LocalBusiness' && data?.reviews) {
     schema = {
       '@context': 'https://schema.org',
-      '@type': ['LocalBusiness', 'SportsActivityLocation'],
-      '@id': `${baseUrl}/#localbusiness`,
-      name: 'PT Studio 7 Amsterdam',
-      image: `${baseUrl}/assets/images/studio.webp`,
-      url: baseUrl,
-      telephone: '+31685162693',
-      priceRange: 'EUR 28-85',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Van Baerlestraat 76C',
-        addressLocality: 'Amsterdam',
-        postalCode: '1071 BB',
-        addressCountry: 'NL',
+      '@type': ['LocalBusiness', 'FitnessCenter', 'HealthAndBeautyBusiness', 'SportsActivityLocation'],
+      '@id': SCHEMA_IDS.localBusiness,
+      name: business.name,
+      alternateName: business.alternateName,
+      url: business.url,
+      image: business.images,
+      description: business.description,
+      telephone: business.telephone,
+      email: business.email,
+      priceRange: business.priceRange,
+      parentOrganization: { '@id': SCHEMA_IDS.organization },
+      founder: { '@id': SCHEMA_IDS.founder },
+      address: postalAddress,
+      geo: geoCoordinates,
+      hasMap: business.hasMap,
+      openingHoursSpecification,
+      areaServed: {
+        '@type': 'City',
+        name: business.areaServed,
       },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: 52.3572909720188,
-        longitude: 4.876257777138345,
-      },
-      hasMap: 'https://maps.app.goo.gl/wrhyzYbov9eiGQJw5',
-      sameAs: [
-        'https://www.instagram.com/ptstudio7amsterdam',
-        'https://www.facebook.com/ptstudio7',
-        'https://www.linkedin.com/company/pt-studio-7',
-        'https://classpass.com/studios/pt-studio-7-amsterdam',
-        'https://www.polestarpilates.nl/',
-      ],
-      openingHoursSpecification: [
-        {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-          opens: '09:00',
-          closes: '20:00',
-        },
-        {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Saturday', 'Sunday'],
-          opens: '09:00',
-          closes: '13:00',
-        },
-      ],
+      knowsAbout: business.knowsAbout,
+      paymentAccepted: business.paymentAccepted,
+      currenciesAccepted: business.currenciesAccepted,
+      availableLanguage: business.availableLanguage,
+      sameAs: business.sameAs,
       aggregateRating: {
         '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '150',
-        bestRating: '5',
-        worstRating: '1',
+        ratingValue: business.rating.value,
+        reviewCount: business.rating.count,
+        bestRating: business.rating.best,
+        worstRating: business.rating.worst,
       },
       review: data.reviews.map((review) => ({
         '@type': 'Review',
@@ -164,66 +193,11 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
         reviewRating: {
           '@type': 'Rating',
           ratingValue: review.ratingValue.toString(),
-          bestRating: '5',
-          worstRating: '1',
+          bestRating: business.rating.best,
+          worstRating: business.rating.worst,
         },
         reviewBody: review.reviewBody,
       })),
-    };
-  }
-
-  if (type === 'SportsActivityLocation') {
-    schema = {
-      '@context': 'https://schema.org',
-      '@type': 'SportsActivityLocation',
-      '@id': `${baseUrl}/#sports-activity-location`,
-      name: 'PT Studio 7 Amsterdam',
-      url: baseUrl,
-      description:
-        "Boutique Pilates and personal training studio at Museumplein, Amsterdam offering Reformer Pilates, TRX, strength training, private sessions, and small group classes.",
-      image: `${baseUrl}/assets/images/studio.webp`,
-      telephone: '+31685162693',
-      priceRange: 'EUR 28-85',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Van Baerlestraat 76C',
-        addressLocality: 'Amsterdam',
-        postalCode: '1071 BB',
-        addressCountry: 'NL',
-      },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: 52.3572909720188,
-        longitude: 4.876257777138345,
-      },
-      hasMap: 'https://maps.app.goo.gl/wrhyzYbov9eiGQJw5',
-      sport: ['Pilates', 'Reformer Pilates', 'TRX', 'Strength Training', 'Cardio Fitness'],
-      openingHoursSpecification: [
-        {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-          opens: '09:00',
-          closes: '20:00',
-        },
-        {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Saturday', 'Sunday'],
-          opens: '09:00',
-          closes: '13:00',
-        },
-      ],
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '150',
-      },
-      sameAs: [
-        'https://www.instagram.com/ptstudio7amsterdam',
-        'https://www.facebook.com/ptstudio7',
-        'https://www.linkedin.com/company/pt-studio-7',
-        'https://classpass.com/studios/pt-studio-7-amsterdam',
-        'https://www.polestarpilates.nl/',
-      ],
     };
   }
 
@@ -242,10 +216,10 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
         name: s.areaServed,
       },
       provider: {
-        '@type': 'SportsActivityLocation',
-        '@id': `${baseUrl}/#sports-activity-location`,
-        name: 'PT Studio 7 Amsterdam',
-        url: baseUrl,
+        '@type': 'Organization',
+        '@id': SCHEMA_IDS.organization,
+        name: business.name,
+        url: business.url,
       },
       offers: s.offers.map((offer) => ({
         '@type': 'Offer',
@@ -324,10 +298,10 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) =>
       image: `${baseUrl}${data.person.image}`,
       description: data.person.description,
       worksFor: {
-        '@type': 'SportsActivityLocation',
-        '@id': `${baseUrl}/#sports-activity-location`,
+        '@type': 'Organization',
+        '@id': SCHEMA_IDS.organization,
         name: data.person.worksFor,
-        url: baseUrl,
+        url: business.url,
       },
       knowsAbout:
         data.person.knowsAbout && data.person.knowsAbout.length > 0

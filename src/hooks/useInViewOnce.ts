@@ -6,8 +6,6 @@ export function useInViewOnce<T extends HTMLElement>() {
   const [inView, setInView] = useState(false);
 
   useEffect(() => {
-    // Reveal state is animation, not content: leaving it at the first-paint value
-    // keeps prerendered HTML identical to the client's first render.
     if (isPrerender()) return;
 
     const el = ref.current;

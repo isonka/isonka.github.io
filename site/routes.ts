@@ -1,14 +1,3 @@
-/**
- * Single source of truth for every public URL on the site.
- *
- * Consumed by the build scripts (static shells, prerender, sitemap) through
- * Node's TypeScript type stripping. `src/App.tsx` keeps its own React Router
- * table because those entries need element references; everything that only
- * needs to know *which URLs exist* reads this file.
- *
- * Detail-page URLs are derived from the data modules that render them, so a
- * new blog post or trainer cannot be missing from the build or the sitemap.
- */
 import { blogPosts } from '../src/data/blogPosts.ts';
 import { trainerProfiles } from '../src/data/trainers.ts';
 import { equipmentProducts } from '../src/data/equipment.ts';
@@ -20,7 +9,6 @@ export type ChangeFreq = 'daily' | 'weekly' | 'monthly' | 'yearly';
 
 export type SitemapImage = {
   loc: string;
-  /** Raw text; the sitemap writer handles XML escaping. */
   title: string;
 };
 
@@ -32,18 +20,10 @@ export type SitemapEntry = {
 };
 
 export type Route = {
-  /** Canonical path, always with a trailing slash. */
   path: string;
-  /** Write a prerendered snapshot. Off for pages that redirect client-side. */
   prerender: boolean;
-  /** Absolute canonical when it differs from `path` (legacy keyword aliases). */
   canonical?: string;
-  /** `null` keeps the URL out of sitemap.xml. */
   sitemap: SitemapEntry | null;
-  /**
-   * Fallback <title>/description for the static shell. Only surfaces if the
-   * prerendered snapshot is missing, since SEOHead rewrites these at runtime.
-   */
   meta?: { title: string; description: string };
 };
 
@@ -77,18 +57,14 @@ const FIXED_PAGES: Route[] = [
   { path: '/equipment/', prerender: true, sitemap: { lastmod: '2026-03-10', changefreq: 'monthly', priority: '0.7' } },
   { path: '/blog/', prerender: true, sitemap: { lastmod: '2026-03-10', changefreq: 'weekly', priority: '0.8' } },
 
-  // Service landing pages (local SEO)
   { path: '/prenatal-pilates-amsterdam/', prerender: true, sitemap: { lastmod: '2026-07-29', changefreq: 'monthly', priority: '0.9' } },
   { path: '/private-pilates-amsterdam/', prerender: true, sitemap: { lastmod: '2026-03-27', changefreq: 'monthly', priority: '0.9' } },
   { path: '/trx-training-amsterdam/', prerender: true, sitemap: { lastmod: '2026-03-27', changefreq: 'monthly', priority: '0.8' } },
   { path: '/strength-training-amsterdam/', prerender: true, sitemap: { lastmod: '2026-03-27', changefreq: 'monthly', priority: '0.8' } },
   { path: '/reformer-pilates-amsterdam/', prerender: true, sitemap: { lastmod: '2026-07-17', changefreq: 'monthly', priority: '0.9' } },
 
-  // Booking confirmation: needs a shell so direct hits resolve, must stay out of search.
   { path: '/congrats/', prerender: true, sitemap: null },
 
-  // Legacy keyword alias. Redirects client-side, so a snapshot would capture the
-  // prenatal page's markup under this URL and never match the client's first render.
   {
     path: '/pregnancy-pilates-amsterdam/',
     prerender: false,
@@ -156,18 +132,14 @@ const derived: Route[] = [
 
 export const routes: Route[] = [...FIXED_PAGES, ...derived];
 
-/** Paths needing a static HTML file so GitHub Pages answers direct hits with 200. */
 export const shellPaths: string[] = routes.map((route) => route.path);
 
-/** Paths that get a prerendered snapshot. */
 export const prerenderPaths: string[] = routes.filter((route) => route.prerender).map((route) => route.path);
 
-/** Canonical overrides keyed by path, for the legacy keyword aliases. */
 export const canonicalOverrides: Record<string, string> = Object.fromEntries(
   routes.filter((route) => route.canonical).map((route) => [route.path, route.canonical as string]),
 );
 
-/** Shell fallback meta keyed by path, for routes that carry it. */
 export const shellMeta: Record<string, { title: string; description: string }> = Object.fromEntries(
   routes
     .filter((route) => route.meta)

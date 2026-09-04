@@ -18,8 +18,6 @@ export const CookieConsent: React.FC = () => {
   const [marketing, setMarketing] = useState(false);
 
   useEffect(() => {
-    // Keep the banner out of prerendered HTML: it is per-visitor state, and every
-    // static page would otherwise ship the consent dialog as its first content.
     if (isPrerender()) return;
 
     const stored = getStoredConsent();

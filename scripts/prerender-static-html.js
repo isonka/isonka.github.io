@@ -19,9 +19,6 @@ if (!fs.existsSync(manifestPath)) {
   process.exit(1);
 }
 
-// Routes with `prerender: false` in site/routes.ts are absent here on purpose:
-// a page that redirects client-side would be snapshotted as its redirect target.
-// generate-static-routes.js still emits a shell for those with the right canonical.
 const routes = JSON.parse(fs.readFileSync(manifestPath, 'utf-8')).prerenderPaths;
 
 function findAvailablePort(start = 4173) {
@@ -125,7 +122,6 @@ function stopProcess(child, timeoutMs = 10000) {
       try {
         child.kill('SIGKILL');
       } catch {
-        // ignore
       }
       finish();
     }, timeoutMs);
@@ -146,7 +142,6 @@ function stopProcess(child, timeoutMs = 10000) {
 
 function outputPathForRoute(route) {
   if (route === '/') return path.join(distDir, 'index.html');
-  // Accept /path or /path/ — write to path/index.html for GH Pages
   const cleaned = route.replace(/^\//, '').replace(/\/$/, '');
   return path.join(distDir, cleaned, 'index.html');
 }
@@ -159,16 +154,12 @@ function shouldAllowRequest(url) {
   );
 }
 
-// Text that must never reach a published snapshot. Each entry is a state that is
-// true only inside the prerender sandbox (third-party requests are blocked) or
-// only for a real visitor (per-visitor UI), never for a crawler.
 const FORBIDDEN_SNIPPETS = [
   { needle: 'Booking calendar could not load', reason: 'MindBody widget error state' },
   { needle: 'pt7-consent-panel', reason: 'cookie consent dialog' },
   { needle: 'Unexpected Application Error', reason: 'router error boundary' },
 ];
 
-/** Returns a list of problems; empty means the snapshot is publishable. */
 function findSnapshotProblems(html) {
   const problems = [];
 
@@ -196,6 +187,13 @@ function findSnapshotProblems(html) {
   for (const { needle, reason } of FORBIDDEN_SNIPPETS) {
     if (html.includes(needle)) {
       problems.push(`contains ${reason} ("${needle}")`);
+    }
+  }
+
+  for (const type of ['FAQPage', 'LocalBusiness']) {
+    const count = (html.match(new RegExp(`"@type":\\s*(?:"${type}"|\\[[^\\]]*"${type}"[^\\]]*\\])`, 'g')) ?? []).length;
+    if (count > 1) {
+      problems.push(`${count} ${type} schema nodes, expected at most 1`);
     }
   }
 
@@ -258,9 +256,6 @@ async function prerenderRoutes() {
     const page = await browser.newPage();
     page.setDefaultNavigationTimeout(60000);
 
-    // Tells the app it is being captured, so effect-driven UI (cookie banner,
-    // third-party widgets, idle images, scroll reveals) stays at first-paint state.
-    // See src/utils/prerender.ts.
     await page.evaluateOnNewDocument(() => {
       window.__PT7_PRERENDER__ = true;
     });
@@ -280,9 +275,6 @@ async function prerenderRoutes() {
         await page.goto(url, { waitUntil: 'networkidle2' });
         await page.waitForSelector('#root *', { timeout: 30000 });
 
-        // Marks this HTML as safe to hydrate rather than re-render. src/main.tsx reads it.
-        // Files without the marker (dev server, 404.html, rejected routes) still contain
-        // the static fallback inside #root and must be rendered fresh.
         await page.evaluate(() => {
           document.getElementById('root')?.setAttribute('data-prerendered', 'true');
         });
@@ -339,7 +331,6 @@ async function prerenderRoutes() {
 
 prerenderRoutes()
   .then(() => {
-    // Ensure CI does not wait on lingering event-loop handles.
     process.exit(0);
   })
   .catch((error) => {

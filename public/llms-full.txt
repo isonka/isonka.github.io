@@ -354,8 +354,8 @@ Start from the curated index: https://www.pt7.nl/llms.txt
   "openingHours": "Mo-Fr 09:00-20:00, Sa-Su 09:00-13:00",
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "150+"
+    "ratingValue": "4.8",
+    "reviewCount": "28"
   }
 }
 ```

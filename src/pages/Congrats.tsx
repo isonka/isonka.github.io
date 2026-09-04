@@ -2,22 +2,26 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
 import { trackBookingConfirmation, trackPageView } from '../utils/gtmTracking';
+import { trackAdsConversion } from '../utils/consentTracking';
+import { isPrerender } from '../utils/prerender';
 import '../styles/Congrats.css';
+
+const BOOKING_CONVERSION = {
+  key: 'booking',
+  events: [
+    { name: 'ads_conversion_Book_appointment_1' },
+    { name: 'conversion', sendTo: 'AW-17684932205/G4r3CKjwirkbEO3M6vBB' },
+  ],
+};
 
 export const Congrats: React.FC = () => {
   useEffect(() => {
+    if (isPrerender()) return;
+
     trackPageView('/congrats', 'Booking Confirmed');
-    
     trackBookingConfirmation();
 
-    if (window.gtag) {
-      window.gtag('event', 'ads_conversion_Book_appointment_1', {});
-      
-      window.gtag('event', 'conversion', {
-        'send_to': 'AW-17684932205/G4r3CKjwirkbEO3M6vBB',
-        'transaction_id': ''
-      });
-    }
+    return trackAdsConversion(BOOKING_CONVERSION);
   }, []);
 
   return (

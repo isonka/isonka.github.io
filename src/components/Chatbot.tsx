@@ -89,8 +89,6 @@ export const Chatbot: React.FC = () => {
         );
       }, 1500);
     }
-    // Only isOpen: addBotMessage is recreated each render; messages.length
-    // hits 0 on Start over and would duplicate this greeting.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 

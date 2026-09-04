@@ -108,7 +108,7 @@ export const enHome = {
     kicker: 'Reviews',
     title: 'Pilates Amsterdam Reviews',
     sub: 'Real experiences from our community',
-    google: 'Google 4.9',
+    google: 'Google 4.8',
     classpass: 'ClassPass 4.9 · 2,500+ reviews',
   },
   contact: {

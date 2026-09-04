@@ -1,19 +1,4 @@
 #!/usr/bin/env node
-/**
- * Enforces WebP-only images in public/assets/images/.
- *
- * For every JPG/JPEG/PNG found: converts it to WebP if no WebP twin exists yet,
- * then deletes the original. Files in KEEP are left alone.
- *
- * KEEP exists because two cases still need a raster original:
- *   - pt7logo.png  → favicon and apple-touch-icon (iOS needs PNG, Safari's WebP
- *                    favicon support is unreliable)
- *   - og-share.jpg → social preview image, see scripts/make-share-image.js
- *                    (LinkedIn and the Facebook/WhatsApp scraper are unreliable with WebP)
- *
- * Run with --dry-run to preview without writing or deleting.
- */
-
 import sharp from 'sharp';
 import { readdirSync, existsSync, statSync, unlinkSync } from 'fs';
 import { join, extname, basename, relative } from 'path';
@@ -75,7 +60,7 @@ async function processDir(dir) {
       } catch (err) {
         console.error(`  FAILED: ${label}: ${err.message}`);
         failed += 1;
-        continue; // never delete an original we could not convert
+        continue;
       }
     }
 

@@ -2,7 +2,6 @@
 <html lang="en" class="no-js">
   <head>
     <meta charset="UTF-8" />
-    <!-- Google Consent Mode v2 defaults only — gtag/GTM/Ads load after PT7 cookie consent -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -19,7 +18,6 @@
       gtag('set', 'ads_data_redaction', true);
       gtag('set', 'url_passthrough', true);
     </script>
-    <!-- GTM / GA / Google tag / Meta gated in src/utils/consentTracking.ts -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/pt7logo.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/pt7logo.png" />
@@ -30,7 +28,6 @@
     <meta name="description" content="Reformer Pilates &amp; personal training in Amsterdam at Museumplein, max 5 per class. Private sessions and small groups with certified instructors. 15+ years expertise. Book now." />
     <meta name="keywords" content="Reformer Pilates Amsterdam, personal training Amsterdam, Pilates Museumplein, private Pilates Amsterdam, small group Pilates, Pilates studio Van Baerlestraat, TRX training Amsterdam, prenatal Pilates Amsterdam" />
     
-    <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.pt7.nl/" />
     <meta property="og:title" content="Reformer Pilates &amp; Personal Training in Amsterdam | PT Studio 7" />
@@ -44,7 +41,6 @@
     <meta property="og:site_name" content="PT Studio 7 Amsterdam" />
     <meta property="og:locale" content="en_US" />
     
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://www.pt7.nl/" />
     <meta name="twitter:title" content="Reformer Pilates &amp; Personal Training in Amsterdam | PT Studio 7" />
@@ -52,53 +48,43 @@
     <meta name="twitter:image" content="https://www.pt7.nl/assets/images/og-share.jpg" />
     <meta name="twitter:image:alt" content="PT Studio 7 Amsterdam - Pilates Studio" />
     
-    <!-- Additional SEO -->
     <link rel="canonical" href="https://www.pt7.nl/" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <!-- LLM discovery (GitHub Pages does not honor _headers Link; keep in HTML) -->
     <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM context index" />
     <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM full fact pack" />
     <link rel="describedby" href="/llms.txt" type="text/plain" />
     
-    <!-- Language/Region targeting -->
     <link rel="alternate" hreflang="en" href="https://www.pt7.nl/" />
-    <link rel="alternate" hreflang="nl" href="https://www.pt7.nl/" />
+    <link rel="alternate" hreflang="nl" href="https://www.pt7.nl/nl/" />
     <link rel="alternate" hreflang="x-default" href="https://www.pt7.nl/" />
     <meta name="geo.region" content="NL-NH" />
     <meta name="geo.placename" content="Amsterdam" />
     <meta name="geo.position" content="52.3572909;4.8762577" />
     <meta name="ICBM" content="52.3572909, 4.8762577" />
     
-    <!-- DNS Prefetch for faster external resource loading -->
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://widgets.mindbodyonline.com">
     <link rel="dns-prefetch" href="https://connect.facebook.net">
     
-    <!-- Preload local heading font (self-hosted Poppins, no Google Fonts) -->
     <link rel="preload" href="/fonts/poppins-latin-400.woff2" as="font" type="font/woff2" crossorigin>
     
-    <!-- Critical CSS for immediate text rendering -->
     <style>
-      /* Fallback fonts to prevent FOIT (Flash of Invisible Text) */
       body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
         margin: 0;
         padding: 0;
       }
       
-      /* Hide static fallback content from visual users but keep for LLMs/crawlers */
       #static-fallback {
         display: none;
         visibility: hidden;
       }
       
-      /* Show fallback content only if JavaScript fails to load */
       .no-js #static-fallback {
         display: block !important;
         visibility: visible !important;
       }
       
-      /* Loading indicator for better UX */
       #root:empty::before {
         content: '';
         display: block;
@@ -117,7 +103,6 @@
       }
     </style>
     
-    <!-- Detect if JavaScript is disabled -->
     <script>
       document.documentElement.classList.remove('no-js');
     </script>
@@ -130,7 +115,6 @@
       </style>
     </noscript>
     
-    <!-- Preload LCP hero with responsive candidates -->
     <link
       rel="preload"
       as="image"
@@ -140,206 +124,9 @@
       fetchpriority="high"
     >
     
-    <!-- Healcode loaded on demand via src/utils/healcode.ts (Navbar idle + booking pages) -->
-
-    <!-- Structured Data - Organization Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "@id": "https://www.pt7.nl/#organization",
-      "name": "PT Studio 7 Amsterdam",
-      "alternateName": "PT Studio 7",
-      "url": "https://www.pt7.nl",
-      "logo": "https://www.pt7.nl/assets/images/pt7logo.webp",
-      "image": "https://www.pt7.nl/assets/images/studio.webp",
-      "description": "Boutique Reformer Pilates studio in Amsterdam Museumplein offering small group classes (max 5), private sessions, TRX, and strength training with 15+ years of expertise",
-      "founder": {
-        "@type": "Person",
-        "@id": "https://www.pt7.nl/#founder"
-      },
-      "foundingDate": "2009",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Van Baerlestraat 76C",
-        "addressLocality": "Amsterdam",
-        "postalCode": "1071BB",
-        "addressCountry": "NL"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+31685162693",
-        "contactType": "customer service",
-        "email": "info@pt7.nl",
-        "availableLanguage": ["English", "Turkish", "Dutch"]
-      },
-      "sameAs": [
-        "https://www.instagram.com/ptstudio7amsterdam",
-        "https://www.facebook.com/ptstudio7",
-        "https://www.linkedin.com/company/pt-studio-7"
-      ]
-    }
-    </script>
-    
-    <!-- Structured Data - Person Schema (Founder/Owner) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "@id": "https://www.pt7.nl/#founder",
-      "name": "Elif Arzu Ogan",
-      "givenName": "Elif",
-      "familyName": "Ogan",
-      "jobTitle": "Owner & Head Trainer",
-      "worksFor": {
-        "@type": "Organization",
-        "@id": "https://www.pt7.nl/#organization"
-      },
-      "description": "Certified Pilates instructor with 15+ years of experience, specializing in Reformer Pilates, functional training, and pregnancy Pilates",
-      "knowsAbout": ["Reformer Pilates", "Polestar Pilates", "Strength Training", "Pregnancy Pilates", "Postnatal Fitness"],
-      "url": "https://www.pt7.nl/trainer/elif",
-      "image": "https://www.pt7.nl/assets/images/elif.webp",
-      "email": "info@pt7.nl",
-      "telephone": "+31685162693",
-      "sameAs": [
-        "https://www.instagram.com/ptstudio7amsterdam",
-        "https://www.facebook.com/ptstudio7",
-        "https://www.linkedin.com/company/pt-studio-7"
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Amsterdam",
-        "addressCountry": "NL"
-      }
-    }
-    </script>
-    
-    <!-- Structured Data - LocalBusiness Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": ["LocalBusiness", "FitnessCenter", "HealthAndBeautyBusiness", "SportsActivityLocation"],
-      "name": "PT Studio 7 Amsterdam",
-      "alternateName": "PT Studio 7",
-      "image": [
-        "https://www.pt7.nl/assets/images/pt7logo.webp",
-        "https://www.pt7.nl/assets/images/reformer_1.webp",
-        "https://www.pt7.nl/assets/images/tower_reformer_1.webp"
-      ],
-      "@id": "https://www.pt7.nl",
-      "url": "https://www.pt7.nl",
-      "telephone": "+31685162693",
-      "email": "info@pt7.nl",
-      "priceRange": "€€",
-      "founder": {
-        "@type": "Person",
-        "@id": "https://www.pt7.nl/#founder"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Van Baerlestraat 76C",
-        "addressLocality": "Amsterdam",
-        "postalCode": "1071BB",
-        "addressCountry": "NL",
-        "addressRegion": "Noord-Holland"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 52.3572909720188,
-        "longitude": 4.876257777138345
-      },
-      "hasMap": "https://maps.google.com/?q=Van+Baerlestraat+76C,+Amsterdam",
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "09:00",
-          "closes": "20:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Saturday", "Sunday"],
-          "opens": "09:00",
-          "closes": "13:00"
-        }
-      ],
-      "sameAs": [
-        "https://www.instagram.com/ptstudio7amsterdam",
-        "https://www.facebook.com/ptstudio7",
-        "https://www.linkedin.com/company/pt-studio-7"
-      ],
-      "description": "Amsterdam's premier Pilates boutique studio at Museumplein. Small group classes (max 5). Expert certified instructors. Private & group Pilates classes. TRX & Strength Training.",
-      "knowsAbout": ["Pilates", "Personal Training", "TRX", "Strength Training", "Reformer Pilates", "Tower Reformer", "Cadillac Pilates", "Small Group Training"],
-      "areaServed": {
-        "@type": "City",
-        "name": "Amsterdam"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "bestRating": "5",
-        "worstRating": "1",
-        "reviewCount": "150"
-      },
-      "paymentAccepted": "Credit Card, Cash, Bank Transfer",
-      "currenciesAccepted": "EUR",
-      "availableLanguage": ["English", "Dutch", "Turkish"]
-    }
-    </script>
-    
-    <!-- Structured Data - FAQ Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Where is PT Studio 7 located in Amsterdam?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "PT Studio 7 is located at Van Baerlestraat 76C, 1071BB Amsterdam, right at Museumplein, across from the Stedelijk Museum"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What types of Pilates classes does PT Studio 7 offer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We offer both small group Pilates classes (maximum 5 participants) and private Pilates sessions. Classes include Reformer Pilates, Tower Reformer, Cadillac, and mat Pilates, along with TRX, and strength training."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How many people are in PT Studio 7 group classes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Our small group classes have a maximum of 5 participants, ensuring personalized attention from our expert instructors in an intimate boutique setting."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I book private Pilates sessions at PT Studio 7?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes! We offer private Pilates sessions for individuals, couples, or groups of three. Private sessions are fully customized to your specific goals, fitness level, and any injuries or special needs."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What equipment does PT Studio 7 have?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We have professional Pilates equipment including Reformers, Tower Reformers, Cadillac, Wunda Chair, Spine Corrector, and accessories. We also offer TRX equipment for suspension training."
-          }
-        }
-      ]
-    }
-    </script>
   </head>
   <body>
     <div id="root">
-      <!-- Static Content Fallback for LLMs and No-JS Users - Hidden from visual users -->
       <main id="static-fallback" style="max-width: 1200px; margin: 0 auto; padding: 20px; font-family: system-ui;">
         <header>
           <h1>PT Studio 7 Amsterdam - Reformer Pilates Museumplein</h1>

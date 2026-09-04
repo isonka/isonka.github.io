@@ -13,7 +13,6 @@ export function withTrailingSlash(pathOrUrl: string): string {
   return `${pathPart}/${suffix}`;
 }
 
-/** Same-origin SPA path from GH Pages 404.html. Reject protocol-relative and off-site values. */
 export function safeInternalRedirect(raw: string): { path: string; rest: string } | null {
   let value = raw;
   try {

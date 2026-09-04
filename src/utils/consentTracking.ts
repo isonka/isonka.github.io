@@ -1,8 +1,10 @@
+import { isPrerender } from './prerender';
+
 const GTM_ID = 'GTM-KB25PGXB';
 const GA_ID = 'G-JYKY1GMV9Z';
 const GOOGLE_TAG_ID = 'GT-TWM74JTS';
 const GOOGLE_ADS_ID = 'AW-17684932205';
-const META_PIXEL_ID = '1197758608916828';
+const META_PIXEL_ID = '1671589834538679';
 
 export const CONSENT_STORAGE_KEY = 'pt7_cookie_consent';
 export const OPEN_COOKIE_SETTINGS_EVENT = 'pt7-open-cookie-settings';
@@ -237,11 +239,6 @@ export function loadMetaPixel() {
   loaded.meta = true;
 }
 
-/**
- * Load tags that match the stored choice.
- * Statistics → GA4 only. Marketing → GTM, Google Ads / Google tag, Meta.
- * Already-injected scripts cannot be unloaded; Consent Mode then denies storage.
- */
 export function applyConsent(consent: Pt7Consent) {
   ensureGtagStub();
   updateGoogleConsent(consent);
@@ -255,9 +252,7 @@ export function applyConsent(consent: Pt7Consent) {
         if (latest.statistics) configureGa();
         if (latest.marketing) configureAds();
       })
-      .catch(() => {
-        /* network failure: consent is stored; tags stay unloaded */
-      });
+      .catch(() => {});
   }
 
   if (consent.marketing) {
@@ -272,4 +267,137 @@ export function loadTrackingIfConsented() {
   const consent = getStoredConsent();
   if (!consent) return;
   applyConsent(consent);
+}
+
+export function hasMarketingConsent(): boolean {
+  return getStoredConsent()?.marketing === true;
+}
+
+const ADS_CONVERSION_TTL_MS = 30 * 60 * 1000;
+const ADS_CONVERSION_KEY = 'pt7_ads_conversions';
+const ADS_CONVERSION_SESSION_PREFIX = 'pt7_ads_conversion_';
+
+type ConversionRecord = { key: string; id: string; at: number };
+
+export type AdsConversionEvent = {
+  name: string;
+  sendTo?: string;
+};
+
+export type AdsConversionConfig = {
+  key: string;
+  events: AdsConversionEvent[];
+};
+
+function newConversionId(): string {
+  const uuid = window.crypto?.randomUUID?.();
+  if (uuid) return uuid;
+  return `pt7-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+}
+
+function readConversionRecords(): ConversionRecord[] {
+  try {
+    const raw = localStorage.getItem(ADS_CONVERSION_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw) as unknown;
+    if (!Array.isArray(parsed)) return [];
+    return parsed.filter(
+      (record): record is ConversionRecord =>
+        typeof record === 'object' &&
+        record !== null &&
+        typeof (record as ConversionRecord).key === 'string' &&
+        typeof (record as ConversionRecord).id === 'string' &&
+        typeof (record as ConversionRecord).at === 'number',
+    );
+  } catch {
+    return [];
+  }
+}
+
+function writeConversionRecords(records: ConversionRecord[]) {
+  try {
+    localStorage.setItem(ADS_CONVERSION_KEY, JSON.stringify(records));
+  } catch {
+  }
+}
+
+function claimConversionId(key: string): string | null {
+  const sessionKey = `${ADS_CONVERSION_SESSION_PREFIX}${key}`;
+
+  try {
+    if (sessionStorage.getItem(sessionKey)) return null;
+  } catch {
+  }
+
+  const now = Date.now();
+  const records = readConversionRecords().filter((record) => now - record.at < ADS_CONVERSION_TTL_MS);
+  if (records.some((record) => record.key === key)) return null;
+
+  const id = newConversionId();
+  writeConversionRecords([...records, { key, id, at: now }]);
+  try {
+    sessionStorage.setItem(sessionKey, id);
+  } catch {
+  }
+
+  return id;
+}
+
+function releaseConversionId(key: string) {
+  try {
+    sessionStorage.removeItem(`${ADS_CONVERSION_SESSION_PREFIX}${key}`);
+  } catch {
+  }
+  writeConversionRecords(readConversionRecords().filter((record) => record.key !== key));
+}
+
+export function trackAdsConversion(config: AdsConversionConfig): () => void {
+  if (isPrerender()) return () => {};
+
+  let settled = false;
+
+  const attempt = () => {
+    if (settled || !hasMarketingConsent()) return;
+
+    const transactionId = claimConversionId(config.key);
+    if (!transactionId) {
+      settled = true;
+      return;
+    }
+
+    settled = true;
+
+    void ensureGtagScript(GOOGLE_TAG_ID)
+      .then(() => {
+        configureAds();
+        const gtag = getGtag();
+        if (!gtag) {
+          releaseConversionId(config.key);
+          settled = false;
+          return;
+        }
+
+        for (const event of config.events) {
+          gtag('event', event.name, {
+            ...(event.sendTo ? { send_to: event.sendTo } : {}),
+            transaction_id: transactionId,
+          });
+        }
+      })
+      .catch(() => {
+        releaseConversionId(config.key);
+        settled = false;
+      });
+  };
+
+  attempt();
+  if (settled) return () => {};
+
+  const onConsentUpdated = () => {
+    attempt();
+    if (settled) window.removeEventListener(CONSENT_UPDATED_EVENT, onConsentUpdated);
+  };
+
+  window.addEventListener(CONSENT_UPDATED_EVENT, onConsentUpdated);
+  return () => window.removeEventListener(CONSENT_UPDATED_EVENT, onConsentUpdated);
 }

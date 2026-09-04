@@ -11,6 +11,7 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
 import { CookieConsent } from './components/CookieConsent';
+import { StructuredData } from './components/StructuredData';
 import { LocaleSync } from './i18n/LocaleSync';
 import { withTrailingSlash, safeInternalRedirect } from './utils/urls';
 import { isPrerender } from './utils/prerender';
@@ -76,7 +77,6 @@ function RedirectHandler() {
 
 const CHATBOT_DEFER_MS = 4000;
 
-/** Keeps the chatbot bundle off the critical path: fetched on first interaction or when idle. */
 function DeferredChatbot() {
   const [shouldLoad, setShouldLoad] = useState(false);
 
@@ -127,6 +127,7 @@ function RouteFallback() {
 function Layout() {
   return (
     <>
+      <StructuredData type="Organization" />
       <CookieConsent />
       <ScrollToTop />
       <TrailingSlashNormalizer />

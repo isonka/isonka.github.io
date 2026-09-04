@@ -74,9 +74,6 @@ const app = (
   </StrictMode>
 );
 
-// Prerendered pages already contain the correct markup, so attach to it instead of
-// discarding and redrawing it. The marker is set by scripts/prerender-static-html.js;
-// everything else (dev server, 404.html) holds the static fallback and renders fresh.
 if (rootElement.dataset.prerendered === 'true') {
   hydrateRoot(rootElement, app);
 } else {
