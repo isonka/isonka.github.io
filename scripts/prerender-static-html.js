@@ -52,6 +52,7 @@ const routes = [
   '/strength-training-amsterdam/',
   '/reformer-pilates-amsterdam/',
   '/blog/',
+  '/blog/group-pilates-class-size-attention-amsterdam/',
   '/blog/prenatal-pilates-supporting-body-through-every-trimester/',
   '/blog/pilates-for-men-strength-flexibility-athletic-performance/',
   '/blog/pilates-prices-amsterdam-2026-complete-guide/',
