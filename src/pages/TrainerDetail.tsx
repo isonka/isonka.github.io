@@ -7,7 +7,7 @@ import { PHOTO_FOCUS } from '../data/photoFocus';
 import { trainerProfiles } from '../data/trainers';
 import '../styles/Trainer.css';
 
-export const TrainerDetail: React.FC = () => {
+export const TrainerDetail= () => {
   const { slug } = useParams<{ slug: string }>();
   const trainer = trainerProfiles.find(t => t.slug === slug);
 

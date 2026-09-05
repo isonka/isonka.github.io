@@ -32,7 +32,7 @@ const defaultFAQItems: FAQItem[] = [
   }
 ];
 
-export const EquipmentFAQ: React.FC<EquipmentFAQProps> = ({ items = defaultFAQItems }) => {
+export const EquipmentFAQ = ({ items = defaultFAQItems }: EquipmentFAQProps) => {
   useEffect(() => {
     const faqQuestions = document.querySelectorAll('.faq-question');
     

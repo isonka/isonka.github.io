@@ -113,7 +113,7 @@ function TrainerTile({
   );
 }
 
-export const Home: React.FC = () => {
+export const Home= () => {
   const { t } = useTranslation('home');
   const locale = useLocale();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

@@ -6,7 +6,7 @@ type RevealProps = {
   children: ReactNode;
 };
 
-export const Reveal: React.FC<RevealProps> = ({ className = '', children }) => {
+export const Reveal = ({ className = '', children }: RevealProps) => {
   const { ref, inView } = useInViewOnce<HTMLElement>();
   const classes = [className, inView ? 'is-in' : ''].filter(Boolean).join(' ');
 

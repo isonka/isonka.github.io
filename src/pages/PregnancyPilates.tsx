@@ -1,7 +1,7 @@
 import { Navigate } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
 
-export const PregnancyPilates: React.FC = () => {
+export const PregnancyPilates= () => {
   return (
     <>
       <SEOHead

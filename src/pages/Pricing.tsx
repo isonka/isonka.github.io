@@ -79,7 +79,7 @@ const pricingVisibleFaqs = (formatPrice: typeof formatEur) => [
   },
 ];
 
-export const Pricing: React.FC = () => {
+export const Pricing= () => {
   const [instructorTier, setInstructorTier] = useState<keyof typeof PRIVATE>('master');
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 

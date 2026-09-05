@@ -5,7 +5,7 @@ import { Breadcrumbs } from '../components/Breadcrumbs';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/HealthcareProviders.css';
 
-export const HealthcareProviders: React.FC = () => {
+export const HealthcareProviders= () => {
   useEffect(() => {
     trackPageView('/healthcare-providers', 'For Healthcare Providers - PT Studio 7 Amsterdam');
   }, []);

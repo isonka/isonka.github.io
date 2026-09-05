@@ -5,7 +5,7 @@ import { homePath, isHomePath } from '../i18n/locale';
 import { useLocale } from '../i18n/useLocale';
 import '../styles/Footer.css';
 
-export const Footer: React.FC = () => {
+export const Footer= () => {
   const { t } = useTranslation('common');
   const locale = useLocale();
   const navigate = useNavigate();

@@ -33,7 +33,7 @@ interface UserProfile {
   budget?: string;
 }
 
-export const Chatbot: React.FC = () => {
+export const Chatbot= () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);

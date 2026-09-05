@@ -5,7 +5,7 @@ type AcademyGraduatesProps = {
   locale: 'en' | 'nl';
 };
 
-export const AcademyGraduates: React.FC<AcademyGraduatesProps> = ({ locale }) => {
+export const AcademyGraduates = ({ locale }: AcademyGraduatesProps) => {
   const isNl = locale === 'nl';
   const heading = isNl ? 'Afgestudeerden van PT7 Academy' : 'PT7 Academy graduates';
   const intro = isNl

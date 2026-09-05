@@ -14,7 +14,7 @@ const BOOKING_CONVERSION = {
   ],
 };
 
-export const Congrats: React.FC = () => {
+export const Congrats= () => {
   useEffect(() => {
     if (isPrerender()) return;
 

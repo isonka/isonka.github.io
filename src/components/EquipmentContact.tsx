@@ -1,4 +1,4 @@
-export const EquipmentContact: React.FC = () => {
+export const EquipmentContact= () => {
   return (
     <section id="product-contact" className="product-contact">
       <div className="product-contact-inner">

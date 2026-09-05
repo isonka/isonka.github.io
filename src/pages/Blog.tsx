@@ -3,7 +3,7 @@ import { SEOHead } from '../components/SEOHead';
 import { blogPosts } from '../data/blogPosts';
 import '../styles/Blog.css';
 
-export const Blog: React.FC = () => {
+export const Blog= () => {
   return (
     <>
       <SEOHead

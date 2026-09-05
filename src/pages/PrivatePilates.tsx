@@ -34,7 +34,7 @@ const faqs = [
   },
 ];
 
-export const PrivatePilates: React.FC = () => {
+export const PrivatePilates= () => {
   useEffect(() => {
     trackPageView('/private-pilates-amsterdam/', 'Private Pilates Amsterdam | PT Studio 7');
   }, []);

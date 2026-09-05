@@ -12,7 +12,7 @@ import '../styles/CookieConsent.css';
 
 type PanelMode = 'hidden' | 'banner' | 'settings';
 
-export const CookieConsent: React.FC = () => {
+export const CookieConsent= () => {
   const [mode, setMode] = useState<PanelMode>('hidden');
   const [statistics, setStatistics] = useState(false);
   const [marketing, setMarketing] = useState(false);

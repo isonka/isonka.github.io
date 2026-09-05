@@ -34,7 +34,7 @@ const faqs = [
   },
 ];
 
-export const StrengthTrainingAmsterdam: React.FC = () => {
+export const StrengthTrainingAmsterdam= () => {
   useEffect(() => {
     trackPageView('/strength-training-amsterdam', 'Strength Training Amsterdam | PT Studio 7');
   }, []);

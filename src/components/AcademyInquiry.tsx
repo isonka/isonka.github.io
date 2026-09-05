@@ -6,7 +6,7 @@ type AcademyInquiryProps = {
   locale: 'en' | 'nl';
 };
 
-export const AcademyInquiry: React.FC<AcademyInquiryProps> = ({ locale }) => {
+export const AcademyInquiry = ({ locale }: AcademyInquiryProps) => {
   const isNl = locale === 'nl';
 
   useEffect(() => {

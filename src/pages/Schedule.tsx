@@ -40,7 +40,7 @@ const scheduleFaqs = [
   },
 ];
 
-export const Schedule: React.FC = () => {
+export const Schedule= () => {
   const [activeTab, setActiveTab] = useState('group');
   const [widgetsLoading, setWidgetsLoading] = useState(true);
   const [widgetsError, setWidgetsError] = useState(false);

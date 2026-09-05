@@ -109,7 +109,7 @@ const openingHoursSpecification = business.openingHours.map((slot) => ({
   ...slot,
 }));
 
-export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
+export const StructuredData = ({ type, data }: StructuredDataProps) => {
   let schema: object | null = null;
   const baseUrl = BASE_URL;
 

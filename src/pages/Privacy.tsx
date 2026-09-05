@@ -7,7 +7,7 @@ import { openCookieSettings } from '../utils/consentTracking';
 import '../styles/ServicePage.css';
 import '../styles/Privacy.css';
 
-export const Privacy: React.FC = () => {
+export const Privacy= () => {
   useEffect(() => {
     trackPageView('/privacy', 'Privacy Policy | PT Studio 7 Amsterdam');
   }, []);

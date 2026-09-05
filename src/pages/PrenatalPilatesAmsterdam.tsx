@@ -60,7 +60,7 @@ const faqs = [
   },
 ];
 
-export const PrenatalPilatesAmsterdam: React.FC = () => {
+export const PrenatalPilatesAmsterdam= () => {
   const baseUrl = 'https://www.pt7.nl';
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 

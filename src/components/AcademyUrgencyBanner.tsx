@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useLocale } from '../i18n/useLocale';
 import '../styles/AcademyUrgencyBanner.css';
 
-export const AcademyUrgencyBanner: React.FC = () => {
+export const AcademyUrgencyBanner= () => {
   const { t } = useTranslation('home');
   const locale = useLocale();
   const to = locale === 'nl' ? '/academy/nl/' : '/academy/';

@@ -7,7 +7,7 @@ import { getBlogPostBySlug, getRecentPosts } from '../data/blogPosts';
 import { trackBlogPostView, trackBlogPostRead, trackPageView } from '../utils/gtmTracking';
 import '../styles/BlogPost.css';
 
-export const BlogPost: React.FC = () => {
+export const BlogPost= () => {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getBlogPostBySlug(slug) : undefined;
   const recentPosts = getRecentPosts(3).filter((p) => p.slug !== slug);

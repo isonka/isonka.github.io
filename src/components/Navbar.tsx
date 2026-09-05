@@ -8,7 +8,7 @@ import { useLocale } from '../i18n/useLocale';
 import { LangSwitch } from './LangSwitch';
 import '../styles/Navbar.css';
 
-export const Navbar: React.FC = () => {
+export const Navbar= () => {
   const { t } = useTranslation('common');
   const locale = useLocale();
   const [isMenuOpen, setIsMenuOpen] = useState(false);

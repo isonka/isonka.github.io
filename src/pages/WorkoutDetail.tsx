@@ -8,7 +8,7 @@ import { ensureHealcodeLoaded } from '../utils/healcode';
 import { workoutDetails } from '../data/workoutDetails';
 import '../styles/WorkoutDetail.css';
 
-export const WorkoutDetail: React.FC = () => {
+export const WorkoutDetail= () => {
   const { slug } = useParams<{ slug: string }>();
   const workout = workoutDetails.find(w => w.slug === slug);
 

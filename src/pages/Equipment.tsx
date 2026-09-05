@@ -28,7 +28,7 @@ const equipmentMeta: Record<string, { description: string; tag?: string }> = {
   },
 };
 
-export const Equipment: React.FC = () => {
+export const Equipment= () => {
   const navigate = useNavigate();
 
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {

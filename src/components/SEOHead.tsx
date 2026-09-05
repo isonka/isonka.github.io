@@ -20,7 +20,7 @@ interface SEOHeadProps {
   hreflangAlternates?: HreflangAlternate[];
 }
 
-export const SEOHead: React.FC<SEOHeadProps> = ({
+export const SEOHead = ({
   title,
   description,
   keywords,
@@ -32,7 +32,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
   ogLocaleAlternates = ['nl_NL'],
   htmlLang = 'en',
   hreflangAlternates,
-}) => {
+}: SEOHeadProps) => {
   useEffect(() => {
     document.title = title;
     document.documentElement.lang = htmlLang;

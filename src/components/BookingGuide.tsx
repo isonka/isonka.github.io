@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import '../styles/BookingGuide.css';
 
-export const BookingGuide: React.FC = () => {
+export const BookingGuide= () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeStep, setActiveStep] = useState(0);
   const contentRef = useRef<HTMLDivElement>(null);

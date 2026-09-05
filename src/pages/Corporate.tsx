@@ -6,7 +6,7 @@ import { Breadcrumbs } from '../components/Breadcrumbs';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/Corporate.css';
 
-export const Corporate: React.FC = () => {
+export const Corporate= () => {
   useEffect(() => {
     trackPageView('/corporate', 'Corporate Pilates Amsterdam | For Business | PT Studio 7');
   }, []);

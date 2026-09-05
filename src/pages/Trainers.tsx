@@ -6,10 +6,14 @@ import { trainerProfiles, type TrainerProfile } from '../data/trainers';
 import { useInViewOnce } from '../hooks/useInViewOnce';
 import '../styles/Trainers.css';
 
-const InstructorRow: React.FC<{ instructor: TrainerProfile; index: number; eager: boolean }> = ({
+const InstructorRow = ({
   instructor,
   index,
   eager,
+}: {
+  instructor: TrainerProfile;
+  index: number;
+  eager: boolean;
 }) => {
   const { ref, inView } = useInViewOnce<HTMLAnchorElement>();
   const role = instructor.heroTitle.replace(/\n/g, ' · ');
@@ -54,7 +58,7 @@ const InstructorRow: React.FC<{ instructor: TrainerProfile; index: number; eager
   );
 };
 
-export const Trainers: React.FC = () => {
+export const Trainers= () => {
   const availableInstructors = trainerProfiles.filter(t => t.available);
   const hasComingSoon = trainerProfiles.some(t => !t.available);
 

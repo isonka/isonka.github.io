@@ -8,7 +8,7 @@ import { EquipmentContact } from '../components/EquipmentContact';
 import { equipmentProducts } from '../data/equipment';
 import '../styles/EquipmentProduct.css';
 
-export const EquipmentDetail: React.FC = () => {
+export const EquipmentDetail= () => {
   const { slug } = useParams<{ slug: string }>();
   const [activeImage, setActiveImage] = useState(0);
 

@@ -50,7 +50,7 @@ type AcademyFaq = {
   answerNl: string;
 };
 
-export const Academy: React.FC = () => {
+export const Academy= () => {
   const { pathname } = useLocation();
   const isNl = pathname === '/academy/nl' || pathname.startsWith('/academy/nl/');
 

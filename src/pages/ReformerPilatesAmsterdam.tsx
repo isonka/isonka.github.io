@@ -55,7 +55,7 @@ const reformerSeoOnlyFaqs = [
 
 const reformerSchemaFaqs = [...faqs, ...reformerSeoOnlyFaqs];
 
-export const ReformerPilatesAmsterdam: React.FC = () => {
+export const ReformerPilatesAmsterdam= () => {
   useEffect(() => {
     trackPageView(
       '/reformer-pilates-amsterdam/',

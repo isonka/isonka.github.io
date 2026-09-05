@@ -91,7 +91,7 @@ function compile(gl: WebGLRenderingContext, type: number, src: string) {
   return shader;
 }
 
-export const SilkBackground: React.FC = () => {
+export const SilkBackground= () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
