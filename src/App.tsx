@@ -28,7 +28,6 @@ const Congrats = lazy(() => import('./pages/Congrats').then(m => ({ default: m.C
 const Trainers = lazy(() => import('./pages/Trainers').then(m => ({ default: m.Trainers })));
 const TrainerDetail = lazy(() => import('./pages/TrainerDetail').then(m => ({ default: m.TrainerDetail })));
 const Academy = lazy(() => import('./pages/Academy').then(m => ({ default: m.Academy })));
-const AcademyNl = lazy(() => import('./pages/AcademyNl').then(m => ({ default: m.AcademyNl })));
 const Blog = lazy(() => import('./pages/Blog').then(m => ({ default: m.Blog })));
 const BlogPost = lazy(() => import('./pages/BlogPost').then(m => ({ default: m.BlogPost })));
 const WorkoutDetail = lazy(() => import('./pages/WorkoutDetail').then(m => ({ default: m.WorkoutDetail })));
@@ -165,7 +164,7 @@ const router = createBrowserRouter([
       { path: 'instructors', element: <Trainers /> },
       { path: 'trainer/:slug', element: <TrainerDetail /> },
       { path: 'academy', element: <Academy /> },
-      { path: 'academy/nl', element: <AcademyNl /> },
+      { path: 'academy/nl', element: <Academy /> },
       {
         path: 'pilates-instructor-course-amsterdam',
         element: <Navigate to="/academy/" replace />,

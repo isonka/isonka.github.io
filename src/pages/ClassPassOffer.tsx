@@ -37,7 +37,13 @@ export const ClassPassOffer = () => {
           <div className="comparison-grid">
             <div className="comparison-card classpass-card">
               <div className="card-header">
-                <img src="https://cdn9.classpass.com/dist/gfe-v2/_next/static/media/logotype.f52b0a12.svg" alt="ClassPass" className="cp-logo" />
+                <img
+                  src="https://cdn9.classpass.com/dist/gfe-v2/_next/static/media/logotype.f52b0a12.svg"
+                  alt="ClassPass"
+                  className="cp-logo"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <span className="card-label">ClassPass (for 4 classes/month)</span>
               </div>
               <div className="card-body">
@@ -66,7 +72,15 @@ export const ClassPassOffer = () => {
 
             <div className="comparison-card direct-card">
               <div className="card-header">
-                <img src="/assets/images/ts_logo.webp" alt="PT Studio 7" className="pt7-logo" />
+                <img
+                  src="/assets/images/ts_logo.webp"
+                  alt="PT Studio 7"
+                  className="pt7-logo"
+                  width={133}
+                  height={40}
+                  loading="lazy"
+                  decoding="async"
+                />
                 <span className="card-label">Direct Membership (4 classes/month)</span>
               </div>
               <div className="card-body">

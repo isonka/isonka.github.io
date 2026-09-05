@@ -79,6 +79,8 @@ export const Navbar: React.FC = () => {
               alt="PT Studio 7 Logo"
               width={160}
               height={48}
+              loading="eager"
+              decoding="async"
             />
           </Link>
         </div>

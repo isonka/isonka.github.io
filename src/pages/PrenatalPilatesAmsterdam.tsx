@@ -241,6 +241,8 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
                   alt="Elif Arzu Ogan, prenatal Pilates instructor"
                   width={60}
                   height={60}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div>
                   <h3>Elif Arzu Ogan</h3>
@@ -253,6 +255,8 @@ export const PrenatalPilatesAmsterdam: React.FC = () => {
                   alt="Göknur Dipli, prenatal Pilates instructor"
                   width={60}
                   height={60}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div>
                   <h3>Göknur Dipli</h3>

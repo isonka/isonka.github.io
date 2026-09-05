@@ -87,6 +87,8 @@ export const WorkoutDetail: React.FC = () => {
               src={workout.hero.image}
               alt={`${workout.hero.title} | PT Studio 7`}
               className="ssl-hero-image"
+              loading="eager"
+              decoding="async"
             />
             <div className="ssl-hero-cta">
               {isAnchorLink(workout.hero.ctaTo) ? (

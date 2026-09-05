@@ -2,6 +2,20 @@
 <html lang="en" class="no-js">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+        base-uri 'self';
+        object-src 'none';
+        upgrade-insecure-requests;
+        form-action 'self' https://*.facebook.com;
+        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://connect.facebook.net https://*.mindbodyonline.com https://*.doubleclick.net https://cdn.pendo.io https://cdn.mxpnl.com;
+        style-src 'self' 'unsafe-inline' https://*.mindbodyonline.com;
+        font-src 'self' https://*.mindbodyonline.com;
+        img-src 'self' data: https://*.facebook.com https://cdn9.classpass.com https://*.mindbodyonline.com https://www.google.com https://www.google.nl https://*.doubleclick.net https://*.pendo.io https://*.mixpanel.com;
+        connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.googleadservices.com https://*.doubleclick.net https://www.google.com https://www.google.nl https://*.facebook.com https://*.mindbodyonline.com https://*.pendo.io https://*.mixpanel.com;
+        frame-src https://www.google.com https://*.facebook.com https://*.mindbodyonline.com;"
+    />
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}

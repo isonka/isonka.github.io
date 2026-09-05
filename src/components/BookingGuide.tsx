@@ -172,10 +172,12 @@ export const BookingGuide: React.FC = () => {
                 <p className="step-description">{steps[activeStep].description}</p>
                 
                 <div className="screenshot-container">
-                  <img 
+                  <img
                     src={`/assets/images/booking-guide/${steps[activeStep].screenshot}`}
                     alt={steps[activeStep].title}
                     className="booking-screenshot"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 
