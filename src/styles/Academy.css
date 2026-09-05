@@ -743,6 +743,7 @@
   color: inherit !important;
   text-decoration: none !important;
   cursor: pointer !important;
+  text-align: center !important;
 }
 
 .course-cta {

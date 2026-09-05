@@ -1,4 +1,4 @@
-import { blogPosts } from '../src/data/blogPosts.ts';
+import { blogPosts } from '../src/data/blog/index.ts';
 import { trainerProfiles } from '../src/data/trainers.ts';
 import { equipmentProducts } from '../src/data/equipment.ts';
 import { workoutDetails } from '../src/data/workoutDetails.ts';

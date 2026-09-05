@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
-import { getBlogPostBySlug, getRecentPosts } from '../data/blogPosts';
+import { getBlogPostBySlug, getRecentPosts } from '../data/blog';
 import { trackBlogPostView, trackBlogPostRead, trackPageView } from '../utils/gtmTracking';
 import '../styles/BlogPost.css';
 

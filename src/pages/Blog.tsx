@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
-import { blogPosts } from '../data/blogPosts';
+import { blogPosts } from '../data/blog';
 import '../styles/Blog.css';
 
 export const Blog= () => {

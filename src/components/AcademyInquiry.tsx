@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import { ACADEMY_INQUIRY_WIDGET } from '../data/academy';
 import { ensureHealcodeLoaded } from '../utils/healcode';
+import type { Locale } from '../i18n/locale';
 
 type AcademyInquiryProps = {
-  locale: 'en' | 'nl';
+  locale: Locale;
 };
 
 export const AcademyInquiry = ({ locale }: AcademyInquiryProps) => {

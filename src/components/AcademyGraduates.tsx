@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import { academyGraduates } from '../data/academy';
+import type { Locale } from '../i18n/locale';
 
 type AcademyGraduatesProps = {
-  locale: 'en' | 'nl';
+  locale: Locale;
 };
 
 export const AcademyGraduates = ({ locale }: AcademyGraduatesProps) => {
