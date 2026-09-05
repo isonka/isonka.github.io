@@ -34,12 +34,12 @@ const fixedPageMeta = {
     description: 'Pilates lesprijzen in Amsterdam aan het Museumplein. Kleine groepslessen (max. 5) vanaf €28/les, abonnementen en privésessies. Reformer, TRX & krachttraining.',
   },
   '/academy/': {
-    title: 'Pilates Instructor Course Amsterdam | Teacher Training | PT7 Academy',
-    description: 'Pilates instructor course and teacher training in Amsterdam. 300-hour Reformer Pilates instructor course (PMA ITTAP approved), Mat Pilates track, weekend schedule for career changers. Course fee from €2,000 + VAT.',
+    title: 'Reformer Pilates Instructor Course Amsterdam | Teacher Training | PT7 Academy',
+    description: 'Reformer Pilates instructor course and teacher training in Amsterdam. 300-hour Reformer Pilates instructor course (PMA ITTAP approved), Mat Pilates track, weekend schedule for career changers. Course fee from €2,000 + VAT.',
   },
   '/academy/nl/': {
-    title: 'Pilates Opleiding Amsterdam | Docentenopleiding | PT7 Academy',
-    description: 'Pilates opleiding Amsterdam en pilates docentenopleiding bij Museumplein. 300 uur Reformer instructeurscursus (PMA ITTAP goedgekeurd) plus Mat & Trapeze Table. Weekendrooster. Lessen in het Engels. Vanaf €2.000 + BTW.',
+    title: 'Reformer Pilates Opleiding Amsterdam | Docentenopleiding | PT7 Academy',
+    description: 'Reformer pilates opleiding Amsterdam en pilates docentenopleiding bij Museumplein. 300 uur Reformer instructeurscursus (PMA ITTAP goedgekeurd) plus Mat & Trapeze Table. Weekendrooster. Lessen in het Engels. Vanaf €2.000 + BTW.',
   },
   '/healthcare-providers/': {
     title: 'Pilates for Rehabilitation Amsterdam | For Healthcare Providers | PT Studio 7',

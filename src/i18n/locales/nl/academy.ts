@@ -3,18 +3,18 @@ import type { EnAcademy } from '../en/academy';
 
 export const nlAcademy: DeepStringify<EnAcademy> = {
   seo: {
-    title: 'Pilates Opleiding Amsterdam | Docentenopleiding | PT7 Academy',
+    title: 'Reformer Pilates Opleiding Amsterdam | Docentenopleiding | PT7 Academy',
     description:
-      'Pilates opleiding Amsterdam en pilates docentenopleiding bij Museumplein. 300 uur Reformer instructeurscursus (PMA ITTAP goedgekeurd). Volgende termijn november 2026–januari 2027. Weekendrooster. Lessen in het Engels. Vanaf €2.000 + BTW.',
+      'Reformer pilates opleiding Amsterdam en pilates docentenopleiding bij Museumplein. 300 uur Reformer instructeurscursus (PMA ITTAP goedgekeurd). Volgende termijn november 2026–januari 2027. Weekendrooster. Lessen in het Engels. Vanaf €2.000 + BTW.',
     keywords:
-      'pilates opleiding amsterdam, pilates docentenopleiding, reformer pilates opleiding amsterdam, pilates instructeur opleiding, PMA ITTAP, weekend pilates opleiding, carrièreswitch pilates',
-    ogTitle: 'Pilates Opleiding Amsterdam | Docentenopleiding PT7 Academy',
+      'reformer pilates opleiding amsterdam, pilates opleiding amsterdam, reformer pilates docentenopleiding, pilates docentenopleiding, pilates instructeur opleiding, PMA ITTAP, weekend pilates opleiding, carrièreswitch pilates',
+    ogTitle: 'Reformer Pilates Opleiding Amsterdam | Docentenopleiding PT7 Academy',
     ogDescription:
-      'Pilates docentenopleiding in Amsterdam: 300 uur Reformer (PMA ITTAP goedgekeurd). Volgende termijn november 2026–januari 2027. Weekendintensieven bij Museumplein. Training in het Engels.',
-    analyticsTitle: 'Pilates Opleiding Amsterdam | Docentenopleiding | PT7 Academy',
+      'Reformer pilates docentenopleiding in Amsterdam: 300 uur Reformer (PMA ITTAP goedgekeurd). Volgende termijn november 2026–januari 2027. Weekendintensieven bij Museumplein. Training in het Engels.',
+    analyticsTitle: 'Reformer Pilates Opleiding Amsterdam | Docentenopleiding | PT7 Academy',
   },
   hero: {
-    title: 'Pilates opleiding Amsterdam',
+    title: 'Reformer pilates opleiding Amsterdam',
     subtitle: 'PMA ITTAP goedgekeurde Reformer docentenopleiding. Weekendrooster bij Museumplein.',
     languageNote: 'Alle lessen en trainingen worden in het Engels gegeven.',
   },
