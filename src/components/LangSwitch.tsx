@@ -1,9 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useLocale } from '../i18n/useLocale';
+import { localizedPath } from '../i18n/locale';
 
 export function LangSwitch() {
   const locale = useLocale();
+  const { pathname } = useLocation();
   const { t } = useTranslation('common');
 
   return (
@@ -13,7 +15,7 @@ export function LangSwitch() {
           EN
         </span>
       ) : (
-        <Link to="/" hrefLang="en" lang="en" aria-label={t('nav.switchToEn')}>
+        <Link to={localizedPath(pathname, 'en')} hrefLang="en" lang="en" aria-label={t('nav.switchToEn')}>
           EN
         </Link>
       )}
@@ -23,7 +25,7 @@ export function LangSwitch() {
           NL
         </span>
       ) : (
-        <Link to="/nl/" hrefLang="nl" lang="nl" aria-label={t('nav.switchToNl')}>
+        <Link to={localizedPath(pathname, 'nl')} hrefLang="nl" lang="nl" aria-label={t('nav.switchToNl')}>
           NL
         </Link>
       )}
