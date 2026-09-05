@@ -17,6 +17,7 @@ export const Navbar= () => {
   const location = useLocation();
   const home = homePath(locale);
   const academyHref = locale === 'nl' ? '/academy/nl/' : '/academy/';
+  const pricingHref = locale === 'nl' ? '/pricing/nl/' : '/pricing/';
 
   const toggleMenu = () => {
     if (isMenuOpen) setMoreOpen(false);
@@ -113,7 +114,7 @@ export const Navbar= () => {
           <li><a href="#reviews" aria-label={t('nav.reviewsAria')} onClick={(e) => { e.preventDefault(); scrollToSection('reviews'); }}>{t('nav.reviews')}</a></li>
           <li><Link to="/instructors/" aria-label={t('nav.instructorsAria')} onClick={closeMenu}>{t('nav.instructors')}</Link></li>
           <li><Link to="/reformer-pilates-amsterdam/" aria-label={t('nav.classesAria')} onClick={closeMenu}>{t('nav.classes')}</Link></li>
-          <li><Link to="/pricing/" aria-label={t('nav.pricesAria')} onClick={closeMenu}>{t('nav.prices')}</Link></li>
+          <li><Link to={pricingHref} aria-label={t('nav.pricesAria')} onClick={closeMenu}>{t('nav.prices')}</Link></li>
           <li><Link to={academyHref} aria-label={t('nav.academyAria')} onClick={closeMenu}>{t('nav.academy')}</Link></li>
           <li className="navbar-dropdown">
             <button

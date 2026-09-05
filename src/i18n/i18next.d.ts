@@ -1,6 +1,8 @@
 import type {} from 'i18next';
+import type { EnAcademy } from './locales/en/academy';
 import type { EnCommon } from './locales/en/common';
 import type { EnHome } from './locales/en/home';
+import type { EnPricing } from './locales/en/pricing';
 
 declare module 'i18next' {
   interface CustomTypeOptions {
@@ -8,6 +10,8 @@ declare module 'i18next' {
     resources: {
       common: EnCommon;
       home: EnHome;
+      pricing: EnPricing;
+      academy: EnAcademy;
     };
   }
 }

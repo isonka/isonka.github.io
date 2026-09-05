@@ -29,6 +29,10 @@ const fixedPageMeta = {
     title: 'Pricing | PT Studio 7 Amsterdam',
     description: 'Flexible Pilates pricing at Museumplein. Memberships from €20/class, class packs, private sessions. Expert instructors, small groups (max 5).',
   },
+  '/pricing/nl/': {
+    title: 'Pilates lesprijzen Amsterdam | Pakketten & abonnementen | PT Studio 7',
+    description: 'Pilates lesprijzen in Amsterdam aan het Museumplein. Kleine groepslessen (max. 5) vanaf €28/les, abonnementen en privésessies. Reformer, TRX & krachttraining.',
+  },
   '/academy/': {
     title: 'Pilates Instructor Course Amsterdam | Teacher Training | PT7 Academy',
     description: 'Pilates instructor course and teacher training in Amsterdam. 300-hour Reformer Pilates instructor course (PMA ITTAP approved), Mat Pilates track, weekend schedule for career changers. Course fee from €2,000 + VAT.',

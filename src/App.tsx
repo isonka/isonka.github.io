@@ -154,6 +154,7 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: 'nl', element: <Home /> },
       { path: 'pricing', element: <Pricing /> },
+      { path: 'pricing/nl', element: <Pricing /> },
       { path: 'schedule', element: <Schedule /> },
       { path: 'equipment', element: <Equipment /> },
       { path: 'equipment/:slug', element: <EquipmentDetail /> },
