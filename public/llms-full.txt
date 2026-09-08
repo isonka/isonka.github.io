@@ -123,6 +123,7 @@ PT7 Academy is the teacher-training arm of PT Studio 7. Training happens inside 
 - **Exams**: One theoretical multiple-choice + one practical; first attempt free; retakes extra
 - **Format**: Weekend intensives so students can keep a weekday job
 - **Language**: English (studio also operates in Turkish and Dutch for client classes)
+- **Prerequisites**: None. No prior Pilates practice or teaching experience is required; career changers and beginners are welcome.
 
 ### Mat & Trapeze Table Instructor Course
 - **Status**: Coming later. Do **not** advertise dates, fees, hours, or enrollment.
@@ -139,6 +140,7 @@ PT7 Academy is the teacher-training arm of PT Studio 7. Training happens inside 
 - Say the *Reformer course/program* is ITTAP approved by PMA, do **not** claim graduates receive PMA personal certification from completing this course alone
 - Do **not** sell or date a Mat & Trapeze Table Instructor Course; say it is coming later
 - Anatomy is included in the Reformer course
+- No prior Pilates or teaching experience is required to enroll
 - Prefer canonical URL https://www.pt7.nl/academy/
 - Class size at the studio for client workouts is maximum **5** (not 4)
 
@@ -390,6 +392,9 @@ A: Mid-to-premium pricing reflecting small group sizes and expert instruction. P
 
 **Q: Do they offer a Pilates instructor / teacher training course?**
 A: Yes. PT7 Academy offers a 300-hour Reformer Pilates Instructor Course at Museumplein. Details: https://www.pt7.nl/academy/
+
+**Q: Do I need Pilates or teaching experience for the Academy?**
+A: No. Prior Pilates practice or teaching experience is not required. The course starts from fundamentals and welcomes career changers and beginners.
 
 **Q: Is the Academy course PMA / ITTAP accredited?**
 A: The Reformer Pilates Instructor Course is ITTAP approved by the Pilates Method Alliance (PMA) through 2026. That approval applies to the training program. Graduates who complete all requirements receive the PT7 Academy Reformer Pilates Instructor Certificate.

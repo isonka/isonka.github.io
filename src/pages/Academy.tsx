@@ -109,6 +109,7 @@ export const Academy= () => {
 
   const academyFaqs = [
     { question: t('faq.audience.question'), answer: t('faq.audience.answer') },
+    { question: t('faq.experience.question'), answer: t('faq.experience.answer') },
     {
       question: t('faq.schedule.question'),
       answer: t('faq.schedule.answer', {

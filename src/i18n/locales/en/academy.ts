@@ -115,7 +115,7 @@ export const enAcademy = {
   },
   requirements: {
     title: 'Course Requirements',
-    text: 'Participants are required to complete assigned homework throughout the program and pass the mandatory exercise assessment with a lead trainer.',
+    text: 'No prior Pilates or teaching experience is required to enroll. During the program, participants complete assigned homework and pass the mandatory exercise assessment with a lead trainer.',
   },
   breakdown: {
     title: 'Training Breakdown (300 Hours Total)',
@@ -166,7 +166,12 @@ export const enAcademy = {
     audience: {
       question: 'Who is this Pilates teacher training for?',
       answer:
-        'PT7 Academy suits career changers and aspiring instructors who want a serious Reformer pathway (300 hours, PMA ITTAP approved) on a weekend schedule at Museumplein, Amsterdam. Lectures are on selected weekends so you can keep weekday work. Sessions and studio life are English-friendly, with Turkish and Dutch also used in the community. A Mat & Trapeze Table instructor course is coming later.',
+        'PT7 Academy suits career changers and aspiring instructors who want a serious Reformer pathway (300 hours, PMA ITTAP approved) on a weekend schedule at Museumplein, Amsterdam. No prior Pilates or teaching experience is required. Lectures are on selected weekends so you can keep weekday work. Sessions and studio life are English-friendly, with Turkish and Dutch also used in the community. A Mat & Trapeze Table instructor course is coming later.',
+    },
+    experience: {
+      question: 'Do I need Pilates or teaching experience?',
+      answer:
+        'No. Prior Pilates practice or teaching experience is not required. The Reformer course starts from fundamentals (including anatomy) and builds through observation, self practice, and teaching practice. Career changers and complete beginners are welcome.',
     },
     schedule: {
       question: 'When are classes held?',

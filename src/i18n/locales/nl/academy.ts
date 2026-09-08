@@ -118,7 +118,7 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
   },
   requirements: {
     title: 'Cursusvereisten',
-    text: 'Deelnemers moeten de toegewezen huiswerkopdrachten gedurende het programma voltooien en slagen voor de verplichte oefeningsevaluatie met een lead trainer.',
+    text: 'Voorafgaande pilates- of leservaring is niet vereist om je in te schrijven. Tijdens het programma voltooien deelnemers de toegewezen huiswerkopdrachten en slagen zij voor de verplichte oefeningsevaluatie met een lead trainer.',
   },
   breakdown: {
     title: 'Trainingsoverzicht (300 uur totaal)',
@@ -169,7 +169,12 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
     audience: {
       question: 'Voor wie is deze pilates docentenopleiding bedoeld?',
       answer:
-        'PT7 Academy is geschikt voor carrièreswitchers en aspirant-instructeurs die een serieuze Reformer-route willen (300 uur, PMA ITTAP goedgekeurd) op een weekendrooster bij Museumplein, Amsterdam. Colleges vinden plaats op geselecteerde weekenden, zodat je doordeweeks kunt werken. Alle lessen en trainingen worden in het Engels gegeven. In de studio wordt ook Turks en Nederlands gesproken. Een Mat & Trapeze Table Instructeurscursus volgt later.',
+        'PT7 Academy is geschikt voor carrièreswitchers en aspirant-instructeurs die een serieuze Reformer-route willen (300 uur, PMA ITTAP goedgekeurd) op een weekendrooster bij Museumplein, Amsterdam. Voorafgaande pilates- of leservaring is niet vereist. Colleges vinden plaats op geselecteerde weekenden, zodat je doordeweeks kunt werken. Alle lessen en trainingen worden in het Engels gegeven. In de studio wordt ook Turks en Nederlands gesproken. Een Mat & Trapeze Table Instructeurscursus volgt later.',
+    },
+    experience: {
+      question: 'Heb ik pilates- of leservaring nodig?',
+      answer:
+        'Nee. Voorafgaande pilatespraktijk of leservaring is niet vereist. De Reformer-cursus begint bij de basis (inclusief anatomie) en bouwt verder via observatie, zelfpraktijk en lesgeven in de praktijk. Carrièreswitchers en absolute beginners zijn welkom.',
     },
     schedule: {
       question: 'Wanneer vinden de lessen plaats?',
