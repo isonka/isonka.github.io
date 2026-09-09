@@ -20,7 +20,6 @@ export const EquipmentDetail= () => {
 
   const hasGallery = product.images.length > 1;
   const currentImage = product.images[activeImage] || product.images[0];
-  const productUrl = `https://www.pt7.nl/equipment/${product.slug}/`;
   const workoutByEquipment: Record<string, { to: string; label: string }> = {
     reformer: { to: '/reformer-pilates-amsterdam/', label: 'Book Reformer Pilates classes in Amsterdam' },
     'tower-reformer': { to: '/reformer-pilates-amsterdam/', label: 'Book Reformer Pilates classes in Amsterdam' },
@@ -37,26 +36,7 @@ export const EquipmentDetail= () => {
         keywords={product.seo.keywords}
         canonical={`https://www.pt7.nl/equipment/${product.slug}/`}
       />
-      <StructuredData
-        type="Product"
-        data={{
-          product: {
-            name: product.name,
-            description: product.description,
-            image: product.images.map((img) => `https://www.pt7.nl${img.src}`),
-            sku: `PT7-${product.slug.toUpperCase()}`,
-            brand: 'PT Studio 7',
-            url: productUrl,
-            availability: 'https://schema.org/InStock',
-            itemCondition: 'https://schema.org/NewCondition',
-            category: 'Pilates Equipment',
-            additionalProperty: [
-              { name: 'Warranty', value: '2 years' },
-              { name: 'Delivery', value: '3-8 weeks in the Netherlands' },
-            ],
-          },
-        }}
-      />
+      <StructuredData type="FAQPage" data={{ faqs: product.faq }} />
 
       <Breadcrumbs
         items={[

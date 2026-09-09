@@ -279,8 +279,9 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
       itemListElement: data.itemList.itemListElement.map((item, index) => ({
         '@type': 'ListItem',
         position: index + 1,
+        // Contact-to-order catalog: no Product (needs offers/price Google does not have).
         item: {
-          '@type': 'Product',
+          '@type': 'WebPage',
           name: item.name,
           url: item.url,
           ...(item.image ? { image: item.image } : {}),
