@@ -27,9 +27,9 @@ export const Congrats= () => {
   return (
     <>
       <SEOHead
-        title="Booking Confirmed - PT Studio 7 Amsterdam"
-        description="Your class is booked! See you at PT Studio 7 Amsterdam."
-        keywords="PT Studio 7, booking confirmed"
+        title="Booking Confirmed - PT 7 Pilates Amsterdam"
+        description="Your class is booked! See you at PT 7 Amsterdam."
+        keywords="PT 7, booking confirmed"
         canonical="https://www.pt7.nl/congrats/"
       />
 
@@ -38,7 +38,7 @@ export const Congrats= () => {
           <div className="success-icon">✓</div>
           <h1>Booking Confirmed!</h1>
           <p className="congrats-message">
-            You're all set! We can't wait to see you at PT Studio 7.
+            You're all set! We can't wait to see you at PT 7.
           </p>
 
           <div className="next-steps">
@@ -67,7 +67,7 @@ export const Congrats= () => {
           </div>
 
           <div className="review-request">
-            <p>Enjoyed your experience at PT Studio 7?</p>
+            <p>Enjoyed your experience at PT 7?</p>
             <a
               href="https://g.page/r/ptstudio7amsterdam/review"
               target="_blank"

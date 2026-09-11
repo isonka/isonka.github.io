@@ -1,6 +1,6 @@
 # Get Pricing Skill
 
-Return current package and session pricing for PT Studio 7 Amsterdam.
+Return current package and session pricing for PT 7 Amsterdam.
 
 ## Canonical URL
 

@@ -65,8 +65,8 @@ export const Trainers= () => {
   return (
     <>
       <SEOHead
-        title="Our Instructors | PT Studio 7 Amsterdam"
-        description="Meet our expert team of certified Pilates and fitness instructors at PT Studio 7 Amsterdam. Master, senior, and junior instructors dedicated to your fitness journey."
+        title="Our Instructors | PT 7 Pilates Amsterdam"
+        description="Meet our expert team of certified Pilates and fitness instructors at PT 7 Amsterdam. Master, senior, and junior instructors dedicated to your fitness journey."
         keywords="Pilates instructors Amsterdam, polestar pilates amsterdam, Pilates leraren Amsterdam, gecertificeerde Pilates instructeurs, Pilates teachers Museumplein, Pilates team Oud-Zuid"
         canonical="https://www.pt7.nl/instructors/"
       />
@@ -98,7 +98,7 @@ export const Trainers= () => {
             <div className="growing-banner-inner">
               <div className="growing-banner-text">
                 <h2>Our Team is Growing</h2>
-                <p>New instructors are joining soon. Interested in teaching at PT Studio 7?</p>
+                <p>New instructors are joining soon. Interested in teaching at PT 7?</p>
               </div>
               <Link to="/academy/" className="growing-banner-link">
                 Become a Pilates instructor →

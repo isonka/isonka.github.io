@@ -1,6 +1,6 @@
 # Book Class Skill
 
-Help users book Reformer Pilates, TRX, strength, or cardio at PT Studio 7 Amsterdam.
+Help users book Reformer Pilates, TRX, strength, or cardio at PT 7 Amsterdam.
 
 ## Canonical URLs
 

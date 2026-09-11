@@ -1,10 +1,10 @@
 ---
-name: PT Studio 7 Amsterdam - Project Overview
+name: PT 7 Amsterdam - Project Overview
 description: Details about the pt7.nl website project built with React + TypeScript + Vite
 type: project
 ---
 
-PT Studio 7 Amsterdam is a boutique Reformer Pilates studio website at Van Baerlestraat 76C, Amsterdam Museumplein.
+PT 7 (formerly PT Studio 7) is a boutique Reformer Pilates studio website at Van Baerlestraat 76C, Amsterdam Museumplein.
 
 **Tech Stack**: React 19 + TypeScript + Vite + React Router v7
 **Deployment**: GitHub Pages only (Netlify/Apache config files removed — see docs/hosting.md)

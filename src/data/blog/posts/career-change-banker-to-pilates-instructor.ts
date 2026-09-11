@@ -14,7 +14,7 @@ export const post: BlogPost = {
 
       <h2>Why Corporate Professionals Make Great Pilates Instructors</h2>
 
-      <p>Here's something that might surprise you: many of the best Pilates instructors don't come from fitness backgrounds. At PT Studio 7 Amsterdam, several of our instructors transitioned from banking, software development, and corporate careers.</p>
+      <p>Here's something that might surprise you: many of the best Pilates instructors don't come from fitness backgrounds. At PT 7 Amsterdam, several of our instructors transitioned from banking, software development, and corporate careers.</p>
 
       <p>Why do they excel? Because the skills that made you successful in business translate directly:</p>
 
@@ -110,7 +110,7 @@ export const post: BlogPost = {
 
       <p><em>Ready to explore? <a href="/academy/">Pilates teacher training at PT7 Academy</a> or <a href="mailto:info@pt7.nl?subject=Career Change - Reformer Course Inquiry">email us with your questions</a>.</em></p>
     `,
-  author: 'PT Studio 7 Team',
+  author: 'PT 7 Team',
   date: '2026-01-23',
   image: '/assets/images/reformer_1.webp',
   tags: ['Career Change', 'Pilates Certification', 'PT 7 Academy', 'Lifestyle', 'Work-Life Balance'],

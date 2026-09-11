@@ -7,12 +7,12 @@ export const Blog= () => {
   return (
     <>
       <SEOHead
-        title="Pilates & Fitness Blog | Expert Tips & Guides | PT Studio 7 Amsterdam"
-        description="Read expert articles about Pilates, prenatal fitness, and wellness from PT Studio 7 Amsterdam. Tips, guides, and insights from our certified trainers at Museumplein."
+        title="Pilates & Fitness Blog | Expert Tips & Guides | PT 7 Pilates Amsterdam"
+        description="Read expert articles about Pilates, prenatal fitness, and wellness from PT 7 Amsterdam. Tips, guides, and insights from our certified trainers at Museumplein."
         keywords="pilates blog, prenatal pilates, fitness tips amsterdam, pilates exercises, reformer pilates guide, pregnancy fitness, wellness blog amsterdam"
         canonical="https://www.pt7.nl/blog/"
-        ogTitle="Pilates & Fitness Blog | PT Studio 7 Amsterdam"
-        ogDescription="Expert articles about Pilates, prenatal fitness, and wellness from PT Studio 7 Amsterdam's certified trainers."
+        ogTitle="Pilates & Fitness Blog | PT 7 Pilates Amsterdam"
+        ogDescription="Expert articles about Pilates, prenatal fitness, and wellness from PT 7 Amsterdam's certified trainers."
       />
 
       <div className="blog-page">
@@ -65,7 +65,7 @@ export const Blog= () => {
         <section className="cta-band blog-cta-band">
           <h2>Ready to start training?</h2>
           <p>
-            Join us at PT Studio 7 Amsterdam for expert-led Pilates in our Museumplein studio.
+            Join us at PT 7 Amsterdam for expert-led Pilates in our Museumplein studio.
           </p>
           <div className="blog-cta-actions">
             <Link to="/schedule/" className="btn-gold">

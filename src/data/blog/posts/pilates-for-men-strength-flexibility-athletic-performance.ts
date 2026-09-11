@@ -9,7 +9,7 @@ export const post: BlogPost = {
       <p>When people think of Pilates, they often imagine a workout primarily for women. However, Reformer Pilates was actually developed by Joseph Pilates, a man who designed the practice for male athletes, injured soldiers, and boxers. Today, professional athletes from the NBA, NFL, and Olympic teams incorporate Pilates into their training regimens.</p>
 
       <div class="blog-figure">
-        <img src="/assets/images/men-pilates.webp" alt="Men's Pilates training at PT Studio 7" />
+        <img src="/assets/images/men-pilates.webp" alt="Men's Pilates training at PT 7" />
       </div>
 
       <h2>Why Men Should Do Reformer Pilates</h2>
@@ -28,7 +28,7 @@ export const post: BlogPost = {
       <p>For professionals spending hours at a desk, Pilates counteracts poor posture, tight hip flexors, and weak glutes. It's an efficient full-body workout that corrects imbalances and builds functional strength.</p>
 
       <h2>What to Expect in Your First Session</h2>
-      <p>At PT Studio 7 Amsterdam, our instructors work with male clients of all fitness levels, from complete beginners to professional athletes. Sessions are challenging, focusing on:</p>
+      <p>At PT 7 Amsterdam, our instructors work with male clients of all fitness levels, from complete beginners to professional athletes. Sessions are challenging, focusing on:</p>
       <ul>
         <li>Progressive resistance training on the Reformer</li>
         <li>Core stability and rotational strength</li>
@@ -49,13 +49,13 @@ export const post: BlogPost = {
       <h2>Private Sessions for Personalized Goals</h2>
       <p>Many men prefer starting with private sessions to address specific needs, whether it's injury recovery, performance goals, or simply learning proper form. Our instructors create customized programs that align with your fitness objectives.</p>
 
-      <p>Ready to experience why elite athletes trust Reformer Pilates? Book your session at PT Studio 7 Amsterdam and discover a workout that challenges your strength while protecting your body.</p>
+      <p>Ready to experience why elite athletes trust Reformer Pilates? Book your session at PT 7 Amsterdam and discover a workout that challenges your strength while protecting your body.</p>
     `,
-  author: 'PT Studio 7 Team',
+  author: 'PT 7 Team',
   date: '2025-11-10',
   image: '/assets/images/men-pilates.webp',
   tags: ['Men\'s Fitness', 'Athletic Performance', 'Injury Prevention', 'Core Strength'],
-  metaDescription: 'Reformer Pilates for men in Amsterdam: Build core strength, prevent injuries, enhance athletic performance. Professional training for all fitness levels at PT Studio 7 Museumplein.',
+  metaDescription: 'Reformer Pilates for men in Amsterdam: Build core strength, prevent injuries, enhance athletic performance. Professional training for all fitness levels at PT 7 Museumplein.',
   keywords: [
     'pilates for men amsterdam',
     'mens pilates',

@@ -30,23 +30,23 @@ const faqs = [
   },
   {
     question: 'What equipment is used in private Pilates sessions?',
-    answer: 'Depending on your goals, private sessions at PT Studio 7 can include the Reformer, Tower Reformer, Cadillac (Trapeze Table), Wunda Chair, and Spine Corrector. Your instructor selects the most appropriate equipment for each session.',
+    answer: 'Depending on your goals, private sessions at PT 7 can include the Reformer, Tower Reformer, Cadillac (Trapeze Table), Wunda Chair, and Spine Corrector. Your instructor selects the most appropriate equipment for each session.',
   },
 ];
 
 export const PrivatePilates= () => {
   useEffect(() => {
-    trackPageView('/private-pilates-amsterdam/', 'Private Pilates Amsterdam | PT Studio 7');
+    trackPageView('/private-pilates-amsterdam/', 'Private Pilates Amsterdam | PT 7 Pilates');
   }, []);
 
   return (
     <>
       <SEOHead
-        title="Private Reformer Pilates Sessions Amsterdam | PT Studio 7"
+        title="Private Reformer Pilates Sessions Amsterdam | PT 7 Pilates"
         description="Private Pilates near Museumplein and Oud-Zuid in Amsterdam. One-on-one Reformer sessions with 100% personalised coaching. Duo and trio options. Book online."
         keywords="private pilates amsterdam, pilates near me, pilates near me amsterdam, privé pilates amsterdam, one on one pilates amsterdam, personal pilates amsterdam, pilates prive les amsterdam, prive pilates museumplein, privé reformer pilates, priveles pilates amsterdam"
         canonical="https://www.pt7.nl/private-pilates-amsterdam/"
-        ogTitle="Private Reformer Pilates Amsterdam | PT Studio 7 Museumplein"
+        ogTitle="Private Reformer Pilates Amsterdam | PT 7 Pilates Museumplein"
         ogDescription="100% personalised private Pilates sessions at Museumplein. One-on-one, duo or trio. Certified instructors with 15+ years experience."
       />
       <StructuredData
@@ -85,7 +85,7 @@ export const PrivatePilates= () => {
               for you, specifically.
             </p>
             <p>
-              At PT Studio 7, private sessions are the format we are most proud of. Every program
+              At PT 7, private sessions are the format we are most proud of. Every program
               is built from scratch after an intake conversation about your goals, movement history,
               injuries, and schedule. The session evolves week by week as your strength, mobility,
               and body awareness develop.
@@ -94,7 +94,7 @@ export const PrivatePilates= () => {
               Whether you are a complete beginner wanting to learn proper technique, an athlete
               looking to improve performance and prevent injury, someone recovering from a back
               injury or surgery, or a pregnant or postpartum woman needing specialist guidance,
-              private sessions at PT Studio 7 are designed to deliver real results, not just a
+              private sessions at PT 7 are designed to deliver real results, not just a
               good workout.
             </p>
             <p>

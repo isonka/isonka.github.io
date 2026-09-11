@@ -11,12 +11,12 @@ const faqs = [
   {
     question: 'Is prenatal Reformer Pilates safe in every trimester?',
     answer:
-      'Yes, when supervised by instructors experienced in pregnancy training. At PT Studio 7, every exercise is adapted to your trimester, symptoms, and energy level. We modify load, range, and positions as your body changes. Clients commonly train safely through 38+ weeks.',
+      'Yes, when supervised by instructors experienced in pregnancy training. At PT 7, every exercise is adapted to your trimester, symptoms, and energy level. We modify load, range, and positions as your body changes. Clients commonly train safely through 38+ weeks.',
   },
   {
     question: 'Do I need approval from my midwife or doctor?',
     answer:
-      'Yes. Confirm with your midwife or doctor that exercise is appropriate before you start. If they say no, or set limits that rule out this training, we will not begin or continue sessions. Prenatal Pilates at PT Studio 7 is supportive movement coaching, not medical care. Share any restrictions so we can stay within them.',
+      'Yes. Confirm with your midwife or doctor that exercise is appropriate before you start. If they say no, or set limits that rule out this training, we will not begin or continue sessions. Prenatal Pilates at PT 7 is supportive movement coaching, not medical care. Share any restrictions so we can stay within them.',
   },
   {
     question: 'Can I start at any week of pregnancy?',
@@ -31,7 +31,7 @@ const faqs = [
   {
     question: 'Are pregnancy / prenatal sessions private or group-based?',
     answer:
-      'Pregnancy and prenatal Pilates at PT Studio 7 are offered exclusively as private sessions. Each pregnancy has unique medical history and trimester needs, so an individual format is required for safe, appropriate programming. Small group classes (max 5) are for non-pregnancy clients.',
+      'Pregnancy and prenatal Pilates at PT 7 are offered exclusively as private sessions. Each pregnancy has unique medical history and trimester needs, so an individual format is required for safe, appropriate programming. Small group classes (max 5) are for non-pregnancy clients.',
   },
   {
     question: 'Can this help with pelvic floor and lower-back discomfort?',
@@ -46,7 +46,7 @@ const faqs = [
   {
     question: 'Where is the studio and how do I get there?',
     answer:
-      'PT Studio 7 is at Van Baerlestraat 76C, 1071 BB Amsterdam, across from the Stedelijk Museum at Museumplein in Oud-Zuid. The location is easy to reach by tram or metro to the Museumplein area. Arrive a few minutes early for your first private intake so we can settle in without rushing.',
+      'PT 7 is at Van Baerlestraat 76C, 1071 BB Amsterdam, across from the Stedelijk Museum at Museumplein in Oud-Zuid. The location is easy to reach by tram or metro to the Museumplein area. Arrive a few minutes early for your first private intake so we can settle in without rushing.',
   },
   {
     question: 'Is this the same as “pregnancy Pilates Amsterdam”?',
@@ -65,17 +65,17 @@ export const PrenatalPilatesAmsterdam= () => {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   useEffect(() => {
-    trackPageView('/prenatal-pilates-amsterdam/', 'Prenatal Pilates Amsterdam | PT Studio 7');
+    trackPageView('/prenatal-pilates-amsterdam/', 'Prenatal Pilates Amsterdam | PT 7 Pilates');
   }, []);
 
   return (
     <>
       <SEOHead
-        title="Prenatal & Pregnancy Pilates Amsterdam | Private Reformer | PT Studio 7"
+        title="Prenatal & Pregnancy Pilates Amsterdam | Private Reformer | PT 7 Pilates"
         description="Private prenatal Reformer Pilates at Museumplein (Oud-Zuid). 45-minute 1:1 sessions, trimester adaptations, pelvic floor focus. Train with Elif or Göknur through pregnancy."
         keywords="prenatal pilates amsterdam, pregnancy pilates amsterdam, private prenatal pilates, reformer pilates pregnancy, pelvic floor pilates amsterdam, postnatal pilates amsterdam, pregnancy pilates museumplein"
         canonical={`${baseUrl}/prenatal-pilates-amsterdam/`}
-        ogTitle="Prenatal & Pregnancy Pilates Amsterdam | PT Studio 7"
+        ogTitle="Prenatal & Pregnancy Pilates Amsterdam | PT 7 Pilates"
         ogDescription="Private 45-minute prenatal Reformer sessions at Museumplein. Trimester-specific coaching with Elif and Göknur, not group classes."
       />
 
@@ -119,7 +119,7 @@ export const PrenatalPilatesAmsterdam= () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>Why prenatal Pilates at PT Studio 7</h2>
+            <h2>Why prenatal Pilates at PT 7</h2>
             <p>
               Pregnancy changes breathing mechanics, posture, and load through your spine and pelvis. Our prenatal sessions use the Reformer to provide support and controlled resistance so you can keep moving well without overloading sensitive areas.
             </p>

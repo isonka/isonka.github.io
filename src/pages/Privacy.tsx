@@ -9,17 +9,17 @@ import '../styles/Privacy.css';
 
 export const Privacy= () => {
   useEffect(() => {
-    trackPageView('/privacy', 'Privacy Policy | PT Studio 7 Amsterdam');
+    trackPageView('/privacy', 'Privacy Policy | PT 7 Pilates Amsterdam');
   }, []);
 
   return (
     <>
       <SEOHead
-        title="Privacy Policy | PT Studio 7 Amsterdam"
-        description="How PT Studio 7 Amsterdam uses cookies, analytics, advertising, booking widgets, and contact data. GDPR information for visitors of pt7.nl."
-        keywords="PT Studio 7 privacy, cookie policy Amsterdam, AVG, GDPR"
+        title="Privacy Policy | PT 7 Pilates Amsterdam"
+        description="How PT 7 Amsterdam uses cookies, analytics, advertising, booking widgets, and contact data. GDPR information for visitors of pt7.nl."
+        keywords="PT 7 privacy, cookie policy Amsterdam, AVG, GDPR"
         canonical="https://www.pt7.nl/privacy/"
-        ogTitle="Privacy Policy | PT Studio 7 Amsterdam"
+        ogTitle="Privacy Policy | PT 7 Pilates Amsterdam"
         ogDescription="How we use cookies, analytics, ads, booking widgets, and contact data on pt7.nl."
       />
       <Breadcrumbs items={[{ name: 'Privacy', path: '/privacy/' }]} />
@@ -28,14 +28,14 @@ export const Privacy= () => {
         <section className="service-hero is-in">
           <div className="service-hero-content">
             <h1>Privacy policy</h1>
-            <p>Last updated 27 August 2026. PT Studio 7 Amsterdam (Van Baerlestraat 76C, 1071 BB Amsterdam) is controller for this website.</p>
+            <p>Last updated 27 August 2026. PT 7 Amsterdam (Van Baerlestraat 76C, 1071 BB Amsterdam) is controller for this website.</p>
           </div>
         </section>
 
         <article className="privacy-prose">
           <h2>Who we are</h2>
           <p>
-            PT Studio 7 operates <a href="https://www.pt7.nl">www.pt7.nl</a>. Contact:{' '}
+            PT 7 operates <a href="https://www.pt7.nl">www.pt7.nl</a>. Contact:{' '}
             <a href="mailto:info@pt7.nl">info@pt7.nl</a> · <a href="tel:+31685162693">+31 685 162693</a>.
           </p>
 

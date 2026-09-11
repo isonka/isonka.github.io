@@ -77,7 +77,7 @@ export const Navbar= () => {
           <Link to={home} aria-label={t('nav.homeAria')}>
             <img
               src="/assets/images/ts_logo.webp"
-              alt="PT Studio 7 Logo"
+              alt="PT 7 Logo"
               width={160}
               height={48}
               loading="eager"

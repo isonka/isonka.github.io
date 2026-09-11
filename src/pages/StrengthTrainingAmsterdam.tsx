@@ -9,15 +9,15 @@ import '../styles/ServicePage.css';
 
 const faqs = [
   {
-    question: 'What strength training equipment does PT Studio 7 have?',
-    answer: 'Our Museumplein studio has Nike premium equipment: a half rack with an Olympic barbell, a full set of dumbbells, kettlebells, and a Concept2 RowErg rowing machine, alongside Reformer Pilates apparatus. It is a boutique training space for high-quality small group and personal training.',
+    question: 'What strength training equipment does PT 7 have?',
+    answer: 'Our Museumplein studio has Nike premium equipment: a half rack with an Olympic barbell, a full set of dumbbells, kettlebells, and a Concept2 RowErg rowing machine, alongside Reformer Pilates apparatus. It is a boutique training space for high-quality small group and one-on-one training.',
   },
   {
-    question: 'Is strength training combined with Pilates at PT Studio 7?',
+    question: 'Is strength training combined with Pilates at PT 7?',
     answer: 'Often, yes. Many of our clients combine Pilates and strength training in the same studio. Pilates builds deep core stability, postural alignment, and movement quality; strength training adds power, muscle mass, and metabolic conditioning. Our instructors can design an integrated program that uses both.',
   },
   {
-    question: 'Do I need prior experience for strength training at PT Studio 7?',
+    question: 'Do I need prior experience for strength training at PT 7?',
     answer: 'No prior experience is needed. We start with a movement assessment to understand your baseline, identify any imbalances or limitations, and set appropriate starting weights. Beginners are very welcome, and actually benefit enormously from the personalised instruction we offer in private and small group sessions.',
   },
   {
@@ -29,24 +29,24 @@ const faqs = [
     answer: 'Yes, in many cases, targeted strength training is one of the most effective interventions for chronic back pain. Strengthening the posterior chain (glutes, hamstrings, lower back), hip stabilisers, and core reduces load on the lumbar spine and improves posture. Our instructors work with clients recovering from back issues regularly and know how to progress safely.',
   },
   {
-    question: 'How does personal training at PT Studio 7 differ from a commercial gym?',
-    answer: 'At PT Studio 7 you train in a private, boutique environment with a maximum of 5 people in group sessions, or one-on-one in private sessions. Your instructor designs your program, monitors your technique every repetition, and adjusts load and exercise selection session by session. It is incomparable to training alone in a large gym.',
+    question: 'How does one-on-one training at PT 7 differ from a commercial gym?',
+    answer: 'At PT 7 you train in a private, boutique environment with a maximum of 5 people in group sessions, or one-on-one in private sessions. Your instructor designs your program, monitors your technique every repetition, and adjusts load and exercise selection session by session. It is incomparable to training alone in a large gym.',
   },
 ];
 
 export const StrengthTrainingAmsterdam= () => {
   useEffect(() => {
-    trackPageView('/strength-training-amsterdam', 'Strength Training Amsterdam | PT Studio 7');
+    trackPageView('/strength-training-amsterdam', 'Strength Training Amsterdam | PT 7 Pilates');
   }, []);
 
   return (
     <>
       <SEOHead
-        title="Strength Training Amsterdam | PT Studio 7 Museumplein"
+        title="Strength Training Amsterdam | PT 7 Pilates Museumplein"
         description="Personal strength training and functional fitness at Museumplein Amsterdam. Nike equipment, expert certified trainers. Small groups (max 5) & private sessions."
-        keywords="strength training amsterdam, krachttraining amsterdam, personal training amsterdam, functionele training amsterdam, personal trainer museumplein, krachtsport amsterdam oud-zuid, personal training oud-zuid amsterdam, nike strength amsterdam"
+        keywords="strength training amsterdam, krachttraining amsterdam, one-on-one training amsterdam, functionele training amsterdam, one-on-one trainer museumplein, krachtsport amsterdam oud-zuid, one-on-one training oud-zuid amsterdam, nike strength amsterdam"
         canonical="https://www.pt7.nl/strength-training-amsterdam/"
-        ogTitle="Strength Training Amsterdam | PT Studio 7 Museumplein"
+        ogTitle="Strength Training Amsterdam | PT 7 Pilates Museumplein"
         ogDescription="Personal strength training at Museumplein Amsterdam. Nike equipment, expert trainers, max 5 per group. Private & small group sessions."
       />
       <StructuredData
@@ -78,13 +78,13 @@ export const StrengthTrainingAmsterdam= () => {
           <div className="service-container">
             <h2>Strength training in Amsterdam Oud-Zuid</h2>
             <p>
-              PT Studio 7 is a boutique studio at Museumplein equipped with premium
+              PT 7 is a boutique studio at Museumplein equipped with premium
               Nike gear: a half rack, Olympic barbell, dumbbells, kettlebells, and a Concept2
               RowErg, in the same space as our Reformer Pilates apparatus. It is a serious training environment designed for people who want
               results, not a row of treadmills and mirrors.
             </p>
             <p>
-              Strength training at PT Studio 7 is always instructor-led. We do not offer open gym
+              Strength training at PT 7 is always instructor-led. We do not offer open gym
               access. Every session is guided, which means your technique is monitored on every
               repetition, your program is adapted as you get stronger, and you are never left to
               figure it out alone.
@@ -105,7 +105,7 @@ export const StrengthTrainingAmsterdam= () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>Why strength training at PT Studio 7?</h2>
+            <h2>Why strength training at PT 7?</h2>
             <div className="service-benefits-grid">
               <div className="service-benefit-card">
                 <h3>Premium equipment</h3>
@@ -121,7 +121,7 @@ export const StrengthTrainingAmsterdam= () => {
               </div>
               <div className="service-benefit-card">
                 <h3>Combined with Pilates</h3>
-                <p>Many clients train both Pilates and strength at PT Studio 7. Our instructors design integrated programs that use both disciplines for optimal results.</p>
+                <p>Many clients train both Pilates and strength at PT 7. Our instructors design integrated programs that use both disciplines for optimal results.</p>
               </div>
               <div className="service-benefit-card">
                 <h3>Goal-specific programming</h3>

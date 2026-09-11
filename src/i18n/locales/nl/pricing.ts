@@ -3,15 +3,15 @@ import type { EnPricing } from '../en/pricing';
 
 export const nlPricing: DeepStringify<EnPricing> = {
   seo: {
-    title: 'Pilates lesprijzen Amsterdam | Pakketten & abonnementen | PT Studio 7',
+    title: 'Pilates lesprijzen Amsterdam | Pakketten & abonnementen | PT 7 Pilates',
     description:
       'Pilates lesprijzen in Amsterdam aan het Museumplein. Kleine groepslessen (max. {{groupMax}}) vanaf {{groupPrice}}/les, abonnementen en privésessies. Reformer, TRX & krachttraining.',
     keywords:
       'pilates lesprijzen amsterdam, pilates prijzen amsterdam, Pilates prijzen Amsterdam, Pilates abonnement Amsterdam, Pilates prijzen Museumplein, reformer pilates prive amsterdam, kleine groep pilates amsterdam, private Pilates kosten, proefles Pilates Amsterdam, strippenkaart Pilates',
-    ogTitle: 'Pilates lesprijzen Amsterdam | PT Studio 7 Museumplein',
+    ogTitle: 'Pilates lesprijzen Amsterdam | PT 7 Pilates Museumplein',
     ogDescription:
       'Pilates lesprijzen in Amsterdam: kleine groepen (max. {{groupMax}}) vanaf {{groupPrice}}/les. Abonnementen en privésessies aan het Museumplein.',
-    analyticsTitle: 'Pilates lesprijzen Amsterdam | PT Studio 7',
+    analyticsTitle: 'Pilates lesprijzen Amsterdam | PT 7 Pilates',
   },
   breadcrumbName: 'Pilates lesprijzen Amsterdam',
   hero: {

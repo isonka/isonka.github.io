@@ -1,10 +1,10 @@
 ---
-name: PT Studio 7 - Planned Location Move
+name: PT 7 - Planned Location Move
 description: Studio is planning to move from Van Baerlestraat 76C to Beethovenstraat 57H, Amsterdam
 type: project
 ---
 
-PT Studio 7 is planning to move to **Beethovenstraat 57H, Amsterdam Oud-Zuid**.
+PT 7 is planning to move to **Beethovenstraat 57H, Amsterdam Oud-Zuid**.
 
 **Current address**: Van Baerlestraat 76C, 1071BB Amsterdam (Museumplein)
 **New address**: Beethovenstraat 57H, Amsterdam (postcode TBC — likely 1077 area)

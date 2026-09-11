@@ -1,4 +1,4 @@
-# Agent guide — PT Studio 7 website
+# Agent guide — PT 7 website
 
 This document orients **SEO**, **Marketing**, and **Developer** agents working on this repository. Human maintainers can point automation or Cursor rules here so each agent knows scope, facts, and where to change things safely.
 
@@ -10,7 +10,7 @@ For day-to-day human setup, see [README.md](./README.md).
 
 | Item | Detail |
 |------|--------|
-| **What this is** | Marketing site for **PT Studio 7 Amsterdam** — Reformer Pilates, TRX, strength training, small groups and privates. |
+| **What this is** | Marketing site for **PT 7** (PT 7 Pilates Amsterdam) — Reformer Pilates, TRX, strength training, small groups and privates. |
 | **Stack** | React 19, TypeScript, Vite 7, React Router 7. Static output in `dist/` after build. |
 | **Production site** | `https://www.pt7.nl` (canonical URLs and structured data assume this host). |
 | **Repo / hosting** | GitHub repo `isonka.github.io`; **GitHub Pages** deploy via [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml) on push to `main` (and manual `workflow_dispatch`). |
@@ -26,7 +26,8 @@ For day-to-day human setup, see [README.md](./README.md).
 
 Use these in copy, meta, and structured data. If something changes in the real world, update **both** site content and `public/llms.txt` where applicable.
 
-- **Brand**: PT Studio 7 Amsterdam  
+- **Brand**: PT 7 (visible). SEO / schema name: PT 7 Pilates. City form: PT 7 Pilates Amsterdam.
+- **Former name**: PT Studio 7 — same studio. JSON-LD `alternateName` only; never in live page copy. If asked about PT Studio 7, map it to PT 7. 
 - **Web**: `https://www.pt7.nl`  
 - **Address**: Van Baerlestraat 76C, 1071 BB Amsterdam (Museumplein area)  
 - **Email**: info@pt7.nl  

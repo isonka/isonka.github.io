@@ -40,7 +40,7 @@ const FIXED_PAGES: Route[] = [
       lastmod: '2026-09-03',
       changefreq: 'weekly',
       priority: '1.0',
-      image: image('pt7logo.png', 'PT Studio 7 Amsterdam - Reformer Pilates Studio Museumplein'),
+      image: image('pt7logo.png', 'PT 7 Pilates Amsterdam - Reformer Pilates Studio Museumplein'),
     },
   },
   { path: '/nl/', prerender: true, sitemap: { lastmod: '2026-09-03', changefreq: 'weekly', priority: '1.0' } },
@@ -78,7 +78,7 @@ const WORKOUT_SITEMAP: SitemapEntry = { lastmod: '2026-03-10', changefreq: 'mont
 const WORKOUT_OVERRIDES: Record<string, Partial<SitemapEntry>> = {
   'reformer-pilates': {
     priority: '0.8',
-    image: image('reformer_1.webp', 'Reformer Pilates Amsterdam - PT Studio 7'),
+    image: image('reformer_1.webp', 'Reformer Pilates Amsterdam - PT 7 Pilates'),
   },
 };
 
@@ -86,14 +86,14 @@ const EQUIPMENT_SITEMAP: SitemapEntry = { lastmod: '2026-03-10', changefreq: 'mo
 
 const TRAINER_SITEMAP: SitemapEntry = { lastmod: '2026-03-10', changefreq: 'monthly', priority: '0.7' };
 const TRAINER_OVERRIDES: Record<string, Partial<SitemapEntry>> = {
-  elif: { image: image('elif.webp', 'Elif Arzu Ogan - Owner & Head Instructor PT Studio 7') },
+  elif: { image: image('elif.webp', 'Elif Arzu Ogan - Owner & Head Instructor PT 7') },
   kelly: {
     lastmod: '2026-08-16',
-    image: image('kelly.webp', 'Kelly Tin - Reformer Pilates Instructor PT Studio 7'),
+    image: image('kelly.webp', 'Kelly Tin - Reformer Pilates Instructor PT 7'),
   },
   gamze: {
     lastmod: '2026-08-23',
-    image: image('gamze.webp', 'E. Gamze Karadağ - Reformer Pilates Instructor PT Studio 7'),
+    image: image('gamze.webp', 'E. Gamze Karadağ - Reformer Pilates Instructor PT 7'),
   },
 };
 
@@ -127,7 +127,7 @@ const derived: Route[] = [
       lastmod: post.date,
       priority: BLOG_PRIORITY_OVERRIDES[post.slug] ?? BLOG_SITEMAP.priority,
     },
-    meta: { title: `${post.title} | PT Studio 7`, description: post.metaDescription },
+    meta: { title: `${post.title} | PT 7 Pilates`, description: post.metaDescription },
   })),
 ];
 

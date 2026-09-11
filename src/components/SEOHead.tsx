@@ -54,7 +54,7 @@ export const SEOHead = ({
 
     updateMetaTag('description', description);
     updateMetaTag('keywords', keywords);
-    updateMetaTag('author', 'PT Studio 7');
+    updateMetaTag('author', 'PT 7 Pilates');
     updateMetaTag('robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
 
     updateMetaTag('geo.region', 'NL-NH');
@@ -75,19 +75,19 @@ export const SEOHead = ({
     updateMetaTag('og:title', ogTitle || title, true);
     updateMetaTag('og:description', ogDescription || description, true);
     updateMetaTag('og:url', canonicalUrl, true);
-    updateMetaTag('og:site_name', 'PT Studio 7 Amsterdam', true);
+    updateMetaTag('og:site_name', 'PT 7 Pilates', true);
     updateMetaTag('og:image', absoluteImageUrl, true);
     updateMetaTag('og:image:secure_url', absoluteImageUrl, true);
     updateMetaTag('og:image:width', '1200', true);
     updateMetaTag('og:image:height', '630', true);
-    updateMetaTag('og:image:alt', 'PT Studio 7 Amsterdam - Pilates Studio', true);
+    updateMetaTag('og:image:alt', 'PT 7 Pilates Amsterdam - Pilates Studio', true);
 
     updateMetaTag('twitter:card', 'summary_large_image');
     updateMetaTag('twitter:site', '@ptstudio7amsterdam');
     updateMetaTag('twitter:title', ogTitle || title);
     updateMetaTag('twitter:description', ogDescription || description);
     updateMetaTag('twitter:image', absoluteImageUrl);
-    updateMetaTag('twitter:image:alt', 'PT Studio 7 Amsterdam - Pilates Studio');
+    updateMetaTag('twitter:image:alt', 'PT 7 Pilates Amsterdam - Pilates Studio');
 
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonicalLink) {

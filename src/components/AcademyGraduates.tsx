@@ -10,8 +10,8 @@ export const AcademyGraduates = ({ locale }: AcademyGraduatesProps) => {
   const isNl = locale === 'nl';
   const heading = isNl ? 'Afgestudeerden van PT7 Academy' : 'PT7 Academy graduates';
   const intro = isNl
-    ? 'E. Gamze Karadağ, Kelly Tin, Nisan Atalay, Lal Avgen en Gülce Koç rondden de Reformer-opleiding af en lesgeven nu bij PT Studio 7.'
-    : 'E. Gamze Karadağ, Kelly Tin, Nisan Atalay, Lal Avgen, and Gülce Koç completed the Reformer instructor course and now teach at PT Studio 7.';
+    ? 'E. Gamze Karadağ, Kelly Tin, Nisan Atalay, Lal Avgen en Gülce Koç rondden de Reformer-opleiding af en lesgeven nu bij PT 7.'
+    : 'E. Gamze Karadağ, Kelly Tin, Nisan Atalay, Lal Avgen, and Gülce Koç completed the Reformer instructor course and now teach at PT 7.';
 
   return (
     <section className="academy-graduates" aria-labelledby="academy-graduates-heading">
@@ -26,7 +26,7 @@ export const AcademyGraduates = ({ locale }: AcademyGraduatesProps) => {
               <>
                 <img
                   src={grad.image}
-                  alt={isNl ? `${grad.name}, instructeur bij PT Studio 7` : `${grad.name}, instructor at PT Studio 7`}
+                  alt={isNl ? `${grad.name}, instructeur bij PT 7` : `${grad.name}, instructor at PT 7`}
                   width={280}
                   height={350}
                   loading="lazy"

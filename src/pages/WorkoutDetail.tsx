@@ -14,7 +14,7 @@ export const WorkoutDetail= () => {
 
   useEffect(() => {
     if (workout) {
-      trackPageView(`/workouts/${workout.slug}/`, `${workout.hero.title} - PT Studio 7`);
+      trackPageView(`/workouts/${workout.slug}/`, `${workout.hero.title} - PT 7 Pilates`);
       void ensureHealcodeLoaded();
     }
   }, [workout]);
@@ -85,7 +85,7 @@ export const WorkoutDetail= () => {
           <section className="ssl-hero">
             <img
               src={workout.hero.image}
-              alt={`${workout.hero.title} | PT Studio 7`}
+              alt={`${workout.hero.title} | PT 7 Pilates`}
               className="ssl-hero-image"
               loading="eager"
               decoding="async"

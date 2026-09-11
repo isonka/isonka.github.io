@@ -3,7 +3,7 @@ import type { EnCommon } from '../en/common';
 
 export const nlCommon: DeepStringify<EnCommon> = {
   nav: {
-    homeAria: 'PT Studio 7 home',
+    homeAria: 'PT 7 home',
     bookNow: 'Boek nu',
     bookNowAria: 'Boek een sessie',
     bookClassAria: 'Boek een les',
@@ -34,7 +34,7 @@ export const nlCommon: DeepStringify<EnCommon> = {
     switchToNl: 'Schakel over naar Nederlands',
   },
   footer: {
-    tag: 'Reformer pilates & personal training · Museumplein Amsterdam',
+    tag: 'Reformer pilates & strength training · Museumplein Amsterdam',
     navAria: 'Footer',
     book: 'Boeken',
     pricing: 'Prijzen',
@@ -47,11 +47,11 @@ export const nlCommon: DeepStringify<EnCommon> = {
     contact: 'Contact',
     privacy: 'Privacy',
     cookies: 'Cookies',
-    copyright: '© {{year}} PT Studio 7 Amsterdam. Alle rechten voorbehouden.',
+    copyright: '© {{year}} PT 7 Amsterdam. Alle rechten voorbehouden.',
     websiteBy: 'Website door',
   },
   contactMap: {
-    iframeTitle: 'Locatie PT Studio 7',
+    iframeTitle: 'Locatie PT 7',
     consentNote:
       'De Google-kaart laadt na statistiek- of marketingcookies, of als je hem hier toont.',
     showMap: 'Kaart tonen',

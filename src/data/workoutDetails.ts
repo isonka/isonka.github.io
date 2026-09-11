@@ -135,13 +135,13 @@ export const workoutDetails: WorkoutDetailData[] = [
   {
     slug: 'reformer-pilates',
     seo: {
-      title: 'What is Reformer Pilates? Benefits & Guide | PT Studio 7 Amsterdam',
+      title: 'What is Reformer Pilates? Benefits & Guide | PT 7 Pilates Amsterdam',
       description:
         'Learn what Reformer Pilates is, how the equipment works, and who it suits. Core strength, flexibility, and posture benefits explained. Ready to try a class? Book at our Reformer Pilates Amsterdam studio page.',
       keywords:
         'what is reformer pilates, reformer pilates benefits, reformer pilates equipment, reformer vs mat pilates, pilates reformer workout, core strength pilates, flexibility training, posture correction pilates',
       canonical: 'https://www.pt7.nl/workouts/reformer-pilates/',
-      ogTitle: 'What is Reformer Pilates? | PT Studio 7',
+      ogTitle: 'What is Reformer Pilates? | PT 7 Pilates',
       ogDescription:
         'Guide to Reformer Pilates: benefits, equipment, and who it suits. Book Reformer classes at our Amsterdam Museumplein studio.',
       ogImage: '/assets/images/studio.webp',
@@ -164,7 +164,7 @@ export const workoutDetails: WorkoutDetailData[] = [
     intro: {
       title: 'Transform Your Body with Reformer Pilates',
       lead:
-        'Reformer Pilates is a dynamic, full-body workout that uses specialized equipment to create resistance and support. At PT Studio 7, our expert instructors guide you through controlled, precise movements that strengthen your core, improve flexibility, and enhance your overall body awareness. To book a class at our Museumplein studio, visit our Reformer Pilates Amsterdam page.',
+        'Reformer Pilates is a dynamic, full-body workout that uses specialized equipment to create resistance and support. At PT 7, our expert instructors guide you through controlled, precise movements that strengthen your core, improve flexibility, and enhance your overall body awareness. To book a class at our Museumplein studio, visit our Reformer Pilates Amsterdam page.',
     },
     benefits: {
       title: 'Why Choose Reformer Pilates?',
@@ -262,11 +262,11 @@ export const workoutDetails: WorkoutDetailData[] = [
   {
     slug: 'trx',
     seo: {
-      title: 'TRX Suspension Training Amsterdam | PT Studio 7 Museumplein',
+      title: 'TRX Suspension Training Amsterdam | PT 7 Pilates Museumplein',
       description: 'Professional TRX suspension training in Amsterdam at Museumplein. Build strength, balance & functional fitness. Small group classes & private sessions. Expert trainers!',
       keywords: 'TRX training Amsterdam, suspension training Amsterdam, TRX Museumplein, functional fitness Amsterdam, strength training, balance training, TRX classes',
       canonical: 'https://www.pt7.nl/workouts/trx/',
-      ogTitle: 'TRX Suspension Training Amsterdam | PT Studio 7',
+      ogTitle: 'TRX Suspension Training Amsterdam | PT 7 Pilates',
       ogDescription: 'Expert TRX suspension training at Museumplein. Build total body strength, balance & functional fitness in small groups (max 5).',
       ogImage: '/assets/images/trx.jpg',
     },
@@ -344,7 +344,7 @@ export const workoutDetails: WorkoutDetailData[] = [
     ],
     finalCta: {
       title: 'Ready to Experience TRX?',
-      subtitle: 'Discover the power of suspension training at PT Studio 7',
+      subtitle: 'Discover the power of suspension training at PT 7',
       primaryLabel: 'Book Your Session',
       primaryTo: '/schedule',
       secondaryLabel: 'View Pricing',
@@ -354,11 +354,11 @@ export const workoutDetails: WorkoutDetailData[] = [
   {
     slug: 'functional-training',
     seo: {
-      title: 'Nike Strength Training Amsterdam | PT Studio 7 Museumplein',
-      description: 'Premium Nike Strength Training in Amsterdam at Museumplein. Olympic barbell, half rack, Nike dumbbells. Build real-world strength with expert personal training!',
-      keywords: 'Nike strength training Amsterdam, olympic lifting Amsterdam, personal training Museumplein, barbell training Amsterdam, functional fitness Amsterdam, Nike gym equipment',
+      title: 'Nike Strength Training Amsterdam | PT 7 Pilates Museumplein',
+      description: 'Premium Nike Strength Training in Amsterdam at Museumplein. Olympic barbell, half rack, Nike dumbbells. Build real-world strength with expert one-on-one training!',
+      keywords: 'Nike strength training Amsterdam, olympic lifting Amsterdam, one-on-one training Museumplein, barbell training Amsterdam, functional fitness Amsterdam, Nike gym equipment',
       canonical: 'https://www.pt7.nl/workouts/functional-training/',
-      ogTitle: 'Nike Strength Training Amsterdam | PT Studio 7',
+      ogTitle: 'Nike Strength Training Amsterdam | PT 7 Pilates',
       ogDescription: 'Premium Nike Strength equipment. Olympic barbell training with expert coaches at our boutique Museumplein studio.',
       ogImage: '/assets/images/og-share.jpg',
     },
@@ -416,7 +416,7 @@ export const workoutDetails: WorkoutDetailData[] = [
           linkLabel: 'View Couple Pricing',
         },
         {
-          title: 'Personal Training',
+          title: 'One-on-One Training',
           subtitle: 'One-on-One',
           description: 'Get a completely personalized program designed around your goals, injuries, and fitness level.',
           features: ['45-minute private sessions', 'From €70 per class', 'Custom program design', 'Focused attention'],
@@ -443,7 +443,7 @@ export const workoutDetails: WorkoutDetailData[] = [
     ],
     finalCta: {
       title: 'Start Building Real-World Strength',
-      subtitle: 'Experience strength training at PT Studio 7 Museumplein',
+      subtitle: 'Experience strength training at PT 7 Museumplein',
       primaryLabel: 'Book Your Session',
       primaryTo: '/schedule',
       secondaryLabel: 'View Pricing',
@@ -453,11 +453,11 @@ export const workoutDetails: WorkoutDetailData[] = [
   {
     slug: 'cardio',
     seo: {
-      title: 'Cardio Training Amsterdam | PT Studio 7 Museumplein',
-      description: 'High-intensity cardio workouts in Amsterdam at Museumplein. Boost endurance, burn fat, improve heart health. Small group HIIT classes & personal training!',
+      title: 'Cardio Training Amsterdam | PT 7 Pilates Museumplein',
+      description: 'High-intensity cardio workouts in Amsterdam at Museumplein. Boost endurance, burn fat, improve heart health. Small group HIIT classes & one-on-one training!',
       keywords: 'cardio training Amsterdam, HIIT Amsterdam, fat burning workout, endurance training Museumplein, cardio classes Amsterdam, heart health fitness',
       canonical: 'https://www.pt7.nl/workouts/cardio/',
-      ogTitle: 'Cardio Training Amsterdam | PT Studio 7',
+      ogTitle: 'Cardio Training Amsterdam | PT 7 Pilates',
       ogDescription: 'High-energy cardio workouts to burn calories and build endurance. Small groups (max 5) at Museumplein.',
       ogImage: '/assets/images/cardio.jpg',
     },
@@ -534,7 +534,7 @@ export const workoutDetails: WorkoutDetailData[] = [
     ],
     finalCta: {
       title: 'Ready to Boost Your Endurance?',
-      subtitle: 'Join our high-energy cardio classes at PT Studio 7',
+      subtitle: 'Join our high-energy cardio classes at PT 7',
       primaryLabel: 'Book Your Session',
       primaryTo: '/schedule',
       secondaryLabel: 'View Pricing',

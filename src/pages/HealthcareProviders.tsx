@@ -7,18 +7,18 @@ import '../styles/HealthcareProviders.css';
 
 export const HealthcareProviders= () => {
   useEffect(() => {
-    trackPageView('/healthcare-providers', 'For Healthcare Providers - PT Studio 7 Amsterdam');
+    trackPageView('/healthcare-providers', 'For Healthcare Providers - PT 7 Pilates Amsterdam');
   }, []);
 
   return (
     <>
       <SEOHead
-        title="Pilates for Rehabilitation Amsterdam | For Healthcare Providers | PT Studio 7"
-        description="Physiotherapists, GPs, and healthcare providers: refer your clients to PT Studio 7 for post-rehab Pilates and functional training. Small groups, expert instructors, Museumplein."
+        title="Pilates for Rehabilitation Amsterdam | For Healthcare Providers | PT 7 Pilates"
+        description="Physiotherapists, GPs, and healthcare providers: refer your clients to PT 7 for post-rehab Pilates and functional training. Small groups, expert instructors, Museumplein."
         keywords="physiotherapist referral Amsterdam, Pilates post-rehab, fysiotherapeut doorverwijzing, beweegprogramma Amsterdam, Pilates fysiotherapie"
         canonical="https://www.pt7.nl/healthcare-providers/"
-        ogTitle="Pilates for Rehabilitation Amsterdam | PT Studio 7"
-        ogDescription="Partner with PT Studio 7. Refer your clients for post-rehab Pilates and functional training. Small groups, expert instructors."
+        ogTitle="Pilates for Rehabilitation Amsterdam | PT 7 Pilates"
+        ogDescription="Partner with PT 7. Refer your clients for post-rehab Pilates and functional training. Small groups, expert instructors."
       />
       <Breadcrumbs items={[{ name: 'For Healthcare Providers', path: '/healthcare-providers' }]} />
 
@@ -26,7 +26,7 @@ export const HealthcareProviders= () => {
         <section className="healthcare-hero">
           <div className="healthcare-hero-content">
             <h1>Pilates for Rehabilitation Amsterdam</h1>
-            <p className="hero-subtitle">Refer Your Clients to PT Studio 7</p>
+            <p className="hero-subtitle">Refer Your Clients to PT 7</p>
             <p className="hero-description">
               Partner with Amsterdam&apos;s boutique Pilates and fitness studio. We offer a trusted destination for your clients after rehabilitation, Pilates, functional training, and small-group sessions designed to support long-term recovery and strength.
             </p>
@@ -165,7 +165,7 @@ export const HealthcareProviders= () => {
                 <Link to="/trainer/goknur/">Göknur Dipli profile</Link>
               </p>
             </div>
-            <Link to="/" className="back-link">← Back to PT Studio 7</Link>
+            <Link to="/" className="back-link">← Back to PT 7</Link>
           </div>
         </section>
       </div>

@@ -46,7 +46,7 @@ export const BlogPost= () => {
   return (
     <>
       <SEOHead
-        title={`${post.title} | PT Studio 7 Amsterdam Blog`}
+        title={`${post.title} | PT 7 Pilates Amsterdam Blog`}
         description={post.metaDescription}
         keywords={post.keywords.join(', ')}
         canonical={`https://www.pt7.nl/blog/${post.slug}/`}
@@ -63,7 +63,7 @@ export const BlogPost= () => {
             image: post.image,
             datePublished: post.date,
             dateModified: post.date,
-            authorName: post.author === 'PT Studio 7 Team' ? 'Elif Arzu Ogan' : post.author,
+            authorName: post.author === 'PT 7 Team' ? 'Elif Arzu Ogan' : post.author,
             keywords: post.keywords,
             slug: post.slug,
             articleSection: post.tags[0] || 'Pilates',
@@ -154,9 +154,9 @@ export const BlogPost= () => {
           ) : null}
 
           <div className="sidebar-section">
-            <h2 className="sidebar-heading">About PT Studio 7</h2>
+            <h2 className="sidebar-heading">About PT 7</h2>
             <p>
-              Located at Museumplein in Amsterdam, PT Studio 7 offers premium Pilates, TRX, and
+              Located at Museumplein in Amsterdam, PT 7 offers premium Pilates, TRX, and
               functional fitness with expert instructors in an intimate setting.
             </p>
             <Link to="/pricing/" className="prose-link">
@@ -169,7 +169,7 @@ export const BlogPost= () => {
       <section className="cta-band blog-post-cta-band">
         <h2>Experience it yourself</h2>
         <p>
-          Ready to try Pilates at PT Studio 7 Amsterdam? Book a class at our Museumplein studio.
+          Ready to try Pilates at PT 7 Amsterdam? Book a class at our Museumplein studio.
         </p>
         <div className="blog-post-cta-actions">
           <Link to="/schedule/" className="btn-gold">

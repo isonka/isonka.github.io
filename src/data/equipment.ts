@@ -53,7 +53,7 @@ export const equipmentProducts: EquipmentProduct[] = [
     slug: 'reformer',
     name: 'Pilates Reformer',
     seo: {
-      title: 'Buy Pilates Reformer for Sale | Amsterdam | PT Studio 7',
+      title: 'Buy Pilates Reformer for Sale | Amsterdam | PT 7 Pilates',
       description: 'Professional Pilates Reformer for sale, not class bookings. Solid beech wood frame, smooth-gliding carriage, complete with accessories. Studio-quality equipment with delivery in the Netherlands.',
       keywords: 'Pilates Reformer for sale, buy pilates reformer amsterdam, professional Pilates equipment, reformer kopen nederland, studio equipment, Pilates apparatus for sale',
     },
@@ -107,7 +107,7 @@ export const equipmentProducts: EquipmentProduct[] = [
     slug: 'tower-reformer',
     name: 'Tower Reformer',
     seo: {
-      title: 'Tower Reformer - PT Studio 7 Amsterdam',
+      title: 'Tower Reformer - PT 7 Pilates Amsterdam',
       description: 'Professional-grade Tower Reformer combining reformer and tower for expanded exercise options. Studio-quality Pilates equipment available in Amsterdam.',
       keywords: 'Tower Reformer for sale, Pilates tower, professional Pilates equipment, reformer with tower, Amsterdam',
     },
@@ -161,7 +161,7 @@ export const equipmentProducts: EquipmentProduct[] = [
     slug: 'cadillac',
     name: 'Combo Cadillac',
     seo: {
-      title: 'Combo Cadillac - PT Studio 7 Amsterdam',
+      title: 'Combo Cadillac - PT 7 Pilates Amsterdam',
       description: 'Professional Pilates Cadillac for sale. The ultimate apparatus for endless exercise possibilities. Studio-grade equipment available in Amsterdam.',
       keywords: 'Pilates Cadillac for sale, Trapeze Table, professional Pilates equipment, Cadillac Amsterdam',
     },
@@ -213,7 +213,7 @@ export const equipmentProducts: EquipmentProduct[] = [
     slug: 'wunda-chair',
     name: 'Wunda Chair',
     seo: {
-      title: 'Wunda Chair - PT Studio 7 Amsterdam',
+      title: 'Wunda Chair - PT 7 Pilates Amsterdam',
       description: 'Professional Pilates Wunda Chair for sale. Versatile equipment for challenging workouts in compact space. Studio-grade quality available in Amsterdam.',
       keywords: 'Wunda Chair for sale, Pilates chair, professional Pilates equipment, compact Pilates, Amsterdam',
     },
@@ -261,8 +261,8 @@ export const equipmentProducts: EquipmentProduct[] = [
     slug: 'ladder-barrel',
     name: 'Ladder Barrel',
     seo: {
-      title: 'Ladder Barrel for Sale | PT Studio 7 Amsterdam',
-      description: 'Buy a professional Pilates Ladder Barrel in Amsterdam. Specs and ordering for home or studio use. Sold by PT Studio 7; not used in our client training sessions.',
+      title: 'Ladder Barrel for Sale | PT 7 Pilates Amsterdam',
+      description: 'Buy a professional Pilates Ladder Barrel in Amsterdam. Specs and ordering for home or studio use. Sold by PT 7; not used in our client training sessions.',
       keywords: 'Ladder Barrel for sale, Pilates barrel for sale Amsterdam, buy Pilates equipment Netherlands, professional Pilates apparatus',
     },
     images: [
@@ -284,7 +284,7 @@ export const equipmentProducts: EquipmentProduct[] = [
       'Dimensions: 90 x 75 x 90 cm',
       'Weight: approx. 40 kg',
     ],
-    description: 'The Ladder Barrel supports spinal extension, stretching, and flexibility work with a curved barrel and ladder. Available for sale through PT Studio 7 for home or studio use. We sell this apparatus; it is not part of our regular client training sessions at Museumplein.',
+    description: 'The Ladder Barrel supports spinal extension, stretching, and flexibility work with a curved barrel and ladder. Available for sale through PT 7 for home or studio use. We sell this apparatus; it is not part of our regular client training sessions at Museumplein.',
     specs: [
       { label: 'Frame', value: 'Solid wood construction' },
       { label: 'Barrel', value: 'Smooth curved surface with padding' },
@@ -304,7 +304,7 @@ export const equipmentProducts: EquipmentProduct[] = [
         answer: 'The Ladder Barrel requires approximately 1.5m x 1.5m of floor space for safe use.',
       },
       {
-        question: 'Do you use the Ladder Barrel in PT Studio 7 classes?',
+        question: 'Do you use the Ladder Barrel in PT 7 classes?',
         answer: 'No. We sell the Ladder Barrel for home or studio purchase. Client trainings at our Museumplein studio use Reformers, Tower Reformer, Cadillac, Wunda Chair, and related apparatus, not the Ladder Barrel.',
       },
       commonFAQ[1],

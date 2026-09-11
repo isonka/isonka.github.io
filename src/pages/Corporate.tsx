@@ -8,17 +8,17 @@ import '../styles/Corporate.css';
 
 export const Corporate= () => {
   useEffect(() => {
-    trackPageView('/corporate', 'Corporate Pilates Amsterdam | For Business | PT Studio 7');
+    trackPageView('/corporate', 'Corporate Pilates Amsterdam | For Business | PT 7 Pilates');
   }, []);
 
   return (
     <>
       <SEOHead
-        title="Corporate Pilates Amsterdam | Bedrijfsfitness | PT Studio 7"
+        title="Corporate Pilates Amsterdam | Bedrijfsfitness | PT 7 Pilates"
         description="Corporate Pilates and bedrijfsfitness Amsterdam for teams. Boutique Reformer at Museumplein or on-site mat sessions. Tax-friendly WKR options. Ask about corporate rates."
         keywords="corporate Pilates Amsterdam, bedrijfsfitness Amsterdam, corporate wellness Amsterdam, team Pilates Amsterdam, office Pilates Amsterdam, WKR pilates, bedrijfssport Amsterdam, Reformer Pilates teams"
         canonical="https://www.pt7.nl/corporate/"
-        ogTitle="Corporate Pilates Amsterdam | For Business | PT Studio 7"
+        ogTitle="Corporate Pilates Amsterdam | For Business | PT 7 Pilates"
         ogDescription="Stronger backs, clearer heads, fewer sick days. Boutique Reformer Pilates for your team, at Museumplein or on-site at your office."
       />
       <StructuredData
@@ -27,7 +27,7 @@ export const Corporate= () => {
           service: {
             name: 'Corporate Pilates Amsterdam',
             description:
-              'Boutique Reformer and mat Pilates for teams, at PT Studio 7 Museumplein or on-site at your office. Small groups (max 5), certified instructors, tax-friendly employer options (WKR).',
+              'Boutique Reformer and mat Pilates for teams, at PT 7 Museumplein or on-site at your office. Small groups (max 5), certified instructors, tax-friendly employer options (WKR).',
             serviceUrl: 'https://www.pt7.nl/corporate/',
             areaServed: 'Amsterdam',
             offers: [
@@ -52,7 +52,7 @@ export const Corporate= () => {
 
         <section className="corporate-pilates-rehab">
           <div className="corporate-container">
-            <h2>Why teams train with PT Studio 7</h2>
+            <h2>Why teams train with PT 7</h2>
             <p className="rehab-intro">
               Desk work wrecks posture, tight hips, stiff necks, lower-back pain. Certified instructors run focused small-group Reformer and mat sessions that undo exactly that. Max 5 per class means real attention. 15+ years expertise, minutes from Zuid.
             </p>
@@ -168,7 +168,7 @@ export const Corporate= () => {
                 <Link to="/pricing/">Pricing</Link>
               </p>
             </div>
-            <Link to="/" className="back-link">← Back to PT Studio 7</Link>
+            <Link to="/" className="back-link">← Back to PT 7</Link>
           </div>
         </section>
       </div>

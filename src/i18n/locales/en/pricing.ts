@@ -1,14 +1,14 @@
 export const enPricing = {
   seo: {
-    title: 'Pilates Class Prices Amsterdam | Packages & Memberships | PT Studio 7',
+    title: 'Pilates Class Prices Amsterdam | Packages & Memberships | PT 7 Pilates',
     description:
       'Pilates class prices in Amsterdam at Museumplein. Small group classes (max {{groupMax}}) from {{groupPrice}}/class, memberships, and private sessions. Reformer, TRX & strength.',
     keywords:
       'pilates class prices amsterdam, pilates prices amsterdam, Pilates prijzen Amsterdam, Pilates abonnement Amsterdam, Pilates prices Museumplein, reformer pilates prive amsterdam, kleine groep pilates amsterdam, private Pilates kosten, small group Pilates pricing, proefles Pilates Amsterdam, strippenkaart Pilates',
-    ogTitle: 'Pilates Class Prices Amsterdam | PT Studio 7 Museumplein',
+    ogTitle: 'Pilates Class Prices Amsterdam | PT 7 Pilates Museumplein',
     ogDescription:
       'Pilates class prices in Amsterdam: small groups (max {{groupMax}}) from {{groupPrice}}/class. Memberships and private sessions at Museumplein.',
-    analyticsTitle: 'Pilates Class Prices Amsterdam | PT Studio 7',
+    analyticsTitle: 'Pilates Class Prices Amsterdam | PT 7 Pilates',
   },
   breadcrumbName: 'Pilates Class Prices Amsterdam',
   hero: {

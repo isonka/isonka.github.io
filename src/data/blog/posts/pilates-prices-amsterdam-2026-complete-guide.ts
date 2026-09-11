@@ -130,11 +130,11 @@ export const post: BlogPost = {
 
       <p>Beyond the immediate workout, Pilates builds functional strength that translates to everyday life, carrying groceries, climbing stairs, playing with your kids. You'll develop better control over your body, improved posture, and a stronger core that supports everything you do. Many clients are surprised by how much stronger they feel after just a few weeks, even if they've been going to the gym for years.</p>
 
-      <p>Our clients at PT Studio 7 report that consistent Pilates has reduced their physiotherapy visits, improved their sleep, eliminated chronic pain issues, and given them a level of body awareness they never had before. When viewed as an investment in strength, control, and preventive healthcare rather than "just exercise," the perspective shifts significantly.</p>
+      <p>Our clients at PT 7 report that consistent Pilates has reduced their physiotherapy visits, improved their sleep, eliminated chronic pain issues, and given them a level of body awareness they never had before. When viewed as an investment in strength, control, and preventive healthcare rather than "just exercise," the perspective shifts significantly.</p>
 
-      <p><em>Looking for a tailored Pilates session designed around your specific needs and goals? Our private sessions at PT Studio 7 Museumplein offer one-on-one attention from expert instructors with 15+ years of experience. <a href="/pricing/">View our private session packages</a> or <a href="/schedule/">book your first session</a>.</em></p>
+      <p><em>Looking for a tailored Pilates session designed around your specific needs and goals? Our private sessions at PT 7 Museumplein offer one-on-one attention from expert instructors with 15+ years of experience. <a href="/pricing/">View our private session packages</a> or <a href="/schedule/">book your first session</a>.</em></p>
     `,
-  author: 'PT Studio 7 Team',
+  author: 'PT 7 Team',
   date: '2026-01-27',
   image: '/assets/images/studio.webp',
   tags: ['Pilates Prices', 'Amsterdam Fitness', 'Cost Guide', 'Pilates Classes'],

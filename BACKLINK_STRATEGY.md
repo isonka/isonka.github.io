@@ -1,4 +1,4 @@
-# PT Studio 7 - Backlink Building Strategy
+# PT 7 - Backlink Building Strategy
 ## 90-Day Action Plan to Build Authority
 
 ---
@@ -65,7 +65,7 @@ Subject: Wellness Partnership Opportunity - Museumplein Location
 
 Hi [Name],
 
-I'm Elif from PT Studio 7, a boutique Reformer Pilates studio at Van 
+I'm Elif from PT 7, a boutique Reformer Pilates studio at Van 
 Baerlestraat 76C, right across from Stedelijk Museum.
 
 We're reaching out to premium hotels in the Museumplein area about 
@@ -82,7 +82,7 @@ Would you be interested in a brief call to discuss?
 
 Best regards,
 Elif Arzu Ogan
-PT Studio 7 Amsterdam
+PT 7 Amsterdam
 +31 685 162693
 ```
 
@@ -154,7 +154,7 @@ Subject: Guest Post Proposal: [Specific Topic] for [Publication]
 
 Hi [Editor Name],
 
-I'm Elif, owner of PT Studio 7, a Reformer Pilates studio in Amsterdam's 
+I'm Elif, owner of PT 7, a Reformer Pilates studio in Amsterdam's 
 Museumplein with 15 years of experience.
 
 I noticed you recently published [mention their recent article]. I'd love 
@@ -186,13 +186,13 @@ Elif Arzu Ogan
 
 **Influencer Outreach Template:**
 ```
-Subject: Complimentary Reformer Pilates Class - PT Studio 7 Museumplein
+Subject: Complimentary Reformer Pilates Class - PT 7 Museumplein
 
 Hi [Name],
 
 I love your content on Amsterdam lifestyle! 🌟
 
-I'm Elif from PT Studio 7, a boutique Pilates studio at Museumplein. 
+I'm Elif from PT 7, a boutique Pilates studio at Museumplein. 
 We'd love to offer you a complimentary private Reformer Pilates session.
 
 No strings attached - just hoping you'll enjoy the experience! If you 
@@ -243,7 +243,7 @@ I came across your excellent resource page on Amsterdam fitness options
 at [URL]. Great list!
 
 I noticed you're missing Reformer Pilates options in the Museumplein 
-area. We're PT Studio 7 (www.pt7.nl), a boutique studio 
+area. We're PT 7 (www.pt7.nl), a boutique studio 
 with:
 
 • 15 years experience
@@ -269,7 +269,7 @@ Elif
 - Local Amsterdam services
 
 ### **5. Scholarship/Giveaway**
-- [ ] Create "PT Studio 7 Wellness Scholarship"
+- [ ] Create "PT 7 Wellness Scholarship"
 - [ ] Offer 3 months free classes to students/low-income
 - [ ] List on scholarship directories
 - [ ] Target: .edu backlinks (high authority!)
@@ -363,7 +363,7 @@ Subject: Partnership Opportunity - [Your Value Proposition]
 
 Hi [Name],
 
-I'm reaching out from PT Studio 7, a boutique Reformer Pilates studio 
+I'm reaching out from PT 7, a boutique Reformer Pilates studio 
 in Amsterdam's Museumplein district.
 
 I noticed [specific observation about their business/website], and 
@@ -378,7 +378,7 @@ Would you be open to a 15-minute call to explore this?
 
 Best regards,
 Elif Arzu Ogan
-Owner, PT Studio 7
+Owner, PT 7
 www.pt7.nl
 +31 685 162693
 ```
@@ -409,7 +409,7 @@ Elif
 
 ### **Template 3: Broken Link Outreach**
 ```
-Subject: Broken link on [Page Title] - PT Studio 7 can help
+Subject: Broken link on [Page Title] - PT 7 can help
 
 Hi [Name],
 

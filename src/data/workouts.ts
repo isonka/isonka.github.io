@@ -13,7 +13,7 @@ export const workouts: Workout[] = [
   {
     to: '/workouts/reformer-pilates',
     src: '/assets/images/studio.webp',
-    alt: 'PT Studio 7 Amsterdam boutique studio for Reformer Pilates and training',
+    alt: 'PT 7 Amsterdam boutique studio for Reformer Pilates and training',
     title: 'Reformer & Trapeze Table Pilates',
     description: 'Full-body workout focusing on core strength, flexibility, and posture',
     style: { objectPosition: 'center 45%' },
@@ -21,7 +21,7 @@ export const workouts: Workout[] = [
   {
     to: '/workouts/trx',
     src: '/assets/images/trx.webp',
-    alt: 'TRX suspension training at PT Studio 7 Amsterdam',
+    alt: 'TRX suspension training at PT 7 Amsterdam',
     title: 'TRX Training',
     description: 'Suspension training for strength, balance, and functional fitness',
     style: { objectPosition: 'center 42%' },

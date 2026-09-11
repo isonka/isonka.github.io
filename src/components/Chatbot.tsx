@@ -70,13 +70,13 @@ export const Chatbot= () => {
   useEffect(() => {
     if (isOpen && messages.length === 0) {
       addBotMessage(
-        "Hi! I'm here to help you find a class and instructor at PT Studio 7. A few quick questions.",
+        "Hi! I'm here to help you find a class and instructor at PT 7. A few quick questions.",
         500
       );
 
       later(() => {
         addBotMessage(
-          "What brings you to PT Studio 7?",
+          "What brings you to PT 7?",
           1500,
           [
             "Improve strength & fitness",
@@ -286,7 +286,7 @@ ${pricing}
         clearTimers();
         setMessages([]);
         setUserProfile({});
-        addBotMessage("Let's start fresh! What brings you to PT Studio 7?", 500, [
+        addBotMessage("Let's start fresh! What brings you to PT 7?", 500, [
           "Improve strength & fitness",
           "Lose weight & tone",
           "Rehabilitation/injury recovery",
@@ -350,7 +350,7 @@ ${pricing}
                 </svg>
               </div>
               <div>
-                <h3>PT Studio 7 Assistant</h3>
+                <h3>PT 7 Assistant</h3>
                 <p>Find your perfect class</p>
               </div>
             </div>

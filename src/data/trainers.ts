@@ -36,16 +36,16 @@ export const trainerProfiles: TrainerProfile[] = [
     specialties: ['Reformer Pilates', 'TRX', 'Strength Training'],
     available: true,
     seo: {
-      title: 'Elif Arzu Ogan - Comprehensive Pilates, Strength Training, Prenatal Pilates Instructor | PT Studio 7',
-      description: 'Meet Elif Arzu Ogan, expert Pilates and functional training instructor at PT Studio 7 Amsterdam. Book your personalized session today.',
-      keywords: 'Elif Arzu Ogan, Pilates instructor Amsterdam, functional training, PT Studio 7, Pilates leraar Amsterdam',
+      title: 'Elif Arzu Ogan - Comprehensive Pilates, Strength Training, Prenatal Pilates Instructor | PT 7 Pilates',
+      description: 'Meet Elif Arzu Ogan, expert Pilates and functional training instructor at PT 7 Amsterdam. Book your personalized session today.',
+      keywords: 'Elif Arzu Ogan, Pilates instructor Amsterdam, functional training, PT 7, Pilates leraar Amsterdam',
     },
     structuredData: {
       jobTitle: 'Owner & Head Pilates Instructor',
-      description: 'Founder and head instructor of PT Studio 7 with over 15 years of experience. Senior Polestar Pilates Instructor, TRX & Strength Training Instructor.',
+      description: 'Founder and head instructor of PT 7 with over 15 years of experience. Senior Polestar Pilates Instructor, TRX & Strength Training Instructor.',
     },
     bio: [
-      'Elif is the founder and head instructor of PT Studio 7, which she established in 2010. Since founding the studio, she has continued her career as both an instructor and business owner. With over 15 years of experience, she is a Senior Polestar Pilates Instructor, PMA-registered instructor (Pilates Method Alliance), Miha BodyTec EMS Advance Trainer, and TRX & Strength Training Instructor. Elif holds a bachelor\'s degree in Business Administration from Hacettepe University. She started her sports career with athletics, continued with swimming, and played basketball in various clubs. She is passionate about helping clients reach their goals through personalized, attentive training and a holistic approach to health and fitness.',
+      'Elif is the founder and head instructor of PT 7, which she established in 2010. Since founding the studio, she has continued her career as both an instructor and business owner. With over 15 years of experience, she is a Senior Polestar Pilates Instructor, PMA-registered instructor (Pilates Method Alliance), Miha BodyTec EMS Advance Trainer, and TRX & Strength Training Instructor. Elif holds a bachelor\'s degree in Business Administration from Hacettepe University. She started her sports career with athletics, continued with swimming, and played basketball in various clubs. She is passionate about helping clients reach their goals through personalized, attentive training and a holistic approach to health and fitness.',
     ],
     qualifications: [
       'Senior Polestar Pilates Instructor',
@@ -84,13 +84,13 @@ export const trainerProfiles: TrainerProfile[] = [
     specialties: ['Reformer Pilates', 'Mat Pilates', 'Prenatal Pilates'],
     available: true,
     seo: {
-      title: 'Gökben Öztekin - Pilates Instructor | PT Studio 7',
-      description: 'Meet Gökben Öztekin, expert Reformer Pilates instructor at PT Studio 7 Amsterdam. Specializing in precise technique and mindful movement.',
-      keywords: 'Gökben Öztekin, Reformer Pilates, Pilates instructor Amsterdam, PT Studio 7, Pilates leraar Amsterdam',
+      title: 'Gökben Öztekin - Pilates Instructor | PT 7 Pilates',
+      description: 'Meet Gökben Öztekin, expert Reformer Pilates instructor at PT 7 Amsterdam. Specializing in precise technique and mindful movement.',
+      keywords: 'Gökben Öztekin, Reformer Pilates, Pilates instructor Amsterdam, PT 7, Pilates leraar Amsterdam',
     },
     structuredData: {
       jobTitle: 'Basi Pilates Instructor',
-      description: 'Expert Reformer Pilates instructor specializing in precise technique and mindful movement at PT Studio 7 Amsterdam.',
+      description: 'Expert Reformer Pilates instructor specializing in precise technique and mindful movement at PT 7 Amsterdam.',
     },
     bio: [
       'Gokben is a certified Basi Pilates Instructor with a passion for helping clients improve their strength, flexibility, and overall well-being. She creates a welcoming and motivating environment for everyone.',
@@ -114,13 +114,13 @@ export const trainerProfiles: TrainerProfile[] = [
     specialties: ['Reformer Pilates', 'Mat Pilates', 'Rehabilitation'],
     available: true,
     seo: {
-      title: 'Göknur Dipli - Comprehensive Pilates, Strength Training, Prenatal Pilates Instructor | PT Studio 7',
-      description: 'Meet Göknur Dipli, expert Pilates and functional training instructor at PT Studio 7 Amsterdam. Holistic approach to fitness and wellness.',
-      keywords: 'Göknur Dipli, Pilates instructor Amsterdam, PT Studio 7, Pilates leraar Amsterdam, personal trainer',
+      title: 'Göknur Dipli - Comprehensive Pilates, Strength Training, Prenatal Pilates Instructor | PT 7 Pilates',
+      description: 'Meet Göknur Dipli, expert Pilates and functional training instructor at PT 7 Amsterdam. Holistic approach to fitness and wellness.',
+      keywords: 'Göknur Dipli, Pilates instructor Amsterdam, PT 7, Pilates leraar Amsterdam, one-on-one trainer',
     },
     structuredData: {
       jobTitle: 'Comprehensive Pilates & Strength Training Instructor',
-      description: 'Expert Pilates and strength training instructor with a holistic approach to fitness and wellness at PT Studio 7 Amsterdam.',
+      description: 'Expert Pilates and strength training instructor with a holistic approach to fitness and wellness at PT 7 Amsterdam.',
     },
     bio: [
       'Goknur is a Senior Polestar Pilates Instructor and Miha BodyTec EMS Advance Trainer. She brings a wealth of experience in functional training and is dedicated to helping clients achieve their best through expert guidance and motivation. She graduated in 2016 from Balıkesir University, Department of Physical Education and Sports, majoring in Coaching.',
@@ -157,13 +157,13 @@ export const trainerProfiles: TrainerProfile[] = [
     specialties: ['Reformer Pilates'],
     available: true,
     seo: {
-      title: 'Gülce Koç - Pilates Instructor | PT Studio 7',
-      description: 'Meet Gülce Koç, certified Reformer Pilates instructor at PT Studio 7 Amsterdam. Passionate about sharing strength, balance, and joy through Pilates.',
-      keywords: 'Gülce Koç, Gülce, Reformer Pilates, Pilates instructor Amsterdam, PT Studio 7, Pilates leraar',
+      title: 'Gülce Koç - Pilates Instructor | PT 7 Pilates',
+      description: 'Meet Gülce Koç, certified Reformer Pilates instructor at PT 7 Amsterdam. Passionate about sharing strength, balance, and joy through Pilates.',
+      keywords: 'Gülce Koç, Gülce, Reformer Pilates, Pilates instructor Amsterdam, PT 7, Pilates leraar',
     },
     structuredData: {
       jobTitle: 'Reformer Pilates Instructor',
-      description: 'Certified Reformer Pilates instructor passionate about sharing strength, balance, and joy through Pilates at PT Studio 7 Amsterdam.',
+      description: 'Certified Reformer Pilates instructor passionate about sharing strength, balance, and joy through Pilates at PT 7 Amsterdam.',
     },
     bio: [
       'Gülce has been practicing Pilates since she started college and has explored a wide range of teaching methods and movement approaches throughout her journey. Her experience spans Turkey, Germany, and the Netherlands, where she has both practiced and studied Pilates in diverse studio environments.',
@@ -189,13 +189,13 @@ export const trainerProfiles: TrainerProfile[] = [
     specialties: ['Reformer Pilates'],
     available: true,
     seo: {
-      title: 'Lal Avgen - Pilates Instructor | PT Studio 7',
-      description: 'Meet Lal Avgen, certified Reformer Pilates instructor at PT Studio 7 Amsterdam. Visual artist and creative technologist bringing mindful movement to her teaching.',
-      keywords: 'Lal Avgen, Lal, Reformer Pilates, Pilates instructor Amsterdam, PT Studio 7, Pilates leraar',
+      title: 'Lal Avgen - Pilates Instructor | PT 7 Pilates',
+      description: 'Meet Lal Avgen, certified Reformer Pilates instructor at PT 7 Amsterdam. Visual artist and creative technologist bringing mindful movement to her teaching.',
+      keywords: 'Lal Avgen, Lal, Reformer Pilates, Pilates instructor Amsterdam, PT 7, Pilates leraar',
     },
     structuredData: {
       jobTitle: 'Reformer Pilates Instructor',
-      description: 'Certified Reformer Pilates instructor, visual artist and creative technologist bringing mindful movement to her teaching at PT Studio 7 Amsterdam.',
+      description: 'Certified Reformer Pilates instructor, visual artist and creative technologist bringing mindful movement to her teaching at PT 7 Amsterdam.',
     },
     bio: [
       'Lal began practicing Pilates in 2022, building on a lifelong relationship with movement as an active spirit. Growing up in Istanbul, she was drawn to group sports like football and volleyball, later developing a strong interest in gym training and personal conditioning.',
@@ -222,13 +222,13 @@ export const trainerProfiles: TrainerProfile[] = [
     specialties: ['Reformer Pilates'],
     available: true,
     seo: {
-      title: 'Nisan Atalay - Pilates Instructor | PT Studio 7',
-      description: 'Meet Nisan Atalay, certified Reformer Pilates instructor at PT Studio 7 Amsterdam. Dutch-speaking instructor passionate about mindful movement.',
-      keywords: 'Nisan Atalay, Nisan, Reformer Pilates, Pilates instructor Amsterdam, PT Studio 7, Nederlands sprekende Pilates instructeur, Pilates leraar',
+      title: 'Nisan Atalay - Pilates Instructor | PT 7 Pilates',
+      description: 'Meet Nisan Atalay, certified Reformer Pilates instructor at PT 7 Amsterdam. Dutch-speaking instructor passionate about mindful movement.',
+      keywords: 'Nisan Atalay, Nisan, Reformer Pilates, Pilates instructor Amsterdam, PT 7, Nederlands sprekende Pilates instructeur, Pilates leraar',
     },
     structuredData: {
       jobTitle: 'Reformer Pilates Instructor',
-      description: 'Dutch-speaking certified Reformer Pilates instructor passionate about mindful movement and helping people feel good in their bodies at PT Studio 7 Amsterdam.',
+      description: 'Dutch-speaking certified Reformer Pilates instructor passionate about mindful movement and helping people feel good in their bodies at PT 7 Amsterdam.',
     },
     bio: [
       'Nisan is a newly certified Pilates instructor who is passionate about mindful movement and helping people feel good in their bodies. Her approach focuses on building strength, mobility, and balance in ways that support a high quality of life and long-term wellbeing.',
@@ -253,13 +253,13 @@ export const trainerProfiles: TrainerProfile[] = [
     specialties: ['Reformer Pilates'],
     available: true,
     seo: {
-      title: 'Kelly Tin - Pilates Instructor | PT Studio 7',
-      description: 'Meet Kelly Tin, certified Reformer Pilates instructor at PT Studio 7 Amsterdam. English- and Dutch-speaking coach with a strength and HIIT background.',
-      keywords: 'Kelly Tin, Kelly, Reformer Pilates, Pilates instructor Amsterdam, PT Studio 7, Nederlands sprekende Pilates instructeur, Pilates leraar',
+      title: 'Kelly Tin - Pilates Instructor | PT 7 Pilates',
+      description: 'Meet Kelly Tin, certified Reformer Pilates instructor at PT 7 Amsterdam. English- and Dutch-speaking coach with a strength and HIIT background.',
+      keywords: 'Kelly Tin, Kelly, Reformer Pilates, Pilates instructor Amsterdam, PT 7, Nederlands sprekende Pilates instructeur, Pilates leraar',
     },
     structuredData: {
       jobTitle: 'Reformer Pilates Instructor',
-      description: 'English- and Dutch-speaking certified Reformer Pilates instructor with a strength and HIIT background at PT Studio 7 Amsterdam.',
+      description: 'English- and Dutch-speaking certified Reformer Pilates instructor with a strength and HIIT background at PT 7 Amsterdam.',
     },
     bio: [
       'Kelly started practicing Pilates regularly in 2024, alongside her experience with strength and HIIT training. She quickly noticed how Pilates helped her feel calmer, stronger and more aware of her body, posture and mind.',
@@ -285,13 +285,13 @@ export const trainerProfiles: TrainerProfile[] = [
     specialties: ['Reformer Pilates'],
     available: true,
     seo: {
-      title: 'E. Gamze Karadağ - Pilates Instructor | PT Studio 7',
-      description: 'Meet E. Gamze Karadağ, certified Reformer Pilates instructor at PT Studio 7 Amsterdam. Yoga background and PT7 Academy graduate.',
-      keywords: 'E. Gamze Karadağ, Gamze Karadağ, Gamze, Reformer Pilates, Pilates instructor Amsterdam, PT Studio 7, Pilates leraar',
+      title: 'E. Gamze Karadağ - Pilates Instructor | PT 7 Pilates',
+      description: 'Meet E. Gamze Karadağ, certified Reformer Pilates instructor at PT 7 Amsterdam. Yoga background and PT7 Academy graduate.',
+      keywords: 'E. Gamze Karadağ, Gamze Karadağ, Gamze, Reformer Pilates, Pilates instructor Amsterdam, PT 7, Pilates leraar',
     },
     structuredData: {
       jobTitle: 'Reformer Pilates Instructor',
-      description: 'Certified Reformer Pilates instructor with a yoga background, mentoring students toward better mobility, body awareness, and wellbeing at PT Studio 7 Amsterdam.',
+      description: 'Certified Reformer Pilates instructor with a yoga background, mentoring students toward better mobility, body awareness, and wellbeing at PT 7 Amsterdam.',
     },
     bio: [
       'Gamze has been practicing yoga for over 7 years and has been a familiar face in our studio community for the past two years before transitioning into an instructor.',

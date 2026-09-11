@@ -24,7 +24,7 @@ const equipmentMeta: Record<string, { description: string; tag?: string }> = {
   },
   'ladder-barrel': {
     description:
-      'Available for purchase for home or studio use. Sold by PT Studio 7; not used in our client trainings.',
+      'Available for purchase for home or studio use. Sold by PT 7; not used in our client trainings.',
   },
 };
 
@@ -53,11 +53,11 @@ export const Equipment= () => {
   return (
     <>
       <SEOHead
-        title="Buy Pilates Equipment for Sale | Amsterdam | PT Studio 7"
+        title="Buy Pilates Equipment for Sale | Amsterdam | PT 7 Pilates"
         description="Pilates equipment for sale in Amsterdam and the Netherlands: Reformer, Tower Reformer, Cadillac, Wunda Chair, and Ladder Barrel. Specs, 2-year warranty, 3-8 week delivery. This page is for purchasing apparatus, not class bookings."
         keywords="buy pilates equipment amsterdam, pilates reformer for sale, pilates reformer kopen nederland, pilates equipment for sale netherlands, buy reformer amsterdam, cadillac pilates for sale"
         canonical="https://www.pt7.nl/equipment/"
-        ogTitle="Buy Pilates Equipment for Sale | PT Studio 7 Amsterdam"
+        ogTitle="Buy Pilates Equipment for Sale | PT 7 Pilates Amsterdam"
         ogDescription="Transactional catalog: professional Reformers and classical apparatus for home or studio purchase, not class bookings."
       />
       <StructuredData

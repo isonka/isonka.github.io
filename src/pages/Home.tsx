@@ -64,18 +64,18 @@ const trainers = [
 ] as const;
 
 const reviews = [
-  { author: 'Lot Canter Cremers', text: '"Through a neighbor in my building I was introduced to PT Studio 7. I have been going to this studio for the past 18 months, of which I have been pregnant for 9. During my pregnancy Elif trained me until the very end (38.5 weeks). Her training gave me and my body an extremely comfortable pregnancy and smooth delivery of birth! Her experience and knowledge about the human body, pregnant or not, makes all the difference. Of course I continued after my pregnancy and I really enjoy and recommend this studio to everyone who is looking for a Pilates studio with qualified and experienced instructors. Since the Pilates sport is getting so popular there are a lot of places where you can go but most of the instructors don\'t have enough knowledge to be able to teach and train you like they do at PT Studio 7!"' },
-  { author: 'Flaminia', text: '"I had been looking for a professional Pilates reformer studio for about 2 years and tried many different studios around Amsterdam. PT Studio 7 and Elif are exactly what I was looking for: professional, thoughtful, engaging in your body progress and growth. Elif is amazing and has decades of experience as a fitness trainer. She demonstrates techniques with a detail-oriented approach and her classes are always different and tailored to the group!"' },
+  { author: 'Lot Canter Cremers', text: '"Through a neighbor in my building I was introduced to PT 7. I have been going to this studio for the past 18 months, of which I have been pregnant for 9. During my pregnancy Elif trained me until the very end (38.5 weeks). Her training gave me and my body an extremely comfortable pregnancy and smooth delivery of birth! Her experience and knowledge about the human body, pregnant or not, makes all the difference. Of course I continued after my pregnancy and I really enjoy and recommend this studio to everyone who is looking for a Pilates studio with qualified and experienced instructors. Since the Pilates sport is getting so popular there are a lot of places where you can go but most of the instructors don\'t have enough knowledge to be able to teach and train you like they do at PT 7!"' },
+  { author: 'Flaminia', text: '"I had been looking for a professional Pilates reformer studio for about 2 years and tried many different studios around Amsterdam. PT 7 and Elif are exactly what I was looking for: professional, thoughtful, engaging in your body progress and growth. Elif is amazing and has decades of experience as a fitness trainer. She demonstrates techniques with a detail-oriented approach and her classes are always different and tailored to the group!"' },
   { author: 'Maya', text: '"This is a truly special Pilates Reformer studio, warm, welcoming, and filled with care. Gökben and Elif bring so much heart into every session. Their gentle guidance, attentiveness, and kindness make all the difference. I\'ve been practicing here for almost six months, and I feel stronger, more balanced, and more connected to my body. Every class leaves me smiling and deeply grateful!"' },
   { author: 'Yeşim', text: '"I\'ve been coming here for 6 months and the results are incredible. The atmosphere is motivating and the equipment is pristine. Highly recommend!"' },
-  { author: 'Ayşe', text: '"I\'ve been training at PT Studio 7 for a while now, and I couldn\'t be happier with my experience! The studio has such a calm and positive atmosphere, and the trainers are incredibly professional and supportive. They pay close attention to your needs and guide you through every movement with care. I highly recommend it!"' },
+  { author: 'Ayşe', text: '"I\'ve been training at PT 7 for a while now, and I couldn\'t be happier with my experience! The studio has such a calm and positive atmosphere, and the trainers are incredibly professional and supportive. They pay close attention to your needs and guide you through every movement with care. I highly recommend it!"' },
 ];
 
 const reviewsData = [
-  { author: 'Lot Canter Cremers', reviewBody: 'Through a neighbor in my building I was introduced to PT Studio 7...', ratingValue: 5 },
-  { author: 'Ayşe', reviewBody: "I've been training at PT Studio 7 for a while now...", ratingValue: 5 },
+  { author: 'Lot Canter Cremers', reviewBody: 'Through a neighbor in my building I was introduced to PT 7...', ratingValue: 5 },
+  { author: 'Ayşe', reviewBody: "I've been training at PT 7 for a while now...", ratingValue: 5 },
   { author: 'Maya', reviewBody: "This is a truly special Pilates Reformer studio...", ratingValue: 5 },
-  { author: 'Flaminia', reviewBody: "PT Studio 7 and Elif are exactly what I was looking for...", ratingValue: 5 },
+  { author: 'Flaminia', reviewBody: "PT 7 and Elif are exactly what I was looking for...", ratingValue: 5 },
 ];
 
 function TrainerTile({

@@ -7,12 +7,12 @@ export const ClassPassOffer = () => {
   return (
     <>
       <SEOHead
-        title="ClassPass Transition Offer | PT Studio 7 Amsterdam"
-        description="A clear transition offer for ClassPass clients moving to PT Studio 7 direct pricing. Compare costs and claim 20% off eligible first purchases."
+        title="ClassPass Transition Offer | PT 7 Pilates Amsterdam"
+        description="A clear transition offer for ClassPass clients moving to PT 7 direct pricing. Compare costs and claim 20% off eligible first purchases."
         keywords="ClassPass Amsterdam, Pilates ClassPass, ClassPass offer, Pilates membership Amsterdam"
         canonical="https://www.pt7.nl/classpass-offer/"
-        ogTitle="ClassPass Clients: PT Studio 7 Direct Offer"
-        ogDescription="Compare ClassPass costs with PT Studio 7 direct pricing and claim your transition discount."
+        ogTitle="ClassPass Clients: PT 7 Direct Offer"
+        ogDescription="Compare ClassPass costs with PT 7 direct pricing and claim your transition discount."
       />
       <Breadcrumbs items={[{ name: 'ClassPass Offer', path: '/classpass-offer' }]} />
 
@@ -21,7 +21,7 @@ export const ClassPassOffer = () => {
           <div className="cp-hero-overlay">
             <div className="cp-hero-content">
               <span className="cp-badge">For ClassPass Clients</span>
-              <h1>Prefer PT Studio 7?<br />Book Direct.</h1>
+              <h1>Prefer PT 7?<br />Book Direct.</h1>
               <p className="cp-hero-subtitle">
                 If you already train with us through ClassPass, this page shows the direct pricing difference and your transition discount.
               </p>
@@ -74,7 +74,7 @@ export const ClassPassOffer = () => {
               <div className="card-header">
                 <img
                   src="/assets/images/ts_logo.webp"
-                  alt="PT Studio 7"
+                  alt="PT 7"
                   className="pt7-logo"
                   width={133}
                   height={40}

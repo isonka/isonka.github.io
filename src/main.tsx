@@ -24,7 +24,7 @@ if (maybeModelContext?.provideContext) {
     tools: [
       {
         name: 'open_schedule',
-        description: 'Navigate to the PT Studio 7 schedule page.',
+        description: 'Navigate to the PT 7 schedule page.',
         inputSchema: {
           type: 'object',
           properties: {},
@@ -37,7 +37,7 @@ if (maybeModelContext?.provideContext) {
       },
       {
         name: 'open_pricing',
-        description: 'Navigate to the PT Studio 7 pricing page.',
+        description: 'Navigate to the PT 7 pricing page.',
         inputSchema: {
           type: 'object',
           properties: {},
@@ -50,7 +50,7 @@ if (maybeModelContext?.provideContext) {
       },
       {
         name: 'get_studio_contact',
-        description: 'Return PT Studio 7 contact details.',
+        description: 'Return PT 7 contact details.',
         inputSchema: {
           type: 'object',
           properties: {},

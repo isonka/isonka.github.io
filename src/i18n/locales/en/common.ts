@@ -1,6 +1,6 @@
 export const enCommon = {
   nav: {
-    homeAria: 'PT Studio 7 Home',
+    homeAria: 'PT 7 Home',
     bookNow: 'Book Now',
     bookNowAria: 'Book a session',
     bookClassAria: 'Book a class',
@@ -31,7 +31,7 @@ export const enCommon = {
     switchToNl: 'Switch to Dutch',
   },
   footer: {
-    tag: 'Reformer Pilates & personal training · Museumplein Amsterdam',
+    tag: 'Reformer Pilates & strength training · Museumplein Amsterdam',
     navAria: 'Footer',
     book: 'Book',
     pricing: 'Pricing',
@@ -44,11 +44,11 @@ export const enCommon = {
     contact: 'Contact',
     privacy: 'Privacy',
     cookies: 'Cookies',
-    copyright: '© {{year}} PT Studio 7 Amsterdam. All rights reserved.',
+    copyright: '© {{year}} PT 7 Amsterdam. All rights reserved.',
     websiteBy: 'Website by',
   },
   contactMap: {
-    iframeTitle: 'PT Studio 7 Location',
+    iframeTitle: 'PT 7 Location',
     consentNote:
       'Google Map loads after statistics or marketing cookies, or if you show it here.',
     showMap: 'Show map',

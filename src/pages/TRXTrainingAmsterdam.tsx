@@ -17,12 +17,12 @@ const faqs = [
     answer: 'Yes. TRX is highly scalable. Every exercise can be made easier by changing your angle. Beginners start with a stable foundation and progress at their own pace. The low-impact nature of suspension training also makes it suitable for people with joint sensitivities.',
   },
   {
-    question: 'Can I combine TRX with Pilates at PT Studio 7?',
+    question: 'Can I combine TRX with Pilates at PT 7?',
     answer: 'Absolutely, and many of our clients do exactly that. Pilates and TRX complement each other very well. Pilates builds deep core stability and body awareness; TRX adds functional strength, power, and cardiovascular challenge. Our instructors can design a combined program that integrates both.',
   },
   {
     question: 'How long is a TRX session?',
-    answer: 'All sessions at PT Studio 7 are 45 minutes. This is enough time for a complete full-body TRX workout, warm-up, and cool-down. Private sessions can be structured as pure TRX or a combination with strength training or Pilates work.',
+    answer: 'All sessions at PT 7 are 45 minutes. This is enough time for a complete full-body TRX workout, warm-up, and cool-down. Private sessions can be structured as pure TRX or a combination with strength training or Pilates work.',
   },
   {
     question: 'Do I need any equipment or clothing?',
@@ -36,17 +36,17 @@ const faqs = [
 
 export const TRXTrainingAmsterdam= () => {
   useEffect(() => {
-    trackPageView('/trx-training-amsterdam', 'TRX Training Amsterdam | PT Studio 7');
+    trackPageView('/trx-training-amsterdam', 'TRX Training Amsterdam | PT 7 Pilates');
   }, []);
 
   return (
     <>
       <SEOHead
-        title="TRX Training Amsterdam Museumplein | PT Studio 7"
+        title="TRX Training Amsterdam Museumplein | PT 7 Pilates"
         description="Professional TRX suspension training at Museumplein Amsterdam. Build functional strength, core stability and balance with certified trainers. Small groups & private sessions."
-        keywords="TRX training amsterdam, TRX suspension training amsterdam, TRX les amsterdam, TRX museumplein, suspension training amsterdam, TRX personal training amsterdam, functionele training amsterdam, TRX oud-zuid"
+        keywords="TRX training amsterdam, TRX suspension training amsterdam, TRX les amsterdam, TRX museumplein, suspension training amsterdam, TRX one-on-one training amsterdam, functionele training amsterdam, TRX oud-zuid"
         canonical="https://www.pt7.nl/trx-training-amsterdam/"
-        ogTitle="TRX Training Amsterdam | PT Studio 7 Museumplein"
+        ogTitle="TRX Training Amsterdam | PT 7 Pilates Museumplein"
         ogDescription="Professional TRX suspension training at Museumplein Amsterdam. Functional strength, core stability and balance. Certified trainers, small groups & private sessions."
       />
       <StructuredData
@@ -84,7 +84,7 @@ export const TRXTrainingAmsterdam= () => {
               strength that translates directly into how you move in daily life and sport.
             </p>
             <p>
-              At PT Studio 7 on Museumplein, our certified trainers guide you through TRX programs
+              At PT 7 on Museumplein, our certified trainers guide you through TRX programs
               that are tailored to your goals and fitness level. Whether you want to build general
               strength, improve your athletic performance, lose weight, or recover from an injury,
               TRX offers a highly effective and low-impact solution.
@@ -96,7 +96,7 @@ export const TRXTrainingAmsterdam= () => {
               ideal for combining with Pilates in an integrated training program.
             </p>
             <p>
-              TRX sessions at PT Studio 7 are available as private sessions (one-on-one, duo, or
+              TRX sessions at PT 7 are available as private sessions (one-on-one, duo, or
               trio) and in our small group classes of maximum 5 people.
             </p>
           </div>
@@ -128,7 +128,7 @@ export const TRXTrainingAmsterdam= () => {
               </div>
               <div className="service-benefit-card">
                 <h3>Pairs perfectly with Pilates</h3>
-                <p>Many PT Studio 7 clients combine Pilates and TRX, Pilates for deep core work and alignment, TRX for functional strength and conditioning.</p>
+                <p>Many PT 7 clients combine Pilates and TRX, Pilates for deep core work and alignment, TRX for functional strength and conditioning.</p>
               </div>
             </div>
           </div>

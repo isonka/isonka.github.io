@@ -1,6 +1,6 @@
-# PT Studio 7 Amsterdam
+# PT 7 Amsterdam
 
-Boutique Pilates and personal training studio in Museumplein, Amsterdam.
+Boutique Pilates and one-on-one training studio in Museumplein, Amsterdam.
 
 ## Overview
 
@@ -10,7 +10,7 @@ Boutique Pilates and personal training studio in Museumplein, Amsterdam.
 - Experience: 15+ years
 - Teacher training: PT7 Academy 300-hour Reformer Pilates Instructor Course
 
-## Why PT Studio 7
+## Why PT 7
 
 - One boutique studio with Pilates apparatus plus strength/cardio equipment
 - Expert certified trainers with personalized coaching

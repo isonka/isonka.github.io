@@ -10,10 +10,10 @@ export const post: BlogPost = {
 
       <p>The short answer: with the right guidance, prenatal Pilates can be one of the most effective ways to stay strong, mobile, and connected to your body throughout pregnancy. The key is not doing "more" exercise; it is doing the right exercises at the right time, with the right modifications.</p>
 
-      <p>In this guide, I will walk you through a trimester-specific approach we use at PT Studio 7 in Amsterdam: what to focus on, what to avoid, how to train your pelvic floor intelligently, and when private sessions are the smartest option.</p>
+      <p>In this guide, I will walk you through a trimester-specific approach we use at PT 7 in Amsterdam: what to focus on, what to avoid, how to train your pelvic floor intelligently, and when private sessions are the smartest option.</p>
 
       <div class="blog-figure">
-        <img src="/assets/images/pregnancy1.webp" alt="Prenatal Pilates at PT Studio 7 Amsterdam" />
+        <img src="/assets/images/pregnancy1.webp" alt="Prenatal Pilates at PT 7 Amsterdam" />
       </div>
 
       <h2>Why Prenatal Pilates Works So Well</h2>
@@ -150,7 +150,7 @@ export const post: BlogPost = {
       <p>When we train this way, women often report less heaviness, improved bladder confidence, better bowel comfort, and less fear around labor mechanics. It also supports a smoother transition into postpartum rehab.</p>
 
       <h2>Why Prenatal Sessions Are Private Only</h2>
-      <p>At PT Studio 7, prenatal Pilates is offered exclusively as private training. Pregnancy is highly individual, and session planning must be tailored to each person's medical history, symptoms, trimester stage, and day-to-day changes.</p>
+      <p>At PT 7, prenatal Pilates is offered exclusively as private training. Pregnancy is highly individual, and session planning must be tailored to each person's medical history, symptoms, trimester stage, and day-to-day changes.</p>
 
       <h3>Private Sessions Are Ideal If You Have:</h3>
       <ul>
@@ -219,13 +219,13 @@ export const post: BlogPost = {
         <li><a href="/healthcare-providers/">For healthcare providers</a>, referral information for physiotherapists, GPs, and specialists.</li>
       </ul>
 
-      <p><em>Ready for personalized prenatal support? See our <a href="/pricing/">private session pricing</a>, then <a href="/schedule/">book your session</a> at PT Studio 7 Museumplein.</em></p>
+      <p><em>Ready for personalized prenatal support? See our <a href="/pricing/">private session pricing</a>, then <a href="/schedule/">book your session</a> at PT 7 Museumplein.</em></p>
     `,
   author: 'Elif Arzu Ogan',
   date: '2025-11-05',
   image: '/assets/images/pregnancy2.webp',
   tags: ['Prenatal', 'Pilates', 'Pregnancy', 'Women\'s Health', 'Pelvic Floor'],
-  metaDescription: 'Trimester-by-trimester prenatal Pilates guide by Elif Arzu Ogan at PT Studio 7 Amsterdam: pelvic floor training, safe pregnancy exercise, birth prep, and private session options.',
+  metaDescription: 'Trimester-by-trimester prenatal Pilates guide by Elif Arzu Ogan at PT 7 Amsterdam: pelvic floor training, safe pregnancy exercise, birth prep, and private session options.',
   keywords: [
     'prenatal pilates amsterdam',
     'pregnancy pilates',

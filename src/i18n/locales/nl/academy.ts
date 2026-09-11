@@ -64,7 +64,7 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
     accreditation: '300 uur · ITTAP goedgekeurd door de <strong>{{pmaName}}</strong> · 4 weekenden · {{hours}}',
     upcomingTermsTitle: 'Komende termijnroosters',
     upcomingTermsText:
-      'Colleges vinden niet elk weekend plaats. Elke termijn loopt over vier geselecteerde weekenden bij PT Studio 7, Museumplein, Amsterdam. Elk college-weekend duurt {{hours}}. Herfst 2026 is volgeboekt; schrijf nu in voor Winter 2026/27. Lente 2027 is ook open. Anatomie is inbegrepen in de Reformer-cursus (Pilates Introductie & Anatomie-weekend).',
+      'Colleges vinden niet elk weekend plaats. Elke termijn loopt over vier geselecteerde weekenden bij PT 7, Museumplein, Amsterdam. Elk college-weekend duurt {{hours}}. Herfst 2026 is volgeboekt; schrijf nu in voor Winter 2026/27. Lente 2027 is ook open. Anatomie is inbegrepen in de Reformer-cursus (Pilates Introductie & Anatomie-weekend).',
     feeTitle: 'Cursusprijs',
     standardFeeLabel: 'Standaard tarief',
     feeAmount: '€2.000',
@@ -154,7 +154,7 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
     },
     realStudio: {
       title: 'Echte boutique studio',
-      text: 'Training bij PT Studio 7 Museumplein, waar klanten wekelijks Reformer, private en kleine-groepssessies boeken. Je leert waar je straks lesgeeft.',
+      text: 'Training bij PT 7 Museumplein, waar klanten wekelijks Reformer, private en kleine-groepssessies boeken. Je leert waar je straks lesgeeft.',
     },
     assessmentPath: {
       title: 'Duidelijk assessmentpad',

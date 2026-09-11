@@ -34,7 +34,7 @@ const scheduleFaqs = [
       'Yes. Instructors give modifications in every session. Groups stay at a maximum of 5 people so you still get personal cues. Many beginners start with a private intro, then join a small group.',
   },
   {
-    question: 'Can I train with PT Studio 7 during pregnancy?',
+    question: 'Can I train with PT 7 during pregnancy?',
     answer:
       'Pregnant clients are welcome in one-on-one private sessions only, where we adapt exercises safely. See pt7.nl/prenatal-pilates-amsterdam/ for our pregnancy-focused private Reformer option.',
   },
@@ -46,7 +46,7 @@ export const Schedule= () => {
   const [widgetsError, setWidgetsError] = useState(false);
 
   useEffect(() => {
-    trackPageView('/schedule/', 'Pilates Classes Amsterdam | Book Online | PT Studio 7');
+    trackPageView('/schedule/', 'Pilates Classes Amsterdam | Book Online | PT 7 Pilates');
     trackScheduleVisit();
 
     if (isPrerender()) return;
@@ -78,11 +78,11 @@ export const Schedule= () => {
   return (
     <>
       <SEOHead
-        title="Pilates Classes Amsterdam | Book Online | PT Studio 7"
+        title="Pilates Classes Amsterdam | Book Online | PT 7 Pilates"
         description="Book Pilates classes in Amsterdam near Museumplein. Reformer, TRX, and strength: small groups (max 5) and private sessions at Van Baerlestraat 76C. View schedule and reserve online."
         keywords="pilates classes amsterdam, pilates classes near me, Pilates boeken Amsterdam, Pilates rooster Amsterdam, Pilates reserveren, TRX boeken Amsterdam, les boeken Museumplein, Pilates schedule Amsterdam, groepsles boeken, reformer pilates book amsterdam"
         canonical="https://www.pt7.nl/schedule/"
-        ogTitle="Pilates Classes Amsterdam | Book Online | PT Studio 7"
+        ogTitle="Pilates Classes Amsterdam | Book Online | PT 7 Pilates"
         ogDescription="Book Pilates classes near Museumplein. Small groups (max 5) and private Reformer, TRX, and strength sessions. Reserve your spot online."
       />
       <StructuredData type="FAQPage" data={{ faqs: scheduleFaqs }} />

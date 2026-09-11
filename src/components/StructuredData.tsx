@@ -255,7 +255,7 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
         ...(p.itemCondition ? { itemCondition: p.itemCondition } : {}),
         seller: {
           '@type': 'Organization',
-          name: 'PT Studio 7 Amsterdam',
+          name: business.name,
           url: baseUrl,
         },
       },
@@ -369,7 +369,7 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
       },
       publisher: {
         '@type': 'Organization',
-        name: 'PT Studio 7 Amsterdam',
+        name: business.name,
         logo: {
           '@type': 'ImageObject',
           url: `${baseUrl}/assets/images/pt7logo.webp`,

@@ -7,8 +7,12 @@ export const SCHEMA_IDS = {
 } as const;
 
 export const business = {
-  name: 'PT Studio 7 Amsterdam',
-  alternateName: 'PT Studio 7',
+  name: 'PT 7 Pilates',
+  alternateName: [
+    'PT 7',
+    'PT Studio 7',
+    'PT 7 - Pilates & Strength Training Amsterdam Zuid',
+  ],
   url: BASE_URL,
   logo: `${BASE_URL}/assets/images/pt7logo.webp`,
   description:
@@ -60,7 +64,7 @@ export const business = {
     'Reformer Pilates',
     'Tower Reformer',
     'Cadillac Pilates',
-    'Personal Training',
+    'One-on-one Training',
     'TRX',
     'Strength Training',
     'Small Group Training',
