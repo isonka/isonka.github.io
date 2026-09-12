@@ -53,6 +53,23 @@ export const PrivatePilates= () => {
         type="FAQPage"
         data={{ faqs }}
       />
+      <StructuredData
+        type="Service"
+        data={{
+          service: {
+            name: 'Private Reformer Pilates Amsterdam',
+            description:
+              'One-on-one, duo, and trio private Reformer Pilates at Museumplein. Fully personalised coaching for beginners, rehab, pregnancy, and performance goals.',
+            serviceUrl: 'https://www.pt7.nl/private-pilates-amsterdam/',
+            areaServed: 'Amsterdam',
+            offers: [
+              { name: 'One-on-one private session', url: 'https://www.pt7.nl/schedule/' },
+              { name: 'Duo private session', url: 'https://www.pt7.nl/pricing/' },
+              { name: 'Trio private session', url: 'https://www.pt7.nl/pricing/' },
+            ],
+          },
+        }}
+      />
       <Breadcrumbs items={[{ name: 'Private Pilates Amsterdam', path: '/private-pilates-amsterdam/' }]} />
 
       <div className="service-page">

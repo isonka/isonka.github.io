@@ -44,6 +44,7 @@ export const Schedule= () => {
   const [activeTab, setActiveTab] = useState('group');
   const [widgetsLoading, setWidgetsLoading] = useState(true);
   const [widgetsError, setWidgetsError] = useState(false);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   useEffect(() => {
     trackPageView('/schedule/', 'Pilates Classes Amsterdam | Book Online | PT 7 Pilates');
@@ -234,6 +235,37 @@ export const Schedule= () => {
                   hidden={widgetsError}
                 />
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="schedule-faq" aria-labelledby="schedule-faq-heading">
+          <div className="schedule-faq-inner">
+            <p className="schedule-kicker">FAQ</p>
+            <h2 id="schedule-faq-heading">Frequently asked questions</h2>
+            <div className="schedule-faq-list">
+              {scheduleFaqs.map((faq, i) => (
+                <div key={faq.question} className="schedule-faq-item">
+                  <button
+                    type="button"
+                    className={`schedule-faq-question ${openFaqIndex === i ? 'active' : ''}`}
+                    onClick={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
+                    aria-expanded={openFaqIndex === i}
+                    aria-controls={`schedule-faq-answer-${i}`}
+                    id={`schedule-faq-question-${i}`}
+                  >
+                    {faq.question}
+                  </button>
+                  <div
+                    id={`schedule-faq-answer-${i}`}
+                    role="region"
+                    aria-labelledby={`schedule-faq-question-${i}`}
+                    className={`schedule-faq-answer ${openFaqIndex === i ? 'open' : ''}`}
+                  >
+                    <p>{faq.answer}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>

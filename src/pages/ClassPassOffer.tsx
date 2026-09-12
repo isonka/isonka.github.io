@@ -1,7 +1,31 @@
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
+import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import '../styles/ClassPassOffer.css';
+
+const classPassFaqs = [
+  {
+    question: 'Can I still use ClassPass occasionally?',
+    answer:
+      'Yes. Many clients use direct plans as their main option and keep ClassPass for occasional flexibility.',
+  },
+  {
+    question: "What if I'm not ready to commit?",
+    answer:
+      'You can start with a class pack. It has no recurring subscription and lets you test the studio rhythm first.',
+  },
+  {
+    question: 'How do I claim the 20% off?',
+    answer:
+      'Email us at info@pt7.nl or ask at the studio to get your discount code for eligible monthly plans and first-time package purchases.',
+  },
+  {
+    question: 'Is the class experience different?',
+    answer:
+      'The class method is the same. Direct clients mainly benefit from earlier booking access and better continuity with instructors.',
+  },
+];
 
 export const ClassPassOffer = () => {
   return (
@@ -14,6 +38,7 @@ export const ClassPassOffer = () => {
         ogTitle="ClassPass Clients: PT 7 Direct Offer"
         ogDescription="Compare ClassPass costs with PT 7 direct pricing and claim your transition discount."
       />
+      <StructuredData type="FAQPage" data={{ faqs: classPassFaqs }} />
       <Breadcrumbs items={[{ name: 'ClassPass Offer', path: '/classpass-offer' }]} />
 
       <div className="classpass-offer-page">
@@ -200,22 +225,12 @@ export const ClassPassOffer = () => {
         <section className="cp-faq">
           <h2>Frequently Asked Questions</h2>
           <div className="faq-grid">
-            <div className="faq-item">
-              <h4>Can I still use ClassPass occasionally?</h4>
-              <p>Yes. Many clients use direct plans as their main option and keep ClassPass for occasional flexibility.</p>
-            </div>
-            <div className="faq-item">
-              <h4>What if I'm not ready to commit?</h4>
-              <p>You can start with a class pack. It has no recurring subscription and lets you test the studio rhythm first.</p>
-            </div>
-            <div className="faq-item">
-              <h4>How do I claim the 20% off?</h4>
-              <p>Email us at info@pt7.nl or ask at the studio to get your discount code for eligible monthly plans and first-time package purchases.</p>
-            </div>
-            <div className="faq-item">
-              <h4>Is the class experience different?</h4>
-              <p>The class method is the same. Direct clients mainly benefit from earlier booking access and better continuity with instructors.</p>
-            </div>
+            {classPassFaqs.map((faq) => (
+              <div key={faq.question} className="faq-item">
+                <h4>{faq.question}</h4>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </section>
 

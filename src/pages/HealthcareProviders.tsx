@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
+import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/HealthcareProviders.css';
@@ -19,6 +20,22 @@ export const HealthcareProviders= () => {
         canonical="https://www.pt7.nl/healthcare-providers/"
         ogTitle="Pilates for Rehabilitation Amsterdam | PT 7 Pilates"
         ogDescription="Partner with PT 7. Refer your clients for post-rehab Pilates and functional training. Small groups, expert instructors."
+      />
+      <StructuredData
+        type="Service"
+        data={{
+          service: {
+            name: 'Pilates for Rehabilitation Amsterdam',
+            description:
+              'Post-rehab Pilates and functional training for referred clients at Museumplein. Small groups max 5 and private sessions with certified instructors, coordinated with physiotherapists and GPs.',
+            serviceUrl: 'https://www.pt7.nl/healthcare-providers/',
+            areaServed: 'Amsterdam',
+            offers: [
+              { name: 'Post-rehab private session', url: 'https://www.pt7.nl/schedule/' },
+              { name: 'Small group rehabilitation training', url: 'https://www.pt7.nl/schedule/' },
+            ],
+          },
+        }}
       />
       <Breadcrumbs items={[{ name: 'For Healthcare Providers', path: '/healthcare-providers' }]} />
 

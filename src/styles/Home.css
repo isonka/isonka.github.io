@@ -664,6 +664,31 @@
   color: var(--gold, #ffd700);
 }
 
+.home-faq-list {
+  margin-top: 28px;
+  border-top: 1px solid var(--pebble, #d5d3d4);
+}
+
+.home-faq-item {
+  border-bottom: 1px solid var(--pebble, #d5d3d4);
+  padding: 20px 0;
+}
+
+.home-faq-item h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.home-faq-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+  max-width: 42em;
+}
+
 @media (max-width: 1023px) {
   .home-section {
     padding: 64px 20px;

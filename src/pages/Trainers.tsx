@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
+import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { PHOTO_FOCUS } from '../data/photoFocus';
 import { trainerProfiles, type TrainerProfile } from '../data/trainers';
@@ -69,6 +70,19 @@ export const Trainers= () => {
         description="Meet our expert team of certified Pilates and fitness instructors at PT 7 Amsterdam. Master, senior, and junior instructors dedicated to your fitness journey."
         keywords="Pilates instructors Amsterdam, polestar pilates amsterdam, Pilates leraren Amsterdam, gecertificeerde Pilates instructeurs, Pilates teachers Museumplein, Pilates team Oud-Zuid"
         canonical="https://www.pt7.nl/instructors/"
+      />
+      <StructuredData
+        type="ItemList"
+        data={{
+          itemList: {
+            name: 'PT 7 Pilates Instructors',
+            itemListElement: availableInstructors.map((instructor) => ({
+              name: instructor.name,
+              url: `https://www.pt7.nl/trainer/${instructor.slug}/`,
+              image: `https://www.pt7.nl${instructor.image}`,
+            })),
+          },
+        }}
       />
       <Breadcrumbs items={[{ name: 'Instructors', path: '/instructors' }]} />
 

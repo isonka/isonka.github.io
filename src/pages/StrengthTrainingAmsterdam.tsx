@@ -53,6 +53,22 @@ export const StrengthTrainingAmsterdam= () => {
         type="FAQPage"
         data={{ faqs }}
       />
+      <StructuredData
+        type="Service"
+        data={{
+          service: {
+            name: 'Strength Training Amsterdam',
+            description:
+              'Personal strength training at Museumplein with Nike equipment, half rack, Olympic barbell, and Concept2 rower. Small groups max 5 and private sessions.',
+            serviceUrl: 'https://www.pt7.nl/strength-training-amsterdam/',
+            areaServed: 'Amsterdam',
+            offers: [
+              { name: 'Small group strength class', url: 'https://www.pt7.nl/schedule/' },
+              { name: 'Private strength session', url: 'https://www.pt7.nl/schedule/' },
+            ],
+          },
+        }}
+      />
       <Breadcrumbs items={[{ name: 'Strength Training Amsterdam', path: '/strength-training-amsterdam' }]} />
 
       <div className="service-page">

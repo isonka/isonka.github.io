@@ -18,23 +18,24 @@ interface BlogPostingData {
   articleSection?: string;
 }
 
+interface CourseInstanceData {
+  startDate: string;
+  endDate?: string;
+  price: string;
+  priceCurrency: string;
+  url?: string;
+}
+
 interface CourseData {
   name: string;
   description: string;
-  price: string;
-  priceCurrency: string;
-  startDate: string;
-  startTime?: string;
-  endTime?: string;
-  endDate?: string;
-  schedule: string;
-  locationName: string;
-  maxParticipants?: number;
+  alternateName?: string;
   url?: string;
   timeRequired?: string;
   educationalCredentialAwarded?: string;
   recognizedByName?: string;
   recognizedByUrl?: string;
+  instances: CourseInstanceData[];
 }
 
 interface StructuredDataProps {
@@ -215,12 +216,7 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
         '@type': 'City',
         name: s.areaServed,
       },
-      provider: {
-        '@type': 'Organization',
-        '@id': SCHEMA_IDS.organization,
-        name: business.name,
-        url: business.url,
-      },
+      provider: { '@id': SCHEMA_IDS.organization },
       offers: s.offers.map((offer) => ({
         '@type': 'Offer',
         name: offer.name,
@@ -253,11 +249,7 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
         ...(p.price ? { price: p.price } : {}),
         availability: p.availability,
         ...(p.itemCondition ? { itemCondition: p.itemCondition } : {}),
-        seller: {
-          '@type': 'Organization',
-          name: business.name,
-          url: baseUrl,
-        },
+        seller: { '@id': SCHEMA_IDS.organization },
       },
       ...(p.additionalProperty && p.additionalProperty.length > 0
         ? {
@@ -298,12 +290,7 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
       jobTitle: data.person.jobTitle,
       image: `${baseUrl}${data.person.image}`,
       description: data.person.description,
-      worksFor: {
-        '@type': 'Organization',
-        '@id': SCHEMA_IDS.organization,
-        name: data.person.worksFor,
-        url: business.url,
-      },
+      worksFor: { '@id': SCHEMA_IDS.organization },
       knowsAbout:
         data.person.knowsAbout && data.person.knowsAbout.length > 0
           ? data.person.knowsAbout
@@ -383,13 +370,20 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
 
   if (type === 'Course' && data?.course) {
     const c = data.course;
+    const courseUrl = c.url ?? `${baseUrl}/academy/`;
     schema = {
       '@context': 'https://schema.org',
       '@type': 'Course',
       name: c.name,
+      ...(c.alternateName && { alternateName: c.alternateName }),
       description: c.description,
-      url: c.url ?? `${baseUrl}/academy/`,
+      url: courseUrl,
       ...(c.timeRequired && { timeRequired: c.timeRequired }),
+      provider: { '@id': SCHEMA_IDS.organization },
+      areaServed: {
+        '@type': 'Country',
+        name: 'Netherlands',
+      },
       ...(c.educationalCredentialAwarded && {
         educationalCredentialAwarded: {
           '@type': 'EducationalOccupationalCredential',
@@ -404,51 +398,20 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
           ...(c.recognizedByUrl && { url: c.recognizedByUrl }),
         },
       }),
-      provider: {
-        '@type': 'Organization',
-        name: 'PT 7 Academy',
-        url: baseUrl,
-        sameAs: `${baseUrl}/academy/`,
-      },
-      offers: {
-        '@type': 'Offer',
-        price: c.price,
-        priceCurrency: c.priceCurrency,
-        availability: 'https://schema.org/LimitedAvailability',
-        validFrom: c.startDate,
-        url: c.url ?? `${baseUrl}/academy/`,
-      },
-      hasCourseInstance: {
+      hasCourseInstance: c.instances.map((instance) => ({
         '@type': 'CourseInstance',
-        name: c.name,
-        courseMode: 'Onsite',
-        courseWorkload: c.timeRequired,
-        courseSchedule: {
-          '@type': 'Schedule',
-          repeatFrequency: 'P2W',
-          byDay: ['Saturday', 'Sunday'],
-          startTime: c.startTime ?? '12:00',
-          endTime: c.endTime ?? '18:00',
-          scheduleTimezone: 'Europe/Amsterdam',
-          description: c.schedule,
+        courseMode: 'onsite',
+        startDate: instance.startDate,
+        ...(instance.endDate && { endDate: instance.endDate }),
+        location: { '@id': SCHEMA_IDS.organization },
+        offers: {
+          '@type': 'Offer',
+          price: instance.price,
+          priceCurrency: instance.priceCurrency,
+          availability: 'https://schema.org/InStock',
+          url: instance.url ?? courseUrl,
         },
-        startDate: c.startDate,
-        ...(c.endDate && { endDate: c.endDate }),
-        location: {
-          '@type': 'Place',
-          name: c.locationName,
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: 'Van Baerlestraat 76C',
-            addressLocality: 'Amsterdam',
-            postalCode: '1071 BB',
-            addressCountry: 'NL',
-          },
-        },
-        ...(typeof c.maxParticipants === 'number' && {
-          maximumAttendeeCapacity: c.maxParticipants,
-        }),
-      },
+      })),
       inLanguage: 'en',
       isAccessibleForFree: false,
     };

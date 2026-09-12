@@ -43,17 +43,12 @@ const faqs = [
     answer:
       'Yes. PT7 Academy runs a 300-hour Reformer Pilates Instructor Course at the studio (ITTAP approved by the Pilates Method Alliance). See the Academy page for the next term.',
   },
-];
-
-const reformerSeoOnlyFaqs = [
   {
     question: 'Is there Reformer Pilates in Amsterdam Oud-Zuid?',
     answer:
       'Yes. Our studio sits in Oud-Zuid at Museumplein (Van Baerlestraat 76C). We run small group and private Reformer sessions for clients in Amsterdam Zuid, the Museum District, and nearby neighborhoods.',
   },
 ];
-
-const reformerSchemaFaqs = [...faqs, ...reformerSeoOnlyFaqs];
 
 export const ReformerPilatesAmsterdam= () => {
   useEffect(() => {
@@ -73,14 +68,14 @@ export const ReformerPilatesAmsterdam= () => {
         ogTitle="Reformer Pilates Amsterdam | PT 7 Pilates Museumplein"
         ogDescription="Boutique Reformer Pilates at Museumplein. Small groups (max 5), private sessions, expert instructors in Amsterdam Oud-Zuid."
       />
-      <StructuredData type="FAQPage" data={{ faqs: reformerSchemaFaqs }} />
+      <StructuredData type="FAQPage" data={{ faqs: faqs }} />
       <StructuredData
         type="Service"
         data={{
           service: {
             name: 'Reformer Pilates Amsterdam',
             description:
-              'Small group (max 5) and private Reformer Pilates classes at PT 7 Museumplein, Amsterdam Oud-Zuid.',
+              'Boutique Reformer Pilates in Amsterdam Oud-Zuid / Museumplein. Small groups max 5 and private sessions on full apparatus, with first-visit coaching for beginners and expats.',
             serviceUrl: 'https://www.pt7.nl/reformer-pilates-amsterdam/',
             areaServed: 'Amsterdam',
             offers: [

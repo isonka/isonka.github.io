@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
+import { StructuredData } from '../components/StructuredData';
 import { blogPosts } from '../data/blog';
 import '../styles/Blog.css';
 
@@ -13,6 +14,19 @@ export const Blog= () => {
         canonical="https://www.pt7.nl/blog/"
         ogTitle="Pilates & Fitness Blog | PT 7 Pilates Amsterdam"
         ogDescription="Expert articles about Pilates, prenatal fitness, and wellness from PT 7 Amsterdam's certified trainers."
+      />
+      <StructuredData
+        type="ItemList"
+        data={{
+          itemList: {
+            name: 'PT 7 Pilates Blog',
+            itemListElement: blogPosts.map((post) => ({
+              name: post.title,
+              url: `https://www.pt7.nl/blog/${post.slug}/`,
+              image: `https://www.pt7.nl${post.image}`,
+            })),
+          },
+        }}
       />
 
       <div className="blog-page">

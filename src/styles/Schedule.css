@@ -287,6 +287,77 @@
   box-sizing: border-box !important;
 }
 
+.schedule-faq {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px 0;
+}
+
+.schedule-faq h2 {
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+  color: #111;
+}
+
+.schedule-faq-list {
+  margin-top: 16px;
+  border-top: 1px solid var(--pebble, #d5d3d4);
+}
+
+.schedule-faq-item {
+  border-bottom: 1px solid var(--pebble, #d5d3d4);
+  padding: 18px 0;
+}
+
+.schedule-faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.schedule-faq-question::after {
+  content: '+';
+  color: var(--gold-text, #c9a800);
+  font-size: 1.35rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.schedule-faq-question.active::after {
+  content: '−';
+}
+
+.schedule-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.schedule-faq-answer.open {
+  max-height: 480px;
+  margin-top: 12px;
+}
+
+.schedule-faq-answer p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+}
+
 .cta-section {
   background: #111;
   padding: 72px 24px;
@@ -359,6 +430,10 @@
 
   .widget-container {
     margin-top: 20px;
+  }
+
+  .schedule-faq {
+    padding: 36px 20px 0;
   }
 
   .cta-section {

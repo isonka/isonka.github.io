@@ -124,6 +124,10 @@ export const nlHome: DeepStringify<EnHome> = {
     facebook: 'Facebook',
     linkedin: 'LinkedIn',
   },
+  faqSection: {
+    kicker: 'FAQ',
+    title: 'Veelgestelde vragen',
+  },
   faqs: {
     where: {
       question: 'Waar kan ik pilateslessen volgen in Amsterdam?',

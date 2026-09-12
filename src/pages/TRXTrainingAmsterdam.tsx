@@ -53,6 +53,22 @@ export const TRXTrainingAmsterdam= () => {
         type="FAQPage"
         data={{ faqs }}
       />
+      <StructuredData
+        type="Service"
+        data={{
+          service: {
+            name: 'TRX Training Amsterdam',
+            description:
+              'Professional TRX suspension training at Museumplein. Functional strength, core stability, and balance in small groups (max 5) and private sessions.',
+            serviceUrl: 'https://www.pt7.nl/trx-training-amsterdam/',
+            areaServed: 'Amsterdam',
+            offers: [
+              { name: 'Small group TRX class', url: 'https://www.pt7.nl/schedule/' },
+              { name: 'Private TRX session', url: 'https://www.pt7.nl/schedule/' },
+            ],
+          },
+        }}
+      />
       <Breadcrumbs items={[{ name: 'TRX Training Amsterdam', path: '/trx-training-amsterdam' }]} />
 
       <div className="service-page">

@@ -317,6 +317,19 @@ export const Home= () => {
         </p>
       </section>
 
+      <section id="faq" className="home-section home-faq" aria-labelledby="home-faq-heading">
+        <p className="home-kicker">{t('faqSection.kicker')}</p>
+        <h2 id="home-faq-heading" className="home-section-title">{t('faqSection.title')}</h2>
+        <div className="home-faq-list">
+          {homeFaqs.map((faq) => (
+            <div key={faq.question} className="home-faq-item">
+              <h3>{faq.question}</h3>
+              <p>{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section id="contact" className="home-contact">
         <div className="home-contact-inner">
           <p className="home-kicker home-kicker-on-dark">{t('contact.kicker')}</p>

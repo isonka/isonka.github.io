@@ -150,68 +150,30 @@ export const Academy= () => {
         type="Course"
         data={{
           course: {
-            name: `${courseTitle} (${t('terms.autumn2026.statusLabel')})`,
-            description: t('terms.autumn2026.description'),
-            price: '2000',
-            priceCurrency: 'EUR',
-            startDate: '2026-09-12',
-            endDate: '2026-11-08',
-            schedule: t('terms.autumn2026.schedule'),
-            startTime: '12:00',
-            endTime: '18:00',
-            locationName: 'PT 7 Amsterdam - Museumplein',
+            name: t('seo.schemaName'),
+            alternateName: t('seo.schemaAlternateName'),
+            description: t('seo.schemaDescription'),
             url: courseUrl,
             timeRequired: 'PT300H',
             educationalCredentialAwarded: credentialName,
-            recognizedByName: 'Pilates Method Alliance (PMA) / ITTAP',
-            recognizedByUrl:
-              'https://www.pilatesmethodalliance.org/pma-international-teacher-trainer-accreditation-for-pilates-ittap-reformer-program',
-          },
-        }}
-      />
-      <StructuredData
-        type="Course"
-        data={{
-          course: {
-            name: `${courseTitle} (Winter 2026/27)`,
-            description: t('terms.winter2026.description'),
-            price: '2000',
-            priceCurrency: 'EUR',
-            startDate: '2026-11-21',
-            endDate: '2027-01-31',
-            schedule: t('terms.winter2026.schedule'),
-            startTime: '12:00',
-            endTime: '18:00',
-            locationName: 'PT 7 Amsterdam - Museumplein',
-            url: courseUrl,
-            timeRequired: 'PT300H',
-            educationalCredentialAwarded: credentialName,
-            recognizedByName: 'Pilates Method Alliance (PMA) / ITTAP',
-            recognizedByUrl:
-              'https://www.pilatesmethodalliance.org/pma-international-teacher-trainer-accreditation-for-pilates-ittap-reformer-program',
-          },
-        }}
-      />
-      <StructuredData
-        type="Course"
-        data={{
-          course: {
-            name: `${courseTitle} (${t('terms.spring2027.statusLabel')})`,
-            description: t('terms.spring2027.description'),
-            price: '2000',
-            priceCurrency: 'EUR',
-            startDate: '2027-03-13',
-            endDate: '2027-05-16',
-            schedule: t('terms.spring2027.schedule'),
-            startTime: '12:00',
-            endTime: '18:00',
-            locationName: 'PT 7 Amsterdam - Museumplein',
-            url: courseUrl,
-            timeRequired: 'PT300H',
-            educationalCredentialAwarded: credentialName,
-            recognizedByName: 'Pilates Method Alliance (PMA) / ITTAP',
-            recognizedByUrl:
-              'https://www.pilatesmethodalliance.org/pma-international-teacher-trainer-accreditation-for-pilates-ittap-reformer-program',
+            recognizedByName: PMA_NAME,
+            recognizedByUrl: PMA_ITTAP_URL,
+            instances: [
+              {
+                startDate: '2026-11-21',
+                endDate: '2027-01-31',
+                price: '2000',
+                priceCurrency: 'EUR',
+                url: courseUrl,
+              },
+              {
+                startDate: '2027-03-13',
+                endDate: '2027-05-16',
+                price: '2000',
+                priceCurrency: 'EUR',
+                url: courseUrl,
+              },
+            ],
           },
         }}
       />

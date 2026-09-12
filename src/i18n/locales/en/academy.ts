@@ -9,6 +9,11 @@ export const enAcademy = {
     ogDescription:
       'Become a Reformer Pilates instructor in Amsterdam: 300-hour Reformer teacher training (PMA ITTAP approved). Next term November 2026–January 2027. Weekend intensives at Museumplein.',
     analyticsTitle: 'Reformer Pilates Instructor Course Amsterdam | PT7 Academy',
+    schemaName: 'PMA ITTAP-Approved 300-Hour Reformer Pilates Instructor Course',
+    schemaAlternateName:
+      'The only Dutch Reformer instructor course with globally recognized PMA ITTAP accreditation',
+    schemaDescription:
+      'The only Dutch Reformer Pilates instructor course with globally recognized PMA ITTAP accreditation (Pilates Method Alliance). 300-hour teacher training in Amsterdam. Next term November 2026–January 2027. Weekend schedule. Course fee from €2,000 + VAT.',
   },
   hero: {
     title: 'Reformer Pilates instructor course Amsterdam',

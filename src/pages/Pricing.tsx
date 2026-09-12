@@ -63,6 +63,19 @@ export const Pricing= () => {
   }, [openFaqIndex]);
 
   const pricingVisible = [
+    {
+      question: t('faqSeoOnly.cost.question'),
+      answer: t('faqSeoOnly.cost.answer', {
+        groupPerClass: formatEur(GROUP.pack20.perClass),
+        groupTotal: formatEur(GROUP.pack20.total),
+        groupSingle: formatEur(GROUP.single),
+        juniorSingle: formatEur(PRIVATE.junior.single),
+      }),
+    },
+    {
+      question: t('faqSeoOnly.intro.question'),
+      answer: t('faqSeoOnly.intro.answer', { classes: String(INTRO.classes), price: formatEur(INTRO.price) }),
+    },
     { question: t('faq.validity.question'), answer: t('faq.validity.answer') },
     { question: t('faq.pregnancy.question'), answer: t('faq.pregnancy.answer') },
     { question: t('faq.injuries.question'), answer: t('faq.injuries.answer') },
@@ -86,24 +99,6 @@ export const Pricing= () => {
     },
   ];
 
-  const pricingSeoOnly = [
-    {
-      question: t('faqSeoOnly.cost.question'),
-      answer: t('faqSeoOnly.cost.answer', {
-        groupPerClass: formatEur(GROUP.pack20.perClass),
-        groupTotal: formatEur(GROUP.pack20.total),
-        groupSingle: formatEur(GROUP.single),
-        juniorSingle: formatEur(PRIVATE.junior.single),
-      }),
-    },
-    {
-      question: t('faqSeoOnly.intro.question'),
-      answer: t('faqSeoOnly.intro.answer', { classes: String(INTRO.classes), price: formatEur(INTRO.price) }),
-    },
-  ];
-
-  const pricingSchema = [...pricingSeoOnly, ...pricingVisible];
-
   return (
     <>
       <SEOHead
@@ -118,7 +113,7 @@ export const Pricing= () => {
         htmlLang={isNl ? 'nl' : 'en'}
         hreflangAlternates={PRICING_HREFLANG}
       />
-      <StructuredData type="FAQPage" data={{ faqs: pricingSchema }} />
+      <StructuredData type="FAQPage" data={{ faqs: pricingVisible }} />
       <Breadcrumbs items={[{ name: t('breadcrumbName'), path: isNl ? '/pricing/nl/' : '/pricing/' }]} />
 
       <div className="pricing-page">

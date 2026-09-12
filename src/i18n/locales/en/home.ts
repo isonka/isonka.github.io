@@ -121,6 +121,10 @@ export const enHome = {
     facebook: 'Facebook',
     linkedin: 'LinkedIn',
   },
+  faqSection: {
+    kicker: 'FAQ',
+    title: 'Frequently asked questions',
+  },
   faqs: {
     where: {
       question: 'Where can I take Pilates classes in Amsterdam?',

@@ -59,7 +59,7 @@ export const WorkoutDetail= () => {
           },
         }}
       />
-      {workout.slug === 'reformer-pilates' && (
+      {workout.faq.length > 0 && (
         <StructuredData
           type="FAQPage"
           data={{
