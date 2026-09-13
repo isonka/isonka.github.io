@@ -41,6 +41,7 @@ const TRXTrainingAmsterdam = lazy(() => import('./pages/TRXTrainingAmsterdam').t
 const StrengthTrainingAmsterdam = lazy(() => import('./pages/StrengthTrainingAmsterdam').then(m => ({ default: m.StrengthTrainingAmsterdam })));
 const ReformerPilatesAmsterdam = lazy(() => import('./pages/ReformerPilatesAmsterdam').then(m => ({ default: m.ReformerPilatesAmsterdam })));
 const Privacy = lazy(() => import('./pages/Privacy').then(m => ({ default: m.Privacy })));
+const NotFound = lazy(() => import('./pages/NotFound').then(m => ({ default: m.NotFound })));
 
 function TrailingSlashNormalizer() {
   const location = useLocation();
@@ -182,6 +183,7 @@ const router = createBrowserRouter([
       { path: 'strength-training-amsterdam', element: <StrengthTrainingAmsterdam /> },
       { path: 'reformer-pilates-amsterdam', element: <ReformerPilatesAmsterdam /> },
       { path: 'privacy', element: <Privacy /> },
+      { path: '*', element: <NotFound /> },
     ],
   },
 ]);

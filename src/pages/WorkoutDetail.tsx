@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
@@ -6,6 +6,7 @@ import { Breadcrumbs } from '../components/Breadcrumbs';
 import { trackPageView } from '../utils/gtmTracking';
 import { ensureHealcodeLoaded } from '../utils/healcode';
 import { workoutDetails } from '../data/workoutDetails';
+import { NotFound } from './NotFound';
 import '../styles/WorkoutDetail.css';
 
 export const WorkoutDetail= () => {
@@ -20,7 +21,7 @@ export const WorkoutDetail= () => {
   }, [workout]);
 
   if (!workout) {
-    return <Navigate to="/" replace />;
+    return <NotFound />;
   }
 
   const isAnchorLink = (to: string) => to.startsWith('#');

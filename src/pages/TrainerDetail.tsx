@@ -1,10 +1,11 @@
-import { useParams, Link, Navigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { StructuredData } from '../components/StructuredData';
 import { Reveal } from '../components/Reveal';
 import { PHOTO_FOCUS } from '../data/photoFocus';
 import { trainerProfiles } from '../data/trainers';
+import { NotFound } from './NotFound';
 import '../styles/Trainer.css';
 
 export const TrainerDetail= () => {
@@ -12,7 +13,7 @@ export const TrainerDetail= () => {
   const trainer = trainerProfiles.find(t => t.slug === slug);
 
   if (!trainer) {
-    return <Navigate to="/instructors/" replace />;
+    return <NotFound />;
   }
 
   const relatedLinksByTrainer: Record<string, { to: string; label: string }[]> = {

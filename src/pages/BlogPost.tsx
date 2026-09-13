@@ -1,10 +1,11 @@
-import { useParams, Link, Navigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { getBlogPostBySlug, getRecentPosts } from '../data/blog';
 import { trackBlogPostView, trackBlogPostRead, trackPageView } from '../utils/gtmTracking';
+import { NotFound } from './NotFound';
 import '../styles/BlogPost.css';
 
 export const BlogPost= () => {
@@ -40,7 +41,7 @@ export const BlogPost= () => {
   }, [post, readStartTime]);
 
   if (!post) {
-    return <Navigate to="/blog/" replace />;
+    return <NotFound />;
   }
 
   return (

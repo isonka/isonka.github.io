@@ -18,6 +18,8 @@ interface SEOHeadProps {
   ogLocaleAlternates?: string[];
   htmlLang?: string;
   hreflangAlternates?: HreflangAlternate[];
+  robots?: string;
+  omitCanonical?: boolean;
 }
 
 export const SEOHead = ({
@@ -32,6 +34,8 @@ export const SEOHead = ({
   ogLocaleAlternates = ['nl_NL'],
   htmlLang = 'en',
   hreflangAlternates,
+  robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+  omitCanonical = false,
 }: SEOHeadProps) => {
   useEffect(() => {
     document.title = title;
@@ -55,7 +59,7 @@ export const SEOHead = ({
     updateMetaTag('description', description);
     updateMetaTag('keywords', keywords);
     updateMetaTag('author', 'PT 7 Pilates');
-    updateMetaTag('robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
+    updateMetaTag('robots', robots);
 
     updateMetaTag('geo.region', 'NL-NH');
     updateMetaTag('geo.placename', 'Amsterdam');
@@ -74,7 +78,11 @@ export const SEOHead = ({
     updateMetaTag('og:type', 'website', true);
     updateMetaTag('og:title', ogTitle || title, true);
     updateMetaTag('og:description', ogDescription || description, true);
-    updateMetaTag('og:url', canonicalUrl, true);
+    if (omitCanonical) {
+      document.querySelector('meta[property="og:url"]')?.remove();
+    } else {
+      updateMetaTag('og:url', canonicalUrl, true);
+    }
     updateMetaTag('og:site_name', 'PT 7 Pilates', true);
     updateMetaTag('og:image', absoluteImageUrl, true);
     updateMetaTag('og:image:secure_url', absoluteImageUrl, true);
@@ -89,13 +97,18 @@ export const SEOHead = ({
     updateMetaTag('twitter:image', absoluteImageUrl);
     updateMetaTag('twitter:image:alt', 'PT 7 Pilates Amsterdam - Pilates Studio');
 
-    let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonicalLink) {
-      canonicalLink = document.createElement('link');
-      canonicalLink.rel = 'canonical';
-      document.head.appendChild(canonicalLink);
+    const canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (omitCanonical) {
+      canonicalLink?.remove();
+    } else {
+      let link = canonicalLink;
+      if (!link) {
+        link = document.createElement('link');
+        link.rel = 'canonical';
+        document.head.appendChild(link);
+      }
+      link.href = canonicalUrl;
     }
-    canonicalLink.href = canonicalUrl;
 
     document.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => el.remove());
     if (hreflangAlternates?.length) {
@@ -119,6 +132,8 @@ export const SEOHead = ({
     ogLocaleAlternates,
     htmlLang,
     hreflangAlternates,
+    robots,
+    omitCanonical,
   ]);
 
   return null;

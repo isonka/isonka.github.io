@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import { useParams, Navigate, Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { EquipmentFAQ } from '../components/EquipmentFAQ';
 import { EquipmentContact } from '../components/EquipmentContact';
 import { equipmentProducts } from '../data/equipment';
+import { NotFound } from './NotFound';
 import '../styles/EquipmentProduct.css';
 
 export const EquipmentDetail= () => {
@@ -15,7 +16,7 @@ export const EquipmentDetail= () => {
   const product = equipmentProducts.find((p) => p.slug === slug);
 
   if (!product) {
-    return <Navigate to="/equipment/" replace />;
+    return <NotFound />;
   }
 
   const hasGallery = product.images.length > 1;
