@@ -1,14 +1,14 @@
 export const enPricing = {
   seo: {
-    title: 'Pilates Class Prices Amsterdam | Packages & Memberships | PT 7 Pilates',
+    title: 'Pilates Prices Amsterdam Zuid | Packages & Trial Class | PT 7 Pilates',
     description:
-      'Pilates class prices in Amsterdam at Museumplein. Small group classes (max {{groupMax}}) from {{groupPrice}}/class, memberships, and private sessions. Reformer, TRX & strength.',
+      'Pilates prices at Museumplein (Amsterdam Zuid): intro pack 3 group classes for €50, then from {{groupPrice}}/class (max {{groupMax}}). Memberships, privates, Reformer, TRX & strength. Book online.',
     keywords:
       'pilates class prices amsterdam, pilates prices amsterdam, Pilates prijzen Amsterdam, Pilates abonnement Amsterdam, Pilates prices Museumplein, reformer pilates prive amsterdam, kleine groep pilates amsterdam, private Pilates kosten, small group Pilates pricing, proefles Pilates Amsterdam, strippenkaart Pilates',
-    ogTitle: 'Pilates Class Prices Amsterdam | PT 7 Pilates Museumplein',
+    ogTitle: 'Pilates Prices Amsterdam Zuid | Trial & Packages | PT 7 Pilates',
     ogDescription:
-      'Pilates class prices in Amsterdam: small groups (max {{groupMax}}) from {{groupPrice}}/class. Memberships and private sessions at Museumplein.',
-    analyticsTitle: 'Pilates Class Prices Amsterdam | PT 7 Pilates',
+      'Intro pack 3 classes for €50. Small groups (max {{groupMax}}) from {{groupPrice}}/class at Museumplein. Memberships and private sessions — book online.',
+    analyticsTitle: 'Pilates Prices Amsterdam Zuid | PT 7 Pilates',
   },
   breadcrumbName: 'Pilates Class Prices Amsterdam',
   hero: {

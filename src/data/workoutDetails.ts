@@ -135,15 +135,15 @@ export const workoutDetails: WorkoutDetailData[] = [
   {
     slug: 'reformer-pilates',
     seo: {
-      title: 'What is Reformer Pilates? Benefits & Guide | PT 7 Pilates Amsterdam',
+      title: 'Reformer Pilates Amsterdam | Classes Near Museumplein | PT 7 Pilates',
       description:
-        'Learn what Reformer Pilates is, how the equipment works, and who it suits. Core strength, flexibility, and posture benefits explained. Ready to try a class? Book at our Reformer Pilates Amsterdam studio page.',
+        'Reformer Pilates classes in Amsterdam Zuid at Museumplein: small groups (max 5) and private sessions. Core strength, flexibility, and posture — book online at PT 7.',
       keywords:
-        'what is reformer pilates, reformer pilates benefits, reformer pilates equipment, reformer vs mat pilates, pilates reformer workout, core strength pilates, flexibility training, posture correction pilates',
+        'reformer pilates amsterdam, reformer pilates classes, what is reformer pilates, reformer pilates benefits, reformer pilates equipment, reformer vs mat pilates, pilates reformer workout, core strength pilates, flexibility training, posture correction pilates',
       canonical: 'https://www.pt7.nl/workouts/reformer-pilates/',
-      ogTitle: 'What is Reformer Pilates? | PT 7 Pilates',
+      ogTitle: 'Reformer Pilates Amsterdam | Book Classes | PT 7 Pilates',
       ogDescription:
-        'Guide to Reformer Pilates: benefits, equipment, and who it suits. Book Reformer classes at our Amsterdam Museumplein studio.',
+        'Reformer Pilates near Museumplein: small groups (max 5) and privates. Benefits, equipment, and who it suits — book at PT 7.',
       ogImage: '/assets/images/studio.webp',
     },
     announcementBanner: {

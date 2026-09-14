@@ -18,20 +18,20 @@ const { baseUrl, shellPaths, canonicalOverrides, shellMeta } = JSON.parse(
 
 const fixedPageMeta = {
   '/nl/': {
-    title: 'Pilates Amsterdam | Reformer pilates & strength training | PT 7 Pilates',
-    description: 'Pilateslessen in Amsterdam aan het Museumplein: Reformer pilates, kleine groepen (max. 5) en private sessies met gecertificeerde instructeurs. Boutique studio in Oud-Zuid. Online boeken.',
+    title: 'PT 7 Pilates Amsterdam | Reformer lessen bij Museumplein',
+    description: 'PT 7 is een boutique pilatesstudio aan het Museumplein (Amsterdam Zuid): Reformer pilates, kleine groepen (max. 5) en private sessies. Pilateslessen bij jou in de buurt in Oud-Zuid — online boeken.',
   },
   '/classpass-offer/': {
     title: 'ClassPass Members: Exclusive Offer | PT 7 Pilates Amsterdam',
     description: 'Special offer for ClassPass members. Save money and get priority booking when you join PT 7 directly. Same great Pilates classes, better value.',
   },
   '/pricing/': {
-    title: 'Pricing | PT 7 Pilates Amsterdam',
-    description: 'Flexible Pilates pricing at Museumplein. Memberships from €20/class, class packs, private sessions. Expert instructors, small groups (max 5).',
+    title: 'Pilates Prices Amsterdam Zuid | Packages & Trial Class | PT 7 Pilates',
+    description: 'Pilates prices at Museumplein (Amsterdam Zuid): intro pack 3 group classes for €50, then from €28/class (max 5). Memberships, privates, Reformer, TRX & strength. Book online.',
   },
   '/pricing/nl/': {
-    title: 'Pilates lesprijzen Amsterdam | Pakketten & abonnementen | PT 7 Pilates',
-    description: 'Pilates lesprijzen in Amsterdam aan het Museumplein. Kleine groepslessen (max. 5) vanaf €28/les, abonnementen en privésessies. Reformer, TRX & krachttraining.',
+    title: 'Pilates prijzen Amsterdam Zuid | Pakketten & proefles | PT 7 Pilates',
+    description: 'Pilates prijzen aan het Museumplein (Amsterdam Zuid): introductiepakket 3 groepslessen voor €50, daarna vanaf €28/les (max. 5). Abonnementen, privé, Reformer, TRX & kracht. Online boeken.',
   },
   '/academy/': {
     title: 'Reformer Pilates Instructor Course Amsterdam | Teacher Training | PT7 Academy',
@@ -78,8 +78,8 @@ const fixedPageMeta = {
     description: 'Personal strength training at Museumplein. Small groups (max 5) and private sessions with expert trainers.',
   },
   '/schedule/': {
-    title: 'Class Schedule | PT 7 Pilates Amsterdam',
-    description: 'Book your Pilates, TRX, or Strength class at PT 7 Museumplein. Small group classes (max 5) and private sessions available.',
+    title: 'Pilates Classes Near Me Amsterdam | Book Today | PT 7 Pilates',
+    description: 'Book Pilates classes near you at Museumplein (Amsterdam Zuid). Live schedule for Reformer, TRX & strength — small groups (max 5) and privates at Van Baerlestraat 76C. Reserve online today.',
   },
   '/instructors/': {
     title: 'Our Instructors | PT 7 Pilates Amsterdam',
@@ -94,8 +94,8 @@ const fixedPageMeta = {
     description: 'Pilates tips, fitness advice, and wellness insights from Amsterdam\'s boutique Pilates studio at Museumplein.',
   },
   '/workouts/reformer-pilates/': {
-    title: 'Reformer Pilates Amsterdam | PT 7 Pilates Museumplein',
-    description: 'Reformer Pilates classes at Museumplein. Small groups (max 5), expert instructors, premium equipment. Book your session today.',
+    title: 'Reformer Pilates Amsterdam | Classes Near Museumplein | PT 7 Pilates',
+    description: 'Reformer Pilates classes in Amsterdam Zuid at Museumplein: small groups (max 5) and private sessions. Core strength, flexibility, and posture — book online at PT 7.',
   },
   '/workouts/trx/': {
     title: 'TRX Training | PT 7 Pilates Amsterdam',
@@ -110,8 +110,8 @@ const fixedPageMeta = {
     description: 'Cardio training at Museumplein. Concept2 rower and more. Build endurance with expert coaching.',
   },
   '/equipment/reformer/': {
-    title: 'Buy Pilates Reformer Amsterdam | PT 7 Pilates',
-    description: 'Professional Pilates Reformer at PT 7 Museumplein. Train on premium equipment with certified instructors in small groups of max 5.',
+    title: 'Buy Pilates Reformer Amsterdam | Studio-Quality for Sale | PT 7 Pilates',
+    description: 'Buy a professional Pilates Reformer in Amsterdam — equipment for sale, not class bookings. Beech wood frame, smooth carriage, accessories included. Studio-quality with delivery in the Netherlands.',
   },
   '/equipment/tower-reformer/': {
     title: 'Tower Reformer | PT 7 Pilates Amsterdam',

@@ -53,8 +53,8 @@ export const equipmentProducts: EquipmentProduct[] = [
     slug: 'reformer',
     name: 'Pilates Reformer',
     seo: {
-      title: 'Buy Pilates Reformer for Sale | Amsterdam | PT 7 Pilates',
-      description: 'Professional Pilates Reformer for sale, not class bookings. Solid beech wood frame, smooth-gliding carriage, complete with accessories. Studio-quality equipment with delivery in the Netherlands.',
+      title: 'Buy Pilates Reformer Amsterdam | Studio-Quality for Sale | PT 7 Pilates',
+      description: 'Buy a professional Pilates Reformer in Amsterdam — equipment for sale, not class bookings. Beech wood frame, smooth carriage, accessories included. Studio-quality with delivery in the Netherlands.',
       keywords: 'Pilates Reformer for sale, buy pilates reformer amsterdam, professional Pilates equipment, reformer kopen nederland, studio equipment, Pilates apparatus for sale',
     },
     images: [

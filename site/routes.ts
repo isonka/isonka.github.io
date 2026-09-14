@@ -37,17 +37,17 @@ const FIXED_PAGES: Route[] = [
     path: '/',
     prerender: true,
     sitemap: {
-      lastmod: '2026-09-03',
+      lastmod: '2026-09-14',
       changefreq: 'weekly',
       priority: '1.0',
       image: image('pt7logo.png', 'PT 7 Pilates Amsterdam - Reformer Pilates Studio Museumplein'),
     },
   },
-  { path: '/nl/', prerender: true, sitemap: { lastmod: '2026-09-03', changefreq: 'weekly', priority: '1.0' } },
+  { path: '/nl/', prerender: true, sitemap: { lastmod: '2026-09-14', changefreq: 'weekly', priority: '1.0' } },
 
-  { path: '/pricing/', prerender: true, sitemap: { lastmod: '2026-09-05', changefreq: 'weekly', priority: '0.9' } },
-  { path: '/pricing/nl/', prerender: true, sitemap: { lastmod: '2026-09-05', changefreq: 'weekly', priority: '0.9' } },
-  { path: '/schedule/', prerender: true, sitemap: { lastmod: '2026-03-10', changefreq: 'daily', priority: '0.9' } },
+  { path: '/pricing/', prerender: true, sitemap: { lastmod: '2026-09-14', changefreq: 'weekly', priority: '0.9' } },
+  { path: '/pricing/nl/', prerender: true, sitemap: { lastmod: '2026-09-14', changefreq: 'weekly', priority: '0.9' } },
+  { path: '/schedule/', prerender: true, sitemap: { lastmod: '2026-09-14', changefreq: 'daily', priority: '0.9' } },
   { path: '/instructors/', prerender: true, sitemap: { lastmod: '2026-03-10', changefreq: 'monthly', priority: '0.8' } },
   { path: '/academy/', prerender: true, sitemap: { lastmod: '2026-09-01', changefreq: 'weekly', priority: '0.9' } },
   { path: '/academy/nl/', prerender: true, sitemap: { lastmod: '2026-09-01', changefreq: 'weekly', priority: '0.9' } },
@@ -77,12 +77,16 @@ const FIXED_PAGES: Route[] = [
 const WORKOUT_SITEMAP: SitemapEntry = { lastmod: '2026-03-10', changefreq: 'monthly', priority: '0.7' };
 const WORKOUT_OVERRIDES: Record<string, Partial<SitemapEntry>> = {
   'reformer-pilates': {
+    lastmod: '2026-09-14',
     priority: '0.8',
     image: image('reformer_1.webp', 'Reformer Pilates Amsterdam - PT 7 Pilates'),
   },
 };
 
 const EQUIPMENT_SITEMAP: SitemapEntry = { lastmod: '2026-03-10', changefreq: 'monthly', priority: '0.6' };
+const EQUIPMENT_OVERRIDES: Record<string, Partial<SitemapEntry>> = {
+  reformer: { lastmod: '2026-09-14' },
+};
 
 const TRAINER_SITEMAP: SitemapEntry = { lastmod: '2026-03-10', changefreq: 'monthly', priority: '0.7' };
 const TRAINER_OVERRIDES: Record<string, Partial<SitemapEntry>> = {
@@ -112,7 +116,7 @@ const derived: Route[] = [
   ...equipmentProducts.map((product) => ({
     path: `/equipment/${product.slug}/`,
     prerender: true,
-    sitemap: { ...EQUIPMENT_SITEMAP },
+    sitemap: { ...EQUIPMENT_SITEMAP, ...EQUIPMENT_OVERRIDES[product.slug] },
   })),
   ...trainerProfiles.map((trainer) => ({
     path: `/trainer/${trainer.slug}/`,
@@ -124,7 +128,7 @@ const derived: Route[] = [
     prerender: true,
     sitemap: {
       ...BLOG_SITEMAP,
-      lastmod: post.date,
+      lastmod: post.dateModified ?? post.date,
       priority: BLOG_PRIORITY_OVERRIDES[post.slug] ?? BLOG_SITEMAP.priority,
     },
     meta: { title: `${post.title} | PT 7 Pilates`, description: post.metaDescription },

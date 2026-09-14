@@ -37,7 +37,7 @@ export const Corporate= () => {
           },
         }}
       />
-      <Breadcrumbs items={[{ name: 'For Business', path: '/corporate' }]} />
+      <Breadcrumbs items={[{ name: 'For Business', path: '/corporate/' }]} />
 
       <div className="corporate-page">
         <section className="corporate-hero">

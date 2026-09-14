@@ -133,9 +133,20 @@ export const post: BlogPost = {
       <p>Our clients at PT 7 report that consistent Pilates has reduced their physiotherapy visits, improved their sleep, eliminated chronic pain issues, and given them a level of body awareness they never had before. When viewed as an investment in strength, control, and preventive healthcare rather than "just exercise," the perspective shifts significantly.</p>
 
       <p><em>Looking for a tailored Pilates session designed around your specific needs and goals? Our private sessions at PT 7 Museumplein offer one-on-one attention from expert instructors with 15+ years of experience. <a href="/pricing/">View our private session packages</a> or <a href="/schedule/">book your first session</a>.</em></p>
+
+      <h2>Frequently asked questions</h2>
+      <h3>How much does a Pilates group class cost in Amsterdam?</h3>
+      <p>In 2026, Amsterdam group classes typically run €25–50 per session. Boutique studios with small groups (4–5 people) sit at the premium end; larger mat or gym classes cost less.</p>
+      <h3>How much is a private Pilates session in Amsterdam?</h3>
+      <p>Private sessions usually cost €60–120 depending on instructor experience and studio location. One-on-one Reformer work at boutique studios like PT 7 sits in the mid-to-premium range.</p>
+      <h3>Is a membership or a class package better value?</h3>
+      <p>Choose a membership if you train 3+ times per week and want predictable monthly cost. Choose packages if your schedule varies, you travel often, or you are still testing a studio.</p>
+      <h3>What hidden costs should I budget for?</h3>
+      <p>Plan for grip socks (€10–20), possible late-cancellation fees (often full class price with 12–24 hours notice), occasional joining fees (€25–50), and package expiration windows (commonly 8–12 weeks).</p>
     `,
   author: 'PT 7 Team',
   date: '2026-01-27',
+  dateModified: '2026-09-14',
   image: '/assets/images/studio.webp',
   tags: ['Pilates Prices', 'Amsterdam Fitness', 'Cost Guide', 'Pilates Classes'],
   metaDescription: 'Complete Pilates pricing guide for Amsterdam 2026. Compare group class costs (€25-50), private session rates (€60-120), and membership options. Find the best value for your budget.',
@@ -150,5 +161,27 @@ export const post: BlogPost = {
     'amsterdam pilates studio prices',
     'pilates tarieven amsterdam',
     'pilates kosten amsterdam'
-  ]
+  ],
+  faqs: [
+    {
+      question: 'How much does a Pilates group class cost in Amsterdam?',
+      answer:
+        'In 2026, Amsterdam group classes typically run €25–50 per session. Boutique studios with small groups (4–5 people) sit at the premium end; larger mat or gym classes cost less.',
+    },
+    {
+      question: 'How much is a private Pilates session in Amsterdam?',
+      answer:
+        'Private sessions usually cost €60–120 depending on instructor experience and studio location. One-on-one Reformer work at boutique studios like PT 7 sits in the mid-to-premium range.',
+    },
+    {
+      question: 'Is a membership or a class package better value?',
+      answer:
+        'Choose a membership if you train 3+ times per week and want predictable monthly cost. Choose packages if your schedule varies, you travel often, or you are still testing a studio.',
+    },
+    {
+      question: 'What hidden costs should I budget for?',
+      answer:
+        'Plan for grip socks (€10–20), possible late-cancellation fees (often full class price with 12–24 hours notice), occasional joining fees (€25–50), and package expiration windows (commonly 8–12 weeks).',
+    },
+  ],
 };

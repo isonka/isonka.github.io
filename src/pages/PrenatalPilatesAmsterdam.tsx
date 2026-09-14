@@ -97,7 +97,7 @@ export const PrenatalPilatesAmsterdam= () => {
       />
 
       <StructuredData type="FAQPage" data={{ faqs }} />
-      <Breadcrumbs items={[{ name: 'Prenatal Pilates Amsterdam', path: '/prenatal-pilates-amsterdam' }]} />
+      <Breadcrumbs items={[{ name: 'Prenatal Pilates Amsterdam', path: '/prenatal-pilates-amsterdam/' }]} />
 
       <div className="service-page">
         <Reveal className="service-hero">

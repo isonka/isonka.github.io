@@ -37,7 +37,7 @@ export const HealthcareProviders= () => {
           },
         }}
       />
-      <Breadcrumbs items={[{ name: 'For Healthcare Providers', path: '/healthcare-providers' }]} />
+      <Breadcrumbs items={[{ name: 'For Healthcare Providers', path: '/healthcare-providers/' }]} />
 
       <div className="healthcare-page">
         <section className="healthcare-hero">

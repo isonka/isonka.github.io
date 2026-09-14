@@ -79,12 +79,12 @@ export const Schedule= () => {
   return (
     <>
       <SEOHead
-        title="Pilates Classes Amsterdam | Book Online | PT 7 Pilates"
-        description="Book Pilates classes in Amsterdam near Museumplein. Reformer, TRX, and strength: small groups (max 5) and private sessions at Van Baerlestraat 76C. View schedule and reserve online."
+        title="Pilates Classes Near Me Amsterdam | Book Today | PT 7 Pilates"
+        description="Book Pilates classes near you at Museumplein (Amsterdam Zuid). Live schedule for Reformer, TRX & strength — small groups (max 5) and privates at Van Baerlestraat 76C. Reserve online today."
         keywords="pilates classes amsterdam, pilates classes near me, Pilates boeken Amsterdam, Pilates rooster Amsterdam, Pilates reserveren, TRX boeken Amsterdam, les boeken Museumplein, Pilates schedule Amsterdam, groepsles boeken, reformer pilates book amsterdam"
         canonical="https://www.pt7.nl/schedule/"
-        ogTitle="Pilates Classes Amsterdam | Book Online | PT 7 Pilates"
-        ogDescription="Book Pilates classes near Museumplein. Small groups (max 5) and private Reformer, TRX, and strength sessions. Reserve your spot online."
+        ogTitle="Pilates Classes Near Me Amsterdam | Book Today | PT 7 Pilates"
+        ogDescription="Live schedule near Museumplein: Reformer, TRX & strength. Small groups (max 5) and private sessions. Book your spot online today."
       />
       <StructuredData type="FAQPage" data={{ faqs: scheduleFaqs }} />
       <Breadcrumbs items={[{ name: 'Pilates Classes Amsterdam', path: '/schedule/' }]} />

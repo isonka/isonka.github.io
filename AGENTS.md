@@ -79,6 +79,8 @@ Core paths include: `/`, `/pricing/`, `/schedule/`, `/equipment/`, `/equipment/:
 - Keep **one canonical URL** per page; avoid duplicate content across paths.  
 - OG image defaults live under `public/assets/images/`; large social images should meet typical 1200×630 guidance (see `SEOHead` defaults).  
 - Do not strip or bypass GTM / analytics in `index.html` unless explicitly requested by stakeholders — Marketing relies on these.
+- **Head terms** (e.g. “pilates studio amsterdam”, “reformer pilates amsterdam”) past ~position 10 need **off-page authority and content depth**, not more schema or title tweaks. Treat link building / PR as a separate Marketing track; do not block metadata or indexing hygiene on it.
+- Prefer **trailing-slash** paths in every internal `Link`, breadcrumb `path`, and `href`. Client `TrailingSlashNormalizer` + canonicals help, but bare URLs can still appear in Search Console — fix links at the source and confirm Google-selected canonicals in GSC.
 
 ---
 

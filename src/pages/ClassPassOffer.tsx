@@ -39,7 +39,7 @@ export const ClassPassOffer = () => {
         ogDescription="Compare ClassPass costs with PT 7 direct pricing and claim your transition discount."
       />
       <StructuredData type="FAQPage" data={{ faqs: classPassFaqs }} />
-      <Breadcrumbs items={[{ name: 'ClassPass Offer', path: '/classpass-offer' }]} />
+      <Breadcrumbs items={[{ name: 'ClassPass Offer', path: '/classpass-offer/' }]} />
 
       <div className="classpass-offer-page">
         <section className="cp-hero">

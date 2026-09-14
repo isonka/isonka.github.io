@@ -63,7 +63,7 @@ export const BlogPost= () => {
             description: post.metaDescription,
             image: post.image,
             datePublished: post.date,
-            dateModified: post.date,
+            dateModified: post.dateModified ?? post.date,
             authorName: post.author === 'PT 7 Team' ? 'Elif Arzu Ogan' : post.author,
             keywords: post.keywords,
             slug: post.slug,
@@ -71,11 +71,14 @@ export const BlogPost= () => {
           },
         }}
       />
+      {post.faqs && post.faqs.length > 0 ? (
+        <StructuredData type="FAQPage" data={{ faqs: post.faqs }} />
+      ) : null}
 
       <Breadcrumbs
         items={[
-          { name: 'Blog', path: '/blog' },
-          { name: post.title, path: `/blog/${post.slug}` },
+          { name: 'Blog', path: '/blog/' },
+          { name: post.title, path: `/blog/${post.slug}/` },
         ]}
       />
 

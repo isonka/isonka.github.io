@@ -69,7 +69,7 @@ export const StrengthTrainingAmsterdam= () => {
           },
         }}
       />
-      <Breadcrumbs items={[{ name: 'Strength Training Amsterdam', path: '/strength-training-amsterdam' }]} />
+      <Breadcrumbs items={[{ name: 'Strength Training Amsterdam', path: '/strength-training-amsterdam/' }]} />
 
       <div className="service-page">
         <Reveal className="service-hero">

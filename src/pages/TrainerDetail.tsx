@@ -78,7 +78,7 @@ export const TrainerDetail= () => {
         }}
       />
       <Breadcrumbs items={[
-        { name: 'Instructors', path: '/instructors' },
+        { name: 'Instructors', path: '/instructors/' },
         { name: trainer.name, path: `/trainer/${trainer.slug}` },
       ]} />
 

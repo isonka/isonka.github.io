@@ -84,7 +84,7 @@ export const Trainers= () => {
           },
         }}
       />
-      <Breadcrumbs items={[{ name: 'Instructors', path: '/instructors' }]} />
+      <Breadcrumbs items={[{ name: 'Instructors', path: '/instructors/' }]} />
 
       <div className="trainers-page">
 
