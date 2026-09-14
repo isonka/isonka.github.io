@@ -57,8 +57,6 @@ export const nlSchedule: DeepStringify<EnSchedule> = {
     bannerLead: 'Persoonlijke aandacht.',
     bannerText:
       'Sessies passen we aan op jouw doelen, blessures of specifieke wensen. Train solo, met een partner, of met twee vrienden.',
-    availability:
-      'Afspraakkalender opent op vandaag. Staat er niets? Zet de datum vooruit om het volgende vrije moment bij jouw voorkeursinstructeur te vinden.',
     durationTitle: 'Lesduur',
     durationValue: '45 minuten gerichte training',
     optionsTitle: 'Lesopties',
