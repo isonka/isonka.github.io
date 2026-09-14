@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { openCookieSettings } from '../utils/consentTracking';
 import { homePath, isHomePath } from '../i18n/locale';
 import { useLocale } from '../i18n/useLocale';
+import { LangSwitch } from './LangSwitch';
 import '../styles/Footer.css';
 
 export const Footer= () => {
@@ -56,6 +57,7 @@ export const Footer= () => {
         </nav>
 
         <div className="footer-meta">
+          <LangSwitch />
           <p className="footer-copyright">
             {t('footer.copyright', { year: String(new Date().getFullYear()) })}
           </p>

@@ -70,8 +70,50 @@
 .footer-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 24px;
-  align-items: baseline;
+  gap: 12px 24px;
+  align-items: center;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius-pill, 999px);
+  padding: 3px;
+}
+
+.lang-switch a,
+.lang-switch span[aria-current='page'] {
+  color: #fff;
+  text-decoration: none;
+  line-height: 1;
+  display: block;
+  padding: 5px 9px;
+  border-radius: var(--radius-pill, 999px);
+}
+
+.lang-switch span[aria-hidden='true'] {
+  display: none;
+}
+
+.lang-switch a {
+  opacity: 0.55;
+}
+
+.lang-switch a:hover {
+  opacity: 1;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.lang-switch [aria-current='page'] {
+  opacity: 1;
+  color: var(--ink, #111);
+  background: var(--gold, #ffd700);
 }
 
 .footer-copyright,

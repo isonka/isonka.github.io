@@ -5,7 +5,6 @@ import { trackBookNowClick, trackNavClick } from '../utils/gtmTracking';
 import { loadHealcodeWhenIdle } from '../utils/healcode';
 import { homePath, isHomePath } from '../i18n/locale';
 import { useLocale } from '../i18n/useLocale';
-import { LangSwitch } from './LangSwitch';
 import '../styles/Navbar.css';
 
 export const Navbar= () => {
@@ -106,10 +105,6 @@ export const Navbar= () => {
         >
           <span className="navbar-toggle-icon"></span>
         </button>
-
-        <div className="navbar-lang-bar">
-          <LangSwitch />
-        </div>
 
         <ul className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
           <li><a href="#about" aria-label={t('nav.aboutAria')} onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>{t('nav.about')}</a></li>

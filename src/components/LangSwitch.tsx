@@ -9,7 +9,7 @@ export function LangSwitch() {
   const { t } = useTranslation('common');
 
   return (
-    <nav className="navbar-lang" aria-label={t('nav.language')}>
+    <nav className="lang-switch" aria-label={t('nav.language')}>
       {locale === 'en' ? (
         <span lang="en" aria-current="page">
           EN
