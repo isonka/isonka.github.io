@@ -31,7 +31,7 @@ export const enAcademy = {
     installmentsValue: '3 × €667 + VAT',
     viewScheduleBtn: 'View full schedule',
     inquireBtn: 'Inquire',
-    note: 'September 2026 term fully booked. Winter 2026/27 now enrolling. Spring 2027 also open. Mat & Trapeze Table coming later.',
+    note: 'Winter 2026/27 now enrolling. Spring 2027 also open. September 2026 term is fully booked. Mat & Trapeze Table coming later.',
   },
   intro: {
     p1: "PT7 Academy's <strong>{{courseTitle}}</strong> is <strong>ITTAP approved</strong> by the <pma>{{pmaName}}</pma>, the international organization dedicated to elevating the Pilates profession and setting standards for teacher training worldwide.",

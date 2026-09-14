@@ -4,8 +4,8 @@
 User-agent: *
 Allow: /
 # search=yes: index for search. ai-input=yes: OK to use site facts in AI answers (see /llms.txt).
-# ai-train=no: do not use site content to train foundation models.
-Content-Signal: ai-train=no, search=yes, ai-input=yes
+# ai-train=yes: do not use site content to train foundation models.
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 # AI/LLM crawlers — allowed to fetch pages, /llms.txt, and /llms-full.txt for accurate citations
 User-agent: GPTBot
@@ -27,6 +27,21 @@ User-agent: PerplexityBot
 Allow: /
 
 User-agent: Google-Extended
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckAssistBot
 Allow: /
 
 # Sitemaps

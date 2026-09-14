@@ -95,3 +95,19 @@ export const business = {
     ],
   },
 } as const;
+
+type OpeningDay = (typeof business.openingHours)[number]['dayOfWeek'][number];
+
+export function studioHoursFor(day: OpeningDay) {
+  const slot = business.openingHours.find((entry) =>
+    (entry.dayOfWeek as readonly string[]).includes(day),
+  );
+  if (!slot) {
+    throw new Error(`Missing opening hours for ${day}`);
+  }
+  return slot;
+}
+
+export function formatOpeningClock(slot: { readonly opens: string; readonly closes: string }) {
+  return `${slot.opens}–${slot.closes}`;
+}

@@ -10,8 +10,9 @@
 }
 
 .healthcare-hero-content {
-  max-width: 720px;
-  margin: 0;
+  max-width: var(--page-max-width, 1200px);
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .healthcare-hero h1 {
@@ -35,12 +36,14 @@
   font-size: 1.05rem;
   line-height: 1.7;
   color: #555;
+  max-width: 40em;
 }
 
 .healthcare-container {
-  max-width: 1000px;
+  max-width: var(--page-max-width, 1200px);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
 .healthcare-pilates-rehab {
@@ -75,12 +78,19 @@
   padding: 24px;
   border-radius: var(--radius-lg);
   border: 1px solid #eee;
+  overflow: visible;
+  height: auto;
+  min-height: 0;
 }
 
 .rehab-card h3 {
   font-size: 1.1rem;
   margin-bottom: 12px;
   color: #222;
+  overflow: visible;
+  white-space: normal;
+  overflow-wrap: break-word;
+  line-height: 1.35;
 }
 
 .rehab-card p {
@@ -205,12 +215,17 @@
   padding: 24px;
   border-radius: var(--radius-lg);
   border: 1px solid #eee;
+  overflow: visible;
+  height: auto;
 }
 
 .offer-card h3 {
   font-size: 1.15rem;
   margin-bottom: 10px;
   color: #222;
+  white-space: normal;
+  overflow-wrap: break-word;
+  line-height: 1.35;
 }
 
 .offer-card p {

@@ -19,6 +19,7 @@ import {
   formatEur,
   packTotal,
 } from '../data/pricing';
+import { formatOpeningClock, studioHoursFor } from '../data/business';
 import { useLocale } from '../i18n/useLocale';
 import '../styles/Pricing.css';
 
@@ -31,6 +32,11 @@ const PRICING_HREFLANG = [
   { hreflang: 'x-default', href: PRICING_URL_EN },
 ];
 
+const weekdayHours = formatOpeningClock(studioHoursFor('Monday'));
+const weekendHours = formatOpeningClock(studioHoursFor('Saturday'));
+
+const SUMMARY_KEYS = ['group', 'intro', 'monthly', 'unlimited', 'private', 'membershipRules'] as const;
+
 export const Pricing= () => {
   const { t } = useTranslation('pricing');
   const locale = useLocale();
@@ -39,6 +45,20 @@ export const Pricing= () => {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const canonical = isNl ? PRICING_URL_NL : PRICING_URL_EN;
   const buyNow = t('labels.buyNow');
+  const summaryValues = {
+    pack20PerClass: formatEur(GROUP.pack20.perClass),
+    groupSingle: formatEur(GROUP.single),
+    introClasses: String(INTRO.classes),
+    introPrice: formatEur(INTRO.price),
+    fourTotal: formatEur(MEMBERSHIP.four.total),
+    eightTotal: formatEur(MEMBERSHIP.eight.total),
+    unlimited3: formatEur(MEMBERSHIP.unlimited3.perMonth),
+    annualMonth: formatEur(MEMBERSHIP.annual.perMonth),
+    annualYear: formatEur(MEMBERSHIP.annual.yearTotal),
+    privateFrom: formatEur(PRIVATE.junior.single),
+    coupleFrom: formatEur(COUPLE.single),
+    trioFrom: formatEur(TRIO.single),
+  };
 
   const toggleFaq = (index: number) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
@@ -87,6 +107,8 @@ export const Pricing= () => {
       answer: t('faq.annualUnlimited.answer', {
         perMonth: formatEur(MEMBERSHIP.annual.perMonth),
         yearTotal: formatEur(MEMBERSHIP.annual.yearTotal),
+        weekdayHours,
+        weekendHours,
       }),
     },
     {
@@ -125,7 +147,7 @@ export const Pricing= () => {
               ns="pricing"
               i18nKey="hero.lead"
               values={{ groupMax: GROUP_MAX }}
-              components={{ schedule: <Link to="/schedule/" /> }}
+              components={{ schedule: <Link to={isNl ? '/schedule/nl/' : '/schedule/'} /> }}
             />
           </p>
         </header>
@@ -158,12 +180,12 @@ export const Pricing= () => {
             <div className="packages-grid">
               <div className="package-card">
                 <div className="price-display">
-                  <h4 className="price-per-class">{formatEur(MEMBERSHIP.four.perClass)} <span className="per-person">{t('labels.perClass')}</span></h4>
                   <span className="package-name">{t('membership.classesInMonth', { count: MEMBERSHIP.four.classes })}</span>
+                  <p className="total-price">{t('labels.inTotal', { amount: formatEur(MEMBERSHIP.four.total) })}</p>
+                  <h4 className="price-per-class">{formatEur(MEMBERSHIP.four.perClass)} <span className="per-person">{t('labels.perClass')}</span></h4>
                 </div>
-                <p className="total-price">{t('labels.inTotal', { amount: formatEur(MEMBERSHIP.four.total) })}</p>
                 <p className="validity">{t('labels.allDaysOneClass')}</p>
-                <p className="validity" style={{ color: '#888', fontSize: '13px' }}>
+                <p className="package-fineprint">
                   {t('membership.monthlyFineprint')}
                 </p>
                 <StableHealcodeSlot
@@ -174,12 +196,12 @@ export const Pricing= () => {
 
               <div className="package-card">
                 <div className="price-display">
-                  <h4 className="price-per-class">{formatEur(MEMBERSHIP.eight.perClass)} <span className="per-person">{t('labels.perClass')}</span></h4>
                   <span className="package-name">{t('membership.classesInMonth', { count: MEMBERSHIP.eight.classes })}</span>
+                  <p className="total-price">{t('labels.inTotal', { amount: formatEur(MEMBERSHIP.eight.total) })}</p>
+                  <h4 className="price-per-class">{formatEur(MEMBERSHIP.eight.perClass)} <span className="per-person">{t('labels.perClass')}</span></h4>
                 </div>
-                <p className="total-price">{t('labels.inTotal', { amount: formatEur(MEMBERSHIP.eight.total) })}</p>
                 <p className="validity">{t('labels.allDaysOneClass')}</p>
-                <p className="validity" style={{ color: '#888', fontSize: '13px' }}>
+                <p className="package-fineprint">
                   {t('membership.monthlyFineprint')}
                 </p>
                 <StableHealcodeSlot
@@ -191,12 +213,12 @@ export const Pricing= () => {
               <div className="package-card featured">
                 <div className="badge">{t('labels.mostPopular')}</div>
                 <div className="price-display">
-                  <h4 className="price-per-class">{formatEur(MEMBERSHIP.unlimited3.perMonth)} <span className="per-person">{t('labels.perMonth')}</span></h4>
                   <span className="package-name">{t('membership.unlimited3Name')}</span>
+                  <p className="total-price">{formatEur(MEMBERSHIP.unlimited3.perMonth)} <span className="per-person">{t('labels.perMonth')}</span></p>
+                  <h4 className="price-per-class">{t('membership.unlimitedClasses')}</h4>
                 </div>
-                <p className="total-price">{t('membership.unlimitedClasses')}</p>
                 <p className="validity">{t('labels.allDaysOneClass')}</p>
-                <p className="validity" style={{ color: '#888', fontSize: '13px' }}>
+                <p className="package-fineprint">
                   {t('membership.unlimited3Fineprint')}
                 </p>
                 <StableHealcodeSlot
@@ -208,14 +230,14 @@ export const Pricing= () => {
               <div className="package-card">
                 <div className="badge">{t('labels.bestValue')}</div>
                 <div className="price-display">
-                  <h4 className="price-per-class">{formatEur(MEMBERSHIP.annual.perMonth)} <span className="per-person">{t('labels.perMonth')}</span></h4>
                   <span className="package-name">{t('membership.annualName')}</span>
+                  <p className="total-price">
+                    {t('membership.annualTotalNote', { yearTotal: formatEur(MEMBERSHIP.annual.yearTotal) })}
+                  </p>
+                  <h4 className="price-per-class">{formatEur(MEMBERSHIP.annual.perMonth)} <span className="per-person">{t('labels.perMonth')}</span></h4>
                 </div>
-                <p className="total-price">
-                  {t('membership.annualTotalNote', { yearTotal: formatEur(MEMBERSHIP.annual.yearTotal) })}
-                </p>
                 <p className="validity">{t('labels.allDaysOneClass')}</p>
-                <p className="validity" style={{ color: '#888', fontSize: '13px' }}>
+                <p className="package-fineprint">
                   {t('membership.annualFineprint')}
                 </p>
                 <StableHealcodeSlot
@@ -682,6 +704,12 @@ export const Pricing= () => {
             <a href="mailto:info@pt7.nl" className="cta-button primary">{t('contact.emailUs')}</a>
             <a href="tel:+31685162693" className="cta-button secondary">{t('contact.call', { phone: '+31 685 162693' })}</a>
           </div>
+        </div>
+
+        <div className="pricing-summary">
+          {SUMMARY_KEYS.map((key) => (
+            <p key={key}>{t(`summary.${key}`, summaryValues)}</p>
+          ))}
         </div>
       </div>
     </>

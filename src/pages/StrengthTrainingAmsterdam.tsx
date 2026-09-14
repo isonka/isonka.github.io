@@ -4,6 +4,7 @@ import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Reveal } from '../components/Reveal';
+import { ServiceTrustBand } from '../components/ServiceTrustBand';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/ServicePage.css';
 
@@ -89,6 +90,14 @@ export const StrengthTrainingAmsterdam= () => {
             <Link to="/schedule/" className="service-hero-btn">Book a Session</Link>
           </div>
         </Reveal>
+
+        <ServiceTrustBand
+          imageSrc="/assets/images/strength.webp"
+          imageAlt="Strength training at PT 7 Amsterdam"
+          priceAnchor="Strength & functional sessions · packages on the pricing page"
+          testimonial="“Calm studio, professional trainers who guide every movement with care.”"
+          testimonialAuthor="Ayşe · Google review"
+        />
 
         <Reveal className="service-section">
           <div className="service-container">

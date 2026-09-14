@@ -11,7 +11,7 @@ export interface Workout {
 
 export const workouts: Workout[] = [
   {
-    to: '/workouts/reformer-pilates',
+    to: '/reformer-pilates-amsterdam/',
     src: '/assets/images/studio.webp',
     alt: 'PT 7 Amsterdam boutique studio for Reformer Pilates and training',
     title: 'Reformer & Trapeze Table Pilates',

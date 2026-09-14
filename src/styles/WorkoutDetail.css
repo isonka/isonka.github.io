@@ -5,6 +5,28 @@
   overflow-x: hidden;
 }
 
+.workout-canonical-note {
+  max-width: var(--page-max-width, 1200px);
+  margin: 0 auto;
+  padding: 16px 24px;
+  box-sizing: border-box;
+}
+
+.workout-canonical-note p {
+  margin: 0;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+  background: #f7f5ef;
+  border-left: 3px solid var(--gold-text, #c9a800);
+}
+
+.workout-canonical-note a {
+  color: #111;
+  font-weight: 600;
+}
+
 .workout-hero {
   position: relative;
   height: 500px;

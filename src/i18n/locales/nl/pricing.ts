@@ -19,6 +19,20 @@ export const nlPricing: DeepStringify<EnPricing> = {
     title: 'Pilateslesprijzen & abonnementen in Amsterdam',
     lead: 'Kleine groepen (max. {{groupMax}}), abonnementen en private sessies aan het Museumplein. Klaar om te boeken? <schedule>Bekijk het lesrooster</schedule>.',
   },
+  summary: {
+    group:
+      'Groepslessen pilates bij PT 7 kosten vanaf {{pack20PerClass}} per les met een 20-lessenkaart; een losse groepsles kost {{groupSingle}}.',
+    intro:
+      'Nieuwe klanten kunnen starten met een introductiepakket van {{introClasses}} lessen voor {{introPrice}}.',
+    monthly:
+      'Maandabonnementen kosten {{fourTotal}} voor 4 lessen en {{eightTotal}} voor 8 lessen.',
+    unlimited:
+      'Onbeperkte abonnementen kosten {{unlimited3}} per maand bij een verplichting van 3 maanden, of {{annualMonth}} per maand bij een jaarabonnement ({{annualYear}} per jaar, inclusief een pauzeoptie van 4 weken).',
+    private:
+      'Privésessies beginnen bij {{privateFrom}}, duo-sessies bij {{coupleFrom}} per persoon en trio-sessies bij {{trioFrom}} per persoon.',
+    membershipRules:
+      'Alle abonnementen staan maximaal één les per dag toe en worden automatisch verlengd tenzij opgezegd vóór de verlengingsdatum.',
+  },
   offer: {
     badge: 'Speciale aanbieding',
     title: 'Introductiepakket',
@@ -150,7 +164,7 @@ export const nlPricing: DeepStringify<EnPricing> = {
     annualUnlimited: {
       question: 'Is het jaarabonnement onbeperkt?',
       answer:
-        'Ja! Het jaarabonnement voor {{perMonth}} per maand ({{yearTotal}} voor 12 maanden totaal) geeft je onbeperkt toegang tot lessen (alle dagen, 7:00-18:00), met een maximum van 1 les per dag. Dit is onze voordeligste optie en bevat een pauzeoptie van 4 weken.',
+        'Ja! Het jaarabonnement voor {{perMonth}} per maand ({{yearTotal}} voor 12 maanden totaal) geeft je onbeperkt toegang tot lessen alle dagen dat de studio open is (maandag–vrijdag {{weekdayHours}}, zaterdag–zondag {{weekendHours}}), met een maximum van 1 les per dag. Dit is onze voordeligste optie en bevat een pauzeoptie van 4 weken.',
     },
     duration: {
       question: 'Hoe lang duurt een les?',

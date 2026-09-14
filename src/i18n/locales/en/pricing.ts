@@ -16,6 +16,20 @@ export const enPricing = {
     title: 'Pilates class prices & memberships in Amsterdam',
     lead: 'Small groups (max {{groupMax}}), memberships, and private sessions at Museumplein. Ready to book? <schedule>View the class schedule</schedule>.',
   },
+  summary: {
+    group:
+      'Group Pilates classes at PT 7 cost from {{pack20PerClass}} per class with a 20-class pack; a single group class is {{groupSingle}}.',
+    intro:
+      'New clients can start with a {{introClasses}}-class introduction package for {{introPrice}}.',
+    monthly:
+      'Monthly memberships are {{fourTotal}} for 4 classes and {{eightTotal}} for 8 classes.',
+    unlimited:
+      'Unlimited memberships are {{unlimited3}} per month on a 3-month commitment, or {{annualMonth}} per month on an annual commitment ({{annualYear}} per year, including a 4-week freeze option).',
+    private:
+      'Private sessions start at {{privateFrom}}, couple sessions at {{coupleFrom}} per person, and trio sessions at {{trioFrom}} per person.',
+    membershipRules:
+      'All memberships allow a maximum of one class per day and renew automatically unless cancelled before the renewal date.',
+  },
   offer: {
     badge: 'Special offer',
     title: 'Introduction package',
@@ -147,7 +161,7 @@ export const enPricing = {
     annualUnlimited: {
       question: 'Is the annual membership unlimited classes?',
       answer:
-        'Yes! The annual membership at {{perMonth}} per month ({{yearTotal}} for 12 months total) gives you unlimited classes (all days, 7:00-18:00), with a maximum of 1 class per day. This is our best value option and includes a 4-week freeze option.',
+        'Yes! The annual membership at {{perMonth}} per month ({{yearTotal}} for 12 months total) gives you unlimited classes all days the studio is open (Monday–Friday {{weekdayHours}}, Saturday–Sunday {{weekendHours}}), with a maximum of 1 class per day. This is our best value option and includes a 4-week freeze option.',
     },
     duration: {
       question: "What's the class duration?",

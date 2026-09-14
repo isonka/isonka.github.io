@@ -112,6 +112,12 @@ export const Equipment= () => {
                   <p className="equipment-desc">{item.description}</p>
                   <span className="prose-link equipment-more">Learn more</span>
                 </Link>
+                <a
+                  className="equipment-quote-btn"
+                  href={`mailto:info@pt7.nl?subject=${encodeURIComponent(`Quote request: ${item.name}`)}&body=${encodeURIComponent(`Hi PT 7,\n\nI would like a quote for the ${item.name}.\n\nThanks,`)}`}
+                >
+                  Request a quote
+                </a>
               </li>
             ))}
           </ul>

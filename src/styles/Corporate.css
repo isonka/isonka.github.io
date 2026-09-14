@@ -10,8 +10,9 @@
 }
 
 .corporate-hero-content {
-  max-width: 720px;
-  margin: 0;
+  max-width: var(--page-max-width, 1200px);
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .corporate-hero h1 {
@@ -35,12 +36,14 @@
   font-size: 1.05rem;
   line-height: 1.7;
   color: #555;
+  max-width: 40em;
 }
 
 .corporate-container {
-  max-width: 1000px;
+  max-width: var(--page-max-width, 1200px);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
 .corporate-pilates-rehab {

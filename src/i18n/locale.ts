@@ -13,7 +13,7 @@ export function homePath(locale: Locale): string {
   return locale === 'nl' ? '/nl/' : '/';
 }
 
-const LOCALIZED_PATHS = ['/academy', '/pricing'];
+const LOCALIZED_PATHS = ['/academy', '/pricing', '/schedule'];
 
 export function localizedPath(pathname: string, locale: Locale): string {
   const base = pathname.replace(/\/nl\/?$/, '').replace(/\/$/, '') || '/';

@@ -4,6 +4,7 @@ import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Reveal } from '../components/Reveal';
+import { ServiceTrustBand } from '../components/ServiceTrustBand';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/ServicePage.css';
 
@@ -91,6 +92,16 @@ export const PrivatePilates= () => {
             <Link to="/schedule/" className="service-hero-btn">Book a Private Session</Link>
           </div>
         </Reveal>
+
+        <ServiceTrustBand
+          imageSrc="/assets/images/reformer_2.webp"
+          imageAlt="Private Reformer Pilates session at PT 7"
+          priceAnchor="Private, duo & trio · see private tier pricing"
+          testimonial="“Warm, welcoming, and filled with care. I leave every class stronger and smiling.”"
+          testimonialAuthor="Maya · Google review"
+          ctaTo="/pricing/#private-classes"
+          ctaLabel="View private pricing"
+        />
 
         <Reveal className="service-section">
           <div className="service-container">

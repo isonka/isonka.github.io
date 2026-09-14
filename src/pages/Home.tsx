@@ -28,6 +28,7 @@ const FAQ_KEYS = ['where', 'groupSize', 'booking', 'training', 'location'] as co
 
 const WORKOUT_COPY = {
   'reformer-pilates': 'reformerPilates',
+  'reformer-pilates-amsterdam': 'reformerPilates',
   trx: 'trx',
   'functional-training': 'functionalTraining',
   cardio: 'cardio',
@@ -63,13 +64,7 @@ const trainers = [
   { id: 'gamze', to: '/trainer/gamze/', src: '/assets/images/gamze.webp', name: 'E. Gamze Karadağ' },
 ] as const;
 
-const reviews = [
-  { author: 'Lot Canter Cremers', text: '"Through a neighbor in my building I was introduced to PT 7. I have been going to this studio for the past 18 months, of which I have been pregnant for 9. During my pregnancy Elif trained me until the very end (38.5 weeks). Her training gave me and my body an extremely comfortable pregnancy and smooth delivery of birth! Her experience and knowledge about the human body, pregnant or not, makes all the difference. Of course I continued after my pregnancy and I really enjoy and recommend this studio to everyone who is looking for a Pilates studio with qualified and experienced instructors. Since the Pilates sport is getting so popular there are a lot of places where you can go but most of the instructors don\'t have enough knowledge to be able to teach and train you like they do at PT 7!"' },
-  { author: 'Flaminia', text: '"I had been looking for a professional Pilates reformer studio for about 2 years and tried many different studios around Amsterdam. PT 7 and Elif are exactly what I was looking for: professional, thoughtful, engaging in your body progress and growth. Elif is amazing and has decades of experience as a fitness trainer. She demonstrates techniques with a detail-oriented approach and her classes are always different and tailored to the group!"' },
-  { author: 'Maya', text: '"This is a truly special Pilates Reformer studio, warm, welcoming, and filled with care. Gökben and Elif bring so much heart into every session. Their gentle guidance, attentiveness, and kindness make all the difference. I\'ve been practicing here for almost six months, and I feel stronger, more balanced, and more connected to my body. Every class leaves me smiling and deeply grateful!"' },
-  { author: 'Yeşim', text: '"I\'ve been coming here for 6 months and the results are incredible. The atmosphere is motivating and the equipment is pristine. Highly recommend!"' },
-  { author: 'Ayşe', text: '"I\'ve been training at PT 7 for a while now, and I couldn\'t be happier with my experience! The studio has such a calm and positive atmosphere, and the trainers are incredibly professional and supportive. They pay close attention to your needs and guide you through every movement with care. I highly recommend it!"' },
-];
+const REVIEW_KEYS = ['lot', 'flaminia', 'maya', 'yesim', 'ayse'] as const;
 
 const reviewsData = [
   { author: 'Lot Canter Cremers', reviewBody: 'Through a neighbor in my building I was introduced to PT 7...', ratingValue: 5 },
@@ -120,6 +115,8 @@ export const Home= () => {
   const [secondHeroReady, setSecondHeroReady] = useState(false);
   const canonical = locale === 'nl' ? 'https://www.pt7.nl/nl/' : 'https://www.pt7.nl/';
   const academyHref = locale === 'nl' ? '/academy/nl/' : '/academy/';
+  const pricingHref = locale === 'nl' ? '/pricing/nl/' : '/pricing/';
+  const scheduleHref = locale === 'nl' ? '/schedule/nl/' : '/schedule/';
 
   const homeFaqs = FAQ_KEYS.map((key) => ({
     question: t(`faqs.${key}.question`),
@@ -127,7 +124,7 @@ export const Home= () => {
   }));
 
   const workoutItems = workouts.map((w) => {
-    const slug = w.to.replace(/^\/workouts\//, '').replace(/\/$/, '');
+    const slug = w.to.replace(/^\/workouts\//, '').replace(/\/$/, '').replace(/^\//, '');
     const copyKey = WORKOUT_COPY[slug as keyof typeof WORKOUT_COPY];
     if (!copyKey) return w;
     return {
@@ -211,14 +208,22 @@ export const Home= () => {
           <p className="home-hero-brand">{t('hero.brand')}</p>
           <h1 className="home-hero-title">{t('hero.title')}</h1>
           <p className="home-hero-line">{t('hero.line')}</p>
+          <div className="home-hero-ratings">
+            <a href="https://maps.app.goo.gl/wrhyzYbov9eiGQJw5" target="_blank" rel="noopener noreferrer">
+              {t('reviews.google')}
+            </a>
+            <a href="https://classpass.com/studios/pt-studio-7-amsterdam" target="_blank" rel="noopener noreferrer">
+              {t('reviews.classpass')}
+            </a>
+          </div>
           <div className="home-hero-actions">
-            <Link to="/schedule/" className="home-btn home-btn-gold" onClick={() => trackFBBookingClick()}>
+            <Link to={scheduleHref} className="home-btn home-btn-gold" onClick={() => trackFBBookingClick()}>
               {t('hero.bookClass')}
             </Link>
             <Link to="/reformer-pilates-amsterdam/" className="home-btn home-btn-ghost">
               {t('hero.pilatesClasses')}
             </Link>
-            <Link to="/pricing/" className="home-btn home-btn-ghost">
+            <Link to={pricingHref} className="home-btn home-btn-ghost">
               {t('hero.viewPricing')}
             </Link>
           </div>
@@ -230,38 +235,40 @@ export const Home= () => {
         <h2 className="home-display">
           <ManifestoLine>{t('about.title')}</ManifestoLine>
         </h2>
-        <div className="home-prose">
-          <p>{t('about.p1')}</p>
-          <p>{t('about.p2')}</p>
-          <p>{t('about.p3')}</p>
-          <p className="home-prose-links">
-            <Trans
-              ns="home"
-              i18nKey="about.links"
-              components={{
-                reformer: <Link to="/reformer-pilates-amsterdam/" />,
-                private: <Link to="/private-pilates-amsterdam/" />,
-                prenatal: <Link to="/prenatal-pilates-amsterdam/" />,
-                trx: <Link to="/trx-training-amsterdam/" />,
-                strength: <Link to="/strength-training-amsterdam/" />,
-              }}
+        <div className="home-manifesto-layout">
+          <div className="home-prose">
+            <p>{t('about.p1')}</p>
+            <p>{t('about.p2')}</p>
+            <p>{t('about.p3')}</p>
+            <p className="home-prose-links">
+              <Trans
+                ns="home"
+                i18nKey="about.links"
+                components={{
+                  reformer: <Link to="/reformer-pilates-amsterdam/" />,
+                  private: <Link to="/private-pilates-amsterdam/" />,
+                  prenatal: <Link to="/prenatal-pilates-amsterdam/" />,
+                  trx: <Link to="/trx-training-amsterdam/" />,
+                  strength: <Link to="/strength-training-amsterdam/" />,
+                }}
+              />
+            </p>
+            <p className="home-signature">
+              <strong>{t('about.ownerName')}</strong>
+              <br />
+              {t('about.signatureRole')}
+            </p>
+          </div>
+          <div className="home-bleed-frame">
+            <img
+              src="/assets/images/about-us-web.webp"
+              alt={t('about.imageAlt')}
+              width="1200"
+              height="750"
+              loading="lazy"
+              decoding="async"
             />
-          </p>
-          <p className="home-signature">
-            <strong>{t('about.ownerName')}</strong>
-            <br />
-            {t('about.signatureRole')}
-          </p>
-        </div>
-        <div className="home-bleed-frame">
-          <img
-            src="/assets/images/about-us-web.webp"
-            alt={t('about.imageAlt')}
-            width="1200"
-            height="750"
-            loading="lazy"
-            decoding="async"
-          />
+          </div>
         </div>
       </section>
 
@@ -299,10 +306,17 @@ export const Home= () => {
         <h2 className="home-section-title">{t('reviews.title')}</h2>
         <p className="home-sub">{t('reviews.sub')}</p>
         <div className="home-quotes">
-          {reviews.map((r) => (
-            <blockquote key={r.author} className="home-quote">
-              <p>{r.text}</p>
-              <cite>{r.author}</cite>
+          {REVIEW_KEYS.map((key) => (
+            <blockquote key={key} className="home-quote">
+              <p className="home-quote-pull">{t(`reviews.items.${key}.pull`)}</p>
+              <details>
+                <summary>{t('reviews.readMore')}</summary>
+                <p className="home-quote-full">{t(`reviews.items.${key}.full`)}</p>
+              </details>
+              <cite>
+                {t(`reviews.items.${key}.author`)}
+                <span className="home-quote-meta">{t(`reviews.items.${key}.meta`)}</span>
+              </cite>
             </blockquote>
           ))}
         </div>
@@ -310,7 +324,6 @@ export const Home= () => {
           <a href="https://maps.app.goo.gl/wrhyzYbov9eiGQJw5" target="_blank" rel="noopener noreferrer">
             {t('reviews.google')}
           </a>
-          <span aria-hidden="true"> · </span>
           <a href="https://classpass.com/studios/pt-studio-7-amsterdam" target="_blank" rel="noopener noreferrer">
             {t('reviews.classpass')}
           </a>

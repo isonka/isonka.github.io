@@ -140,7 +140,7 @@ export const workoutDetails: WorkoutDetailData[] = [
         'Reformer Pilates classes in Amsterdam Zuid at Museumplein: small groups (max 5) and private sessions. Core strength, flexibility, and posture — book online at PT 7.',
       keywords:
         'reformer pilates amsterdam, reformer pilates classes, what is reformer pilates, reformer pilates benefits, reformer pilates equipment, reformer vs mat pilates, pilates reformer workout, core strength pilates, flexibility training, posture correction pilates',
-      canonical: 'https://www.pt7.nl/workouts/reformer-pilates/',
+      canonical: 'https://www.pt7.nl/reformer-pilates-amsterdam/',
       ogTitle: 'Reformer Pilates Amsterdam | Book Classes | PT 7 Pilates',
       ogDescription:
         'Reformer Pilates near Museumplein: small groups (max 5) and privates. Benefits, equipment, and who it suits — book at PT 7.',

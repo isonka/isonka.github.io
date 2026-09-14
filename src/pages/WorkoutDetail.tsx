@@ -25,6 +25,7 @@ export const WorkoutDetail= () => {
   }
 
   const isAnchorLink = (to: string) => to.startsWith('#');
+  const isReformerGuide = workout.slug === 'reformer-pilates';
   const baseUrl = 'https://www.pt7.nl';
   const serviceOffers = workout.classOptions.cards.map((card) => {
     const combinedText = `${card.description} ${card.features.join(' ')}`;
@@ -72,6 +73,16 @@ export const WorkoutDetail= () => {
         />
       )}
       <Breadcrumbs items={[{ name: workout.breadcrumbName, path: `/workouts/${workout.slug}/` }]} />
+
+      {isReformerGuide && (
+        <div className="workout-canonical-note">
+          <p>
+            Looking for Reformer classes near Museumplein? See the main{' '}
+            <Link to="/reformer-pilates-amsterdam/">Reformer Pilates Amsterdam</Link> page to book.
+            This page is a detailed workout guide.
+          </p>
+        </div>
+      )}
 
       {workout.announcementBanner && (
         <div className="ssl-announcement-banner">

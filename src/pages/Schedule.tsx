@@ -1,55 +1,61 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Trans, useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
-import { BookingGuide } from '../components/BookingGuide';
 import { trackScheduleVisit, trackPageView } from '../utils/gtmTracking';
 import {
-  clearMindBodyWidgetContainers,
   initScheduleMindBodyWidgets,
+  teardownMindBodyWidgets,
 } from '../utils/mindbodyBrandedWeb';
 import { isPrerender } from '../utils/prerender';
+import { useLocale } from '../i18n/useLocale';
+import { business, formatOpeningClock, studioHoursFor } from '../data/business';
 import '../styles/Schedule.css';
 
-const scheduleFaqs = [
-  {
-    question: 'How do I book Pilates classes in Amsterdam online?',
-    answer:
-      'Choose Group classes or Private classes on this page, pick a date and time in the MindBody calendar, then sign in or create an account to complete booking. Payment is handled securely in the widget.',
-  },
-  {
-    question: 'What should I bring to my first Pilates class?',
-    answer:
-      'Wear fitted athletic clothing, bring water, and grip socks if you have them (available at the studio). First-time group clients should arrive about 10 minutes early for a quick orientation.',
-  },
-  {
-    question: 'Can I book private Pilates sessions from this page?',
-    answer:
-      'Yes. Open the Private classes tab to book one-on-one, couple, or trio appointments. For more on private formats, see pt7.nl/private-pilates-amsterdam/.',
-  },
-  {
-    question: 'Are your group Pilates classes beginner-friendly?',
-    answer:
-      'Yes. Instructors give modifications in every session. Groups stay at a maximum of 5 people so you still get personal cues. Many beginners start with a private intro, then join a small group.',
-  },
-  {
-    question: 'Can I train with PT 7 during pregnancy?',
-    answer:
-      'Pregnant clients are welcome in one-on-one private sessions only, where we adapt exercises safely. See pt7.nl/prenatal-pilates-amsterdam/ for our pregnancy-focused private Reformer option.',
-  },
+const SCHEDULE_URL_EN = 'https://www.pt7.nl/schedule/';
+const SCHEDULE_URL_NL = 'https://www.pt7.nl/schedule/nl/';
+
+const SCHEDULE_HREFLANG = [
+  { hreflang: 'en', href: SCHEDULE_URL_EN },
+  { hreflang: 'nl', href: SCHEDULE_URL_NL },
+  { hreflang: 'x-default', href: SCHEDULE_URL_EN },
 ];
 
+const FAQ_KEYS = ['hours', 'book', 'bring', 'private', 'beginner', 'pregnancy'] as const;
+
+const weekdayHours = formatOpeningClock(studioHoursFor('Monday'));
+const weekendHours = formatOpeningClock(studioHoursFor('Saturday'));
+const hoursValues = { weekdayHours, weekendHours };
+
+function hoursLabelKey(days: readonly string[]): 'hours.weekdays' | 'hours.weekends' {
+  return days.includes('Saturday') || days.includes('Sunday') ? 'hours.weekends' : 'hours.weekdays';
+}
+
 export const Schedule= () => {
+  const { t } = useTranslation('schedule');
+  const locale = useLocale();
+  const isNl = locale === 'nl';
   const [activeTab, setActiveTab] = useState('group');
   const [widgetsLoading, setWidgetsLoading] = useState(true);
   const [widgetsError, setWidgetsError] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
+  const canonical = isNl ? SCHEDULE_URL_NL : SCHEDULE_URL_EN;
+  const schedulePath = isNl ? '/schedule/nl/' : '/schedule/';
+  const pricingHref = isNl ? '/pricing/nl/' : '/pricing/';
+
+  const scheduleFaqs = FAQ_KEYS.map((key) => ({
+    question: t(`faq.${key}.question`),
+    answer: t(`faq.${key}.answer`, hoursValues).replace(/<\/?[a-z]+>/g, ''),
+  }));
 
   useEffect(() => {
-    trackPageView('/schedule/', 'Pilates Classes Amsterdam | Book Online | PT 7 Pilates');
+    trackPageView(schedulePath, t('seo.analyticsTitle'));
     trackScheduleVisit();
+  }, [schedulePath, t]);
 
+  useEffect(() => {
     if (isPrerender()) return;
 
     let cancelled = false;
@@ -72,41 +78,54 @@ export const Schedule= () => {
 
     return () => {
       cancelled = true;
-      clearMindBodyWidgetContainers();
+      teardownMindBodyWidgets();
     };
-  }, []);
+  }, [schedulePath]);
 
   return (
     <>
       <SEOHead
-        title="Pilates Classes Near Me Amsterdam | Book Today | PT 7 Pilates"
-        description="Book Pilates classes near you at Museumplein (Amsterdam Zuid). Live schedule for Reformer, TRX & strength — small groups (max 5) and privates at Van Baerlestraat 76C. Reserve online today."
-        keywords="pilates classes amsterdam, pilates classes near me, Pilates boeken Amsterdam, Pilates rooster Amsterdam, Pilates reserveren, TRX boeken Amsterdam, les boeken Museumplein, Pilates schedule Amsterdam, groepsles boeken, reformer pilates book amsterdam"
-        canonical="https://www.pt7.nl/schedule/"
-        ogTitle="Pilates Classes Near Me Amsterdam | Book Today | PT 7 Pilates"
-        ogDescription="Live schedule near Museumplein: Reformer, TRX & strength. Small groups (max 5) and private sessions. Book your spot online today."
+        title={t('seo.title')}
+        description={t('seo.description')}
+        keywords={t('seo.keywords')}
+        canonical={canonical}
+        ogTitle={t('seo.ogTitle')}
+        ogDescription={t('seo.ogDescription')}
+        ogLocale={isNl ? 'nl_NL' : 'en_US'}
+        ogLocaleAlternates={isNl ? ['en_US'] : ['nl_NL']}
+        htmlLang={isNl ? 'nl' : 'en'}
+        hreflangAlternates={SCHEDULE_HREFLANG}
       />
       <StructuredData type="FAQPage" data={{ faqs: scheduleFaqs }} />
-      <Breadcrumbs items={[{ name: 'Pilates Classes Amsterdam', path: '/schedule/' }]} />
+      <Breadcrumbs items={[{ name: t('breadcrumbName'), path: schedulePath }]} />
 
       <div className="schedule-page">
         <section className="schedule-hero">
           <div className="schedule-hero-content">
-            <p className="schedule-kicker">Book</p>
-            <h1>Pilates classes in Amsterdam: book online</h1>
+            <p className="schedule-kicker">{t('hero.kicker')}</p>
+            <h1>{t('hero.title')}</h1>
+            <p>{t('hero.lead')}</p>
+            <div className="schedule-hours" aria-labelledby="schedule-hours-heading">
+              <h2 id="schedule-hours-heading" className="schedule-hours-title">
+                {t('hours.title')}
+              </h2>
+              <dl className="schedule-hours-list">
+                {business.openingHours.map((slot) => (
+                  <div key={slot.opens + slot.closes} className="schedule-hours-row">
+                    <dt>{t(hoursLabelKey(slot.dayOfWeek))}</dt>
+                    <dd>{formatOpeningClock(slot)}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+            <p className="location-highlight">{t('hero.location')}</p>
+            <p className="schedule-account-note">{t('hero.accountNote')}</p>
             <p>
-              Reformer Pilates, TRX, strength, and cardio: small groups (max 5) or private sessions with expert trainers.
-              Looking for Pilates classes near Museumplein or Oud-Zuid? Reserve your spot below.
-            </p>
-            <p className="location-highlight">
-              Van Baerlestraat 76C, Museumplein, across from Stedelijk Museum
-            </p>
-            <p>
-              <Link to="/reformer-pilates-amsterdam/">Reformer Pilates Amsterdam</Link>
+              <Link to="/reformer-pilates-amsterdam/">{t('hero.linkReformer')}</Link>
               {' · '}
-              <Link to="/pricing/">Class prices &amp; packages</Link>
+              <Link to={pricingHref}>{t('hero.linkPricing')}</Link>
               {' · '}
-              <Link to="/private-pilates-amsterdam/">Private sessions</Link>
+              <Link to="/private-pilates-amsterdam/">{t('hero.linkPrivate')}</Link>
             </p>
           </div>
         </section>
@@ -119,58 +138,63 @@ export const Schedule= () => {
                 className={`tab-button ${activeTab === 'group' ? 'active' : ''}`}
                 onClick={() => setActiveTab('group')}
               >
-                Group classes
+                {t('tabs.group')}
               </button>
               <button
                 type="button"
                 className={`tab-button ${activeTab === 'private' ? 'active' : ''}`}
                 onClick={() => setActiveTab('private')}
               >
-                Private classes
+                {t('tabs.private')}
               </button>
             </div>
 
             <div className={`tab-content ${activeTab === 'group' ? 'active' : ''}`}>
-              <h2>Group classes</h2>
-              <p className="subtitle">
-                Small group training with maximum 5 participants. Expert instruction in an energizing environment.
-              </p>
+              <h2>{t('group.title')}</h2>
+              <p className="subtitle">{t('group.subtitle')}</p>
 
               <div className="info-banner">
                 <p>
-                  <strong>New to group classes?</strong> First-timers arrive 10 minutes early for orientation. Our
-                  trainers will guide you through everything.
+                  <strong>{t('group.bannerLead')}</strong> {t('group.bannerText')}
                 </p>
               </div>
 
+              <p className="schedule-availability-note" role="note">
+                {t('group.availability')}
+              </p>
+
               <div className="quick-info">
                 <div className="info-card">
-                  <h3>Class duration</h3>
-                  <p>45 minutes</p>
+                  <h3>{t('group.durationTitle')}</h3>
+                  <p>{t('group.durationValue')}</p>
                 </div>
                 <div className="info-card">
-                  <h3>Group size</h3>
-                  <p>Maximum 5 people</p>
+                  <h3>{t('group.sizeTitle')}</h3>
+                  <p>{t('group.sizeValue')}</p>
                 </div>
                 <div className="info-card">
-                  <h3>What to bring</h3>
-                  <p>Water bottle, towel, grip socks (recommended; available at the studio)</p>
+                  <h3>{t('group.bringTitle')}</h3>
+                  <p>{t('group.bringValue')}</p>
                 </div>
               </div>
 
               <div className="widget-container">
                 {widgetsLoading && (
                   <p className="widget-loading" role="status">
-                    Loading booking calendar…
+                    {t('widget.loading')}
                   </p>
                 )}
                 {widgetsError && (
                   <p className="widget-error" role="alert">
-                    Booking calendar could not load. Please{' '}
-                    <a href="/schedule/">refresh this page</a> or call us to book.
+                    <Trans
+                      ns="schedule"
+                      i18nKey="widget.error"
+                      components={{ refresh: <a href={schedulePath} /> }}
+                    />
                   </p>
                 )}
                 <div
+                  key={`group-${schedulePath}`}
                   className="mindbody-widget"
                   data-widget-type="Schedules"
                   data-widget-id="2b8825c036"
@@ -181,53 +205,57 @@ export const Schedule= () => {
             </div>
 
             <div className={`tab-content ${activeTab === 'private' ? 'active' : ''}`}>
-              <h2>Private classes</h2>
+              <h2>{t('private.title')}</h2>
               <p className="subtitle">
-                Personalized training for your goals and level: one-on-one, couple, or trio. See our{' '}
-                <Link to="/private-pilates-amsterdam/">Private Pilates near Museumplein</Link>
-                {' '}
-                page for formats, pricing, and what to expect.
+                <Trans
+                  ns="schedule"
+                  i18nKey="private.subtitle"
+                  components={{ private: <Link to="/private-pilates-amsterdam/" /> }}
+                />
               </p>
 
               <div className="info-banner">
                 <p>
-                  <strong>Personalized attention.</strong> Sessions adapt to your goals, injuries, or specific needs.
-                  Train solo, with a partner, or with two friends.
+                  <strong>{t('private.bannerLead')}</strong> {t('private.bannerText')}
                 </p>
-              </div>
+              </div>              
 
               <div className="quick-info">
                 <div className="info-card">
-                  <h3>Class duration</h3>
-                  <p>45 minutes of focused training</p>
+                  <h3>{t('private.durationTitle')}</h3>
+                  <p>{t('private.durationValue')}</p>
                 </div>
                 <div className="info-card">
-                  <h3>Class options</h3>
-                  <p>One-on-one, couple, or trio (3 people)</p>
+                  <h3>{t('private.optionsTitle')}</h3>
+                  <p>{t('private.optionsValue')}</p>
                 </div>
                 <div className="info-card">
-                  <h3>Customized program</h3>
-                  <p>Workout adapted to your goals and level</p>
+                  <h3>{t('private.programTitle')}</h3>
+                  <p>{t('private.programValue')}</p>
                 </div>
                 <div className="info-card">
-                  <h3>What to bring</h3>
-                  <p>Fitted clothing, socks (grip socks recommended), water bottle, towel</p>
+                  <h3>{t('private.bringTitle')}</h3>
+                  <p>{t('private.bringValue')}</p>
                 </div>
               </div>
 
               <div className="widget-container">
                 {widgetsLoading && (
                   <p className="widget-loading" role="status">
-                    Loading booking calendar…
+                    {t('widget.loading')}
                   </p>
                 )}
                 {widgetsError && (
                   <p className="widget-error" role="alert">
-                    Booking calendar could not load. Please{' '}
-                    <a href="/schedule/">refresh this page</a> or call us to book.
+                    <Trans
+                      ns="schedule"
+                      i18nKey="widget.error"
+                      components={{ refresh: <a href={schedulePath} /> }}
+                    />
                   </p>
                 )}
                 <div
+                  key={`private-${schedulePath}`}
                   className="mindbody-widget"
                   data-widget-type="Appointments"
                   data-widget-id="2b18450c036"
@@ -241,11 +269,11 @@ export const Schedule= () => {
 
         <section className="schedule-faq" aria-labelledby="schedule-faq-heading">
           <div className="schedule-faq-inner">
-            <p className="schedule-kicker">FAQ</p>
-            <h2 id="schedule-faq-heading">Frequently asked questions</h2>
+            <p className="schedule-kicker">{t('faq.kicker')}</p>
+            <h2 id="schedule-faq-heading">{t('faq.title')}</h2>
             <div className="schedule-faq-list">
-              {scheduleFaqs.map((faq, i) => (
-                <div key={faq.question} className="schedule-faq-item">
+              {FAQ_KEYS.map((key, i) => (
+                <div key={key} className="schedule-faq-item">
                   <button
                     type="button"
                     className={`schedule-faq-question ${openFaqIndex === i ? 'active' : ''}`}
@@ -254,7 +282,7 @@ export const Schedule= () => {
                     aria-controls={`schedule-faq-answer-${i}`}
                     id={`schedule-faq-question-${i}`}
                   >
-                    {faq.question}
+                    {t(`faq.${key}.question`)}
                   </button>
                   <div
                     id={`schedule-faq-answer-${i}`}
@@ -262,7 +290,17 @@ export const Schedule= () => {
                     aria-labelledby={`schedule-faq-question-${i}`}
                     className={`schedule-faq-answer ${openFaqIndex === i ? 'open' : ''}`}
                   >
-                    <p>{faq.answer}</p>
+                    <p>
+                      <Trans
+                        ns="schedule"
+                        i18nKey={`faq.${key}.answer`}
+                        values={hoursValues}
+                        components={{
+                          private: <Link to="/private-pilates-amsterdam/" />,
+                          prenatal: <Link to="/prenatal-pilates-amsterdam/" />,
+                        }}
+                      />
+                    </p>
                   </div>
                 </div>
               ))}
@@ -272,20 +310,15 @@ export const Schedule= () => {
 
         <section className="cta-section" aria-labelledby="schedule-cta-heading">
           <div className="cta-section-inner">
-            <p className="schedule-kicker schedule-kicker-on-dark">Next step</p>
-            <h2 id="schedule-cta-heading">Need help choosing?</h2>
-            <p>
-              Not sure between group and private? Check pricing or contact us for guidance.
-            </p>
-            <Link to="/pricing/" className="cta-button">
-              View pricing &amp; packages
+            <p className="schedule-kicker schedule-kicker-on-dark">{t('cta.kicker')}</p>
+            <h2 id="schedule-cta-heading">{t('cta.title')}</h2>
+            <p>{t('cta.text')}</p>
+            <Link to={pricingHref} className="cta-button">
+              {t('cta.button')}
             </Link>
           </div>
         </section>
       </div>
-
-      <BookingGuide />
     </>
   );
 };
-

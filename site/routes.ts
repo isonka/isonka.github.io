@@ -47,7 +47,8 @@ const FIXED_PAGES: Route[] = [
 
   { path: '/pricing/', prerender: true, sitemap: { lastmod: '2026-09-14', changefreq: 'weekly', priority: '0.9' } },
   { path: '/pricing/nl/', prerender: true, sitemap: { lastmod: '2026-09-14', changefreq: 'weekly', priority: '0.9' } },
-  { path: '/schedule/', prerender: true, sitemap: { lastmod: '2026-09-14', changefreq: 'daily', priority: '0.9' } },
+  { path: '/schedule/', prerender: true, sitemap: { lastmod: '2026-09-15', changefreq: 'daily', priority: '0.9' } },
+  { path: '/schedule/nl/', prerender: true, sitemap: { lastmod: '2026-09-15', changefreq: 'daily', priority: '0.9' } },
   { path: '/instructors/', prerender: true, sitemap: { lastmod: '2026-03-10', changefreq: 'monthly', priority: '0.8' } },
   { path: '/academy/', prerender: true, sitemap: { lastmod: '2026-09-01', changefreq: 'weekly', priority: '0.9' } },
   { path: '/academy/nl/', prerender: true, sitemap: { lastmod: '2026-09-01', changefreq: 'weekly', priority: '0.9' } },

@@ -4,6 +4,7 @@ import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Reveal } from '../components/Reveal';
+import { ServiceTrustBand } from '../components/ServiceTrustBand';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/ServicePage.css';
 
@@ -89,6 +90,14 @@ export const TRXTrainingAmsterdam= () => {
             <Link to="/schedule/" className="service-hero-btn">Book a TRX Session</Link>
           </div>
         </Reveal>
+
+        <ServiceTrustBand
+          imageSrc="/assets/images/trx.webp"
+          imageAlt="TRX training at PT 7 Amsterdam"
+          priceAnchor="Group & private TRX · see packages from €21.50 per class"
+          testimonial="“Six months in. Incredible results, motivating atmosphere, pristine equipment.”"
+          testimonialAuthor="Yeşim · ClassPass review"
+        />
 
         <Reveal className="service-section">
           <div className="service-container">

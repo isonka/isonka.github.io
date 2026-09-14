@@ -30,7 +30,7 @@ export function useInViewOnce<T extends HTMLElement>() {
           requestAnimationFrame(() => requestAnimationFrame(reveal));
         }
       },
-      { threshold: 0.28, rootMargin: '0px 0px -10% 0px' },
+      { threshold: 0.08, rootMargin: '0px 0px 12% 0px' },
     );
     io.observe(el);
     return () => io.disconnect();

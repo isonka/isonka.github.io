@@ -81,6 +81,10 @@ const fixedPageMeta = {
     title: 'Pilates Classes Near Me Amsterdam | Book Today | PT 7 Pilates',
     description: 'Book Pilates classes near you at Museumplein (Amsterdam Zuid). Live schedule for Reformer, TRX & strength — small groups (max 5) and privates at Van Baerlestraat 76C. Reserve online today.',
   },
+  '/schedule/nl/': {
+    title: 'Pilateslessen bij jou in de buurt Amsterdam | Boek vandaag | PT 7 Pilates',
+    description: 'Boek pilateslessen bij jou in de buurt aan het Museumplein (Amsterdam Zuid). Live rooster voor Reformer, TRX & kracht — kleine groepen (max. 5) en privé aan de Van Baerlestraat 76C. Reserveer vandaag online.',
+  },
   '/instructors/': {
     title: 'Our Instructors | PT 7 Pilates Amsterdam',
     description: 'Meet our expert certified Pilates instructors. 10+ years experience, specialized in Reformer Pilates, pregnancy Pilates, and strength training.',

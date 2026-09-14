@@ -124,9 +124,15 @@ export function updateGoogleConsent(consent: Pt7Consent) {
   });
 }
 
+function gtmOwnsPageViews(): boolean {
+  if (getTrackingState().gtm) return true;
+  return getStoredConsent()?.marketing === true;
+}
+
 export function sendGaPageView(pagePath: string, pageTitle: string) {
   const gtag = getGtag();
   if (!window.__pt7GaReady || !gtag) return;
+  if (gtmOwnsPageViews()) return;
 
   const now = Date.now();
   if (lastGaPageKey === pagePath && now - lastGaPageAt < 2000) return;
@@ -141,15 +147,14 @@ export function sendGaPageView(pagePath: string, pageTitle: string) {
   });
 }
 
-function markGaReadyAndSendCurrentPage() {
-  window.__pt7GaReady = true;
-  sendGaPageView(
-    `${window.location.pathname}${window.location.search}`,
-    document.title,
-  );
-}
-
 let gtagScriptPromise: Promise<void> | null = null;
+let gtagJsTimestampSent = false;
+
+function sendGtagJsTimestamp() {
+  if (gtagJsTimestampSent) return;
+  getGtag()?.('js', new Date());
+  gtagJsTimestampSent = true;
+}
 
 function ensureGtagScript(id: string): Promise<void> {
   ensureGtagStub();
@@ -169,7 +174,7 @@ function ensureGtagScript(id: string): Promise<void> {
     script.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
     script.onload = () => {
       loaded.gtagScript = true;
-      getGtag()?.('js', new Date());
+      sendGtagJsTimestamp();
       resolve();
     };
     script.onerror = () => {
@@ -187,9 +192,16 @@ function configureGa() {
   if (loaded.ga) return;
   const gtag = getGtag();
   if (!gtag) return;
+  sendGtagJsTimestamp();
   gtag('config', GA_ID, { send_page_view: false });
   loaded.ga = true;
-  markGaReadyAndSendCurrentPage();
+  window.__pt7GaReady = true;
+  if (!gtmOwnsPageViews()) {
+    sendGaPageView(
+      `${window.location.pathname}${window.location.search}`,
+      document.title,
+    );
+  }
 }
 
 function configureAds() {
@@ -197,8 +209,9 @@ function configureAds() {
   if (loaded.ads) return;
   const gtag = getGtag();
   if (!gtag) return;
-  gtag('config', GOOGLE_TAG_ID);
-  gtag('config', GOOGLE_ADS_ID);
+  sendGtagJsTimestamp();
+  gtag('config', GOOGLE_TAG_ID, { send_page_view: false });
+  gtag('config', GOOGLE_ADS_ID, { send_page_view: false });
   loaded.ads = true;
 }
 
@@ -249,14 +262,17 @@ export function applyConsent(consent: Pt7Consent) {
       .then(() => {
         const latest = getStoredConsent();
         if (!latest) return;
+        sendGtagJsTimestamp();
         if (latest.statistics) configureGa();
-        if (latest.marketing) configureAds();
+        if (latest.marketing) {
+          configureAds();
+          loadGTM();
+        }
       })
       .catch(() => {});
   }
 
   if (consent.marketing) {
-    loadGTM();
     loadMetaPixel();
   }
 

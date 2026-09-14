@@ -34,7 +34,7 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
     installmentsValue: '3 × €667 + BTW',
     viewScheduleBtn: 'Bekijk volledig rooster',
     inquireBtn: 'Informeer',
-    note: 'September 2026-termijn volgeboekt. Winter 2026/27 nu open voor inschrijving. Lente 2027 ook open. Mat & Trapeze Table volgt later.',
+    note: 'Winter 2026/27 nu open voor inschrijving. Lente 2027 ook open. September 2026-termijn is volgeboekt. Mat & Trapeze Table volgt later.',
   },
   intro: {
     p1: 'De <strong>{{courseTitle}}</strong> van PT7 Academy is <strong>ITTAP goedgekeurd</strong> door de <pma>{{pmaName}}</pma>, de internationale organisatie die zich inzet voor het verhogen van het pilatesberoep en het vaststellen van standaarden voor docentenopleidingen wereldwijd.',

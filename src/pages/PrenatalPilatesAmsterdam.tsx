@@ -4,6 +4,7 @@ import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Reveal } from '../components/Reveal';
+import { ServiceTrustBand } from '../components/ServiceTrustBand';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/ServicePage.css';
 
@@ -116,6 +117,16 @@ export const PrenatalPilatesAmsterdam= () => {
             <Link to="/schedule/" className="service-hero-btn">Book a Prenatal Session</Link>
           </div>
         </Reveal>
+
+        <ServiceTrustBand
+          imageSrc="/assets/images/pregnancy2.webp"
+          imageAlt="Prenatal Pilates at PT 7 Amsterdam"
+          priceAnchor="Private prenatal sessions only · see private pricing"
+          testimonial="“Elif trained me until 38.5 weeks. Comfortable pregnancy and a smooth delivery.”"
+          testimonialAuthor="Lot Canter Cremers · Google review"
+          ctaTo="/pricing/#private-classes"
+          ctaLabel="View private pricing"
+        />
 
         <Reveal className="service-section">
           <div className="service-container">

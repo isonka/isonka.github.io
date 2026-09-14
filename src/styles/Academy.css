@@ -198,6 +198,66 @@
   line-height: 1.5;
 }
 
+.academy-proof {
+  display: grid;
+  grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+  gap: 28px 40px;
+  align-items: center;
+  margin: 40px 0 48px;
+}
+
+.academy-proof-media {
+  max-width: 420px;
+  width: 100%;
+}
+
+.academy-proof-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-media, 14px);
+}
+
+.academy-proof-copy {
+  max-width: 28em;
+}
+
+.academy-proof-lead {
+  margin: 0 0 12px;
+  font-size: 1.15rem;
+  line-height: 1.45;
+  color: #111;
+  font-weight: 600;
+}
+
+.academy-proof-meta {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.academy-proof-meta a {
+  color: #111;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.academy-proof-meta a:hover {
+  color: var(--gold-text, #c9a800);
+}
+
+@media (max-width: 800px) {
+  .academy-proof {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .academy-proof-media {
+    max-width: 360px;
+  }
+}
+
 .accreditation-logos {
   display: flex;
   align-items: flex-end;
@@ -553,6 +613,36 @@
   font-size: 1.05rem;
   font-weight: 600;
   color: #111;
+}
+
+.term-schedule-closed {
+  margin: 20px 0 0;
+  border-top: 1px solid var(--pebble, #d5d3d4);
+  padding-top: 8px;
+}
+
+.term-schedule-heading--closed {
+  list-style: none;
+  cursor: pointer;
+  margin-top: 8px;
+  color: #666;
+  font-weight: 500;
+}
+
+.term-schedule-heading--closed::-webkit-details-marker {
+  display: none;
+}
+
+.term-schedule-heading--closed::before {
+  content: '+';
+  display: inline-block;
+  margin-right: 8px;
+  font-weight: 600;
+  color: #888;
+}
+
+.term-schedule-closed[open] .term-schedule-heading--closed::before {
+  content: '−';
 }
 
 .term-schedule-status {
@@ -1071,5 +1161,36 @@ button.cta-btn {
   .academy-graduate-link img,
   .academy-graduate-link--static img {
     max-width: 100%;
+  }
+}
+
+.academy-sticky-enroll {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .academy-sticky-enroll {
+    display: flex;
+    position: sticky;
+    bottom: 0;
+    z-index: 50;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px));
+    background: color-mix(in srgb, #fffdf4 92%, transparent);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(17, 17, 17, 0.1);
+  }
+
+  .academy-sticky-enroll .course-btn,
+  .academy-sticky-enroll .academy-enroll-btn {
+    flex: 1 1 auto;
+    min-width: 140px;
+    justify-content: center;
+  }
+
+  .academy-page {
+    padding-bottom: 72px;
   }
 }

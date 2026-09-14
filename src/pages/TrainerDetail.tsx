@@ -102,6 +102,12 @@ export const TrainerDetail= () => {
             <p className="trainer-meta trainer-reveal" style={{ transitionDelay: '300ms' }}>
               {trainer.languages.join(' · ')}
             </p>
+            <div className="trainer-hero-actions trainer-reveal" style={{ transitionDelay: '380ms' }}>
+              <Link to="/schedule/" className="trainer-btn-primary">
+                Book a session with {trainer.displayName.split(' ')[0]}
+              </Link>
+              <Link to="/pricing/" className="trainer-btn-secondary">View Pricing</Link>
+            </div>
           </div>
         </Reveal>
 

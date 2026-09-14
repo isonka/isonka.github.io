@@ -4,6 +4,7 @@ import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Reveal } from '../components/Reveal';
+import { ServiceTrustBand } from '../components/ServiceTrustBand';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/ServicePage.css';
 
@@ -109,6 +110,17 @@ export const ReformerPilatesAmsterdam= () => {
             </Link>
           </div>
         </Reveal>
+
+        <ServiceTrustBand
+          layout="proof"
+          imageSrc="/assets/images/reformer-pilates-amsterdam.jpg"
+          imageAlt="Instructor coaching a Reformer client at PT 7 Amsterdam"
+          imageWidth={1600}
+          imageHeight={2400}
+          priceAnchor="Intro: €50 for 3 group classes · from €21.50 per class on membership"
+          testimonial="“Professional, thoughtful, and exactly the Reformer studio I spent two years looking for.”"
+          testimonialAuthor="Flaminia · Google review"
+        />
 
         <Reveal className="service-section">
           <div className="service-container">

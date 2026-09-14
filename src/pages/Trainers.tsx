@@ -24,7 +24,7 @@ const InstructorRow = ({
     <Link
       ref={ref}
       to={`/trainer/${instructor.slug}/`}
-      className={`instructor-row${index % 2 === 1 ? ' instructor-row--flip' : ''}${inView ? ' is-in' : ''}`}
+      className={`instructor-row${inView ? ' is-in' : ''}`}
       style={{ '--row-delay': `${(index % 4) * 90}ms` } as React.CSSProperties}
     >
       <div className="instructor-row-photo">
@@ -51,7 +51,7 @@ const InstructorRow = ({
         <p className="instructor-meta instructor-reveal" style={{ transitionDelay: 'calc(var(--row-delay) + 320ms)' }}>
           {instructor.languages.join(' · ')}
         </p>
-        <span className="instructor-link instructor-reveal" style={{ transitionDelay: 'calc(var(--row-delay) + 400ms)' }}>
+        <span className="instructor-link">
           View profile →
         </span>
       </div>

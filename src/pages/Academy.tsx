@@ -212,10 +212,7 @@ export const Academy= () => {
                   </div>
                 </div>
                 <div className="academy-offer-actions">
-                  <AcademyEnrollButtons course="reformer" location="offer_strip" />
-                  <button type="button" className="course-btn secondary" onClick={scrollToEnroll}>
-                    {t('offer.viewScheduleBtn')}
-                  </button>
+                  <AcademyEnrollButtons course="reformer" location="offer_strip" showInstallments={false} />
                   <button
                     type="button"
                     className="course-btn secondary"
@@ -228,6 +225,29 @@ export const Academy= () => {
                   </button>
                 </div>
                 <p className="academy-offer-note">{t('offer.note')}</p>
+              </div>
+
+              <div className="academy-proof">
+                <div className="academy-proof-media">
+                  <img
+                    src="/assets/images/academy-training.jpg"
+                    alt="PT7 Academy Reformer instructor training at the Museumplein studio"
+                    width={1600}
+                    height={1067}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div className="academy-proof-copy">
+                  <p className="academy-proof-lead">
+                    Weekend Reformer teacher training in the studio: lectures, practice, and notebooks on the floor.
+                  </p>
+                  <p className="academy-proof-meta">
+                    <Link to="/blog/career-change-banker-to-pilates-instructor/">Career-change guide</Link>
+                    <span aria-hidden="true"> · </span>
+                    Course lead <Link to="/trainer/elif/">Elif Arzu Ogan</Link>
+                  </p>
+                </div>
               </div>
 
               <div className="accreditation-logos">
@@ -350,19 +370,6 @@ export const Academy= () => {
                 <p>{t('courseCard.upcomingTermsText', { hours })}</p>
 
                 <h4 className="term-schedule-heading">
-                  {t('terms.autumn2026.heading')}
-                  <span className="term-schedule-status">{t('common.fullyBooked')}</span>
-                </h4>
-                <div className="term-schedule-grid">
-                  {termSchedule2026.map((item) => (
-                    <div key={item.module} className="term-schedule-item">
-                      <span className="term-schedule-dates">{isNl ? item.datesNl : item.dates}</span>
-                      <span className="term-schedule-module">{isNl ? item.moduleNl : item.module}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <h4 className="term-schedule-heading">
                   {t('terms.winter2026.heading')}
                   <span className="term-schedule-status">{t('common.enrolling')}</span>
                 </h4>
@@ -374,6 +381,21 @@ export const Academy= () => {
                     </div>
                   ))}
                 </div>
+
+                <details className="term-schedule-closed">
+                  <summary className="term-schedule-heading term-schedule-heading--closed">
+                    {t('terms.autumn2026.heading')}
+                    <span className="term-schedule-status">{t('common.fullyBooked')}</span>
+                  </summary>
+                  <div className="term-schedule-grid">
+                    {termSchedule2026.map((item) => (
+                      <div key={item.module} className="term-schedule-item">
+                        <span className="term-schedule-dates">{isNl ? item.datesNl : item.dates}</span>
+                        <span className="term-schedule-module">{isNl ? item.moduleNl : item.module}</span>
+                      </div>
+                    ))}
+                  </div>
+                </details>
 
                 <h4 className="term-schedule-heading">{t('terms.spring2027.heading')}</h4>
                 <div className="term-schedule-grid">
@@ -580,6 +602,20 @@ export const Academy= () => {
             </div>
           </div>
         </section>
+
+        <div className="academy-sticky-enroll" aria-label="Enroll">
+          <AcademyEnrollButtons course="reformer" location="sticky_bar" showInstallments={false} />
+          <button
+            type="button"
+            className="course-btn secondary"
+            data-academy-inquiry="email"
+            data-course="reformer"
+            data-location="sticky_bar"
+            onClick={scrollToInquiry}
+          >
+            {t('offer.inquireBtn')}
+          </button>
+        </div>
       </div>
     </>
   );

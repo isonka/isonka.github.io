@@ -16,13 +16,13 @@ export const nlHome: DeepStringify<EnHome> = {
   banner: {
     aria: 'Word pilatesinstructeur | Pilates docentenopleiding bij PT7 Academy',
     strong: 'Word pilatesinstructeur',
-    full: ' · Pilates docentenopleiding · PMA ITTAP Approved · sept-term vol · Volgende: nov 2026',
+    full: ' · Pilates docentenopleiding · PMA ITTAP Approved · Volgende: nov 2026',
     short: ' · Docentenopleiding · Volgende: nov 2026',
     cta: 'Bekijk de opleiding →',
   },
   hero: {
     brand: 'PT 7',
-    title: 'Reformer pilates & strength training in Amsterdam',
+    title: 'Reformer pilates & krachttraining in Amsterdam',
     line: 'Pilateslessen in Amsterdam Oud-Zuid, boutique studio aan het Museumplein',
     bookClass: 'Les boeken',
     pilatesClasses: 'Pilateslessen',
@@ -34,8 +34,8 @@ export const nlHome: DeepStringify<EnHome> = {
   },
   about: {
     kicker: 'Over ons',
-    title: 'Reformer pilates & strength training studio aan het Museumplein',
-    p1: 'Reformer pilates & strength training in Amsterdam, in onze studio aan het Museumplein in Oud-Zuid. Met meer dan 15 jaar ervaring biedt PT 7 een boutique fitnesservaring gericht op aandacht en resultaat. Aan de Van Baerlestraat 76C, tegenover het Stedelijk Museum, combineren we professionele Reformers en klassieke pilatesapparatuur met Nike-krachtapparatuur, TRX en Concept2-machines in één ruimte.',
+    title: 'Reformer pilates & krachttraining studio aan het Museumplein',
+    p1: 'Reformer pilates & krachttraining in Amsterdam, in onze studio aan het Museumplein in Oud-Zuid. Met meer dan 15 jaar ervaring biedt PT 7 een boutique fitnesservaring gericht op aandacht en resultaat. Aan de Van Baerlestraat 76C, tegenover het Stedelijk Museum, combineren we professionele Reformers en klassieke pilatesapparatuur met Nike-krachtapparatuur, TRX en Concept2-machines in één ruimte.',
     p2: 'We bieden 1-op-1 private sessies waarin je 100% aandacht van je instructeur krijgt. Daarnaast zijn er intieme small-group lessen (maximaal 5 personen) als je graag met vrienden traint. Elk programma is afgestemd op kracht opbouwen, flexibiliteit verbeteren of jouw wellnessdoelen.',
     p3: 'Onze instructeurs maken een persoonlijk plan, passen elke sessie aan op jouw voortgang en vieren elke mijlpaal met je.',
     links:
@@ -49,7 +49,7 @@ export const nlHome: DeepStringify<EnHome> = {
     sub: "Ontdek onze trainingsprogramma's",
     reformerPilates: {
       title: 'Reformer & Trapeze Table pilates',
-      description: 'Full-body training voor corekracht, flexibiliteit en houding',
+      description: 'Fullbody-training voor corekracht, flexibiliteit en houding',
       alt: 'PT 7 Amsterdam boutique studio voor Reformer pilates en training',
     },
     trx: {
@@ -70,7 +70,7 @@ export const nlHome: DeepStringify<EnHome> = {
   },
   trainers: {
     kicker: 'Instructeurs',
-    title: 'Expert one-on-one trainers in Amsterdam',
+    title: 'Persoonlijke one-on-one trainers in Amsterdam',
     sub: 'Gecertificeerde professionals, gericht op jouw fitnessreis',
     footnote:
       'Wil je lesgeven? <become>Word pilatesinstructeur</become>, <training>pilates docentenopleiding</training> bij PT7 Academy.',
@@ -112,7 +112,40 @@ export const nlHome: DeepStringify<EnHome> = {
     title: 'Pilates Amsterdam reviews',
     sub: 'Echte ervaringen uit onze community',
     google: 'Google 4.8',
-    classpass: 'ClassPass 4.9 · 2.500+ reviews',
+    classpass: 'ClassPass 4.9 · 2.500+ beoordelingen',
+    readMore: 'Lees volledige review',
+    items: {
+      lot: {
+        author: 'Lot Canter Cremers',
+        meta: 'Google-review · Zwangerschap & postpartum',
+        pull: '“Elif trainde me tot 38,5 weken. Comfortabele zwangerschap en soepele bevalling.”',
+        full: 'Via een buurvrouw in mijn gebouw kwam ik bij PT 7. Ik kom hier al 18 maanden, waarvan ik 9 maanden zwanger was. Tijdens mijn zwangerschap trainde Elif me tot het einde (38,5 weken). Haar training gaf mij en mijn lichaam een uiterst comfortabele zwangerschap en soepele bevalling. Haar ervaring en kennis van het menselijk lichaam, zwanger of niet, maakt het verschil. Natuurlijk ging ik daarna door en geniet ik van deze studio. Ik raad PT 7 aan iedereen aan die een Pilatesstudio zoekt met gekwalificeerde, ervaren instructeurs. Pilates is populair en er zijn veel plekken, maar de meeste instructeurs hebben niet genoeg kennis om te trainen zoals zij dat bij PT 7 doen.',
+      },
+      flaminia: {
+        author: 'Flaminia',
+        meta: 'Google-review',
+        pull: '“Professioneel, doordacht. Precies de Reformer-studio waar ik twee jaar naar zocht.”',
+        full: 'Ik zocht zo’n twee jaar naar een professionele Reformer-studio en probeerde veel studio’s in Amsterdam. PT 7 en Elif zijn precies wat ik zocht: professioneel, doordacht en betrokken bij je vooruitgang. Elif is fantastisch en heeft decennia ervaring als fitness trainer. Ze demonstreert technieken tot in detail en haar lessen zijn altijd anders en afgestemd op de groep.',
+      },
+      maya: {
+        author: 'Maya',
+        meta: 'Google-review',
+        pull: '“Warm, gastvrij en vol aandacht. Na elke les sterker en met een lach.”',
+        full: 'Dit is een bijzondere Reformer-studio: warm, gastvrij en vol zorg. Gökben en Elif steken hun hart in elke sessie. Hun zachte begeleiding, aandacht en vriendelijkheid maken het verschil. Ik train hier al bijna zes maanden en voel me sterker, meer in balans en meer verbonden met mijn lichaam. Elke les eindigt met een lach en dankbaarheid.',
+      },
+      yesim: {
+        author: 'Yeşim',
+        meta: 'ClassPass-review',
+        pull: '“Na zes maanden: indrukwekkende resultaten, motiverende sfeer, topapparatuur.”',
+        full: 'Ik kom hier al zes maanden en de resultaten zijn indrukwekkend. De sfeer is motiverend en de apparatuur is tip-top. Een echte aanrader!',
+      },
+      ayse: {
+        author: 'Ayşe',
+        meta: 'Google-review',
+        pull: '“Rustige studio, professionele trainers die elke beweging met zorg begeleiden.”',
+        full: 'Ik train al een tijdje bij PT 7 en kan niet gelukkiger zijn. De studio heeft een rustige, positieve sfeer en de trainers zijn zeer professioneel en ondersteunend. Ze letten goed op jouw behoeften en begeleiden elke beweging met zorg. Een absolute aanrader!',
+      },
+    },
   },
   contact: {
     kicker: 'Bezoek',

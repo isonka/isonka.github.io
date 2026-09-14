@@ -5,10 +5,12 @@ import { enAcademy } from './locales/en/academy';
 import { enCommon } from './locales/en/common';
 import { enHome } from './locales/en/home';
 import { enPricing } from './locales/en/pricing';
+import { enSchedule } from './locales/en/schedule';
 import { nlAcademy } from './locales/nl/academy';
 import { nlCommon } from './locales/nl/common';
 import { nlHome } from './locales/nl/home';
 import { nlPricing } from './locales/nl/pricing';
+import { nlSchedule } from './locales/nl/schedule';
 
 function detectLng(): 'en' | 'nl' {
   if (typeof window === 'undefined') return 'en';
@@ -23,13 +25,13 @@ export function initI18n() {
 
   void i18n.use(initReactI18next).init({
     resources: {
-      en: { common: enCommon, home: enHome, pricing: enPricing, academy: enAcademy },
-      nl: { common: nlCommon, home: nlHome, pricing: nlPricing, academy: nlAcademy },
+      en: { common: enCommon, home: enHome, pricing: enPricing, academy: enAcademy, schedule: enSchedule },
+      nl: { common: nlCommon, home: nlHome, pricing: nlPricing, academy: nlAcademy, schedule: nlSchedule },
     },
     lng: detectLng(),
     fallbackLng: 'en',
     supportedLngs: ['en', 'nl'],
-    ns: ['common', 'home', 'pricing', 'academy'],
+    ns: ['common', 'home', 'pricing', 'academy', 'schedule'],
     defaultNS: 'common',
     interpolation: { escapeValue: false },
     react: { useSuspense: false },

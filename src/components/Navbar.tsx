@@ -12,35 +12,36 @@ export const Navbar= () => {
   const { t } = useTranslation('common');
   const locale = useLocale();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [moreOpen, setMoreOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<'business' | 'more' | null>(null);
   const navigate = useNavigate();
   const location = useLocation();
   const home = homePath(locale);
   const academyHref = locale === 'nl' ? '/academy/nl/' : '/academy/';
   const pricingHref = locale === 'nl' ? '/pricing/nl/' : '/pricing/';
+  const scheduleHref = locale === 'nl' ? '/schedule/nl/' : '/schedule/';
 
   const toggleMenu = () => {
-    if (isMenuOpen) setMoreOpen(false);
+    if (isMenuOpen) setOpenDropdown(null);
     setIsMenuOpen(!isMenuOpen);
   };
 
   useEffect(() => loadHealcodeWhenIdle(), []);
 
   useEffect(() => {
-    if (!moreOpen) return;
+    if (!openDropdown) return;
     const handleClickOutside = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      if (!target.closest('.navbar-dropdown')) setMoreOpen(false);
+      if (!target.closest('.navbar-dropdown')) setOpenDropdown(null);
     };
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
-  }, [moreOpen]);
+  }, [openDropdown]);
 
   useEffect(() => {
     if (!isMenuOpen) return;
     const handleScroll = () => {
       setIsMenuOpen(false);
-      setMoreOpen(false);
+      setOpenDropdown(null);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -48,6 +49,7 @@ export const Navbar= () => {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+    setOpenDropdown(null);
   };
 
   const scrollToSection = (sectionId: string) => {
@@ -87,7 +89,7 @@ export const Navbar= () => {
         </div>
 
         <Link
-          to="/schedule/"
+          to={scheduleHref}
           className="navbar-booknow-mobile"
           aria-label={t('nav.bookNowAria')}
           onClick={() => trackBookNowClick('navbar-mobile')}
@@ -119,19 +121,32 @@ export const Navbar= () => {
           <li className="navbar-dropdown">
             <button
               type="button"
-              className={`navbar-dropdown-trigger ${moreOpen ? 'open' : ''}`}
-              onClick={() => setMoreOpen(!moreOpen)}
-              aria-expanded={moreOpen}
+              className={`navbar-dropdown-trigger ${openDropdown === 'business' ? 'open' : ''}`}
+              onClick={() => setOpenDropdown(openDropdown === 'business' ? null : 'business')}
+              aria-expanded={openDropdown === 'business'}
+              aria-haspopup="true"
+            >
+              {t('nav.business')}
+            </button>
+            <ul className={`navbar-dropdown-menu ${openDropdown === 'business' ? 'open' : ''}`}>
+              <li><Link to="/corporate/" onClick={closeMenu}>{t('nav.forBusiness')}</Link></li>
+              <li><Link to="/healthcare-providers/" onClick={closeMenu}>{t('nav.forHealthcare')}</Link></li>
+            </ul>
+          </li>
+          <li><Link to="/equipment/" onClick={closeMenu}>{t('nav.shop')}</Link></li>
+          <li className="navbar-dropdown">
+            <button
+              type="button"
+              className={`navbar-dropdown-trigger ${openDropdown === 'more' ? 'open' : ''}`}
+              onClick={() => setOpenDropdown(openDropdown === 'more' ? null : 'more')}
+              aria-expanded={openDropdown === 'more'}
               aria-haspopup="true"
             >
               {t('nav.more')}
             </button>
-            <ul className={`navbar-dropdown-menu ${moreOpen ? 'open' : ''}`}>
-              <li><a href="#workouts" onClick={(e) => { e.preventDefault(); closeMenu(); setMoreOpen(false); scrollToSection('workouts'); }}>{t('nav.workouts')}</a></li>
-              <li><Link to="/equipment/" onClick={() => { closeMenu(); setMoreOpen(false); }}>{t('nav.shopEquipment')}</Link></li>
-              <li><Link to="/healthcare-providers/" onClick={() => { closeMenu(); setMoreOpen(false); }}>{t('nav.forHealthcare')}</Link></li>
-              <li><Link to="/corporate/" onClick={() => { closeMenu(); setMoreOpen(false); }}>{t('nav.forBusiness')}</Link></li>
-              <li><Link to="/blog/" onClick={() => { closeMenu(); setMoreOpen(false); }}>{t('nav.blog')}</Link></li>
+            <ul className={`navbar-dropdown-menu ${openDropdown === 'more' ? 'open' : ''}`}>
+              <li><a href="#workouts" onClick={(e) => { e.preventDefault(); closeMenu(); scrollToSection('workouts'); }}>{t('nav.workouts')}</a></li>
+              <li><Link to="/blog/" onClick={closeMenu}>{t('nav.blog')}</Link></li>
             </ul>
           </li>
           <li><a href="#contact" aria-label={t('nav.contactAria')} onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>{t('nav.contact')}</a></li>
@@ -140,12 +155,12 @@ export const Navbar= () => {
               className="navbar-login-widget"
               dangerouslySetInnerHTML={{
                 __html:
-                  '<healcode-widget data-version="0.2" data-link-class="loginRegister" data-site-id="123605" data-mb-site-id="5741736" data-bw-identity-site="true" data-type="account-link" data-inner-html="Login | Register"></healcode-widget>',
+                  '<healcode-widget data-version="0.2" data-link-class="loginRegister" data-site-id="123605" data-mb-site-id="5741736" data-bw-identity-site="true" data-type="account-link" data-inner-html="MindBody Login"></healcode-widget>',
               }}
             />
           </li>
           <li className="navbar-booknow-desktop-wrapper">
-            <Link to="/schedule/" className="navbar-booknow-desktop" aria-label={t('nav.bookClassAria')} onClick={() => { closeMenu(); trackBookNowClick('navbar-desktop'); }}>
+            <Link to={scheduleHref} className="navbar-booknow-desktop" aria-label={t('nav.bookClassAria')} onClick={() => { closeMenu(); trackBookNowClick('navbar-desktop'); }}>
               {t('nav.bookNow')}
             </Link>
           </li>

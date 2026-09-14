@@ -31,7 +31,7 @@ body {
   line-height: 1.61;
   color: var(--text-color);
   background-color: #fffdf4;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
 }
 
@@ -42,7 +42,7 @@ h1, h2, h3, h4 {
 }
 
 html {
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
 }
 
@@ -52,7 +52,7 @@ html {
   min-height: 100vh;
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .main-content {
@@ -60,7 +60,7 @@ html {
   width: 100%;
   max-width: 100%;
   padding-top: 0;
-  overflow-x: hidden;
+  overflow-x: clip;
   position: relative;
   z-index: 1;
 }

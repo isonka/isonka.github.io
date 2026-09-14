@@ -30,11 +30,6 @@ export const trackBookNowClick = (location: string) => {
 };
 
 export const trackPageView = (pagePath: string, pageTitle: string) => {
-  trackEvent('page_view', {
-    page_path: pagePath,
-    page_title: pageTitle,
-    event_category: 'navigation',
-  });
   sendGaPageView(pagePath, pageTitle);
 };
 

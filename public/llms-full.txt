@@ -154,6 +154,7 @@ PT7 Academy is the teacher-training arm of PT 7. Training happens inside the wor
 ### Main Pages
 - Homepage: https://www.pt7.nl/
 - Schedule/Booking: https://www.pt7.nl/schedule/
+- Schedule/Booking (NL): https://www.pt7.nl/schedule/nl/
 - Pricing: https://www.pt7.nl/pricing/
 - Equipment: https://www.pt7.nl/equipment/
 - Instructors: https://www.pt7.nl/instructors/

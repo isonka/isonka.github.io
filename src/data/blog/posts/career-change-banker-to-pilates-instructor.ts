@@ -112,7 +112,7 @@ export const post: BlogPost = {
     `,
   author: 'PT 7 Team',
   date: '2026-01-23',
-  image: '/assets/images/reformer_1.webp',
+  image: '/assets/images/pilates.webp',
   tags: ['Career Change', 'Pilates Certification', 'PT 7 Academy', 'Lifestyle', 'Work-Life Balance'],
   metaDescription: 'How to switch careers from banking, tech, or corporate jobs to becoming a Reformer Pilates instructor. 300-hour weekend training in Amsterdam (next term Nov 2026–Jan 2027), PMA ITTAP-approved program. PT 7 Academy.',
   keywords: [
