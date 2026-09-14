@@ -91,14 +91,6 @@ export const Academy= () => {
     return () => document.removeEventListener('click', onClick, true);
   }, []);
 
-  const scrollToEnroll = () => {
-    const enroll = document.getElementById('academy-enroll');
-    if (enroll) {
-      const offsetTop = enroll.getBoundingClientRect().top + window.scrollY - 80;
-      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-    }
-  };
-
   const scrollToInquiry = () => {
     const inquiry = document.getElementById('academy-inquiry');
     if (inquiry) {
