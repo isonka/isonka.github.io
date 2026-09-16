@@ -12,7 +12,7 @@ Provide direct contact and location for PT 7 Amsterdam.
 - **Email**: info@pt7.nl
 - **WhatsApp**: https://wa.me/31685162693
 - **Web**: https://www.pt7.nl/
-- **Instagram**: @ptstudio7amsterdam
+- **Instagram**: @pt7amsterdam
 - **Hours**: Mon–Fri 09:00–20:00; Sat–Sun 09:00–13:00
 - **Languages**: English, Turkish, Dutch
 

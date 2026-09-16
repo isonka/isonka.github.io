@@ -52,7 +52,7 @@ export const business = {
   ],
 
   sameAs: [
-    'https://www.instagram.com/ptstudio7amsterdam',
+    'https://www.instagram.com/pt7amsterdam',
     'https://www.facebook.com/ptstudio7',
     'https://www.linkedin.com/company/pt-studio-7',
     'https://classpass.com/studios/pt-studio-7-amsterdam',

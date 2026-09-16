@@ -72,8 +72,8 @@ export const TrainerDetail= () => {
             knowsAbout: trainer.specialties,
             hasCredential: trainer.qualifications,
             sameAs: trainer.slug === 'elif'
-              ? ['https://www.instagram.com/ptstudio7amsterdam', 'https://www.polestarpilates.nl/']
-              : ['https://www.instagram.com/ptstudio7amsterdam'],
+              ? ['https://www.instagram.com/pt7amsterdam', 'https://www.polestarpilates.nl/']
+              : ['https://www.instagram.com/pt7amsterdam'],
           },
         }}
       />

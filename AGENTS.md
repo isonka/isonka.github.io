@@ -32,7 +32,7 @@ Use these in copy, meta, and structured data. If something changes in the real w
 - **Address**: Van Baerlestraat 76C, 1071 BB Amsterdam (Museumplein area)  
 - **Email**: info@pt7.nl  
 - **Phone**: +31 685 162693  
-- **Social**: Instagram `@ptstudio7amsterdam`; Facebook / LinkedIn company pages (see `public/llms.txt`)  
+- **Social**: Instagram `@pt7amsterdam`; Facebook / LinkedIn company pages (see `public/llms.txt`)  
 - **Positioning**: Boutique studio, small groups (site copy often mentions max 5), privates, pregnancy-friendly offering, English-Turkish friendly, expats and locals from museumplein area  
 
 MindBody widget IDs (booking) are documented in README; Schedule/Pricing pages embed widgets — verify IDs there before editing.
