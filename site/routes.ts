@@ -57,7 +57,7 @@ const FIXED_PAGES: Route[] = [
   { path: '/corporate/', prerender: true, sitemap: { lastmod: '2026-08-27', changefreq: 'monthly', priority: '0.7' } },
   { path: '/privacy/', prerender: true, sitemap: { lastmod: '2026-08-27', changefreq: 'yearly', priority: '0.3' } },
   { path: '/equipment/', prerender: true, sitemap: { lastmod: '2026-03-10', changefreq: 'monthly', priority: '0.7' } },
-  { path: '/blog/', prerender: true, sitemap: { lastmod: '2026-03-10', changefreq: 'weekly', priority: '0.8' } },
+  { path: '/blog/', prerender: true, sitemap: { lastmod: '2026-09-17', changefreq: 'weekly', priority: '0.8' } },
 
   { path: '/prenatal-pilates-amsterdam/', prerender: true, sitemap: { lastmod: '2026-07-29', changefreq: 'monthly', priority: '0.9' } },
   { path: '/private-pilates-amsterdam/', prerender: true, sitemap: { lastmod: '2026-03-27', changefreq: 'monthly', priority: '0.9' } },
