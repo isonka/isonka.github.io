@@ -19,8 +19,8 @@
 .footer-brand {
   margin: 0 0 8px;
   font-size: clamp(1.35rem, 2.5vw, 1.75rem);
-  font-weight: 600;
-  letter-spacing: -0.03em;
+  font-weight: 400;
+  letter-spacing: 0.02em;
   line-height: 1.15;
   color: #fff;
 }

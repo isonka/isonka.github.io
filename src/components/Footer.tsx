@@ -37,7 +37,9 @@ export const Footer= () => {
   return (
     <footer className="footer">
       <div className="footer-inner">
-        <p className="footer-brand">PT 7</p>
+        <p className="footer-brand brand-mark">
+          PT <span className="brand-mark-accent">7</span>
+        </p>
         <p className="footer-tag">{t('footer.tag')}</p>
 
         <nav className="footer-nav" aria-label={t('footer.navAria')}>

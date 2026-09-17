@@ -58,6 +58,14 @@
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
+@font-face {
+  font-family: 'Megrim';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/megrim-regular.ttf') format('truetype');
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -127,4 +135,14 @@ body {
 .breadcrumbs span[aria-current="page"] {
   color: #111;
   font-weight: 500;
+}
+
+.brand-mark {
+  font-family: var(--font-brand, 'Megrim', cursive);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.brand-mark-accent {
+  color: var(--gold, #ffd700);
 }
