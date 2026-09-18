@@ -38,7 +38,7 @@ export const Footer= () => {
     <footer className="footer">
       <div className="footer-inner">
         <p className="footer-brand brand-mark">
-          PT <span className="brand-mark-accent">7</span>
+          PT<span className="brand-mark-accent">7</span>
         </p>
         <p className="footer-tag">{t('footer.tag')}</p>
 
