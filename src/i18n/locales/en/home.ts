@@ -11,7 +11,6 @@ export const enHome = {
     analyticsTitle: 'Home - PT 7 Pilates Amsterdam',
   },
   banner: {
-    aria: 'Become a Pilates instructor | Pilates teacher training at PT7 Academy',
     strong: 'Become a Pilates instructor',
     full: ' · Pilates teacher training · PMA ITTAP Approved · Next: Nov 2026',
     short: ' · Teacher training · Next: Nov 2026',

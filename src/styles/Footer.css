@@ -110,7 +110,10 @@
   background: rgba(255, 255, 255, 0.1);
 }
 
-.lang-switch [aria-current='page'] {
+/* Needs to match the specificity of the `.lang-switch a, .lang-switch
+   span[aria-current='page']` rule above, or that rule's `color: #fff` wins on
+   specificity and the active language renders white on gold. */
+.lang-switch span[aria-current='page'] {
   opacity: 1;
   color: var(--ink, #111);
   background: var(--gold, #ffd700);

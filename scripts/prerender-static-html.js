@@ -277,6 +277,38 @@ async function prerenderRoutes() {
 
         await page.evaluate(() => {
           document.getElementById('root')?.setAttribute('data-prerendered', 'true');
+
+          // React hydration expects the Suspense boundary markers that server
+          // rendering emits (<!--$--> ... <!--/$-->). This snapshot is a client
+          // DOM dump, so it has none, and hydrateRoot() bails out with error
+          // #418 and re-renders the whole tree. The app renders exactly one
+          // Suspense boundary in the hydrated tree -- Layout's, wrapping
+          // <Outlet /> in <main class="main-content"> (DeferredChatbot's other
+          // boundary returns null until after hydration). Its DOM content is
+          // therefore exactly main's children, so we can restore the markers.
+          // Adding a second boundary to the hydrated tree means updating this.
+          const main = document.querySelector('main.main-content');
+          if (main) {
+            main.insertBefore(document.createComment('$'), main.firstChild);
+            main.appendChild(document.createComment('/$'));
+          }
+
+          // Same problem one level down: JSX like `text{' '}<Link/>` renders two
+          // adjacent text nodes, which server rendering keeps apart with an
+          // empty comment. Serializing this DOM to HTML would fuse them into
+          // one node and hydration would read that as changed text. The live
+          // DOM still has them separate, so restore the separators here.
+          const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+          const adjacent = [];
+          let node;
+          while ((node = walker.nextNode())) {
+            if (node.nextSibling && node.nextSibling.nodeType === Node.TEXT_NODE) {
+              adjacent.push(node);
+            }
+          }
+          for (const text of adjacent) {
+            text.parentNode.insertBefore(document.createComment(''), text.nextSibling);
+          }
         });
 
         const html = await page.content();

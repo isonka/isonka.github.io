@@ -3,9 +3,12 @@
 # All robots
 User-agent: *
 Allow: /
-# search=yes: index for search. ai-input=yes: OK to use site facts in AI answers (see /llms.txt).
-# ai-train=yes: do not use site content to train foundation models.
-Content-Signal: ai-train=yes, search=yes, ai-input=yes
+# Content signals. Kept commented out: it is not part of the classic robots.txt
+# grammar, so validators report it as an unknown directive. Our policy is:
+#   search=yes    - index for search
+#   ai-input=yes  - OK to use site facts in AI answers (see /llms.txt)
+#   ai-train=yes  - OK to use site content to train foundation models
+# Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 # AI/LLM crawlers — allowed to fetch pages, /llms.txt, and /llms-full.txt for accurate citations
 User-agent: GPTBot

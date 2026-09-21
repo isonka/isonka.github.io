@@ -2,7 +2,7 @@ export const enCommon = {
   nav: {
     homeAria: 'PT 7 Home',
     bookNow: 'Book Now',
-    bookNowAria: 'Book a session',
+    bookNowAria: 'Book Now: reserve a session',
     bookClassAria: 'Book a class',
     closeMenu: 'Close menu',
     openMenu: 'Open menu',
@@ -29,8 +29,8 @@ export const enCommon = {
     contact: 'Contact',
     contactAria: 'Contact us',
     language: 'Language',
-    switchToEn: 'Switch to English',
-    switchToNl: 'Switch to Dutch',
+    switchToEn: 'EN: Switch to English',
+    switchToNl: 'NL: Switch to Dutch',
   },
   footer: {
     tag: 'Reformer Pilates & strength training · Museumplein Amsterdam',

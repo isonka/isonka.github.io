@@ -5,7 +5,7 @@ export const nlCommon: DeepStringify<EnCommon> = {
   nav: {
     homeAria: 'PT 7 home',
     bookNow: 'Boek nu',
-    bookNowAria: 'Boek een sessie',
+    bookNowAria: 'Boek nu: reserveer een sessie',
     bookClassAria: 'Boek een les',
     closeMenu: 'Menu sluiten',
     openMenu: 'Menu openen',
@@ -32,8 +32,8 @@ export const nlCommon: DeepStringify<EnCommon> = {
     contact: 'Contact',
     contactAria: 'Neem contact op',
     language: 'Taal',
-    switchToEn: 'Schakel over naar Engels',
-    switchToNl: 'Schakel over naar Nederlands',
+    switchToEn: 'EN: Schakel over naar Engels',
+    switchToNl: 'NL: Schakel over naar Nederlands',
   },
   footer: {
     tag: 'Reformer pilates & krachttraining · Museumplein Amsterdam',

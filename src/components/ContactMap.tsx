@@ -1,6 +1,7 @@
 import { useEffect, useState, type FC, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { CONSENT_UPDATED_EVENT, getStoredConsent, type Pt7Consent } from '../utils/consentTracking';
+import { isPrerender } from '../utils/prerender';
 import '../styles/ContactMap.css';
 
 const MAP_SRC =
@@ -93,6 +94,8 @@ export const ContactMap: FC = () => {
   const [showMap, setShowMap] = useState(false);
 
   useEffect(() => {
+    if (isPrerender()) return;
+
     const sync = () => {
       if (googleEmbedAllowed(getStoredConsent())) setShowMap(true);
     };

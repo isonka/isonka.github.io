@@ -9,11 +9,7 @@ export const AcademyUrgencyBanner= () => {
   const to = locale === 'nl' ? '/academy/nl/' : '/academy/';
 
   return (
-    <Link
-      to={to}
-      className="academy-urgency-banner"
-      aria-label={t('banner.aria')}
-    >
+    <Link to={to} className="academy-urgency-banner">
       <div className="urgency-content">
         <span className="urgency-text">
           <strong>{t('banner.strong')}</strong>

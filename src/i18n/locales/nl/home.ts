@@ -14,7 +14,6 @@ export const nlHome: DeepStringify<EnHome> = {
     analyticsTitle: 'Home - PT 7 Pilates Amsterdam',
   },
   banner: {
-    aria: 'Word pilatesinstructeur | Pilates docentenopleiding bij PT7 Academy',
     strong: 'Word pilatesinstructeur',
     full: ' · Pilates docentenopleiding · PMA ITTAP Approved · Volgende: nov 2026',
     short: ' · Docentenopleiding · Volgende: nov 2026',

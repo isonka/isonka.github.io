@@ -2,6 +2,7 @@ import { useEffect, useRef, type FC } from 'react';
 import { Link } from 'react-router-dom';
 import type { Workout } from '../data/workouts';
 import { useInViewOnce } from '../hooks/useInViewOnce';
+import { isPrerender } from '../utils/prerender';
 
 interface WorkoutCardProps {
   workout: Workout;
@@ -12,6 +13,8 @@ export const WorkoutCard: FC<WorkoutCardProps> = ({ workout }) => {
   const mediaInnerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (isPrerender()) return;
+
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduce) return;
 
