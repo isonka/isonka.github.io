@@ -197,6 +197,41 @@
   background: #f8f9fa;
 }
 
+.blog-post-content .blog-table-wrap {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.blog-post-content .blog-table-wrap .blog-table {
+  margin: 0;
+  min-width: 40em;
+}
+
+.blog-post-content .blog-table--prose th,
+.blog-post-content .blog-table--prose td {
+  text-align: left;
+  vertical-align: top;
+}
+
+.blog-post-content .accreditation-logos {
+  display: flex;
+  align-items: flex-end;
+  gap: 32px;
+  margin: 1.5em 0 0.25em;
+  flex-wrap: wrap;
+}
+
+.blog-post-content .accreditation-logos img {
+  margin: 0;
+  border-radius: 0;
+  width: auto;
+  height: 120px;
+}
+
+.blog-post-content .accreditation-logos .ittap-logo {
+  height: 140px;
+}
+
 .blog-post-content .blog-compare-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

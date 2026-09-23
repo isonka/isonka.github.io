@@ -230,6 +230,8 @@ export const enAcademy = {
   },
   faqSection: {
     heading: 'Questions before you enroll',
+    further:
+      'Further questions: <post>Switching Careers Into Pilates? Ask These 7 Questions First</post>.',
   },
   bottomCta: {
     kicker: 'Next step',

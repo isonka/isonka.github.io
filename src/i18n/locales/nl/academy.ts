@@ -233,6 +233,8 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
   },
   faqSection: {
     heading: 'Vragen vóór inschrijving',
+    further:
+      'Meer vragen: <post>Switching Careers Into Pilates? Ask These 7 Questions First</post>.',
   },
   bottomCta: {
     kicker: 'Volgende stap',

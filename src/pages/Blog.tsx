@@ -51,6 +51,7 @@ export const Blog= () => {
                       height="400"
                       loading="lazy"
                       decoding="async"
+                      style={post.imagePosition ? { objectPosition: post.imagePosition } : undefined}
                     />
                   </div>
                   <p className="blog-meta">

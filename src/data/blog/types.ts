@@ -8,6 +8,7 @@ export interface BlogPost {
   date: string;
   dateModified?: string;
   image: string;
+  imagePosition?: 'center' | 'top';
   tags: string[];
   metaDescription: string;
   keywords: string[];

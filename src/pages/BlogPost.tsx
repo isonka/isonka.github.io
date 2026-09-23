@@ -113,6 +113,7 @@ export const BlogPost= () => {
               height="540"
               loading="eager"
               decoding="async"
+              style={post.imagePosition ? { objectPosition: post.imagePosition } : undefined}
             />
           </div>
 
@@ -138,6 +139,7 @@ export const BlogPost= () => {
                           height="80"
                           loading="lazy"
                           decoding="async"
+                          style={recentPost.imagePosition ? { objectPosition: recentPost.imagePosition } : undefined}
                         />
                       </div>
                       <div className="recent-post-content">

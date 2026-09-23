@@ -562,6 +562,15 @@ export const Academy= () => {
                 </div>
               ))}
             </div>
+            <p className="academy-faq-further">
+              <Trans
+                ns="academy"
+                i18nKey="faqSection.further"
+                components={{
+                  post: <Link to="/blog/switching-careers-into-pilates-7-questions/" />,
+                }}
+              />
+            </p>
           </div>
         </section>
 

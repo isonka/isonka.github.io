@@ -1,4 +1,5 @@
 import type { BlogPost } from './types.ts';
+import { post as switchingCareersIntoPilates7Questions } from './posts/switching-careers-into-pilates-7-questions.ts';
 import { post as groupPilatesClassSizeAttentionAmsterdam } from './posts/group-pilates-class-size-attention-amsterdam.ts';
 import { post as careerChangeBankerToPilatesInstructor } from './posts/career-change-banker-to-pilates-instructor.ts';
 import { post as pmaIttapAccreditationReformerCourseAmsterdam } from './posts/pma-ittap-accreditation-reformer-course-amsterdam.ts';
@@ -9,6 +10,7 @@ import { post as pilatesForMenStrengthFlexibilityAthleticPerformance } from './p
 export type { BlogPost };
 
 export const blogPosts: BlogPost[] = [
+  switchingCareersIntoPilates7Questions,
   groupPilatesClassSizeAttentionAmsterdam,
   careerChangeBankerToPilatesInstructor,
   pmaIttapAccreditationReformerCourseAmsterdam,
