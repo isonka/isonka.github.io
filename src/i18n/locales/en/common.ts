@@ -37,6 +37,7 @@ export const enCommon = {
     navAria: 'Footer',
     book: 'Book',
     pricing: 'Pricing',
+    intro: 'Intro offer',
     reformerPilates: 'Reformer Pilates',
     prenatal: 'Prenatal',
     academy: 'Academy',

@@ -47,6 +47,26 @@ const FIXED_PAGES: Route[] = [
 
   { path: '/pricing/', prerender: true, sitemap: { lastmod: '2026-09-14', changefreq: 'weekly', priority: '0.9' } },
   { path: '/pricing/nl/', prerender: true, sitemap: { lastmod: '2026-09-14', changefreq: 'weekly', priority: '0.9' } },
+  {
+    path: '/intro/',
+    prerender: true,
+    sitemap: { lastmod: '2026-09-25', changefreq: 'monthly', priority: '0.8' },
+    meta: {
+      title: 'Intro pack: 3 group classes for €50 | PT 7 Pilates Amsterdam',
+      description:
+        'New clients at PT 7 Museumplein: 3 small-group classes for €50. Max 5 people, 45 minutes. Valid 3 weeks. Buy online.',
+    },
+  },
+  {
+    path: '/intro/nl/',
+    prerender: true,
+    sitemap: { lastmod: '2026-09-25', changefreq: 'monthly', priority: '0.8' },
+    meta: {
+      title: 'Introductiepakket: 3 groepslessen voor €50 | PT 7 Pilates Amsterdam',
+      description:
+        'Nieuwe klanten bij PT 7 Museumplein: 3 groepslessen voor €50. Maximaal 5 personen, 45 minuten. Geldig 3 weken. Online kopen.',
+    },
+  },
   { path: '/schedule/', prerender: true, sitemap: { lastmod: '2026-09-15', changefreq: 'daily', priority: '0.9' } },
   { path: '/schedule/nl/', prerender: true, sitemap: { lastmod: '2026-09-15', changefreq: 'daily', priority: '0.9' } },
   { path: '/instructors/', prerender: true, sitemap: { lastmod: '2026-03-10', changefreq: 'monthly', priority: '0.8' } },

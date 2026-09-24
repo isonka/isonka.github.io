@@ -33,6 +33,14 @@ const fixedPageMeta = {
     title: 'Pilates prijzen Amsterdam Zuid | Pakketten & proefles | PT 7 Pilates',
     description: 'Pilates prijzen aan het Museumplein (Amsterdam Zuid): introductiepakket 3 groepslessen voor €50, daarna vanaf €28/les (max. 5). Abonnementen, privé, Reformer, TRX & kracht. Online boeken.',
   },
+  '/intro/': {
+    title: 'Intro pack: 3 group classes for €50 | PT 7 Pilates Amsterdam',
+    description: 'New clients at PT 7 Museumplein: 3 small-group classes for €50. Max 5 people, 45 minutes. Valid 3 weeks. Buy online.',
+  },
+  '/intro/nl/': {
+    title: 'Introductiepakket: 3 groepslessen voor €50 | PT 7 Pilates Amsterdam',
+    description: 'Nieuwe klanten bij PT 7 Museumplein: 3 groepslessen voor €50. Maximaal 5 personen, 45 minuten. Geldig 3 weken. Online kopen.',
+  },
   '/academy/': {
     title: 'Reformer Pilates Instructor Course Amsterdam | Teacher Training | PT7 Academy',
     description: 'Reformer Pilates instructor course and teacher training in Amsterdam. 300-hour Reformer Pilates instructor course (PMA ITTAP approved), Mat Pilates track, weekend schedule for career changers. Course fee from €2,000 + VAT.',

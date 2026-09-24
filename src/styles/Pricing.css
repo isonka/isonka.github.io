@@ -129,6 +129,11 @@
   max-width: 36em;
 }
 
+.special-offer .offer-details a {
+  color: #111;
+  font-weight: 600;
+}
+
 .special-price {
   font-size: 1.75rem;
   font-weight: 600;

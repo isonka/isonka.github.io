@@ -1,4 +1,5 @@
 import { memo, useEffect, useRef } from 'react';
+import { reinitHealcodeWidgets } from '../utils/healcode';
 import { isPrerender } from '../utils/prerender';
 
 type StableHealcodeSlotProps = {
@@ -23,6 +24,7 @@ export const StableHealcodeSlot = memo(function StableHealcodeSlot({
     if (!el || mounted.current) return;
     el.innerHTML = html;
     mounted.current = true;
+    reinitHealcodeWidgets();
   }, [html]);
 
   return <div ref={ref} className={className} />;

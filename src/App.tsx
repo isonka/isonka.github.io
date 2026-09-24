@@ -21,6 +21,7 @@ import './styles/design.css';
 
 const Chatbot = lazy(() => import('./components/Chatbot').then(m => ({ default: m.Chatbot })));
 const Pricing = lazy(() => import('./pages/Pricing').then(m => ({ default: m.Pricing })));
+const IntroOffer = lazy(() => import('./pages/IntroOffer').then(m => ({ default: m.IntroOffer })));
 const Schedule = lazy(() => import('./pages/Schedule').then(m => ({ default: m.Schedule })));
 const Equipment = lazy(() => import('./pages/Equipment').then(m => ({ default: m.Equipment })));
 const EquipmentDetail = lazy(() => import('./pages/EquipmentDetail').then(m => ({ default: m.EquipmentDetail })));
@@ -156,6 +157,8 @@ const router = createBrowserRouter([
       { path: 'nl', element: <Home /> },
       { path: 'pricing', element: <Pricing /> },
       { path: 'pricing/nl', element: <Pricing /> },
+      { path: 'intro', element: <IntroOffer /> },
+      { path: 'intro/nl', element: <IntroOffer /> },
       { path: 'schedule', element: <Schedule /> },
       { path: 'schedule/nl', element: <Schedule /> },
       { path: 'equipment', element: <Equipment /> },

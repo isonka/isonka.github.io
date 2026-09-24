@@ -156,6 +156,9 @@ export const Pricing= () => {
             <span className="offer-badge">{t('offer.badge')}</span>
             <h3>{t('offer.title')}</h3>
             <p>{t('offer.description', { classes: String(INTRO.classes), price: formatEur(INTRO.price) })}</p>
+            <p className="offer-details">
+              <Link to={isNl ? '/intro/nl/' : '/intro/'}>{t('offer.details')}</Link>
+            </p>
             <span className="special-price">{formatEur(INTRO.price)}</span>
             <StableHealcodeSlot
                   className="buy-button healcode-pricing-option-text-link"

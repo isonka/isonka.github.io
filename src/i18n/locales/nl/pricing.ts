@@ -37,6 +37,7 @@ export const nlPricing: DeepStringify<EnPricing> = {
     badge: 'Speciale aanbieding',
     title: 'Introductiepakket',
     description: 'Alleen voor nieuwe klanten: {{classes}} groepslessen voor {{price}}',
+    details: 'Bekijk het introductieaanbod',
   },
   nav: {
     aria: 'Prijzensecties',

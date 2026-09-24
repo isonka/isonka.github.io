@@ -23,6 +23,7 @@ Boutique Pilates and one-on-one training studio in Museumplein, Amsterdam.
 - Website: <https://www.pt7.nl/>
 - Schedule: <https://www.pt7.nl/schedule/>
 - Pricing: <https://www.pt7.nl/pricing/>
+- Intro offer (new clients): <https://www.pt7.nl/intro/>
 - Instructors: <https://www.pt7.nl/instructors/>
 - Academy: <https://www.pt7.nl/academy/>
 - Equipment: <https://www.pt7.nl/equipment/>

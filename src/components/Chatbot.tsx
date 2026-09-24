@@ -241,7 +241,7 @@ ${instructorReason}
 **Pricing:**
 ${pricing}
 
-**Special offer:** New clients, introduction package: ${INTRO.classes} group classes for ${formatEur(INTRO.price)}.`;
+**Special offer:** New clients, introduction package: ${INTRO.classes} group classes for ${formatEur(INTRO.price)}. https://www.pt7.nl/intro/`;
 
       addBotMessage(recommendation, 2000);
       addBotMessage(

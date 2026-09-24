@@ -40,6 +40,7 @@ export const nlCommon: DeepStringify<EnCommon> = {
     navAria: 'Footer',
     book: 'Boeken',
     pricing: 'Prijzen',
+    intro: 'Introductie',
     reformerPilates: 'Reformer pilates',
     prenatal: 'Prenataal',
     academy: 'Academy',

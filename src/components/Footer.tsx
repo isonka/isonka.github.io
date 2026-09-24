@@ -14,6 +14,7 @@ export const Footer= () => {
   const home = homePath(locale);
   const academyHref = locale === 'nl' ? '/academy/nl/' : '/academy/';
   const pricingHref = locale === 'nl' ? '/pricing/nl/' : '/pricing/';
+  const introHref = locale === 'nl' ? '/intro/nl/' : '/intro/';
   const scheduleHref = locale === 'nl' ? '/schedule/nl/' : '/schedule/';
 
   const handleCookieSettings = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -46,6 +47,7 @@ export const Footer= () => {
           <ul className="footer-links">
             <li><Link to={scheduleHref}>{t('footer.book')}</Link></li>
             <li><Link to={pricingHref}>{t('footer.pricing')}</Link></li>
+            <li><Link to={introHref}>{t('footer.intro')}</Link></li>
             <li><Link to="/reformer-pilates-amsterdam/">{t('footer.reformerPilates')}</Link></li>
             <li><Link to="/prenatal-pilates-amsterdam/">{t('footer.prenatal')}</Link></li>
             <li><Link to={academyHref}>{t('footer.academy')}</Link></li>

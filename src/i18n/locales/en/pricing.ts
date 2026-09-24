@@ -34,6 +34,7 @@ export const enPricing = {
     badge: 'Special offer',
     title: 'Introduction package',
     description: 'New clients only: {{classes}} group classes for {{price}}',
+    details: 'See the intro offer',
   },
   nav: {
     aria: 'Pricing sections',
