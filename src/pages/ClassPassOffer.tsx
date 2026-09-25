@@ -98,10 +98,10 @@ export const ClassPassOffer = () => {
             <div className="comparison-card direct-card">
               <div className="card-header">
                 <img
-                  src="/assets/images/ts_logo.webp"
+                  src="/assets/images/pt7logo.webp"
                   alt="PT 7"
                   className="pt7-logo"
-                  width={133}
+                  width={40}
                   height={40}
                   loading="lazy"
                   decoding="async"

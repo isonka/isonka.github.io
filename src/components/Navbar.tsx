@@ -77,10 +77,10 @@ export const Navbar= () => {
         <div className="navbar-logo">
           <Link to={home} aria-label={t('nav.homeAria')}>
             <img
-              src="/assets/images/ts_logo.webp"
-              alt="PT 7 Logo"
-              width={160}
-              height={48}
+              src="/assets/images/pt7logo.webp"
+              alt="PT 7"
+              width={56}
+              height={56}
               loading="eager"
               decoding="async"
             />

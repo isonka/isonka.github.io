@@ -29,7 +29,7 @@ export const SEOHead = ({
   canonical,
   ogTitle,
   ogDescription,
-  ogImage = '/assets/images/og-share.jpg',
+  ogImage = '/assets/images/og-share.webp',
   ogLocale = 'en_US',
   ogLocaleAlternates = ['nl_NL'],
   htmlLang = 'en',

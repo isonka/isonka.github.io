@@ -100,7 +100,7 @@ export const IntroOffer = () => {
 
         <ServiceTrustBand
           layout="proof"
-          imageSrc="/assets/images/reformer-pilates-amsterdam.jpg"
+          imageSrc="/assets/images/reformer-pilates-amsterdam.webp"
           imageAlt={t('imageAlt')}
           imageWidth={1600}
           imageHeight={2400}

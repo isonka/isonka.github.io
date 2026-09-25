@@ -172,7 +172,7 @@ export const Home= () => {
         canonical={canonical}
         ogTitle={t('seo.ogTitle')}
         ogDescription={t('seo.ogDescription')}
-        ogImage="/assets/images/og-share.jpg"
+        ogImage="/assets/images/og-share.webp"
         ogLocale={locale === 'nl' ? 'nl_NL' : 'en_US'}
         ogLocaleAlternates={locale === 'nl' ? ['en_US'] : ['nl_NL']}
         htmlLang={locale === 'nl' ? 'nl' : 'en'}

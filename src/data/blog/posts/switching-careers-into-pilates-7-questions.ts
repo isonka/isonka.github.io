@@ -150,7 +150,7 @@ export const post: BlogPost = {
     `,
   author: 'PT 7 Team',
   date: '2026-09-20',
-  image: '/assets/images/academy-training.jpg',
+  image: '/assets/images/academy-training.webp',
   imagePosition: 'top',
   tags: ['Career Change', 'Pilates Teacher Training', 'PMA ITTAP', 'PT7 Academy', 'Learning Science'],
   metaDescription: 'Seven questions that will tell you what to look for in a Pilates teacher training, including PT7 Academy\'s 300-hour Reformer Pilates Instructor Course.',

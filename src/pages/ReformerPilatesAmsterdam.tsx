@@ -113,7 +113,7 @@ export const ReformerPilatesAmsterdam= () => {
 
         <ServiceTrustBand
           layout="proof"
-          imageSrc="/assets/images/reformer-pilates-amsterdam.jpg"
+          imageSrc="/assets/images/reformer-pilates-amsterdam.webp"
           imageAlt="Instructor coaching a Reformer client at PT 7 Amsterdam"
           imageWidth={1600}
           imageHeight={2400}

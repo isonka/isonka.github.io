@@ -268,7 +268,7 @@ export const workoutDetails: WorkoutDetailData[] = [
       canonical: 'https://www.pt7.nl/workouts/trx/',
       ogTitle: 'TRX Suspension Training Amsterdam | PT 7 Pilates',
       ogDescription: 'Expert TRX suspension training at Museumplein. Build total body strength, balance & functional fitness in small groups (max 5).',
-      ogImage: '/assets/images/trx.jpg',
+      ogImage: '/assets/images/trx.webp',
     },
     breadcrumbName: 'TRX Training',
     hero: {
@@ -360,7 +360,7 @@ export const workoutDetails: WorkoutDetailData[] = [
       canonical: 'https://www.pt7.nl/workouts/functional-training/',
       ogTitle: 'Nike Strength Training Amsterdam | PT 7 Pilates',
       ogDescription: 'Premium Nike Strength equipment. Olympic barbell training with expert coaches at our boutique Museumplein studio.',
-      ogImage: '/assets/images/og-share.jpg',
+      ogImage: '/assets/images/og-share.webp',
     },
     breadcrumbName: 'Nike Strength Training',
     hero: {
@@ -459,7 +459,7 @@ export const workoutDetails: WorkoutDetailData[] = [
       canonical: 'https://www.pt7.nl/workouts/cardio/',
       ogTitle: 'Cardio Training Amsterdam | PT 7 Pilates',
       ogDescription: 'High-energy cardio workouts to burn calories and build endurance. Small groups (max 5) at Museumplein.',
-      ogImage: '/assets/images/cardio.jpg',
+      ogImage: '/assets/images/cardio.webp',
     },
     breadcrumbName: 'Cardio Training',
     hero: {

@@ -9,10 +9,7 @@ const QUALITY_PHOTO = 82;
 const QUALITY_PNG = 90;
 const CONVERTIBLE = ['.jpg', '.jpeg', '.png'];
 
-const KEEP = new Set([
-  'pt7logo.png',
-  'og-share.jpg',
-]);
+const KEEP = new Set();
 
 const dryRun = process.argv.includes('--dry-run');
 

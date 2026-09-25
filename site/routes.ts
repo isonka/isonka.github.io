@@ -40,7 +40,7 @@ const FIXED_PAGES: Route[] = [
       lastmod: '2026-09-14',
       changefreq: 'weekly',
       priority: '1.0',
-      image: image('pt7logo.png', 'PT 7 Pilates Amsterdam - Reformer Pilates Studio Museumplein'),
+      image: image('pt7logo.webp', 'PT 7 Pilates Amsterdam - Reformer Pilates Studio Museumplein'),
     },
   },
   { path: '/nl/', prerender: true, sitemap: { lastmod: '2026-09-14', changefreq: 'weekly', priority: '1.0' } },

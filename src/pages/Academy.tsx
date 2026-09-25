@@ -222,7 +222,7 @@ export const Academy= () => {
               <div className="academy-proof">
                 <div className="academy-proof-media">
                   <img
-                    src="/assets/images/academy-training.jpg"
+                    src="/assets/images/academy-training.webp"
                     alt="PT7 Academy Reformer instructor training at the Museumplein studio"
                     width={1600}
                     height={1067}
