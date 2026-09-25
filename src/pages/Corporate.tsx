@@ -8,7 +8,7 @@ import '../styles/Corporate.css';
 
 export const Corporate= () => {
   useEffect(() => {
-    trackPageView('/corporate', 'Corporate Pilates Amsterdam | For Business | PT 7 Pilates');
+    trackPageView('/corporate/', 'Corporate Pilates Amsterdam | For Business | PT 7 Pilates');
   }, []);
 
   return (

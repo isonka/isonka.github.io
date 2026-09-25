@@ -55,7 +55,9 @@ export const WorkoutDetail= () => {
           service: {
             name: workout.hero.title,
             description: workout.intro.lead,
-            serviceUrl: `${baseUrl}/workouts/${workout.slug}/`,
+            serviceUrl: isReformerGuide
+              ? `${baseUrl}/reformer-pilates-amsterdam/`
+              : `${baseUrl}/workouts/${workout.slug}/`,
             areaServed: 'Amsterdam',
             offers: serviceOffers,
           },

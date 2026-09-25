@@ -30,6 +30,11 @@ const faqs = [
     answer: 'Yes. We offer a single private session so you can experience the studio, meet your instructor, and decide if it is the right fit. Many clients start with a single session and then move to a package for better value.',
   },
   {
+    question: 'How much is a private Pilates session in Amsterdam?',
+    answer:
+      'Private, duo, and trio prices are on the pricing page. New clients can also start with 3 group classes for €50. Book a private session from the schedule.',
+  },
+  {
     question: 'What equipment is used in private Pilates sessions?',
     answer: 'Depending on your goals, private sessions at PT 7 can include the Reformer, Tower Reformer, Cadillac (Trapeze Table), Wunda Chair, and Spine Corrector. Your instructor selects the most appropriate equipment for each session.',
   },

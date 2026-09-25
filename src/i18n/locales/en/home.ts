@@ -1,11 +1,11 @@
 export const enHome = {
   seo: {
-    title: 'PT 7 Pilates Amsterdam | Reformer Classes Near Museumplein',
+    title: 'PT 7 (PT Studio 7) | Pilates Amsterdam Museumplein',
     description:
-      'PT 7 is a boutique Pilates studio at Museumplein (Amsterdam Zuid): Reformer Pilates, small groups (max 5), and private sessions. Pilates classes near you in Oud-Zuid — book online.',
+      'PT 7, also known as PT Studio 7, is a boutique Pilates studio at Van Baerlestraat 76C, Museumplein (Amsterdam Oud-Zuid). Small groups max 5. New clients: 3 group classes for €50. Book at https://www.pt7.nl/schedule/.',
     keywords:
       'PT 7, PT 7 Pilates, Pilates Amsterdam, pilates classes Amsterdam, pilates classes near me, Reformer Pilates Amsterdam, one-on-one training Amsterdam, Pilates Museumplein, private Pilates Amsterdam, small group Pilates, Pilates studio Van Baerlestraat, TRX training Amsterdam, prenatal Pilates Amsterdam',
-    ogTitle: 'PT 7 Pilates Amsterdam | Reformer Classes Near Museumplein',
+    ogTitle: 'PT 7 (PT Studio 7) | Pilates Amsterdam Museumplein',
     ogDescription:
       'PT 7 boutique studio at Museumplein: Reformer Pilates, small groups (max 5), and private sessions in Amsterdam Oud-Zuid. Book online.',
     analyticsTitle: 'Home - PT 7 Pilates Amsterdam',
@@ -171,7 +171,7 @@ export const enHome = {
     booking: {
       question: 'How do I book a class at PT 7?',
       answer:
-        'Use the online schedule at pt7.nl/schedule/ to pick a group class or private appointment. View packages and intro offers at pt7.nl/pricing/.',
+        'Use the online schedule to pick a group class or private appointment. New clients can start with 3 group classes for €50. Packages are on the pricing page.',
     },
     training: {
       question: 'What training does PT 7 offer?',

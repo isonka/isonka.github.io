@@ -19,7 +19,7 @@ export const workouts: Workout[] = [
     style: { objectPosition: 'center 45%' },
   },
   {
-    to: '/workouts/trx',
+    to: '/workouts/trx/',
     src: '/assets/images/trx.webp',
     alt: 'TRX suspension training at PT 7 Amsterdam',
     title: 'TRX Training',
@@ -27,14 +27,14 @@ export const workouts: Workout[] = [
     style: { objectPosition: 'center 42%' },
   },
   {
-    to: '/workouts/functional-training',
+    to: '/workouts/functional-training/',
     src: '/assets/images/nike_strength_studio.webp',
     alt: 'Nike Strength Training',
     title: 'Nike Strength Training',
     description: 'Premium Nike equipment: half rack, Olympic barbell & dumbbells',
   },
   {
-    to: '/workouts/cardio',
+    to: '/workouts/cardio/',
     src: '/assets/images/cardio.webp',
     alt: 'Cardio Training',
     title: 'Cardio',

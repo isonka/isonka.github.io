@@ -54,9 +54,9 @@ const heroImages = [
 ];
 
 const trainers = [
-  { id: 'elif', to: '/trainer/elif', src: '/assets/images/elif.webp', name: 'Elif Arzu Ogan' },
-  { id: 'gokben', to: '/trainer/gokben', src: '/assets/images/gokben.webp', name: 'Gökben Öztekin' },
-  { id: 'goknur', to: '/trainer/goknur', src: '/assets/images/goknur.webp', name: 'Göknur Dipli' },
+  { id: 'elif', to: '/trainer/elif/', src: '/assets/images/elif.webp', name: 'Elif Arzu Ogan' },
+  { id: 'gokben', to: '/trainer/gokben/', src: '/assets/images/gokben.webp', name: 'Gökben Öztekin' },
+  { id: 'goknur', to: '/trainer/goknur/', src: '/assets/images/goknur.webp', name: 'Göknur Dipli' },
   { id: 'gulce', to: '/trainer/gulce/', src: '/assets/images/gulce.webp', name: 'Gülce Koç' },
   { id: 'lal', to: '/trainer/lal/', src: '/assets/images/lal.webp', name: 'Lal Avgen' },
   { id: 'nisan', to: '/trainer/nisan/', src: '/assets/images/nisan.webp', name: 'Nisan Atalay' },

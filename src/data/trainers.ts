@@ -36,7 +36,7 @@ export const trainerProfiles: TrainerProfile[] = [
     specialties: ['Reformer Pilates', 'TRX', 'Strength Training'],
     available: true,
     seo: {
-      title: 'Elif Arzu Ogan - Comprehensive Pilates, Strength Training, Prenatal Pilates Instructor | PT 7 Pilates',
+      title: 'Elif Arzu Ogan | Pilates Instructor at PT 7 Amsterdam',
       description: 'Meet Elif Arzu Ogan, expert Pilates and functional training instructor at PT 7 Amsterdam. Book your personalized session today.',
       keywords: 'Elif Arzu Ogan, Pilates instructor Amsterdam, functional training, PT 7, Pilates leraar Amsterdam',
     },
@@ -84,7 +84,7 @@ export const trainerProfiles: TrainerProfile[] = [
     specialties: ['Reformer Pilates', 'Mat Pilates', 'Prenatal Pilates'],
     available: true,
     seo: {
-      title: 'Gökben Öztekin - Pilates Instructor | PT 7 Pilates',
+      title: 'Gökben Öztekin | Pilates Instructor at PT 7 Amsterdam',
       description: 'Meet Gökben Öztekin, expert Reformer Pilates instructor at PT 7 Amsterdam. Specializing in precise technique and mindful movement.',
       keywords: 'Gökben Öztekin, Reformer Pilates, Pilates instructor Amsterdam, PT 7, Pilates leraar Amsterdam',
     },
@@ -114,7 +114,7 @@ export const trainerProfiles: TrainerProfile[] = [
     specialties: ['Reformer Pilates', 'Mat Pilates', 'Rehabilitation'],
     available: true,
     seo: {
-      title: 'Göknur Dipli - Comprehensive Pilates, Strength Training, Prenatal Pilates Instructor | PT 7 Pilates',
+      title: 'Göknur Dipli | Pilates Instructor at PT 7 Amsterdam',
       description: 'Meet Göknur Dipli, expert Pilates and functional training instructor at PT 7 Amsterdam. Holistic approach to fitness and wellness.',
       keywords: 'Göknur Dipli, Pilates instructor Amsterdam, PT 7, Pilates leraar Amsterdam, one-on-one trainer',
     },
@@ -157,7 +157,7 @@ export const trainerProfiles: TrainerProfile[] = [
     specialties: ['Reformer Pilates'],
     available: true,
     seo: {
-      title: 'Gülce Koç - Pilates Instructor | PT 7 Pilates',
+      title: 'Gülce Koç | Pilates Instructor at PT 7 Amsterdam',
       description: 'Meet Gülce Koç, certified Reformer Pilates instructor at PT 7 Amsterdam. Passionate about sharing strength, balance, and joy through Pilates.',
       keywords: 'Gülce Koç, Gülce, Reformer Pilates, Pilates instructor Amsterdam, PT 7, Pilates leraar',
     },
@@ -189,7 +189,7 @@ export const trainerProfiles: TrainerProfile[] = [
     specialties: ['Reformer Pilates'],
     available: true,
     seo: {
-      title: 'Lal Avgen - Pilates Instructor | PT 7 Pilates',
+      title: 'Lal Avgen | Pilates Instructor at PT 7 Amsterdam',
       description: 'Meet Lal Avgen, certified Reformer Pilates instructor at PT 7 Amsterdam. Visual artist and creative technologist bringing mindful movement to her teaching.',
       keywords: 'Lal Avgen, Lal, Reformer Pilates, Pilates instructor Amsterdam, PT 7, Pilates leraar',
     },
@@ -222,7 +222,7 @@ export const trainerProfiles: TrainerProfile[] = [
     specialties: ['Reformer Pilates'],
     available: true,
     seo: {
-      title: 'Nisan Atalay - Pilates Instructor | PT 7 Pilates',
+      title: 'Nisan Atalay | Pilates Instructor at PT 7 Amsterdam',
       description: 'Meet Nisan Atalay, certified Reformer Pilates instructor at PT 7 Amsterdam. Dutch-speaking instructor passionate about mindful movement.',
       keywords: 'Nisan Atalay, Nisan, Reformer Pilates, Pilates instructor Amsterdam, PT 7, Nederlands sprekende Pilates instructeur, Pilates leraar',
     },
@@ -253,7 +253,7 @@ export const trainerProfiles: TrainerProfile[] = [
     specialties: ['Reformer Pilates'],
     available: true,
     seo: {
-      title: 'Kelly Tin - Pilates Instructor | PT 7 Pilates',
+      title: 'Kelly Tin | Pilates Instructor at PT 7 Amsterdam',
       description: 'Meet Kelly Tin, certified Reformer Pilates instructor at PT 7 Amsterdam. English- and Dutch-speaking coach with a strength and HIIT background.',
       keywords: 'Kelly Tin, Kelly, Reformer Pilates, Pilates instructor Amsterdam, PT 7, Nederlands sprekende Pilates instructeur, Pilates leraar',
     },
@@ -285,7 +285,7 @@ export const trainerProfiles: TrainerProfile[] = [
     specialties: ['Reformer Pilates'],
     available: true,
     seo: {
-      title: 'E. Gamze Karadağ - Pilates Instructor | PT 7 Pilates',
+      title: 'E. Gamze Karadağ | Pilates Instructor at PT 7 Amsterdam',
       description: 'Meet E. Gamze Karadağ, certified Reformer Pilates instructor at PT 7 Amsterdam. Yoga background and PT7 Academy graduate.',
       keywords: 'E. Gamze Karadağ, Gamze Karadağ, Gamze, Reformer Pilates, Pilates instructor Amsterdam, PT 7, Pilates leraar',
     },

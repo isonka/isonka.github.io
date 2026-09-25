@@ -53,18 +53,18 @@ export const Equipment= () => {
   return (
     <>
       <SEOHead
-        title="Buy Pilates Equipment for Sale | Amsterdam | PT 7 Pilates"
-        description="Pilates equipment for sale in Amsterdam and the Netherlands: Reformer, Tower Reformer, Cadillac, Wunda Chair, and Ladder Barrel. Specs, 2-year warranty, 3-8 week delivery. This page is for purchasing apparatus, not class bookings."
-        keywords="buy pilates equipment amsterdam, pilates reformer for sale, pilates reformer kopen nederland, pilates equipment for sale netherlands, buy reformer amsterdam, cadillac pilates for sale"
+        title="Pilates Equipment at PT 7 Amsterdam | In-Studio Apparatus"
+        description="Reformer, Tower Reformer, Cadillac, and Wunda Chair used in classes at PT 7, Van Baerlestraat 76C, Museumplein. Book a class at https://www.pt7.nl/schedule/. Ladder Barrel is sold separately and is not used in client sessions."
+        keywords="pilates equipment amsterdam, reformer pilates equipment, tower reformer, cadillac pilates amsterdam, pilates apparatus museumplein"
         canonical="https://www.pt7.nl/equipment/"
-        ogTitle="Buy Pilates Equipment for Sale | PT 7 Pilates Amsterdam"
-        ogDescription="Transactional catalog: professional Reformers and classical apparatus for home or studio purchase, not class bookings."
+        ogTitle="Pilates Equipment at PT 7 Amsterdam | In-Studio Apparatus"
+        ogDescription="Apparatus used in classes at Museumplein. Book at pt7.nl/schedule/. Ladder Barrel is the only piece sold and not used in sessions."
       />
       <StructuredData
         type="ItemList"
         data={{
           itemList: {
-            name: 'Pilates Equipment for Sale',
+            name: 'Pilates Equipment at PT 7 Amsterdam',
             itemListElement: equipmentProducts.map((product) => ({
               name: product.name,
               url: `https://www.pt7.nl/equipment/${product.slug}/`,
@@ -77,15 +77,15 @@ export const Equipment= () => {
       <div className="equipment-page">
         <header className="equipment-hero">
           <p className="kicker">Equipment</p>
-          <h1>Buy Pilates Equipment for Sale in Amsterdam</h1>
+          <h1>Pilates Equipment at PT 7 Amsterdam</h1>
           <p className="equipment-hero-line">
-            Professional Reformers and classical apparatus for home or studio purchase: specs, warranty, and delivery in the Netherlands. Not a class booking page.
+            Reformer, Tower, Cadillac, and Chair used in classes at Museumplein. Ladder Barrel is sold separately and is not used in client sessions.
           </p>
         </header>
 
         <div className="equipment-intent-notice">
           <p>
-            <strong>Looking for Pilates classes?</strong> This section is for buying equipment.{' '}
+            <strong>Looking for Pilates classes?</strong> These machines are what we teach on.{' '}
             <Link to="/reformer-pilates-amsterdam/">Book Reformer Pilates classes in Amsterdam</Link>
             {' · '}
             <Link to="/schedule/">View class schedule</Link>

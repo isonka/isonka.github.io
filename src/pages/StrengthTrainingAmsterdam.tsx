@@ -37,7 +37,7 @@ const faqs = [
 
 export const StrengthTrainingAmsterdam= () => {
   useEffect(() => {
-    trackPageView('/strength-training-amsterdam', 'Strength Training Amsterdam | PT 7 Pilates');
+    trackPageView('/strength-training-amsterdam/', 'Strength Training Amsterdam | PT 7 Pilates');
   }, []);
 
   return (

@@ -49,6 +49,11 @@ const faqs = [
     answer:
       'Yes. Our studio sits in Oud-Zuid at Museumplein (Van Baerlestraat 76C). We run small group and private Reformer sessions for clients in Amsterdam Zuid, the Museum District, and nearby neighborhoods.',
   },
+  {
+    question: 'How much does Reformer Pilates cost in Amsterdam?',
+    answer:
+      'New clients start with 3 group classes for €50. After that, group classes (maximum 5) are sold as packages. See pricing, then book from the schedule.',
+  },
 ];
 
 export const ReformerPilatesAmsterdam= () => {

@@ -18,7 +18,7 @@ export const Congrats= () => {
   useEffect(() => {
     if (isPrerender()) return;
 
-    trackPageView('/congrats', 'Booking Confirmed');
+    trackPageView('/congrats/', 'Booking Confirmed');
     trackBookingConfirmation();
 
     return trackAdsConversion(BOOKING_CONVERSION);

@@ -20,5 +20,5 @@ Provide direct contact and location for PT 7 Amsterdam.
 
 1. Prefer WhatsApp for fastest response when the user wants a quick reply.
 2. Include address + map context (Museumplein / Oud-Zuid) when giving directions.
-3. For booking, also offer https://www.pt7.nl/schedule.
+3. For booking, also offer https://www.pt7.nl/schedule/.
 4. For Academy enrollment questions, point to https://www.pt7.nl/academy/ and info@pt7.nl.

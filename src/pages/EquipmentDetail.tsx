@@ -28,6 +28,20 @@ export const EquipmentDetail= () => {
     'wunda-chair': { to: '/reformer-pilates-amsterdam/', label: 'Book Pilates classes at our studio' },
   };
   const relatedWorkout = workoutByEquipment[product.slug];
+  const forSaleOnly = product.slug === 'ladder-barrel';
+  const visibleFaq = forSaleOnly
+    ? product.faq
+    : [
+        {
+          question: `Can I train on the ${product.name} at PT 7?`,
+          answer: `${product.name} is used in classes at our Museumplein studio. Small groups are a maximum of 5. Book from the schedule.`,
+        },
+        {
+          question: 'Is this page selling equipment?',
+          answer:
+            'This page describes apparatus in the studio. The Ladder Barrel is sold separately and is not used in client sessions. Book a class from the schedule.',
+        },
+      ];
 
   return (
     <>
@@ -37,11 +51,11 @@ export const EquipmentDetail= () => {
         keywords={product.seo.keywords}
         canonical={`https://www.pt7.nl/equipment/${product.slug}/`}
       />
-      <StructuredData type="FAQPage" data={{ faqs: product.faq }} />
+      <StructuredData type="FAQPage" data={{ faqs: visibleFaq }} />
 
       <Breadcrumbs
         items={[
-          { name: 'Equipment for Sale', path: '/equipment/' },
+          { name: forSaleOnly ? 'Equipment for Sale' : 'Studio Equipment', path: '/equipment/' },
           { name: product.name, path: `/equipment/${product.slug}/` },
         ]}
       />
@@ -76,10 +90,12 @@ export const EquipmentDetail= () => {
           </div>
 
           <div className="product-info">
-            <p className="kicker">Equipment for sale</p>
-            <h1>{product.name} for sale</h1>
+            <p className="kicker">{forSaleOnly ? 'Equipment for sale' : 'In the studio'}</p>
+            <h1>{forSaleOnly ? `${product.name} for sale` : `${product.name} at PT 7 Amsterdam`}</h1>
             <p className="product-intent-notice">
-              This page is for purchasing apparatus. Want to take a class instead?{' '}
+              {forSaleOnly
+                ? 'This piece is for purchase and is not used in client sessions. '
+                : 'This is apparatus we use in classes at Van Baerlestraat 76C, Museumplein. '}
               <Link to="/reformer-pilates-amsterdam/" className="prose-link">
                 Book Reformer Pilates in Amsterdam
               </Link>
@@ -95,9 +111,15 @@ export const EquipmentDetail= () => {
               ))}
             </ul>
             <div className="product-cta">
-              <a href="#product-contact" className="btn-gold">
-                Contact for Order
-              </a>
+              {forSaleOnly ? (
+                <a href="#product-contact" className="btn-gold">
+                  Contact for Order
+                </a>
+              ) : (
+                <Link to="/schedule/" className="btn-gold">
+                  Book a class
+                </Link>
+              )}
             </div>
           </div>
         </section>
@@ -116,18 +138,17 @@ export const EquipmentDetail= () => {
             </ul>
             {relatedWorkout ? (
               <p className="product-related">
-                Want to try this equipment in a class before buying?{' '}
                 <Link to={relatedWorkout.to} className="prose-link">
                   {relatedWorkout.label}
                 </Link>{' '}
-                at our Museumplein studio. Equipment sales on this page are separate from class bookings.
+                at Van Baerlestraat 76C, Museumplein.
               </p>
             ) : null}
           </div>
         </section>
 
-        <EquipmentFAQ items={product.faq} />
-        <EquipmentContact />
+        <EquipmentFAQ items={visibleFaq} />
+        {forSaleOnly ? <EquipmentContact /> : null}
       </main>
     </>
   );

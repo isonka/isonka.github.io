@@ -9,7 +9,7 @@ import '../styles/Privacy.css';
 
 export const Privacy= () => {
   useEffect(() => {
-    trackPageView('/privacy', 'Privacy Policy | PT 7 Pilates Amsterdam');
+    trackPageView('/privacy/', 'Privacy Policy | PT 7 Pilates Amsterdam');
   }, []);
 
   return (

@@ -1,8 +1,8 @@
 export const enPricing = {
   seo: {
-    title: 'Pilates Prices Amsterdam Zuid | Packages & Trial Class | PT 7 Pilates',
+    title: 'Pilates Prices Amsterdam Oud-Zuid | From €50 Intro | PT 7',
     description:
-      'Pilates prices at Museumplein (Amsterdam Zuid): intro pack 3 group classes for €50, then from {{groupPrice}}/class (max {{groupMax}}). Memberships, privates, Reformer, TRX & strength. Book online.',
+      'How much does a Pilates class cost in Amsterdam Oud-Zuid? PT 7 at Museumplein (Van Baerlestraat 76C): intro pack 3 group classes for €50, then from {{groupPrice}}/class (max {{groupMax}}). Book at https://www.pt7.nl/schedule/.',
     keywords:
       'pilates class prices amsterdam, pilates prices amsterdam, Pilates prijzen Amsterdam, Pilates abonnement Amsterdam, Pilates prices Museumplein, reformer pilates prive amsterdam, kleine groep pilates amsterdam, private Pilates kosten, small group Pilates pricing, proefles Pilates Amsterdam, strippenkaart Pilates',
     ogTitle: 'Pilates Prices Amsterdam Zuid | Trial & Packages | PT 7 Pilates',

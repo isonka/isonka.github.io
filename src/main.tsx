@@ -31,8 +31,8 @@ if (maybeModelContext?.provideContext) {
           additionalProperties: false
         },
         execute: () => {
-          window.location.assign('/schedule');
-          return { ok: true, navigatedTo: '/schedule' };
+          window.location.assign('/schedule/');
+          return { ok: true, navigatedTo: '/schedule/' };
         }
       },
       {
@@ -44,8 +44,8 @@ if (maybeModelContext?.provideContext) {
           additionalProperties: false
         },
         execute: () => {
-          window.location.assign('/pricing');
-          return { ok: true, navigatedTo: '/pricing' };
+          window.location.assign('/pricing/');
+          return { ok: true, navigatedTo: '/pricing/' };
         }
       },
       {

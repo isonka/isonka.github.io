@@ -53,9 +53,9 @@ export const equipmentProducts: EquipmentProduct[] = [
     slug: 'reformer',
     name: 'Pilates Reformer',
     seo: {
-      title: 'Buy Pilates Reformer Amsterdam | Studio-Quality for Sale | PT 7 Pilates',
-      description: 'Buy a professional Pilates Reformer in Amsterdam — equipment for sale, not class bookings. Beech wood frame, smooth carriage, accessories included. Studio-quality with delivery in the Netherlands.',
-      keywords: 'Pilates Reformer for sale, buy pilates reformer amsterdam, professional Pilates equipment, reformer kopen nederland, studio equipment, Pilates apparatus for sale',
+      title: 'Reformer Pilates Equipment at PT 7 Amsterdam | In-Studio',
+      description: 'The Reformer used in classes at PT 7, Van Baerlestraat 76C, Museumplein. Book a class at https://www.pt7.nl/schedule/. Specs below describe the in-studio apparatus.',
+      keywords: 'pilates reformer equipment, reformer pilates amsterdam, pilates apparatus museumplein, tower reformer studio',
     },
     images: [
       { src: '/assets/images/reformer_1.webp', alt: 'Pilates Reformer - Full side view' },
@@ -107,9 +107,9 @@ export const equipmentProducts: EquipmentProduct[] = [
     slug: 'tower-reformer',
     name: 'Tower Reformer',
     seo: {
-      title: 'Tower Reformer - PT 7 Pilates Amsterdam',
-      description: 'Professional-grade Tower Reformer combining reformer and tower for expanded exercise options. Studio-quality Pilates equipment available in Amsterdam.',
-      keywords: 'Tower Reformer for sale, Pilates tower, professional Pilates equipment, reformer with tower, Amsterdam',
+      title: 'Tower Reformer at PT 7 Amsterdam | In-Studio Apparatus',
+      description: 'Tower Reformer used in classes at PT 7, Van Baerlestraat 76C, Museumplein, Amsterdam Oud-Zuid. Book at https://www.pt7.nl/schedule/.',
+      keywords: 'tower reformer, tower reformer pilates, reformer with tower amsterdam, pilates equipment museumplein',
     },
     images: [
       { src: '/assets/images/tower_reformer_1.webp', alt: 'Tower Reformer - Full side view' },
@@ -161,9 +161,9 @@ export const equipmentProducts: EquipmentProduct[] = [
     slug: 'cadillac',
     name: 'Combo Cadillac',
     seo: {
-      title: 'Combo Cadillac - PT 7 Pilates Amsterdam',
-      description: 'Professional Pilates Cadillac for sale. The ultimate apparatus for endless exercise possibilities. Studio-grade equipment available in Amsterdam.',
-      keywords: 'Pilates Cadillac for sale, Trapeze Table, professional Pilates equipment, Cadillac Amsterdam',
+      title: 'Cadillac Pilates Amsterdam | In-Studio at PT 7',
+      description: 'Cadillac (Trapeze Table) used in classes at PT 7, Van Baerlestraat 76C, Museumplein. Book at https://www.pt7.nl/schedule/.',
+      keywords: 'cadillac pilates amsterdam, trapeze table amsterdam, pilates cadillac museumplein',
     },
     images: [
       { src: '/assets/images/cadillac_1.webp', alt: 'Combo Cadillac - Full side view' },
@@ -213,9 +213,9 @@ export const equipmentProducts: EquipmentProduct[] = [
     slug: 'wunda-chair',
     name: 'Wunda Chair',
     seo: {
-      title: 'Wunda Chair - PT 7 Pilates Amsterdam',
-      description: 'Professional Pilates Wunda Chair for sale. Versatile equipment for challenging workouts in compact space. Studio-grade quality available in Amsterdam.',
-      keywords: 'Wunda Chair for sale, Pilates chair, professional Pilates equipment, compact Pilates, Amsterdam',
+      title: 'Wunda Chair at PT 7 Amsterdam | In-Studio Apparatus',
+      description: 'Wunda Chair used in classes at PT 7, Van Baerlestraat 76C, Museumplein. Book at https://www.pt7.nl/schedule/.',
+      keywords: 'wunda chair pilates, pilates chair amsterdam, pilates equipment museumplein',
     },
     images: [
       { src: '/assets/images/wunda_chair_1.webp', alt: 'Wunda Chair - Side view' },

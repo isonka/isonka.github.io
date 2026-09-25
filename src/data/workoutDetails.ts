@@ -135,15 +135,15 @@ export const workoutDetails: WorkoutDetailData[] = [
   {
     slug: 'reformer-pilates',
     seo: {
-      title: 'Reformer Pilates Amsterdam | Classes Near Museumplein | PT 7 Pilates',
+      title: 'What Is Reformer Pilates? Benefits Guide | PT 7',
       description:
-        'Reformer Pilates classes in Amsterdam Zuid at Museumplein: small groups (max 5) and private sessions. Core strength, flexibility, and posture — book online at PT 7.',
+        'Guide to Reformer Pilates: how the carriage works, benefits, and who it suits. To book classes in Amsterdam, use the Reformer Pilates Amsterdam page at PT 7 Museumplein.',
       keywords:
-        'reformer pilates amsterdam, reformer pilates classes, what is reformer pilates, reformer pilates benefits, reformer pilates equipment, reformer vs mat pilates, pilates reformer workout, core strength pilates, flexibility training, posture correction pilates',
+        'what is reformer pilates, reformer pilates benefits, reformer vs mat pilates, pilates reformer workout, core strength pilates, flexibility training, posture correction pilates',
       canonical: 'https://www.pt7.nl/reformer-pilates-amsterdam/',
-      ogTitle: 'Reformer Pilates Amsterdam | Book Classes | PT 7 Pilates',
+      ogTitle: 'What Is Reformer Pilates? | PT 7 Guide',
       ogDescription:
-        'Reformer Pilates near Museumplein: small groups (max 5) and privates. Benefits, equipment, and who it suits — book at PT 7.',
+        'How Reformer Pilates works, who it suits, and how it differs from mat. Book classes on the Reformer Pilates Amsterdam page.',
       ogImage: '/assets/images/studio.webp',
     },
     announcementBanner: {
@@ -232,7 +232,7 @@ export const workoutDetails: WorkoutDetailData[] = [
         '✓ Regularly maintained for safety and performance',
       ],
       linkTo: '/equipment/reformer/',
-      linkLabel: 'Buy a Reformer for home or studio →',
+      linkLabel: 'Reformer used in our Amsterdam studio →',
     },
     trainers: {
       title: 'Meet Your Expert Instructors',
@@ -277,7 +277,7 @@ export const workoutDetails: WorkoutDetailData[] = [
       title: 'TRX Suspension Training',
       tagline: 'Suspension training for strength, balance, and functional fitness',
       ctaLabel: 'Book a Class',
-      ctaTo: '/schedule',
+      ctaTo: '/schedule/',
     },
     intro: {
       title: 'Master Your Body Weight with TRX',
@@ -346,9 +346,9 @@ export const workoutDetails: WorkoutDetailData[] = [
       title: 'Ready to Experience TRX?',
       subtitle: 'Discover the power of suspension training at PT 7',
       primaryLabel: 'Book Your Session',
-      primaryTo: '/schedule',
+      primaryTo: '/schedule/',
       secondaryLabel: 'View Pricing',
-      secondaryTo: '/pricing',
+      secondaryTo: '/pricing/',
     },
   },
   {
@@ -368,7 +368,7 @@ export const workoutDetails: WorkoutDetailData[] = [
       title: 'Nike Strength Training',
       tagline: 'Premium equipment. Expert coaching. Real results.',
       ctaLabel: 'Book a Session',
-      ctaTo: '/schedule',
+      ctaTo: '/schedule/',
     },
     intro: {
       title: 'Premium Nike Strength Equipment',
@@ -445,9 +445,9 @@ export const workoutDetails: WorkoutDetailData[] = [
       title: 'Start Building Real-World Strength',
       subtitle: 'Experience strength training at PT 7 Museumplein',
       primaryLabel: 'Book Your Session',
-      primaryTo: '/schedule',
+      primaryTo: '/schedule/',
       secondaryLabel: 'View Pricing',
-      secondaryTo: '/pricing',
+      secondaryTo: '/pricing/',
     },
   },
   {
@@ -467,7 +467,7 @@ export const workoutDetails: WorkoutDetailData[] = [
       title: 'Cardio Training',
       tagline: 'High-intensity cardio workouts to boost endurance and burn calories',
       ctaLabel: 'Book a Session',
-      ctaTo: '/schedule',
+      ctaTo: '/schedule/',
     },
     intro: {
       title: 'Transform Your Cardiovascular Fitness',
@@ -536,9 +536,9 @@ export const workoutDetails: WorkoutDetailData[] = [
       title: 'Ready to Boost Your Endurance?',
       subtitle: 'Join our high-energy cardio classes at PT 7',
       primaryLabel: 'Book Your Session',
-      primaryTo: '/schedule',
+      primaryTo: '/schedule/',
       secondaryLabel: 'View Pricing',
-      secondaryTo: '/pricing',
+      secondaryTo: '/pricing/',
     },
   },
 ];

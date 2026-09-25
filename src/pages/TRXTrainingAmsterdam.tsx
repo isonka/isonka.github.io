@@ -30,6 +30,11 @@ const faqs = [
     answer: 'We provide all TRX equipment. Wear comfortable fitted workout clothing and training shoes (or train barefoot/in socks). Bring a water bottle and a small towel. Grip socks are available for purchase at the studio if needed.',
   },
   {
+    question: 'Where can I do TRX in Amsterdam Oud-Zuid?',
+    answer:
+      'PT 7 teaches TRX at Museumplein in Amsterdam Oud-Zuid. Small groups are a maximum of 5. Book a class from the schedule.',
+  },
+  {
     question: 'What are the benefits of TRX compared to gym machines?',
     answer: 'TRX trains the body in three-dimensional, functional movement patterns, not isolated single-joint movements. It develops stability and coordination alongside raw strength. Because you are working against gravity and your own bodyweight, every exercise also engages your core. The result is functional fitness that translates directly into real-life performance and injury prevention.',
   },
@@ -37,14 +42,14 @@ const faqs = [
 
 export const TRXTrainingAmsterdam= () => {
   useEffect(() => {
-    trackPageView('/trx-training-amsterdam', 'TRX Training Amsterdam | PT 7 Pilates');
+    trackPageView('/trx-training-amsterdam/', 'TRX Amsterdam | PT 7 Pilates');
   }, []);
 
   return (
     <>
       <SEOHead
-        title="TRX Training Amsterdam Museumplein | PT 7 Pilates"
-        description="Professional TRX suspension training at Museumplein Amsterdam. Build functional strength, core stability and balance with certified trainers. Small groups & private sessions."
+        title="TRX Amsterdam | Suspension Training Museumplein | PT 7"
+        description="TRX Amsterdam at Van Baerlestraat 76C, Museumplein, Oud-Zuid. Suspension training in small groups (max 5) and privates. New clients: 3 group classes for €50. Book at https://www.pt7.nl/schedule/."
         keywords="TRX training amsterdam, TRX suspension training amsterdam, TRX les amsterdam, TRX museumplein, suspension training amsterdam, TRX one-on-one training amsterdam, functionele training amsterdam, TRX oud-zuid"
         canonical="https://www.pt7.nl/trx-training-amsterdam/"
         ogTitle="TRX Training Amsterdam | PT 7 Pilates Museumplein"

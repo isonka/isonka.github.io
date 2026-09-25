@@ -58,7 +58,7 @@ export const Academy= () => {
   const courseUrl = isNl ? ACADEMY_URL_NL : ACADEMY_URL_EN;
 
   useEffect(() => {
-    trackPageView(isNl ? '/academy/nl' : '/academy', t('seo.analyticsTitle'));
+    trackPageView(isNl ? '/academy/nl/' : '/academy/', t('seo.analyticsTitle'));
     void ensureHealcodeLoaded();
   }, [isNl, t]);
 

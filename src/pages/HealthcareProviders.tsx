@@ -8,7 +8,7 @@ import '../styles/HealthcareProviders.css';
 
 export const HealthcareProviders= () => {
   useEffect(() => {
-    trackPageView('/healthcare-providers', 'For Healthcare Providers - PT 7 Pilates Amsterdam');
+    trackPageView('/healthcare-providers/', 'For Healthcare Providers - PT 7 Pilates Amsterdam');
   }, []);
 
   return (

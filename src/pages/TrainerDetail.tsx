@@ -18,34 +18,34 @@ export const TrainerDetail= () => {
 
   const relatedLinksByTrainer: Record<string, { to: string; label: string }[]> = {
     elif: [
-      { to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' },
-      { to: '/academy', label: 'Pilates teacher training at PT7 Academy' },
-      { to: '/prenatal-pilates-amsterdam', label: 'Prenatal Pilates page' },
+      { to: '/workouts/reformer-pilates/', label: 'Reformer Pilates classes' },
+      { to: '/academy/', label: 'Pilates teacher training at PT7 Academy' },
+      { to: '/prenatal-pilates-amsterdam/', label: 'Prenatal Pilates page' },
     ],
-    gokben: [{ to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' }],
+    gokben: [{ to: '/workouts/reformer-pilates/', label: 'Reformer Pilates classes' }],
     goknur: [
-      { to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' },
-      { to: '/workouts/functional-training', label: 'Strength training classes' },
+      { to: '/workouts/reformer-pilates/', label: 'Reformer Pilates classes' },
+      { to: '/workouts/functional-training/', label: 'Strength training classes' },
     ],
     gulce: [
-      { to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' },
-      { to: '/academy', label: 'Become a Pilates instructor | PT7 Academy' },
+      { to: '/workouts/reformer-pilates/', label: 'Reformer Pilates classes' },
+      { to: '/academy/', label: 'Become a Pilates instructor | PT7 Academy' },
     ],
     lal: [
-      { to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' },
-      { to: '/academy', label: 'Become a Pilates instructor | PT7 Academy' },
+      { to: '/workouts/reformer-pilates/', label: 'Reformer Pilates classes' },
+      { to: '/academy/', label: 'Become a Pilates instructor | PT7 Academy' },
     ],
     nisan: [
-      { to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' },
-      { to: '/academy', label: 'Become a Pilates instructor | PT7 Academy' },
+      { to: '/workouts/reformer-pilates/', label: 'Reformer Pilates classes' },
+      { to: '/academy/', label: 'Become a Pilates instructor | PT7 Academy' },
     ],
     kelly: [
-      { to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' },
-      { to: '/academy', label: 'Become a Pilates instructor | PT7 Academy' },
+      { to: '/workouts/reformer-pilates/', label: 'Reformer Pilates classes' },
+      { to: '/academy/', label: 'Become a Pilates instructor | PT7 Academy' },
     ],
     gamze: [
-      { to: '/workouts/reformer-pilates', label: 'Reformer Pilates classes' },
-      { to: '/academy', label: 'Become a Pilates instructor | PT7 Academy' },
+      { to: '/workouts/reformer-pilates/', label: 'Reformer Pilates classes' },
+      { to: '/academy/', label: 'Become a Pilates instructor | PT7 Academy' },
     ],
   };
 
@@ -79,7 +79,7 @@ export const TrainerDetail= () => {
       />
       <Breadcrumbs items={[
         { name: 'Instructors', path: '/instructors/' },
-        { name: trainer.name, path: `/trainer/${trainer.slug}` },
+        { name: trainer.name, path: `/trainer/${trainer.slug}/` },
       ]} />
 
       <div className="trainer-page">
