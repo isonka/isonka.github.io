@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { trackBookNowClick, trackNavClick } from '../utils/gtmTracking';
-import { loadHealcodeWhenIdle } from '../utils/healcode';
+import { ensureHealcodeLoaded } from '../utils/healcode';
 import { homePath, isHomePath } from '../i18n/locale';
 import { useLocale } from '../i18n/useLocale';
 import '../styles/Navbar.css';
@@ -21,10 +21,13 @@ export const Navbar= () => {
 
   const toggleMenu = () => {
     if (isMenuOpen) setOpenDropdown(null);
+    else void ensureHealcodeLoaded().catch(() => {});
     setIsMenuOpen(!isMenuOpen);
   };
 
-  useEffect(() => loadHealcodeWhenIdle(), []);
+  const loadLoginWidget = () => {
+    void ensureHealcodeLoaded().catch(() => {});
+  };
 
   useEffect(() => {
     if (!openDropdown) return;
@@ -145,7 +148,11 @@ export const Navbar= () => {
             </ul>
           </li>
           <li><a href="#contact" aria-label={t('nav.contactAria')} onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>{t('nav.contact')}</a></li>
-          <li className="navbar-login">
+          <li
+            className="navbar-login"
+            onPointerEnter={loadLoginWidget}
+            onFocus={loadLoginWidget}
+          >
             <span
               className="navbar-login-widget"
               dangerouslySetInnerHTML={{

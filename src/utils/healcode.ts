@@ -113,23 +113,3 @@ export function ensureHealcodeLoaded(): Promise<void> {
   return loadPromise;
 }
 
-export function loadHealcodeWhenIdle(timeoutMs = 3000): () => void {
-  if (isPrerender()) return () => {};
-
-  const run = () => {
-    void ensureHealcodeLoaded().catch(() => {});
-  };
-
-  const ric = window.requestIdleCallback?.bind(window);
-  if (ric) {
-    const idleId = ric(run, { timeout: timeoutMs });
-    return () => {
-      window.cancelIdleCallback?.(idleId);
-    };
-  }
-
-  const timeoutId = setTimeout(run, 1);
-  return () => {
-    clearTimeout(timeoutId);
-  };
-}

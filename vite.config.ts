@@ -18,7 +18,7 @@ export default defineConfig({
         },
       },
     },
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500,
     cssCodeSplit: true,
     sourcemap: false,
     assetsInlineLimit: 4096,
