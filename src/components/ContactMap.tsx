@@ -9,6 +9,22 @@ const MAP_SRC =
 
 const MAPS_APP = 'https://maps.app.goo.gl/wrhyzYbov9eiGQJw5';
 
+export const OLYMPISCH_STADION_MAP_SRC =
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.141567328538!2d4.850628976685132!3d52.34418607201564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5e1f9b27084e3%3A0xd145f7488479689f!2sOlympisch%20Stadion%2015%2C%201076%20DE%20Amsterdam!5e0!3m2!1sen!2snl!4v1790545501765!5m2!1sen!2snl';
+
+export const OLYMPISCH_STADION_MAPS_URL =
+  'https://www.google.com/maps/search/?api=1&query=Olympisch%20Stadion%2015%2C%201076%20DE%20Amsterdam';
+
+type ContactMapProps = {
+  embedSrc?: string;
+  mapsUrl?: string;
+  title?: string;
+  kicker?: string;
+  address?: string;
+  legend?: string;
+  showTransit?: boolean;
+};
+
 function googleEmbedAllowed(consent: Pt7Consent | null): boolean {
   return Boolean(consent?.statistics || consent?.marketing);
 }
@@ -88,7 +104,15 @@ function Vehicle({ mode, children }: { mode: string; children: ReactNode }) {
   );
 }
 
-export const ContactMap: FC = () => {
+export const ContactMap: FC<ContactMapProps> = ({
+  embedSrc = MAP_SRC,
+  mapsUrl = MAPS_APP,
+  title,
+  kicker = 'Museumplein',
+  address = 'Van Baerlestraat 76C',
+  legend,
+  showTransit = true,
+}) => {
   const { t } = useTranslation('common');
   const [ready, setReady] = useState(false);
   const [showMap, setShowMap] = useState(false);
@@ -109,21 +133,21 @@ export const ContactMap: FC = () => {
     <div className="contact-map">
       {showMap ? (
         <iframe
-          src={MAP_SRC}
+          src={embedSrc}
           width="100%"
           height="100%"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title={t('contactMap.iframeTitle')}
+          title={title ?? t('contactMap.iframeTitle')}
         />
       ) : (
         <div className="contact-map-consent">
           {ready ? (
             <>
-              <p className="contact-map-consent-kicker">Museumplein</p>
-              <p className="contact-map-consent-address">Van Baerlestraat 76C</p>
+              <p className="contact-map-consent-kicker">{kicker}</p>
+              <p className="contact-map-consent-address">{address}</p>
               <p className="contact-map-consent-note">
                 {t('contactMap.consentNote')}
               </p>
@@ -131,7 +155,7 @@ export const ContactMap: FC = () => {
                 <button type="button" className="contact-map-consent-btn" onClick={() => setShowMap(true)}>
                   {t('contactMap.showMap')}
                 </button>
-                <a href={MAPS_APP} target="_blank" rel="noopener noreferrer">
+                <a href={mapsUrl} target="_blank" rel="noopener noreferrer">
                   {t('contactMap.openMaps')}
                 </a>
               </div>
@@ -142,9 +166,9 @@ export const ContactMap: FC = () => {
         </div>
       )}
       <p className="contact-map-legend">
-        {t('contactMap.legend')}
+        {legend ?? t('contactMap.legend')}
       </p>
-      {showMap ? (
+      {showMap && showTransit ? (
         <div className="contact-map-overlay" aria-hidden="true">
           <svg className="contact-map-routes" viewBox="0 0 100 100" preserveAspectRatio="none">
             <line className="contact-map-route contact-map-route--tram" x1="48" y1="88" x2="50" y2="47" />

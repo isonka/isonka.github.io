@@ -8,6 +8,7 @@ import {
   useLocation,
 } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
+import { MoveBanner } from './components/MoveBanner';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
 import { CookieConsent } from './components/CookieConsent';
@@ -135,7 +136,10 @@ function Layout() {
       <RedirectHandler />
       <LocaleSync />
       <div className="app instructors-silk-host">
-        <Navbar />
+        <div className="site-header">
+          <MoveBanner />
+          <Navbar />
+        </div>
         <main className="main-content">
           <Suspense fallback={<RouteFallback />}>
             <Outlet />

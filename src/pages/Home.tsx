@@ -9,7 +9,7 @@ import { trackFBPageView, trackFBPhoneClick, trackFBEmailClick, trackFBWhatsAppC
 import { workouts } from '../data/workouts';
 import { WorkoutGallery } from '../components/WorkoutCard';
 import { ManifestoLine } from '../components/ManifestoLine';
-import { ContactMap } from '../components/ContactMap';
+import { ContactMap, OLYMPISCH_STADION_MAP_SRC, OLYMPISCH_STADION_MAPS_URL } from '../components/ContactMap';
 import { PHOTO_FOCUS } from '../data/photoFocus';
 import { useInViewOnce } from '../hooks/useInViewOnce';
 import { SilkBackground } from '../components/SilkBackground';
@@ -370,6 +370,20 @@ export const Home= () => {
                 <a href="https://www.linkedin.com/company/pt-studio-7" target="_blank" rel="noopener noreferrer" aria-label={t('contact.linkedin')}>{t('contact.linkedin')}</a>
               </div>
             </div>
+          </div>
+
+          <div className="home-contact-next">
+            <p className="home-contact-address">{t('contact.nextAddress')}</p>
+            <p className="home-contact-meta">{t('contact.nextMeta')}</p>
+            <ContactMap
+              embedSrc={OLYMPISCH_STADION_MAP_SRC}
+              mapsUrl={OLYMPISCH_STADION_MAPS_URL}
+              title={t('contact.nextMapTitle')}
+              kicker={t('contact.nextKicker')}
+              address={t('contact.nextStreet')}
+              legend={t('contact.nextLegend')}
+              showTransit={false}
+            />
           </div>
         </div>
       </section>

@@ -1,0 +1,79 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  isolation: isolate;
+}
+
+.move-banner {
+  position: relative;
+  z-index: 2;
+  background-color: #111;
+  color: #fff;
+  padding: 12px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  text-decoration: none;
+  text-align: center;
+}
+
+.move-banner:hover {
+  color: #fff;
+}
+
+.move-banner-text {
+  color: #fff;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  line-height: 1.4;
+  min-width: 0;
+  max-width: 920px;
+}
+
+.move-banner-text strong {
+  color: var(--gold, #ffd700);
+  font-weight: 700;
+}
+
+.move-banner-short {
+  display: none;
+}
+
+.move-banner-cta {
+  background: var(--gold, #ffd700);
+  color: var(--ink, #111);
+  padding: 7px 16px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.move-banner:hover .move-banner-cta {
+  background: #fff;
+}
+
+@media (max-width: 768px) {
+  .move-banner {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .move-banner-full {
+    display: none;
+  }
+
+  .move-banner-short {
+    display: inline;
+  }
+
+  .move-banner-cta {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+  }
+}

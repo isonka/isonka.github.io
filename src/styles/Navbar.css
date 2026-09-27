@@ -4,9 +4,8 @@
   -webkit-backdrop-filter: blur(12px);
   box-shadow: none;
   border-bottom: 1px solid rgba(17, 17, 17, 0.08);
-  position: sticky;
-  top: 0;
-  z-index: 9999;
+  position: relative;
+  z-index: 2;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
@@ -307,8 +306,8 @@
   }
 
   .navbar-links {
-    position: fixed;
-    top: 56px;
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
     background: #fffdf4;

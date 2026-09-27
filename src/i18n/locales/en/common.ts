@@ -50,6 +50,12 @@ export const enCommon = {
     copyright: '© {{year}} PT 7 Amsterdam. All rights reserved.',
     websiteBy: 'Website by',
   },
+  moveBanner: {
+    strong: "We're moving",
+    full: ' · Last day at Van Baerlestraat: Thursday 29 October. First class: Monday 2 November, Olympisch Stadion 15',
+    short: ' · Last day 29 Oct. First class 2 Nov',
+    cta: 'Read more',
+  },
   contactMap: {
     iframeTitle: 'PT 7 Location',
     consentNote:
