@@ -1,0 +1,159 @@
+.oo-home-banner {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--ink, #111);
+  color: #fff;
+  padding: 28px 48px 28px 24px;
+  animation: oo-home-banner-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.oo-home-banner-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.oo-home-banner-copy {
+  min-width: 0;
+  flex: 1 1 280px;
+  max-width: 640px;
+}
+
+.oo-home-banner-kicker {
+  margin: 0 0 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.oo-home-banner-kicker::before {
+  content: '→';
+  display: inline-block;
+  margin-right: 0.45em;
+  color: var(--gold, #ffd700);
+  font-weight: 400;
+}
+
+.oo-home-banner-title {
+  margin: 0 0 8px;
+  font-size: clamp(1.35rem, 2.8vw, 1.85rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: #fff;
+}
+
+.oo-home-banner-lead {
+  margin: 0 0 10px;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.oo-home-banner-limited {
+  margin: 0;
+  font-family: var(--font-brand, 'Megrim', cursive);
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  color: var(--gold, #ffd700);
+}
+
+.oo-home-banner-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.oo-home-banner-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gold, #ffd700);
+  color: #111;
+  padding: 14px 24px;
+  border-radius: var(--radius-pill, 1000px);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.oo-home-banner-cta:hover {
+  background: #fff;
+  color: #111;
+}
+
+.oo-home-banner-skip {
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.oo-home-banner-skip:hover {
+  color: #fff;
+}
+
+.oo-home-banner-dismiss {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.oo-home-banner-dismiss:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes oo-home-banner-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  .oo-home-banner {
+    padding: 24px 40px 24px 16px;
+  }
+
+  .oo-home-banner-actions {
+    width: 100%;
+  }
+
+  .oo-home-banner-cta {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .oo-home-banner {
+    animation: none;
+  }
+}

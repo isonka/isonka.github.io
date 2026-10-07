@@ -8,7 +8,6 @@ import {
   useLocation,
 } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
-import { MoveBanner } from './components/MoveBanner';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
 import { CookieConsent } from './components/CookieConsent';
@@ -23,6 +22,7 @@ import './styles/design.css';
 const Chatbot = lazy(() => import('./components/Chatbot').then(m => ({ default: m.Chatbot })));
 const Pricing = lazy(() => import('./pages/Pricing').then(m => ({ default: m.Pricing })));
 const IntroOffer = lazy(() => import('./pages/IntroOffer').then(m => ({ default: m.IntroOffer })));
+const OpeningOffer = lazy(() => import('./pages/OpeningOffer').then(m => ({ default: m.OpeningOffer })));
 const Schedule = lazy(() => import('./pages/Schedule').then(m => ({ default: m.Schedule })));
 const Equipment = lazy(() => import('./pages/Equipment').then(m => ({ default: m.Equipment })));
 const EquipmentDetail = lazy(() => import('./pages/EquipmentDetail').then(m => ({ default: m.EquipmentDetail })));
@@ -137,7 +137,6 @@ function Layout() {
       <LocaleSync />
       <div className="app instructors-silk-host">
         <div className="site-header">
-          <MoveBanner />
           <Navbar />
         </div>
         <main className="main-content">
@@ -163,6 +162,8 @@ const router = createBrowserRouter([
       { path: 'pricing/nl', element: <Pricing /> },
       { path: 'intro', element: <IntroOffer /> },
       { path: 'intro/nl', element: <IntroOffer /> },
+      { path: 'opening-offer', element: <OpeningOffer /> },
+      { path: 'opening-offer/nl', element: <OpeningOffer /> },
       { path: 'schedule', element: <Schedule /> },
       { path: 'schedule/nl', element: <Schedule /> },
       { path: 'equipment', element: <Equipment /> },

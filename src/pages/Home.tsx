@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Trans, useTranslation } from 'react-i18next';
 import { AcademyUrgencyBanner } from '../components/AcademyUrgencyBanner';
+import { OpeningOfferHomeBanner } from '../components/OpeningOfferHomeBanner';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { trackPageView, trackPhoneClick, trackEmailClick, trackSocialClick } from '../utils/gtmTracking';
@@ -181,6 +182,7 @@ export const Home= () => {
       <StructuredData type="LocalBusiness" data={{ reviews: reviewsData }} />
       <StructuredData type="FAQPage" data={{ faqs: homeFaqs }} />
 
+      <OpeningOfferHomeBanner />
       <AcademyUrgencyBanner />
 
       <section className="home-hero">

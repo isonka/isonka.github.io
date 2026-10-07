@@ -34,13 +34,6 @@ export const COUPLE = {
   pack20: { perClass: 40, total: 800 },
 } as const;
 
-export const TRIO = {
-  single: 45,
-  pack5: { perClass: 42, total: 210 },
-  pack10: { perClass: 40, total: 400 },
-  pack20: { perClass: 38, total: 760 },
-} as const;
-
 export function formatEur(n: number): string {
   if (Number.isInteger(n)) return `€${n.toLocaleString('en-US')}`;
   return `€${n.toFixed(2)}`;

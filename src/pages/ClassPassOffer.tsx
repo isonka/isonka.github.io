@@ -144,7 +144,7 @@ export const ClassPassOffer = () => {
             <span className="offer-badge">Transition Offer</span>
             <h2>20% Off Your First Eligible Purchase</h2>
             <p className="offer-description">
-              Switch from ClassPass and get <strong>20% off your first month</strong> on all monthly plans, plus <strong>20% off your first purchase</strong> on class packs and private, couple, or trio packages.
+              Switch from ClassPass and get <strong>20% off your first month</strong> on all monthly plans, plus <strong>20% off your first purchase</strong> on class packs and private or couple packages.
             </p>
             <div className="offer-details">
               <div className="offer-item">

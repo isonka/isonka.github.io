@@ -5,8 +5,13 @@ import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Reveal } from '../components/Reveal';
 import { ServiceTrustBand } from '../components/ServiceTrustBand';
+import { COUPLE, PRIVATE, formatEur } from '../data/pricing';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/ServicePage.css';
+
+const privateFrom = formatEur(PRIVATE.junior.single);
+const privatePack20 = formatEur(PRIVATE.junior.pack20);
+const coupleFrom = formatEur(COUPLE.single);
 
 const faqs = [
   {
@@ -15,7 +20,7 @@ const faqs = [
   },
   {
     question: 'How many people are in a private session?',
-    answer: 'Private sessions can be one-on-one (just you and your instructor), duo (you and a partner), or trio (you and two friends). All formats offer fully customized programming. Duo and trio sessions are great for people who want the benefits of private training at a lower price per person.',
+    answer: 'Private sessions can be one-on-one (just you and your instructor) or duo (you and a partner). Both formats offer fully customized programming. Duo sessions are for people who want the benefits of private training at a lower price per person.',
   },
   {
     question: 'How often should I do private Pilates sessions?',
@@ -31,8 +36,7 @@ const faqs = [
   },
   {
     question: 'How much is a private Pilates session in Amsterdam?',
-    answer:
-      'Private, duo, and trio prices are on the pricing page. New clients can also start with 3 group classes for €50. Book a private session from the schedule.',
+    answer: `Private Reformer sessions at PT 7 start at ${privateFrom}. A 20-class pack brings the junior rate to ${privatePack20} per class. Amsterdam boutique private sessions often run €90–120. Duo sessions start at ${coupleFrom} per person. Full rates are on the pricing page.`,
   },
   {
     question: 'What equipment is used in private Pilates sessions?',
@@ -49,11 +53,11 @@ export const PrivatePilates= () => {
     <>
       <SEOHead
         title="Private Reformer Pilates Sessions Amsterdam | PT 7 Pilates"
-        description="Private Pilates near Museumplein and Oud-Zuid in Amsterdam. One-on-one Reformer sessions with 100% personalised coaching. Duo and trio options. Book online."
-        keywords="private pilates amsterdam, pilates near me, pilates near me amsterdam, privé pilates amsterdam, one on one pilates amsterdam, personal pilates amsterdam, pilates prive les amsterdam, prive pilates museumplein, privé reformer pilates, priveles pilates amsterdam"
+        description="Private Reformer Pilates at Museumplein from €70, below typical Amsterdam boutique rates (€90–120). One-on-one and duo. Book online."
+        keywords="private pilates amsterdam, private pilates prices amsterdam, pilates near me, pilates near me amsterdam, privé pilates amsterdam, one on one pilates amsterdam, personal pilates amsterdam, pilates prive les amsterdam, prive pilates museumplein, privé reformer pilates, priveles pilates amsterdam"
         canonical="https://www.pt7.nl/private-pilates-amsterdam/"
-        ogTitle="Private Reformer Pilates Amsterdam | PT 7 Pilates Museumplein"
-        ogDescription="100% personalised private Pilates sessions at Museumplein. One-on-one, duo or trio. Certified instructors with 15+ years experience."
+        ogTitle="Private Reformer Pilates Amsterdam | From €70 | PT 7 Pilates"
+        ogDescription="Private Reformer sessions at Museumplein from €70, below typical Amsterdam boutique private rates (€90–120). One-on-one or duo."
       />
       <StructuredData
         type="FAQPage"
@@ -65,13 +69,22 @@ export const PrivatePilates= () => {
           service: {
             name: 'Private Reformer Pilates Amsterdam',
             description:
-              'One-on-one, duo, and trio private Reformer Pilates at Museumplein. Fully personalised coaching for beginners, rehab, pregnancy, and performance goals.',
+              'One-on-one and duo private Reformer Pilates at Museumplein. Sessions start at €70, below typical Amsterdam boutique private rates of €90–120.',
             serviceUrl: 'https://www.pt7.nl/private-pilates-amsterdam/',
             areaServed: 'Amsterdam',
             offers: [
-              { name: 'One-on-one private session', url: 'https://www.pt7.nl/schedule/' },
-              { name: 'Duo private session', url: 'https://www.pt7.nl/pricing/' },
-              { name: 'Trio private session', url: 'https://www.pt7.nl/pricing/' },
+              {
+                name: 'One-on-one private session',
+                price: String(PRIVATE.junior.single),
+                priceCurrency: 'EUR',
+                url: 'https://www.pt7.nl/pricing/',
+              },
+              {
+                name: 'Duo private session',
+                price: String(COUPLE.single),
+                priceCurrency: 'EUR',
+                url: 'https://www.pt7.nl/pricing/',
+              },
             ],
           },
         }}
@@ -85,12 +98,12 @@ export const PrivatePilates= () => {
             <h1>Private Reformer Pilates Sessions Amsterdam</h1>
             <p>
               100% personalised training: your goals, your pace, your program. One-on-one or
-              small private groups at our boutique studio near Museumplein in Amsterdam Oud-Zuid.
+              duo sessions at our boutique studio near Museumplein in Amsterdam Oud-Zuid.
               Looking for Pilates near you in central Amsterdam? We are across from the Stedelijk Museum.
             </p>
             <div className="service-hero-badges">
               <span className="service-badge">One-on-one</span>
-              <span className="service-badge">Duo & Trio</span>
+              <span className="service-badge">Duo</span>
               <span className="service-badge">All levels welcome</span>
               <span className="service-badge">Museumplein Amsterdam</span>
             </div>
@@ -101,7 +114,7 @@ export const PrivatePilates= () => {
         <ServiceTrustBand
           imageSrc="/assets/images/reformer_2.webp"
           imageAlt="Private Reformer Pilates session at PT 7"
-          priceAnchor="Private, duo & trio · see private tier pricing"
+          priceAnchor={`Private from ${privateFrom} · boutique privates often €90–120`}
           testimonial="“Warm, welcoming, and filled with care. I leave every class stronger and smiling.”"
           testimonialAuthor="Maya · Google review"
           ctaTo="/pricing/#private-classes"
@@ -149,10 +162,6 @@ export const PrivatePilates= () => {
               <div className="service-benefit-card">
                 <h3>Duo Session</h3>
                 <p>Train with a partner, friend, spouse, or colleague. You share the cost while still receiving far more personal attention than in a group class. Programs can be shared or partially individualised.</p>
-              </div>
-              <div className="service-benefit-card">
-                <h3>Trio Session</h3>
-                <p>Up to three people training together. Great for friends or colleagues with similar goals. The instructor structures the session so each person gets meaningful individual attention.</p>
               </div>
               <div className="service-benefit-card">
                 <h3>Flexible scheduling</h3>

@@ -8,7 +8,6 @@ import {
   GROUP_MAX,
   INTRO,
   MEMBERSHIP,
-  TRIO,
   formatEur,
   privatePackLine,
 } from '../data/pricing';
@@ -157,7 +156,7 @@ export const Chatbot= () => {
         addBotMessage(
           "Would you like to train alone or with others?",
           1000,
-          ["Private (just me)", "With a partner (couple)", "Small group (3 people)", "Group class (max 5)"]
+          ["Private (just me)", "With a partner (couple)", "Group class (max 5)"]
         );
       }
     } else if (field === 'groupSize') {
@@ -223,9 +222,6 @@ export const Chatbot= () => {
       } else if (profile.groupSize === 'With a partner (couple)') {
         classType = '**Couple Classes**';
         pricing = `• Single class: ${formatEur(COUPLE.single)}/person\n• 5-class pack: ${formatEur(COUPLE.pack5.perClass)}/person (${formatEur(COUPLE.pack5.total)} total)\n• 10-class pack: ${formatEur(COUPLE.pack10.perClass)}/person (${formatEur(COUPLE.pack10.total)} total)`;
-      } else if (profile.groupSize === 'Small group (3 people)') {
-        classType = '**Trio Classes**';
-        pricing = `• Single class: ${formatEur(TRIO.single)}/person\n• 5-class pack: ${formatEur(TRIO.pack5.perClass)}/person (${formatEur(TRIO.pack5.total)} total)\n• 10-class pack: ${formatEur(TRIO.pack10.perClass)}/person (${formatEur(TRIO.pack10.total)} total)`;
       } else {
         classType = `**Small Group Classes** (max ${GROUP_MAX})`;
         pricing = `• Single class: ${formatEur(GROUP.single)}\n• 5-class pack: ${formatEur(GROUP.pack5.perClass)}/class (${formatEur(GROUP.pack5.total)} total)\n• 10-class pack: ${formatEur(GROUP.pack10.perClass)}/class (${formatEur(GROUP.pack10.total)} total)\n• 20-class pack: ${formatEur(GROUP.pack20.perClass)}/class (${formatEur(GROUP.pack20.total)} total)\n\nMembership (all days, 1 class/day):\n• ${MEMBERSHIP.four.classes} classes/month: ${formatEur(MEMBERSHIP.four.perClass)}/class (${formatEur(MEMBERSHIP.four.total)}/month)\n• ${MEMBERSHIP.eight.classes} classes/month: ${formatEur(MEMBERSHIP.eight.perClass)}/class (${formatEur(MEMBERSHIP.eight.total)}/month)\n• Unlimited 3 months: ${formatEur(MEMBERSHIP.unlimited3.perMonth)}/month\n• Annual unlimited: ${formatEur(MEMBERSHIP.annual.perMonth)}/month (${formatEur(MEMBERSHIP.annual.yearTotal)}/year)`;
@@ -241,7 +237,9 @@ ${instructorReason}
 **Pricing:**
 ${pricing}
 
-**Special offer:** New clients, introduction package: ${INTRO.classes} group classes for ${formatEur(INTRO.price)}. https://www.pt7.nl/intro/`;
+**Special offer:** New clients, introduction package: ${INTRO.classes} group classes for ${formatEur(INTRO.price)}. https://www.pt7.nl/intro/
+
+**Opening special:** Same package prices with bonus classes now (e.g. 8 membership classes → +4 bonus). https://www.pt7.nl/opening-offer/`;
 
       addBotMessage(recommendation, 2000);
       addBotMessage(
@@ -308,7 +306,7 @@ ${pricing}
   const handleOptionClick = (option: string) => {
     const goalOptions = ["Improve strength & fitness", "Lose weight & tone", "Rehabilitation/injury recovery", "Pregnancy fitness", "General wellness", "Just curious"];
     const experienceOptions = ["Yes, I'm experienced", "Some experience", "I'm a beginner"];
-    const groupOptions = ["Private (just me)", "With a partner (couple)", "Small group (3 people)", "Group class (max 5)"];
+    const groupOptions = ["Private (just me)", "With a partner (couple)", "Group class (max 5)"];
     const injuryOptions = ["Yes, I have injuries", "No injuries", "Some minor concerns", "Back pain", "Pelvic floor", "General fitness", "Preparing for birth", "No specific concerns"];
     const followUpOptions = ["Book a class now", "Tell me about equipment", "View all trainers", "Start over", "Yes, show me", "No thanks"];
 

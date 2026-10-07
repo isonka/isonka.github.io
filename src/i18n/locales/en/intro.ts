@@ -59,7 +59,7 @@ export const enIntro = {
     which: {
       question: 'Which classes does it cover?',
       answer:
-        'Small-group classes on the schedule: Reformer, TRX, and strength. Private, couple, and trio sessions have their own prices.',
+        'Small-group classes on the schedule: Reformer, TRX, and strength. Private and couple sessions have their own prices.',
     },
     size: {
       question: 'How big is the class?',

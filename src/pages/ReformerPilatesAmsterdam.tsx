@@ -22,7 +22,7 @@ const faqs = [
   {
     question: 'How many people are in a Reformer class?',
     answer:
-      'Our small group Reformer classes have a maximum of 5 participants. That keeps coaching personal while still offering group energy. Private, duo, and trio sessions are also available.',
+      'Our small group Reformer classes have a maximum of 5 participants. That keeps coaching personal while still offering group energy. Private and duo sessions are also available.',
   },
   {
     question: 'What happens on my first visit?',
@@ -139,7 +139,7 @@ export const ReformerPilatesAmsterdam= () => {
             <p>
               Small group classes are capped at five people so you still get personal attention.
               Prefer one-on-one?{' '}
-              <Link to="/private-pilates-amsterdam/">Private, duo, and trio Reformer sessions</Link>{' '}
+              <Link to="/private-pilates-amsterdam/">Private and duo Reformer sessions</Link>{' '}
               are available for beginners, athletes, and rehab-minded clients. Pregnancy training is
               private only: see{' '}
               <Link to="/prenatal-pilates-amsterdam/">prenatal Pilates Amsterdam</Link>.

@@ -51,10 +51,10 @@ export const enCommon = {
     websiteBy: 'Website by',
   },
   moveBanner: {
-    strong: "We're moving",
-    full: ' · Last day at Van Baerlestraat: Thursday 29 October. First class: Monday 2 November, Olympisch Stadion 15',
-    short: ' · Last day 29 Oct. First class 2 Nov',
-    cta: 'Read more',
+    strong: 'Opening special',
+    full: ' · Extra bonus classes on packages now · Olympisch Stadion 15 · First class 2 Nov',
+    short: ' · Bonus classes on packages · Olympisch Stadion',
+    cta: 'See offer',
   },
   contactMap: {
     iframeTitle: 'PT 7 Location',

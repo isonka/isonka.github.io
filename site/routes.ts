@@ -67,6 +67,31 @@ const FIXED_PAGES: Route[] = [
         'Nieuwe klanten bij PT 7 Museumplein: 3 groepslessen voor €50. Maximaal 5 personen, 45 minuten. Geldig 3 weken. Online kopen.',
     },
   },
+  {
+    path: '/opening-offer/',
+    prerender: true,
+    sitemap: {
+      lastmod: '2026-10-05',
+      changefreq: 'weekly',
+      priority: '0.9',
+      image: image('olympisch-stadion.webp', 'PT 7 Opening Offer — Olympisch Stadion Amsterdam'),
+    },
+    meta: {
+      title: 'Grand Opening Special | Bonus Classes | PT 7 Amsterdam',
+      description:
+        'Same package prices, extra bonus classes for PT 7’s move to Olympisch Stadion 15. Available now.',
+    },
+  },
+  {
+    path: '/opening-offer/nl/',
+    prerender: true,
+    sitemap: { lastmod: '2026-10-05', changefreq: 'weekly', priority: '0.9' },
+    meta: {
+      title: 'Grote opening special | Bonuslessen | PT 7 Amsterdam',
+      description:
+        'Dezelfde pakketprijzen, extra bonuslessen voor de verhuizing van PT 7 naar Olympisch Stadion 15. Nu beschikbaar.',
+    },
+  },
   { path: '/schedule/', prerender: true, sitemap: { lastmod: '2026-09-15', changefreq: 'daily', priority: '0.9' } },
   { path: '/schedule/nl/', prerender: true, sitemap: { lastmod: '2026-09-15', changefreq: 'daily', priority: '0.9' } },
   { path: '/instructors/', prerender: true, sitemap: { lastmod: '2026-03-10', changefreq: 'monthly', priority: '0.8' } },

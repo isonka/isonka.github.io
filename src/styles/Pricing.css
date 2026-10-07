@@ -159,6 +159,16 @@
   box-shadow: none;
 }
 
+.special-offer-opening {
+  margin-top: 8px;
+  border-top: none;
+}
+
+.special-offer-opening .offer-badge {
+  background: #111;
+  color: var(--gold, #ffd700);
+}
+
 .pricing-jump {
   display: flex;
   flex-wrap: wrap;

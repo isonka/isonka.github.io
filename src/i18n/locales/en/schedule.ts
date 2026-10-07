@@ -50,14 +50,14 @@ export const enSchedule = {
   private: {
     title: 'Private classes',
     subtitle:
-      'Personalized training for your goals and level: one-on-one, couple, or trio. See our <private>Private Pilates near Museumplein</private> page for formats, pricing, and what to expect.',
+      'Personalized training for your goals and level: one-on-one or couple. See our <private>Private Pilates near Museumplein</private> page for formats, pricing, and what to expect.',
     bannerLead: 'Personalized attention.',
     bannerText:
-      'Sessions adapt to your goals, injuries, or specific needs. Train solo, with a partner, or with two friends.',
+      'Sessions adapt to your goals, injuries, or specific needs. Train solo or with a partner.',
     durationTitle: 'Class duration',
     durationValue: '45 minutes of focused training',
     optionsTitle: 'Class options',
-    optionsValue: 'One-on-one, couple, or trio (3 people)',
+    optionsValue: 'One-on-one or couple',
     programTitle: 'Customized program',
     programValue: 'Workout adapted to your goals and level',
     bringTitle: 'What to bring',
@@ -88,7 +88,7 @@ export const enSchedule = {
     private: {
       question: 'Can I book private Pilates sessions from this page?',
       answer:
-        'Yes. Open the Private classes tab to book one-on-one, couple, or trio appointments. For more on private formats, see <private>Private Pilates near Museumplein</private>.',
+        'Yes. Open the Private classes tab to book one-on-one or couple appointments. For more on private formats, see <private>Private Pilates near Museumplein</private>.',
     },
     beginner: {
       question: 'Are your group Pilates classes beginner-friendly?',

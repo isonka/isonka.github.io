@@ -54,10 +54,10 @@ export const nlCommon: DeepStringify<EnCommon> = {
     websiteBy: 'Website door',
   },
   moveBanner: {
-    strong: 'We verhuizen',
-    full: ' · Laatste dag Van Baerlestraat: donderdag 29 oktober. Eerste les: maandag 2 november, Olympisch Stadion 15',
-    short: ' · Laatste dag 29 okt. Eerste les 2 nov',
-    cta: 'Lees meer',
+    strong: 'Opening special',
+    full: ' · Extra bonuslessen bij pakketten nu · Olympisch Stadion 15 · Eerste les 2 nov',
+    short: ' · Bonuslessen bij pakketten · Olympisch Stadion',
+    cta: 'Bekijk aanbod',
   },
   contactMap: {
     iframeTitle: 'Locatie PT 7',

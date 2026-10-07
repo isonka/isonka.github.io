@@ -53,14 +53,14 @@ export const nlSchedule: DeepStringify<EnSchedule> = {
   private: {
     title: 'Privélessen',
     subtitle:
-      'Persoonlijke training voor jouw doelen en niveau: 1-op-1, duo of trio. Zie onze pagina <private>Private pilates bij het Museumplein</private> voor formats, prijzen en wat je kunt verwachten.',
+      'Persoonlijke training voor jouw doelen en niveau: 1-op-1 of duo. Zie onze pagina <private>Private pilates bij het Museumplein</private> voor formats, prijzen en wat je kunt verwachten.',
     bannerLead: 'Persoonlijke aandacht.',
     bannerText:
-      'Sessies passen we aan op jouw doelen, blessures of specifieke wensen. Train solo, met een partner, of met twee vrienden.',
+      'Sessies passen we aan op jouw doelen, blessures of specifieke wensen. Train solo of met een partner.',
     durationTitle: 'Lesduur',
     durationValue: '45 minuten gerichte training',
     optionsTitle: 'Lesopties',
-    optionsValue: '1-op-1, duo of trio (3 personen)',
+    optionsValue: '1-op-1 of duo',
     programTitle: 'Op maat',
     programValue: 'Workout afgestemd op jouw doelen en niveau',
     bringTitle: 'Wat meenemen',
@@ -91,7 +91,7 @@ export const nlSchedule: DeepStringify<EnSchedule> = {
     private: {
       question: 'Kan ik private pilateslessen vanaf deze pagina boeken?',
       answer:
-        'Ja. Open het tabblad Privélessen voor 1-op-1, duo of trio. Meer over formats: <private>Private pilates bij het Museumplein</private>.',
+        'Ja. Open het tabblad Privélessen voor 1-op-1 of duo. Meer over formats: <private>Private pilates bij het Museumplein</private>.',
     },
     beginner: {
       question: 'Zijn jullie pilatesgroepslessen geschikt voor beginners?',

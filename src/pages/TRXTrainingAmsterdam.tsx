@@ -126,8 +126,8 @@ export const TRXTrainingAmsterdam= () => {
               ideal for combining with Pilates in an integrated training program.
             </p>
             <p>
-              TRX sessions at PT 7 are available as private sessions (one-on-one, duo, or
-              trio) and in our small group classes of maximum 5 people.
+              TRX sessions at PT 7 are available as private sessions (one-on-one or
+              duo) and in our small group classes of maximum 5 people.
             </p>
           </div>
         </Reveal>

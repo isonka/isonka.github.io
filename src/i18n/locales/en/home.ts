@@ -16,6 +16,15 @@ export const enHome = {
     short: ' · Teacher training · Next: Nov 2026',
     cta: 'View Course →',
   },
+  openingBanner: {
+    kicker: 'Grand opening',
+    title: 'More classes. Same price.',
+    lead: 'Bonus classes on memberships, group packs, and private or couple packages for our Olympisch Stadion opening.',
+    limited: 'Limited · one time only',
+    cta: 'See the offer',
+    skip: 'Not now',
+    dismiss: 'Close opening offer',
+  },
   hero: {
     brand: 'PT 7',
     title: 'Reformer Pilates & Strength Training in Amsterdam',

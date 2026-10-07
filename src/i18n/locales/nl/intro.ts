@@ -62,7 +62,7 @@ export const nlIntro: DeepStringify<EnIntro> = {
     which: {
       question: 'Voor welke lessen is het?',
       answer:
-        'Groepslessen in het rooster: Reformer, TRX en kracht. Privé, duo en trio hebben eigen prijzen.',
+        'Groepslessen in het rooster: Reformer, TRX en kracht. Privé en duo hebben eigen prijzen.',
     },
     size: {
       question: 'Hoe groot is de groep?',

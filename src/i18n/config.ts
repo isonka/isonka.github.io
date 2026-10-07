@@ -5,12 +5,14 @@ import { enAcademy } from './locales/en/academy';
 import { enCommon } from './locales/en/common';
 import { enHome } from './locales/en/home';
 import { enIntro } from './locales/en/intro';
+import { enOpeningOffer } from './locales/en/openingOffer';
 import { enPricing } from './locales/en/pricing';
 import { enSchedule } from './locales/en/schedule';
 import { nlAcademy } from './locales/nl/academy';
 import { nlCommon } from './locales/nl/common';
 import { nlHome } from './locales/nl/home';
 import { nlIntro } from './locales/nl/intro';
+import { nlOpeningOffer } from './locales/nl/openingOffer';
 import { nlPricing } from './locales/nl/pricing';
 import { nlSchedule } from './locales/nl/schedule';
 
@@ -27,13 +29,29 @@ export function initI18n() {
 
   void i18n.use(initReactI18next).init({
     resources: {
-      en: { common: enCommon, home: enHome, pricing: enPricing, academy: enAcademy, schedule: enSchedule, intro: enIntro },
-      nl: { common: nlCommon, home: nlHome, pricing: nlPricing, academy: nlAcademy, schedule: nlSchedule, intro: nlIntro },
+      en: {
+        common: enCommon,
+        home: enHome,
+        pricing: enPricing,
+        academy: enAcademy,
+        schedule: enSchedule,
+        intro: enIntro,
+        openingOffer: enOpeningOffer,
+      },
+      nl: {
+        common: nlCommon,
+        home: nlHome,
+        pricing: nlPricing,
+        academy: nlAcademy,
+        schedule: nlSchedule,
+        intro: nlIntro,
+        openingOffer: nlOpeningOffer,
+      },
     },
     lng: detectLng(),
     fallbackLng: 'en',
     supportedLngs: ['en', 'nl'],
-    ns: ['common', 'home', 'pricing', 'academy', 'schedule', 'intro'],
+    ns: ['common', 'home', 'pricing', 'academy', 'schedule', 'intro', 'openingOffer'],
     defaultNS: 'common',
     interpolation: { escapeValue: false },
     react: { useSuspense: false },

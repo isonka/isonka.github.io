@@ -15,11 +15,11 @@ import {
   INTRO,
   MEMBERSHIP,
   PRIVATE,
-  TRIO,
   formatEur,
   packTotal,
 } from '../data/pricing';
 import { formatOpeningClock, studioHoursFor } from '../data/business';
+import { OPENING_OFFER } from '../data/openingOffer';
 import { useLocale } from '../i18n/useLocale';
 import '../styles/Pricing.css';
 
@@ -57,7 +57,6 @@ export const Pricing= () => {
     annualYear: formatEur(MEMBERSHIP.annual.yearTotal),
     privateFrom: formatEur(PRIVATE.junior.single),
     coupleFrom: formatEur(COUPLE.single),
-    trioFrom: formatEur(TRIO.single),
   };
 
   const toggleFaq = (index: number) => {
@@ -165,6 +164,14 @@ export const Pricing= () => {
                   html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100066" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
                 />
           </div>
+          <div className="special-offer special-offer-opening">
+            <span className="offer-badge">{t('openingOffer.badge')}</span>
+            <h3>{t('openingOffer.title')}</h3>
+            <p>{t('openingOffer.description')}</p>
+            <p className="offer-details">
+              <Link to={isNl ? OPENING_OFFER.pathNl : OPENING_OFFER.path}>{t('openingOffer.details')}</Link>
+            </p>
+          </div>
         </div>
 
         <nav className="pricing-jump" aria-label={t('nav.aria')}>
@@ -172,7 +179,6 @@ export const Pricing= () => {
           <a href="#group-classes">{t('nav.group')}</a>
           <a href="#private-classes">{t('nav.private')}</a>
           <a href="#couple-classes">{t('nav.couple')}</a>
-          <a href="#trio-classes">{t('nav.trio')}</a>
         </nav>
 
         <section className="pricing-content" id="membership">
@@ -314,7 +320,7 @@ export const Pricing= () => {
         <section className="pricing-content" id="private-classes">
             <p className="pricing-kicker">{t('private.kicker')}</p>
             <h2 className="pricing-section-title">{t('private.title')}</h2>
-            <p className="pricing-subtitle">{t('private.subtitle', { minutes: String(CLASS_MINUTES) })}</p>
+            <p className="pricing-subtitle">{t('private.subtitle', { minutes: String(CLASS_MINUTES), privateFrom: formatEur(PRIVATE.junior.single) })}</p>
 
             <div className="instructor-tabs" role="tablist" aria-label={t('private.tabsAria')}>
               <button
@@ -587,66 +593,6 @@ export const Pricing= () => {
                 <StableHealcodeSlot
                   className="buy-button healcode-pricing-option-text-link"
                   html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100036" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
-                />
-              </div>
-            </div>
-        </section>
-
-        <section className="pricing-content" id="trio-classes">
-            <p className="pricing-kicker">{t('trio.kicker')}</p>
-            <h2 className="pricing-section-title">{t('trio.title')}</h2>
-            <p className="pricing-subtitle">{t('trio.subtitle', { minutes: String(CLASS_MINUTES) })}</p>
-
-            <div className="packages-grid">
-              <div className="package-card">
-                <div className="price-display">
-                  <h4 className="price-per-class">{formatEur(TRIO.single)} <span className="per-person">{t('labels.perPerson')}</span></h4>
-                  <span className="package-name">{t('labels.singleClass')}</span>
-                </div>
-                <p className="validity">{t('labels.validFor', { count: 1 })}</p>
-                <StableHealcodeSlot
-                  className="buy-button healcode-pricing-option-text-link"
-                  html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100037" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
-                />
-              </div>
-
-              <div className="package-card">
-                <div className="price-display">
-                  <h4 className="price-per-class">{formatEur(TRIO.pack5.perClass)} <span className="per-person">{t('labels.perPerson')}</span></h4>
-                  <span className="package-name">{t('labels.classPack', { count: 5 })}</span>
-                </div>
-                <p className="total-price">{t('labels.inTotal', { amount: formatEur(TRIO.pack5.total) })}</p>
-                <p className="validity">{t('labels.validFor', { count: 5 })}</p>
-                <StableHealcodeSlot
-                  className="buy-button healcode-pricing-option-text-link"
-                  html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100038" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
-                />
-              </div>
-
-              <div className="package-card featured">
-                <div className="badge">{t('labels.bestValue')}</div>
-                <div className="price-display">
-                  <h4 className="price-per-class">{formatEur(TRIO.pack10.perClass)} <span className="per-person">{t('labels.perPerson')}</span></h4>
-                  <span className="package-name">{t('labels.classPack', { count: 10 })}</span>
-                </div>
-                <p className="total-price">{t('labels.inTotal', { amount: formatEur(TRIO.pack10.total) })}</p>
-                <p className="validity">{t('labels.validFor', { count: 10 })}</p>
-                <StableHealcodeSlot
-                  className="buy-button healcode-pricing-option-text-link"
-                  html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100039" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
-                />
-              </div>
-
-              <div className="package-card">
-                <div className="price-display">
-                  <h4 className="price-per-class">{formatEur(TRIO.pack20.perClass)} <span className="per-person">{t('labels.perPerson')}</span></h4>
-                  <span className="package-name">{t('labels.classPack', { count: 20 })}</span>
-                </div>
-                <p className="total-price">{t('labels.inTotal', { amount: formatEur(TRIO.pack20.total) })}</p>
-                <p className="validity">{t('labels.validFor', { count: 20 })}</p>
-                <StableHealcodeSlot
-                  className="buy-button healcode-pricing-option-text-link"
-                  html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100040" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
                 />
               </div>
             </div>

@@ -26,7 +26,7 @@ export const enPricing = {
     unlimited:
       'Unlimited memberships are {{unlimited3}} per month on a 3-month commitment, or {{annualMonth}} per month on an annual commitment ({{annualYear}} per year, including a 4-week freeze option).',
     private:
-      'Private sessions start at {{privateFrom}}, couple sessions at {{coupleFrom}} per person, and trio sessions at {{trioFrom}} per person.',
+      'Private sessions start at {{privateFrom}}, below typical Amsterdam boutique private rates (€90–120). Couple sessions start at {{coupleFrom}} per person.',
     membershipRules:
       'All memberships allow a maximum of one class per day and renew automatically unless cancelled before the renewal date.',
   },
@@ -36,13 +36,19 @@ export const enPricing = {
     description: 'New clients only: {{classes}} group classes for {{price}}',
     details: 'See the intro offer',
   },
+  openingOffer: {
+    badge: 'Grand opening',
+    title: 'Bonus classes on packages',
+    description:
+      'Same package prices — extra bonus classes on memberships, group packs, and private/couple packs for our Olympisch Stadion opening. Available now.',
+    details: 'See the opening special',
+  },
   nav: {
     aria: 'Pricing sections',
     membership: 'Membership',
     group: 'Group',
     private: 'Private',
     couple: 'Couple',
-    trio: 'Trio',
   },
   labels: {
     perClass: 'per class',
@@ -84,7 +90,7 @@ export const enPricing = {
     kicker: 'Private',
     title: 'Private classes',
     subtitle:
-      'Personalized one-on-one training tailored to your specific goals and fitness level. Choose your instructor level. {{minutes}}-minute classes.',
+      'Personalized one-on-one training tailored to your specific goals and fitness level. Sessions start at {{privateFrom}}, below typical Amsterdam boutique private rates (€90–120). Choose your instructor level. {{minutes}}-minute classes.',
     tabsAria: 'Instructor level',
     master: 'Master Instructor',
     senior: 'Senior Instructor',
@@ -99,12 +105,6 @@ export const enPricing = {
     title: 'Couple classes',
     subtitle:
       'Train together with your partner. Share the experience and motivate each other. Price shown per person. {{minutes}}-minute classes.',
-  },
-  trio: {
-    kicker: 'Trio',
-    title: 'Trio classes',
-    subtitle:
-      'Train with two friends or family members. Perfect for small groups who want personalized attention. Price shown per person. {{minutes}}-minute classes.',
   },
   info: {
     kicker: 'Studio',
@@ -179,7 +179,7 @@ export const enPricing = {
     cost: {
       question: 'How much do Pilates classes cost in Amsterdam?',
       answer:
-        'Group Reformer Pilates classes start from {{groupPerClass}} per class with a 20-class pack ({{groupTotal}} total). Single group classes are {{groupSingle}}. Private sessions start from {{juniorSingle}}. Full packages are listed on this page.',
+        'Group Reformer Pilates classes start from {{groupPerClass}} per class with a 20-class pack ({{groupTotal}} total). Single group classes are {{groupSingle}}. Private sessions start from {{juniorSingle}}, below typical Amsterdam boutique private rates (€90–120). Full packages are listed on this page.',
     },
     intro: {
       question: 'Is there an intro offer for new clients?',
