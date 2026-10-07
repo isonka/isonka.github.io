@@ -5,6 +5,7 @@ import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Reveal } from '../components/Reveal';
+import { OpeningCountdown } from '../components/OpeningCountdown';
 import { trackPageView } from '../utils/gtmTracking';
 import { OPENING_OFFER } from '../data/openingOffer';
 import { useLocale } from '../i18n/useLocale';
@@ -87,6 +88,7 @@ export const OpeningOffer = () => {
             <p className="oo-kicker oo-kicker-on-dark">{t('hero.kicker')}</p>
             <h1>{t('hero.title')}</h1>
             <p className="oo-hero-lead">{t('hero.lead')}</p>
+            <OpeningCountdown />
             <div className="oo-hero-actions">
               <Link to={scheduleHref} className="oo-btn oo-btn-gold">
                 {t('hero.primaryCta')}

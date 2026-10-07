@@ -1,10 +1,9 @@
 .oo-home-banner {
-  position: relative;
   width: 100%;
   box-sizing: border-box;
   background: var(--ink, #111);
   color: #fff;
-  padding: 28px 48px 28px 24px;
+  padding: 28px 24px;
   animation: oo-home-banner-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
@@ -92,43 +91,6 @@
   color: #111;
 }
 
-.oo-home-banner-skip {
-  border: none;
-  background: transparent;
-  color: rgba(255, 255, 255, 0.65);
-  font-size: 0.85rem;
-  font-weight: 500;
-  cursor: pointer;
-  padding: 0;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.oo-home-banner-skip:hover {
-  color: #fff;
-}
-
-.oo-home-banner-dismiss {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 36px;
-  height: 36px;
-  border: none;
-  background: transparent;
-  color: rgba(255, 255, 255, 0.65);
-  font-size: 1.5rem;
-  line-height: 1;
-  cursor: pointer;
-  border-radius: 50%;
-  padding: 0;
-}
-
-.oo-home-banner-dismiss:hover {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.1);
-}
-
 @keyframes oo-home-banner-in {
   from {
     opacity: 0;
@@ -140,7 +102,7 @@
 
 @media (max-width: 700px) {
   .oo-home-banner {
-    padding: 24px 40px 24px 16px;
+    padding: 24px 16px;
   }
 
   .oo-home-banner-actions {

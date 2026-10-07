@@ -82,6 +82,55 @@
   gap: 12px;
 }
 
+.oo-countdown {
+  margin: 0 0 28px;
+}
+
+.oo-countdown-label {
+  margin: 0 0 12px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.oo-countdown-units {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 392px;
+}
+
+.oo-countdown-unit {
+  min-width: 0;
+  padding: 10px 8px 8px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 12px;
+  background: rgba(17, 17, 17, 0.35);
+}
+
+.oo-countdown-value {
+  display: block;
+  font-size: clamp(1.35rem, 4vw, 1.7rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--gold, #ffd700);
+  font-variant-numeric: tabular-nums;
+}
+
+.oo-countdown-unit-label {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+
 /* —— Shared —— */
 .oo-kicker {
   margin: 0 0 16px;

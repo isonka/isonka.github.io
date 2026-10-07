@@ -25,8 +25,6 @@ export const nlHome: DeepStringify<EnHome> = {
     lead: 'Bonuslessen op memberships, groepspakketten en privé- of duopakketten voor onze opening op Olympisch Stadion.',
     limited: 'Beperkt · eenmalig',
     cta: 'Bekijk het aanbod',
-    skip: 'Niet nu',
-    dismiss: 'Openingaanbod sluiten',
   },
   hero: {
     brand: 'PT 7',

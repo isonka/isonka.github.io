@@ -19,6 +19,14 @@ export const enOpeningOffer = {
     primaryCta: 'Book a class',
     secondaryCta: 'See all prices',
   },
+  countdown: {
+    label: 'Opens in',
+    days: 'Days',
+    hours: 'Hours',
+    minutes: 'Minutes',
+    seconds: 'Seconds',
+    aria: '{{days}} days, {{hours}} hours, {{minutes}} minutes, and {{seconds}} seconds until opening',
+  },
   imageAlt: 'Olympisch Stadion exterior — PT 7’s new Amsterdam Zuid studio',
   limited: 'Limited · one time only',
   packages: {

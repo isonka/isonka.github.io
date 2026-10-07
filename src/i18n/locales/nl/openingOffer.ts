@@ -22,6 +22,14 @@ export const nlOpeningOffer: DeepStringify<EnOpeningOffer> = {
     primaryCta: 'Boek een les',
     secondaryCta: 'Alle prijzen',
   },
+  countdown: {
+    label: 'Opening over',
+    days: 'Dagen',
+    hours: 'Uren',
+    minutes: 'Minuten',
+    seconds: 'Seconden',
+    aria: 'Nog {{days}} dagen, {{hours}} uur, {{minutes}} minuten en {{seconds}} seconden tot de opening',
+  },
   imageAlt: 'Olympisch Stadion — de nieuwe studio van PT 7 in Amsterdam Zuid',
   limited: 'Beperkt · eenmalig',
   packages: {
