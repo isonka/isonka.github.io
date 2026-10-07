@@ -105,28 +105,7 @@ export const Schedule= () => {
             <p className="schedule-kicker">{t('hero.kicker')}</p>
             <h1>{t('hero.title')}</h1>
             <p>{t('hero.lead')}</p>
-            <div className="schedule-hours" aria-labelledby="schedule-hours-heading">
-              <h2 id="schedule-hours-heading" className="schedule-hours-title">
-                {t('hours.title')}
-              </h2>
-              <dl className="schedule-hours-list">
-                {business.openingHours.map((slot) => (
-                  <div key={slot.opens + slot.closes} className="schedule-hours-row">
-                    <dt>{t(hoursLabelKey(slot.dayOfWeek))}</dt>
-                    <dd>{formatOpeningClock(slot)}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
             <p className="location-highlight">{t('hero.location')}</p>
-            <p className="schedule-account-note">{t('hero.accountNote')}</p>
-            <p>
-              <Link to="/reformer-pilates-amsterdam/">{t('hero.linkReformer')}</Link>
-              {' · '}
-              <Link to={pricingHref}>{t('hero.linkPricing')}</Link>
-              {' · '}
-              <Link to="/private-pilates-amsterdam/">{t('hero.linkPrivate')}</Link>
-            </p>
           </div>
         </section>
 
@@ -150,6 +129,31 @@ export const Schedule= () => {
             </div>
 
             <div className={`tab-content ${activeTab === 'group' ? 'active' : ''}`}>
+              <div className="widget-container">
+                {widgetsLoading && (
+                  <p className="widget-loading" role="status">
+                    {t('widget.loading')}
+                  </p>
+                )}
+                {widgetsError && (
+                  <p className="widget-error" role="alert">
+                    <Trans
+                      ns="schedule"
+                      i18nKey="widget.error"
+                      components={{ refresh: <a href={schedulePath} /> }}
+                    />
+                  </p>
+                )}
+                <div
+                  key={`group-${schedulePath}`}
+                  className="mindbody-widget"
+                  data-widget-type="Schedules"
+                  data-widget-id="2b8825c036"
+                  style={{ width: '100%' }}
+                  hidden={widgetsError}
+                />
+              </div>
+
               <h2>{t('group.title')}</h2>
               <p className="subtitle">{t('group.subtitle')}</p>
 
@@ -177,68 +181,9 @@ export const Schedule= () => {
                   <p>{t('group.bringValue')}</p>
                 </div>
               </div>
-
-              <div className="widget-container">
-                {widgetsLoading && (
-                  <p className="widget-loading" role="status">
-                    {t('widget.loading')}
-                  </p>
-                )}
-                {widgetsError && (
-                  <p className="widget-error" role="alert">
-                    <Trans
-                      ns="schedule"
-                      i18nKey="widget.error"
-                      components={{ refresh: <a href={schedulePath} /> }}
-                    />
-                  </p>
-                )}
-                <div
-                  key={`group-${schedulePath}`}
-                  className="mindbody-widget"
-                  data-widget-type="Schedules"
-                  data-widget-id="2b8825c036"
-                  style={{ width: '100%' }}
-                  hidden={widgetsError}
-                />
-              </div>
             </div>
 
             <div className={`tab-content ${activeTab === 'private' ? 'active' : ''}`}>
-              <h2>{t('private.title')}</h2>
-              <p className="subtitle">
-                <Trans
-                  ns="schedule"
-                  i18nKey="private.subtitle"
-                  components={{ private: <Link to="/private-pilates-amsterdam/" /> }}
-                />
-              </p>
-
-              <div className="info-banner">
-                <p>
-                  <strong>{t('private.bannerLead')}</strong> {t('private.bannerText')}
-                </p>
-              </div>              
-
-              <div className="quick-info">
-                <div className="info-card">
-                  <h3>{t('private.durationTitle')}</h3>
-                  <p>{t('private.durationValue')}</p>
-                </div>
-                <div className="info-card">
-                  <h3>{t('private.optionsTitle')}</h3>
-                  <p>{t('private.optionsValue')}</p>
-                </div>
-                <div className="info-card">
-                  <h3>{t('private.programTitle')}</h3>
-                  <p>{t('private.programValue')}</p>
-                </div>
-                <div className="info-card">
-                  <h3>{t('private.bringTitle')}</h3>
-                  <p>{t('private.bringValue')}</p>
-                </div>
-              </div>
-
               <div className="widget-container">
                 {widgetsLoading && (
                   <p className="widget-loading" role="status">
@@ -263,8 +208,66 @@ export const Schedule= () => {
                   hidden={widgetsError}
                 />
               </div>
+
+              <h2>{t('private.title')}</h2>
+              <p className="subtitle">
+                <Trans
+                  ns="schedule"
+                  i18nKey="private.subtitle"
+                  components={{ private: <Link to="/private-pilates-amsterdam/" /> }}
+                />
+              </p>
+
+              <div className="info-banner">
+                <p>
+                  <strong>{t('private.bannerLead')}</strong> {t('private.bannerText')}
+                </p>
+              </div>
+
+              <div className="quick-info">
+                <div className="info-card">
+                  <h3>{t('private.durationTitle')}</h3>
+                  <p>{t('private.durationValue')}</p>
+                </div>
+                <div className="info-card">
+                  <h3>{t('private.optionsTitle')}</h3>
+                  <p>{t('private.optionsValue')}</p>
+                </div>
+                <div className="info-card">
+                  <h3>{t('private.programTitle')}</h3>
+                  <p>{t('private.programValue')}</p>
+                </div>
+                <div className="info-card">
+                  <h3>{t('private.bringTitle')}</h3>
+                  <p>{t('private.bringValue')}</p>
+                </div>
+              </div>
             </div>
           </div>
+        </section>
+
+        <section className="schedule-details">
+          <div className="schedule-hours" aria-labelledby="schedule-hours-heading">
+            <h2 id="schedule-hours-heading" className="schedule-hours-title">
+              {t('hours.title')}
+            </h2>
+            <dl className="schedule-hours-list">
+              {business.openingHours.map((slot) => (
+                <div key={slot.opens + slot.closes} className="schedule-hours-row">
+                  <dt>{t(hoursLabelKey(slot.dayOfWeek))}</dt>
+                  <dd>{formatOpeningClock(slot)}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+          <p className="schedule-account-note">{t('hero.accountNote')}</p>
+          <p className="schedule-detail-links">
+            <Link to="/reformer-pilates-amsterdam/">{t('hero.linkReformer')}</Link>
+            {' · '}
+            <Link to={pricingHref}>{t('hero.linkPricing')}</Link>
+            {' · '}
+            <Link to="/private-pilates-amsterdam/">{t('hero.linkPrivate')}</Link>
+          </p>
         </section>
 
         <section className="schedule-faq" aria-labelledby="schedule-faq-heading">
