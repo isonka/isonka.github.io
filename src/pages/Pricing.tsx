@@ -43,10 +43,9 @@ function PackageBonus({ kind, paid }: { kind: BonusKind; paid: number }) {
   const { t } = useTranslation('pricing');
   const row = OPENING_OFFER.bonuses[kind].find((item) => item.paid === paid);
   if (!row) return null;
+  const bonus = String(row.bonus);
   const label =
-    row.bonus === 1
-      ? t('openingBonus.one', { bonus: row.bonus })
-      : t('openingBonus.other', { bonus: row.bonus });
+    row.bonus === 1 ? t('openingBonus.one', { bonus }) : t('openingBonus.other', { bonus });
   return <p className="package-bonus">{label}</p>;
 }
 
