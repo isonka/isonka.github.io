@@ -46,6 +46,10 @@ export const nlPricing: DeepStringify<EnPricing> = {
       'Dezelfde pakketprijzen — extra bonuslessen op memberships, groepspakketten en privé/duo voor de opening op Olympisch Stadion. Nu beschikbaar.',
     details: 'Bekijk de opening special',
   },
+  openingBonus: {
+    one: '+{{bonus}} bonusles',
+    other: '+{{bonus}} bonuslessen',
+  },
   nav: {
     aria: 'Prijzensecties',
     membership: 'Abonnement',

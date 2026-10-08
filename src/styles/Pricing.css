@@ -417,6 +417,21 @@
   margin-bottom: 8px;
 }
 
+.package-bonus {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  margin: 4px 0 12px;
+  background: var(--gold, #ffd700);
+  color: #111;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill, 1000px);
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+  line-height: 1;
+}
+
 .package-fineprint {
   text-align: left;
   font-size: 0.85rem;
