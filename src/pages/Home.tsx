@@ -369,7 +369,7 @@ export const Home= () => {
               <div className="home-contact-socials">
                 <a href="https://www.instagram.com/pt7amsterdam" target="_blank" rel="noopener noreferrer" aria-label={t('contact.instagram')}>{t('contact.instagram')}</a>
                 <a href="https://www.facebook.com/ptstudio7" target="_blank" rel="noopener noreferrer" aria-label={t('contact.facebook')}>{t('contact.facebook')}</a>
-                <a href="https://www.linkedin.com/company/pt-studio-7" target="_blank" rel="noopener noreferrer" aria-label={t('contact.linkedin')}>{t('contact.linkedin')}</a>
+                <a href="https://www.linkedin.com/company/pt7" target="_blank" rel="noopener noreferrer" aria-label={t('contact.linkedin')}>{t('contact.linkedin')}</a>
               </div>
             </div>
           </div>
