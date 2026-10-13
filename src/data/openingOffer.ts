@@ -1,10 +1,16 @@
-/** Grand-opening / studio-move campaign — bonus classes at standard package prices (no price drop). */
+/**
+ * Grand-opening campaign is paused. A fire at Olympisch Stadion postponed the move.
+ * Planned address stays Olympisch Stadion 15. First-class date is not set.
+ * Bonus figures below are the paused offer, not live pricing.
+ */
 export const OPENING_OFFER = {
+  active: false,
   path: '/opening-offer/',
   pathNl: '/opening-offer/nl/',
-  lastDayVanBaerlestraat: '2026-10-29',
-  closedDays: ['2026-10-30', '2026-10-31', '2026-11-01'] as const,
-  firstClassOlympisch: '2026-11-02',
+  announcementPath: '/blog/pt-7-moves-to-olympisch-stadion/',
+  lastDayVanBaerlestraat: '',
+  closedDays: [] as const,
+  firstClassOlympisch: '',
   newAddress: {
     streetAddress: 'Olympisch Stadion 15',
     postalCode: '1076 DE',

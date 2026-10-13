@@ -19,7 +19,6 @@ import {
   packTotal,
 } from '../data/pricing';
 import { formatOpeningClock, studioHoursFor } from '../data/business';
-import { OPENING_OFFER } from '../data/openingOffer';
 import { useLocale } from '../i18n/useLocale';
 import '../styles/Pricing.css';
 
@@ -36,18 +35,6 @@ const weekdayHours = formatOpeningClock(studioHoursFor('Monday'));
 const weekendHours = formatOpeningClock(studioHoursFor('Saturday'));
 
 const SUMMARY_KEYS = ['group', 'intro', 'monthly', 'unlimited', 'private', 'membershipRules'] as const;
-
-type BonusKind = keyof typeof OPENING_OFFER.bonuses;
-
-function PackageBonus({ kind, paid }: { kind: BonusKind; paid: number }) {
-  const { t } = useTranslation('pricing');
-  const row = OPENING_OFFER.bonuses[kind].find((item) => item.paid === paid);
-  if (!row) return null;
-  const bonus = String(row.bonus);
-  const label =
-    row.bonus === 1 ? t('openingBonus.one', { bonus }) : t('openingBonus.other', { bonus });
-  return <p className="package-bonus">{label}</p>;
-}
 
 export const Pricing= () => {
   const { t } = useTranslation('pricing');
@@ -176,14 +163,6 @@ export const Pricing= () => {
                   html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100066" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
                 />
           </div>
-          <div className="special-offer special-offer-opening">
-            <span className="offer-badge">{t('openingOffer.badge')}</span>
-            <h3>{t('openingOffer.title')}</h3>
-            <p>{t('openingOffer.description')}</p>
-            <p className="offer-details">
-              <Link to={isNl ? OPENING_OFFER.pathNl : OPENING_OFFER.path}>{t('openingOffer.details')}</Link>
-            </p>
-          </div>
         </div>
 
         <nav className="pricing-jump" aria-label={t('nav.aria')}>
@@ -206,7 +185,6 @@ export const Pricing= () => {
                   <h4 className="price-per-class">{formatEur(MEMBERSHIP.four.perClass)} <span className="per-person">{t('labels.perClass')}</span></h4>
                 </div>
                 <p className="validity">{t('labels.allDaysOneClass')}</p>
-                <PackageBonus kind="membership" paid={MEMBERSHIP.four.classes} />
                 <p className="package-fineprint">
                   {t('membership.monthlyFineprint')}
                 </p>
@@ -223,7 +201,6 @@ export const Pricing= () => {
                   <h4 className="price-per-class">{formatEur(MEMBERSHIP.eight.perClass)} <span className="per-person">{t('labels.perClass')}</span></h4>
                 </div>
                 <p className="validity">{t('labels.allDaysOneClass')}</p>
-                <PackageBonus kind="membership" paid={MEMBERSHIP.eight.classes} />
                 <p className="package-fineprint">
                   {t('membership.monthlyFineprint')}
                 </p>
@@ -296,7 +273,6 @@ export const Pricing= () => {
                 </div>
                 <p className="total-price">{t('labels.inTotal', { amount: formatEur(GROUP.pack5.total) })}</p>
                 <p className="validity">{t('labels.validFor', { count: 5 })}</p>
-                <PackageBonus kind="group" paid={5} />
                 <StableHealcodeSlot
                   className="buy-button healcode-pricing-option-text-link"
                   html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100003" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
@@ -311,7 +287,6 @@ export const Pricing= () => {
                 </div>
                 <p className="total-price">{t('labels.inTotal', { amount: formatEur(GROUP.pack10.total) })}</p>
                 <p className="validity">{t('labels.validFor', { count: 10 })}</p>
-                <PackageBonus kind="group" paid={10} />
                 <StableHealcodeSlot
                   className="buy-button healcode-pricing-option-text-link"
                   html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100004" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
@@ -325,7 +300,6 @@ export const Pricing= () => {
                 </div>
                 <p className="total-price">{t('labels.inTotal', { amount: formatEur(GROUP.pack20.total) })}</p>
                 <p className="validity">{t('labels.validFor', { count: 20 })}</p>
-                <PackageBonus kind="group" paid={20} />
                 <StableHealcodeSlot
                   className="buy-button healcode-pricing-option-text-link"
                   html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100005" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
@@ -396,7 +370,6 @@ export const Pricing= () => {
                 </div>
                 <p className="total-price">{t('labels.inTotal', { amount: formatEur(packTotal(PRIVATE.junior.pack5, 5)) })}</p>
                 <p className="validity">{t('labels.validFor', { count: 5 })}</p>
-                <PackageBonus kind="privateCouple" paid={5} />
                 <StableHealcodeSlot
                   className="buy-button healcode-pricing-option-text-link"
                   html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100053" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
@@ -410,7 +383,6 @@ export const Pricing= () => {
                 </div>
                 <p className="total-price">{t('labels.inTotal', { amount: formatEur(packTotal(PRIVATE.junior.pack10, 10)) })}</p>
                 <p className="validity">{t('labels.validFor', { count: 10 })}</p>
-                <PackageBonus kind="privateCouple" paid={10} />
                 <StableHealcodeSlot
                   className="buy-button healcode-pricing-option-text-link"
                   html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100054" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
@@ -424,7 +396,6 @@ export const Pricing= () => {
                 </div>
                 <p className="total-price">{t('labels.inTotal', { amount: formatEur(packTotal(PRIVATE.junior.pack20, 20)) })}</p>
                 <p className="validity">{t('labels.validFor', { count: 20 })}</p>
-                <PackageBonus kind="privateCouple" paid={20} />
                 <StableHealcodeSlot
                   className="buy-button healcode-pricing-option-text-link"
                   html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100055" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
@@ -459,7 +430,6 @@ export const Pricing= () => {
                 </div>
                 <p className="total-price">{t('labels.inTotal', { amount: formatEur(packTotal(PRIVATE.senior.pack5, 5)) })}</p>
                 <p className="validity">{t('labels.validFor', { count: 5 })}</p>
-                <PackageBonus kind="privateCouple" paid={5} />
                 <StableHealcodeSlot
                   className="buy-button healcode-pricing-option-text-link"
                   html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100013" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
@@ -474,7 +444,6 @@ export const Pricing= () => {
                 </div>
                 <p className="total-price">{t('labels.inTotal', { amount: formatEur(packTotal(PRIVATE.senior.pack10, 10)) })}</p>
                 <p className="validity">{t('labels.validFor', { count: 10 })}</p>
-                <PackageBonus kind="privateCouple" paid={10} />
                 <StableHealcodeSlot
                   className="buy-button healcode-pricing-option-text-link"
                   html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100014" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
@@ -488,7 +457,6 @@ export const Pricing= () => {
                 </div>
                 <p className="total-price">{t('labels.inTotal', { amount: formatEur(packTotal(PRIVATE.senior.pack20, 20)) })}</p>
                 <p className="validity">{t('labels.validFor', { count: 20 })}</p>
-                <PackageBonus kind="privateCouple" paid={20} />
                 <StableHealcodeSlot
                   className="buy-button healcode-pricing-option-text-link"
                   html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100015" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
@@ -525,7 +493,6 @@ export const Pricing= () => {
                 </div>
                 <p className="total-price">{t('labels.inTotal', { amount: formatEur(packTotal(PRIVATE.master.pack5, 5)) })}</p>
                 <p className="validity">{t('labels.validFor', { count: 5 })}</p>
-                <PackageBonus kind="privateCouple" paid={5} />
                 <StableHealcodeSlot
                   className="buy-button healcode-pricing-option-text-link"
                   html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100049" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
@@ -539,7 +506,6 @@ export const Pricing= () => {
                 </div>
                 <p className="total-price">{t('labels.inTotal', { amount: formatEur(packTotal(PRIVATE.master.pack10, 10)) })}</p>
                 <p className="validity">{t('labels.validFor', { count: 10 })}</p>
-                <PackageBonus kind="privateCouple" paid={10} />
                 <StableHealcodeSlot
                   className="buy-button healcode-pricing-option-text-link"
                   html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100050" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
@@ -553,7 +519,6 @@ export const Pricing= () => {
                 </div>
                 <p className="total-price">{t('labels.inTotal', { amount: formatEur(packTotal(PRIVATE.master.pack20, 20)) })}</p>
                 <p className="validity">{t('labels.validFor', { count: 20 })}</p>
-                <PackageBonus kind="privateCouple" paid={20} />
                 <StableHealcodeSlot
                   className="buy-button healcode-pricing-option-text-link"
                   html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100051" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
@@ -589,7 +554,6 @@ export const Pricing= () => {
                 </div>
                 <p className="total-price">{t('labels.inTotal', { amount: formatEur(COUPLE.pack5.total) })}</p>
                 <p className="validity">{t('labels.validFor', { count: 5 })}</p>
-                <PackageBonus kind="privateCouple" paid={5} />
                 <StableHealcodeSlot
                   className="buy-button healcode-pricing-option-text-link"
                   html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100034" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
@@ -604,7 +568,6 @@ export const Pricing= () => {
                 </div>
                 <p className="total-price">{t('labels.inTotal', { amount: formatEur(COUPLE.pack10.total) })}</p>
                 <p className="validity">{t('labels.validFor', { count: 10 })}</p>
-                <PackageBonus kind="privateCouple" paid={10} />
                 <StableHealcodeSlot
                   className="buy-button healcode-pricing-option-text-link"
                   html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100035" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
@@ -618,7 +581,6 @@ export const Pricing= () => {
                 </div>
                 <p className="total-price">{t('labels.inTotal', { amount: formatEur(COUPLE.pack20.total) })}</p>
                 <p className="validity">{t('labels.validFor', { count: 20 })}</p>
-                <PackageBonus kind="privateCouple" paid={20} />
                 <StableHealcodeSlot
                   className="buy-button healcode-pricing-option-text-link"
                   html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100036" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}

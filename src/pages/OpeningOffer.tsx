@@ -5,7 +5,6 @@ import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Reveal } from '../components/Reveal';
-import { OpeningCountdown } from '../components/OpeningCountdown';
 import { trackPageView } from '../utils/gtmTracking';
 import { OPENING_OFFER } from '../data/openingOffer';
 import { useLocale } from '../i18n/useLocale';
@@ -21,19 +20,7 @@ const OFFER_HREFLANG = [
 ];
 
 const DATE_KEYS = ['lastDay', 'closed', 'firstClass'] as const;
-const STUDIO_KEYS = ['reformers', 'private', 'yoga'] as const;
-const STEP_KEYS = ['buy', 'book', 'arrive'] as const;
 const FAQ_KEYS = ['when', 'how', 'intro', 'book'] as const;
-
-function bonusLabel(
-  t: ReturnType<typeof useTranslation<'openingOffer'>>['t'],
-  ns: 'membership' | 'group' | 'privateCouple',
-  bonus: number,
-) {
-  const key =
-    bonus === 1 ? (`packages.${ns}.bonus_one` as const) : (`packages.${ns}.bonus_other` as const);
-  return t(key, { bonus });
-}
 
 export const OpeningOffer = () => {
   const { t } = useTranslation('openingOffer');
@@ -42,6 +29,7 @@ export const OpeningOffer = () => {
   const canonical = isNl ? OFFER_URL_NL : OFFER_URL_EN;
   const scheduleHref = isNl ? '/schedule/nl/' : '/schedule/';
   const pricingHref = isNl ? '/pricing/nl/' : '/pricing/';
+  const announcementHref = OPENING_OFFER.announcementPath;
   const path = isNl ? OPENING_OFFER.pathNl : OPENING_OFFER.path;
   const faqs = FAQ_KEYS.map((key) => ({
     question: t(`faq.items.${key}.question`),
@@ -88,81 +76,16 @@ export const OpeningOffer = () => {
             <p className="oo-kicker oo-kicker-on-dark">{t('hero.kicker')}</p>
             <h1>{t('hero.title')}</h1>
             <p className="oo-hero-lead">{t('hero.lead')}</p>
-            <OpeningCountdown />
             <div className="oo-hero-actions">
               <Link to={scheduleHref} className="oo-btn oo-btn-gold">
                 {t('hero.primaryCta')}
               </Link>
-              <Link to={pricingHref} className="oo-btn oo-btn-ghost">
+              <Link to={announcementHref} className="oo-btn oo-btn-ghost">
                 {t('hero.secondaryCta')}
               </Link>
             </div>
           </div>
         </section>
-
-        <Reveal className="oo-section">
-          <div className="oo-container">
-            <div className="oo-packages-head">
-              <div>
-                <p className="oo-kicker">{t('packages.kicker')}</p>
-                <h2>{t('packages.title')}</h2>
-                <p className="oo-lead">{t('packages.lead')}</p>
-              </div>
-              <p className="oo-limited">{t('limited')}</p>
-            </div>
-
-            <div className="oo-package-block">
-              <h3 className="oo-package-title">{t('packages.membership.title')}</h3>
-              <ul className="oo-package-list">
-                {OPENING_OFFER.bonuses.membership.map((row) => (
-                  <li key={`m-${row.paid}`}>
-                    <span className="oo-package-base">
-                      {t('packages.membership.row', { paid: row.paid })}
-                    </span>
-                    <span className="oo-bonus-pill">
-                      {bonusLabel(t, 'membership', row.bonus)}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="oo-package-block">
-              <h3 className="oo-package-title">
-                {t('packages.group.title')}
-                <span className="oo-package-sub">{t('packages.group.subtitle')}</span>
-              </h3>
-              <ul className="oo-package-list">
-                {OPENING_OFFER.bonuses.group.map((row) => (
-                  <li key={`g-${row.paid}`}>
-                    <span className="oo-package-base">
-                      {t('packages.group.row', { paid: row.paid })}
-                    </span>
-                    <span className="oo-bonus-pill">
-                      {bonusLabel(t, 'group', row.bonus)}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="oo-package-block">
-              <h3 className="oo-package-title">{t('packages.privateCouple.title')}</h3>
-              <ul className="oo-package-list">
-                {OPENING_OFFER.bonuses.privateCouple.map((row) => (
-                  <li key={`p-${row.paid}`}>
-                    <span className="oo-package-base">
-                      {t('packages.privateCouple.row', { paid: row.paid })}
-                    </span>
-                    <span className="oo-bonus-pill">
-                      {bonusLabel(t, 'privateCouple', row.bonus)}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </Reveal>
 
         <Reveal className="oo-section oo-section-ink">
           <div className="oo-container">
@@ -173,42 +96,6 @@ export const OpeningOffer = () => {
                 <li key={key} className="oo-date-row">
                   <span className="oo-date-label">{t(`dates.items.${key}.label`)}</span>
                   <span className="oo-date-value">{t(`dates.items.${key}.value`)}</span>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </Reveal>
-
-        <Reveal className="oo-section">
-          <div className="oo-container">
-            <p className="oo-kicker">{t('studio.kicker')}</p>
-            <h2>{t('studio.title')}</h2>
-            <p className="oo-lead">{t('studio.lead')}</p>
-            <div className="oo-studio-grid">
-              {STUDIO_KEYS.map((key) => (
-                <div key={key} className="oo-studio-item">
-                  <h3>{t(`studio.items.${key}.title`)}</h3>
-                  <p>{t(`studio.items.${key}.text`)}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Reveal>
-
-        <Reveal className="oo-section">
-          <div className="oo-container">
-            <p className="oo-kicker">{t('steps.kicker')}</p>
-            <h2>{t('steps.title')}</h2>
-            <ol className="oo-steps">
-              {STEP_KEYS.map((key, index) => (
-                <li key={key} className="oo-step">
-                  <span className="oo-step-num" aria-hidden="true">
-                    {index + 1}
-                  </span>
-                  <div>
-                    <h3>{t(`steps.items.${key}.title`)}</h3>
-                    <p>{t(`steps.items.${key}.text`)}</p>
-                  </div>
                 </li>
               ))}
             </ol>

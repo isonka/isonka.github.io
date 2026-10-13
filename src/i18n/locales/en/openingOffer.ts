@@ -1,23 +1,23 @@
 export const enOpeningOffer = {
   seo: {
-    title: 'Grand Opening Special | Bonus Classes | PT 7 Amsterdam',
+    title: 'Move Postponed | Olympisch Stadion | PT 7 Amsterdam',
     description:
-      'PT 7 grand opening special: same package prices, extra bonus classes. Memberships, group packs, and private/couple packs · Olympisch Stadion 15.',
+      'PT 7’s move to Olympisch Stadion 15 is postponed after a fire at the stadium. Classes continue at Van Baerlestraat 76C. A new date will follow.',
     keywords:
-      'PT 7 opening offer, bonus pilates classes amsterdam, pilates olympisch stadion, grand opening special amsterdam, reformer pilates bonus pack',
-    ogTitle: 'Grand Opening Special · Extra Classes | PT 7',
+      'PT 7 Olympisch Stadion, pilates olympisch stadion, PT 7 move postponed, Van Baerlestraat pilates',
+    ogTitle: 'Move postponed · Olympisch Stadion | PT 7',
     ogDescription:
-      'More classes, same price. Bonus classes on memberships, group packs, and private/couple packs for our Olympisch Stadion opening.',
-    analyticsTitle: 'Opening offer | PT 7 Pilates Amsterdam',
+      'A fire at Olympisch Stadion postponed the move. Classes continue at Van Baerlestraat. New date to follow.',
+    analyticsTitle: 'Move postponed | PT 7 Pilates Amsterdam',
   },
-  breadcrumb: 'Opening offer',
+  breadcrumb: 'Move update',
   hero: {
     brand: 'PT 7',
-    kicker: 'Grand opening · Amsterdam Zuid',
-    title: 'More classes. Same price.',
-    lead: 'Don’t miss this exclusive offer — more classes, more movement, more you. Bonus classes on qualifying packages for our move to Olympisch Stadion 15.',
+    kicker: 'Studio update · Amsterdam Zuid',
+    title: 'Move postponed',
+    lead: 'A fire at Olympisch Stadion postponed our move to Olympisch Stadion 15. Classes continue at Van Baerlestraat 76C. A new date will follow.',
     primaryCta: 'Book a class',
-    secondaryCta: 'See all prices',
+    secondaryCta: 'Read the announcement',
   },
   countdown: {
     label: 'Opens in',
@@ -30,8 +30,8 @@ export const enOpeningOffer = {
   imageAlt: 'Olympisch Stadion exterior — PT 7’s new Amsterdam Zuid studio',
   limited: 'Limited · one time only',
   packages: {
-    kicker: 'Opening special',
-    title: 'Bonus classes on every pack',
+    kicker: 'Packages',
+    title: 'Class packs',
     lead: 'Package prices stay the same. You get extra classes included — memberships, group classes, and private or couple packs.',
     membership: {
       title: 'Memberships',
@@ -54,20 +54,20 @@ export const enOpeningOffer = {
     },
   },
   dates: {
-    kicker: 'Timeline',
-    title: 'Key dates',
+    kicker: 'Status',
+    title: 'Where to come',
     items: {
       lastDay: {
-        label: 'Last day at Van Baerlestraat',
-        value: 'Thursday 29 October 2026',
+        label: 'Classes now',
+        value: 'Van Baerlestraat 76C',
       },
       closed: {
-        label: 'No classes',
-        value: '30 October – 1 November 2026',
+        label: 'Planned studio',
+        value: 'Olympisch Stadion 15',
       },
       firstClass: {
-        label: 'First class at Olympisch Stadion',
-        value: 'Monday 2 November 2026',
+        label: 'First class there',
+        value: 'Date to follow',
       },
     },
   },
@@ -96,15 +96,15 @@ export const enOpeningOffer = {
     items: {
       buy: {
         title: 'Buy a qualifying package',
-        text: 'Choose a membership, group pack, or private/couple pack on the pricing page. Bonus classes are included in the opening special.',
+        text: 'Choose a membership, group pack, or private/couple pack on the pricing page.',
       },
       book: {
         title: 'Book your sessions',
         text: 'Use the online schedule — Reformer, yoga, TRX, strength, and privates stay on the same booking flow.',
       },
       arrive: {
-        title: 'Train with us',
-        text: 'Through 29 October: Van Baerlestraat 76C. From 2 November: Olympisch Stadion 15.',
+        title: 'Train at Van Baerlestraat',
+        text: 'Classes continue at Van Baerlestraat 76C until the new move date.',
       },
     },
   },
@@ -112,30 +112,29 @@ export const enOpeningOffer = {
     title: 'Questions',
     items: {
       when: {
-        question: 'Is the opening special available now?',
+        question: 'Why is the move postponed?',
         answer:
-          'Yes. The grand opening special with bonus classes is available now for our move to Olympisch Stadion — limited, one time only.',
+          'A fire at Olympisch Stadion postponed the move. The planned address is still Olympisch Stadion 15, 1076 DE Amsterdam. A new first-class date will follow.',
       },
       how: {
-        question: 'Do prices go down?',
+        question: 'Do classes continue at Van Baerlestraat?',
         answer:
-          'No. Package prices stay the same. You receive extra bonus classes on top of the classes you pay for — for example, buy 8 membership classes and get +4 bonus classes.',
+          'Yes. Classes continue at Van Baerlestraat 76C, including 30 October, 31 October, and 1 November 2026.',
       },
       intro: {
         question: 'Does the new-client intro still apply?',
-        answer:
-          'Yes. New clients can still start with 3 group classes for €50. The opening special is a separate bonus on memberships and larger packs.',
+        answer: 'Yes. New clients can still start with 3 group classes for €50.',
       },
       book: {
-        question: 'Do I book differently after the move?',
+        question: 'Do I book differently?',
         answer:
-          'No. Book on the same schedule page. From 2 November classes run at Olympisch Stadion 15, 1076 DE Amsterdam.',
+          'No. Book on the same schedule page. Classes stay at Van Baerlestraat 76C until the new move date.',
       },
     },
   },
   close: {
-    title: 'Ready for Olympisch Stadion?',
-    text: 'Pick a package, get your bonus classes, then book. We will see you in the new studio.',
+    title: 'Classes continue at Museumplein',
+    text: 'Book as usual at Van Baerlestraat 76C. We will announce the new Olympisch Stadion date when it is set.',
     primaryCta: 'Book a class',
     secondaryCta: 'See packages',
     moveLink: 'Read the full move announcement',

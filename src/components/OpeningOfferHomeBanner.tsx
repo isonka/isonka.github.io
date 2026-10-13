@@ -1,13 +1,11 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { OPENING_OFFER } from '../data/openingOffer';
-import { useLocale } from '../i18n/useLocale';
 import '../styles/OpeningOfferHomeBanner.css';
 
 export const OpeningOfferHomeBanner = () => {
   const { t } = useTranslation('home');
-  const locale = useLocale();
-  const to = locale === 'nl' ? OPENING_OFFER.pathNl : OPENING_OFFER.path;
+  const to = OPENING_OFFER.announcementPath;
 
   return (
     <div className="oo-home-banner" role="region" aria-label={t('openingBanner.kicker')}>
@@ -16,7 +14,6 @@ export const OpeningOfferHomeBanner = () => {
           <p className="oo-home-banner-kicker">{t('openingBanner.kicker')}</p>
           <p className="oo-home-banner-title">{t('openingBanner.title')}</p>
           <p className="oo-home-banner-lead">{t('openingBanner.lead')}</p>
-          <p className="oo-home-banner-limited">{t('openingBanner.limited')}</p>
         </div>
         <div className="oo-home-banner-actions">
           <Link to={to} className="oo-home-banner-cta">

@@ -36,17 +36,6 @@ export const enPricing = {
     description: 'New clients only: {{classes}} group classes for {{price}}',
     details: 'See the intro offer',
   },
-  openingOffer: {
-    badge: 'Grand opening',
-    title: 'Bonus classes on packages',
-    description:
-      'Same package prices — extra bonus classes on memberships, group packs, and private/couple packs for our Olympisch Stadion opening. Available now.',
-    details: 'See the opening special',
-  },
-  openingBonus: {
-    one: '+{{bonus}} bonus class',
-    other: '+{{bonus}} bonus classes',
-  },
   nav: {
     aria: 'Pricing sections',
     membership: 'Membership',

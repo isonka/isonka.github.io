@@ -3,24 +3,24 @@ import type { EnOpeningOffer } from '../en/openingOffer';
 
 export const nlOpeningOffer: DeepStringify<EnOpeningOffer> = {
   seo: {
-    title: 'Grote opening special | Bonuslessen | PT 7 Amsterdam',
+    title: 'Verhuizing uitgesteld | Olympisch Stadion | PT 7 Amsterdam',
     description:
-      'PT 7 grote opening special: dezelfde pakketprijzen, extra bonuslessen. Memberships, groepspakketten en privé/duo · Olympisch Stadion 15.',
+      'De verhuizing van PT 7 naar Olympisch Stadion 15 is uitgesteld na een brand in het stadion. Lessen gaan door op Van Baerlestraat 76C. Een nieuwe datum volgt.',
     keywords:
-      'PT 7 openingaanbod, bonus pilateslessen amsterdam, pilates olympisch stadion, grote opening special amsterdam, reformer pilates bonuspakket',
-    ogTitle: 'Grote opening special · Extra lessen | PT 7',
+      'PT 7 Olympisch Stadion, pilates olympisch stadion, PT 7 verhuizing uitgesteld, Van Baerlestraat pilates',
+    ogTitle: 'Verhuizing uitgesteld · Olympisch Stadion | PT 7',
     ogDescription:
-      'Meer lessen, dezelfde prijs. Bonuslessen op memberships, groepspakketten en privé/duo voor de opening op Olympisch Stadion.',
-    analyticsTitle: 'Openingaanbod | PT 7 Pilates Amsterdam',
+      'Een brand in het Olympisch Stadion stelt de verhuizing uit. Lessen gaan door op de Van Baerlestraat. Nieuwe datum volgt.',
+    analyticsTitle: 'Verhuizing uitgesteld | PT 7 Pilates Amsterdam',
   },
-  breadcrumb: 'Openingaanbod',
+  breadcrumb: 'Verhuisupdate',
   hero: {
     brand: 'PT 7',
-    kicker: 'Grote opening · Amsterdam Zuid',
-    title: 'Meer lessen. Dezelfde prijs.',
-    lead: 'Mis dit exclusieve aanbod niet — meer lessen, meer beweging, meer jij. Bonuslessen op geselecteerde pakketten voor onze verhuizing naar Olympisch Stadion 15.',
+    kicker: 'Studioupdate · Amsterdam Zuid',
+    title: 'Verhuizing uitgesteld',
+    lead: 'Een brand in het Olympisch Stadion stelt onze verhuizing naar Olympisch Stadion 15 uit. Lessen gaan door op Van Baerlestraat 76C. Een nieuwe datum volgt.',
     primaryCta: 'Boek een les',
-    secondaryCta: 'Alle prijzen',
+    secondaryCta: 'Lees de aankondiging',
   },
   countdown: {
     label: 'Opening over',
@@ -33,7 +33,7 @@ export const nlOpeningOffer: DeepStringify<EnOpeningOffer> = {
   imageAlt: 'Olympisch Stadion — de nieuwe studio van PT 7 in Amsterdam Zuid',
   limited: 'Beperkt · eenmalig',
   packages: {
-    kicker: 'Opening special',
+    kicker: 'Pakketten',
     title: 'Bonuslessen bij elk pakket',
     lead: 'Pakketprijzen blijven hetzelfde. Je krijgt extra lessen erbij — memberships, groepslessen en privé- of duopakketten.',
     membership: {
@@ -57,20 +57,20 @@ export const nlOpeningOffer: DeepStringify<EnOpeningOffer> = {
     },
   },
   dates: {
-    kicker: 'Tijdlijn',
-    title: 'Belangrijke data',
+    kicker: 'Status',
+    title: 'Waar je naartoe komt',
     items: {
       lastDay: {
-        label: 'Laatste dag Van Baerlestraat',
-        value: 'Donderdag 29 oktober 2026',
+        label: 'Lessen nu',
+        value: 'Van Baerlestraat 76C',
       },
       closed: {
-        label: 'Geen lessen',
-        value: '30 oktober – 1 november 2026',
+        label: 'Geplande studio',
+        value: 'Olympisch Stadion 15',
       },
       firstClass: {
-        label: 'Eerste les Olympisch Stadion',
-        value: 'Maandag 2 november 2026',
+        label: 'Eerste les daar',
+        value: 'Datum volgt',
       },
     },
   },
@@ -99,15 +99,15 @@ export const nlOpeningOffer: DeepStringify<EnOpeningOffer> = {
     items: {
       buy: {
         title: 'Koop een geldig pakket',
-        text: 'Kies een membership, groepspakket of privé/duo-pakket op de prijzenpagina. Bonuslessen horen bij de opening special.',
+        text: 'Kies een membership, groepspakket of privé/duo-pakket op de prijzenpagina.',
       },
       book: {
         title: 'Boek je lessen',
         text: 'Gebruik het online rooster — Reformer, yoga, TRX, strength en privelessen blijven via dezelfde flow.',
       },
       arrive: {
-        title: 'Train met ons',
-        text: 'Tot 29 oktober: Van Baerlestraat 76C. Vanaf 2 november: Olympisch Stadion 15.',
+        title: 'Train op de Van Baerlestraat',
+        text: 'Lessen gaan door op Van Baerlestraat 76C tot de nieuwe verhuisdatum.',
       },
     },
   },
@@ -115,30 +115,29 @@ export const nlOpeningOffer: DeepStringify<EnOpeningOffer> = {
     title: 'Vragen',
     items: {
       when: {
-        question: 'Is de opening special nu beschikbaar?',
+        question: 'Waarom is de verhuizing uitgesteld?',
         answer:
-          'Ja. De grote opening special met bonuslessen is nu beschikbaar voor onze verhuizing naar Olympisch Stadion — beperkt, eenmalig.',
+          'Een brand in het Olympisch Stadion stelt de verhuizing uit. Het geplande adres blijft Olympisch Stadion 15, 1076 DE Amsterdam. Een nieuwe datum voor de eerste les volgt.',
       },
       how: {
-        question: 'Dalende prijzen?',
+        question: 'Gaan de lessen door op de Van Baerlestraat?',
         answer:
-          'Nee. Pakketprijzen blijven hetzelfde. Je krijgt extra bonuslessen bovenop de lessen die je betaalt — bijvoorbeeld 8 membership-lessen kopen en +4 bonuslessen krijgen.',
+          'Ja. Lessen gaan door op Van Baerlestraat 76C, ook op 30 oktober, 31 oktober en 1 november 2026.',
       },
       intro: {
         question: 'Geldt de introductie voor nieuwe klanten nog?',
-        answer:
-          'Ja. Nieuwe klanten kunnen nog steeds starten met 3 groepslessen voor €50. De opening special is een aparte bonus op memberships en grotere pakketten.',
+        answer: 'Ja. Nieuwe klanten kunnen nog steeds starten met 3 groepslessen voor €50.',
       },
       book: {
-        question: 'Boek ik anders na de verhuizing?',
+        question: 'Boek ik anders?',
         answer:
-          'Nee. Boek via dezelfde roosterpagina. Vanaf 2 november zijn de lessen op Olympisch Stadion 15, 1076 DE Amsterdam.',
+          'Nee. Boek via dezelfde roosterpagina. De lessen blijven op Van Baerlestraat 76C tot de nieuwe verhuisdatum.',
       },
     },
   },
   close: {
-    title: 'Klaar voor Olympisch Stadion?',
-    text: 'Kies een pakket, krijg je bonuslessen, en boek. Tot ziens in de nieuwe studio.',
+    title: 'Lessen gaan door aan het Museumplein',
+    text: 'Boek zoals gebruikelijk op Van Baerlestraat 76C. We maken de nieuwe datum voor het Olympisch Stadion bekend zodra die vaststaat.',
     primaryCta: 'Boek een les',
     secondaryCta: 'Bekijk pakketten',
     moveLink: 'Lees het volledige verhuisbericht',

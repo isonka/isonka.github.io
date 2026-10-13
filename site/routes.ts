@@ -71,25 +71,25 @@ const FIXED_PAGES: Route[] = [
     path: '/opening-offer/',
     prerender: true,
     sitemap: {
-      lastmod: '2026-10-05',
+      lastmod: '2026-10-13',
       changefreq: 'weekly',
-      priority: '0.9',
-      image: image('olympisch-stadion.webp', 'PT 7 Opening Offer — Olympisch Stadion Amsterdam'),
+      priority: '0.6',
+      image: image('olympisch-stadion.webp', 'Olympisch Stadion — PT 7 move postponed'),
     },
     meta: {
-      title: 'Grand Opening Special | Bonus Classes | PT 7 Amsterdam',
+      title: 'Move Postponed | Olympisch Stadion | PT 7 Amsterdam',
       description:
-        'Same package prices, extra bonus classes for PT 7’s move to Olympisch Stadion 15. Available now.',
+        'PT 7’s move to Olympisch Stadion 15 is postponed after a fire at the stadium. Classes continue at Van Baerlestraat 76C.',
     },
   },
   {
     path: '/opening-offer/nl/',
     prerender: true,
-    sitemap: { lastmod: '2026-10-05', changefreq: 'weekly', priority: '0.9' },
+    sitemap: { lastmod: '2026-10-13', changefreq: 'weekly', priority: '0.6' },
     meta: {
-      title: 'Grote opening special | Bonuslessen | PT 7 Amsterdam',
+      title: 'Verhuizing uitgesteld | Olympisch Stadion | PT 7 Amsterdam',
       description:
-        'Dezelfde pakketprijzen, extra bonuslessen voor de verhuizing van PT 7 naar Olympisch Stadion 15. Nu beschikbaar.',
+        'De verhuizing van PT 7 naar Olympisch Stadion 15 is uitgesteld na een brand in het stadion. Lessen gaan door op Van Baerlestraat 76C.',
     },
   },
   { path: '/schedule/', prerender: true, sitemap: { lastmod: '2026-09-15', changefreq: 'daily', priority: '0.9' } },

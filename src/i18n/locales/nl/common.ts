@@ -54,10 +54,10 @@ export const nlCommon: DeepStringify<EnCommon> = {
     websiteBy: 'Website door',
   },
   moveBanner: {
-    strong: 'Opening special',
-    full: ' · Extra bonuslessen bij pakketten nu · Olympisch Stadion 15 · Eerste les 2 nov',
-    short: ' · Bonuslessen bij pakketten · Olympisch Stadion',
-    cta: 'Bekijk aanbod',
+    strong: 'Verhuizing uitgesteld',
+    full: ' · Brand in het Olympisch Stadion · Lessen gaan door op de Van Baerlestraat · Nieuwe datum volgt',
+    short: ' · Verhuizing Olympisch Stadion uitgesteld',
+    cta: 'Lees de update',
   },
   contactMap: {
     iframeTitle: 'Locatie PT 7',

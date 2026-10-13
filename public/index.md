@@ -4,9 +4,8 @@ Boutique Pilates and one-on-one training studio in Museumplein, Amsterdam.
 
 ## Overview
 
-- Location until 29 October 2026: Van Baerlestraat 76C, 1071BB Amsterdam, Netherlands
-- No classes 30 October, 31 October, or 1 November 2026. First class 2 November 2026: Olympisch Stadion 15, 1076 DE Amsterdam
-- Opening special available now: same package prices, extra bonus classes — <https://www.pt7.nl/opening-offer/>
+- Location: Van Baerlestraat 76C, 1071BB Amsterdam, Netherlands
+- Move to Olympisch Stadion 15, 1076 DE Amsterdam is postponed after a fire at the stadium. Classes continue at Van Baerlestraat. New date to follow.
 - Announcement: <https://www.pt7.nl/blog/pt-7-moves-to-olympisch-stadion/>
 - Services: Reformer Pilates, TRX, Strength Training, Cardio
 - Formats: Private sessions and small groups (max 5 participants)

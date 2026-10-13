@@ -51,10 +51,10 @@ export const enCommon = {
     websiteBy: 'Website by',
   },
   moveBanner: {
-    strong: 'Opening special',
-    full: ' · Extra bonus classes on packages now · Olympisch Stadion 15 · First class 2 Nov',
-    short: ' · Bonus classes on packages · Olympisch Stadion',
-    cta: 'See offer',
+    strong: 'Move postponed',
+    full: ' · Fire at Olympisch Stadion · Classes continue at Van Baerlestraat · New date to follow',
+    short: ' · Olympisch Stadion move postponed',
+    cta: 'Read the update',
   },
   contactMap: {
     iframeTitle: 'PT 7 Location',

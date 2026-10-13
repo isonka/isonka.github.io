@@ -14,14 +14,6 @@ Return current package and session pricing for PT 7 Amsterdam.
 - Introduction Package: 3 group classes for €50 (**new clients only**)
 - Landing page: https://www.pt7.nl/intro/ (NL: https://www.pt7.nl/intro/nl/)
 
-### Opening / move offer (available now)
-
-- **Same package prices** — bonus classes included (not a price drop)
-- Memberships: 4 classes/month → +2 bonus; 8 classes/month → +4 bonus
-- Group packs: 5→+1, 10→+2, 20→+4
-- Private / couple packs: 5→+1, 10→+2, 20→+4
-- Landing page: https://www.pt7.nl/opening-offer/ (NL: https://www.pt7.nl/opening-offer/nl/)
-
 ### Small group classes (max 5, 45 min)
 
 - Single class: €37

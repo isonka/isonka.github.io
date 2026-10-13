@@ -39,17 +39,6 @@ export const nlPricing: DeepStringify<EnPricing> = {
     description: 'Alleen voor nieuwe klanten: {{classes}} groepslessen voor {{price}}',
     details: 'Bekijk het introductieaanbod',
   },
-  openingOffer: {
-    badge: 'Grote opening',
-    title: 'Bonuslessen bij pakketten',
-    description:
-      'Dezelfde pakketprijzen — extra bonuslessen op memberships, groepspakketten en privé/duo voor de opening op Olympisch Stadion. Nu beschikbaar.',
-    details: 'Bekijk de opening special',
-  },
-  openingBonus: {
-    one: '+{{bonus}} bonusles',
-    other: '+{{bonus}} bonuslessen',
-  },
   nav: {
     aria: 'Prijzensecties',
     membership: 'Abonnement',
