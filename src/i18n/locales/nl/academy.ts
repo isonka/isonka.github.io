@@ -3,9 +3,9 @@ import type { EnAcademy } from '../en/academy';
 
 export const nlAcademy: DeepStringify<EnAcademy> = {
   seo: {
-    title: 'Reformer Pilates Opleiding Amsterdam | Docentenopleiding | PT7 Academy',
+    title: 'Reformer Pilates Opleiding Amsterdam | PT7 Academy',
     description:
-      'Reformer pilates opleiding Amsterdam en pilates docentenopleiding bij Museumplein. 300 uur Reformer instructeurscursus (PMA ITTAP goedgekeurd). Volgende termijn november 2026–januari 2027. Weekendrooster. Lessen in het Engels. Vanaf €2.000 + BTW.',
+      'Pilates docentenopleiding in Amsterdam: 300 uur Reformer opleiding, PMA ITTAP goedgekeurd. Weekendrooster. Volgende termijn nov 2026–jan 2027.',
     keywords:
       'reformer pilates opleiding amsterdam, pilates opleiding amsterdam, reformer pilates docentenopleiding, pilates docentenopleiding, pilates instructeur opleiding, PMA ITTAP, weekend pilates opleiding, carrièreswitch pilates',
     ogTitle: 'Reformer Pilates Opleiding Amsterdam | Docentenopleiding PT7 Academy',

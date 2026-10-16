@@ -39,6 +39,7 @@ export const enCommon = {
     pricing: 'Pricing',
     intro: 'Intro offer',
     reformerPilates: 'Reformer Pilates',
+    trx: 'TRX Amsterdam',
     prenatal: 'Prenatal',
     academy: 'Academy',
     forBusiness: 'For Business',

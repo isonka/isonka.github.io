@@ -4,12 +4,13 @@ export const post: BlogPost = {
   id: '4',
   slug: 'pilates-for-men-strength-flexibility-athletic-performance',
   title: 'Pilates for Men: Building Strength, Flexibility, and Athletic Performance',
+  seoTitle: 'Pilates for Men: Strength & Performance | PT 7',
   excerpt: 'Discover why professional athletes and fitness enthusiasts are turning to Reformer Pilates for core strength, injury prevention, and performance enhancement.',
   content: `
       <p>When people think of Pilates, they often imagine a workout primarily for women. However, Reformer Pilates was actually developed by Joseph Pilates, a man who designed the practice for male athletes, injured soldiers, and boxers. Today, professional athletes from the NBA, NFL, and Olympic teams incorporate Pilates into their training regimens.</p>
 
       <div class="blog-figure">
-        <img src="/assets/images/men-pilates.webp" alt="Men's Pilates training at PT 7" />
+        <img src="/assets/images/men-pilates.webp" width="1200" height="879" alt="Men's Pilates training at PT 7" />
       </div>
 
       <h2>Why Men Should Do Reformer Pilates</h2>
@@ -55,7 +56,7 @@ export const post: BlogPost = {
   date: '2025-11-10',
   image: '/assets/images/men-pilates.webp',
   tags: ['Men\'s Fitness', 'Athletic Performance', 'Injury Prevention', 'Core Strength'],
-  metaDescription: 'Reformer Pilates for men in Amsterdam: Build core strength, prevent injuries, enhance athletic performance. Professional training for all fitness levels at PT 7 Museumplein.',
+  metaDescription: 'Reformer Pilates for men in Amsterdam: build core strength, prevent injuries and improve athletic performance. All fitness levels, at Museumplein.',
   keywords: [
     'pilates for men amsterdam',
     'mens pilates',

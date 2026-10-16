@@ -3,12 +3,12 @@ import type { EnHome } from '../en/home';
 
 export const nlHome: DeepStringify<EnHome> = {
   seo: {
-    title: 'PT 7 (PT Studio 7) | Pilates Amsterdam Museumplein',
+    title: 'PT 7 (PT Studio 7) | Pilates & Krachttraining Amsterdam Zuid',
     description:
-      'PT 7, ook bekend als PT Studio 7, is een boutique pilatesstudio aan de Van Baerlestraat 76C, Museumplein (Amsterdam Oud-Zuid). Kleine groepen max. 5. Nieuwe klanten: 3 groepslessen voor €50. Boek via https://www.pt7.nl/schedule/.',
+      'PT 7 (voorheen PT Studio 7): boutique pilates- en krachtstudio aan de {{studioStreet}}, Museumplein, Amsterdam Zuid. Max. 5 per les. Intro: 3 lessen €50.',
     keywords:
       'PT 7, PT 7 Pilates, pilates Amsterdam, pilateslessen Amsterdam, pilates bij mij in de buurt, Reformer pilates Amsterdam, one-on-one training Amsterdam, pilates Museumplein, private pilates Amsterdam, small group pilates, pilatesstudio Van Baerlestraat, TRX Amsterdam, prenatale pilates Amsterdam',
-    ogTitle: 'PT 7 (PT Studio 7) | Pilates Amsterdam Museumplein',
+    ogTitle: 'PT 7 (PT Studio 7) | Pilates & Krachttraining Amsterdam Zuid',
     ogDescription:
       'PT 7 boutique studio aan het Museumplein: Reformer pilates, kleine groepen (max. 5) en private sessies in Amsterdam Oud-Zuid. Online boeken.',
     analyticsTitle: 'Home - PT 7 Pilates Amsterdam',
@@ -27,7 +27,7 @@ export const nlHome: DeepStringify<EnHome> = {
   },
   hero: {
     brand: 'PT 7',
-    title: 'Reformer pilates & krachttraining in Amsterdam',
+    title: 'Pilates & krachttraining in Amsterdam Zuid',
     line: 'Pilateslessen in Amsterdam Oud-Zuid, boutique studio aan het Museumplein',
     bookClass: 'Les boeken',
     pilatesClasses: 'Pilateslessen',
@@ -40,11 +40,11 @@ export const nlHome: DeepStringify<EnHome> = {
   about: {
     kicker: 'Over ons',
     title: 'Reformer pilates & krachttraining studio aan het Museumplein',
-    p1: 'Reformer pilates & krachttraining in Amsterdam, in onze studio aan het Museumplein in Oud-Zuid. Met meer dan 15 jaar ervaring biedt PT 7 een boutique fitnesservaring gericht op aandacht en resultaat. Aan de Van Baerlestraat 76C, tegenover het Stedelijk Museum, combineren we professionele Reformers en klassieke pilatesapparatuur met Nike-krachtapparatuur, TRX en Concept2-machines in één ruimte.',
+    p1: 'Reformer pilates & krachttraining in Amsterdam, in onze studio aan het Museumplein in Oud-Zuid. Met meer dan 15 jaar ervaring biedt PT 7 een boutique fitnesservaring gericht op aandacht en resultaat. Aan de {{studioStreet}}, tegenover het Stedelijk Museum, combineren we professionele Reformers en klassieke pilatesapparatuur met Nike-krachtapparatuur, TRX en Concept2-machines in één ruimte.',
     p2: 'We bieden 1-op-1 private sessies waarin je 100% aandacht van je instructeur krijgt. Daarnaast zijn er intieme small-group lessen (maximaal 5 personen) als je graag met vrienden traint. Elk programma is afgestemd op kracht opbouwen, flexibiliteit verbeteren of jouw wellnessdoelen.',
     p3: 'Onze instructeurs maken een persoonlijk plan, passen elke sessie aan op jouw voortgang en vieren elke mijlpaal met je.',
     links:
-      'Begin hier: <reformer>Reformer pilates Amsterdam (Museumplein)</reformer> · <private>Private pilates</private> · <prenatal>Prenatale pilates</prenatal> · <trx>TRX</trx> · <strength>Krachttraining</strength>',
+      'Begin hier: <reformer>Reformer pilates Amsterdam Zuid</reformer> · <private>Private pilates</private> · <prenatal>Prenatale pilates</prenatal> · <trx>TRX</trx> · <strength>Krachttraining</strength>',
     ownerName: 'Elif Arzu Ogan',
     signatureRole: 'Eigenaar & hoofdinstructeur, PT 7',
     imageAlt: 'PT 7 Museumplein — small-group pilatesstudio',
@@ -155,7 +155,7 @@ export const nlHome: DeepStringify<EnHome> = {
   contact: {
     kicker: 'Bezoek',
     title: 'Bezoek onze studio',
-    address: 'Van Baerlestraat 76C, 1071 BB Amsterdam Oud-Zuid',
+    address: '{{studioAddress}} Oud-Zuid',
     meta: 'Tegenover het Stedelijk Museum op het Museumplein',
     nextAddress: 'Olympisch Stadion 15, 1076 DE Amsterdam',
     nextMeta: 'Uitgesteld na een brand in het stadion. Nieuwe datum volgt.',
@@ -176,7 +176,7 @@ export const nlHome: DeepStringify<EnHome> = {
     where: {
       question: 'Waar kan ik pilateslessen volgen in Amsterdam?',
       answer:
-        'PT 7 biedt Reformer pilates, TRX, krachttraining en cardio aan de Van Baerlestraat 76C, bij het Museumplein in Amsterdam Oud-Zuid. Boek groepsles (max. 5) of een private sessie online via pt7.nl/schedule/.',
+        'PT 7 biedt Reformer pilates, TRX, krachttraining en cardio aan de {{studioStreet}}, bij het Museumplein in Amsterdam Oud-Zuid. Boek groepsles (max. 5) of een private sessie online via pt7.nl/schedule/.',
     },
     groupSize: {
       question: 'Hoeveel mensen zitten er in een pilates groepsles?',
@@ -196,7 +196,7 @@ export const nlHome: DeepStringify<EnHome> = {
     location: {
       question: 'Waar zit PT 7?',
       answer:
-        'Van Baerlestraat 76C, 1071 BB Amsterdam, tegenover het Stedelijk Museum op het Museumplein in Oud-Zuid.',
+        '{{studioAddress}}, tegenover het Stedelijk Museum op het Museumplein in Oud-Zuid.',
     },
   },
 };

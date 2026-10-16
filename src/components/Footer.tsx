@@ -49,6 +49,7 @@ export const Footer= () => {
             <li><Link to={pricingHref}>{t('footer.pricing')}</Link></li>
             <li><Link to={introHref}>{t('footer.intro')}</Link></li>
             <li><Link to="/reformer-pilates-amsterdam/">{t('footer.reformerPilates')}</Link></li>
+            <li><Link to="/trx-training-amsterdam/">{t('footer.trx')}</Link></li>
             <li><Link to="/prenatal-pilates-amsterdam/">{t('footer.prenatal')}</Link></li>
             <li><Link to={academyHref}>{t('footer.academy')}</Link></li>
             <li><Link to="/corporate/">{t('footer.forBusiness')}</Link></li>

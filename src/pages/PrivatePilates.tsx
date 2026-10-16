@@ -53,11 +53,11 @@ export const PrivatePilates= () => {
     <>
       <SEOHead
         title="Private Reformer Pilates Sessions Amsterdam | PT 7 Pilates"
-        description="Private Reformer Pilates at Museumplein from €70, below typical Amsterdam boutique rates (€90–120). One-on-one and duo. Book online."
+        description="Private and duo Reformer Pilates at Museumplein, Amsterdam Zuid, from €70. Your instructor's full attention and a program built around you. Book online."
         keywords="private pilates amsterdam, private pilates prices amsterdam, pilates near me, pilates near me amsterdam, privé pilates amsterdam, one on one pilates amsterdam, personal pilates amsterdam, pilates prive les amsterdam, prive pilates museumplein, privé reformer pilates, priveles pilates amsterdam"
         canonical="https://www.pt7.nl/private-pilates-amsterdam/"
         ogTitle="Private Reformer Pilates Amsterdam | From €70 | PT 7 Pilates"
-        ogDescription="Private Reformer sessions at Museumplein from €70, below typical Amsterdam boutique private rates (€90–120). One-on-one or duo."
+        ogDescription="Private Reformer sessions at Museumplein from €70. One-on-one or duo, with your instructor's full attention."
       />
       <StructuredData
         type="FAQPage"
@@ -69,7 +69,7 @@ export const PrivatePilates= () => {
           service: {
             name: 'Private Reformer Pilates Amsterdam',
             description:
-              'One-on-one and duo private Reformer Pilates at Museumplein. Sessions start at €70, below typical Amsterdam boutique private rates of €90–120.',
+              'One-on-one and duo private Reformer Pilates at Museumplein, with the full attention of your instructor. Sessions start at €70.',
             serviceUrl: 'https://www.pt7.nl/private-pilates-amsterdam/',
             areaServed: 'Amsterdam',
             offers: [
@@ -114,7 +114,7 @@ export const PrivatePilates= () => {
         <ServiceTrustBand
           imageSrc="/assets/images/reformer_2.webp"
           imageAlt="Private Reformer Pilates session at PT 7"
-          priceAnchor={`Private from ${privateFrom} · boutique privates often €90–120`}
+          priceAnchor={`Private from ${privateFrom} · one-on-one or duo`}
           testimonial="“Warm, welcoming, and filled with care. I leave every class stronger and smiling.”"
           testimonialAuthor="Maya · Google review"
           ctaTo="/pricing/#private-classes"

@@ -6,6 +6,7 @@ import { trackPageView } from '../utils/gtmTracking';
 import { openCookieSettings } from '../utils/consentTracking';
 import '../styles/ServicePage.css';
 import '../styles/Privacy.css';
+import { studioAddressLine } from '../data/business';
 
 export const Privacy= () => {
   useEffect(() => {
@@ -28,7 +29,7 @@ export const Privacy= () => {
         <section className="service-hero is-in">
           <div className="service-hero-content">
             <h1>Privacy policy</h1>
-            <p>Last updated 27 August 2026. PT 7 Amsterdam (Van Baerlestraat 76C, 1071 BB Amsterdam) is controller for this website.</p>
+            <p>Last updated 27 August 2026. PT 7 Amsterdam ({studioAddressLine}) is controller for this website.</p>
           </div>
         </section>
 

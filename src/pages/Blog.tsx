@@ -8,7 +8,7 @@ export const Blog= () => {
   return (
     <>
       <SEOHead
-        title="Pilates & Fitness Blog | Expert Tips & Guides | PT 7 Pilates Amsterdam"
+        title="Pilates & Fitness Blog | PT 7 Pilates Amsterdam"
         description="Read expert articles about Pilates, prenatal fitness, and wellness from PT 7 Amsterdam. Tips, guides, and insights from our certified trainers at Museumplein."
         keywords="pilates blog, prenatal pilates, fitness tips amsterdam, pilates exercises, reformer pilates guide, pregnancy fitness, wellness blog amsterdam"
         canonical="https://www.pt7.nl/blog/"

@@ -5,6 +5,7 @@ import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/HealthcareProviders.css';
+import { studioAddressLine } from '../data/business';
 
 export const HealthcareProviders= () => {
   useEffect(() => {
@@ -14,8 +15,8 @@ export const HealthcareProviders= () => {
   return (
     <>
       <SEOHead
-        title="Pilates for Rehabilitation Amsterdam | For Healthcare Providers | PT 7 Pilates"
-        description="Physiotherapists, GPs, and healthcare providers: refer your clients to PT 7 for post-rehab Pilates and functional training. Small groups, expert instructors, Museumplein."
+        title="Pilates for Rehabilitation Amsterdam | PT 7 Pilates"
+        description="For physiotherapists and GPs: refer clients to PT 7 for post-rehab Pilates and functional training. Small groups (max 5) and privates at Museumplein."
         keywords="physiotherapist referral Amsterdam, Pilates post-rehab, fysiotherapeut doorverwijzing, beweegprogramma Amsterdam, Pilates fysiotherapie"
         canonical="https://www.pt7.nl/healthcare-providers/"
         ogTitle="Pilates for Rehabilitation Amsterdam | PT 7 Pilates"
@@ -168,7 +169,7 @@ export const HealthcareProviders= () => {
                 WhatsApp
               </a>
             </div>
-            <p className="cta-note">Van Baerlestraat 76C, 1071BB Amsterdam (Museumplein, Oud-Zuid)</p>
+            <p className="cta-note">{studioAddressLine} (Museumplein, Oud-Zuid)</p>
           </div>
         </section>
 

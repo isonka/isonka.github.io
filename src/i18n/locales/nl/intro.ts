@@ -3,7 +3,7 @@ import type { EnIntro } from '../en/intro';
 
 export const nlIntro: DeepStringify<EnIntro> = {
   seo: {
-    title: 'Introductiepakket: {{classes}} groepslessen voor {{price}} | PT 7 Pilates Amsterdam',
+    title: 'Introductiepakket: {{classes}} groepslessen voor {{price}} | PT 7 Pilates',
     description:
       'Nieuwe klanten bij PT 7 Museumplein: {{classes}} groepslessen voor {{price}}. Maximaal {{groupMax}} personen, {{minutes}} minuten. Geldig {{weeks}} weken. Online kopen.',
     keywords:

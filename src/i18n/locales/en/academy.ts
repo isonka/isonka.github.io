@@ -1,8 +1,8 @@
 export const enAcademy = {
   seo: {
-    title: 'Reformer Pilates Instructor Course Amsterdam | Teacher Training | PT7 Academy',
+    title: 'Reformer Pilates Instructor Course Amsterdam | PT7 Academy',
     description:
-      'Reformer Pilates instructor course and teacher training in Amsterdam. 300-hour Reformer Pilates instructor course (PMA ITTAP approved). Next term November 2026–January 2027. Weekend schedule for career changers. Course fee from €2,000 + VAT.',
+      '300-hour Reformer Pilates instructor course in Amsterdam, PMA ITTAP approved. Weekend schedule for career changers. Next term Nov 2026–Jan 2027.',
     keywords:
       'reformer pilates instructor course amsterdam, pilates instructor course amsterdam, reformer pilates teacher training amsterdam, pilates teacher training amsterdam, reformer pilates instructor course, reformer teacher training amsterdam, become a pilates instructor amsterdam, ITTAP approved pilates course, PMA ITTAP reformer course netherlands, weekend pilates teacher training, pilates instructor course for career changers, pilates instructor course amsterdam price',
     ogTitle: 'Reformer Pilates Instructor Course Amsterdam | Teacher Training',

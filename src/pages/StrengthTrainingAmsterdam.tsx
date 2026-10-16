@@ -125,6 +125,11 @@ export const StrengthTrainingAmsterdam= () => {
               recovering from injury, or simply feeling stronger in daily life, we design a program
               specific to you.
             </p>
+            <p>
+              Prefer bodyweight work? Our{' '}
+              <Link to="/trx-training-amsterdam/">TRX suspension training</Link> builds stability
+              and core control in the same small groups.
+            </p>
           </div>
         </Reveal>
 

@@ -42,8 +42,8 @@ export const business = {
   },
 
   geo: {
-    latitude: 52.3572909720188,
-    longitude: 4.876257777138345,
+    latitude: 52.3573109,
+    longitude: 4.8788535,
   },
 
   openingHours: [
@@ -56,6 +56,8 @@ export const business = {
     'https://www.facebook.com/ptstudio7',
     'https://www.linkedin.com/company/pt7',
     'https://classpass.com/studios/pt-studio-7-amsterdam',
+    'https://www.google.com/maps?cid=16450626326549634329',
+    'https://www.mindbodyonline.com/explore/locations/pt-studio-7',
     'https://www.polestarpilates.nl/',
   ],
 
@@ -72,7 +74,7 @@ export const business = {
 
   rating: {
     value: '4.8',
-    count: '28',
+    count: '33',
     best: '5',
     worst: '1',
   },
@@ -95,6 +97,10 @@ export const business = {
     ],
   },
 } as const;
+
+/** Current studio address for visible copy; changing `business.address` updates every page that uses these. */
+export const studioStreet = business.address.streetAddress;
+export const studioAddressLine = `${business.address.streetAddress}, ${business.address.postalCode} ${business.address.addressLocality}`;
 
 type OpeningDay = (typeof business.openingHours)[number]['dayOfWeek'][number];
 

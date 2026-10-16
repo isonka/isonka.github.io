@@ -186,7 +186,7 @@ Edit `src/pages/Schedule.tsx` - Update class duration, group size, etc.
 
 For questions or issues:
 - Email: info@pt7.nl
-- Location: Van Baerlestraat 76C, 1071BB Amsterdam
+- Location: Van Baerlestraat 76C, 1071 BB Amsterdam
 
 ---
 

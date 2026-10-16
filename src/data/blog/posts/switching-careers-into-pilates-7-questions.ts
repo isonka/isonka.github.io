@@ -4,6 +4,7 @@ export const post: BlogPost = {
   id: '16',
   slug: 'switching-careers-into-pilates-7-questions',
   title: 'Switching Careers Into Pilates? Ask These 7 Questions First',
+  seoTitle: 'Switching Careers Into Pilates? 7 Questions | PT 7',
   excerpt: 'Every day a new Pilates teacher training course opens, and each one promises to make you a real instructor. Some take one weekend, others stretch to four.',
   content: `
       <p>Every day a new Pilates teacher training course opens, and each one promises to make you a real instructor. Some take one weekend, others stretch to four. But which of them can actually make you a good teacher? And if you're new to the industry, what should you look for when choosing?</p>

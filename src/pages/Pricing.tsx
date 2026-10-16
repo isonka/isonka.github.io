@@ -18,7 +18,7 @@ import {
   formatEur,
   packTotal,
 } from '../data/pricing';
-import { formatOpeningClock, studioHoursFor } from '../data/business';
+import { formatOpeningClock, studioHoursFor, studioStreet } from '../data/business';
 import { useLocale } from '../i18n/useLocale';
 import '../styles/Pricing.css';
 
@@ -123,7 +123,7 @@ export const Pricing= () => {
     <>
       <SEOHead
         title={t('seo.title')}
-        description={t('seo.description', { groupMax: String(GROUP_MAX), groupPrice: formatEur(GROUP.pack20.perClass) })}
+        description={t('seo.description', { groupMax: String(GROUP_MAX), groupPrice: formatEur(GROUP.pack20.perClass), studioStreet })}
         keywords={t('seo.keywords')}
         canonical={canonical}
         ogTitle={t('seo.ogTitle')}
@@ -145,7 +145,11 @@ export const Pricing= () => {
               ns="pricing"
               i18nKey="hero.lead"
               values={{ groupMax: GROUP_MAX }}
-              components={{ schedule: <Link to={isNl ? '/schedule/nl/' : '/schedule/'} /> }}
+              components={{
+                schedule: <Link to={isNl ? '/schedule/nl/' : '/schedule/'} />,
+                reformer: <Link to="/reformer-pilates-amsterdam/" />,
+                trx: <Link to="/trx-training-amsterdam/" />,
+              }}
             />
           </p>
         </header>

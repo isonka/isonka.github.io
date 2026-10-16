@@ -7,6 +7,7 @@ import { Reveal } from '../components/Reveal';
 import { ServiceTrustBand } from '../components/ServiceTrustBand';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/ServicePage.css';
+import { studioStreet } from '../data/business';
 
 const faqs = [
   {
@@ -17,7 +18,7 @@ const faqs = [
   {
     question: 'Where can I take Reformer Pilates classes in Amsterdam Oud-Zuid / Museumplein?',
     answer:
-      'PT 7 is at Van Baerlestraat 76C, across from the Stedelijk Museum at Museumplein. We specialize in small group Reformer classes (maximum 5 people) and private sessions.',
+      `PT 7 is at ${studioStreet}, across from the Stedelijk Museum at Museumplein. We specialize in small group Reformer classes (maximum 5 people) and private sessions.`,
   },
   {
     question: 'How many people are in a Reformer class?',
@@ -47,7 +48,7 @@ const faqs = [
   {
     question: 'Is there Reformer Pilates in Amsterdam Oud-Zuid?',
     answer:
-      'Yes. Our studio sits in Oud-Zuid at Museumplein (Van Baerlestraat 76C). We run small group and private Reformer sessions for clients in Amsterdam Zuid, the Museum District, and nearby neighborhoods.',
+      `Yes. Our studio sits in Oud-Zuid at Museumplein (${studioStreet}). We run small group and private Reformer sessions for clients in Amsterdam Zuid, the Museum District, and nearby neighborhoods.`,
   },
   {
     question: 'How much does Reformer Pilates cost in Amsterdam?',
@@ -68,7 +69,7 @@ export const ReformerPilatesAmsterdam= () => {
     <>
       <SEOHead
         title="Reformer Pilates Amsterdam Museumplein | PT 7 Pilates"
-        description="Reformer Pilates at Museumplein Amsterdam. Small groups max 5, private sessions, full apparatus studio in Oud-Zuid. First visit coaching for beginners and expats."
+        description="Reformer Pilates at Museumplein, Amsterdam Zuid. Small groups (max 5), private sessions, full apparatus studio. First-visit coaching for beginners."
         keywords="reformer pilates amsterdam, pilates museumplein, reformer pilates oud-zuid, small group pilates amsterdam, pilates classes amsterdam, reformer pilates lessen amsterdam, boutique pilates amsterdam"
         canonical="https://www.pt7.nl/reformer-pilates-amsterdam/"
         ogTitle="Reformer Pilates Amsterdam | PT 7 Pilates Museumplein"
@@ -132,7 +133,7 @@ export const ReformerPilatesAmsterdam= () => {
             <h2>Reformer Pilates at Museumplein</h2>
             <p>
               Looking for Reformer Pilates in Amsterdam near Museumplein or Oud-Zuid? PT 7
-              is a boutique studio at Van Baerlestraat 76C, across from the Stedelijk Museum. We
+              is a boutique studio at {studioStreet}, across from the Stedelijk Museum. We
               focus on equipment-based Reformer training, not crowded mat classes, with
               instructors who coach form, breath, and progression in every session.
             </p>
@@ -164,7 +165,7 @@ export const ReformerPilatesAmsterdam= () => {
               <div className="service-benefit-card">
                 <h3>1. Arrive &amp; settle in</h3>
                 <p>
-                  Come a few minutes early to Van Baerlestraat 76C (across from Stedelijk Museum).
+                  Come a few minutes early to {studioStreet} (across from Stedelijk Museum).
                   We confirm your booking and get you ready for the Reformer.
                 </p>
               </div>

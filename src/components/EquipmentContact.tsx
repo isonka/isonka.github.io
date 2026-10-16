@@ -1,3 +1,5 @@
+import { studioAddressLine } from '../data/business';
+
 export const EquipmentContact= () => {
   return (
     <section id="product-contact" className="product-contact">
@@ -8,7 +10,7 @@ export const EquipmentContact= () => {
             Visit our Amsterdam studio to try the equipment in person, or get in touch to discuss your order.
           </p>
           <p className="product-contact-address">
-            Van Baerlestraat 76C, 1071BB Amsterdam Oud-Zuid
+            {studioAddressLine} Oud-Zuid
           </p>
         </div>
 

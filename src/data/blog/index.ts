@@ -21,6 +21,8 @@ export const blogPosts: BlogPost[] = [
   pilatesForMenStrengthFlexibilityAthleticPerformance,
 ];
 
+export const blogSeoTitle = (post: BlogPost): string => post.seoTitle ?? `${post.title} | PT 7`;
+
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined => {
   return blogPosts.find(post => post.slug === slug);
 };

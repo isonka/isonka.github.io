@@ -7,6 +7,7 @@ import { Reveal } from '../components/Reveal';
 import { ServiceTrustBand } from '../components/ServiceTrustBand';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/ServicePage.css';
+import { studioStreet } from '../data/business';
 
 const faqs = [
   {
@@ -49,7 +50,7 @@ export const TRXTrainingAmsterdam= () => {
     <>
       <SEOHead
         title="TRX Amsterdam | Suspension Training Museumplein | PT 7"
-        description="TRX Amsterdam at Van Baerlestraat 76C, Museumplein, Oud-Zuid. Suspension training in small groups (max 5) and privates. New clients: 3 group classes for €50. Book at https://www.pt7.nl/schedule/."
+        description={`TRX Amsterdam at ${studioStreet}, Museumplein. Suspension training in small groups (max 5) and privates. New clients: 3 group classes for €50.`}
         keywords="TRX training amsterdam, TRX suspension training amsterdam, TRX les amsterdam, TRX museumplein, suspension training amsterdam, TRX one-on-one training amsterdam, functionele training amsterdam, TRX oud-zuid"
         canonical="https://www.pt7.nl/trx-training-amsterdam/"
         ogTitle="TRX Training Amsterdam | PT 7 Pilates Museumplein"

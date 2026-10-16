@@ -2,6 +2,8 @@ export interface BlogPost {
   id: string;
   slug: string;
   title: string;
+  /** Search-result title (≤60 chars). Defaults to `${title} | PT 7`. */
+  seoTitle?: string;
   excerpt: string;
   content: string;
   author: string;
