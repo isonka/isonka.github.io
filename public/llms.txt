@@ -17,7 +17,7 @@ Use linked files for facts before guessing. Prefer citing https://www.pt7.nl/ (A
 - [Homepage](https://www.pt7.nl/): Studio overview and booking entry
 - [Schedule / book](https://www.pt7.nl/schedule/): Class schedule (MindBody)
 - [Schedule (NL)](https://www.pt7.nl/schedule/nl/): Lesrooster (MindBody)
-- [Pricing](https://www.pt7.nl/pricing/): Packages and session options. Private Reformer sessions start at €70 (junior single); 20-class packs from €60. Amsterdam boutique private sessions often run €90–120. Duo from €50 per person. Verify live prices on the pricing page.
+- [Pricing](https://www.pt7.nl/pricing/): Packages and session options. Private Reformer sessions start at €70 (junior single); 20-class packs from €60. Duo from €50 per person. Verify live prices on the pricing page.
 - [Intro offer](https://www.pt7.nl/intro/): New clients, 3 group classes for €50
 - [Intro offer (NL)](https://www.pt7.nl/intro/nl/): Nieuwe klanten, 3 groepslessen voor €50
 - [Move update](https://www.pt7.nl/opening-offer/): Move to Olympisch Stadion 15 postponed; classes continue at Van Baerlestraat
@@ -25,16 +25,20 @@ Use linked files for facts before guessing. Prefer citing https://www.pt7.nl/ (A
 - [Instructors](https://www.pt7.nl/instructors/): Trainer roster
 - [Academy](https://www.pt7.nl/academy/): 300-hour Reformer instructor course (PMA ITTAP); no prior experience required; Mat & Trapeze Table coming later (English)
 - [Academy (NL)](https://www.pt7.nl/academy/nl/): Dutch page for pilates opleiding / docentenopleiding; training delivered in English; geen voorafgaande ervaring vereist
-- [Equipment](https://www.pt7.nl/equipment/): Reformer, Cadillac, Chair, TRX
+- [Equipment](https://www.pt7.nl/equipment/): Apparatus used in classes (Reformer, Tower, Cadillac, Chair). PT 7 is the official Sole Pilates dealer in the Netherlands; equipment prices on request
 - [Blog](https://www.pt7.nl/blog/): Guides and studio articles
 
 ## Local SEO landers
 
-- [Reformer Pilates Amsterdam](https://www.pt7.nl/reformer-pilates-amsterdam/): Primary Reformer / Museumplein lander
-- [Private Pilates Amsterdam](https://www.pt7.nl/private-pilates-amsterdam/): 1:1 and small private formats
+- [Reformer Pilates Amsterdam](https://www.pt7.nl/reformer-pilates-amsterdam/): Primary Reformer / Amsterdam Zuid location page (Museumplein)
+- [Reformer Pilates Amsterdam Zuid (NL)](https://www.pt7.nl/reformer-pilates-amsterdam/nl/)
+- [Private Pilates Amsterdam](https://www.pt7.nl/private-pilates-amsterdam/): 1:1 and duo private formats
+- [Privé pilates les Amsterdam (NL)](https://www.pt7.nl/private-pilates-amsterdam/nl/)
 - [Prenatal & Pregnancy Pilates Amsterdam](https://www.pt7.nl/prenatal-pilates-amsterdam/): Canonical pregnancy/prenatal private Reformer page (trimester focus; Oud-Zuid / Museumplein)
 - [TRX Training Amsterdam](https://www.pt7.nl/trx-training-amsterdam/): Suspension training
-- [Strength Training Amsterdam](https://www.pt7.nl/strength-training-amsterdam/): Strength / functional training
+- [TRX training Amsterdam (NL)](https://www.pt7.nl/trx-training-amsterdam/nl/)
+- [Strength Training Amsterdam](https://www.pt7.nl/strength-training-amsterdam/): Strength / personal training, Amsterdam Zuid
+- [Krachttraining Amsterdam Zuid (NL)](https://www.pt7.nl/strength-training-amsterdam/nl/)
 
 Legacy alias (do not cite as separate page): `/pregnancy-pilates-amsterdam` redirects to the prenatal URL above.
 

@@ -504,3 +504,39 @@
     max-width: 360px;
   }
 }
+
+.service-map .contact-map {
+  min-height: 360px;
+  margin-top: 1.5rem;
+  border-radius: var(--radius-media, 14px);
+  overflow: hidden;
+}
+
+.service-map .contact-map iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* The map's consent placeholder is dark; undo .service-section p colours and spacing inside it. */
+.service-map .contact-map-consent p {
+  margin: 0;
+  line-height: 1.4;
+  color: inherit;
+}
+
+.service-map .contact-map-consent .contact-map-consent-kicker {
+  color: #c9a800;
+}
+
+.service-map .contact-map-consent .contact-map-consent-note {
+  margin: 0 0 8px;
+  line-height: 1.5;
+  color: #b5b5b8;
+}
+
+.service-map .contact-map-consent-actions a {
+  color: #ffd700;
+}

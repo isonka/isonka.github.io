@@ -1,176 +1,135 @@
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Trans, useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Reveal } from '../components/Reveal';
 import { ServiceTrustBand } from '../components/ServiceTrustBand';
+import { BASE_URL } from '../data/business';
+import { MEMBERSHIP, formatEur } from '../data/pricing';
+import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/ServicePage.css';
-import { studioStreet } from '../data/business';
 
-const faqs = [
-  {
-    question: 'What is TRX suspension training?',
-    answer: 'TRX is a system of adjustable straps that anchor to a fixed point and use your own bodyweight as resistance. By adjusting the angle of your body and the length of the straps, the instructor can make any exercise easier or harder. It trains strength, stability, core control, and balance simultaneously, in ways that traditional weight training cannot.',
-  },
-  {
-    question: 'Is TRX suitable for beginners?',
-    answer: 'Yes. TRX is highly scalable. Every exercise can be made easier by changing your angle. Beginners start with a stable foundation and progress at their own pace. The low-impact nature of suspension training also makes it suitable for people with joint sensitivities.',
-  },
-  {
-    question: 'Can I combine TRX with Pilates at PT 7?',
-    answer: 'Absolutely, and many of our clients do exactly that. Pilates and TRX complement each other very well. Pilates builds deep core stability and body awareness; TRX adds functional strength, power, and cardiovascular challenge. Our instructors can design a combined program that integrates both.',
-  },
-  {
-    question: 'How long is a TRX session?',
-    answer: 'All sessions at PT 7 are 45 minutes. This is enough time for a complete full-body TRX workout, warm-up, and cool-down. Private sessions can be structured as pure TRX or a combination with strength training or Pilates work.',
-  },
-  {
-    question: 'Do I need any equipment or clothing?',
-    answer: 'We provide all TRX equipment. Wear comfortable fitted workout clothing and training shoes (or train barefoot/in socks). Bring a water bottle and a small towel. Grip socks are available for purchase at the studio if needed.',
-  },
-  {
-    question: 'Where can I do TRX in Amsterdam Oud-Zuid?',
-    answer:
-      'PT 7 teaches TRX at Museumplein in Amsterdam Oud-Zuid. Small groups are a maximum of 5. Book a class from the schedule.',
-  },
-  {
-    question: 'What are the benefits of TRX compared to gym machines?',
-    answer: 'TRX trains the body in three-dimensional, functional movement patterns, not isolated single-joint movements. It develops stability and coordination alongside raw strength. Because you are working against gravity and your own bodyweight, every exercise also engages your core. The result is functional fitness that translates directly into real-life performance and injury prevention.',
-  },
-];
+const FAQ_KEYS = ['what', 'beginners', 'pilates', 'length', 'clothing', 'where', 'machines'] as const;
+const BENEFIT_KEYS = ['fullBody', 'core', 'joints', 'functional', 'scalable', 'pilates'] as const;
 
-export const TRXTrainingAmsterdam= () => {
+export const TRXTrainingAmsterdam = () => {
+  const { t } = useTranslation('trx');
+  const page = useLocalizedPage('/trx-training-amsterdam/');
+  const { href } = page;
+
   useEffect(() => {
-    trackPageView('/trx-training-amsterdam/', 'TRX Amsterdam | PT 7 Pilates');
-  }, []);
+    trackPageView(page.path, t('seo.analyticsTitle'));
+  }, [page.path, t]);
+
+  const faqs = FAQ_KEYS.map((key) => ({
+    question: t(`faq.${key}.q`),
+    answer: t(`faq.${key}.a`),
+  }));
 
   return (
     <>
       <SEOHead
-        title="TRX Amsterdam | Suspension Training Museumplein | PT 7"
-        description={`TRX Amsterdam at ${studioStreet}, Museumplein. Suspension training in small groups (max 5) and privates. New clients: 3 group classes for €50.`}
-        keywords="TRX training amsterdam, TRX suspension training amsterdam, TRX les amsterdam, TRX museumplein, suspension training amsterdam, TRX one-on-one training amsterdam, functionele training amsterdam, TRX oud-zuid"
-        canonical="https://www.pt7.nl/trx-training-amsterdam/"
-        ogTitle="TRX Training Amsterdam | PT 7 Pilates Museumplein"
-        ogDescription="Professional TRX suspension training at Museumplein Amsterdam. Functional strength, core stability and balance. Certified trainers, small groups & private sessions."
+        title={t('seo.title')}
+        description={t('seo.description')}
+        keywords={t('seo.keywords')}
+        canonical={page.canonical}
+        ogTitle={t('seo.ogTitle')}
+        ogDescription={t('seo.ogDescription')}
+        hreflangAlternates={page.hreflang}
+        {...page.seoLocale}
       />
-      <StructuredData
-        type="FAQPage"
-        data={{ faqs }}
-      />
+      <StructuredData type="FAQPage" data={{ faqs }} />
       <StructuredData
         type="Service"
         data={{
           service: {
-            name: 'TRX Training Amsterdam',
-            description:
-              'Professional TRX suspension training at Museumplein. Functional strength, core stability, and balance in small groups (max 5) and private sessions.',
-            serviceUrl: 'https://www.pt7.nl/trx-training-amsterdam/',
+            name: t('service.name'),
+            description: t('service.description'),
+            serviceUrl: page.canonical,
             areaServed: 'Amsterdam',
             offers: [
-              { name: 'Small group TRX class', url: 'https://www.pt7.nl/schedule/' },
-              { name: 'Private TRX session', url: 'https://www.pt7.nl/schedule/' },
+              { name: t('service.offerGroup'), url: `${BASE_URL}${href('/schedule/')}` },
+              { name: t('service.offerPrivate'), url: `${BASE_URL}${href('/schedule/')}` },
             ],
           },
         }}
       />
-      <Breadcrumbs items={[{ name: 'TRX Training Amsterdam', path: '/trx-training-amsterdam/' }]} />
+      <Breadcrumbs items={[{ name: t('breadcrumb'), path: page.path }]} />
 
       <div className="service-page">
         <Reveal className="service-hero">
           <div className="service-hero-content">
-            <p className="kicker">TRX</p>
-            <h1>TRX Training Amsterdam</h1>
-            <p>
-              Suspension training that builds full-body functional strength, core stability, and
-              balance, at our boutique studio at Museumplein.
-            </p>
+            <p className="kicker">{t('hero.kicker')}</p>
+            <h1>{t('hero.title')}</h1>
+            <p>{t('hero.lead')}</p>
             <div className="service-hero-badges">
-              <span className="service-badge">Functional strength</span>
-              <span className="service-badge">Core & balance</span>
-              <span className="service-badge">All levels</span>
-              <span className="service-badge">Museumplein Amsterdam</span>
+              <span className="service-badge">{t('hero.badgeStrength')}</span>
+              <span className="service-badge">{t('hero.badgeCore')}</span>
+              <span className="service-badge">{t('hero.badgeLevels')}</span>
+              <span className="service-badge">{t('hero.badgeArea')}</span>
             </div>
-            <Link to="/schedule/" className="service-hero-btn">Book a TRX Session</Link>
+            <Link to={href('/schedule/')} className="service-hero-btn">{t('hero.cta')}</Link>
           </div>
         </Reveal>
 
         <ServiceTrustBand
           imageSrc="/assets/images/trx.webp"
-          imageAlt="TRX training at PT 7 Amsterdam"
-          priceAnchor="Group & private TRX · see packages from €21.50 per class"
+          imageAlt={t('trust.imageAlt')}
+          priceAnchor={t('trust.priceAnchor', { memberPrice: formatEur(MEMBERSHIP.four.perClass) })}
           testimonial="“Six months in. Incredible results, motivating atmosphere, pristine equipment.”"
-          testimonialAuthor="Yeşim · ClassPass review"
+          testimonialAuthor={`Yeşim · ${t('trust.reviewSource')}`}
+          ctaTo={href('/pricing/')}
+          ctaLabel={t('trust.ctaLabel')}
         />
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>TRX suspension training in Amsterdam</h2>
+            <h2>{t('intro.title')}</h2>
+            <p>{t('intro.p1')}</p>
+            <p>{t('intro.p2')}</p>
             <p>
-              TRX suspension training uses adjustable straps and your own bodyweight to create
-              resistance in every plane of movement. Unlike machines that isolate individual muscles,
-              TRX trains the whole body as an integrated system, building the kind of functional
-              strength that translates directly into how you move in daily life and sport.
+              <Trans
+                ns="trx"
+                i18nKey="intro.p3"
+                components={{ reformer: <Link to={href('/reformer-pilates-amsterdam/')} /> }}
+              />
             </p>
             <p>
-              At PT 7 on Museumplein, our certified trainers guide you through TRX programs
-              that are tailored to your goals and fitness level. Whether you want to build general
-              strength, improve your athletic performance, lose weight, or recover from an injury,
-              TRX offers a highly effective and low-impact solution.
-            </p>
-            <p>
-              One of the great advantages of TRX is its scalability. By adjusting your body angle
-              and the strap length, the instructor can instantly make any exercise easier or harder.
-              This makes TRX suitable for complete beginners and experienced athletes alike, and
-              ideal for combining with Pilates in an integrated training program.
-            </p>
-            <p>
-              TRX sessions at PT 7 are available as private sessions (one-on-one or
-              duo) and in our small group classes of maximum 5 people.
+              <Trans
+                ns="trx"
+                i18nKey="intro.p4"
+                components={{
+                  private: <Link to={href('/private-pilates-amsterdam/')} />,
+                  strength: <Link to={href('/strength-training-amsterdam/')} />,
+                }}
+              />
             </p>
           </div>
         </Reveal>
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>Benefits of TRX training</h2>
+            <h2>{t('benefits.title')}</h2>
             <div className="service-benefits-grid">
-              <div className="service-benefit-card">
-                <h3>Full-body in 45 minutes</h3>
-                <p>TRX efficiently trains every major muscle group in a single session, upper body, lower body, and core simultaneously.</p>
-              </div>
-              <div className="service-benefit-card">
-                <h3>Core in every exercise</h3>
-                <p>Because you are always working against gravity and instability, your core is engaged in every TRX movement, not just dedicated core exercises.</p>
-              </div>
-              <div className="service-benefit-card">
-                <h3>Joint-friendly</h3>
-                <p>TRX is low-impact and can be adapted for people with knee, hip, or shoulder issues. The instructor adjusts load and range of motion to stay within safe limits.</p>
-              </div>
-              <div className="service-benefit-card">
-                <h3>Functional strength</h3>
-                <p>Training in three-dimensional, natural movement patterns builds strength that carries over into real life, not just gym performance.</p>
-              </div>
-              <div className="service-benefit-card">
-                <h3>Scalable difficulty</h3>
-                <p>From beginner to advanced, TRX exercises can be instantly modified. You progress at your own pace without switching equipment.</p>
-              </div>
-              <div className="service-benefit-card">
-                <h3>Pairs perfectly with Pilates</h3>
-                <p>Many PT 7 clients combine Pilates and TRX, Pilates for deep core work and alignment, TRX for functional strength and conditioning.</p>
-              </div>
+              {BENEFIT_KEYS.map((key) => (
+                <div key={key} className="service-benefit-card">
+                  <h3>{t(`benefits.${key}Title`)}</h3>
+                  <p>{t(`benefits.${key}Text`)}</p>
+                </div>
+              ))}
             </div>
           </div>
         </Reveal>
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>Frequently asked questions</h2>
+            <h2>{t('faqTitle')}</h2>
             <div className="service-faq-list">
-              {faqs.map((faq, i) => (
-                <div key={i} className="service-faq-item">
+              {faqs.map((faq) => (
+                <div key={faq.question} className="service-faq-item">
                   <h3>{faq.question}</h3>
                   <p>{faq.answer}</p>
                 </div>
@@ -180,14 +139,11 @@ export const TRXTrainingAmsterdam= () => {
         </Reveal>
 
         <Reveal className="service-cta-section">
-          <h2>Start your TRX training</h2>
-          <p>
-            Book a private or small group TRX session at our Museumplein studio and experience what
-            functional training can do for your strength and fitness.
-          </p>
+          <h2>{t('cta.title')}</h2>
+          <p>{t('cta.text')}</p>
           <div className="service-cta-buttons">
-            <Link to="/schedule/" className="service-cta-btn-primary">Book a Session</Link>
-            <Link to="/workouts/trx/" className="service-cta-btn-secondary">Learn More About TRX</Link>
+            <Link to={href('/schedule/')} className="service-cta-btn-primary">{t('cta.book')}</Link>
+            <Link to="/workouts/trx/" className="service-cta-btn-secondary">{t('cta.guide')}</Link>
           </div>
         </Reveal>
       </div>

@@ -53,12 +53,12 @@ export const Equipment= () => {
   return (
     <>
       <SEOHead
-        title="Pilates Equipment at PT 7 Amsterdam | In-Studio Apparatus"
-        description="Reformer, Tower Reformer, Cadillac and Wunda Chair used in classes at PT 7, Museumplein, Amsterdam. Specs per apparatus; Ladder Barrel for sale."
-        keywords="pilates equipment amsterdam, reformer pilates equipment, tower reformer, cadillac pilates amsterdam, pilates apparatus museumplein"
+        title="Pilates Equipment & Reformer Kopen | Sole Pilates Dealer"
+        description="Official Sole Pilates dealer in the Netherlands. Reformer kopen? Try Pilates apparatus at our Amsterdam studio and ask us for advice. Prices on request."
+        keywords="pilates equipment, pilates equipment amsterdam, reformer kopen, pilates reformer kopen, pilates apparatuur, pilates apparatuur kopen, sole pilates, sole pilates dealer nederland, tower reformer, cadillac pilates"
         canonical="https://www.pt7.nl/equipment/"
-        ogTitle="Pilates Equipment at PT 7 Amsterdam | In-Studio Apparatus"
-        ogDescription="Apparatus used in classes at Museumplein. Book at pt7.nl/schedule/. Ladder Barrel is the only piece sold and not used in sessions."
+        ogTitle="Pilates Equipment & Reformer Kopen | Sole Pilates Dealer NL"
+        ogDescription="PT 7 is the official Sole Pilates dealer in the Netherlands. Try Pilates apparatus at our Museumplein studio. Prices on request."
       />
       <StructuredData
         type="ItemList"
@@ -77,11 +77,31 @@ export const Equipment= () => {
       <div className="equipment-page">
         <header className="equipment-hero">
           <p className="kicker">Equipment</p>
-          <h1>Pilates Equipment at PT 7 Amsterdam</h1>
+          <h1>Pilates Equipment in Amsterdam</h1>
           <p className="equipment-hero-line">
-            Reformer, Tower, Cadillac, and Chair used in classes at Museumplein. Ladder Barrel is sold separately and is not used in client sessions.
+            Train on Reformer, Tower, Cadillac, and Chair in our classes at Museumplein. Looking to buy? PT 7 is the official Sole Pilates dealer in the Netherlands.
           </p>
         </header>
+
+        <section className="equipment-dealer" aria-labelledby="equipment-dealer-heading">
+          <h2 id="equipment-dealer-heading">Official Sole Pilates dealer in the Netherlands</h2>
+          <p>
+            Equipping a studio or training at home? We advise you on the right apparatus for your space and goals. Try
+            Pilates apparatus in person at our studio at Museumplein, then order through us. Prices on request.
+          </p>
+          <p lang="nl">
+            Reformer kopen of andere pilates apparatuur? PT 7 is officieel dealer van Sole Pilates in Nederland. Probeer
+            de apparaten in onze studio aan het Museumplein en vraag vrijblijvend een offerte aan. Prijzen op aanvraag.
+          </p>
+          <p>
+            <a
+              href={`mailto:info@pt7.nl?subject=${encodeURIComponent('Sole Pilates quote request')}`}
+              className="btn-gold"
+            >
+              Request a Sole Pilates quote
+            </a>
+          </p>
+        </section>
 
         <div className="equipment-intent-notice">
           <p>

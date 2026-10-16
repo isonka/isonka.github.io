@@ -13,6 +13,7 @@ import { isPrerender } from '../utils/prerender';
 import { useLocale } from '../i18n/useLocale';
 import { business, formatOpeningClock, studioHoursFor } from '../data/business';
 import '../styles/Schedule.css';
+import { localeHref } from '../i18n/locale';
 
 const SCHEDULE_URL_EN = 'https://www.pt7.nl/schedule/';
 const SCHEDULE_URL_NL = 'https://www.pt7.nl/schedule/nl/';
@@ -214,7 +215,7 @@ export const Schedule= () => {
                 <Trans
                   ns="schedule"
                   i18nKey="private.subtitle"
-                  components={{ private: <Link to="/private-pilates-amsterdam/" /> }}
+                  components={{ private: <Link to={localeHref('/private-pilates-amsterdam/', locale)} /> }}
                 />
               </p>
 
@@ -262,13 +263,13 @@ export const Schedule= () => {
           </div>
           <p className="schedule-account-note">{t('hero.accountNote')}</p>
           <p className="schedule-detail-links">
-            <Link to="/reformer-pilates-amsterdam/">{t('hero.linkReformer')}</Link>
+            <Link to={localeHref('/reformer-pilates-amsterdam/', locale)}>{t('hero.linkReformer')}</Link>
             {' · '}
             <Link to={pricingHref}>{t('hero.linkPricing')}</Link>
             {' · '}
-            <Link to="/private-pilates-amsterdam/">{t('hero.linkPrivate')}</Link>
+            <Link to={localeHref('/private-pilates-amsterdam/', locale)}>{t('hero.linkPrivate')}</Link>
             {' · '}
-            <Link to="/trx-training-amsterdam/">{t('hero.linkTrx')}</Link>
+            <Link to={localeHref('/trx-training-amsterdam/', locale)}>{t('hero.linkTrx')}</Link>
           </p>
         </section>
 
@@ -301,7 +302,7 @@ export const Schedule= () => {
                         i18nKey={`faq.${key}.answer`}
                         values={hoursValues}
                         components={{
-                          private: <Link to="/private-pilates-amsterdam/" />,
+                          private: <Link to={localeHref('/private-pilates-amsterdam/', locale)} />,
                           prenatal: <Link to="/prenatal-pilates-amsterdam/" />,
                         }}
                       />

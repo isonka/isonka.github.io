@@ -3,15 +3,15 @@ import type { EnAcademy } from '../en/academy';
 
 export const nlAcademy: DeepStringify<EnAcademy> = {
   seo: {
-    title: 'Reformer Pilates Opleiding Amsterdam | PT7 Academy',
+    title: 'Pilates Docentenopleiding Amsterdam | Reformer | PT7 Academy',
     description:
       'Pilates docentenopleiding in Amsterdam: 300 uur Reformer opleiding, PMA ITTAP goedgekeurd. Weekendrooster. Volgende termijn nov 2026–jan 2027.',
     keywords:
       'reformer pilates opleiding amsterdam, pilates opleiding amsterdam, reformer pilates docentenopleiding, pilates docentenopleiding, pilates instructeur opleiding, PMA ITTAP, weekend pilates opleiding, carrièreswitch pilates',
-    ogTitle: 'Reformer Pilates Opleiding Amsterdam | Docentenopleiding PT7 Academy',
+    ogTitle: 'Pilates Docentenopleiding Amsterdam | Reformer | PT7 Academy',
     ogDescription:
       'Reformer pilates docentenopleiding in Amsterdam: 300 uur Reformer (PMA ITTAP goedgekeurd). Volgende termijn november 2026–januari 2027. Weekendintensieven bij Museumplein. Training in het Engels.',
-    analyticsTitle: 'Reformer Pilates Opleiding Amsterdam | Docentenopleiding | PT7 Academy',
+    analyticsTitle: 'Pilates Docentenopleiding Amsterdam | PT7 Academy',
     schemaName: 'PMA ITTAP-Approved 300-Hour Reformer Pilates Instructor Course',
     schemaAlternateName:
       'De enige Nederlandse Reformer-instructeurscursus met wereldwijd erkende PMA ITTAP-accreditatie',
@@ -19,7 +19,7 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
       'De enige Nederlandse Reformer pilates instructeurscursus met wereldwijd erkende PMA ITTAP-accreditatie (Pilates Method Alliance). 300-uur docentenopleiding in Amsterdam. Volgende termijn november 2026–januari 2027. Weekendrooster. Lessen in het Engels. Vanaf €2.000 + BTW.',
   },
   hero: {
-    title: 'Reformer pilates opleiding Amsterdam',
+    title: 'Pilates docentenopleiding Amsterdam (Reformer)',
     subtitle: 'PMA ITTAP goedgekeurde Reformer docentenopleiding. Weekendrooster bij Museumplein.',
     languageNote: 'Alle lessen en trainingen worden in het Engels gegeven.',
   },

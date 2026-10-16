@@ -1,7 +1,7 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { openCookieSettings } from '../utils/consentTracking';
-import { homePath, isHomePath } from '../i18n/locale';
+import { homePath, isHomePath, localeHref } from '../i18n/locale';
 import { useLocale } from '../i18n/useLocale';
 import { LangSwitch } from './LangSwitch';
 import '../styles/Footer.css';
@@ -48,10 +48,10 @@ export const Footer= () => {
             <li><Link to={scheduleHref}>{t('footer.book')}</Link></li>
             <li><Link to={pricingHref}>{t('footer.pricing')}</Link></li>
             <li><Link to={introHref}>{t('footer.intro')}</Link></li>
-            <li><Link to="/reformer-pilates-amsterdam/">{t('footer.reformerPilates')}</Link></li>
-            <li><Link to="/trx-training-amsterdam/">{t('footer.trx')}</Link></li>
-            <li><Link to="/private-pilates-amsterdam/">{t('footer.privatePilates')}</Link></li>
-            <li><Link to="/strength-training-amsterdam/">{t('footer.strength')}</Link></li>
+            <li><Link to={localeHref('/reformer-pilates-amsterdam/', locale)}>{t('footer.reformerPilates')}</Link></li>
+            <li><Link to={localeHref('/trx-training-amsterdam/', locale)}>{t('footer.trx')}</Link></li>
+            <li><Link to={localeHref('/private-pilates-amsterdam/', locale)}>{t('footer.privatePilates')}</Link></li>
+            <li><Link to={localeHref('/strength-training-amsterdam/', locale)}>{t('footer.strength')}</Link></li>
             <li><Link to="/prenatal-pilates-amsterdam/">{t('footer.prenatal')}</Link></li>
             <li><Link to={academyHref}>{t('footer.academy')}</Link></li>
             <li><Link to="/corporate/">{t('footer.forBusiness')}</Link></li>

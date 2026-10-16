@@ -1,179 +1,150 @@
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Trans, useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Reveal } from '../components/Reveal';
 import { ServiceTrustBand } from '../components/ServiceTrustBand';
+import { BASE_URL } from '../data/business';
 import { COUPLE, PRIVATE, formatEur } from '../data/pricing';
+import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/ServicePage.css';
 
-const privateFrom = formatEur(PRIVATE.junior.single);
-const privatePack20 = formatEur(PRIVATE.junior.pack20);
-const coupleFrom = formatEur(COUPLE.single);
+const prices = {
+  privateFrom: formatEur(PRIVATE.junior.single),
+  privatePack20: formatEur(PRIVATE.junior.pack20),
+  coupleFrom: formatEur(COUPLE.single),
+};
 
-const faqs = [
-  {
-    question: 'What is the difference between private and group Pilates?',
-    answer: 'In a private session your instructor is 100% focused on you. The program is built around your specific goals, movement patterns, injuries, and fitness level. Group classes follow a set structure suitable for all participants. Private sessions allow for deeper technical work, more frequent adjustments, and faster progress, especially for beginners, people recovering from injury, or clients with specific goals like pregnancy, back pain, or athletic performance.',
-  },
-  {
-    question: 'How many people are in a private session?',
-    answer: 'Private sessions can be one-on-one (just you and your instructor) or duo (you and a partner). Both formats offer fully customized programming. Duo sessions are for people who want the benefits of private training at a lower price per person.',
-  },
-  {
-    question: 'How often should I do private Pilates sessions?',
-    answer: 'For beginners or people with specific goals (injury rehab, pregnancy, postural correction), we recommend 2 sessions per week to start. Once you have a solid foundation, 1 session per week combined with group classes works very well. Your instructor will advise what is best for your individual situation.',
-  },
-  {
-    question: 'Do I need experience before starting private Pilates?',
-    answer: 'No experience needed at all. Private sessions are actually the best way to start Pilates, because you learn the fundamentals correctly from day one. Your instructor explains every movement, corrects your form, and builds your program progressively.',
-  },
-  {
-    question: 'Can I book a trial session before committing to a package?',
-    answer: 'Yes. We offer a single private session so you can experience the studio, meet your instructor, and decide if it is the right fit. Many clients start with a single session and then move to a package for better value.',
-  },
-  {
-    question: 'How much is a private Pilates session in Amsterdam?',
-    answer: `Private Reformer sessions at PT 7 start at ${privateFrom}. A 20-class pack brings the junior rate to ${privatePack20} per class. Amsterdam boutique private sessions often run €90–120. Duo sessions start at ${coupleFrom} per person. Full rates are on the pricing page.`,
-  },
-  {
-    question: 'What equipment is used in private Pilates sessions?',
-    answer: 'Depending on your goals, private sessions at PT 7 can include the Reformer, Tower Reformer, Cadillac (Trapeze Table), Wunda Chair, and Spine Corrector. Your instructor selects the most appropriate equipment for each session.',
-  },
-];
+const FAQ_KEYS = ['difference', 'people', 'frequency', 'experience', 'trial', 'price', 'equipment'] as const;
 
-export const PrivatePilates= () => {
+export const PrivatePilates = () => {
+  const { t } = useTranslation('privatePilates');
+  const page = useLocalizedPage('/private-pilates-amsterdam/');
+  const { href } = page;
+
   useEffect(() => {
-    trackPageView('/private-pilates-amsterdam/', 'Private Pilates Amsterdam | PT 7 Pilates');
-  }, []);
+    trackPageView(page.path, t('seo.analyticsTitle'));
+  }, [page.path, t]);
+
+  const faqs = FAQ_KEYS.map((key) => ({
+    question: t(`faq.${key}.q`),
+    answer: t(`faq.${key}.a`, prices),
+  }));
 
   return (
     <>
       <SEOHead
-        title="Private Reformer Pilates Sessions Amsterdam | PT 7 Pilates"
-        description="Private and duo Reformer Pilates at Museumplein, Amsterdam Zuid, from €70. Your instructor's full attention and a program built around you. Book online."
-        keywords="private pilates amsterdam, private pilates prices amsterdam, pilates near me, pilates near me amsterdam, privé pilates amsterdam, one on one pilates amsterdam, personal pilates amsterdam, pilates prive les amsterdam, prive pilates museumplein, privé reformer pilates, priveles pilates amsterdam"
-        canonical="https://www.pt7.nl/private-pilates-amsterdam/"
-        ogTitle="Private Reformer Pilates Amsterdam | From €70 | PT 7 Pilates"
-        ogDescription="Private Reformer sessions at Museumplein from €70. One-on-one or duo, with your instructor's full attention."
+        title={t('seo.title')}
+        description={t('seo.description', prices)}
+        keywords={t('seo.keywords')}
+        canonical={page.canonical}
+        ogTitle={t('seo.ogTitle', prices)}
+        ogDescription={t('seo.ogDescription', prices)}
+        hreflangAlternates={page.hreflang}
+        {...page.seoLocale}
       />
-      <StructuredData
-        type="FAQPage"
-        data={{ faqs }}
-      />
+      <StructuredData type="FAQPage" data={{ faqs }} />
       <StructuredData
         type="Service"
         data={{
           service: {
-            name: 'Private Reformer Pilates Amsterdam',
-            description:
-              'One-on-one and duo private Reformer Pilates at Museumplein, with the full attention of your instructor. Sessions start at €70.',
-            serviceUrl: 'https://www.pt7.nl/private-pilates-amsterdam/',
+            name: t('service.name'),
+            description: t('service.description', prices),
+            serviceUrl: page.canonical,
             areaServed: 'Amsterdam',
             offers: [
               {
-                name: 'One-on-one private session',
+                name: t('service.offerOne'),
                 price: String(PRIVATE.junior.single),
                 priceCurrency: 'EUR',
-                url: 'https://www.pt7.nl/pricing/',
+                url: `${BASE_URL}${href('/pricing/')}`,
               },
               {
-                name: 'Duo private session',
+                name: t('service.offerDuo'),
                 price: String(COUPLE.single),
                 priceCurrency: 'EUR',
-                url: 'https://www.pt7.nl/pricing/',
+                url: `${BASE_URL}${href('/pricing/')}`,
               },
             ],
           },
         }}
       />
-      <Breadcrumbs items={[{ name: 'Private Pilates Amsterdam', path: '/private-pilates-amsterdam/' }]} />
+      <Breadcrumbs items={[{ name: t('breadcrumb'), path: page.path }]} />
 
       <div className="service-page">
         <Reveal className="service-hero">
           <div className="service-hero-content">
-            <p className="kicker">Private</p>
-            <h1>Private Reformer Pilates Sessions Amsterdam</h1>
-            <p>
-              100% personalised training: your goals, your pace, your program. One-on-one or
-              duo sessions at our boutique studio near Museumplein in Amsterdam Oud-Zuid.
-              Looking for Pilates near you in central Amsterdam? We are across from the Stedelijk Museum.
-            </p>
+            <p className="kicker">{t('hero.kicker')}</p>
+            <h1>{t('hero.title')}</h1>
+            <p>{t('hero.lead')}</p>
             <div className="service-hero-badges">
-              <span className="service-badge">One-on-one</span>
-              <span className="service-badge">Duo</span>
-              <span className="service-badge">All levels welcome</span>
-              <span className="service-badge">Museumplein Amsterdam</span>
+              <span className="service-badge">{t('hero.badgeOne')}</span>
+              <span className="service-badge">{t('hero.badgeDuo')}</span>
+              <span className="service-badge">{t('hero.badgeLevels')}</span>
+              <span className="service-badge">{t('hero.badgeArea')}</span>
             </div>
-            <Link to="/schedule/" className="service-hero-btn">Book a Private Session</Link>
+            <Link to={href('/schedule/')} className="service-hero-btn">{t('hero.cta')}</Link>
           </div>
         </Reveal>
 
         <ServiceTrustBand
           imageSrc="/assets/images/reformer_2.webp"
-          imageAlt="Private Reformer Pilates session at PT 7"
-          priceAnchor={`Private from ${privateFrom} · one-on-one or duo`}
+          imageAlt={t('trust.imageAlt')}
+          priceAnchor={t('trust.priceAnchor', prices)}
           testimonial="“Warm, welcoming, and filled with care. I leave every class stronger and smiling.”"
-          testimonialAuthor="Maya · Google review"
-          ctaTo="/pricing/#private-classes"
-          ctaLabel="View private pricing"
+          testimonialAuthor={`Maya · ${t('trust.reviewSource')}`}
+          ctaTo={href('/pricing/#private-classes')}
+          ctaLabel={t('trust.ctaLabel')}
         />
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>Why private Pilates?</h2>
+            <h2>{t('intro.title')}</h2>
+            <p>{t('intro.p1')}</p>
+            <p>{t('intro.p2')}</p>
             <p>
-              Group classes are energising and social, but there is a ceiling to how much attention
-              one instructor can give to five people at once. Private sessions remove that ceiling
-              entirely. Your instructor has one job: to make your session as effective as possible
-              for you, specifically.
+              <Trans
+                ns="privatePilates"
+                i18nKey="intro.p3"
+                components={{ prenatal: <Link to="/prenatal-pilates-amsterdam/" /> }}
+              />
             </p>
             <p>
-              At PT 7, private sessions are the format we are most proud of. Every program
-              is built from scratch after an intake conversation about your goals, movement history,
-              injuries, and schedule. The session evolves week by week as your strength, mobility,
-              and body awareness develop.
-            </p>
-            <p>
-              Whether you are a complete beginner wanting to learn proper technique, an athlete
-              looking to improve performance and prevent injury, someone recovering from a back
-              injury or surgery, or a pregnant or postpartum woman needing specialist guidance,
-              private sessions at PT 7 are designed to deliver real results, not just a
-              good workout.
-            </p>
-            <p>
-              We use classical Pilates apparatus: Reformer, Tower Reformer,
-              Cadillac, Wunda Chair, and Spine Corrector. Your instructor selects
-              the right tools for each phase of your program.
+              <Trans
+                ns="privatePilates"
+                i18nKey="intro.p4"
+                components={{ reformer: <Link to={href('/reformer-pilates-amsterdam/')} /> }}
+              />
             </p>
           </div>
         </Reveal>
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>Private session formats</h2>
+            <h2>{t('formats.title')}</h2>
             <div className="service-benefits-grid">
               <div className="service-benefit-card">
-                <h3>One-on-One</h3>
-                <p>Just you and your instructor. Maximum focus, maximum progress. Ideal for beginners, injury rehabilitation, pregnancy, or anyone who wants the most personalised experience possible.</p>
+                <h3>{t('formats.oneTitle')}</h3>
+                <p>{t('formats.oneText')}</p>
               </div>
               <div className="service-benefit-card">
-                <h3>Duo Session</h3>
-                <p>Train with a partner, friend, spouse, or colleague. You share the cost while still receiving far more personal attention than in a group class. Programs can be shared or partially individualised.</p>
+                <h3>{t('formats.duoTitle')}</h3>
+                <p>{t('formats.duoText')}</p>
               </div>
               <div className="service-benefit-card">
-                <h3>Flexible scheduling</h3>
-                <p>Private sessions can be scheduled at any time within our opening hours, including early morning and evenings. We work around your calendar.</p>
+                <h3>{t('formats.scheduleTitle')}</h3>
+                <p>{t('formats.scheduleText')}</p>
               </div>
               <div className="service-benefit-card">
-                <h3>Full equipment access</h3>
-                <p>Private sessions give you access to our Pilates apparatus: Reformer, Cadillac, Wunda Chair, and Spine Corrector, not just the equipment available in group classes.</p>
+                <h3>{t('formats.equipmentTitle')}</h3>
+                <p>{t('formats.equipmentText')}</p>
               </div>
               <div className="service-benefit-card">
-                <h3>Injury & special needs</h3>
-                <p>Recovering from back surgery, a knee injury, or chronic pain? Our instructors work closely with physiotherapists and can safely incorporate rehabilitation protocols into your sessions.</p>
+                <h3>{t('formats.injuryTitle')}</h3>
+                <p>{t('formats.injuryText')}</p>
               </div>
             </div>
           </div>
@@ -181,10 +152,10 @@ export const PrivatePilates= () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>Frequently asked questions</h2>
+            <h2>{t('faqTitle')}</h2>
             <div className="service-faq-list">
-              {faqs.map((faq, i) => (
-                <div key={i} className="service-faq-item">
+              {faqs.map((faq) => (
+                <div key={faq.question} className="service-faq-item">
                   <h3>{faq.question}</h3>
                   <p>{faq.answer}</p>
                 </div>
@@ -194,14 +165,11 @@ export const PrivatePilates= () => {
         </Reveal>
 
         <Reveal className="service-cta-section">
-          <h2>Ready to start?</h2>
-          <p>
-            Book your first private session online, or contact us if you have questions about which
-            format is right for you.
-          </p>
+          <h2>{t('cta.title')}</h2>
+          <p>{t('cta.text')}</p>
           <div className="service-cta-buttons">
-            <Link to="/schedule/" className="service-cta-btn-primary">Book a Private Session</Link>
-            <Link to="/pricing/" className="service-cta-btn-secondary">View Pricing</Link>
+            <Link to={href('/schedule/')} className="service-cta-btn-primary">{t('cta.book')}</Link>
+            <Link to={href('/pricing/')} className="service-cta-btn-secondary">{t('cta.pricing')}</Link>
           </div>
         </Reveal>
       </div>

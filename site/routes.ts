@@ -105,10 +105,14 @@ const FIXED_PAGES: Route[] = [
   { path: '/blog/', prerender: true, sitemap: { lastmod: '2026-09-17', changefreq: 'weekly', priority: '0.8' } },
 
   { path: '/prenatal-pilates-amsterdam/', prerender: true, sitemap: { lastmod: '2026-07-29', changefreq: 'monthly', priority: '0.9' } },
-  { path: '/private-pilates-amsterdam/', prerender: true, sitemap: { lastmod: '2026-03-27', changefreq: 'monthly', priority: '0.9' } },
-  { path: '/trx-training-amsterdam/', prerender: true, sitemap: { lastmod: '2026-03-27', changefreq: 'monthly', priority: '0.8' } },
-  { path: '/strength-training-amsterdam/', prerender: true, sitemap: { lastmod: '2026-03-27', changefreq: 'monthly', priority: '0.8' } },
-  { path: '/reformer-pilates-amsterdam/', prerender: true, sitemap: { lastmod: '2026-07-17', changefreq: 'monthly', priority: '0.9' } },
+  { path: '/private-pilates-amsterdam/', prerender: true, sitemap: { lastmod: '2026-10-16', changefreq: 'monthly', priority: '0.9' } },
+  { path: '/private-pilates-amsterdam/nl/', prerender: true, sitemap: { lastmod: '2026-10-16', changefreq: 'monthly', priority: '0.9' } },
+  { path: '/trx-training-amsterdam/', prerender: true, sitemap: { lastmod: '2026-10-16', changefreq: 'monthly', priority: '0.8' } },
+  { path: '/trx-training-amsterdam/nl/', prerender: true, sitemap: { lastmod: '2026-10-16', changefreq: 'monthly', priority: '0.8' } },
+  { path: '/strength-training-amsterdam/', prerender: true, sitemap: { lastmod: '2026-10-16', changefreq: 'monthly', priority: '0.8' } },
+  { path: '/strength-training-amsterdam/nl/', prerender: true, sitemap: { lastmod: '2026-10-16', changefreq: 'monthly', priority: '0.8' } },
+  { path: '/reformer-pilates-amsterdam/', prerender: true, sitemap: { lastmod: '2026-10-16', changefreq: 'monthly', priority: '0.9' } },
+  { path: '/reformer-pilates-amsterdam/nl/', prerender: true, sitemap: { lastmod: '2026-10-16', changefreq: 'monthly', priority: '0.9' } },
 
   { path: '/congrats/', prerender: true, sitemap: null },
 

@@ -3,7 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { trackBookNowClick, trackNavClick } from '../utils/gtmTracking';
 import { ensureHealcodeLoaded } from '../utils/healcode';
-import { homePath, isHomePath } from '../i18n/locale';
+import { homePath, isHomePath, localeHref } from '../i18n/locale';
 import { useLocale } from '../i18n/useLocale';
 import '../styles/Navbar.css';
 
@@ -113,7 +113,7 @@ export const Navbar= () => {
           <li><a href="#about" aria-label={t('nav.aboutAria')} onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>{t('nav.about')}</a></li>
           <li><a href="#reviews" aria-label={t('nav.reviewsAria')} onClick={(e) => { e.preventDefault(); scrollToSection('reviews'); }}>{t('nav.reviews')}</a></li>
           <li><Link to="/instructors/" aria-label={t('nav.instructorsAria')} onClick={closeMenu}>{t('nav.instructors')}</Link></li>
-          <li><Link to="/reformer-pilates-amsterdam/" aria-label={t('nav.classesAria')} onClick={closeMenu}>{t('nav.classes')}</Link></li>
+          <li><Link to={localeHref('/reformer-pilates-amsterdam/', locale)} aria-label={t('nav.classesAria')} onClick={closeMenu}>{t('nav.classes')}</Link></li>
           <li><Link to={pricingHref} aria-label={t('nav.pricesAria')} onClick={closeMenu}>{t('nav.prices')}</Link></li>
           <li><Link to={academyHref} aria-label={t('nav.academyAria')} onClick={closeMenu}>{t('nav.academy')}</Link></li>
           <li className="navbar-dropdown">

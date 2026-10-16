@@ -17,9 +17,8 @@ export const enHome = {
     cta: 'View Course →',
   },
   openingBanner: {
-    kicker: 'Studio update',
-    title: 'Move postponed',
-    lead: 'A fire at Olympisch Stadion postponed our move to Olympisch Stadion 15. Classes continue at Van Baerlestraat. A new date will follow.',
+    label: 'Studio update',
+    text: 'Our move to Olympisch Stadion is postponed; classes continue at Van Baerlestraat.',
     cta: 'Read the update',
   },
   hero: {

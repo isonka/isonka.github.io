@@ -21,6 +21,7 @@ import {
 import { formatOpeningClock, studioHoursFor, studioStreet } from '../data/business';
 import { useLocale } from '../i18n/useLocale';
 import '../styles/Pricing.css';
+import { localeHref } from '../i18n/locale';
 
 const PRICING_URL_EN = 'https://www.pt7.nl/pricing/';
 const PRICING_URL_NL = 'https://www.pt7.nl/pricing/nl/';
@@ -147,8 +148,8 @@ export const Pricing= () => {
               values={{ groupMax: GROUP_MAX }}
               components={{
                 schedule: <Link to={isNl ? '/schedule/nl/' : '/schedule/'} />,
-                reformer: <Link to="/reformer-pilates-amsterdam/" />,
-                trx: <Link to="/trx-training-amsterdam/" />,
+                reformer: <Link to={localeHref('/reformer-pilates-amsterdam/', locale)} />,
+                trx: <Link to={localeHref('/trx-training-amsterdam/', locale)} />,
               }}
             />
           </p>

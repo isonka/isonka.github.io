@@ -13,7 +13,17 @@ export function homePath(locale: Locale): string {
   return locale === 'nl' ? '/nl/' : '/';
 }
 
-const LOCALIZED_PATHS = ['/academy', '/intro', '/opening-offer', '/pricing', '/schedule'];
+const LOCALIZED_PATHS = [
+  '/academy',
+  '/intro',
+  '/opening-offer',
+  '/pricing',
+  '/schedule',
+  '/reformer-pilates-amsterdam',
+  '/private-pilates-amsterdam',
+  '/strength-training-amsterdam',
+  '/trx-training-amsterdam',
+];
 
 export function localizedPath(pathname: string, locale: Locale): string {
   const base = pathname.replace(/\/nl\/?$/, '').replace(/\/$/, '') || '/';
@@ -23,6 +33,16 @@ export function localizedPath(pathname: string, locale: Locale): string {
   }
 
   return locale === 'nl' ? `${base}/nl/` : `${base}/`;
+}
+
+/** Link target for `path` in `locale`: the `/nl/` mirror when one exists, else the path unchanged. */
+export function localeHref(path: string, locale: Locale): string {
+  const [pathname, hash] = path.split('#');
+  const base = pathname.replace(/\/$/, '') || '/';
+  let href = pathname;
+  if (base === '/') href = homePath(locale);
+  else if (locale === 'nl' && LOCALIZED_PATHS.includes(base)) href = `${base}/nl/`;
+  return hash ? `${href}#${hash}` : href;
 }
 
 export type DeepStringify<T> = {

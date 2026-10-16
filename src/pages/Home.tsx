@@ -18,6 +18,7 @@ import { homePath } from '../i18n/locale';
 import { useLocale } from '../i18n/useLocale';
 import { isPrerender } from '../utils/prerender';
 import '../styles/Home.css';
+import { localeHref } from '../i18n/locale';
 
 const HOME_HREFLANG = [
   { hreflang: 'en', href: 'https://www.pt7.nl/' },
@@ -131,6 +132,7 @@ export const Home= () => {
     if (!copyKey) return w;
     return {
       ...w,
+      to: localeHref(w.to, locale),
       title: t(`workouts.${copyKey}.title`),
       description: t(`workouts.${copyKey}.description`),
       alt: t(`workouts.${copyKey}.alt`),
@@ -225,7 +227,7 @@ export const Home= () => {
             <Link to={scheduleHref} className="home-btn home-btn-gold" onClick={() => trackFBBookingClick()}>
               {t('hero.bookClass')}
             </Link>
-            <Link to="/reformer-pilates-amsterdam/" className="home-btn home-btn-ghost">
+            <Link to={localeHref('/reformer-pilates-amsterdam/', locale)} className="home-btn home-btn-ghost">
               {t('hero.pilatesClasses')}
             </Link>
             <Link to={pricingHref} className="home-btn home-btn-ghost">
@@ -250,11 +252,11 @@ export const Home= () => {
                 ns="home"
                 i18nKey="about.links"
                 components={{
-                  reformer: <Link to="/reformer-pilates-amsterdam/" />,
-                  private: <Link to="/private-pilates-amsterdam/" />,
+                  reformer: <Link to={localeHref('/reformer-pilates-amsterdam/', locale)} />,
+                  private: <Link to={localeHref('/private-pilates-amsterdam/', locale)} />,
                   prenatal: <Link to="/prenatal-pilates-amsterdam/" />,
-                  trx: <Link to="/trx-training-amsterdam/" />,
-                  strength: <Link to="/strength-training-amsterdam/" />,
+                  trx: <Link to={localeHref('/trx-training-amsterdam/', locale)} />,
+                  strength: <Link to={localeHref('/strength-training-amsterdam/', locale)} />,
                 }}
               />
             </p>

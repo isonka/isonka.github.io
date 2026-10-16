@@ -1,118 +1,88 @@
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Trans, useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Reveal } from '../components/Reveal';
 import { ServiceTrustBand } from '../components/ServiceTrustBand';
+import { ContactMap } from '../components/ContactMap';
 import { trackPageView } from '../utils/gtmTracking';
+import { BASE_URL, formatOpeningClock, studioHoursFor } from '../data/business';
+import { MEMBERSHIP, formatEur } from '../data/pricing';
+import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import '../styles/ServicePage.css';
-import { studioStreet } from '../data/business';
 
-const faqs = [
-  {
-    question: 'What is Reformer Pilates?',
-    answer:
-      'Reformer Pilates uses a spring-loaded carriage, straps, and a footbar so you can strengthen, lengthen, and stabilize the whole body with controlled resistance. Compared with mat Pilates, the Reformer offers more support for beginners and more progressive challenge for advanced clients.',
-  },
-  {
-    question: 'Where can I take Reformer Pilates classes in Amsterdam Oud-Zuid / Museumplein?',
-    answer:
-      `PT 7 is at ${studioStreet}, across from the Stedelijk Museum at Museumplein. We specialize in small group Reformer classes (maximum 5 people) and private sessions.`,
-  },
-  {
-    question: 'How many people are in a Reformer class?',
-    answer:
-      'Our small group Reformer classes have a maximum of 5 participants. That keeps coaching personal while still offering group energy. Private and duo sessions are also available.',
-  },
-  {
-    question: 'What happens on my first visit?',
-    answer:
-      'Arrive a few minutes early. We show you the Reformer setup, springs, and straps, then coach you through a 45-minute session with modifications for your level. Small groups stay at max 5 so cues stay personal from day one.',
-  },
-  {
-    question: 'Is Reformer Pilates suitable for beginners?',
-    answer:
-      'Yes. Instructors give modifications and progressions so beginners learn safe form from day one. Many clients start with a private session, then join small groups.',
-  },
-  {
-    question: 'Can I combine Reformer Pilates with TRX or strength training?',
-    answer:
-      'Yes. Many clients combine Reformer with TRX or strength work at the same Museumplein studio. Instructors can help you build a balanced weekly plan.',
-  },
-  {
-    question: 'Do you offer Reformer instructor training in Amsterdam?',
-    answer:
-      'Yes. PT7 Academy runs a 300-hour Reformer Pilates Instructor Course at the studio (ITTAP approved by the Pilates Method Alliance). See the Academy page for the next term.',
-  },
-  {
-    question: 'Is there Reformer Pilates in Amsterdam Oud-Zuid?',
-    answer:
-      `Yes. Our studio sits in Oud-Zuid at Museumplein (${studioStreet}). We run small group and private Reformer sessions for clients in Amsterdam Zuid, the Museum District, and nearby neighborhoods.`,
-  },
-  {
-    question: 'How much does Reformer Pilates cost in Amsterdam?',
-    answer:
-      'New clients start with 3 group classes for €50. After that, group classes (maximum 5) are sold as packages. See pricing, then book from the schedule.',
-  },
-];
+const FAQ_KEYS = [
+  'what',
+  'where',
+  'groupSize',
+  'firstVisit',
+  'beginners',
+  'combine',
+  'training',
+  'neighbourhoods',
+  'price',
+] as const;
 
-export const ReformerPilatesAmsterdam= () => {
+export const ReformerPilatesAmsterdam = () => {
+  const { t } = useTranslation('reformer');
+  const page = useLocalizedPage('/reformer-pilates-amsterdam/');
+  const { href } = page;
+
   useEffect(() => {
-    trackPageView(
-      '/reformer-pilates-amsterdam/',
-      'Reformer Pilates Amsterdam Museumplein | PT 7 Pilates'
-    );
-  }, []);
+    trackPageView(page.path, t('seo.analyticsTitle'));
+  }, [page.path, t]);
+
+  const faqs = FAQ_KEYS.map((key) => ({
+    question: t(`faq.${key}.q`),
+    answer: t(`faq.${key}.a`),
+  }));
 
   return (
     <>
       <SEOHead
-        title="Reformer Pilates Amsterdam Museumplein | PT 7 Pilates"
-        description="Reformer Pilates at Museumplein, Amsterdam Zuid. Small groups (max 5), private sessions, full apparatus studio. First-visit coaching for beginners."
-        keywords="reformer pilates amsterdam, pilates museumplein, reformer pilates oud-zuid, small group pilates amsterdam, pilates classes amsterdam, reformer pilates lessen amsterdam, boutique pilates amsterdam"
-        canonical="https://www.pt7.nl/reformer-pilates-amsterdam/"
-        ogTitle="Reformer Pilates Amsterdam | PT 7 Pilates Museumplein"
-        ogDescription="Boutique Reformer Pilates at Museumplein. Small groups (max 5), private sessions, expert instructors in Amsterdam Oud-Zuid."
+        title={t('seo.title')}
+        description={t('seo.description')}
+        keywords={t('seo.keywords')}
+        canonical={page.canonical}
+        ogTitle={t('seo.ogTitle')}
+        ogDescription={t('seo.ogDescription')}
+        hreflangAlternates={page.hreflang}
+        {...page.seoLocale}
       />
-      <StructuredData type="FAQPage" data={{ faqs: faqs }} />
+      <StructuredData type="FAQPage" data={{ faqs }} />
       <StructuredData
         type="Service"
         data={{
           service: {
-            name: 'Reformer Pilates Amsterdam',
-            description:
-              'Boutique Reformer Pilates in Amsterdam Oud-Zuid / Museumplein. Small groups max 5 and private sessions on full apparatus, with first-visit coaching for beginners and expats.',
-            serviceUrl: 'https://www.pt7.nl/reformer-pilates-amsterdam/',
+            name: t('service.name'),
+            description: t('service.description'),
+            serviceUrl: page.canonical,
             areaServed: 'Amsterdam',
             offers: [
-              { name: 'Small group Reformer class', url: 'https://www.pt7.nl/schedule/' },
-              { name: 'Private Reformer session', url: 'https://www.pt7.nl/private-pilates-amsterdam/' },
+              { name: t('service.offerGroup'), url: `${BASE_URL}${href('/schedule/')}` },
+              { name: t('service.offerPrivate'), url: `${BASE_URL}${href('/private-pilates-amsterdam/')}` },
             ],
           },
         }}
       />
-      <Breadcrumbs
-        items={[{ name: 'Reformer Pilates Amsterdam', path: '/reformer-pilates-amsterdam/' }]}
-      />
+      <Breadcrumbs items={[{ name: t('breadcrumb'), path: page.path }]} />
 
       <div className="service-page">
         <Reveal className="service-hero">
           <div className="service-hero-content">
-            <p className="kicker">Reformer</p>
-            <h1>Reformer Pilates Amsterdam</h1>
-            <p>
-              Boutique Reformer Pilates at Museumplein: small groups of maximum 5, private
-              sessions, and expert coaching in Amsterdam Oud-Zuid.
-            </p>
+            <p className="kicker">{t('hero.kicker')}</p>
+            <h1>{t('hero.title')}</h1>
+            <p>{t('hero.lead')}</p>
             <div className="service-hero-badges">
-              <span className="service-badge">Max 5 per class</span>
-              <span className="service-badge">Private & group</span>
-              <span className="service-badge">All levels</span>
-              <span className="service-badge">Museumplein Amsterdam</span>
+              <span className="service-badge">{t('hero.badgeMax')}</span>
+              <span className="service-badge">{t('hero.badgeFormats')}</span>
+              <span className="service-badge">{t('hero.badgeLevels')}</span>
+              <span className="service-badge">{t('hero.badgeArea')}</span>
             </div>
-            <Link to="/schedule/" className="service-hero-btn">
-              Book a Reformer Class
+            <Link to={href('/schedule/')} className="service-hero-btn">
+              {t('hero.cta')}
             </Link>
           </div>
         </Reveal>
@@ -120,73 +90,119 @@ export const ReformerPilatesAmsterdam= () => {
         <ServiceTrustBand
           layout="proof"
           imageSrc="/assets/images/reformer-pilates-amsterdam.webp"
-          imageAlt="Instructor coaching a Reformer client at PT 7 Amsterdam"
+          imageAlt={t('trust.imageAlt')}
           imageWidth={1600}
           imageHeight={2400}
-          priceAnchor="Intro: €50 for 3 group classes · from €21.50 per class on membership"
+          priceAnchor={t('trust.priceAnchor', { memberPrice: formatEur(MEMBERSHIP.four.perClass) })}
           testimonial="“Professional, thoughtful, and exactly the Reformer studio I spent two years looking for.”"
-          testimonialAuthor="Flaminia · Google review"
+          testimonialAuthor={`Flaminia · ${t('trust.reviewSource')}`}
+          ctaTo={href('/pricing/')}
+          ctaLabel={t('trust.ctaLabel')}
         />
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>Reformer Pilates at Museumplein</h2>
+            <h2>{t('intro.title')}</h2>
+            <p>{t('intro.p1')}</p>
             <p>
-              Looking for Reformer Pilates in Amsterdam near Museumplein or Oud-Zuid? PT 7
-              is a boutique studio at {studioStreet}, across from the Stedelijk Museum. We
-              focus on equipment-based Reformer training, not crowded mat classes, with
-              instructors who coach form, breath, and progression in every session.
+              <Trans
+                ns="reformer"
+                i18nKey="intro.p2"
+                components={{
+                  private: <Link to={href('/private-pilates-amsterdam/')} />,
+                  prenatal: <Link to="/prenatal-pilates-amsterdam/" />,
+                }}
+              />
             </p>
             <p>
-              Small group classes are capped at five people so you still get personal attention.
-              Prefer one-on-one?{' '}
-              <Link to="/private-pilates-amsterdam/">Private and duo Reformer sessions</Link>{' '}
-              are available for beginners, athletes, and rehab-minded clients. Pregnancy training is
-              private only: see{' '}
-              <Link to="/prenatal-pilates-amsterdam/">prenatal Pilates Amsterdam</Link>.
-            </p>
-            <p>
-              Ready to compare options? See our{' '}
-              <Link to="/pricing/">pricing</Link> and{' '}
-              <Link to="/schedule/">live schedule</Link>.
+              <Trans
+                ns="reformer"
+                i18nKey="intro.p3"
+                components={{
+                  pricing: <Link to={href('/pricing/')} />,
+                  schedule: <Link to={href('/schedule/')} />,
+                }}
+              />
             </p>
           </div>
         </Reveal>
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>Your first Reformer visit</h2>
+            <h2>{t('where.title')}</h2>
+            <p>{t('where.p1')}</p>
+            <p>{t('where.p2')}</p>
+            <p>{t('where.transit')}</p>
             <p>
-              Sessions are 45 minutes. Whether you book a small group or a private, we coach the
-              machine and your movement, not a silent follow-along video.
+              {t('where.hours', {
+                weekdays: formatOpeningClock(studioHoursFor('Monday')),
+                weekends: formatOpeningClock(studioHoursFor('Saturday')),
+              })}
             </p>
+            <div className="service-map">
+              <ContactMap />
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal className="service-section">
+          <div className="service-container">
+            <h2>{t('firstVisit.title')}</h2>
+            <p>{t('firstVisit.lead')}</p>
             <div className="service-benefits-grid">
               <div className="service-benefit-card">
-                <h3>1. Arrive &amp; settle in</h3>
+                <h3>{t('firstVisit.arriveTitle')}</h3>
+                <p>{t('firstVisit.arriveText')}</p>
+              </div>
+              <div className="service-benefit-card">
+                <h3>{t('firstVisit.equipmentTitle')}</h3>
+                <p>{t('firstVisit.equipmentText')}</p>
+              </div>
+              <div className="service-benefit-card">
+                <h3>{t('firstVisit.coachTitle')}</h3>
+                <p>{t('firstVisit.coachText')}</p>
+              </div>
+              <div className="service-benefit-card">
+                <h3>{t('firstVisit.nextTitle')}</h3>
+                <p>{t('firstVisit.nextText')}</p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal className="service-section">
+          <div className="service-container">
+            <h2>{t('forWhom.title')}</h2>
+            <div className="service-benefits-grid">
+              <div className="service-benefit-card">
+                <h3>{t('forWhom.beginnersTitle')}</h3>
+                <p>{t('forWhom.beginnersText')}</p>
+              </div>
+              <div className="service-benefit-card">
+                <h3>{t('forWhom.localsTitle')}</h3>
+                <p>{t('forWhom.localsText')}</p>
+              </div>
+              <div className="service-benefit-card">
+                <h3>{t('forWhom.athletesTitle')}</h3>
                 <p>
-                  Come a few minutes early to {studioStreet} (across from Stedelijk Museum).
-                  We confirm your booking and get you ready for the Reformer.
+                  <Trans
+                    ns="reformer"
+                    i18nKey="forWhom.athletesText"
+                    components={{
+                      trx: <Link to={href('/trx-training-amsterdam/')} />,
+                      strength: <Link to={href('/strength-training-amsterdam/')} />,
+                    }}
+                  />
                 </p>
               </div>
               <div className="service-benefit-card">
-                <h3>2. Meet the equipment</h3>
+                <h3>{t('forWhom.instructorsTitle')}</h3>
                 <p>
-                  Springs, carriage, straps, and footbar are explained in plain language. Beginners
-                  get the setup they need before load increases.
-                </p>
-              </div>
-              <div className="service-benefit-card">
-                <h3>3. Coach in a max-5 room</h3>
-                <p>
-                  Small groups stay at five people so cues and corrections stay personal. Private
-                  sessions give you the instructor&apos;s full attention.
-                </p>
-              </div>
-              <div className="service-benefit-card">
-                <h3>4. Leave with a next step</h3>
-                <p>
-                  After class we can point you to the right mix of group Reformer, private work, or
-                  strength/TRX in the same studio.
+                  <Trans
+                    ns="reformer"
+                    i18nKey="forWhom.instructorsText"
+                    components={{ academy: <Link to={href('/academy/')} /> }}
+                  />
                 </p>
               </div>
             </div>
@@ -195,38 +211,23 @@ export const ReformerPilatesAmsterdam= () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>Who Reformer at PT 7 is for</h2>
+            <h2>{t('why.title')}</h2>
             <div className="service-benefits-grid">
               <div className="service-benefit-card">
-                <h3>Beginners</h3>
-                <p>
-                  New to Reformer or Pilates? Start in a max-5 group or book a private intro so you
-                  learn form before the room gets busy.
-                </p>
+                <h3>{t('why.groupsTitle')}</h3>
+                <p>{t('why.groupsText')}</p>
               </div>
               <div className="service-benefit-card">
-                <h3>Expats &amp; locals in Oud-Zuid</h3>
-                <p>
-                  English, Turkish, and Dutch coaching near Museumplein, Vondelpark, and Zuid. Easy
-                  for people who live or work in the area.
-                </p>
+                <h3>{t('why.locationTitle')}</h3>
+                <p>{t('why.locationText')}</p>
               </div>
               <div className="service-benefit-card">
-                <h3>Strength &amp; athletic clients</h3>
-                <p>
-                  Combine Reformer with{' '}
-                  <Link to="/trx-training-amsterdam/">TRX</Link> or{' '}
-                  <Link to="/strength-training-amsterdam/">strength training</Link> in the same
-                  studio for a balanced week.
-                </p>
+                <h3>{t('why.apparatusTitle')}</h3>
+                <p>{t('why.apparatusText')}</p>
               </div>
               <div className="service-benefit-card">
-                <h3>Future instructors</h3>
-                <p>
-                  Want to teach?{' '}
-                  <Link to="/academy/">Pilates teacher training at PT7 Academy</Link> offers a 300-hour Reformer instructor
-                  course (PMA ITTAP approved) on selected weekends at this same studio.
-                </p>
+                <h3>{t('why.languagesTitle')}</h3>
+                <p>{t('why.languagesText')}</p>
               </div>
             </div>
           </div>
@@ -234,45 +235,10 @@ export const ReformerPilatesAmsterdam= () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>Why train Reformer with us</h2>
-            <div className="service-benefits-grid">
-              <div className="service-benefit-card">
-                <h3>True micro-groups</h3>
-                <p>
-                  Maximum 5 participants, far smaller than typical Reformer rooms of 8–12, so
-                  cues and corrections stay personal.
-                </p>
-              </div>
-              <div className="service-benefit-card">
-                <h3>Museumplein location</h3>
-                <p>
-                  Central Amsterdam Oud-Zuid, easy for locals and expats near the museums, Vondelpark,
-                  and Zuid.
-                </p>
-              </div>
-              <div className="service-benefit-card">
-                <h3>Full apparatus studio</h3>
-                <p>
-                  Reformers plus Tower, Cadillac, Wunda Chair, and more. Not a
-                  Reformer-only box gym.
-                </p>
-              </div>
-              <div className="service-benefit-card">
-                <h3>English, Turkish & Dutch</h3>
-                <p>
-                  International-friendly coaching for Amsterdam’s expat and local community.
-                </p>
-              </div>
-            </div>
-          </div>
-        </Reveal>
-
-        <Reveal className="service-section">
-          <div className="service-container">
-            <h2>Frequently asked questions</h2>
+            <h2>{t('faqTitle')}</h2>
             <div className="service-faq-list">
-              {faqs.map((faq, i) => (
-                <div key={i} className="service-faq-item">
+              {faqs.map((faq) => (
+                <div key={faq.question} className="service-faq-item">
                   <h3>{faq.question}</h3>
                   <p>{faq.answer}</p>
                 </div>
@@ -282,17 +248,14 @@ export const ReformerPilatesAmsterdam= () => {
         </Reveal>
 
         <Reveal className="service-cta-section">
-          <h2>Book Reformer Pilates in Amsterdam</h2>
-          <p>
-            Reserve a small group or private Reformer session at Museumplein, or explore PT7
-            Academy if you want to teach.
-          </p>
+          <h2>{t('cta.title')}</h2>
+          <p>{t('cta.text')}</p>
           <div className="service-cta-buttons">
-            <Link to="/schedule/" className="service-cta-btn-primary">
-              Book a Session
+            <Link to={href('/schedule/')} className="service-cta-btn-primary">
+              {t('cta.book')}
             </Link>
-            <Link to="/academy/" className="service-cta-btn-secondary">
-              Pilates teacher training
+            <Link to={href('/academy/')} className="service-cta-btn-secondary">
+              {t('cta.academy')}
             </Link>
           </div>
         </Reveal>

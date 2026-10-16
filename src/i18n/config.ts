@@ -8,6 +8,10 @@ import { enHome } from './locales/en/home';
 import { enIntro } from './locales/en/intro';
 import { enOpeningOffer } from './locales/en/openingOffer';
 import { enPricing } from './locales/en/pricing';
+import { enPrivatePilates } from './locales/en/privatePilates';
+import { enReformer } from './locales/en/reformer';
+import { enStrength } from './locales/en/strength';
+import { enTrx } from './locales/en/trx';
 import { enSchedule } from './locales/en/schedule';
 import { nlAcademy } from './locales/nl/academy';
 import { nlCommon } from './locales/nl/common';
@@ -15,6 +19,10 @@ import { nlHome } from './locales/nl/home';
 import { nlIntro } from './locales/nl/intro';
 import { nlOpeningOffer } from './locales/nl/openingOffer';
 import { nlPricing } from './locales/nl/pricing';
+import { nlPrivatePilates } from './locales/nl/privatePilates';
+import { nlReformer } from './locales/nl/reformer';
+import { nlStrength } from './locales/nl/strength';
+import { nlTrx } from './locales/nl/trx';
 import { nlSchedule } from './locales/nl/schedule';
 
 function detectLng(): 'en' | 'nl' {
@@ -38,6 +46,10 @@ export function initI18n() {
         schedule: enSchedule,
         intro: enIntro,
         openingOffer: enOpeningOffer,
+        reformer: enReformer,
+        privatePilates: enPrivatePilates,
+        strength: enStrength,
+        trx: enTrx,
       },
       nl: {
         common: nlCommon,
@@ -47,12 +59,16 @@ export function initI18n() {
         schedule: nlSchedule,
         intro: nlIntro,
         openingOffer: nlOpeningOffer,
+        reformer: nlReformer,
+        privatePilates: nlPrivatePilates,
+        strength: nlStrength,
+        trx: nlTrx,
       },
     },
     lng: detectLng(),
     fallbackLng: 'en',
     supportedLngs: ['en', 'nl'],
-    ns: ['common', 'home', 'pricing', 'academy', 'schedule', 'intro', 'openingOffer'],
+    ns: ['common', 'home', 'pricing', 'academy', 'schedule', 'intro', 'openingOffer', 'reformer', 'privatePilates', 'strength', 'trx'],
     defaultNS: 'common',
     interpolation: {
       escapeValue: false,

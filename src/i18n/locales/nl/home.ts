@@ -20,9 +20,8 @@ export const nlHome: DeepStringify<EnHome> = {
     cta: 'Bekijk de opleiding →',
   },
   openingBanner: {
-    kicker: 'Studioupdate',
-    title: 'Verhuizing uitgesteld',
-    lead: 'Een brand in het Olympisch Stadion stelt onze verhuizing naar Olympisch Stadion 15 uit. Lessen gaan door op de Van Baerlestraat. Een nieuwe datum volgt.',
+    label: 'Studioupdate',
+    text: 'Onze verhuizing naar het Olympisch Stadion is uitgesteld; de lessen gaan door aan de Van Baerlestraat.',
     cta: 'Lees de update',
   },
   hero: {
