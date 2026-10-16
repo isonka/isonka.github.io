@@ -1,11 +1,11 @@
 export const enSchedule = {
   seo: {
-    title: 'Pilates Classes Near Me Amsterdam | Book Today | PT 7 Pilates',
+    title: 'Pilates Classes Amsterdam Zuid | Book Online | PT 7',
     description:
-      'Book Pilates classes near you at Museumplein (Amsterdam Zuid). Live schedule for Reformer, TRX & strength — small groups (max 5) and privates at Van Baerlestraat 76C. Reserve online today.',
+      'Live class schedule at Museumplein, Amsterdam Zuid: Reformer Pilates, TRX and strength in small groups (max 5) or privates at {{studioStreet}}. Book online.',
     keywords:
       'pilates classes amsterdam, pilates classes near me, Pilates boeken Amsterdam, Pilates rooster Amsterdam, Pilates reserveren, TRX boeken Amsterdam, les boeken Museumplein, Pilates schedule Amsterdam, groepsles boeken, reformer pilates book amsterdam',
-    ogTitle: 'Pilates Classes Near Me Amsterdam | Book Today | PT 7 Pilates',
+    ogTitle: 'Pilates Classes Amsterdam Zuid | Book Online | PT 7',
     ogDescription:
       'Live schedule near Museumplein: Reformer, TRX & strength. Small groups (max 5) and private sessions. Book your spot online today.',
     analyticsTitle: 'Pilates Classes Amsterdam | Book Online | PT 7 Pilates',
@@ -16,12 +16,13 @@ export const enSchedule = {
     title: 'Pilates classes in Amsterdam: book online',
     lead:
       'Reformer Pilates, TRX, strength, and cardio: small groups (max 5) or private sessions with expert trainers. Looking for Pilates classes near Museumplein or Oud-Zuid? Reserve your spot below.',
-    location: 'Van Baerlestraat 76C, Museumplein, across from Stedelijk Museum',
+    location: '{{studioStreet}}, Museumplein, across from Stedelijk Museum',
     accountNote:
       'Booking uses your MindBody account (same as the "MindBody Login" link in the menu). Studio contact is separate via phone, WhatsApp, or email.',
     linkReformer: 'Reformer Pilates Amsterdam',
     linkPricing: 'Class prices & packages',
     linkPrivate: 'Private sessions',
+    linkTrx: 'TRX Amsterdam',
   },
   hours: {
     title: 'Studio hours',

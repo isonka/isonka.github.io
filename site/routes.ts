@@ -1,4 +1,4 @@
-import { blogPosts } from '../src/data/blog/index.ts';
+import { blogPosts, blogSeoTitle } from '../src/data/blog/index.ts';
 import { trainerProfiles } from '../src/data/trainers.ts';
 import { equipmentProducts } from '../src/data/equipment.ts';
 import { workoutDetails } from '../src/data/workoutDetails.ts';
@@ -62,7 +62,7 @@ const FIXED_PAGES: Route[] = [
     prerender: true,
     sitemap: { lastmod: '2026-09-25', changefreq: 'monthly', priority: '0.8' },
     meta: {
-      title: 'Introductiepakket: 3 groepslessen voor €50 | PT 7 Pilates Amsterdam',
+      title: 'Introductiepakket: 3 groepslessen voor €50 | PT 7 Pilates',
       description:
         'Nieuwe klanten bij PT 7 Museumplein: 3 groepslessen voor €50. Maximaal 5 personen, 45 minuten. Geldig 3 weken. Online kopen.',
     },
@@ -121,13 +121,7 @@ const FIXED_PAGES: Route[] = [
 ];
 
 const WORKOUT_SITEMAP: SitemapEntry = { lastmod: '2026-03-10', changefreq: 'monthly', priority: '0.7' };
-const WORKOUT_OVERRIDES: Record<string, Partial<SitemapEntry>> = {
-  'reformer-pilates': {
-    lastmod: '2026-09-14',
-    priority: '0.8',
-    image: image('reformer_1.webp', 'Reformer Pilates Amsterdam - PT 7 Pilates'),
-  },
-};
+const WORKOUT_OVERRIDES: Record<string, Partial<SitemapEntry>> = {};
 
 const EQUIPMENT_SITEMAP: SitemapEntry = { lastmod: '2026-03-10', changefreq: 'monthly', priority: '0.6' };
 const EQUIPMENT_OVERRIDES: Record<string, Partial<SitemapEntry>> = {
@@ -154,11 +148,16 @@ const BLOG_PRIORITY_OVERRIDES: Record<string, string> = {
 };
 
 const derived: Route[] = [
-  ...workoutDetails.map((workout) => ({
-    path: `/workouts/${workout.slug}/`,
-    prerender: true,
-    sitemap: { ...WORKOUT_SITEMAP, ...WORKOUT_OVERRIDES[workout.slug] },
-  })),
+  ...workoutDetails.map((workout) => {
+    const path = `/workouts/${workout.slug}/`;
+    // Guides that canonicalise to a service lander stay out of the sitemap.
+    const selfCanonical = workout.seo.canonical === `${BASE_URL}${path}`;
+    return {
+      path,
+      prerender: true,
+      sitemap: selfCanonical ? { ...WORKOUT_SITEMAP, ...WORKOUT_OVERRIDES[workout.slug] } : null,
+    };
+  }),
   ...equipmentProducts.map((product) => ({
     path: `/equipment/${product.slug}/`,
     prerender: true,
@@ -177,7 +176,7 @@ const derived: Route[] = [
       lastmod: post.dateModified ?? post.date,
       priority: BLOG_PRIORITY_OVERRIDES[post.slug] ?? BLOG_SITEMAP.priority,
     },
-    meta: { title: `${post.title} | PT 7 Pilates`, description: post.metaDescription },
+    meta: { title: blogSeoTitle(post), description: post.metaDescription },
   })),
 ];
 

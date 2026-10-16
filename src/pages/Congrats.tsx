@@ -5,6 +5,7 @@ import { trackBookingConfirmation, trackPageView } from '../utils/gtmTracking';
 import { trackAdsConversion } from '../utils/consentTracking';
 import { isPrerender } from '../utils/prerender';
 import '../styles/Congrats.css';
+import { business } from '../data/business';
 
 const BOOKING_CONVERSION = {
   key: 'booking',
@@ -31,6 +32,7 @@ export const Congrats= () => {
         description="Your class is booked! See you at PT 7 Amsterdam."
         keywords="PT 7, booking confirmed"
         canonical="https://www.pt7.nl/congrats/"
+        robots="noindex, follow"
       />
 
       <div className="congrats-page">
@@ -54,8 +56,8 @@ export const Congrats= () => {
           <div className="studio-info">
             <h3>📍 Studio Location</h3>
             <p>
-              <strong>Van Baerlestraat 76C</strong><br />
-              1071BB Amsterdam<br />
+              <strong>{business.address.streetAddress}</strong><br />
+              {business.address.postalCode} {business.address.addressLocality}<br />
               (Museumplein, across from Stedelijk Museum)
             </p>
           </div>
@@ -69,7 +71,7 @@ export const Congrats= () => {
           <div className="review-request">
             <p>Enjoyed your experience at PT 7?</p>
             <a
-              href="https://g.page/r/ptstudio7amsterdam/review"
+              href="https://g.page/r/CRkdrh58XUzkEBM/review"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-review"

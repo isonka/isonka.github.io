@@ -7,6 +7,7 @@ import { getBlogPostBySlug, getRecentPosts } from '../data/blog';
 import { trackBlogPostView, trackBlogPostRead, trackPageView } from '../utils/gtmTracking';
 import { NotFound } from './NotFound';
 import '../styles/BlogPost.css';
+import { blogSeoTitle } from '../data/blog';
 
 export const BlogPost= () => {
   const { slug } = useParams<{ slug: string }>();
@@ -47,7 +48,7 @@ export const BlogPost= () => {
   return (
     <>
       <SEOHead
-        title={`${post.title} | PT 7 Pilates Amsterdam Blog`}
+        title={blogSeoTitle(post)}
         description={post.metaDescription}
         keywords={post.keywords.join(', ')}
         canonical={`https://www.pt7.nl/blog/${post.slug}/`}

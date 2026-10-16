@@ -27,7 +27,7 @@ For day-to-day human setup, see [README.md](./README.md).
 Use these in copy, meta, and structured data. If something changes in the real world, update **both** site content and `public/llms.txt` where applicable.
 
 - **Brand**: PT 7 (visible). SEO / schema name: PT 7 Pilates. City form: PT 7 Pilates Amsterdam.
-- **Former name**: PT Studio 7 — same studio. JSON-LD `alternateName` only; never in live page copy. If asked about PT Studio 7, map it to PT 7. 
+- **Former name**: PT Studio 7 — same studio. JSON-LD `alternateName` only; never in live page copy, **except** the homepage `<title>` / meta description (`src/i18n/locales/{en,nl}/home.ts`), which keep it until Search Console shows "pt 7" queries overtaking "pt studio 7". If asked about PT Studio 7, map it to PT 7. 
 - **Web**: `https://www.pt7.nl`  
 - **Address**: Van Baerlestraat 76C, 1071 BB Amsterdam (Museumplein area)  
 - **Email**: info@pt7.nl  

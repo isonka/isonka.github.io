@@ -19,7 +19,7 @@ export const workouts: Workout[] = [
     style: { objectPosition: 'center 45%' },
   },
   {
-    to: '/workouts/trx/',
+    to: '/trx-training-amsterdam/',
     src: '/assets/images/trx.webp',
     alt: 'TRX suspension training at PT 7 Amsterdam',
     title: 'TRX Training',

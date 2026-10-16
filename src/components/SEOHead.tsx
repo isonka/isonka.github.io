@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { business } from '../data/business';
 import { withTrailingSlash } from '../utils/urls';
 
 export type HreflangAlternate = {
@@ -63,8 +64,8 @@ export const SEOHead = ({
 
     updateMetaTag('geo.region', 'NL-NH');
     updateMetaTag('geo.placename', 'Amsterdam');
-    updateMetaTag('geo.position', '52.3572909;4.8762577');
-    updateMetaTag('ICBM', '52.3572909, 4.8762577');
+    updateMetaTag('geo.position', `${business.geo.latitude};${business.geo.longitude}`);
+    updateMetaTag('ICBM', `${business.geo.latitude}, ${business.geo.longitude}`);
 
     updateMetaTag('og:locale', ogLocale, true);
     document.querySelectorAll('meta[property="og:locale:alternate"]').forEach((el) => el.remove());

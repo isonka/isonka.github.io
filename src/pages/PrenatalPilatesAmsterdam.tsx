@@ -7,6 +7,7 @@ import { Reveal } from '../components/Reveal';
 import { ServiceTrustBand } from '../components/ServiceTrustBand';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/ServicePage.css';
+import { studioAddressLine } from '../data/business';
 
 const faqs = [
   {
@@ -47,7 +48,7 @@ const faqs = [
   {
     question: 'Where is the studio and how do I get there?',
     answer:
-      'PT 7 is at Van Baerlestraat 76C, 1071 BB Amsterdam, across from the Stedelijk Museum at Museumplein in Oud-Zuid. The location is easy to reach by tram or metro to the Museumplein area. Arrive a few minutes early for your first private intake so we can settle in without rushing.',
+      `PT 7 is at ${studioAddressLine}, across from the Stedelijk Museum at Museumplein in Oud-Zuid. The location is easy to reach by tram or metro to the Museumplein area. Arrive a few minutes early for your first private intake so we can settle in without rushing.`,
   },
   {
     question: 'Is this the same as “pregnancy Pilates Amsterdam”?',
@@ -72,8 +73,8 @@ export const PrenatalPilatesAmsterdam= () => {
   return (
     <>
       <SEOHead
-        title="Prenatal & Pregnancy Pilates Amsterdam | Private Reformer | PT 7 Pilates"
-        description="Private prenatal Reformer Pilates at Museumplein (Oud-Zuid). 45-minute 1:1 sessions, trimester adaptations, pelvic floor focus. Train with Elif or Göknur through pregnancy."
+        title="Prenatal & Pregnancy Pilates Amsterdam | PT 7"
+        description="Private prenatal Reformer Pilates at Museumplein: 45-minute 1:1 sessions with trimester adaptations and pelvic floor focus. With Elif or Göknur."
         keywords="prenatal pilates amsterdam, pregnancy pilates amsterdam, private prenatal pilates, reformer pilates pregnancy, pelvic floor pilates amsterdam, postnatal pilates amsterdam, pregnancy pilates museumplein"
         canonical={`${baseUrl}/prenatal-pilates-amsterdam/`}
         ogTitle="Prenatal & Pregnancy Pilates Amsterdam | PT 7 Pilates"

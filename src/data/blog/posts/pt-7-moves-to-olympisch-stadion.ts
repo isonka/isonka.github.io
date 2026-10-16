@@ -46,7 +46,7 @@ export const post: BlogPost = {
   image: '/assets/images/olympisch-stadion.webp',
   tags: ['Studio News', 'Olympisch Stadion', 'Amsterdam Zuid'],
   metaDescription:
-    'A fire at Olympisch Stadion postponed PT 7’s move. Classes continue at Van Baerlestraat 76C. Olympisch Stadion 15 remains the planned studio. New date to follow.',
+    'A fire at Olympisch Stadion postponed PT 7’s move. Classes continue at Van Baerlestraat 76C; Olympisch Stadion 15 is still the plan. New date to follow.',
   keywords: [
     'PT 7 Olympisch Stadion',
     'Pilates Olympisch Stadion',

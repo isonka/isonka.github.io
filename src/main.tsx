@@ -3,6 +3,7 @@ import { createRoot, hydrateRoot } from 'react-dom/client'
 import { initI18n } from './i18n/config'
 import './index.css'
 import App from './App.tsx'
+import { studioAddressLine } from './data/business';
 
 initI18n()
 
@@ -60,7 +61,7 @@ if (maybeModelContext?.provideContext) {
           phone: '+31 685 162693',
           email: 'info@pt7.nl',
           whatsapp: 'https://wa.me/31685162693',
-          address: 'Van Baerlestraat 76C, 1071BB Amsterdam'
+          address: studioAddressLine
         })
       }
     ]

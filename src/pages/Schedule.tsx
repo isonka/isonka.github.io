@@ -267,6 +267,8 @@ export const Schedule= () => {
             <Link to={pricingHref}>{t('hero.linkPricing')}</Link>
             {' · '}
             <Link to="/private-pilates-amsterdam/">{t('hero.linkPrivate')}</Link>
+            {' · '}
+            <Link to="/trx-training-amsterdam/">{t('hero.linkTrx')}</Link>
           </p>
         </section>
 

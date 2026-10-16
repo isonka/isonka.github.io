@@ -4,7 +4,7 @@ Boutique Pilates and one-on-one training studio in Museumplein, Amsterdam.
 
 ## Overview
 
-- Location: Van Baerlestraat 76C, 1071BB Amsterdam, Netherlands
+- Location: Van Baerlestraat 76C, 1071 BB Amsterdam, Netherlands
 - Move to Olympisch Stadion 15, 1076 DE Amsterdam is postponed after a fire at the stadium. Classes continue at Van Baerlestraat. New date to follow.
 - Announcement: <https://www.pt7.nl/blog/pt-7-moves-to-olympisch-stadion/>
 - Services: Reformer Pilates, TRX, Strength Training, Cardio

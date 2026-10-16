@@ -1,9 +1,11 @@
 import type { BlogPost } from '../types.ts';
+import { studioStreet } from '../../business.ts';
 
 export const post: BlogPost = {
   id: '15',
   slug: 'group-pilates-class-size-attention-amsterdam',
   title: 'Why a 20-Person Pilates Class Cannot Give You the Attention You Need',
+  seoTitle: 'Why 20-Person Pilates Classes Fall Short | PT 7',
   excerpt:
     'Class size is a learning constraint, not a vibe. Motor-learning research explains why a ~20-person group rarely supplies the individual feedback Pilates requires, and why small-scale sessions (max 5) change the outcome.',
   content: `
@@ -37,7 +39,7 @@ export const post: BlogPost = {
 
       <h2>Small-scale practice at PT 7</h2>
 
-      <p>At PT 7 Amsterdam (Van Baerlestraat 76C, Museumplein), group sessions are capped at a maximum of five participants. That limit is intentional: it preserves enough observation time for individual correction, spring selection, and progression that matches each body. Private sessions remain available when even closer coaching is required.</p>
+      <p>At PT 7 Amsterdam (${studioStreet}, Museumplein), group sessions are capped at a maximum of five participants. That limit is intentional: it preserves enough observation time for individual correction, spring selection, and progression that matches each body. Private sessions remain available when even closer coaching is required.</p>
 
       <p>Teams of roughly twenty people are not asked to train as one mega class. Corporate and group bookings are organised as waves of small groups in the studio, or as on-site mat sessions at the workplace. See our <a href="/corporate/">For Business</a> page.</p>
 
@@ -57,7 +59,7 @@ export const post: BlogPost = {
   image: '/assets/images/studio.webp',
   tags: ['Class Size', 'Motor Learning', 'Small Group Pilates', 'Reformer Pilates'],
   metaDescription:
-    'Why a ~20-person Pilates class rarely supplies the individual feedback motor learning requires. Evidence-informed case for small-scale classes (max 5) at PT 7 Museumplein Amsterdam.',
+    'Why a 20-person Pilates class rarely gives the feedback motor learning needs, and the case for small classes (max 5) at PT 7 Museumplein.',
   keywords: [
     'small group pilates amsterdam',
     'pilates class size',

@@ -36,6 +36,8 @@ export interface FaqItem {
 
 export interface EquipmentGalleryItem {
   image: string;
+  width: number;
+  height: number;
   imageAlt: string;
   title: string;
   description: string;
@@ -137,7 +139,7 @@ export const workoutDetails: WorkoutDetailData[] = [
     seo: {
       title: 'What Is Reformer Pilates? Benefits Guide | PT 7',
       description:
-        'Guide to Reformer Pilates: how the carriage works, benefits, and who it suits. To book classes in Amsterdam, use the Reformer Pilates Amsterdam page at PT 7 Museumplein.',
+        'Guide to Reformer Pilates: how the carriage works, the benefits, and who it suits. Book classes on the Reformer Pilates Amsterdam page at PT 7.',
       keywords:
         'what is reformer pilates, reformer pilates benefits, reformer vs mat pilates, pilates reformer workout, core strength pilates, flexibility training, posture correction pilates',
       canonical: 'https://www.pt7.nl/reformer-pilates-amsterdam/',
@@ -262,12 +264,12 @@ export const workoutDetails: WorkoutDetailData[] = [
   {
     slug: 'trx',
     seo: {
-      title: 'TRX Suspension Training Amsterdam | PT 7 Pilates Museumplein',
-      description: 'Professional TRX suspension training in Amsterdam at Museumplein. Build strength, balance & functional fitness. Small group classes & private sessions. Expert trainers!',
+      title: 'What Is TRX Suspension Training? Guide | PT 7',
+      description: 'Guide to TRX suspension training: how it works, benefits, and who it suits. To book classes in Amsterdam, use the TRX Training Amsterdam page at PT 7.',
       keywords: 'TRX training Amsterdam, suspension training Amsterdam, TRX Museumplein, functional fitness Amsterdam, strength training, balance training, TRX classes',
-      canonical: 'https://www.pt7.nl/workouts/trx/',
-      ogTitle: 'TRX Suspension Training Amsterdam | PT 7 Pilates',
-      ogDescription: 'Expert TRX suspension training at Museumplein. Build total body strength, balance & functional fitness in small groups (max 5).',
+      canonical: 'https://www.pt7.nl/trx-training-amsterdam/',
+      ogTitle: 'What Is TRX Suspension Training? | PT 7 Guide',
+      ogDescription: 'How TRX suspension training works and who it suits. Book classes on the TRX Training Amsterdam page.',
       ogImage: '/assets/images/trx.webp',
     },
     breadcrumbName: 'TRX Training',
@@ -355,7 +357,7 @@ export const workoutDetails: WorkoutDetailData[] = [
     slug: 'functional-training',
     seo: {
       title: 'Nike Strength Training Amsterdam | PT 7 Pilates Museumplein',
-      description: 'Premium Nike Strength Training in Amsterdam at Museumplein. Olympic barbell, half rack, Nike dumbbells. Build real-world strength with expert one-on-one training!',
+      description: 'Nike strength training at Museumplein, Amsterdam: Olympic barbell, half rack and dumbbells. Coached one-on-one or in small groups (max 5).',
       keywords: 'Nike strength training Amsterdam, olympic lifting Amsterdam, one-on-one training Museumplein, barbell training Amsterdam, functional fitness Amsterdam, Nike gym equipment',
       canonical: 'https://www.pt7.nl/workouts/functional-training/',
       ogTitle: 'Nike Strength Training Amsterdam | PT 7 Pilates',
@@ -377,9 +379,9 @@ export const workoutDetails: WorkoutDetailData[] = [
     equipmentGallery: {
       title: 'Our Nike Strength Equipment',
       items: [
-        { image: '/assets/images/nike_strength_studio.webp', imageAlt: 'Nike Strength Half Rack with Olympic barbell', title: 'Nike Strength Half Rack', description: 'Professional half rack for squats, bench press, and Olympic lifting' },
-        { image: '/assets/images/nike_grind_plates.webp', imageAlt: 'Nike Grind recycled weight plates', title: 'Nike Grind Weight Plates', description: 'Sustainable plates made from recycled Nike materials' },
-        { image: '/assets/images/nike_dumbbell.webp', imageAlt: 'Nike hex dumbbells', title: 'Nike Hex Dumbbells', description: 'Full range of premium dumbbells for all strength levels' },
+        { image: '/assets/images/nike_strength_studio.webp', width: 1200, height: 800, imageAlt: 'Nike Strength Half Rack with Olympic barbell', title: 'Nike Strength Half Rack', description: 'Professional half rack for squats, bench press, and Olympic lifting' },
+        { image: '/assets/images/nike_grind_plates.webp', width: 800, height: 1200, imageAlt: 'Nike Grind recycled weight plates', title: 'Nike Grind Weight Plates', description: 'Sustainable plates made from recycled Nike materials' },
+        { image: '/assets/images/nike_dumbbell.webp', width: 800, height: 1200, imageAlt: 'Nike hex dumbbells', title: 'Nike Hex Dumbbells', description: 'Full range of premium dumbbells for all strength levels' },
       ],
     },
     benefits: {

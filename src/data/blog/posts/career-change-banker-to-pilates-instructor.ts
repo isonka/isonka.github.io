@@ -4,6 +4,7 @@ export const post: BlogPost = {
   id: '5',
   slug: 'career-change-banker-to-pilates-instructor',
   title: 'From Banker to Pilates Instructor: How to Make the Career Switch',
+  seoTitle: 'Banker to Pilates Instructor: Career Switch | PT 7',
   excerpt: 'Tired of spreadsheets and stress? Discover how professionals from banking, tech, and corporate careers are becoming certified Pilates instructors, without quitting their day job first.',
   content: `
       <p>Five years ago, I was sitting in a corner office at a major bank in Amsterdam. Twelve-hour days, endless meetings, and a growing sense that something was missing. Sound familiar?</p>
@@ -114,7 +115,7 @@ export const post: BlogPost = {
   date: '2026-01-23',
   image: '/assets/images/pilates.webp',
   tags: ['Career Change', 'Pilates Certification', 'PT 7 Academy', 'Lifestyle', 'Work-Life Balance'],
-  metaDescription: 'How to switch careers from banking, tech, or corporate jobs to becoming a Reformer Pilates instructor. 300-hour weekend training in Amsterdam (next term Nov 2026–Jan 2027), PMA ITTAP-approved program. PT 7 Academy.',
+  metaDescription: 'How to move from banking, tech or corporate work into teaching Reformer Pilates: a 300-hour, PMA ITTAP-approved weekend course in Amsterdam.',
   keywords: [
     'career change pilates instructor',
     'banker to pilates instructor',

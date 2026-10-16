@@ -3,12 +3,12 @@ import type { EnSchedule } from '../en/schedule';
 
 export const nlSchedule: DeepStringify<EnSchedule> = {
   seo: {
-    title: 'Pilateslessen bij jou in de buurt Amsterdam | Boek vandaag | PT 7 Pilates',
+    title: 'Pilateslessen Amsterdam Zuid | Online boeken | PT 7',
     description:
-      'Boek pilateslessen bij jou in de buurt aan het Museumplein (Amsterdam Zuid). Live rooster voor Reformer, TRX & kracht — kleine groepen (max. 5) en privé aan de Van Baerlestraat 76C. Reserveer vandaag online.',
+      'Live lesrooster aan het Museumplein, Amsterdam Zuid: Reformer pilates, TRX en kracht in kleine groepen (max. 5) of privé, {{studioStreet}}. Online boeken.',
     keywords:
       'pilateslessen amsterdam, pilates bij mij in de buurt, Pilates boeken Amsterdam, Pilates rooster Amsterdam, Pilates reserveren, TRX boeken Amsterdam, les boeken Museumplein, Pilates schedule Amsterdam, groepsles boeken, reformer pilates amsterdam',
-    ogTitle: 'Pilateslessen bij jou in de buurt Amsterdam | Boek vandaag | PT 7 Pilates',
+    ogTitle: 'Pilateslessen Amsterdam Zuid | Online boeken | PT 7',
     ogDescription:
       'Live rooster bij het Museumplein: Reformer, TRX & kracht. Kleine groepen (max. 5) en privésessies. Boek je plek vandaag online.',
     analyticsTitle: 'Pilateslessen Amsterdam | Online boeken | PT 7 Pilates',
@@ -19,12 +19,13 @@ export const nlSchedule: DeepStringify<EnSchedule> = {
     title: 'Pilateslessen in Amsterdam: online boeken',
     lead:
       'Reformer pilates, TRX, krachttraining en cardio: kleine groepen (max. 5) of private sessies met deskundige trainers. Op zoek naar pilateslessen bij het Museumplein of in Oud-Zuid? Reserveer je plek hieronder.',
-    location: 'Van Baerlestraat 76C, Museumplein, tegenover het Stedelijk Museum',
+    location: '{{studioStreet}}, Museumplein, tegenover het Stedelijk Museum',
     accountNote:
       'Boeken gaat via je MindBody-account (hetzelfde als de link „MindBody Login” in het menu). Studio-contact loopt apart via telefoon, WhatsApp of e-mail.',
     linkReformer: 'Reformer pilates Amsterdam',
     linkPricing: 'Lesprijzen & pakketten',
     linkPrivate: 'Private sessies',
+    linkTrx: 'TRX Amsterdam',
   },
   hours: {
     title: 'Openingstijden',

@@ -1,6 +1,10 @@
+import { studioStreet } from './business.ts';
+
 export interface EquipmentImage {
   src: string;
   alt: string;
+  width: number;
+  height: number;
 }
 
 export interface FAQItem {
@@ -54,16 +58,16 @@ export const equipmentProducts: EquipmentProduct[] = [
     name: 'Pilates Reformer',
     seo: {
       title: 'Reformer Pilates Equipment at PT 7 Amsterdam | In-Studio',
-      description: 'The Reformer used in classes at PT 7, Van Baerlestraat 76C, Museumplein. Book a class at https://www.pt7.nl/schedule/. Specs below describe the in-studio apparatus.',
+      description: `The Reformer used in small-group and private classes at PT 7, ${studioStreet}, Museumplein. Specs of the in-studio apparatus and how to book a class.`,
       keywords: 'pilates reformer equipment, reformer pilates amsterdam, pilates apparatus museumplein, tower reformer studio',
     },
     images: [
-      { src: '/assets/images/reformer_1.webp', alt: 'Pilates Reformer - Full side view' },
-      { src: '/assets/images/reformer_2.webp', alt: 'Pilates Reformer - Reverse angle' },
-      { src: '/assets/images/reformer_3.webp', alt: 'Pilates Reformer - Leg springs exercise' },
-      { src: '/assets/images/reformer_4.webp', alt: 'Pilates Reformer - Side plank exercise' },
-      { src: '/assets/images/reformer_5.webp', alt: 'Pilates Reformer - Strap detail' },
-      { src: '/assets/images/reformer_6.webp', alt: 'Pilates Reformer - Shoulder blocks detail' },
+      { src: '/assets/images/reformer_1.webp', alt: 'Pilates Reformer - Full side view', width: 1024, height: 682 },
+      { src: '/assets/images/reformer_2.webp', alt: 'Pilates Reformer - Reverse angle', width: 1024, height: 682 },
+      { src: '/assets/images/reformer_3.webp', alt: 'Pilates Reformer - Leg springs exercise', width: 1024, height: 682 },
+      { src: '/assets/images/reformer_4.webp', alt: 'Pilates Reformer - Side plank exercise', width: 1024, height: 682 },
+      { src: '/assets/images/reformer_5.webp', alt: 'Pilates Reformer - Strap detail', width: 1024, height: 682 },
+      { src: '/assets/images/reformer_6.webp', alt: 'Pilates Reformer - Shoulder blocks detail', width: 682, height: 1024 },
     ],
     shortDesc: 'The classic Pilates Reformer for all levels. Smooth, silent, and built for a lifetime of movement.',
     features: [
@@ -108,16 +112,16 @@ export const equipmentProducts: EquipmentProduct[] = [
     name: 'Tower Reformer',
     seo: {
       title: 'Tower Reformer at PT 7 Amsterdam | In-Studio Apparatus',
-      description: 'Tower Reformer used in classes at PT 7, Van Baerlestraat 76C, Museumplein, Amsterdam Oud-Zuid. Book at https://www.pt7.nl/schedule/.',
+      description: `Tower Reformer used in classes at PT 7, ${studioStreet}, Museumplein, Amsterdam Oud-Zuid. Specs of the in-studio apparatus and how to book a class.`,
       keywords: 'tower reformer, tower reformer pilates, reformer with tower amsterdam, pilates equipment museumplein',
     },
     images: [
-      { src: '/assets/images/tower_reformer_1.webp', alt: 'Tower Reformer - Full side view' },
-      { src: '/assets/images/tower_reformer_2.webp', alt: 'Tower Reformer - Back extension exercise' },
-      { src: '/assets/images/tower_reformer_3.webp', alt: 'Tower Reformer - Side stretch exercise' },
-      { src: '/assets/images/tower_reformer_4.webp', alt: 'Tower Reformer - Tower folded position' },
-      { src: '/assets/images/tower_reformer_5.webp', alt: 'Tower Reformer - Tower and spring detail' },
-      { src: '/assets/images/tower_reformer_6.webp', alt: 'Tower Reformer - Carriage detail' },
+      { src: '/assets/images/tower_reformer_1.webp', alt: 'Tower Reformer - Full side view', width: 1024, height: 682 },
+      { src: '/assets/images/tower_reformer_2.webp', alt: 'Tower Reformer - Back extension exercise', width: 1024, height: 682 },
+      { src: '/assets/images/tower_reformer_3.webp', alt: 'Tower Reformer - Side stretch exercise', width: 1024, height: 682 },
+      { src: '/assets/images/tower_reformer_4.webp', alt: 'Tower Reformer - Tower folded position', width: 1024, height: 682 },
+      { src: '/assets/images/tower_reformer_5.webp', alt: 'Tower Reformer - Tower and spring detail', width: 682, height: 1024 },
+      { src: '/assets/images/tower_reformer_6.webp', alt: 'Tower Reformer - Carriage detail', width: 682, height: 1024 },
     ],
     shortDesc: 'Professional-grade reformer with integrated tower for expanded exercise options and versatility.',
     features: [
@@ -162,16 +166,16 @@ export const equipmentProducts: EquipmentProduct[] = [
     name: 'Combo Cadillac',
     seo: {
       title: 'Cadillac Pilates Amsterdam | In-Studio at PT 7',
-      description: 'Cadillac (Trapeze Table) used in classes at PT 7, Van Baerlestraat 76C, Museumplein. Book at https://www.pt7.nl/schedule/.',
+      description: `Cadillac (Trapeze Table) used in classes at PT 7, ${studioStreet}, Museumplein. Specs of the in-studio apparatus and how to book a class.`,
       keywords: 'cadillac pilates amsterdam, trapeze table amsterdam, pilates cadillac museumplein',
     },
     images: [
-      { src: '/assets/images/cadillac_1.webp', alt: 'Combo Cadillac - Full side view' },
-      { src: '/assets/images/cadillac_2.webp', alt: 'Combo Cadillac - Seated exercise' },
-      { src: '/assets/images/cadillac_3.webp', alt: 'Combo Cadillac - Front angle view' },
-      { src: '/assets/images/cadillac_4.webp', alt: 'Combo Cadillac - Inversion exercise' },
-      { src: '/assets/images/cadillac_5.webp', alt: 'Combo Cadillac - Included accessories' },
-      { src: '/assets/images/cadillac_6.webp', alt: 'Combo Cadillac - Leg springs exercise' },
+      { src: '/assets/images/cadillac_1.webp', alt: 'Combo Cadillac - Full side view', width: 1024, height: 682 },
+      { src: '/assets/images/cadillac_2.webp', alt: 'Combo Cadillac - Seated exercise', width: 1024, height: 682 },
+      { src: '/assets/images/cadillac_3.webp', alt: 'Combo Cadillac - Front angle view', width: 1024, height: 682 },
+      { src: '/assets/images/cadillac_4.webp', alt: 'Combo Cadillac - Inversion exercise', width: 1024, height: 682 },
+      { src: '/assets/images/cadillac_5.webp', alt: 'Combo Cadillac - Included accessories', width: 1024, height: 682 },
+      { src: '/assets/images/cadillac_6.webp', alt: 'Combo Cadillac - Leg springs exercise', width: 1024, height: 682 },
     ],
     shortDesc: 'The ultimate Pilates Cadillac for endless exercise possibilities. Perfect for advanced training and rehabilitation.',
     features: [
@@ -214,14 +218,14 @@ export const equipmentProducts: EquipmentProduct[] = [
     name: 'Wunda Chair',
     seo: {
       title: 'Wunda Chair at PT 7 Amsterdam | In-Studio Apparatus',
-      description: 'Wunda Chair used in classes at PT 7, Van Baerlestraat 76C, Museumplein. Book at https://www.pt7.nl/schedule/.',
+      description: `Wunda Chair used in classes at PT 7, ${studioStreet}, Museumplein. Specs of the in-studio apparatus and how to book a class.`,
       keywords: 'wunda chair pilates, pilates chair amsterdam, pilates equipment museumplein',
     },
     images: [
-      { src: '/assets/images/wunda_chair_1.webp', alt: 'Wunda Chair - Side view' },
-      { src: '/assets/images/wunda_chair_2.webp', alt: 'Wunda Chair - Front view' },
-      { src: '/assets/images/wunda_chair_3.webp', alt: 'Wunda Chair - Exercise demonstration' },
-      { src: '/assets/images/wunda_chair_4.webp', alt: 'Wunda Chair - Standing exercise' },
+      { src: '/assets/images/wunda_chair_1.webp', alt: 'Wunda Chair - Side view', width: 1024, height: 682 },
+      { src: '/assets/images/wunda_chair_2.webp', alt: 'Wunda Chair - Front view', width: 1024, height: 682 },
+      { src: '/assets/images/wunda_chair_3.webp', alt: 'Wunda Chair - Exercise demonstration', width: 1024, height: 682 },
+      { src: '/assets/images/wunda_chair_4.webp', alt: 'Wunda Chair - Standing exercise', width: 1024, height: 682 },
     ],
     shortDesc: 'The Wunda Chair is a classic Pilates apparatus designed for a wide range of exercises that improve strength, balance, and stability. Its compact design makes it ideal for both home and studio use.',
     features: [
@@ -266,12 +270,12 @@ export const equipmentProducts: EquipmentProduct[] = [
       keywords: 'Ladder Barrel for sale, Pilates barrel for sale Amsterdam, buy Pilates equipment Netherlands, professional Pilates apparatus',
     },
     images: [
-      { src: '/assets/images/ladder_barrel_1.webp', alt: 'Ladder Barrel - Side view' },
-      { src: '/assets/images/ladder_barrel_2.webp', alt: 'Ladder Barrel - Angle view' },
-      { src: '/assets/images/ladder_barrel_3.webp', alt: 'Ladder Barrel - Front view' },
-      { src: '/assets/images/ladder_barrel_4.webp', alt: 'Ladder Barrel - Exercise demonstration' },
-      { src: '/assets/images/ladder_barrel_5.webp', alt: 'Ladder Barrel - Detail view' },
-      { src: '/assets/images/ladder_barrel_6.webp', alt: 'Ladder Barrel - Close-up detail' },
+      { src: '/assets/images/ladder_barrel_1.webp', alt: 'Ladder Barrel - Side view', width: 1024, height: 682 },
+      { src: '/assets/images/ladder_barrel_2.webp', alt: 'Ladder Barrel - Angle view', width: 1024, height: 682 },
+      { src: '/assets/images/ladder_barrel_3.webp', alt: 'Ladder Barrel - Front view', width: 1024, height: 682 },
+      { src: '/assets/images/ladder_barrel_4.webp', alt: 'Ladder Barrel - Exercise demonstration', width: 1024, height: 682 },
+      { src: '/assets/images/ladder_barrel_5.webp', alt: 'Ladder Barrel - Detail view', width: 682, height: 1024 },
+      { src: '/assets/images/ladder_barrel_6.webp', alt: 'Ladder Barrel - Close-up detail', width: 682, height: 1024 },
     ],
     shortDesc: 'Professional Ladder Barrel available for purchase for home or studio setups. Classic apparatus for stretching, spinal extension, and flexibility work.',
     features: [

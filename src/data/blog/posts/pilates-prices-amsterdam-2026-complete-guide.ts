@@ -4,6 +4,7 @@ export const post: BlogPost = {
   id: '10',
   slug: 'pilates-prices-amsterdam-2026-complete-guide',
   title: 'Pilates Prices Amsterdam 2026: Complete Cost Comparison Guide',
+  seoTitle: 'Pilates Prices Amsterdam 2026: Cost Guide | PT 7',
   excerpt: 'What does Pilates cost in Amsterdam? We researched 20+ studios to bring you the complete price breakdown for group classes, private sessions, and memberships in 2026.',
   content: `
       <p>Planning to start Pilates in Amsterdam but unsure what to budget? We've researched pricing across Amsterdam's Pilates studios to give you a complete picture of what to expect in 2026.</p>
@@ -17,7 +18,7 @@ export const post: BlogPost = {
         <ul>
           <li><strong>Average group class:</strong> €30-45 per session</li>
           <li><strong>Average private session:</strong> €70-100 per session</li>
-          <li><strong>PT 7 private sessions:</strong> from €70, with 20-class packs from €60 — below typical boutique rates of €90–120</li>
+          <li><strong>PT 7 private sessions:</strong> from €70, with 20-class packs from €60</li>
           <li><strong>Boutique studio premium:</strong> 20-40% higher than chain gyms</li>
           <li><strong>Best value:</strong> 10-20 class packages offer 15-25% savings</li>
           <li><strong>Class size matters:</strong> Smaller groups (4-5 people) command premium pricing</li>
@@ -133,7 +134,7 @@ export const post: BlogPost = {
 
       <p>Our clients at PT 7 report that consistent Pilates has reduced their physiotherapy visits, improved their sleep, eliminated chronic pain issues, and given them a level of body awareness they never had before. When viewed as an investment in strength, control, and preventive healthcare rather than "just exercise," the perspective shifts significantly.</p>
 
-      <p><em>Looking for a tailored Pilates session designed around your specific needs and goals? Private Reformer sessions at PT 7 Museumplein start at €70, below typical Amsterdam boutique private rates of €90–120, with one-on-one attention from expert instructors. <a href="/pricing/">View our private session packages</a> or <a href="/schedule/">book your first session</a>.</em></p>
+      <p><em>Looking for a tailored Pilates session designed around your specific needs and goals? Private Reformer sessions at PT 7 Museumplein start at €70, with one-on-one attention from expert instructors. <a href="/pricing/">View our private session packages</a> or <a href="/schedule/">book your first session</a>.</em></p>
 
       <h2>Frequently asked questions</h2>
       <h3>How much does a Pilates group class cost in Amsterdam?</h3>
@@ -150,7 +151,7 @@ export const post: BlogPost = {
   dateModified: '2026-09-29',
   image: '/assets/images/studio.webp',
   tags: ['Pilates Prices', 'Amsterdam Fitness', 'Cost Guide', 'Pilates Classes'],
-  metaDescription: 'Complete Pilates pricing guide for Amsterdam 2026. Compare group class costs (€25-50), private session rates (€60-120), and membership options. Find the best value for your budget.',
+  metaDescription: 'Pilates prices in Amsterdam for 2026: group classes, private sessions and memberships compared, and what drives the difference in cost.',
   keywords: [
     'pilates prices amsterdam',
     'pilates cost amsterdam',

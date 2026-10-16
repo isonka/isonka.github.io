@@ -5,6 +5,7 @@ import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/Corporate.css';
+import { studioAddressLine } from '../data/business';
 
 export const Corporate= () => {
   useEffect(() => {
@@ -15,7 +16,7 @@ export const Corporate= () => {
     <>
       <SEOHead
         title="Corporate Pilates Amsterdam | Bedrijfsfitness | PT 7 Pilates"
-        description="Corporate Pilates and bedrijfsfitness Amsterdam for teams. Boutique Reformer at Museumplein or on-site mat sessions. Tax-friendly WKR options. Ask about corporate rates."
+        description="Corporate Pilates and bedrijfsfitness in Amsterdam: Reformer sessions at Museumplein or on-site mat classes for teams. Tax-friendly WKR options."
         keywords="corporate Pilates Amsterdam, bedrijfsfitness Amsterdam, corporate wellness Amsterdam, team Pilates Amsterdam, office Pilates Amsterdam, WKR pilates, bedrijfssport Amsterdam, Reformer Pilates teams"
         canonical="https://www.pt7.nl/corporate/"
         ogTitle="Corporate Pilates Amsterdam | For Business | PT 7 Pilates"
@@ -154,7 +155,7 @@ export const Corporate= () => {
                 WhatsApp
               </a>
             </div>
-            <p className="cta-note">Van Baerlestraat 76C, 1071BB Amsterdam (Museumplein, Oud-Zuid)</p>
+            <p className="cta-note">{studioAddressLine} (Museumplein, Oud-Zuid)</p>
           </div>
         </section>
 

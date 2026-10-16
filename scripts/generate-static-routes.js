@@ -209,6 +209,19 @@ for (const route of shellRoutes) {
     `<meta name="twitter:url" content="${canonicalUrl}" />`,
   );
 
+  // Redirect shells: drop the homepage's hreflang and fallback body, and redirect non-JS crawlers.
+  if (canonicalOverrides[route]) {
+    html = html.replace(/\s*<link rel="alternate" hreflang="[^"]*" href="[^"]*" \/>/g, '');
+    html = html.replace(
+      /<link rel="canonical" href="[^"]*" \/>/,
+      (tag) => `${tag}\n    <meta http-equiv="refresh" content="0; url=${canonicalUrl}" />`,
+    );
+    html = html.replace(
+      /<main id="static-fallback"[\s\S]*?<\/main>/,
+      `<main id="static-fallback"><p>This page has moved to <a href="${canonicalUrl}">${canonicalUrl}</a>.</p></main>`,
+    );
+  }
+
   if (meta) {
     html = html.replace(/<title>[^<]*<\/title>/, `<title>${meta.title}</title>`);
     html = html.replace(

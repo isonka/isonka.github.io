@@ -1,5 +1,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import { studioAddressLine, studioStreet } from '../data/business';
 import { localeFromPath } from './locale';
 import { enAcademy } from './locales/en/academy';
 import { enCommon } from './locales/en/common';
@@ -53,7 +54,10 @@ export function initI18n() {
     supportedLngs: ['en', 'nl'],
     ns: ['common', 'home', 'pricing', 'academy', 'schedule', 'intro', 'openingOffer'],
     defaultNS: 'common',
-    interpolation: { escapeValue: false },
+    interpolation: {
+      escapeValue: false,
+      defaultVariables: { studioStreet, studioAddress: studioAddressLine },
+    },
     react: { useSuspense: false },
     load: 'languageOnly',
   });

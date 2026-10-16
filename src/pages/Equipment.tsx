@@ -54,7 +54,7 @@ export const Equipment= () => {
     <>
       <SEOHead
         title="Pilates Equipment at PT 7 Amsterdam | In-Studio Apparatus"
-        description="Reformer, Tower Reformer, Cadillac, and Wunda Chair used in classes at PT 7, Van Baerlestraat 76C, Museumplein. Book a class at https://www.pt7.nl/schedule/. Ladder Barrel is sold separately and is not used in client sessions."
+        description="Reformer, Tower Reformer, Cadillac and Wunda Chair used in classes at PT 7, Museumplein, Amsterdam. Specs per apparatus; Ladder Barrel for sale."
         keywords="pilates equipment amsterdam, reformer pilates equipment, tower reformer, cadillac pilates amsterdam, pilates apparatus museumplein"
         canonical="https://www.pt7.nl/equipment/"
         ogTitle="Pilates Equipment at PT 7 Amsterdam | In-Studio Apparatus"

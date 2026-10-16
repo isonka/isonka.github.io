@@ -5,7 +5,7 @@ export const nlPricing: DeepStringify<EnPricing> = {
   seo: {
     title: 'Hoeveel kost pilates Amsterdam Oud-Zuid | PT 7',
     description:
-      'Hoeveel kost een pilatesles in Amsterdam Oud-Zuid? PT 7 aan het Museumplein (Van Baerlestraat 76C): introductiepakket 3 groepslessen voor €50, daarna vanaf {{groupPrice}}/les (max. {{groupMax}}). Boek via https://www.pt7.nl/schedule/.',
+      'Pilates prijzen aan het Museumplein, Amsterdam Zuid: 3 groepslessen voor €50, daarna vanaf {{groupPrice}}/les (max. {{groupMax}}). Abonnementen en privé.',
     keywords:
       'pilates lesprijzen amsterdam, pilates prijzen amsterdam, Pilates prijzen Amsterdam, Pilates abonnement Amsterdam, Pilates prijzen Museumplein, reformer pilates prive amsterdam, kleine groep pilates amsterdam, private Pilates kosten, proefles Pilates Amsterdam, strippenkaart Pilates',
     ogTitle: 'Hoeveel kost pilates Amsterdam Oud-Zuid | PT 7',
@@ -17,7 +17,7 @@ export const nlPricing: DeepStringify<EnPricing> = {
   hero: {
     kicker: 'Prijzen',
     title: 'Pilateslesprijzen & abonnementen in Amsterdam',
-    lead: 'Kleine groepen (max. {{groupMax}}), abonnementen en private sessies aan het Museumplein. Klaar om te boeken? <schedule>Bekijk het lesrooster</schedule>.',
+    lead: 'Kleine groepen (max. {{groupMax}}) voor <reformer>Reformer pilates</reformer> en <trx>TRX</trx>, abonnementen en private sessies aan het Museumplein. Klaar om te boeken? <schedule>Bekijk het lesrooster</schedule>.',
   },
   summary: {
     group:
@@ -29,7 +29,7 @@ export const nlPricing: DeepStringify<EnPricing> = {
     unlimited:
       'Onbeperkte abonnementen kosten {{unlimited3}} per maand bij een verplichting van 3 maanden, of {{annualMonth}} per maand bij een jaarabonnement ({{annualYear}} per jaar, inclusief een pauzeoptie van 4 weken).',
     private:
-      'Privésessies beginnen bij {{privateFrom}}, onder de gebruikelijke boutique-privétarieven in Amsterdam (€90–120). Duo-sessies beginnen bij {{coupleFrom}} per persoon.',
+      'Privésessies beginnen bij {{privateFrom}}, met de volle aandacht van je instructeur. Duo-sessies beginnen bij {{coupleFrom}} per persoon.',
     membershipRules:
       'Alle abonnementen staan maximaal één les per dag toe en worden automatisch verlengd tenzij opgezegd vóór de verlengingsdatum.',
   },
@@ -86,7 +86,7 @@ export const nlPricing: DeepStringify<EnPricing> = {
     kicker: 'Privé',
     title: 'Privélessen',
     subtitle:
-      'Persoonlijke 1-op-1 training afgestemd op jouw doelen en fitnessniveau. Sessies beginnen bij {{privateFrom}}, onder de gebruikelijke boutique-privétarieven in Amsterdam (€90–120). Kies je instructeurniveau. Lessen van {{minutes}} minuten.',
+      'Persoonlijke 1-op-1 training afgestemd op jouw doelen en fitnessniveau. Sessies beginnen bij {{privateFrom}}. Kies je instructeurniveau. Lessen van {{minutes}} minuten.',
     tabsAria: 'Instructeurniveau',
     master: 'Master-instructeur',
     senior: 'Senior instructeur',
@@ -175,7 +175,7 @@ export const nlPricing: DeepStringify<EnPricing> = {
     cost: {
       question: 'Hoeveel kosten pilateslessen in Amsterdam?',
       answer:
-        'Groepslessen Reformer pilates beginnen vanaf {{groupPerClass}} per les bij een 20-lessenkaart ({{groupTotal}} totaal). Losse groepslessen kosten {{groupSingle}}. Privésessies beginnen vanaf {{juniorSingle}}, onder de gebruikelijke boutique-privétarieven in Amsterdam (€90–120). Alle pakketten staan op deze pagina.',
+        'Groepslessen Reformer pilates beginnen vanaf {{groupPerClass}} per les bij een 20-lessenkaart ({{groupTotal}} totaal). Losse groepslessen kosten {{groupSingle}}. Privésessies beginnen vanaf {{juniorSingle}}. Alle pakketten staan op deze pagina.',
     },
     intro: {
       question: 'Is er een introductieaanbieding voor nieuwe klanten?',

@@ -2,7 +2,7 @@ export const enPricing = {
   seo: {
     title: 'Pilates Prices Amsterdam Oud-Zuid | From €50 Intro | PT 7',
     description:
-      'How much does a Pilates class cost in Amsterdam Oud-Zuid? PT 7 at Museumplein (Van Baerlestraat 76C): intro pack 3 group classes for €50, then from {{groupPrice}}/class (max {{groupMax}}). Book at https://www.pt7.nl/schedule/.',
+      'Pilates prices at Museumplein, Amsterdam Zuid: intro pack of 3 group classes for €50, then from {{groupPrice}}/class (max {{groupMax}}). Memberships and privates.',
     keywords:
       'pilates class prices amsterdam, pilates prices amsterdam, Pilates prijzen Amsterdam, Pilates abonnement Amsterdam, Pilates prices Museumplein, reformer pilates prive amsterdam, kleine groep pilates amsterdam, private Pilates kosten, small group Pilates pricing, proefles Pilates Amsterdam, strippenkaart Pilates',
     ogTitle: 'Pilates Prices Amsterdam Zuid | Trial & Packages | PT 7 Pilates',
@@ -14,7 +14,7 @@ export const enPricing = {
   hero: {
     kicker: 'Pricing',
     title: 'Pilates class prices & memberships in Amsterdam',
-    lead: 'Small groups (max {{groupMax}}), memberships, and private sessions at Museumplein. Ready to book? <schedule>View the class schedule</schedule>.',
+    lead: 'Small groups (max {{groupMax}}) for <reformer>Reformer Pilates</reformer> and <trx>TRX</trx>, memberships, and private sessions at Museumplein. Ready to book? <schedule>View the class schedule</schedule>.',
   },
   summary: {
     group:
@@ -26,7 +26,7 @@ export const enPricing = {
     unlimited:
       'Unlimited memberships are {{unlimited3}} per month on a 3-month commitment, or {{annualMonth}} per month on an annual commitment ({{annualYear}} per year, including a 4-week freeze option).',
     private:
-      'Private sessions start at {{privateFrom}}, below typical Amsterdam boutique private rates (€90–120). Couple sessions start at {{coupleFrom}} per person.',
+      'Private sessions start at {{privateFrom}}, with the full attention of your instructor. Couple sessions start at {{coupleFrom}} per person.',
     membershipRules:
       'All memberships allow a maximum of one class per day and renew automatically unless cancelled before the renewal date.',
   },
@@ -83,7 +83,7 @@ export const enPricing = {
     kicker: 'Private',
     title: 'Private classes',
     subtitle:
-      'Personalized one-on-one training tailored to your specific goals and fitness level. Sessions start at {{privateFrom}}, below typical Amsterdam boutique private rates (€90–120). Choose your instructor level. {{minutes}}-minute classes.',
+      'Personalized one-on-one training tailored to your specific goals and fitness level. Sessions start at {{privateFrom}}. Choose your instructor level. {{minutes}}-minute classes.',
     tabsAria: 'Instructor level',
     master: 'Master Instructor',
     senior: 'Senior Instructor',
@@ -172,7 +172,7 @@ export const enPricing = {
     cost: {
       question: 'How much do Pilates classes cost in Amsterdam?',
       answer:
-        'Group Reformer Pilates classes start from {{groupPerClass}} per class with a 20-class pack ({{groupTotal}} total). Single group classes are {{groupSingle}}. Private sessions start from {{juniorSingle}}, below typical Amsterdam boutique private rates (€90–120). Full packages are listed on this page.',
+        'Group Reformer Pilates classes start from {{groupPerClass}} per class with a 20-class pack ({{groupTotal}} total). Single group classes are {{groupSingle}}. Private sessions start from {{juniorSingle}}. Full packages are listed on this page.',
     },
     intro: {
       question: 'Is there an intro offer for new clients?',

@@ -3,9 +3,10 @@ import { useTranslation } from 'react-i18next';
 import { CONSENT_UPDATED_EVENT, getStoredConsent, type Pt7Consent } from '../utils/consentTracking';
 import { isPrerender } from '../utils/prerender';
 import '../styles/ContactMap.css';
+import { studioStreet } from '../data/business';
 
 const MAP_SRC =
-  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.7239958408204!2d4.876257777138345!3d52.3572909720188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6090de92c90df%3A0xe44c5d7c1eae1d19!2sPT%20Studio%207!5e0!3m2!1sen!2snl!4v1732445893649!5m2!1sen!2snl';
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.7239958408204!2d4.8788535!3d52.3573109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6090de92c90df%3A0xe44c5d7c1eae1d19!2sPT%20Studio%207!5e0!3m2!1sen!2snl!4v1732445893649!5m2!1sen!2snl';
 
 const MAPS_APP = 'https://maps.app.goo.gl/wrhyzYbov9eiGQJw5';
 
@@ -109,7 +110,7 @@ export const ContactMap: FC<ContactMapProps> = ({
   mapsUrl = MAPS_APP,
   title,
   kicker = 'Museumplein',
-  address = 'Van Baerlestraat 76C',
+  address = studioStreet,
   legend,
   showTransit = true,
 }) => {

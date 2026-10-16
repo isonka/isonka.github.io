@@ -142,7 +142,7 @@ export const WorkoutDetail= () => {
               <div className="equipment-gallery-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginTop: '2rem' }}>
                 {workout.equipmentGallery.items.map((item, i) => (
                   <div key={i} className="equipment-gallery-item" style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 15px rgba(0,0,0,0.1)' }}>
-                    <img src={item.image} alt={item.imageAlt} style={{ width: '100%', height: '250px', objectFit: 'cover' }} loading="lazy" />
+                    <img src={item.image} alt={item.imageAlt} width={item.width} height={item.height} style={{ width: '100%', height: '250px', objectFit: 'cover' }} loading="lazy" />
                     <div style={{ padding: '1rem', background: '#fff' }}>
                       <h4 style={{ margin: '0 0 0.5rem', color: '#333' }}>{item.title}</h4>
                       <p style={{ margin: 0, color: '#666', fontSize: '0.9rem' }}>{item.description}</p>

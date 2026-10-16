@@ -8,6 +8,7 @@ import { EquipmentContact } from '../components/EquipmentContact';
 import { equipmentProducts } from '../data/equipment';
 import { NotFound } from './NotFound';
 import '../styles/EquipmentProduct.css';
+import { studioStreet } from '../data/business';
 
 export const EquipmentDetail= () => {
   const { slug } = useParams<{ slug: string }>();
@@ -67,6 +68,8 @@ export const EquipmentDetail= () => {
               <img
                 src={currentImage.src}
                 alt={currentImage.alt}
+                width={currentImage.width}
+                height={currentImage.height}
                 className="main-image"
                 loading="eager"
                 decoding="async"
@@ -82,7 +85,7 @@ export const EquipmentDetail= () => {
                     onClick={() => setActiveImage(i)}
                     aria-label={`View image ${i + 1}`}
                   >
-                    <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
+                    <img src={img.src} alt={img.alt} width={img.width} height={img.height} loading="lazy" decoding="async" />
                   </button>
                 ))}
               </div>
@@ -95,7 +98,7 @@ export const EquipmentDetail= () => {
             <p className="product-intent-notice">
               {forSaleOnly
                 ? 'This piece is for purchase and is not used in client sessions. '
-                : 'This is apparatus we use in classes at Van Baerlestraat 76C, Museumplein. '}
+                : `This is apparatus we use in classes at ${studioStreet}, Museumplein. `}
               <Link to="/reformer-pilates-amsterdam/" className="prose-link">
                 Book Reformer Pilates in Amsterdam
               </Link>
@@ -141,7 +144,7 @@ export const EquipmentDetail= () => {
                 <Link to={relatedWorkout.to} className="prose-link">
                   {relatedWorkout.label}
                 </Link>{' '}
-                at Van Baerlestraat 76C, Museumplein.
+                at {studioStreet}, Museumplein.
               </p>
             ) : null}
           </div>

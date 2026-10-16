@@ -31,6 +31,7 @@ const WORKOUT_COPY = {
   'reformer-pilates': 'reformerPilates',
   'reformer-pilates-amsterdam': 'reformerPilates',
   trx: 'trx',
+  'trx-training-amsterdam': 'trx',
   'functional-training': 'functionalTraining',
   cardio: 'cardio',
 } as const;
