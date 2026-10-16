@@ -178,7 +178,7 @@ export const HealthcareProviders= () => {
             <div style={{ marginBottom: '1rem' }}>
               <h3>Related Service Pages</h3>
               <p>
-                <Link to="/workouts/reformer-pilates/">Reformer Pilates</Link> ·{' '}
+                <Link to="/reformer-pilates-amsterdam/">Reformer Pilates</Link> ·{' '}
                 <Link to="/trainer/elif/">Elif Arzu Ogan profile</Link> ·{' '}
                 <Link to="/trainer/goknur/">Göknur Dipli profile</Link>
               </p>

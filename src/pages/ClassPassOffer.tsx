@@ -35,6 +35,7 @@ export const ClassPassOffer = () => {
         description="A clear transition offer for ClassPass clients moving to PT 7 direct pricing. Compare costs and claim 20% off eligible first purchases."
         keywords="ClassPass Amsterdam, Pilates ClassPass, ClassPass offer, Pilates membership Amsterdam"
         canonical="https://www.pt7.nl/classpass-offer/"
+        robots="noindex, follow"
         ogTitle="ClassPass Clients: PT 7 Direct Offer"
         ogDescription="Compare ClassPass costs with PT 7 direct pricing and claim your transition discount."
       />

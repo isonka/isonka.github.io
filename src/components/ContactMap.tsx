@@ -10,12 +10,6 @@ const MAP_SRC =
 
 const MAPS_APP = 'https://maps.app.goo.gl/wrhyzYbov9eiGQJw5';
 
-export const OLYMPISCH_STADION_MAP_SRC =
-  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.141567328538!2d4.850628976685132!3d52.34418607201564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5e1f9b27084e3%3A0xd145f7488479689f!2sOlympisch%20Stadion%2015%2C%201076%20DE%20Amsterdam!5e0!3m2!1sen!2snl!4v1790545501765!5m2!1sen!2snl';
-
-export const OLYMPISCH_STADION_MAPS_URL =
-  'https://www.google.com/maps/search/?api=1&query=Olympisch%20Stadion%2015%2C%201076%20DE%20Amsterdam';
-
 type ContactMapProps = {
   embedSrc?: string;
   mapsUrl?: string;

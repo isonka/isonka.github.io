@@ -164,7 +164,7 @@ export const Corporate= () => {
             <div style={{ marginBottom: '1rem' }}>
               <h3>Related Service Pages</h3>
               <p>
-                <Link to="/workouts/reformer-pilates/">Reformer Pilates</Link> ·{' '}
+                <Link to="/reformer-pilates-amsterdam/">Reformer Pilates</Link> ·{' '}
                 <Link to="/healthcare-providers/">For Healthcare</Link> ·{' '}
                 <Link to="/pricing/">Pricing</Link>
               </p>

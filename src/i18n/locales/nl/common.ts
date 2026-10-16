@@ -43,6 +43,8 @@ export const nlCommon: DeepStringify<EnCommon> = {
     intro: 'Introductie',
     reformerPilates: 'Reformer pilates',
     trx: 'TRX Amsterdam',
+    privatePilates: 'Privé pilates',
+    strength: 'Krachttraining',
     prenatal: 'Prenataal',
     academy: 'Academy',
     forBusiness: 'Voor bedrijven',

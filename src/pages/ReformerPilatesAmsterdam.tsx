@@ -146,9 +146,8 @@ export const ReformerPilatesAmsterdam= () => {
               <Link to="/prenatal-pilates-amsterdam/">prenatal Pilates Amsterdam</Link>.
             </p>
             <p>
-              Want deeper detail on benefits, equipment, and class options? See our full{' '}
-              <Link to="/workouts/reformer-pilates/">Reformer Pilates workout guide</Link>,{' '}
-              <Link to="/pricing/">pricing</Link>, and{' '}
+              Ready to compare options? See our{' '}
+              <Link to="/pricing/">pricing</Link> and{' '}
               <Link to="/schedule/">live schedule</Link>.
             </p>
           </div>
@@ -291,9 +290,6 @@ export const ReformerPilatesAmsterdam= () => {
           <div className="service-cta-buttons">
             <Link to="/schedule/" className="service-cta-btn-primary">
               Book a Session
-            </Link>
-            <Link to="/workouts/reformer-pilates/" className="service-cta-btn-secondary">
-              Reformer Guide
             </Link>
             <Link to="/academy/" className="service-cta-btn-secondary">
               Pilates teacher training

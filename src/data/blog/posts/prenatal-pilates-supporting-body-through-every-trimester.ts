@@ -215,7 +215,7 @@ export const post: BlogPost = {
 
       <h3>Related Pages for Pregnancy Support in Amsterdam</h3>
       <ul>
-        <li><a href="/workouts/reformer-pilates/">Reformer Pilates Amsterdam</a>, see how classes are structured and what to expect.</li>
+        <li><a href="/reformer-pilates-amsterdam/">Reformer Pilates Amsterdam</a>, see how classes are structured and what to expect.</li>
         <li><a href="/pricing/">Private session pricing</a>, compare one-on-one packages for trimester-specific support.</li>
         <li><a href="/healthcare-providers/">For healthcare providers</a>, referral information for physiotherapists, GPs, and specialists.</li>
       </ul>

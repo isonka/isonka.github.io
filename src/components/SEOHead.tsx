@@ -92,7 +92,6 @@ export const SEOHead = ({
     updateMetaTag('og:image:alt', 'PT 7 Pilates Amsterdam - Pilates Studio', true);
 
     updateMetaTag('twitter:card', 'summary_large_image');
-    updateMetaTag('twitter:site', '@ptstudio7amsterdam');
     updateMetaTag('twitter:title', ogTitle || title);
     updateMetaTag('twitter:description', ogDescription || description);
     updateMetaTag('twitter:image', absoluteImageUrl);

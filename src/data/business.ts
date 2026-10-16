@@ -58,7 +58,6 @@ export const business = {
     'https://classpass.com/studios/pt-studio-7-amsterdam',
     'https://www.google.com/maps?cid=16450626326549634329',
     'https://www.mindbodyonline.com/explore/locations/pt-studio-7',
-    'https://www.polestarpilates.nl/',
   ],
 
   knowsAbout: [
