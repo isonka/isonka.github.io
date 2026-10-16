@@ -5,13 +5,14 @@ import { trackBookNowClick, trackNavClick } from '../utils/gtmTracking';
 import { ensureHealcodeLoaded } from '../utils/healcode';
 import { homePath, isHomePath, localeHref } from '../i18n/locale';
 import { useLocale } from '../i18n/useLocale';
+import { Pt7Logo } from './brand/Pt7Logo';
 import '../styles/Navbar.css';
 
-export const Navbar= () => {
+export const Navbar = () => {
   const { t } = useTranslation('common');
   const locale = useLocale();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<'business' | 'more' | null>(null);
+  const [openDropdown, setOpenDropdown] = useState<'more' | null>(null);
   const navigate = useNavigate();
   const location = useLocation();
   const home = homePath(locale);
@@ -61,16 +62,10 @@ export const Navbar= () => {
     if (!isHomePath(location.pathname)) {
       navigate(home);
       setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 100);
     } else {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
@@ -79,14 +74,7 @@ export const Navbar= () => {
       <div className="navbar-container">
         <div className="navbar-logo">
           <Link to={home} aria-label={t('nav.homeAria')}>
-            <img
-              src="/assets/images/pt7logo.webp"
-              alt="PT 7"
-              width={56}
-              height={56}
-              loading="eager"
-              decoding="async"
-            />
+            <Pt7Logo width={86} height={70} title="PT7" />
           </Link>
         </div>
 
@@ -106,32 +94,58 @@ export const Navbar= () => {
           aria-expanded={isMenuOpen}
           onClick={toggleMenu}
         >
-          <span className="navbar-toggle-icon"></span>
+          <svg width="20" height="12" viewBox="0 0 20 12" aria-hidden="true">
+            <path d="M0 1H20M0 11H20" stroke="currentColor" strokeWidth="1.5" />
+          </svg>
         </button>
 
         <ul className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
-          <li><a href="#about" aria-label={t('nav.aboutAria')} onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>{t('nav.about')}</a></li>
-          <li><a href="#reviews" aria-label={t('nav.reviewsAria')} onClick={(e) => { e.preventDefault(); scrollToSection('reviews'); }}>{t('nav.reviews')}</a></li>
-          <li><Link to="/instructors/" aria-label={t('nav.instructorsAria')} onClick={closeMenu}>{t('nav.instructors')}</Link></li>
-          <li><Link to={localeHref('/reformer-pilates-amsterdam/', locale)} aria-label={t('nav.classesAria')} onClick={closeMenu}>{t('nav.classes')}</Link></li>
-          <li><Link to={pricingHref} aria-label={t('nav.pricesAria')} onClick={closeMenu}>{t('nav.prices')}</Link></li>
-          <li><Link to={academyHref} aria-label={t('nav.academyAria')} onClick={closeMenu}>{t('nav.academy')}</Link></li>
-          <li className="navbar-dropdown">
-            <button
-              type="button"
-              className={`navbar-dropdown-trigger ${openDropdown === 'business' ? 'open' : ''}`}
-              onClick={() => setOpenDropdown(openDropdown === 'business' ? null : 'business')}
-              aria-expanded={openDropdown === 'business'}
-              aria-haspopup="true"
+          <li>
+            <a
+              href="#train"
+              aria-label={t('nav.classesAria')}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('train');
+              }}
             >
-              {t('nav.business')}
-            </button>
-            <ul className={`navbar-dropdown-menu ${openDropdown === 'business' ? 'open' : ''}`}>
-              <li><Link to="/corporate/" onClick={closeMenu}>{t('nav.forBusiness')}</Link></li>
-              <li><Link to="/healthcare-providers/" onClick={closeMenu}>{t('nav.forHealthcare')}</Link></li>
-            </ul>
+              {t('nav.classes')}
+            </a>
           </li>
-          <li><Link to="/equipment/" onClick={closeMenu}>{t('nav.shop')}</Link></li>
+          <li>
+            <a
+              href="#coaches"
+              aria-label={t('nav.instructorsAria')}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('coaches');
+              }}
+            >
+              {t('nav.coaches')}
+            </a>
+          </li>
+          <li>
+            <Link to={pricingHref} aria-label={t('nav.pricesAria')} onClick={closeMenu}>
+              {t('nav.prices')}
+            </Link>
+          </li>
+          <li>
+            <Link to={academyHref} aria-label={t('nav.academyAria')} onClick={closeMenu}>
+              {t('nav.academy')}
+            </Link>
+          </li>
+          <li>
+            <a
+              href="#visit"
+              aria-label={t('nav.visitAria')}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('visit');
+              }}
+            >
+              {t('nav.visit')}
+            </a>
+          </li>
           <li className="navbar-dropdown">
             <button
               type="button"
@@ -143,11 +157,38 @@ export const Navbar= () => {
               {t('nav.more')}
             </button>
             <ul className={`navbar-dropdown-menu ${openDropdown === 'more' ? 'open' : ''}`}>
-              <li><a href="#workouts" onClick={(e) => { e.preventDefault(); closeMenu(); scrollToSection('workouts'); }}>{t('nav.workouts')}</a></li>
-              <li><Link to="/blog/" onClick={closeMenu}>{t('nav.blog')}</Link></li>
+              <li>
+                <Link to="/instructors/" onClick={closeMenu}>
+                  {t('nav.instructors')}
+                </Link>
+              </li>
+              <li>
+                <Link to={localeHref('/reformer-pilates-amsterdam/', locale)} onClick={closeMenu}>
+                  {t('nav.classes')}
+                </Link>
+              </li>
+              <li>
+                <Link to="/corporate/" onClick={closeMenu}>
+                  {t('nav.forBusiness')}
+                </Link>
+              </li>
+              <li>
+                <Link to="/healthcare-providers/" onClick={closeMenu}>
+                  {t('nav.forHealthcare')}
+                </Link>
+              </li>
+              <li>
+                <Link to="/equipment/" onClick={closeMenu}>
+                  {t('nav.shop')}
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog/" onClick={closeMenu}>
+                  {t('nav.blog')}
+                </Link>
+              </li>
             </ul>
           </li>
-          <li><a href="#contact" aria-label={t('nav.contactAria')} onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>{t('nav.contact')}</a></li>
           <li
             className="navbar-login"
             onPointerEnter={loadLoginWidget}
@@ -162,7 +203,15 @@ export const Navbar= () => {
             />
           </li>
           <li className="navbar-booknow-desktop-wrapper">
-            <Link to={scheduleHref} className="navbar-booknow-desktop" aria-label={t('nav.bookClassAria')} onClick={() => { closeMenu(); trackBookNowClick('navbar-desktop'); }}>
+            <Link
+              to={scheduleHref}
+              className="navbar-booknow-desktop"
+              aria-label={t('nav.bookClassAria')}
+              onClick={() => {
+                closeMenu();
+                trackBookNowClick('navbar-desktop');
+              }}
+            >
               {t('nav.bookNow')}
             </Link>
           </li>

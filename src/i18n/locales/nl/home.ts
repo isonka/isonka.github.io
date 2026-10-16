@@ -3,178 +3,200 @@ import type { EnHome } from '../en/home';
 
 export const nlHome: DeepStringify<EnHome> = {
   seo: {
-    title: 'PT 7 (PT Studio 7) | Pilates & Krachttraining Amsterdam Zuid',
+    title: 'PT 7 (PT Studio 7) | Pilates, yoga & kracht Amsterdam',
     description:
-      'PT 7 (voorheen PT Studio 7): boutique pilates- en krachtstudio aan de {{studioStreet}}, Museumplein, Amsterdam Zuid. Max. 5 per les. Intro: 3 lessen €50.',
+      'PT 7 (voorheen PT Studio 7): pilates, yoga en kracht op Olympisch Stadion 15, Amsterdam. Kleine lessen tot 10. Intro: 3 lessen €50.',
     keywords:
-      'PT 7, PT 7 Pilates, pilates Amsterdam, pilateslessen Amsterdam, pilates bij mij in de buurt, Reformer pilates Amsterdam, one-on-one training Amsterdam, pilates Museumplein, private pilates Amsterdam, small group pilates, pilatesstudio Van Baerlestraat, TRX Amsterdam, prenatale pilates Amsterdam',
-    ogTitle: 'PT 7 (PT Studio 7) | Pilates & Krachttraining Amsterdam Zuid',
+      'PT 7, PT 7 Pilates, pilates Amsterdam, Reformer pilates Amsterdam, yoga Amsterdam, krachttraining Amsterdam, Olympisch Stadion pilates, private pilates Amsterdam, prenatale pilates Amsterdam, TRX Amsterdam',
+    ogTitle: 'PT 7 (PT Studio 7) | Find your lane · Olympisch Stadion',
     ogDescription:
-      'PT 7 boutique studio aan het Museumplein: Reformer pilates, kleine groepen (max. 5) en private sessies in Amsterdam Oud-Zuid. Online boeken.',
+      'Zeven manieren om te trainen op het Olympisch Stadion: Reformer, yoga, kracht, mat, TRX, prenataal en privé. Online boeken.',
     analyticsTitle: 'Home - PT 7 Pilates Amsterdam',
   },
   banner: {
     strong: 'Word pilatesinstructeur',
     full: ' · Pilates docentenopleiding · PMA ITTAP Approved · Volgende: nov 2026',
     short: ' · Docentenopleiding · Volgende: nov 2026',
-    cta: 'Bekijk de opleiding →',
+    cta: 'Bekijk de opleiding',
   },
   openingBanner: {
-    label: 'Studioupdate',
-    text: 'Onze verhuizing naar het Olympisch Stadion is uitgesteld; de lessen gaan door aan de Van Baerlestraat.',
-    cta: 'Lees de update',
+    label: 'Studio',
+    text: 'PT 7 traint op Olympisch Stadion 15, Amsterdam.',
+    cta: 'Bezoek',
   },
   hero: {
-    brand: 'PT 7',
-    title: 'Pilates & krachttraining in Amsterdam Zuid',
-    line: 'Pilateslessen in Amsterdam Oud-Zuid, boutique studio aan het Museumplein',
-    bookClass: 'Les boeken',
-    pilatesClasses: 'Pilateslessen',
-    viewPricing: 'Prijzen',
+    eyebrow: 'Pilates · Yoga · Kracht — Olympisch Stadion, Amsterdam',
+    titleBefore: 'Find your',
+    titleAccent: 'lane.',
+    lead:
+      'Zeven manieren om te trainen, één coach naast je. Reformer- en matpilates, yoga, kracht en privé — in kleine lessen tot tien.',
+    bookFirst: 'Boek je eerste les',
+    explore: 'Bekijk lessen',
   },
-  heroImages: {
-    studio: 'PT 7 - pilates Reformer studio',
-    nike: 'PT 7 - Nike Strength trainingsruimte',
-  },
-  about: {
-    kicker: 'Over ons',
-    title: 'Reformer pilates & krachttraining studio aan het Museumplein',
-    p1: 'Reformer pilates & krachttraining in Amsterdam, in onze studio aan het Museumplein in Oud-Zuid. Met meer dan 15 jaar ervaring biedt PT 7 een boutique fitnesservaring gericht op aandacht en resultaat. Aan de {{studioStreet}}, tegenover het Stedelijk Museum, combineren we professionele Reformers en klassieke pilatesapparatuur met Nike-krachtapparatuur, TRX en Concept2-machines in één ruimte.',
-    p2: 'We bieden 1-op-1 private sessies waarin je 100% aandacht van je instructeur krijgt. Daarnaast zijn er intieme small-group lessen (maximaal 5 personen) als je graag met vrienden traint. Elk programma is afgestemd op kracht opbouwen, flexibiliteit verbeteren of jouw wellnessdoelen.',
-    p3: 'Onze instructeurs maken een persoonlijk plan, passen elke sessie aan op jouw voortgang en vieren elke mijlpaal met je.',
-    links:
-      'Begin hier: <reformer>Reformer pilates Amsterdam Zuid</reformer> · <private>Private pilates</private> · <prenatal>Prenatale pilates</prenatal> · <trx>TRX</trx> · <strength>Krachttraining</strength>',
-    ownerName: 'Elif Arzu Ogan',
-    signatureRole: 'Eigenaar & hoofdinstructeur, PT 7',
-    imageAlt: 'PT 7 Museumplein — small-group pilatesstudio',
-  },
-  workouts: {
-    heading: "Pilates & trainingsprogramma's Amsterdam",
-    sub: "Ontdek onze trainingsprogramma's",
-    reformerPilates: {
-      title: 'Reformer & Trapeze Table pilates',
-      description: 'Fullbody-training voor corekracht, flexibiliteit en houding',
-      alt: 'PT 7 Amsterdam boutique studio voor Reformer pilates en training',
-    },
-    trx: {
-      title: 'TRX-training',
-      description: 'Suspension training voor kracht, balans en functionele fitness',
-      alt: 'TRX suspension training bij PT 7 Amsterdam',
-    },
-    functionalTraining: {
-      title: 'Nike Strength Training',
-      description: 'Premium Nike-apparatuur: half rack, Olympic barbell & dumbbells',
-      alt: 'Nike Strength Training',
-    },
-    cardio: {
-      title: 'Cardio',
-      description: 'Intensieve cardio om uithoudingsvermogen te verbeteren en calorieën te verbranden',
-      alt: 'Cardiotraining',
+  facts: {
+    aria: 'In één oogopslag',
+    items: {
+      ways: { value: '7', label: 'manieren om te trainen' },
+      size: { value: '≤10', label: 'mensen per les' },
+      minutes: { value: '45', label: 'minuten per les' },
+      coach: { value: '1', label: 'coach op de vloer' },
     },
   },
-  trainers: {
-    kicker: 'Instructeurs',
-    title: 'Persoonlijke one-on-one trainers in Amsterdam',
-    sub: 'Gecertificeerde professionals, gericht op jouw fitnessreis',
-    footnote:
-      'Wil je lesgeven? <become>Word pilatesinstructeur</become>, <training>pilates docentenopleiding</training> bij PT7 Academy.',
-    elif: {
-      alt: 'Elif Arzu Ogan - pilatesinstructeur',
-      specialties: 'Comprehensive pilates · Krachttraining · Prenatale pilates',
+  lanes: {
+    titleBefore: 'Zeven lanes,',
+    titleAccent: 'één plan.',
+    sub: 'Pilates is waar we begonnen. Mix lanes door de week — je coach zorgt dat ze bij elkaar passen.',
+    seeTimes: 'Bekijk tijden',
+    laneLabel: 'Lane {{n}}',
+    formatLabel: 'Format',
+    kitLabel: 'Apparatuur',
+    items: {
+      reformer: {
+        name: 'Reformer',
+        tag: 'Pilates',
+        pitch:
+          'Veren, straps en een coach die je houding corrigeert voordat die verschuift. Waar PT7 begon.',
+        format: 'Groep · 45 min',
+        kit: 'Reformer, trapeze table',
+      },
+      strength: {
+        name: 'Kracht',
+        tag: 'Strength',
+        pitch:
+          'Squat, hinge, press en pull, zorgvuldig gecoacht. Zwaar genoeg om te tellen, schoon genoeg om te blijven.',
+        format: 'Small group',
+        kit: 'Rack, barbell, dumbbells',
+      },
+      yoga: {
+        name: 'Yoga',
+        tag: 'Yoga',
+        pitch: 'Flow, houding en adem. De lane die elke andere lane makkelijker maakt.',
+        format: 'Groep · max 8',
+        kit: 'Mat, blokken, straps',
+      },
+      mat: {
+        name: 'Matpilates',
+        tag: 'Pilates',
+        pitch: 'Klassieke pilates op de vloer. Geen machine om op te leunen — jij en je centrum.',
+        format: 'Groep · max 8',
+        kit: 'Mat, kleine props',
+      },
+      trx: {
+        name: 'TRX & cardio',
+        tag: 'Strength',
+        pitch: 'Suspension en rower-intervallen voor het uithoudingsvermogen dat bij je core past.',
+        format: 'Small group',
+        kit: 'TRX, Concept2',
+      },
+      prenatal: {
+        name: 'Pre- & postnataal',
+        tag: 'Private',
+        pitch: 'Één-op-één training door elk trimester en de maanden erna.',
+        format: '1:1',
+        kit: 'Reformer + mat',
+      },
+      private: {
+        name: 'Privé',
+        tag: 'Private',
+        pitch:
+          'Één coach, elke discipline. Een plan rond jouw doel, blessure of volgende race.',
+        format: '1:1 · 55 min',
+        kit: 'Wat nodig is',
+      },
     },
-    gokben: {
-      alt: 'Gökben Öztekin - pilatesinstructeur',
-      specialties: 'Comprehensive pilates',
+  },
+  coaches: {
+    titleBefore: 'Ontmoet je',
+    titleAccent: 'coaches.',
+    sub: 'Pilatesdocenten, yogadocenten en krachtcoaches. Zij zetten het tempo, tellen de herhalingen en vangen degene die je oversloeg.',
+    tags: {
+      pilates: 'Pilates',
+      pilatesStrength: 'Pilates · Kracht',
     },
-    goknur: {
-      alt: 'Göknur Dipli - pilatesinstructeur',
-      specialties: 'Comprehensive pilates · Krachttraining · Prenatale pilates',
+    roles: {
+      elif: 'Hoofdcoach, kracht, prenataal, comeback',
+      gokben: 'Comprehensive pilates',
+      goknur: 'Kracht en prenataal',
+      gulce: 'Reformer',
+      lal: 'Reformer',
+      nisan: 'Reformer',
+      kelly: 'Reformer',
+      gamze: 'Reformer',
     },
-    gulce: {
-      alt: 'Gülce Koç - pilatesinstructeur',
-      specialties: 'Reformer pilates',
+    alt: {
+      elif: 'Elif Arzu Ogan — coach bij PT 7',
+      gokben: 'Gökben Öztekin — coach bij PT 7',
+      goknur: 'Göknur Dipli — coach bij PT 7',
+      gulce: 'Gülce Koç — coach bij PT 7',
+      lal: 'Lal Avgen — coach bij PT 7',
+      nisan: 'Nisan Atalay — coach bij PT 7',
+      kelly: 'Kelly Tin — coach bij PT 7',
+      gamze: 'E. Gamze Karadağ — coach bij PT 7',
     },
-    lal: {
-      alt: 'Lal Avgen - pilatesinstructeur',
-      specialties: 'Reformer pilates',
-    },
-    nisan: {
-      alt: 'Nisan Atalay - pilatesinstructeur',
-      specialties: 'Reformer pilates',
-    },
-    kelly: {
-      alt: 'Kelly Tin - pilatesinstructeur',
-      specialties: 'Reformer pilates',
-    },
-    gamze: {
-      alt: 'E. Gamze Karadağ - pilatesinstructeur',
-      specialties: 'Reformer pilates',
-    },
+  },
+  offer: {
+    titleBefore: 'Nieuw hier?',
+    titleAccent: 'Begin met drie.',
+    lead: 'Drie groepslessen om lanes te proberen — Reformer, yoga, kracht — of dezelfde drie keer.',
+    label: 'Intro-aanbieding',
+    product: '3 groepslessen',
+    detail: 'Elke lane · voor nieuwe leden',
+    price: '€50',
+    cta: 'Claim aanbieding',
+  },
+  academy: {
+    titleBefore: 'Word',
+    titleAccent: 'pilatesdocent.',
+    lead: 'Een PMA ITTAP-goedgekeurd instructeursprogramma, gegeven in de studio door de coaches met wie je traint.',
+    nextLabel: 'Volgende cohort',
+    nextDate: 'November 2026',
+    seats: '3 plekken open',
+    cta: 'Solliciteer voor een plek',
   },
   reviews: {
-    kicker: 'Reviews',
-    title: 'Pilates Amsterdam reviews',
-    sub: 'Echte ervaringen uit onze community',
-    google: 'Google 4.8',
-    classpass: 'ClassPass 4.9 · 2.500+ beoordelingen',
-    readMore: 'Lees volledige review',
+    titleBefore: 'In hun',
+    titleAccent: 'woorden.',
+    ratings: '4,9 op ClassPass · 4,8 op Google',
     items: {
       lot: {
-        author: 'Lot Canter Cremers',
-        meta: 'Google-review · Zwangerschap & postpartum',
-        pull: '“Elif trainde me tot 38,5 weken. Comfortabele zwangerschap en soepele bevalling.”',
-        full: 'Via een buurvrouw in mijn gebouw kwam ik bij PT 7. Ik kom hier al 18 maanden, waarvan ik 9 maanden zwanger was. Tijdens mijn zwangerschap trainde Elif me tot het einde (38,5 weken). Haar training gaf mij en mijn lichaam een uiterst comfortabele zwangerschap en soepele bevalling. Haar ervaring en kennis van het menselijk lichaam, zwanger of niet, maakt het verschil. Natuurlijk ging ik daarna door en geniet ik van deze studio. Ik raad PT 7 aan iedereen aan die een Pilatesstudio zoekt met gekwalificeerde, ervaren instructeurs. Pilates is populair en er zijn veel plekken, maar de meeste instructeurs hebben niet genoeg kennis om te trainen zoals zij dat bij PT 7 doen.',
+        quote: 'Elif trainde me tot 38,5 weken. Comfortabele zwangerschap en soepele bevalling.',
+        name: 'Lot',
+        source: 'Google',
       },
       flaminia: {
-        author: 'Flaminia',
-        meta: 'Google-review',
-        pull: '“Professioneel, doordacht. Precies de Reformer-studio waar ik twee jaar naar zocht.”',
-        full: 'Ik zocht zo’n twee jaar naar een professionele Reformer-studio en probeerde veel studio’s in Amsterdam. PT 7 en Elif zijn precies wat ik zocht: professioneel, doordacht en betrokken bij je vooruitgang. Elif is fantastisch en heeft decennia ervaring als fitness trainer. Ze demonstreert technieken tot in detail en haar lessen zijn altijd anders en afgestemd op de groep.',
-      },
-      maya: {
-        author: 'Maya',
-        meta: 'Google-review',
-        pull: '“Warm, gastvrij en vol aandacht. Na elke les sterker en met een lach.”',
-        full: 'Dit is een bijzondere Reformer-studio: warm, gastvrij en vol zorg. Gökben en Elif steken hun hart in elke sessie. Hun zachte begeleiding, aandacht en vriendelijkheid maken het verschil. Ik train hier al bijna zes maanden en voel me sterker, meer in balans en meer verbonden met mijn lichaam. Elke les eindigt met een lach en dankbaarheid.',
+        quote:
+          'Professioneel, doordacht — precies de Reformer-studio waar ik twee jaar naar zocht.',
+        name: 'Flaminia',
+        source: 'Google',
       },
       yesim: {
-        author: 'Yeşim',
-        meta: 'ClassPass-review',
-        pull: '“Na zes maanden: indrukwekkende resultaten, motiverende sfeer, topapparatuur.”',
-        full: 'Ik kom hier al zes maanden en de resultaten zijn indrukwekkend. De sfeer is motiverend en de apparatuur is tip-top. Een echte aanrader!',
-      },
-      ayse: {
-        author: 'Ayşe',
-        meta: 'Google-review',
-        pull: '“Rustige studio, professionele trainers die elke beweging met zorg begeleiden.”',
-        full: 'Ik train al een tijdje bij PT 7 en kan niet gelukkiger zijn. De studio heeft een rustige, positieve sfeer en de trainers zijn zeer professioneel en ondersteunend. Ze letten goed op jouw behoeften en begeleiden elke beweging met zorg. Een absolute aanrader!',
+        quote: 'Zes maanden verder. Indrukwekkende resultaten en een motiverende sfeer.',
+        name: 'Yeşim',
+        source: 'ClassPass',
       },
     },
   },
-  contact: {
-    kicker: 'Bezoek',
-    title: 'Bezoek onze studio',
-    address: '{{studioAddress}} Oud-Zuid',
-    meta: 'Tegenover het Stedelijk Museum op het Museumplein',
-    emailUs: 'Mail ons',
-    instagram: 'Instagram',
-    facebook: 'Facebook',
-    linkedin: 'LinkedIn',
-  },
-  faqSection: {
-    kicker: 'FAQ',
-    title: 'Veelgestelde vragen',
+  visit: {
+    eyebrow: 'De locatie',
+    titleBefore: 'Waar de eerste',
+    titleAccent: 'vlam',
+    titleAfter: 'brandde.',
+    story:
+      'In 1928 organiseerde Amsterdam de Spelen, en voor het eerst brandde een olympische vlam — in een schaal bovenop de Marathontoren. Het stadion werd gebouwd voor olympiërs. PT7 traint nu in unit 15, in de linker bovenhoek.',
+    address: 'Olympisch Stadion 15, 1076 DE Amsterdam',
+    transit: 'Tram 24 · fietsenrekken bij de deur',
+    mapAria: 'Lijnkaart van het stadion: PT7 in de linker bovenhoek, de Marathontoren bovenaan',
   },
   faqs: {
     where: {
       question: 'Waar kan ik pilateslessen volgen in Amsterdam?',
       answer:
-        'PT 7 biedt Reformer pilates, TRX, krachttraining en cardio aan de {{studioStreet}}, bij het Museumplein in Amsterdam Oud-Zuid. Boek groepsles (max. 5) of een private sessie online via pt7.nl/schedule/.',
+        'PT 7 biedt Reformer pilates, yoga, kracht, TRX en privé op Olympisch Stadion 15, 1076 DE Amsterdam. Boek groepsles (tot 10) of privé online via pt7.nl/schedule/.',
     },
     groupSize: {
       question: 'Hoeveel mensen zitten er in een pilates groepsles?',
       answer:
-        'Onze groepen hebben maximaal 5 deelnemers, zodat instructeurs techniek en voortgang persoonlijk kunnen begeleiden.',
+        'Groepslessen hebben tot 10 deelnemers (yoga en matpilates max. 8), zodat instructeurs techniek persoonlijk kunnen begeleiden.',
     },
     booking: {
       question: 'Hoe boek ik een les bij PT 7?',
@@ -184,12 +206,12 @@ export const nlHome: DeepStringify<EnHome> = {
     training: {
       question: 'Welke training biedt PT 7?',
       answer:
-        'Reformer pilates is onze kern. Daarnaast bieden we TRX, kracht- en functional training, cardiosessies, prenatale private pilates en de instructeursopleiding via PT7 Academy.',
+        'Zeven lanes: Reformer, kracht, yoga, matpilates, TRX & cardio, pre- & postnataal, en privé. Instructeursopleiding via PT7 Academy.',
     },
     location: {
       question: 'Waar zit PT 7?',
       answer:
-        '{{studioAddress}}, tegenover het Stedelijk Museum op het Museumplein in Oud-Zuid.',
+        'Olympisch Stadion 15, 1076 DE Amsterdam — unit 15 in de linker bovenhoek van het stadion. Tram 24; fietsenrekken bij de deur.',
     },
   },
 };

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PT7 — Prices</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;display=swap">
+<style>
+body{margin:0;background:#f5f0e6;}
+a{color:#7a6400;}a:hover{color:#1c1a18;}
+summary{cursor:pointer;list-style:none;}
+summary::-webkit-details-marker{display:none;}
+details[open] .faq-plus{transform:rotate(45deg);}
+.c-menu{display:none;}
+@media (max-width: 720px){
+  .c-links a:not(.c-cta){display:none;}
+  .c-menu{display:inline-flex !important;}
+  .p-sec{padding-top:56px !important;padding-bottom:56px !important;}
+  .p-h1{font-size:44px !important;}
+  .p-h2{font-size:32px !important;}
+  .p-offer{flex-direction:column !important;align-items:flex-start !important;padding:24px 24px 24px 56px !important;}
+  .p-offer a{align-self:stretch;text-align:center;}
+  .p-tabs button{flex:1 1 40%;}
+  .p-facts{grid-template-columns:repeat(2, minmax(0, 1fr)) !important;}
+}
+</style>
+</helmet>
+<div style="background: #f5f0e6; color: #1c1a18; font-family: Poppins, system-ui, sans-serif; font-size: 16px; line-height: 26px; overflow: hidden;">
+
+  <!-- Nav -->
+  <nav style="max-width: 1240px; margin: 0 auto; padding: 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+    <a href="Calm.dc.html" aria-label="PT7 home" style="display: flex; align-items: center;">
+      <svg width="86" height="70" viewBox="325 322 480 392" role="img" aria-label="PT7"><g fill="none" stroke="#1c1a18" stroke-width="11"><path d="M343 594V335H392C458 335 482 368 482 402C482 432 466 450 430 463"></path><path d="M503 368H671M588 368V571"></path></g><path d="M663 466H788C744 540 690 620 703 705" fill="none" stroke="#e5c100" stroke-width="11"></path></svg>
+    </a>
+    <div class="c-links" style="display: flex; align-items: center; gap: 32px; font-size: 15px;">
+      <a href="Calm.dc.html" style="color: #1c1a18; text-decoration: none;">Classes</a>
+      <a href="Calm.dc.html" style="color: #1c1a18; text-decoration: none;">Coaches</a>
+      <a href="#top" aria-current="page" style="color: #1c1a18; text-decoration: none; font-weight: 500; box-shadow: inset 0 -2px 0 #ffd700;">Prices</a>
+      <a href="Calm.dc.html" style="color: #1c1a18; text-decoration: none;">Academy</a>
+      <a href="Calm.dc.html" style="color: #1c1a18; text-decoration: none;">Visit</a>
+      <button type="button" class="c-menu" aria-label="Open menu" style="align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 1px solid #1c1a18; background: transparent; cursor: pointer;"><svg width="20" height="12" viewBox="0 0 20 12" aria-hidden="true"><path d="M0 1H20M0 11H20" stroke="#1c1a18" stroke-width="1.5"></path></svg></button>
+      <a href="#offer" class="c-cta" style="background: #1c1a18; color: #f5f0e6; text-decoration: none; padding: 12px 22px; font-weight: 500;">Book a class</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header id="top" class="p-sec" style="max-width: 1240px; margin: 0 auto; padding: 56px 24px 48px;">
+    <div style="font-size: 14px; font-weight: 500; letter-spacing: 0.04em; color: #7a6400;">Prices</div>
+    <h1 class="p-h1" style="margin: 16px 0 0; max-width: 820px; font-weight: 300; font-size: 72px; line-height: 1.04; letter-spacing: -0.03em;">Simple prices, <span style="font-weight: 500;">coached classes.</span></h1>
+    <p style="margin: 24px 0 0; max-width: 560px; font-size: 18px; line-height: 30px; color: #5c574f;">Every class is 45 minutes, with a coach on the floor. Start with the intro offer, then choose the way you like to train.</p>
+  </header>
+
+  <!-- Intro offer -->
+  <section id="offer" style="max-width: 1240px; margin: 0 auto; padding: 0 24px;">
+    <div class="p-offer" style="position: relative; overflow: hidden; background: #ffffff; padding: 32px 32px 32px 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+      <span aria-hidden="true" style="position: absolute; left: 0; top: 0; bottom: 0; width: 40px; clip-path: polygon(24px 0, 40px 0, 14px 100%, 0 100%); background: #ffd700;"></span>
+      <div>
+        <div style="font-size: 14px; font-weight: 500; color: #7a6400;">New here</div>
+        <div style="margin-top: 4px; font-size: 32px; font-weight: 300; line-height: 1.2;">3 group classes for <span style="font-weight: 500;">€50</span></div>
+        <div style="margin-top: 6px; font-size: 14px; color: #5c574f;">Any lane — Reformer, yoga, strength. For first-time clients.</div>
+      </div>
+      <a href="#offer" style="flex: 0 0 auto; background: #ffd700; color: #1c1a18; text-decoration: none; padding: 15px 28px; font-weight: 500;">Claim intro offer</a>
+    </div>
+  </section>
+
+  <!-- Plans -->
+  <section class="p-sec" style="max-width: 1240px; margin: 0 auto; padding: 96px 24px 112px;">
+    <h2 class="p-h2" style="margin: 0; font-weight: 300; font-size: 44px; line-height: 1.1; letter-spacing: -0.02em;">Choose how you <span style="font-weight: 500;">train.</span></h2>
+    <div class="p-tabs" role="tablist" aria-label="Price categories" style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 8px;">
+      <sc-for list="{{tabs}}" as="t" hint-placeholder-count="4">
+        <button type="button" role="tab" aria-selected="{{t.on}}" onClick="{{t.pick}}" style="padding: 12px 22px; border: 1px solid {{t.border}}; background: {{t.bg}}; color: {{t.fg}}; font-family: Poppins, sans-serif; font-size: 15px; font-weight: 500; cursor: pointer;">{{t.label}}</button>
+      </sc-for>
+    </div>
+    <p style="margin: 20px 0 0; max-width: 640px; color: #5c574f;">{{intro}}</p>
+
+    <sc-if value="{{isPrivate}}" hint-placeholder-val="{{false}}">
+      <div style="margin-top: 24px; display: flex; flex-wrap: wrap; gap: 8px;">
+        <sc-for list="{{levels}}" as="lv" hint-placeholder-count="3">
+          <button type="button" aria-pressed="{{lv.on}}" onClick="{{lv.pick}}" style="padding: 10px 18px; border: 0; border-bottom: 2px solid {{lv.line}}; background: transparent; color: #1c1a18; font-family: Poppins, sans-serif; font-size: 15px; font-weight: {{lv.weight}}; cursor: pointer;">{{lv.label}}</button>
+        </sc-for>
+      </div>
+      <p style="margin: 12px 0 0; font-size: 14px; color: #5c574f;">{{levelNote}}</p>
+    </sc-if>
+
+    <div style="margin-top: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+      <sc-for list="{{plans}}" as="p" hint-placeholder-count="4">
+        <article style="position: relative; overflow: hidden; background: #ffffff; padding: 28px 28px 28px 56px; display: flex; flex-direction: column; gap: 20px; box-shadow: inset 0 0 0 {{p.ring}} #1c1a18;">
+          <span aria-hidden="true" style="position: absolute; left: 0; top: 0; bottom: 0; width: 32px; clip-path: polygon(19px 0, 32px 0, 11px 100%, 0 100%); background: {{p.stripe}};"></span>
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 24px;">
+            <span style="font-size: 15px; font-weight: 500;">{{p.name}}</span>
+            <sc-if value="{{p.badge}}" hint-placeholder-val="{{false}}"><span style="background: #ffd700; color: #1c1a18; font-size: 12px; font-weight: 500; padding: 2px 10px;">{{p.badge}}</span></sc-if>
+          </div>
+          <div>
+            <div style="font-size: 44px; font-weight: 300; line-height: 1; letter-spacing: -0.02em;">{{p.price}}<span style="font-size: 16px; color: #5c574f; letter-spacing: 0;">{{p.unit}}</span></div>
+            <div style="margin-top: 8px; font-size: 15px; font-weight: 500; color: #7a6400;">{{p.per}}</div>
+          </div>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 20px; color: #5c574f; flex: 1 1 auto;">
+            <sc-for list="{{p.points}}" as="pt" hint-placeholder-count="2"><li style="padding-left: 14px; box-shadow: inset 2px 0 0 #ddd5c6;">{{pt}}</li></sc-for>
+          </ul>
+          <a href="#offer" style="text-align: center; text-decoration: none; padding: 12px 18px; font-weight: 500; background: {{p.btnBg}}; color: #1c1a18; box-shadow: inset 0 0 0 1px {{p.btnLine}};">{{p.cta}}</a>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- Included -->
+  <section style="background: #ffffff;">
+    <div class="p-facts p-sec" style="max-width: 1240px; margin: 0 auto; padding: 72px 24px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 24px;">
+      <sc-for list="{{facts}}" as="f" hint-placeholder-count="4">
+        <div style="position: relative; padding-left: 36px;">
+          <span aria-hidden="true" style="position: absolute; left: 0; top: 4px; bottom: 4px; width: 22px; clip-path: polygon(13px 0, 22px 0, 8px 100%, 0 100%); background: #ffd700;"></span>
+          <strong style="display: block; font-size: 17px; font-weight: 500;">{{f.title}}</strong>
+          <span style="display: block; margin-top: 4px; font-size: 14px; line-height: 22px; color: #5c574f;">{{f.body}}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="p-sec" style="max-width: 1240px; margin: 0 auto; padding: 112px 24px; display: flex; flex-wrap: wrap; gap: 40px 80px;">
+    <div style="flex: 1 1 320px; min-width: 0;">
+      <h2 class="p-h2" style="margin: 0; font-weight: 300; font-size: 44px; line-height: 1.1; letter-spacing: -0.02em;">Good to <span style="font-weight: 500;">know.</span></h2>
+      <p style="margin: 20px 0 0; max-width: 340px; color: #5c574f;">Still unsure which option fits? Message us and a coach will help you choose.</p>
+      <a href="https://wa.me/31685162693" style="display: inline-block; margin-top: 24px; color: #1c1a18; text-decoration: none; padding: 12px 22px; border: 1px solid #1c1a18; font-weight: 500;">WhatsApp us</a>
+    </div>
+    <div style="flex: 2 1 560px; min-width: 0; border-top: 1px solid #ddd5c6;">
+      <sc-for list="{{faq}}" as="q" hint-placeholder-count="6">
+        <details style="border-bottom: 1px solid #ddd5c6;">
+          <summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 0; font-size: 18px; font-weight: 400;">{{q.q}}<span class="faq-plus" aria-hidden="true" style="flex: 0 0 auto; font-size: 24px; font-weight: 300; line-height: 1; transition: transform 0.2s;">+</span></summary>
+          <p style="margin: 0 0 20px; max-width: 620px; color: #5c574f;">{{q.a}}</p>
+        </details>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="max-width: 1240px; margin: 0 auto; padding: 56px 24px 48px; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px; border-top: 1px solid #ddd5c6;">
+    <div>
+      <svg width="86" height="70" viewBox="325 322 480 392" role="img" aria-label="PT7"><g fill="none" stroke="#1c1a18" stroke-width="11"><path d="M343 594V335H392C458 335 482 368 482 402C482 432 466 450 430 463"></path><path d="M503 368H671M588 368V571"></path></g><path d="M663 466H788C744 540 690 620 703 705" fill="none" stroke="#e5c100" stroke-width="11"></path></svg>
+      <div style="margin-top: 12px; font-size: 14px; color: #5c574f;">Olympisch Stadion 15, Amsterdam · info@pt7.nl · +31 685 162693</div>
+    </div>
+    <div style="font-size: 13px; color: #5c574f;">All prices include VAT.</div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3000}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { tab: 'memberships', level: 'senior' }; }
+  renderVals() {
+    var self = this;
+    var GOLD = '#ffd700', STR = '#ff5a2e', NONE = '#ebe4d6';
+    function plan(o) {
+      var hi = !!o.badge;
+      return Object.assign({ unit: '', badge: '', points: [], cta: 'Buy', stripe: hi ? GOLD : NONE, ring: hi ? '1px' : '0px', btnBg: hi ? GOLD : 'transparent', btnLine: hi ? GOLD : '#1c1a18' }, o);
+    }
+    var tabs = [
+      { id: 'memberships', label: 'Memberships', intro: 'For training every week. Group classes, any day, one class per day. Memberships renew automatically and can be cancelled after the minimum period.' },
+      { id: 'packs', label: 'Class packs', intro: 'No commitment. A pack is valid for as many weeks as it has classes — a 10-class pack runs 10 weeks.' },
+      { id: 'private', label: 'Private', intro: 'One-on-one, 45 minutes, built entirely around you. Also the way we train during pregnancy.' },
+      { id: 'couples', label: 'Couples', intro: 'Train with a partner or friend, one coach for the two of you. Prices per person.' }
+    ];
+    var data = {
+      memberships: [
+        plan({ name: '4 classes a month', price: '€86', unit: ' / month', per: '€21.50 per class', points: ['Monthly, renews automatically', 'Cancel any time after month one'], cta: 'Start membership' }),
+        plan({ name: '8 classes a month', price: '€160', unit: ' / month', per: '€20 per class', points: ['Monthly, renews automatically', 'Cancel any time after month one'], cta: 'Start membership' }),
+        plan({ name: 'Unlimited', price: '€350', unit: ' / month', per: 'Unlimited classes', badge: 'Most popular', points: ['3-month commitment', 'Then renews monthly'], cta: 'Start membership' }),
+        plan({ name: 'Unlimited annual', price: '€250', unit: ' / month', per: '€3,000 per year', badge: 'Best value', points: ['12-month commitment', 'Includes a 4-week freeze'], cta: 'Start membership' })
+      ],
+      packs: [
+        plan({ name: 'Single class', price: '€37', per: '€37 per class', points: ['Valid 1 week'] }),
+        plan({ name: '5 classes', price: '€175', per: '€35 per class', points: ['Valid 5 weeks'] }),
+        plan({ name: '10 classes', price: '€300', per: '€30 per class', badge: 'Most popular', points: ['Valid 10 weeks'] }),
+        plan({ name: '20 classes', price: '€560', per: '€28 per class', points: ['Valid 20 weeks'] })
+      ],
+      couples: [
+        plan({ name: 'Single class', price: '€50', per: 'per person', points: ['Valid 1 week'] }),
+        plan({ name: '5 classes', price: '€225', per: '€45 per person, per class', points: ['Valid 5 weeks'] }),
+        plan({ name: '10 classes', price: '€430', per: '€43 per person, per class', badge: 'Best value', points: ['Valid 10 weeks'] }),
+        plan({ name: '20 classes', price: '€800', per: '€40 per person, per class', points: ['Valid 20 weeks'] })
+      ]
+    };
+    var levels = {
+      master: { label: 'Master coach', note: 'Elif Arzu Ogan — owner and head coach, 15+ years.', rows: [['€85', '€85'], ['€400', '€80'], ['€775', '€77.50'], ['€1,500', '€75']], pop: -1 },
+      senior: { label: 'Senior coach', note: 'Gökben Öztekin, Göknur Dipli.', rows: [['€80', '€80'], ['€375', '€75'], ['€725', '€72.50'], ['€1,400', '€70']], pop: 2 },
+      junior: { label: 'Coach', note: 'Gülce Koç, Lal Avgen, Nisan Atalay, Kelly Tin, E. Gamze Karadağ.', rows: [['€70', '€70'], ['€325', '€65'], ['€625', '€62.50'], ['€1,200', '€60']], pop: -1 }
+    };
+    var names = ['Single session', '5 sessions', '10 sessions', '20 sessions'];
+    var weeks = ['Valid 1 week', 'Valid 5 weeks', 'Valid 10 weeks', 'Valid 20 weeks'];
+    var L = levels[self.state.level];
+    data['private'] = L.rows.map(function (r, i) {
+      return plan({ name: names[i], price: r[0], per: r[1] + ' per session', badge: i === L.pop ? 'Most popular' : '', points: [weeks[i], '45 min, one-on-one'] });
+    });
+    var cur = tabs.filter(function (t) { return t.id === self.state.tab; })[0];
+    return {
+      tabs: tabs.map(function (t) {
+        var on = t.id === self.state.tab;
+        return { label: t.label, on: on ? 'true' : 'false', bg: on ? '#1c1a18' : 'transparent', fg: on ? '#f5f0e6' : '#1c1a18', border: on ? '#1c1a18' : '#cfc6b6', pick: function () { self.setState({ tab: t.id }); } };
+      }),
+      intro: cur.intro,
+      isPrivate: self.state.tab === 'private',
+      levels: ['master', 'senior', 'junior'].map(function (k) {
+        var on = k === self.state.level;
+        return { label: levels[k].label, on: on ? 'true' : 'false', line: on ? '#ffd700' : 'transparent', weight: on ? 500 : 400, pick: function () { self.setState({ level: k }); } };
+      }),
+      levelNote: L.note,
+      plans: data[self.state.tab],
+      facts: [
+        { title: '45 minutes', body: 'Every class, every lane.' },
+        { title: 'Up to 10 people', body: 'Small groups so your coach sees every rep.' },
+        { title: 'All seven lanes', body: 'Memberships and packs work for Reformer, yoga, mat and strength.' },
+        { title: 'A coach on the floor', body: 'Corrections, progressions and a plan — in every class.' }
+      ],
+      faq: [
+        { q: 'How does pack validity work?', a: 'A pack is valid for as many weeks as it has classes, starting on the day you buy it. A 5-class pack runs 5 weeks; a 20-class pack runs 20 weeks.' },
+        { q: 'How do I cancel a membership?', a: 'Memberships renew automatically. Cancel before your renewal date by emailing info@pt7.nl or calling +31 685 162693, after the minimum period of your plan.' },
+        { q: 'Can I freeze my membership?', a: 'The annual unlimited membership includes a 4-week freeze. Ask us about other plans.' },
+        { q: 'I am pregnant. Can I join group classes?', a: 'During pregnancy we train one-on-one only, so your coach can adapt every exercise safely. See the Private tab.' },
+        { q: 'I have an injury. Is that a problem?', a: 'Tell us before you book. Our coaches adapt exercises, and private sessions are a good way to start back.' },
+        { q: 'What is the difference between coach levels?', a: 'Private sessions are priced by experience: master coach (Elif), senior coaches and coaches. Every coach is certified and trained in the PT7 method.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

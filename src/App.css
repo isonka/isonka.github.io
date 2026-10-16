@@ -1,18 +1,18 @@
 :root {
-  --primary-color: #ffd700;
-  --text-color: #111;
-  --background-light: #fff;
-  --background-dark: #111;
-  --accent-color: #e5c100;
+  --primary-color: var(--gold);
+  --text-color: var(--ink);
+  --background-light: var(--ground-raised);
+  --background-dark: #1c1a18;
+  --accent-color: var(--gold-deep);
   --transition: all 0.3s ease;
 
   --radius-sm: 0px;
   --radius-md: 0px;
   --radius-lg: 0px;
   --radius-xl: 0px;
-  --radius-pill: 1000px;
+  --radius-pill: 0px;
   --radius-circle: 50%;
-  --radius-media: 14px;
+  --radius-media: 0px;
 }
 
 * {
@@ -22,22 +22,20 @@
 }
 
 body {
-  font-family: 'Poppins', 'Gotham', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 18px;
-  line-height: 1.61;
-  color: var(--text-color);
-  background-color: #fffdf4;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--ink);
+  background-color: var(--ground);
   overflow-x: clip;
   max-width: 100%;
 }
 
 h1, h2, h3, h4 {
-  font-weight: 700;
-  line-height: 1.05;
+  font-weight: 300;
+  line-height: 1.08;
   letter-spacing: -0.02em;
 }
 

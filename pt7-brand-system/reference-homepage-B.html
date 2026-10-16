@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PT7 — Find your lane (calm)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;display=swap">
+<style>
+body{margin:0;background:#f5f0e6;}
+a{color:#7a6400;}a:hover{color:#1c1a18;}
+.nw{white-space:nowrap;}
+.c-menu{display:none;}
+@media (max-width: 720px){
+  .c-links a:not(.c-cta){display:none;}
+  .c-menu{display:inline-flex !important;}
+  .c-hero{padding-top:24px !important;}
+  .c-art{order:-1;flex:1 1 100% !important;min-height:220px !important;}
+  .c-sec{padding-top:72px !important;padding-bottom:72px !important;}
+  .c-h1{font-size:52px !important;}
+  .c-h2{font-size:36px !important;}
+  .c-facts{grid-template-columns:repeat(2, minmax(0, 1fr)) !important;}
+  .c-lanes{flex-direction:row !important;flex-wrap:wrap;gap:8px;border-top:0 !important;}
+  .c-lanes button{width:auto !important;flex:1 1 auto;padding:10px 14px !important;border:1px solid #ddd5c6 !important;}
+  .c-lanes .c-ltag{display:none;}
+  .c-panel{padding:28px 24px 28px 52px !important;}
+  .c-offer{flex-direction:column !important;}
+  .c-offer-stub{flex:0 0 auto !important;border-left:0 !important;border-top:2px dashed #ddd5c6;}
+}
+</style>
+</helmet>
+<div style="background: #f5f0e6; color: #1c1a18; font-family: Poppins, system-ui, sans-serif; font-size: 16px; line-height: 26px; overflow: hidden;">
+
+  <!-- Nav -->
+  <nav style="max-width: 1240px; margin: 0 auto; padding: 24px; display: flex; flex-wrap: nowrap; align-items: center; justify-content: space-between; gap: 16px;">
+    <a href="#top" aria-label="PT7 home" style="display: flex; align-items: center;">
+      <svg width="86" height="70" viewBox="325 322 480 392" role="img" aria-label="PT7"><g fill="none" stroke="#1c1a18" stroke-width="11"><path d="M343 594V335H392C458 335 482 368 482 402C482 432 466 450 430 463"></path><path d="M503 368H671M588 368V571"></path></g><path d="M663 466H788C744 540 690 620 703 705" fill="none" stroke="#e5c100" stroke-width="11"></path></svg>
+    </a>
+    <div class="c-links" style="display: flex; align-items: center; gap: 32px; font-size: 15px; font-weight: 400;">
+      <a href="#train" style="color: #1c1a18; text-decoration: none;">Classes</a>
+      <a href="#coaches" style="color: #1c1a18; text-decoration: none;">Coaches</a>
+      <a href="#first" style="color: #1c1a18; text-decoration: none;">Prices</a>
+      <a href="#academy" style="color: #1c1a18; text-decoration: none;">Academy</a>
+      <a href="#visit" style="color: #1c1a18; text-decoration: none;">Visit</a>
+      <button type="button" class="c-menu" aria-label="Open menu" style="align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 1px solid #1c1a18; background: transparent; cursor: pointer;"><svg width="20" height="12" viewBox="0 0 20 12" aria-hidden="true"><path d="M0 1H20M0 11H20" stroke="#1c1a18" stroke-width="1.5"></path></svg></button>
+      <a href="#first" class="c-cta" style="background: #1c1a18; color: #f5f0e6; text-decoration: none; padding: 12px 22px; font-weight: 500;">Book a class</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="top" class="c-hero" style="max-width: 1240px; margin: 0 auto; padding: 56px 24px 96px; display: flex; flex-wrap: wrap; align-items: center; gap: 32px 48px;">
+    <div style="flex: 1 1 520px; min-width: 0;">
+      <div style="font-size: 14px; font-weight: 500; letter-spacing: 0.04em; color: #7a6400;">Pilates · Yoga · Strength — Olympisch Stadion, Amsterdam</div>
+      <h1 class="c-h1" style="margin: 20px 0 0; font-weight: 300; font-size: 84px; line-height: 1.02; letter-spacing: -0.03em;">Find your <span style="font-weight: 500;">lane.</span></h1>
+      <p style="margin: 28px 0 0; max-width: 460px; font-size: 18px; line-height: 30px; color: #5c574f;">Seven ways to train, one coach beside you. Reformer and mat Pilates, yoga, strength and private sessions — in small classes of up to ten.</p>
+      <div style="margin-top: 36px; display: flex; flex-wrap: wrap; gap: 12px;">
+        <a href="#first" style="background: #ffd700; color: #1c1a18; text-decoration: none; padding: 15px 28px; font-weight: 500;">Book your first class</a>
+        <a href="#train" style="color: #1c1a18; text-decoration: none; padding: 14px 26px; border: 1px solid #1c1a18; font-weight: 500;">Explore classes</a>
+      </div>
+    </div>
+    <div class="c-art" style="flex: 1 1 440px; min-width: 0; min-height: 420px; position: relative;">
+      <svg viewBox="200 60 700 700" preserveAspectRatio="xMidYMid meet" style="position: absolute; inset: 0; width: 100%; height: 100%;" aria-hidden="true">
+        <path d="M216 760A684 684 0 0 1 900 76L900 138A622 622 0 0 0 278 760Z" fill="#ffd700"></path>
+        <g fill="none" stroke="#cfc6b6" stroke-width="1.5">
+          <path d="M650 760A250 250 0 0 1 900 510"></path>
+          <path d="M588 760A312 312 0 0 1 900 448"></path>
+          <path d="M526 760A374 374 0 0 1 900 386"></path>
+          <path d="M464 760A436 436 0 0 1 900 324"></path>
+          <path d="M402 760A498 498 0 0 1 900 262"></path>
+          <path d="M340 760A560 560 0 0 1 900 200"></path>
+          <path d="M278 760A622 622 0 0 1 900 138"></path>
+        </g>
+        <g font-family="Poppins, sans-serif" font-weight="300" font-size="30" text-anchor="middle" fill="#9a9387">
+          <text x="679" y="599">1</text><text x="630" y="561">2</text><text x="581" y="523">3</text><text x="532" y="484">4</text><text x="483" y="446">5</text><text x="434" y="408">6</text>
+          <text x="385" y="370" fill="#1c1a18" font-weight="500">7</text>
+        </g>
+      </svg>
+    </div>
+  </header>
+
+  <!-- Facts -->
+  <section aria-label="At a glance" style="border-top: 1px solid #ddd5c6; border-bottom: 1px solid #ddd5c6;">
+    <div class="c-facts" style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));">
+      <sc-for list="{{facts}}" as="f" hint-placeholder-count="4">
+        <div style="padding: 20px 0; display: flex; align-items: baseline; gap: 10px;">
+          <span style="font-size: 28px; font-weight: 300; line-height: 1;">{{f.value}}</span>
+          <span style="font-size: 14px; color: #5c574f;">{{f.label}}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- Lanes -->
+  <section id="train" class="c-sec" style="max-width: 1240px; margin: 0 auto; padding: 120px 24px;">
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px;">
+      <h2 class="c-h2" style="margin: 0; font-weight: 300; font-size: 52px; line-height: 1.08; letter-spacing: -0.02em;">Seven lanes, <span style="font-weight: 500;">one plan.</span></h2>
+      <p style="margin: 0; max-width: 380px; color: #5c574f;">Pilates is where we started. Mix lanes through the week — your coach makes sure they fit together.</p>
+    </div>
+    <div style="margin-top: 56px; display: flex; flex-wrap: wrap; gap: 24px;">
+      <div class="c-lanes" style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; border-top: 1px solid #ddd5c6;">
+        <sc-for list="{{lanes}}" as="l" hint-placeholder-count="7">
+          <button type="button" onClick="{{l.pick}}" aria-pressed="{{l.on}}" style="display: flex; align-items: center; gap: 18px; width: 100%; padding: 16px 12px; border: 0; border-bottom: 1px solid #ddd5c6; background: {{l.bg}}; color: #1c1a18; text-align: left; cursor: pointer; font-family: Poppins, sans-serif;">
+            <span style="width: 24px; font-size: 15px; font-weight: 500; color: #7a6400;">{{l.n}}</span>
+            <span style="flex: 1 1 auto; font-size: 20px; font-weight: {{l.weight}};">{{l.name}}</span>
+            <span class="c-ltag" style="font-size: 13px; color: {{l.tagInk}};">{{l.tag}}</span>
+          </button>
+        </sc-for>
+      </div>
+      <div class="c-panel" style="flex: 1 1 520px; min-width: 0; position: relative; overflow: hidden; background: #ffffff; padding: 44px 44px 44px 72px; min-height: 380px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px;">
+        <span aria-hidden="true" style="position: absolute; left: 0; top: 0; bottom: 0; width: 40px; clip-path: polygon(24px 0, 40px 0, 14px 100%, 0 100%); background: {{sel.color}};"></span>
+        <div>
+          <span style="font-size: 14px; font-weight: 500; color: #5c574f;">Lane {{sel.n}} · {{sel.tag}}</span>
+          <h3 style="margin: 12px 0 0; font-weight: 300; font-size: 48px; line-height: 1.05; letter-spacing: -0.02em;">{{sel.name}}</h3>
+          <p style="margin: 20px 0 0; max-width: 440px; font-size: 17px; line-height: 28px; color: #3d3a36;">{{sel.pitch}}</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px;">
+          <dl style="margin: 0; display: flex; gap: 32px; font-size: 14px;">
+            <div><dt style="color: #8a8378;">Format</dt><dd style="margin: 2px 0 0; font-weight: 500;">{{sel.format}}</dd></div>
+            <div><dt style="color: #8a8378;">Equipment</dt><dd style="margin: 2px 0 0; font-weight: 500;">{{sel.kit}}</dd></div>
+          </dl>
+          <a href="#first" style="color: #1c1a18; text-decoration: none; padding: 12px 22px; border: 1px solid #1c1a18; font-weight: 500;">See times</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coaches -->
+  <section id="coaches" style="background: #ffffff;">
+    <div class="c-sec" style="max-width: 1240px; margin: 0 auto; padding: 120px 24px;">
+      <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px;">
+        <h2 class="c-h2" style="margin: 0; font-weight: 300; font-size: 52px; line-height: 1.08; letter-spacing: -0.02em;">Meet your <span style="font-weight: 500;">coaches.</span></h2>
+        <p style="margin: 0; max-width: 380px; color: #5c574f;">Certified Pilates, yoga and strength coaches who know your name, your goals and the rep you tried to skip.</p>
+      </div>
+      <div style="margin-top: 56px; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 32px 20px;">
+        <sc-for list="{{coaches}}" as="c" hint-placeholder-count="8">
+          <article style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="aspect-ratio: 4 / 5; overflow: hidden; background: #ebe4d6;">
+              <img src="{{c.photo}}" alt="{{c.full}}" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+            </div>
+            <div style="position: relative; padding-left: 36px;">
+              <span aria-hidden="true" style="position: absolute; left: 0; top: 2px; bottom: 2px; width: 22px; clip-path: polygon(13px 0, 22px 0, 8px 100%, 0 100%); background: {{c.color}};"></span>
+              <strong style="display: block; font-size: 18px; font-weight: 500; line-height: 24px;">{{c.full}}</strong>
+              <span style="display: block; font-size: 14px; line-height: 20px; color: #5c574f;">{{c.role}}</span>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- First class offer -->
+  <section id="first" class="c-sec" style="max-width: 1240px; margin: 0 auto; padding: 120px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 40px 80px;">
+    <div style="flex: 1 1 380px; min-width: 0;">
+      <h2 class="c-h2" style="margin: 0; font-weight: 300; font-size: 52px; line-height: 1.08; letter-spacing: -0.02em;">New here? <span style="font-weight: 500;">Start with three.</span></h2>
+      <p style="margin: 20px 0 0; max-width: 420px; color: #5c574f;">Three group classes to try different lanes — Reformer, yoga, strength — or the same one three times.</p>
+    </div>
+    <div class="c-offer" style="flex: 1 1 520px; min-width: 0; display: flex; background: #ffffff; border: 1px solid #ddd5c6;">
+      <div style="flex: 1 1 auto; padding: 32px;">
+        <div style="font-size: 14px; font-weight: 500; color: #7a6400;">Intro offer</div>
+        <div style="margin-top: 8px; font-size: 40px; font-weight: 300; line-height: 1.1;">3 group classes</div>
+        <div style="margin-top: 8px; font-size: 14px; color: #5c574f;">Any lane · valid for new members</div>
+      </div>
+      <div class="c-offer-stub" style="flex: 0 0 200px; padding: 32px; border-left: 2px dashed #ddd5c6; display: flex; flex-direction: column; justify-content: space-between; gap: 16px;">
+        <span style="font-size: 44px; font-weight: 500; line-height: 1;">€50</span>
+        <a href="#first" style="background: #ffd700; color: #1c1a18; text-decoration: none; padding: 12px 18px; font-weight: 500; text-align: center;">Claim offer</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academy: the one dark section -->
+  <section id="academy" style="background: #1c1a18; color: #f5f0e6;">
+    <div class="c-sec" style="max-width: 1240px; margin: 0 auto; padding: 112px 24px; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 40px;">
+      <div style="flex: 1 1 560px; min-width: 0;">
+        <svg width="120" height="98" viewBox="325 322 480 392" role="img" aria-label="PT7 Academy"><g fill="none" stroke="#f5f0e6" stroke-width="11"><path d="M343 594V335H392C458 335 482 368 482 402C482 432 466 450 430 463"></path><path d="M503 368H671M588 368V571"></path></g><path d="M663 466H788C744 540 690 620 703 705" fill="none" stroke="#ffd700" stroke-width="11"></path><text x="338" y="682" font-family="Poppins, sans-serif" font-size="50" letter-spacing="7" fill="#f5f0e6">Academy</text></svg>
+        <h2 class="c-h2" style="margin: 32px 0 0; font-weight: 300; font-size: 52px; line-height: 1.08; letter-spacing: -0.02em;">Become a <span style="font-weight: 500;">Pilates teacher.</span></h2>
+        <p style="margin: 20px 0 0; max-width: 480px; color: #c9c3b8;">A PMA ITTAP-approved instructor programme, taught in the studio by the coaches you train with.</p>
+      </div>
+      <div style="flex: 0 1 320px; display: flex; flex-direction: column; gap: 12px;">
+        <div style="border: 1px solid #3d3a36; padding: 24px;">
+          <div style="font-size: 14px; color: #a8a39a;">Next cohort</div>
+          <div style="margin-top: 4px; font-size: 32px; font-weight: 300;">November 2026</div>
+          <div style="margin-top: 4px; font-size: 14px; color: #a8a39a;">[X] seats left</div>
+        </div>
+        <a href="#academy" style="background: #ffd700; color: #1c1a18; text-decoration: none; padding: 15px 24px; font-weight: 500; text-align: center;">Apply for a seat</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="c-sec" style="max-width: 1240px; margin: 0 auto; padding: 120px 24px;">
+    <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 16px;">
+      <h2 class="c-h2" style="margin: 0; font-weight: 300; font-size: 52px; line-height: 1.08; letter-spacing: -0.02em;">In their <span style="font-weight: 500;">words.</span></h2>
+      <span style="font-size: 15px; color: #5c574f;">4.9 on ClassPass · 4.8 on Google</span>
+    </div>
+    <div style="margin-top: 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+      <sc-for list="{{reviews}}" as="r" hint-placeholder-count="3">
+        <figure style="margin: 0; padding: 32px; background: #ffffff; display: flex; flex-direction: column; justify-content: space-between; gap: 24px;">
+          <blockquote style="margin: 0; font-size: 22px; font-weight: 300; line-height: 32px;">“{{r.quote}}”</blockquote>
+          <figcaption style="font-size: 14px; color: #5c574f;"><strong style="font-weight: 500; color: #1c1a18;">{{r.name}}</strong> · {{r.source}}</figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- Visit: the location story -->
+  <section id="visit" style="background: #ebe4d6;">
+    <div class="c-sec" style="max-width: 1240px; margin: 0 auto; padding: 120px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 40px 80px;">
+      <div style="flex: 1 1 380px; min-width: 0;">
+        <div style="font-size: 14px; font-weight: 500; color: #7a6400;">The venue</div>
+        <h2 class="c-h2" style="margin: 16px 0 0; font-weight: 300; font-size: 52px; line-height: 1.08; letter-spacing: -0.02em;">Where the first <span style="font-weight: 500;">flame</span> burned.</h2>
+        <p style="margin: 20px 0 0; max-width: 440px; color: #3d3a36;">In 1928 Amsterdam hosted the Games, and for the first time an Olympic flame burned — in a bowl on top of the Marathon Tower. The stadium was built for Olympians. PT7 now trains in unit 15, in its upper-left corner.</p>
+        <p style="margin: 24px 0 0; font-size: 15px; line-height: 24px;">Olympisch Stadion 15, 1076 DE Amsterdam<br>Tram 24 · bike racks at the door</p>
+      </div>
+      <div style="flex: 1 1 520px; min-width: 0;">
+        <svg viewBox="0 -30 560 390" role="img" aria-label="Line map of the stadium: PT7 in the upper-left corner, the Marathon Tower at the top" style="display: block; width: 100%; height: auto;">
+          <rect x="20" y="40" width="520" height="280" rx="140" fill="none" stroke="#1c1a18" stroke-width="1.5"></rect>
+          <rect x="60" y="80" width="440" height="200" rx="100" fill="none" stroke="#b8ae9c" stroke-width="1.5"></rect>
+          <rect x="252" y="8" width="18" height="40" fill="none" stroke="#1c1a18" stroke-width="1.5"></rect>
+          <path d="M255 0C254 -8 260 -14 264 -22C264 -14 270 -8 268 0Z" fill="#ffd700"></path>
+          <text x="261" y="68" text-anchor="middle" font-family="Poppins, sans-serif" font-size="11" fill="#5c574f">Marathon Tower</text>
+          <circle cx="62" cy="82" r="10" fill="#ffd700" stroke="#1c1a18" stroke-width="1.5"></circle>
+          <line x1="62" y1="82" x2="120" y2="150" stroke="#1c1a18" stroke-width="1"></line>
+          <text x="128" y="158" font-family="Poppins, sans-serif" font-weight="500" font-size="20" fill="#1c1a18">PT7 · Unit 15</text>
+          <text x="128" y="178" font-family="Poppins, sans-serif" font-size="12" fill="#5c574f">Upper-left corner</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="max-width: 1240px; margin: 0 auto; padding: 64px 24px 48px; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px; border-top: 1px solid #ddd5c6;">
+    <div>
+      <svg width="98" height="80" viewBox="325 322 480 392" role="img" aria-label="PT7"><g fill="none" stroke="#1c1a18" stroke-width="11"><path d="M343 594V335H392C458 335 482 368 482 402C482 432 466 450 430 463"></path><path d="M503 368H671M588 368V571"></path></g><path d="M663 466H788C744 540 690 620 703 705" fill="none" stroke="#e5c100" stroke-width="11"></path></svg>
+      <div style="margin-top: 12px; font-size: 14px; color: #5c574f;">Pilates, yoga and strength · Olympisch Stadion, Amsterdam</div>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 12px 28px; font-size: 14px;">
+      <a href="#train" style="color: #1c1a18; text-decoration: none;">Classes</a>
+      <a href="#coaches" style="color: #1c1a18; text-decoration: none;">Coaches</a>
+      <a href="#academy" style="color: #1c1a18; text-decoration: none;">Academy</a>
+      <a href="https://www.instagram.com/pt7amsterdam" style="color: #1c1a18; text-decoration: none;">Instagram</a>
+      <a href="mailto:info@pt7.nl" style="color: #1c1a18; text-decoration: none;">info@pt7.nl</a>
+      <span style="color: #5c574f;">EN | NL</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6000}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { lane: 1 }; }
+  renderVals() {
+    var self = this;
+    var col = { Pilates: '#ffd700', Strength: '#ff5a2e', Yoga: '#3ddc97', Private: '#1c1a18' };
+    var data = [
+      { n: 1, name: 'Reformer', tag: 'Pilates', pitch: 'Springs, straps and a coach who corrects your alignment before it drifts. Where PT7 started.', format: 'Group · 45 min', kit: 'Reformer, trapeze table' },
+      { n: 2, name: 'Strength', tag: 'Strength', pitch: 'Squat, hinge, press and pull, coached carefully. Heavy enough to count, clean enough to last.', format: 'Small group', kit: 'Rack, barbell, dumbbells' },
+      { n: 3, name: 'Yoga', tag: 'Yoga', pitch: 'Flow, hold and breathe. The lane that makes every other lane feel easier.', format: 'Group · max 8', kit: 'Mat, blocks, straps' },
+      { n: 4, name: 'Mat Pilates', tag: 'Pilates', pitch: 'Classical Pilates on the floor. No machine to lean on — just you and your centre.', format: 'Group · max 8', kit: 'Mat, small props' },
+      { n: 5, name: 'TRX & cardio', tag: 'Strength', pitch: 'Suspension work and rower intervals for the stamina to match your core.', format: 'Small group', kit: 'TRX, Concept2' },
+      { n: 6, name: 'Pre- & postnatal', tag: 'Private', pitch: 'One-on-one training through every trimester and the months after.', format: '1:1', kit: 'Reformer + mat' },
+      { n: 7, name: 'Private', tag: 'Private', pitch: 'One coach, any discipline. A plan built around your goal, your injury or your next race.', format: '1:1 · 55 min', kit: 'Whatever it takes' }
+    ];
+    var lanes = data.map(function (l) {
+      var on = l.n === self.state.lane;
+      return Object.assign({}, l, {
+        on: on ? 'true' : 'false',
+        bg: on ? '#ffffff' : 'transparent',
+        weight: on ? 500 : 300,
+        tagInk: '#8a8378',
+        pick: function () { self.setState({ lane: l.n }); }
+      });
+    });
+    var s = data.filter(function (l) { return l.n === self.state.lane; })[0];
+    var B = '/_blob/';
+    return {
+      lanes: lanes,
+      sel: Object.assign({}, s, { color: col[s.tag] }),
+      facts: [
+        { value: '7', label: 'ways to train' },
+        { value: '≤10', label: 'people per class' },
+        { value: '45', label: 'minutes a class' },
+        { value: '1', label: 'coach on the floor' }
+      ],
+      coaches: [
+        { full: 'Elif Arzu Ogan', role: 'Head coach · Pilates & strength', color: '#ffd700', photo: B + '16229bf3fd3ccefd5de5bf04e27438b4' },
+        { full: 'Gökben Öztekin', role: 'Comprehensive Pilates', color: '#ffd700', photo: B + '718e764b1cf6bb4b5552d995d9604438' },
+        { full: 'Göknur Dipli', role: 'Pilates & strength', color: '#ff5a2e', photo: B + 'd3b7b0465433e11c6308ca9ea2af554f' },
+        { full: 'Gülce Koç', role: 'Reformer Pilates', color: '#ffd700', photo: B + '5dc51ef1cf664888c72b83a4ac5f64e4' },
+        { full: 'Lal Avgen', role: 'Reformer Pilates', color: '#ffd700', photo: B + '7e43bf64eec7d20134b75756b39a273b' },
+        { full: 'Nisan Atalay', role: 'Reformer Pilates', color: '#ffd700', photo: B + 'ef5acd7c122387333243b571e7278a95' },
+        { full: 'Kelly Tin', role: 'Reformer Pilates', color: '#ffd700', photo: B + 'df43418214222d983b7634cbdaea4669' },
+        { full: 'E. Gamze Karadağ', role: 'Reformer Pilates', color: '#ffd700', photo: B + '40b4f6cf422659d01b63fda7bb4825a4' }
+      ],
+      reviews: [
+        { quote: 'Elif trained me until 38.5 weeks. A comfortable pregnancy and a smooth delivery.', name: 'Lot', source: 'Google' },
+        { quote: 'Professional, thoughtful — exactly the Reformer studio I spent two years looking for.', name: 'Flaminia', source: 'Google' },
+        { quote: 'Six months in. Incredible results and a motivating atmosphere.', name: 'Yeşim', source: 'ClassPass' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

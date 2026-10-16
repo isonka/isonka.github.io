@@ -1,0 +1,31 @@
+---
+description: PT7 brand system — apply to all UI, pages, emails and components for pt7.nl
+globs: ["**/*.html", "**/*.css", "**/*.scss", "**/*.jsx", "**/*.tsx", "**/*.vue", "**/*.astro", "**/*.md"]
+alwaysApply: true
+---
+
+# PT7 brand rules
+
+Read `brand/README.md` and `pt7-brand-system/README.md` for the full brand book. Use `brand/tokens.css` (CSS variables) — never hard-code colours, fonts or spacing that a token covers.
+
+## Must
+- Font: Poppins only (300 light, 400 regular, 500 medium). No condensed faces, no italics for emphasis, no ALL CAPS.
+- Headlines: Poppins Light, sentence case, tight tracking; the key word in Medium. e.g. `Find your <b>lane.</b>`
+- Eyebrow line above headlines: 14px Medium in `var(--gold-text)`.
+- Background: `var(--ground)` cream. Cards/sections `var(--ground-raised)` white, quiet bands `var(--ground-stone)`. At most ONE charcoal section per page (`data-theme="evening"`), normally the Academy.
+- Gold `var(--gold)` is a fill only (primary buttons, lane 7, the 7-stripe). Text on gold uses `var(--on-accent)`. Gold-coloured text uses `var(--gold-text)`.
+- Discipline accents only in the 7-stripe: gold = Pilates, `var(--strength)` = Strength, `var(--yoga)` = Yoga, `var(--ink)` = Private.
+- Square corners (radius 0), 1px hairlines in `var(--line)`, no shadows, no gradients.
+- Buttons: primary gold + `on-accent`; secondary 1px ink outline; header "Book a class" ink fill. Sentence case, Poppins 500, min 44px tall.
+- Logo: use files in `public/brand/logos/`. Never redraw, recolour beyond the provided variants, or add a flame/stripe to it.
+- Mobile: no horizontal scrolling inside sections; lists wrap; hero art goes above the copy.
+- Contrast: text ≥ 4.5:1 — use `ink` / `ink-muted` on cream, never gold text on cream.
+
+## Voice
+Warm, precise, short — a coach, not a gym and not a spa. Sentence case everywhere. No exclamation marks, no "crush/grind/beast", no "indulge/pamper/journey".
+
+## Location story (Stadion only)
+The 1928 Olympic flame / Olympians story belongs only in the venue/"visit us" section and press — never in brand headlines, never in the logo. PT7 is in unit 15, the upper-left corner of the Olympisch Stadion (not under the tower).
+
+## Reference
+`pt7-brand-system/reference-homepage-B.html` is the approved homepage design.

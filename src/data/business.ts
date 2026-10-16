@@ -16,7 +16,7 @@ export const business = {
   url: BASE_URL,
   logo: `${BASE_URL}/assets/images/pt7logo.webp`,
   description:
-    "Boutique Reformer Pilates studio at Amsterdam Museumplein offering small group classes (max 5), private sessions, TRX, and strength training with 15+ years of expertise.",
+    'Boutique Pilates, yoga and strength studio at Olympisch Stadion, Amsterdam. Small group classes (up to 10), private sessions, TRX, and instructor training with 15+ years of expertise.',
   foundingDate: '2009',
   telephone: '+31685162693',
   email: 'info@pt7.nl',
@@ -25,7 +25,8 @@ export const business = {
   currenciesAccepted: 'EUR',
   availableLanguage: ['English', 'Dutch', 'Turkish'],
   areaServed: 'Amsterdam',
-  hasMap: 'https://maps.app.goo.gl/wrhyzYbov9eiGQJw5',
+  hasMap:
+    'https://www.google.com/maps/search/?api=1&query=Olympisch+Stadion+15%2C+1076+DE+Amsterdam',
 
   images: [
     `${BASE_URL}/assets/images/studio.webp`,
@@ -34,16 +35,16 @@ export const business = {
   ],
 
   address: {
-    streetAddress: 'Van Baerlestraat 76C',
+    streetAddress: 'Olympisch Stadion 15',
     addressLocality: 'Amsterdam',
-    postalCode: '1071 BB',
+    postalCode: '1076 DE',
     addressRegion: 'Noord-Holland',
     addressCountry: 'NL',
   },
 
   geo: {
-    latitude: 52.3573109,
-    longitude: 4.8788535,
+    latitude: 52.3434,
+    longitude: 4.8542,
   },
 
   openingHours: [
@@ -63,11 +64,14 @@ export const business = {
   knowsAbout: [
     'Pilates',
     'Reformer Pilates',
+    'Mat Pilates',
+    'Yoga',
     'Tower Reformer',
     'Cadillac Pilates',
     'One-on-one Training',
     'TRX',
     'Strength Training',
+    'Prenatal Pilates',
     'Small Group Training',
   ],
 

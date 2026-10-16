@@ -1,43 +1,45 @@
 .footer {
   width: 100%;
-  background: var(--ink, #111);
-  color: #fff;
-  padding: 56px 24px 40px;
-  text-align: left;
+  background: var(--ground);
+  color: var(--ink);
+  padding: 0;
   margin-top: auto;
   position: relative;
   z-index: 1;
   flex-shrink: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: var(--hairline) solid var(--line);
 }
 
 .footer-inner {
-  max-width: var(--page-max-width, 1100px);
+  max-width: var(--page-max-width);
   margin: 0 auto;
+  padding: 64px 24px 48px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
 }
 
-.footer-brand {
-  margin: 0 0 8px;
-  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  line-height: 1.15;
-  color: #fff;
+.footer-brand-block {
+  flex: 1 1 280px;
+}
+
+.footer-logo-link {
+  display: inline-flex;
+  line-height: 0;
 }
 
 .footer-tag {
-  margin: 0 0 28px;
-  max-width: 36em;
-  font-size: 0.95rem;
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.55);
+  margin: 12px 0 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--ink-muted);
+  max-width: 28em;
 }
 
 .footer-nav {
-  padding: 20px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 24px;
+  flex: 1 1 auto;
 }
 
 .footer-links {
@@ -46,109 +48,54 @@
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 22px;
-}
-
-.footer-links li {
-  margin: 0;
+  gap: 12px 28px;
+  font-size: 14px;
 }
 
 .footer-links li a {
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--ink);
   text-decoration: none;
-  font-weight: 500;
-  font-size: 0.9rem;
-  letter-spacing: -0.01em;
-  line-height: 1.3;
-  transition: color 0.2s ease;
+  font-weight: 400;
 }
 
 .footer-links li a:hover {
-  color: var(--gold, #ffd700);
+  color: var(--gold-text);
 }
 
 .footer-meta {
+  flex: 1 1 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 12px 24px;
   align-items: center;
+  padding-top: 8px;
 }
 
 .lang-switch {
   display: flex;
   align-items: center;
   gap: 2px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: var(--radius-pill, 999px);
-  padding: 3px;
 }
 
 .lang-switch a,
-.lang-switch span[aria-current='page'] {
-  color: #fff;
-  text-decoration: none;
-  line-height: 1;
-  display: block;
-  padding: 5px 9px;
-  border-radius: var(--radius-pill, 999px);
-}
-
-.lang-switch span[aria-hidden='true'] {
-  display: none;
-}
-
-.lang-switch a {
-  opacity: 0.55;
-}
-
-.lang-switch a:hover {
-  opacity: 1;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-/* Needs to match the specificity of the `.lang-switch a, .lang-switch
-   span[aria-current='page']` rule above, or that rule's `color: #fff` wins on
-   specificity and the active language renders white on gold. */
-.lang-switch span[aria-current='page'] {
-  opacity: 1;
-  color: var(--ink, #111);
-  background: var(--gold, #ffd700);
+.lang-switch button,
+.lang-switch span {
+  color: var(--ink-muted);
+  font-size: 14px;
 }
 
 .footer-copyright,
 .footer-credit {
   margin: 0;
-  font-size: 0.8rem;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.45);
+  font-size: 13px;
+  color: var(--ink-muted);
 }
 
 .footer-credit a {
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--ink);
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
 }
 
 .footer-credit a:hover {
-  color: var(--gold, #ffd700);
-}
-
-@media (max-width: 640px) {
-  .footer {
-    padding: 44px 20px 32px;
-  }
-
-  .footer-links {
-    gap: 10px 18px;
-  }
-
-  .footer-meta {
-    flex-direction: column;
-    gap: 4px;
-  }
+  color: var(--gold-text);
 }

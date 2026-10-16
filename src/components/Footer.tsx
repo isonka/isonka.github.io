@@ -1,65 +1,82 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { openCookieSettings } from '../utils/consentTracking';
-import { homePath, isHomePath, localeHref } from '../i18n/locale';
+import { homePath, isHomePath } from '../i18n/locale';
 import { useLocale } from '../i18n/useLocale';
 import { LangSwitch } from './LangSwitch';
+import { Pt7Logo } from './brand/Pt7Logo';
 import '../styles/Footer.css';
 
-export const Footer= () => {
+export const Footer = () => {
   const { t } = useTranslation('common');
   const locale = useLocale();
   const navigate = useNavigate();
   const location = useLocation();
   const home = homePath(locale);
   const academyHref = locale === 'nl' ? '/academy/nl/' : '/academy/';
-  const pricingHref = locale === 'nl' ? '/pricing/nl/' : '/pricing/';
-  const introHref = locale === 'nl' ? '/intro/nl/' : '/intro/';
-  const scheduleHref = locale === 'nl' ? '/schedule/nl/' : '/schedule/';
 
   const handleCookieSettings = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     openCookieSettings();
   };
 
-  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const scrollHome = (sectionId: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-
     if (!isHomePath(location.pathname)) {
       navigate(home);
       setTimeout(() => {
-        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 100);
     } else {
-      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
   return (
     <footer className="footer">
       <div className="footer-inner">
-        <p className="footer-brand brand-mark">
-          PT<span className="brand-mark-accent">7</span>
-        </p>
-        <p className="footer-tag">{t('footer.tag')}</p>
+        <div className="footer-brand-block">
+          <Link to={home} aria-label={t('nav.homeAria')} className="footer-logo-link">
+            <Pt7Logo width={98} height={80} title="PT7" />
+          </Link>
+          <p className="footer-tag">{t('footer.tag')}</p>
+        </div>
 
         <nav className="footer-nav" aria-label={t('footer.navAria')}>
           <ul className="footer-links">
-            <li><Link to={scheduleHref}>{t('footer.book')}</Link></li>
-            <li><Link to={pricingHref}>{t('footer.pricing')}</Link></li>
-            <li><Link to={introHref}>{t('footer.intro')}</Link></li>
-            <li><Link to={localeHref('/reformer-pilates-amsterdam/', locale)}>{t('footer.reformerPilates')}</Link></li>
-            <li><Link to={localeHref('/trx-training-amsterdam/', locale)}>{t('footer.trx')}</Link></li>
-            <li><Link to={localeHref('/private-pilates-amsterdam/', locale)}>{t('footer.privatePilates')}</Link></li>
-            <li><Link to={localeHref('/strength-training-amsterdam/', locale)}>{t('footer.strength')}</Link></li>
-            <li><Link to="/prenatal-pilates-amsterdam/">{t('footer.prenatal')}</Link></li>
-            <li><Link to={academyHref}>{t('footer.academy')}</Link></li>
-            <li><Link to="/corporate/">{t('footer.forBusiness')}</Link></li>
-            <li><Link to="/healthcare-providers/">{t('footer.forHealthcare')}</Link></li>
-            <li><Link to="/blog/">{t('footer.blog')}</Link></li>
-            <li><a href="#contact" onClick={handleContactClick}>{t('footer.contact')}</a></li>
-            <li><Link to="/privacy/">{t('footer.privacy')}</Link></li>
-            <li><a href="#" onClick={handleCookieSettings}>{t('footer.cookies')}</a></li>
+            <li>
+              <a href="#train" onClick={scrollHome('train')}>
+                {t('nav.classes')}
+              </a>
+            </li>
+            <li>
+              <a href="#coaches" onClick={scrollHome('coaches')}>
+                {t('nav.coaches')}
+              </a>
+            </li>
+            <li>
+              <Link to={academyHref}>{t('footer.academy')}</Link>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/pt7amsterdam"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@pt7.nl">info@pt7.nl</a>
+            </li>
+            <li>
+              <Link to="/privacy/">{t('footer.privacy')}</Link>
+            </li>
+            <li>
+              <a href="#" onClick={handleCookieSettings}>
+                {t('footer.cookies')}
+              </a>
+            </li>
           </ul>
         </nav>
 

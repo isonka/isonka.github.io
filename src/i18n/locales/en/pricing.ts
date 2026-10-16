@@ -1,191 +1,174 @@
 export const enPricing = {
   seo: {
-    title: 'Pilates Prices Amsterdam Oud-Zuid | From €50 Intro | PT 7',
+    title: 'Pilates Prices Amsterdam | From €50 Intro | PT 7',
     description:
-      'Pilates prices at Museumplein, Amsterdam Zuid: intro pack of 3 group classes for €50, then from {{groupPrice}}/class (max {{groupMax}}). Memberships and privates.',
+      'PT 7 prices at Olympisch Stadion: intro 3 group classes for €50, then from {{groupPrice}}/class (up to {{groupMax}}). Memberships, packs and privates.',
     keywords:
-      'pilates class prices amsterdam, pilates prices amsterdam, Pilates prijzen Amsterdam, Pilates abonnement Amsterdam, Pilates prices Museumplein, reformer pilates prive amsterdam, kleine groep pilates amsterdam, private Pilates kosten, small group Pilates pricing, proefles Pilates Amsterdam, strippenkaart Pilates',
-    ogTitle: 'Pilates Prices Amsterdam Zuid | Trial & Packages | PT 7 Pilates',
+      'pilates class prices amsterdam, pilates prices amsterdam, Pilates prijzen Amsterdam, Pilates abonnement Amsterdam, Olympisch Stadion pilates, reformer pilates prive amsterdam, private Pilates kosten, proefles Pilates Amsterdam, strippenkaart Pilates',
+    ogTitle: 'Pilates Prices Amsterdam | PT 7 Olympisch Stadion',
     ogDescription:
-      'Intro pack 3 classes for €50. Small groups (max {{groupMax}}) from {{groupPrice}}/class at Museumplein. Memberships and private sessions — book online.',
-    analyticsTitle: 'Pilates Prices Amsterdam Zuid | PT 7 Pilates',
+      'Intro pack 3 classes for €50. Small groups (up to {{groupMax}}) from {{groupPrice}}/class at Olympisch Stadion. Memberships and privates — book online.',
+    analyticsTitle: 'Pilates Prices Amsterdam | PT 7 Pilates',
   },
-  breadcrumbName: 'Pilates Class Prices Amsterdam',
+  breadcrumbName: 'Prices',
   hero: {
-    kicker: 'Pricing',
-    title: 'Pilates class prices & memberships in Amsterdam',
-    lead: 'Small groups (max {{groupMax}}) for <reformer>Reformer Pilates</reformer> and <trx>TRX</trx>, memberships, and private sessions at Museumplein. Ready to book? <schedule>View the class schedule</schedule>.',
-  },
-  summary: {
-    group:
-      'Group Pilates classes at PT 7 cost from {{pack20PerClass}} per class with a 20-class pack; a single group class is {{groupSingle}}.',
-    intro:
-      'New clients can start with a {{introClasses}}-class introduction package for {{introPrice}}.',
-    monthly:
-      'Monthly memberships are {{fourTotal}} for 4 classes and {{eightTotal}} for 8 classes.',
-    unlimited:
-      'Unlimited memberships are {{unlimited3}} per month on a 3-month commitment, or {{annualMonth}} per month on an annual commitment ({{annualYear}} per year, including a 4-week freeze option).',
-    private:
-      'Private sessions start at {{privateFrom}}, with the full attention of your instructor. Couple sessions start at {{coupleFrom}} per person.',
-    membershipRules:
-      'All memberships allow a maximum of one class per day and renew automatically unless cancelled before the renewal date.',
+    kicker: 'Prices',
+    titleBefore: 'Simple prices,',
+    titleAccent: 'coached classes.',
+    lead: 'Every class is {{minutes}} minutes, with a coach on the floor. Start with the intro offer, then choose the way you like to train.',
   },
   offer: {
-    badge: 'Special offer',
-    title: 'Introduction package',
-    description: 'New clients only: {{classes}} group classes for {{price}}',
-    details: 'See the intro offer',
+    label: 'New here',
+    title: '{{classes}} group classes for',
+    detail: 'Any lane — Reformer, yoga, strength. For first-time clients.',
+    cta: 'Claim intro offer',
   },
-  nav: {
-    aria: 'Pricing sections',
-    membership: 'Membership',
-    group: 'Group',
-    private: 'Private',
-    couple: 'Couple',
+  plans: {
+    titleBefore: 'Choose how you',
+    titleAccent: 'train.',
+    tabsAria: 'Price categories',
+    tabs: {
+      memberships: 'Memberships',
+      packs: 'Class packs',
+      private: 'Private',
+      couples: 'Couples',
+    },
+    intros: {
+      memberships:
+        'For training every week. Group classes, any day, one class per day. Memberships renew automatically and can be cancelled after the minimum period.',
+      packs:
+        'No commitment. A pack is valid for as many weeks as it has classes — a 10-class pack runs 10 weeks.',
+      private:
+        'One-on-one, 45 minutes, built entirely around you. Also the way we train during pregnancy.',
+      couples: 'Train with a partner or friend, one coach for the two of you. Prices per person.',
+    },
+    levelsAria: 'Coach level',
+    levels: {
+      master: 'Master coach',
+      senior: 'Senior coach',
+      junior: 'Coach',
+    },
+    levelNotes: {
+      master: 'Elif Arzu Ogan — owner and head coach, 15+ years.',
+      senior: 'Gökben Öztekin, Göknur Dipli.',
+      junior: 'Gülce Koç, Lal Avgen, Nisan Atalay, Kelly Tin, E. Gamze Karadağ.',
+    },
+    membership: {
+      four: '4 classes a month',
+      eight: '8 classes a month',
+      unlimited: 'Unlimited',
+      annual: 'Unlimited annual',
+      fourPer: '€21.50 per class',
+      eightPer: '€20 per class',
+      unlimitedPer: 'Unlimited classes',
+      annualPer: '€3,000 per year',
+      monthlyPoint1: 'Monthly, renews automatically',
+      monthlyPoint2: 'Cancel any time after month one',
+      unlimitedPoint1: '3-month commitment',
+      unlimitedPoint2: 'Then renews monthly',
+      annualPoint1: '12-month commitment',
+      annualPoint2: 'Includes a 4-week freeze',
+    },
+    pack: {
+      single: 'Single class',
+      five: '5 classes',
+      ten: '10 classes',
+      twenty: '20 classes',
+      singlePer: '€37 per class',
+      fivePer: '€35 per class',
+      tenPer: '€30 per class',
+      twentyPer: '€28 per class',
+    },
+    couple: {
+      singlePer: 'per person',
+      fivePer: '€45 per person, per class',
+      tenPer: '€43 per person, per class',
+      twentyPer: '€40 per person, per class',
+    },
+    private: {
+      single: 'Single session',
+      five: '5 sessions',
+      ten: '10 sessions',
+      twenty: '20 sessions',
+      perSession: '{{amount}} per session',
+      oneOnOne: '45 min, one-on-one',
+    },
+    validity: {
+      weeks1: 'Valid 1 week',
+      weeks5: 'Valid 5 weeks',
+      weeks10: 'Valid 10 weeks',
+      weeks20: 'Valid 20 weeks',
+    },
   },
   labels: {
-    perClass: 'per class',
-    perPerson: 'per person',
-    perMonth: 'per month',
-    inTotal: '{{amount}} in total',
-    mostPopular: 'Most Popular',
-    bestValue: 'Best Value',
-    singleClass: 'Single Class',
-    classPack: '{{count}}-Class Pack',
-    validFor_one: 'Valid for {{count}} week',
-    validFor_other: 'Valid for {{count}} weeks',
-    allDaysOneClass: 'All days • 1 class/day',
-    buyNow: 'Buy Now',
+    mostPopular: 'Most popular',
+    bestValue: 'Best value',
+    buy: 'Buy',
+    startMembership: 'Start membership',
+    perMonth: ' / month',
   },
-  membership: {
-    kicker: 'Membership',
-    title: 'Membership',
-    subtitle: 'Valid all days • Maximum 1 class per day',
-    classesInMonth: '{{count}} Classes in 1 Month',
-    monthlyFineprint:
-      '1-month period • You can cancel after first month • Auto-renews monthly unless cancelled',
-    unlimited3Name: 'Unlimited 3 Months',
-    unlimitedClasses: 'Unlimited classes',
-    unlimited3Fineprint:
-      '3-month commitment • You can cancel after 3 months • Auto-renews unless cancelled',
-    annualName: 'Annual Unlimited',
-    annualTotalNote: '{{yearTotal}}/year • Includes 4-week freeze option',
-    annualFineprint:
-      '12-month commitment • You can cancel after 12 months • Auto-renews unless cancelled',
-  },
-  group: {
-    kicker: 'Group',
-    title: 'Small group classes',
-    subtitle:
-      'Small group training with maximum {{groupMax}} participants. Expert instruction in an energizing environment. {{minutes}}-minute sessions.',
-  },
-  private: {
-    kicker: 'Private',
-    title: 'Private classes',
-    subtitle:
-      'Personalized one-on-one training tailored to your specific goals and fitness level. Sessions start at {{privateFrom}}. Choose your instructor level. {{minutes}}-minute classes.',
-    tabsAria: 'Instructor level',
-    master: 'Master Instructor',
-    senior: 'Senior Instructor',
-    junior: 'Junior Instructor',
-    juniorInfoLabel: 'Junior Instructors:',
-    seniorInfoLabel: 'Senior Instructors:',
-    masterInfoLabel: 'Master Instructor:',
-    masterRole: 'Owner & Head Instructor with 15+ years experience',
-  },
-  couple: {
-    kicker: 'Couple',
-    title: 'Couple classes',
-    subtitle:
-      'Train together with your partner. Share the experience and motivate each other. Price shown per person. {{minutes}}-minute classes.',
-  },
-  info: {
-    kicker: 'Studio',
-    title: 'What to bring',
-    clothing: {
-      title: 'Comfortable Clothing',
-      text: "Wear comfortable workout clothes that allow you to move freely. We recommend athletic wear that's not too loose.",
+  facts: {
+    minutes: { title: '45 minutes', body: 'Every class, every lane.' },
+    size: { title: 'Up to 10 people', body: 'Small groups so your coach sees every rep.' },
+    lanes: {
+      title: 'All seven lanes',
+      body: 'Memberships and packs work for Reformer, yoga, mat and strength.',
     },
-    socks: {
-      title: 'Grip Socks',
-      text: "Grip socks are recommended for all classes. Don't have them? You can purchase grip socks at our studio.",
-    },
-    water: {
-      title: 'Water Bottle',
-      text: 'Stay hydrated! Bring your water bottle to keep refreshed during your {{minutes}}-minute session.',
-    },
-    towel: {
-      title: 'Towel (Recommended)',
-      text: "We recommend bringing a small towel for your comfort, though it's not mandatory.",
+    coach: {
+      title: 'A coach on the floor',
+      body: 'Corrections, progressions and a plan — in every class.',
     },
   },
   faq: {
-    kicker: 'FAQ',
-    title: 'Questions before you book',
-    validity: {
-      question: 'How long are the packages valid?',
-      answer:
-        'Each package has a valid period of weeks equal to the number of lessons. For example, a 5-class package is valid for 5 weeks from the purchase date.',
-    },
-    pregnancy: {
-      question: 'Can I attend during pregnancy?',
-      answer:
-        'Pregnant clients are only accepted for one-on-one classes where we can provide personalized attention to ensure safety.',
-    },
-    injuries: {
-      question: 'What if I have injuries?',
-      answer:
-        'Please inform us if you have any injuries or joint problems before booking. Our trainers can modify exercises to accommodate your needs.',
-    },
-    tryBefore: {
-      question: 'Can I try before I commit to a package?',
-      answer:
-        'Yes! We offer single class options for all training types, and we recommend starting with a smaller package to try our classes.',
-    },
-    renewals: {
-      question: 'How do membership renewals work?',
-      answer:
-        "1-Month Memberships (4 & 8 classes): 1-month period. You can cancel after the first month. Auto-renews monthly unless cancelled. 3-Month Membership: 3-month commitment. You can cancel after 3 months. Auto-renews unless cancelled. Annual Membership: 12-month commitment. You can cancel after 12 months. Auto-renews unless cancelled. If you don't cancel before the renewal date, payments will be processed automatically.",
-    },
-    cancel: {
-      question: 'Can I cancel my membership?',
-      answer:
-        'Yes! In 1-month memberships (4 & 8 classes), you have the right to cancel after the first month. The 3-month and annual memberships can be cancelled after you complete your initial commitment period (3 or 12 months). To cancel, contact us via email at info@pt7.nl or call +31 685 162693 before your renewal date.',
-    },
-    annualUnlimited: {
-      question: 'Is the annual membership unlimited classes?',
-      answer:
-        'Yes! The annual membership at {{perMonth}} per month ({{yearTotal}} for 12 months total) gives you unlimited classes all days the studio is open (Monday–Friday {{weekdayHours}}, Saturday–Sunday {{weekendHours}}), with a maximum of 1 class per day. This is our best value option and includes a 4-week freeze option.',
-    },
-    duration: {
-      question: "What's the class duration?",
-      answer:
-        'All our classes are {{minutes}} minutes long, providing an effective and efficient workout that fits into your busy schedule.',
-    },
-    groupSize: {
-      question: 'How many people in group classes?',
-      answer:
-        'Our group classes have a maximum of {{groupMax}} participants, ensuring you receive personalized attention while enjoying the energy of a group setting.',
+    titleBefore: 'Good to',
+    titleAccent: 'know.',
+    lead: 'Still unsure which option fits? Message us and a coach will help you choose.',
+    whatsapp: 'WhatsApp us',
+    vat: 'All prices include VAT.',
+    items: {
+      validity: {
+        question: 'How does pack validity work?',
+        answer:
+          'A pack is valid for as many weeks as it has classes, starting on the day you buy it. A 5-class pack runs 5 weeks; a 20-class pack runs 20 weeks.',
+      },
+      cancel: {
+        question: 'How do I cancel a membership?',
+        answer:
+          'Memberships renew automatically. Cancel before your renewal date by emailing info@pt7.nl or calling +31 685 162693, after the minimum period of your plan.',
+      },
+      freeze: {
+        question: 'Can I freeze my membership?',
+        answer:
+          'The annual unlimited membership includes a 4-week freeze. Ask us about other plans.',
+      },
+      pregnancy: {
+        question: 'I am pregnant. Can I join group classes?',
+        answer:
+          'During pregnancy we train one-on-one only, so your coach can adapt every exercise safely. See the Private tab.',
+      },
+      injuries: {
+        question: 'I have an injury. Is that a problem?',
+        answer:
+          'Tell us before you book. Our coaches adapt exercises, and private sessions are a good way to start back.',
+      },
+      levels: {
+        question: 'What is the difference between coach levels?',
+        answer:
+          'Private sessions are priced by experience: master coach (Elif), senior coaches and coaches. Every coach is certified and trained in the PT7 method.',
+      },
     },
   },
   faqSeoOnly: {
     cost: {
       question: 'How much do Pilates classes cost in Amsterdam?',
       answer:
-        'Group Reformer Pilates classes start from {{groupPerClass}} per class with a 20-class pack ({{groupTotal}} total). Single group classes are {{groupSingle}}. Private sessions start from {{juniorSingle}}. Full packages are listed on this page.',
+        'Group classes start from {{groupPerClass}} per class with a 20-class pack ({{groupTotal}} total). Single group classes are {{groupSingle}}. Private sessions start from {{juniorSingle}}. Full packages are listed on this page.',
     },
     intro: {
       question: 'Is there an intro offer for new clients?',
       answer:
         'Yes. New clients can start with our introduction package: {{classes}} group classes for {{price}} (new clients only).',
     },
-  },
-  contact: {
-    kicker: 'Contact',
-    title: 'Need assistance?',
-    text: 'Email us or call for guidance on packages and memberships.',
-    emailUs: 'Email Us',
-    call: 'Call: {{phone}}',
   },
 } as const;
 

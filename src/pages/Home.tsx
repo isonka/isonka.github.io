@@ -1,24 +1,23 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Trans, useTranslation } from 'react-i18next';
-import { AcademyUrgencyBanner } from '../components/AcademyUrgencyBanner';
-import { OpeningOfferHomeBanner } from '../components/OpeningOfferHomeBanner';
+import { useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
-import { trackPageView, trackPhoneClick, trackEmailClick, trackSocialClick } from '../utils/gtmTracking';
-import { trackFBPageView, trackFBPhoneClick, trackFBEmailClick, trackFBWhatsAppClick, trackFBBookingClick } from '../utils/fbPixelTracking';
-import { workouts } from '../data/workouts';
-import { WorkoutGallery } from '../components/WorkoutCard';
-import { ManifestoLine } from '../components/ManifestoLine';
-import { ContactMap } from '../components/ContactMap';
-import { PHOTO_FOCUS } from '../data/photoFocus';
-import { useInViewOnce } from '../hooks/useInViewOnce';
-import { SilkBackground } from '../components/SilkBackground';
-import { homePath } from '../i18n/locale';
+import { TrackArt } from '../components/brand/TrackArt';
+import { StadiumMap } from '../components/brand/StadiumMap';
+import { Pt7Logo } from '../components/brand/Pt7Logo';
+import { trackPageView } from '../utils/gtmTracking';
+import { trackFBPageView, trackFBBookingClick } from '../utils/fbPixelTracking';
+import { homePath, localeHref } from '../i18n/locale';
 import { useLocale } from '../i18n/useLocale';
-import { isPrerender } from '../utils/prerender';
+import {
+  DISCIPLINE_COLOR,
+  LANE_KEYS,
+  LANE_META,
+  type LaneKey,
+} from '../data/lanes';
+import { PHOTO_FOCUS } from '../data/photoFocus';
 import '../styles/Home.css';
-import { localeHref } from '../i18n/locale';
 
 const HOME_HREFLANG = [
   { hreflang: 'en', href: 'https://www.pt7.nl/' },
@@ -28,116 +27,57 @@ const HOME_HREFLANG = [
 
 const FAQ_KEYS = ['where', 'groupSize', 'booking', 'training', 'location'] as const;
 
-const WORKOUT_COPY = {
-  'reformer-pilates': 'reformerPilates',
-  'reformer-pilates-amsterdam': 'reformerPilates',
-  trx: 'trx',
-  'trx-training-amsterdam': 'trx',
-  'functional-training': 'functionalTraining',
-  cardio: 'cardio',
-} as const;
+const FACT_KEYS = ['ways', 'size', 'minutes', 'coach'] as const;
 
-const heroImages = [
-  {
-    src: '/assets/images/studio.webp',
-    srcSet:
-      '/assets/images/studio-800.webp 800w, /assets/images/studio-1200.webp 1200w, /assets/images/studio.webp 1600w',
-    width: 1600,
-    height: 1066,
-    altKey: 'heroImages.studio' as const,
-  },
-  {
-    src: '/assets/images/nike_strength_studio.webp',
-    srcSet:
-      '/assets/images/nike_strength_studio-800.webp 800w, /assets/images/nike_strength_studio.webp 1200w',
-    width: 1200,
-    height: 800,
-    altKey: 'heroImages.nike' as const,
-  },
-];
-
-const trainers = [
-  { id: 'elif', to: '/trainer/elif/', src: '/assets/images/elif.webp', name: 'Elif Arzu Ogan' },
-  { id: 'goknur', to: '/trainer/goknur/', src: '/assets/images/goknur.webp', name: 'Göknur Dipli' },
-  { id: 'gokben', to: '/trainer/gokben/', src: '/assets/images/gokben.webp', name: 'Gökben Öztekin' },
-  { id: 'gulce', to: '/trainer/gulce/', src: '/assets/images/gulce.webp', name: 'Gülce Koç' },
-  { id: 'lal', to: '/trainer/lal/', src: '/assets/images/lal.webp', name: 'Lal Avgen' },
-  { id: 'nisan', to: '/trainer/nisan/', src: '/assets/images/nisan.webp', name: 'Nisan Atalay' },
-  { id: 'kelly', to: '/trainer/kelly/', src: '/assets/images/kelly.webp', name: 'Kelly Tin' },
-  { id: 'gamze', to: '/trainer/gamze/', src: '/assets/images/gamze.webp', name: 'E. Gamze Karadağ' },
+const COACHES = [
+  { id: 'elif', to: '/trainer/elif/', src: '/assets/images/elif.webp', shortName: 'Elif', n: '01', tag: 'pilatesStrength' as const },
+  { id: 'goknur', to: '/trainer/goknur/', src: '/assets/images/goknur.webp', shortName: 'Göknur', n: '02', tag: 'pilatesStrength' as const },
+  { id: 'gokben', to: '/trainer/gokben/', src: '/assets/images/gokben.webp', shortName: 'Gökben', n: '03', tag: 'pilates' as const },
+  { id: 'gulce', to: '/trainer/gulce/', src: '/assets/images/gulce.webp', shortName: 'Gülce', n: '04', tag: 'pilates' as const },
+  { id: 'lal', to: '/trainer/lal/', src: '/assets/images/lal.webp', shortName: 'Lal', n: '05', tag: 'pilates' as const },
+  { id: 'nisan', to: '/trainer/nisan/', src: '/assets/images/nisan.webp', shortName: 'Nisan', n: '06', tag: 'pilates' as const },
+  { id: 'kelly', to: '/trainer/kelly/', src: '/assets/images/kelly.webp', shortName: 'Kelly', n: '07', tag: 'pilates' as const },
+  { id: 'gamze', to: '/trainer/gamze/', src: '/assets/images/gamze.webp', shortName: 'Gamze', n: '08', tag: 'pilates' as const },
 ] as const;
 
-const REVIEW_KEYS = ['lot', 'flaminia', 'maya', 'yesim', 'ayse'] as const;
+const REVIEW_KEYS = ['lot', 'flaminia', 'yesim'] as const;
 
 const reviewsData = [
-  { author: 'Lot Canter Cremers', reviewBody: 'Through a neighbor in my building I was introduced to PT 7...', ratingValue: 5 },
-  { author: 'Ayşe', reviewBody: "I've been training at PT 7 for a while now...", ratingValue: 5 },
-  { author: 'Maya', reviewBody: "This is a truly special Pilates Reformer studio...", ratingValue: 5 },
-  { author: 'Flaminia', reviewBody: "PT 7 and Elif are exactly what I was looking for...", ratingValue: 5 },
+  {
+    author: 'Lot',
+    reviewBody: 'Elif trained me until 38.5 weeks. A comfortable pregnancy and a smooth delivery.',
+    ratingValue: 5,
+  },
+  {
+    author: 'Flaminia',
+    reviewBody:
+      'Professional, thoughtful — exactly the Reformer studio I spent two years looking for.',
+    ratingValue: 5,
+  },
+  {
+    author: 'Yeşim',
+    reviewBody: 'Six months in. Incredible results and a motivating atmosphere.',
+    ratingValue: 5,
+  },
 ];
 
-function TrainerTile({
-  trainer,
-}: {
-  trainer: (typeof trainers)[number];
-}) {
-  const { t } = useTranslation('home');
-  const { ref, inView } = useInViewOnce<HTMLAnchorElement>();
-  const slug = trainer.to.replace(/^\/trainer\//, '').replace(/\/$/, '');
-  const focus = PHOTO_FOCUS[slug] ?? '50% 24%';
-
-  return (
-    <Link
-      ref={ref}
-      to={trainer.to}
-      className={`home-person${inView ? ' is-inview' : ''}`}
-    >
-      <span className="home-person-role">
-        {t(`trainers.${trainer.id}.specialties`)}
-      </span>
-      <div className="home-person-media">
-        <img
-          src={trainer.src}
-          alt={t(`trainers.${trainer.id}.alt`)}
-          loading="lazy"
-          decoding="async"
-          width="280"
-          height="400"
-          style={{ objectPosition: focus }}
-        />
-      </div>
-      <span className="home-person-name">{trainer.name}</span>
-    </Link>
-  );
-}
-
-export const Home= () => {
+export const Home = () => {
   const { t } = useTranslation('home');
   const locale = useLocale();
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [secondHeroReady, setSecondHeroReady] = useState(false);
+  const [lane, setLane] = useState<LaneKey>('reformer');
   const canonical = locale === 'nl' ? 'https://www.pt7.nl/nl/' : 'https://www.pt7.nl/';
   const academyHref = locale === 'nl' ? '/academy/nl/' : '/academy/';
-  const pricingHref = locale === 'nl' ? '/pricing/nl/' : '/pricing/';
   const scheduleHref = locale === 'nl' ? '/schedule/nl/' : '/schedule/';
+  const introHref = locale === 'nl' ? '/intro/nl/' : '/intro/';
 
   const homeFaqs = FAQ_KEYS.map((key) => ({
     question: t(`faqs.${key}.question`),
     answer: t(`faqs.${key}.answer`),
   }));
 
-  const workoutItems = workouts.map((w) => {
-    const slug = w.to.replace(/^\/workouts\//, '').replace(/\/$/, '').replace(/^\//, '');
-    const copyKey = WORKOUT_COPY[slug as keyof typeof WORKOUT_COPY];
-    if (!copyKey) return w;
-    return {
-      ...w,
-      to: localeHref(w.to, locale),
-      title: t(`workouts.${copyKey}.title`),
-      description: t(`workouts.${copyKey}.description`),
-      alt: t(`workouts.${copyKey}.alt`),
-    };
-  });
+  const selected = LANE_META[lane];
+  const stripeColor = DISCIPLINE_COLOR[selected.discipline];
+  const laneTimesHref = localeHref(selected.href, locale);
 
   useEffect(() => {
     const path = homePath(locale);
@@ -145,30 +85,8 @@ export const Home= () => {
     trackFBPageView(t('seo.analyticsTitle'));
   }, [locale, t]);
 
-  useEffect(() => {
-    if (isPrerender()) return;
-
-    const enable = () => setSecondHeroReady(true);
-    const ric = window.requestIdleCallback?.bind(window);
-    if (ric) {
-      const id = ric(enable, { timeout: 4000 });
-      return () => window.cancelIdleCallback?.(id);
-    }
-    const timer = window.setTimeout(enable, 2500);
-    return () => window.clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    if (!secondHeroReady) return;
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [secondHeroReady]);
-
   return (
     <>
-      <SilkBackground />
       <SEOHead
         title={t('seo.title')}
         description={t('seo.description')}
@@ -185,198 +103,236 @@ export const Home= () => {
       <StructuredData type="LocalBusiness" data={{ reviews: reviewsData }} />
       <StructuredData type="FAQPage" data={{ faqs: homeFaqs }} />
 
-      <OpeningOfferHomeBanner />
-      <AcademyUrgencyBanner />
-
-      <section className="home-hero">
-        {heroImages.map((image, index) => {
-          if (index > 0 && !secondHeroReady) return null;
-          const isActive = index === currentImageIndex;
-          return (
-            <img
-              key={image.src}
-              src={image.src}
-              srcSet={image.srcSet}
-              sizes="100vw"
-              alt={t(image.altKey)}
-              className={`home-hero-bg${isActive ? ' is-active' : ''}`}
-              width={image.width}
-              height={image.height}
-              fetchPriority={index === 0 ? 'high' : 'low'}
-              loading={index === 0 ? 'eager' : 'lazy'}
-              decoding="async"
-            />
-          );
-        })}
-        <div className="home-hero-veil" />
-        <div className="home-hero-inner">
-          <p className="home-hero-brand brand-mark">
-            PT<span className="brand-mark-accent">7</span>
-          </p>
-          <h1 className="home-hero-title">{t('hero.title')}</h1>
-          <p className="home-hero-line">{t('hero.line')}</p>
-          <div className="home-hero-ratings">
-            <a href="https://maps.app.goo.gl/wrhyzYbov9eiGQJw5" target="_blank" rel="noopener noreferrer">
-              {t('reviews.google')}
-            </a>
-            <a href="https://classpass.com/studios/pt-studio-7-amsterdam" target="_blank" rel="noopener noreferrer">
-              {t('reviews.classpass')}
-            </a>
-          </div>
+      <header id="top" className="home-hero">
+        <div className="home-hero-copy">
+          <p className="home-eyebrow">{t('hero.eyebrow')}</p>
+          <h1 className="home-display">
+            {t('hero.titleBefore')}{' '}
+            <span className="home-accent">{t('hero.titleAccent')}</span>
+          </h1>
+          <p className="home-lead">{t('hero.lead')}</p>
           <div className="home-hero-actions">
-            <Link to={scheduleHref} className="home-btn home-btn-gold" onClick={() => trackFBBookingClick()}>
-              {t('hero.bookClass')}
+            <Link
+              to={introHref}
+              className="home-btn home-btn-primary"
+              onClick={() => trackFBBookingClick()}
+            >
+              {t('hero.bookFirst')}
             </Link>
-            <Link to={localeHref('/reformer-pilates-amsterdam/', locale)} className="home-btn home-btn-ghost">
-              {t('hero.pilatesClasses')}
-            </Link>
-            <Link to={pricingHref} className="home-btn home-btn-ghost">
-              {t('hero.viewPricing')}
-            </Link>
+            <a href="#train" className="home-btn home-btn-outline">
+              {t('hero.explore')}
+            </a>
           </div>
+        </div>
+        <div className="home-hero-art" aria-hidden="true">
+          <TrackArt className="home-track-art" />
+        </div>
+      </header>
+
+      <section className="home-facts" aria-label={t('facts.aria')}>
+        <div className="home-facts-inner">
+          {FACT_KEYS.map((key) => (
+            <div key={key} className="home-fact">
+              <span className="home-fact-value">{t(`facts.items.${key}.value`)}</span>
+              <span className="home-fact-label">{t(`facts.items.${key}.label`)}</span>
+            </div>
+          ))}
         </div>
       </section>
 
-      <section id="about" className="home-section home-manifesto">
-        <p className="home-kicker">{t('about.kicker')}</p>
-        <h2 className="home-display">
-          <ManifestoLine>{t('about.title')}</ManifestoLine>
-        </h2>
-        <div className="home-manifesto-layout">
-          <div className="home-prose">
-            <p>{t('about.p1')}</p>
-            <p>{t('about.p2')}</p>
-            <p>{t('about.p3')}</p>
-            <p className="home-prose-links">
-              <Trans
-                ns="home"
-                i18nKey="about.links"
-                components={{
-                  reformer: <Link to={localeHref('/reformer-pilates-amsterdam/', locale)} />,
-                  private: <Link to={localeHref('/private-pilates-amsterdam/', locale)} />,
-                  prenatal: <Link to="/prenatal-pilates-amsterdam/" />,
-                  trx: <Link to={localeHref('/trx-training-amsterdam/', locale)} />,
-                  strength: <Link to={localeHref('/strength-training-amsterdam/', locale)} />,
-                }}
-              />
-            </p>
-            <p className="home-signature">
-              <strong>{t('about.ownerName')}</strong>
-              <br />
-              {t('about.signatureRole')}
-            </p>
+      <section id="train" className="home-section">
+        <div className="home-section-head">
+          <h2 className="home-heading">
+            {t('lanes.titleBefore')}{' '}
+            <span className="home-accent">{t('lanes.titleAccent')}</span>
+          </h2>
+          <p className="home-section-sub">{t('lanes.sub')}</p>
+        </div>
+        <div className="home-lanes">
+          <div className="home-lane-list" role="tablist" aria-label={t('lanes.titleBefore')}>
+            {LANE_KEYS.map((key) => {
+              const meta = LANE_META[key];
+              const on = key === lane;
+              return (
+                <button
+                  key={key}
+                  type="button"
+                  role="tab"
+                  aria-selected={on}
+                  className={`home-lane-tab${on ? ' is-on' : ''}`}
+                  onClick={() => setLane(key)}
+                >
+                  <span className="home-lane-n">{meta.n}</span>
+                  <span className="home-lane-name">{t(`lanes.items.${key}.name`)}</span>
+                  <span className="home-lane-tag">{t(`lanes.items.${key}.tag`)}</span>
+                </button>
+              );
+            })}
           </div>
-          <div className="home-bleed-frame">
-            <img
-              src="/assets/images/about-us-web.webp"
-              alt={t('about.imageAlt')}
-              width="1200"
-              height="750"
-              loading="lazy"
-              decoding="async"
+          <div className="home-lane-panel" role="tabpanel">
+            <span
+              className="stripe-7"
+              aria-hidden="true"
+              style={{ background: stripeColor }}
             />
+            <div>
+              <span className="home-lane-meta">
+                {t('lanes.laneLabel', { n: selected.n })} · {t(`lanes.items.${lane}.tag`)}
+              </span>
+              <h3 className="home-lane-title">{t(`lanes.items.${lane}.name`)}</h3>
+              <p className="home-lane-pitch">{t(`lanes.items.${lane}.pitch`)}</p>
+            </div>
+            <div className="home-lane-foot">
+              <dl className="home-lane-dl">
+                <div>
+                  <dt>{t('lanes.formatLabel')}</dt>
+                  <dd>{t(`lanes.items.${lane}.format`)}</dd>
+                </div>
+                <div>
+                  <dt>{t('lanes.kitLabel')}</dt>
+                  <dd>{t(`lanes.items.${lane}.kit`)}</dd>
+                </div>
+              </dl>
+              <Link to={laneTimesHref} className="home-btn home-btn-outline">
+                {t('lanes.seeTimes')}
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="workouts" className="home-section home-works">
-        <div className="home-works-label">
-          <h2 className="home-kicker home-kicker-heading">{t('workouts.heading')}</h2>
-          <p className="home-sub">{t('workouts.sub')}</p>
+      <section id="coaches" className="home-coaches">
+        <div className="home-section">
+          <div className="home-section-head">
+            <h2 className="home-heading home-coaches-title">
+              {t('coaches.titleBefore')}{' '}
+              <span className="home-accent">{t('coaches.titleAccent')}</span>
+            </h2>
+            <p className="home-section-sub home-coaches-sub">{t('coaches.sub')}</p>
+          </div>
+          <div className="home-coach-grid">
+            {COACHES.map((coach) => {
+              const focus = PHOTO_FOCUS[coach.id] ?? '50% 24%';
+              return (
+                <Link key={coach.id} to={coach.to} className="home-coach">
+                  <div className="home-coach-media">
+                    <span className="home-coach-seven" aria-hidden="true" />
+                    <div className="home-coach-photo">
+                      <img
+                        src={coach.src}
+                        alt={t(`coaches.alt.${coach.id}`)}
+                        loading="lazy"
+                        decoding="async"
+                        width={280}
+                        height={350}
+                        style={{ objectPosition: focus }}
+                      />
+                    </div>
+                    <span className="home-coach-num" aria-hidden="true">
+                      {coach.n}
+                    </span>
+                  </div>
+                  <div className="home-coach-meta">
+                    <span className="home-coach-tag">{t(`coaches.tags.${coach.tag}`)}</span>
+                    <strong className="home-coach-name">{coach.shortName}</strong>
+                    <span className="home-coach-role">{t(`coaches.roles.${coach.id}`)}</span>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
         </div>
-        <WorkoutGallery items={workoutItems} />
       </section>
 
-      <section id="trainers" className="home-section home-team">
-        <p className="home-kicker">{t('trainers.kicker')}</p>
-        <h2 className="home-section-title">{t('trainers.title')}</h2>
-        <p className="home-sub">{t('trainers.sub')}</p>
-        <div className="home-team-grid">
-          {trainers.map((trainer) => (
-            <TrainerTile key={trainer.to} trainer={trainer} />
-          ))}
+      <section id="first" className="home-section home-offer">
+        <div className="home-offer-copy">
+          <h2 className="home-heading">
+            {t('offer.titleBefore')}{' '}
+            <span className="home-accent">{t('offer.titleAccent')}</span>
+          </h2>
+          <p className="home-section-sub">{t('offer.lead')}</p>
         </div>
-        <p className="home-footnote">
-          <Trans
-            ns="home"
-            i18nKey="trainers.footnote"
-            components={{
-              become: <Link to={academyHref} />,
-              training: <Link to={academyHref} />,
-            }}
-          />
-        </p>
+        <div className="home-offer-card">
+          <div className="home-offer-main">
+            <div className="home-eyebrow">{t('offer.label')}</div>
+            <div className="home-offer-product">{t('offer.product')}</div>
+            <div className="home-offer-detail">{t('offer.detail')}</div>
+          </div>
+          <div className="home-offer-stub">
+            <span className="home-offer-price">{t('offer.price')}</span>
+            <Link
+              to={introHref}
+              className="home-btn home-btn-primary"
+              onClick={() => trackFBBookingClick()}
+            >
+              {t('offer.cta')}
+            </Link>
+          </div>
+        </div>
       </section>
 
-      <section id="reviews" className="home-section home-reviews">
-        <p className="home-kicker">{t('reviews.kicker')}</p>
-        <h2 className="home-section-title">{t('reviews.title')}</h2>
-        <p className="home-sub">{t('reviews.sub')}</p>
-        <div className="home-quotes">
+      <section id="academy" className="home-academy" data-theme="evening">
+        <div className="home-section home-academy-inner">
+          <div className="home-academy-copy">
+            <Pt7Logo variant="academy" width={120} height={98} title="PT7 Academy" />
+            <h2 className="home-heading">
+              {t('academy.titleBefore')}{' '}
+              <span className="home-accent">{t('academy.titleAccent')}</span>
+            </h2>
+            <p className="home-section-sub">{t('academy.lead')}</p>
+          </div>
+          <div className="home-academy-aside">
+            <div className="home-academy-box">
+              <div className="home-academy-label">{t('academy.nextLabel')}</div>
+              <div className="home-academy-date">{t('academy.nextDate')}</div>
+              <div className="home-academy-seats">{t('academy.seats')}</div>
+            </div>
+            <Link to={academyHref} className="home-btn home-btn-primary">
+              {t('academy.cta')}
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews" className="home-section">
+        <div className="home-section-head home-section-head-baseline">
+          <h2 className="home-heading">
+            {t('reviews.titleBefore')}{' '}
+            <span className="home-accent">{t('reviews.titleAccent')}</span>
+          </h2>
+          <span className="home-ratings-line">{t('reviews.ratings')}</span>
+        </div>
+        <div className="home-review-grid">
           {REVIEW_KEYS.map((key) => (
-            <blockquote key={key} className="home-quote">
-              <p className="home-quote-pull">{t(`reviews.items.${key}.pull`)}</p>
-              <details>
-                <summary>{t('reviews.readMore')}</summary>
-                <p className="home-quote-full">{t(`reviews.items.${key}.full`)}</p>
-              </details>
-              <cite>
-                {t(`reviews.items.${key}.author`)}
-                <span className="home-quote-meta">{t(`reviews.items.${key}.meta`)}</span>
-              </cite>
-            </blockquote>
-          ))}
-        </div>
-        <p className="home-ratings">
-          <a href="https://maps.app.goo.gl/wrhyzYbov9eiGQJw5" target="_blank" rel="noopener noreferrer">
-            {t('reviews.google')}
-          </a>
-          <a href="https://classpass.com/studios/pt-studio-7-amsterdam" target="_blank" rel="noopener noreferrer">
-            {t('reviews.classpass')}
-          </a>
-        </p>
-      </section>
-
-      <section id="faq" className="home-section home-faq" aria-labelledby="home-faq-heading">
-        <p className="home-kicker">{t('faqSection.kicker')}</p>
-        <h2 id="home-faq-heading" className="home-section-title">{t('faqSection.title')}</h2>
-        <div className="home-faq-list">
-          {homeFaqs.map((faq) => (
-            <div key={faq.question} className="home-faq-item">
-              <h3>{faq.question}</h3>
-              <p>{faq.answer}</p>
-            </div>
+            <figure key={key} className="home-review">
+              <blockquote>“{t(`reviews.items.${key}.quote`)}”</blockquote>
+              <figcaption>
+                <strong>{t(`reviews.items.${key}.name`)}</strong>
+                {' · '}
+                {t(`reviews.items.${key}.source`)}
+              </figcaption>
+            </figure>
           ))}
         </div>
       </section>
 
-      <section id="contact" className="home-contact">
-        <div className="home-contact-inner">
-          <p className="home-kicker home-kicker-on-dark">{t('contact.kicker')}</p>
-          <h2 className="home-contact-title">{t('contact.title')}</h2>
-          <p className="home-contact-address">{t('contact.address')}</p>
-          <p className="home-contact-meta">{t('contact.meta')}</p>
-
-          <div className="home-contact-grid">
-            <ContactMap />
-            <div className="home-contact-actions">
-              <a href="tel:+31685162693" className="home-btn home-btn-light" onClick={() => { trackPhoneClick(); trackFBPhoneClick(); }}>
-                +31 685 162693
-              </a>
-              <a href="https://wa.me/31685162693" target="_blank" rel="noopener noreferrer" className="home-btn home-btn-ghost" onClick={() => { trackSocialClick('whatsapp'); trackFBWhatsAppClick(); }}>
-                WhatsApp
-              </a>
-              <a href="mailto:info@pt7.nl" className="home-btn home-btn-ghost" onClick={() => { trackEmailClick(); trackFBEmailClick(); }}>
-                {t('contact.emailUs')}
-              </a>
-              <div className="home-contact-socials">
-                <a href="https://www.instagram.com/pt7amsterdam" target="_blank" rel="noopener noreferrer" aria-label={t('contact.instagram')}>{t('contact.instagram')}</a>
-                <a href="https://www.facebook.com/ptstudio7" target="_blank" rel="noopener noreferrer" aria-label={t('contact.facebook')}>{t('contact.facebook')}</a>
-                <a href="https://www.linkedin.com/company/pt7" target="_blank" rel="noopener noreferrer" aria-label={t('contact.linkedin')}>{t('contact.linkedin')}</a>
-              </div>
-            </div>
+      <section id="visit" className="home-visit">
+        <div className="home-section home-visit-inner">
+          <div className="home-visit-copy">
+            <p className="home-eyebrow">{t('visit.eyebrow')}</p>
+            <h2 className="home-heading">
+              {t('visit.titleBefore')}{' '}
+              <span className="home-accent">{t('visit.titleAccent')}</span>{' '}
+              {t('visit.titleAfter')}
+            </h2>
+            <p className="home-visit-story">{t('visit.story')}</p>
+            <p className="home-visit-address">
+              {t('visit.address')}
+              <br />
+              {t('visit.transit')}
+            </p>
           </div>
-
+          <StadiumMap ariaLabel={t('visit.mapAria')} />
         </div>
       </section>
     </>

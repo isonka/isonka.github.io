@@ -1,0 +1,212 @@
+{
+  "currency": "EUR",
+  "vat": "included",
+  "class_length_min": 45,
+  "group_size_max": 10,
+  "intro_offer": {
+    "name": "3 group classes",
+    "price": 50,
+    "for": "first-time clients",
+    "valid_for": "any group lane"
+  },
+  "memberships": {
+    "note": "Group classes, any day, max 1 class per day. Auto-renew; cancel after minimum period via info@pt7.nl or +31 685 162693.",
+    "plans": [
+      {
+        "name": "4 classes a month",
+        "total": 86,
+        "per_class": 21.5,
+        "terms": "monthly, cancel after month one"
+      },
+      {
+        "name": "8 classes a month",
+        "total": 160,
+        "per_class": 20.0,
+        "terms": "monthly, cancel after month one"
+      },
+      {
+        "name": "Unlimited",
+        "total": 350,
+        "badge": "Most popular",
+        "terms": "€350/month, 3-month commitment"
+      },
+      {
+        "name": "Unlimited annual",
+        "total": 3000,
+        "badge": "Best value",
+        "terms": "€250/month, 12-month commitment, includes 4-week freeze"
+      }
+    ]
+  },
+  "class_packs": {
+    "note": "No commitment. Valid for as many weeks as classes.",
+    "plans": [
+      {
+        "name": "Single class",
+        "total": 37,
+        "per_class": 37,
+        "validity": "1 week"
+      },
+      {
+        "name": "5 classes",
+        "total": 175,
+        "per_class": 35,
+        "validity": "5 weeks"
+      },
+      {
+        "name": "10 classes",
+        "total": 300,
+        "per_class": 30,
+        "validity": "10 weeks",
+        "badge": "Most popular"
+      },
+      {
+        "name": "20 classes",
+        "total": 560,
+        "per_class": 28,
+        "validity": "20 weeks"
+      }
+    ]
+  },
+  "private": {
+    "note": "One-on-one, 45 min. Pregnant clients train private only.",
+    "levels": {
+      "master": {
+        "label": "Master coach",
+        "coaches": [
+          "Elif Arzu Ogan"
+        ],
+        "plans": [
+          {
+            "name": "Single session",
+            "total": 85,
+            "per_class": 85,
+            "validity": "1 week"
+          },
+          {
+            "name": "5 sessions",
+            "total": 400,
+            "per_class": 80,
+            "validity": "5 weeks"
+          },
+          {
+            "name": "10 sessions",
+            "total": 775,
+            "per_class": 77.5,
+            "validity": "10 weeks"
+          },
+          {
+            "name": "20 sessions",
+            "total": 1500,
+            "per_class": 75,
+            "validity": "20 weeks"
+          }
+        ]
+      },
+      "senior": {
+        "label": "Senior coach",
+        "coaches": [
+          "Gökben Öztekin",
+          "Göknur Dipli"
+        ],
+        "plans": [
+          {
+            "name": "Single session",
+            "total": 80,
+            "per_class": 80,
+            "validity": "1 week"
+          },
+          {
+            "name": "5 sessions",
+            "total": 375,
+            "per_class": 75,
+            "validity": "5 weeks"
+          },
+          {
+            "name": "10 sessions",
+            "total": 725,
+            "per_class": 72.5,
+            "validity": "10 weeks",
+            "badge": "Most popular"
+          },
+          {
+            "name": "20 sessions",
+            "total": 1400,
+            "per_class": 70,
+            "validity": "20 weeks"
+          }
+        ]
+      },
+      "coach": {
+        "label": "Coach",
+        "coaches": [
+          "Gülce Koç",
+          "Lal Avgen",
+          "Nisan Atalay",
+          "Kelly Tin",
+          "E. Gamze Karadağ"
+        ],
+        "plans": [
+          {
+            "name": "Single session",
+            "total": 70,
+            "per_class": 70,
+            "validity": "1 week"
+          },
+          {
+            "name": "5 sessions",
+            "total": 325,
+            "per_class": 65,
+            "validity": "5 weeks"
+          },
+          {
+            "name": "10 sessions",
+            "total": 625,
+            "per_class": 62.5,
+            "validity": "10 weeks"
+          },
+          {
+            "name": "20 sessions",
+            "total": 1200,
+            "per_class": 60,
+            "validity": "20 weeks"
+          }
+        ]
+      }
+    }
+  },
+  "couples": {
+    "note": "Two people, one coach. Prices per person.",
+    "plans": [
+      {
+        "name": "Single class",
+        "total": 50,
+        "per_class": 50,
+        "validity": "1 week"
+      },
+      {
+        "name": "5 classes",
+        "total": 225,
+        "per_class": 45,
+        "validity": "5 weeks"
+      },
+      {
+        "name": "10 classes",
+        "total": 430,
+        "per_class": 43,
+        "validity": "10 weeks",
+        "badge": "Best value"
+      },
+      {
+        "name": "20 classes",
+        "total": 800,
+        "per_class": 40,
+        "validity": "20 weeks"
+      }
+    ]
+  },
+  "open_questions": [
+    "Yoga / mat class pricing not set yet",
+    "Confirm group size 10 (current site says 5)"
+  ]
+}
