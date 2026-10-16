@@ -73,36 +73,6 @@ export const trainerProfiles: TrainerProfile[] = [
     ctaText: 'Book a session with Elif and experience personalized training at its finest.',
   },
   {
-    slug: 'gokben',
-    name: 'Gökben Öztekin',
-    displayName: 'Gokben Oztekin',
-    title: 'Comprehensive Pilates',
-    heroTitle: 'Comprehensive Pilates',
-    tier: 'senior',
-    image: '/assets/images/gokben.webp',
-    languages: ['English', 'Turkish'],
-    specialties: ['Reformer Pilates', 'Mat Pilates', 'Prenatal Pilates'],
-    available: true,
-    seo: {
-      title: 'Gökben Öztekin | Pilates Instructor at PT 7 Amsterdam',
-      description: 'Meet Gökben Öztekin, expert Reformer Pilates instructor at PT 7 Amsterdam. Specializing in precise technique and mindful movement.',
-      keywords: 'Gökben Öztekin, Reformer Pilates, Pilates instructor Amsterdam, PT 7, Pilates leraar Amsterdam',
-    },
-    structuredData: {
-      jobTitle: 'Basi Pilates Instructor',
-      description: 'Expert Reformer Pilates instructor specializing in precise technique and mindful movement at PT 7 Amsterdam.',
-    },
-    bio: [
-      'Gokben is a certified Basi Pilates Instructor with a passion for helping clients improve their strength, flexibility, and overall well-being. She creates a welcoming and motivating environment for everyone.',
-    ],
-    qualifications: [
-      'Basi Pilates Instructor',
-      'Specializes in Pilates for all ages and abilities',
-      'Focuses on mindful movement and personal growth',
-    ],
-    ctaText: 'Book a session with Gökben and experience the art of Reformer Pilates.',
-  },
-  {
     slug: 'goknur',
     name: 'Göknur Dipli',
     displayName: 'Goknur Dipli',
@@ -144,6 +114,36 @@ export const trainerProfiles: TrainerProfile[] = [
       '3rd Level Fitness Trainer Certificate',
     ],
     ctaText: 'Book a session with Göknur for a complete approach to fitness and nutrition.',
+  },
+  {
+    slug: 'gokben',
+    name: 'Gökben Öztekin',
+    displayName: 'Gokben Oztekin',
+    title: 'Comprehensive Pilates',
+    heroTitle: 'Comprehensive Pilates',
+    tier: 'senior',
+    image: '/assets/images/gokben.webp',
+    languages: ['English', 'Turkish'],
+    specialties: ['Reformer Pilates', 'Mat Pilates', 'Prenatal Pilates'],
+    available: true,
+    seo: {
+      title: 'Gökben Öztekin | Pilates Instructor at PT 7 Amsterdam',
+      description: 'Meet Gökben Öztekin, expert Reformer Pilates instructor at PT 7 Amsterdam. Specializing in precise technique and mindful movement.',
+      keywords: 'Gökben Öztekin, Reformer Pilates, Pilates instructor Amsterdam, PT 7, Pilates leraar Amsterdam',
+    },
+    structuredData: {
+      jobTitle: 'Basi Pilates Instructor',
+      description: 'Expert Reformer Pilates instructor specializing in precise technique and mindful movement at PT 7 Amsterdam.',
+    },
+    bio: [
+      'Gokben is a certified Basi Pilates Instructor with a passion for helping clients improve their strength, flexibility, and overall well-being. She creates a welcoming and motivating environment for everyone.',
+    ],
+    qualifications: [
+      'Basi Pilates Instructor',
+      'Specializes in Pilates for all ages and abilities',
+      'Focuses on mindful movement and personal growth',
+    ],
+    ctaText: 'Book a session with Gökben and experience the art of Reformer Pilates.',
   },
   {
     slug: 'gulce',

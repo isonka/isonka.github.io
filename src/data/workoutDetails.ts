@@ -240,8 +240,8 @@ export const workoutDetails: WorkoutDetailData[] = [
       title: 'Meet Your Expert Instructors',
       cards: [
         { ...elifCard, cert: 'Senior Polestar Pilates Instructor', description: '15+ years experience, specializing in injury recovery and spinal health', imageAlt: 'Elif Arzu Ogan - Reformer Pilates Instructor' },
-        { slug: 'gokben', name: 'Gökben Öztekin', cert: 'Basi Pilates Instructor', description: 'Pilates Instructor', image: '/assets/images/gokben.webp', imageAlt: 'Gökben Öztekin - Basi Pilates Instructor' },
         { ...goknurCard, cert: 'Senior Polestar Pilates Instructor', description: '12+ years experience in Reformer Pilates and strength training', imageAlt: 'Göknur Dipli - Reformer Pilates Instructor' },
+        { slug: 'gokben', name: 'Gökben Öztekin', cert: 'Basi Pilates Instructor', description: 'Pilates Instructor', image: '/assets/images/gokben.webp', imageAlt: 'Gökben Öztekin - Basi Pilates Instructor' },
       ],
     },
     faq: [
