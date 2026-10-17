@@ -1,4 +1,5 @@
 import { useEffect, useState, lazy, Suspense } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -118,10 +119,12 @@ function DeferredChatbot() {
 }
 
 function RouteFallback() {
+  const { t } = useTranslation('common');
+
   return (
     <div className="route-fallback" role="status" aria-live="polite" aria-busy="true">
       <span className="route-fallback-spinner" aria-hidden="true" />
-      <span className="route-fallback-label">Loading…</span>
+      <span className="route-fallback-label">{t('loading')}</span>
     </div>
   );
 }
@@ -167,13 +170,19 @@ const router = createBrowserRouter([
       { path: 'schedule', element: <Schedule /> },
       { path: 'schedule/nl', element: <Schedule /> },
       { path: 'equipment', element: <Equipment /> },
+      { path: 'equipment/nl', element: <Equipment /> },
       { path: 'equipment/:slug', element: <EquipmentDetail /> },
+      { path: 'equipment/:slug/nl', element: <EquipmentDetail /> },
       { path: 'workouts/:slug', element: <WorkoutDetail /> },
+      { path: 'workouts/:slug/nl', element: <WorkoutDetail /> },
       { path: 'congrats', element: <Congrats /> },
+      { path: 'congrats/nl', element: <Congrats /> },
       { path: 'index.html', element: <Navigate to="/" replace /> },
       { path: 'congrats.html', element: <Navigate to="/congrats/" replace /> },
       { path: 'instructors', element: <Trainers /> },
+      { path: 'instructors/nl', element: <Trainers /> },
       { path: 'trainer/:slug', element: <TrainerDetail /> },
+      { path: 'trainer/:slug/nl', element: <TrainerDetail /> },
       { path: 'academy', element: <Academy /> },
       { path: 'academy/nl', element: <Academy /> },
       {
@@ -181,11 +190,17 @@ const router = createBrowserRouter([
         element: <Navigate to="/academy/" replace />,
       },
       { path: 'blog', element: <Blog /> },
+      { path: 'blog/nl', element: <Blog /> },
       { path: 'blog/:slug', element: <BlogPost /> },
+      { path: 'blog/:slug/nl', element: <BlogPost /> },
       { path: 'classpass-offer', element: <ClassPassOffer /> },
+      { path: 'classpass-offer/nl', element: <ClassPassOffer /> },
       { path: 'healthcare-providers', element: <HealthcareProviders /> },
+      { path: 'healthcare-providers/nl', element: <HealthcareProviders /> },
       { path: 'corporate', element: <Corporate /> },
+      { path: 'corporate/nl', element: <Corporate /> },
       { path: 'prenatal-pilates-amsterdam', element: <PrenatalPilatesAmsterdam /> },
+      { path: 'prenatal-pilates-amsterdam/nl', element: <PrenatalPilatesAmsterdam /> },
       { path: 'pregnancy-pilates-amsterdam', element: <PregnancyPilates /> },
       { path: 'private-pilates-amsterdam', element: <PrivatePilates /> },
       { path: 'private-pilates-amsterdam/nl', element: <PrivatePilates /> },
@@ -196,6 +211,7 @@ const router = createBrowserRouter([
       { path: 'reformer-pilates-amsterdam', element: <ReformerPilatesAmsterdam /> },
       { path: 'reformer-pilates-amsterdam/nl', element: <ReformerPilatesAmsterdam /> },
       { path: 'privacy', element: <Privacy /> },
+      { path: 'privacy/nl', element: <Privacy /> },
       { path: '*', element: <NotFound /> },
     ],
   },

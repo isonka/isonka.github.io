@@ -36,6 +36,7 @@ import {
   trackPageView,
 } from '../utils/gtmTracking';
 import { ensureHealcodeLoaded } from '../utils/healcode';
+import { localeHref } from '../i18n/locale';
 import { useLocale } from '../i18n/useLocale';
 import '../styles/Academy.css';
 
@@ -175,7 +176,7 @@ export const Academy= () => {
         <section className="academy-courses">
           <div className="academy-container">
             <div className="ittap-accreditation">
-              <p className="ittap-accreditation-eyebrow">PT7 Academy · Museumplein, Amsterdam</p>
+              <p className="ittap-accreditation-eyebrow">{t('proof.eyebrow')}</p>
               <h1 className="academy-page-title">{t('hero.title')}</h1>
               <p className="academy-pma-subtitle">{t('hero.subtitle')}</p>
               {isNl && (
@@ -223,7 +224,7 @@ export const Academy= () => {
                 <div className="academy-proof-media">
                   <img
                     src="/assets/images/academy-training.webp"
-                    alt="PT7 Academy Reformer instructor training at the Museumplein studio"
+                    alt={t('proof.imageAlt')}
                     width={1600}
                     height={1067}
                     loading="lazy"
@@ -231,13 +232,11 @@ export const Academy= () => {
                   />
                 </div>
                 <div className="academy-proof-copy">
-                  <p className="academy-proof-lead">
-                    Weekend Reformer teacher training in the studio: lectures, practice, and notebooks on the floor.
-                  </p>
+                  <p className="academy-proof-lead">{t('proof.lead')}</p>
                   <p className="academy-proof-meta">
-                    <Link to="/blog/career-change-banker-to-pilates-instructor/">Career-change guide</Link>
+                    <Link to={localeHref('/blog/career-change-banker-to-pilates-instructor/', locale)}>{t('proof.guide')}</Link>
                     <span aria-hidden="true"> · </span>
-                    Course lead <Link to="/trainer/elif/">Elif Arzu Ogan</Link>
+                    {t('proof.courseLead')} <Link to={localeHref('/trainer/elif/', locale)}>Elif Arzu Ogan</Link>
                   </p>
                 </div>
               </div>
@@ -324,8 +323,8 @@ export const Academy= () => {
                       ns="academy"
                       i18nKey="audience.careerChangers.text"
                       components={{
-                        guide: <Link to="/blog/career-change-banker-to-pilates-instructor/" />,
-                        elif: <Link to="/trainer/elif/" />,
+                        guide: <Link to={localeHref('/blog/career-change-banker-to-pilates-instructor/', locale)} />,
+                        elif: <Link to={localeHref('/trainer/elif/', locale)} />,
                       }}
                     />
                   </p>
@@ -346,7 +345,7 @@ export const Academy= () => {
             </section>
 
             <div className="course-card featured full-width">
-              <p className="course-badge">{t('courseCard.enrollingBadge')} · Winter 2026/27</p>
+              <p className="course-badge">{t('courseCard.enrollingBadge')} · {t('termBadge')}</p>
               <h2 className="course-card-title">{courseTitle}</h2>
               <p className="academy-course-accreditation">
                 <Trans
@@ -567,7 +566,7 @@ export const Academy= () => {
                 ns="academy"
                 i18nKey="faqSection.further"
                 components={{
-                  post: <Link to="/blog/switching-careers-into-pilates-7-questions/" />,
+                  post: <Link to={localeHref('/blog/switching-careers-into-pilates-7-questions/', locale)} />,
                 }}
               />
             </p>
@@ -604,7 +603,7 @@ export const Academy= () => {
           </div>
         </section>
 
-        <div className="academy-sticky-enroll" aria-label="Enroll">
+        <div className="academy-sticky-enroll" aria-label={t('enroll.stickyAria')}>
           <AcademyEnrollButtons course="reformer" location="sticky_bar" showInstallments={false} />
           <button
             type="button"

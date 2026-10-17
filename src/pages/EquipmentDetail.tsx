@@ -1,20 +1,32 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { EquipmentFAQ } from '../components/EquipmentFAQ';
 import { EquipmentContact } from '../components/EquipmentContact';
-import { equipmentProducts } from '../data/equipment';
+import { equipmentFor } from '../data/localized';
+import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import { NotFound } from './NotFound';
 import '../styles/EquipmentProduct.css';
 import { studioStreet } from '../data/business';
 
+const RELATED_BY_EQUIPMENT = {
+  reformer: 'reformer',
+  'tower-reformer': 'reformer',
+  cadillac: 'equipmentClasses',
+  'wunda-chair': 'studioClasses',
+} as const;
+
 export const EquipmentDetail= () => {
+  const { t } = useTranslation('equipment');
   const { slug } = useParams<{ slug: string }>();
+  const page = useLocalizedPage(`/equipment/${slug}/`);
+  const { href } = page;
   const [activeImage, setActiveImage] = useState(0);
 
-  const product = equipmentProducts.find((p) => p.slug === slug);
+  const product = equipmentFor(page.locale).find((p) => p.slug === slug);
 
   if (!product) {
     return <NotFound />;
@@ -22,25 +34,21 @@ export const EquipmentDetail= () => {
 
   const hasGallery = product.images.length > 1;
   const currentImage = product.images[activeImage] || product.images[0];
-  const workoutByEquipment: Record<string, { to: string; label: string }> = {
-    reformer: { to: '/reformer-pilates-amsterdam/', label: 'Book Reformer Pilates classes in Amsterdam' },
-    'tower-reformer': { to: '/reformer-pilates-amsterdam/', label: 'Book Reformer Pilates classes in Amsterdam' },
-    cadillac: { to: '/reformer-pilates-amsterdam/', label: 'Book equipment-based Pilates classes' },
-    'wunda-chair': { to: '/reformer-pilates-amsterdam/', label: 'Book Pilates classes at our studio' },
-  };
-  const relatedWorkout = workoutByEquipment[product.slug];
+  const relatedKey = RELATED_BY_EQUIPMENT[product.slug as keyof typeof RELATED_BY_EQUIPMENT];
+  const relatedWorkout = relatedKey
+    ? { to: href('/reformer-pilates-amsterdam/'), label: t(`detail.related.${relatedKey}`) }
+    : undefined;
   const forSaleOnly = product.slug === 'ladder-barrel';
   const visibleFaq = forSaleOnly
     ? product.faq
     : [
         {
-          question: `Can I train on the ${product.name} at PT 7?`,
-          answer: `${product.name} is used in classes at our Museumplein studio. Small groups are a maximum of 5. Book from the schedule.`,
+          question: t('detail.faqTrainQ', { name: product.name }),
+          answer: t('detail.faqTrainA', { name: product.name }),
         },
         {
-          question: 'Is this page selling equipment?',
-          answer:
-            'This page describes apparatus in the studio. The Ladder Barrel is sold separately and is not used in client sessions. Book a class from the schedule.',
+          question: t('detail.faqSellingQ'),
+          answer: t('detail.faqSellingA'),
         },
       ];
 
@@ -50,14 +58,16 @@ export const EquipmentDetail= () => {
         title={product.seo.title}
         description={product.seo.description}
         keywords={product.seo.keywords}
-        canonical={`https://www.pt7.nl/equipment/${product.slug}/`}
+        canonical={page.canonical}
+        hreflangAlternates={page.hreflang}
+        {...page.seoLocale}
       />
       <StructuredData type="FAQPage" data={{ faqs: visibleFaq }} />
 
       <Breadcrumbs
         items={[
-          { name: forSaleOnly ? 'Equipment for Sale' : 'Studio Equipment', path: '/equipment/' },
-          { name: product.name, path: `/equipment/${product.slug}/` },
+          { name: forSaleOnly ? t('detail.breadcrumbForSale') : t('detail.breadcrumbStudio'), path: href('/equipment/') },
+          { name: product.name, path: page.path },
         ]}
       />
 
@@ -83,7 +93,7 @@ export const EquipmentDetail= () => {
                     type="button"
                     className={`gallery-thumb${i === activeImage ? ' active' : ''}`}
                     onClick={() => setActiveImage(i)}
-                    aria-label={`View image ${i + 1}`}
+                    aria-label={t('detail.viewImage', { n: String(i + 1) })}
                   >
                     <img src={img.src} alt={img.alt} width={img.width} height={img.height} loading="lazy" decoding="async" />
                   </button>
@@ -93,18 +103,20 @@ export const EquipmentDetail= () => {
           </div>
 
           <div className="product-info">
-            <p className="kicker">{forSaleOnly ? 'Equipment for sale' : 'In the studio'}</p>
-            <h1>{forSaleOnly ? `${product.name} for sale` : `${product.name} at PT 7 Amsterdam`}</h1>
-            <p className="product-intent-notice">
+            <p className="kicker">{forSaleOnly ? t('detail.kickerForSale') : t('detail.kickerStudio')}</p>
+            <h1>
               {forSaleOnly
-                ? 'This piece is for purchase and is not used in client sessions. '
-                : `This is apparatus we use in classes at ${studioStreet}, Museumplein. `}
-              <Link to="/reformer-pilates-amsterdam/" className="prose-link">
-                Book Reformer Pilates in Amsterdam
+                ? t('detail.titleForSale', { name: product.name })
+                : t('detail.titleStudio', { name: product.name })}
+            </h1>
+            <p className="product-intent-notice">
+              {forSaleOnly ? t('detail.noticeForSale') : t('detail.noticeStudio', { studioStreet })}
+              <Link to={href('/reformer-pilates-amsterdam/')} className="prose-link">
+                {t('detail.bookReformer')}
               </Link>
               {' · '}
-              <Link to="/schedule/" className="prose-link">
-                View schedule
+              <Link to={href('/schedule/')} className="prose-link">
+                {t('detail.schedule')}
               </Link>
             </p>
             <p className="product-short-desc">{product.shortDesc}</p>
@@ -116,11 +128,11 @@ export const EquipmentDetail= () => {
             <div className="product-cta">
               {forSaleOnly ? (
                 <a href="#product-contact" className="btn-gold">
-                  Contact for Order
+                  {t('detail.contactForOrder')}
                 </a>
               ) : (
-                <Link to="/schedule/" className="btn-gold">
-                  Book a class
+                <Link to={href('/schedule/')} className="btn-gold">
+                  {t('detail.bookClass')}
                 </Link>
               )}
             </div>
@@ -129,7 +141,7 @@ export const EquipmentDetail= () => {
 
         <section className="product-details">
           <div className="product-desc-specs">
-            <h2 className="product-section-title">Details</h2>
+            <h2 className="product-section-title">{t('detail.details')}</h2>
             <p className="product-desc">{product.description}</p>
             <ul className="product-specs">
               {product.specs.map((s) => (
@@ -143,8 +155,8 @@ export const EquipmentDetail= () => {
               <p className="product-related">
                 <Link to={relatedWorkout.to} className="prose-link">
                   {relatedWorkout.label}
-                </Link>{' '}
-                at {studioStreet}, Museumplein.
+                </Link>
+                {t('detail.relatedSuffix', { studioStreet })}
               </p>
             ) : null}
           </div>

@@ -13,22 +13,17 @@ export function homePath(locale: Locale): string {
   return locale === 'nl' ? '/nl/' : '/';
 }
 
-const LOCALIZED_PATHS = [
-  '/academy',
-  '/intro',
-  '/opening-offer',
-  '/pricing',
-  '/schedule',
-  '/reformer-pilates-amsterdam',
-  '/private-pilates-amsterdam',
-  '/strength-training-amsterdam',
-  '/trx-training-amsterdam',
-];
+/** Paths without a Dutch mirror (redirect-only routes). Every other page is served at `${path}nl/` too. */
+const UNMIRRORED_PATHS = ['/pregnancy-pilates-amsterdam'];
+
+function basePathOf(pathname: string): string {
+  return pathname.replace(/\/nl\/?$/, '').replace(/\/$/, '') || '/';
+}
 
 export function localizedPath(pathname: string, locale: Locale): string {
-  const base = pathname.replace(/\/nl\/?$/, '').replace(/\/$/, '') || '/';
+  const base = basePathOf(pathname);
 
-  if (!LOCALIZED_PATHS.includes(base)) {
+  if (base === '/' || UNMIRRORED_PATHS.includes(base)) {
     return homePath(locale);
   }
 
@@ -38,11 +33,16 @@ export function localizedPath(pathname: string, locale: Locale): string {
 /** Link target for `path` in `locale`: the `/nl/` mirror when one exists, else the path unchanged. */
 export function localeHref(path: string, locale: Locale): string {
   const [pathname, hash] = path.split('#');
-  const base = pathname.replace(/\/$/, '') || '/';
+  const base = basePathOf(pathname);
   let href = pathname;
   if (base === '/') href = homePath(locale);
-  else if (locale === 'nl' && LOCALIZED_PATHS.includes(base)) href = `${base}/nl/`;
+  else if (locale === 'nl' && !UNMIRRORED_PATHS.includes(base)) href = `${base}/nl/`;
   return hash ? `${href}#${hash}` : href;
+}
+
+/** Date format for visible dates in `locale`. */
+export function dateLocale(locale: Locale): string {
+  return locale === 'nl' ? 'nl-NL' : 'en-US';
 }
 
 export type DeepStringify<T> = {

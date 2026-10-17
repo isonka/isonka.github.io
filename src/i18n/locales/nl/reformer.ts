@@ -28,6 +28,7 @@ export const nlReformer: DeepStringify<EnReformer> = {
     imageAlt: 'Instructeur begeleidt een Reformer-cliënt bij PT 7 Amsterdam',
     priceAnchor: 'Intro: €50 voor 3 groepslessen · vanaf {{memberPrice}} per les met een abonnement',
     reviewSource: 'Google-review',
+    testimonial: '“Professioneel, doordacht en precies de Reformer-studio waar ik twee jaar naar zocht.”',
     ctaLabel: 'Bekijk prijzen',
   },
   intro: {

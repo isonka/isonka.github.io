@@ -1,4 +1,5 @@
-import { ACADEMY_ENROLL_WIDGET, ACADEMY_INSTALLMENTS_WIDGET } from '../data/academy';
+import { useTranslation } from 'react-i18next';
+import { academyEnrollWidget, academyInstallmentsWidget } from '../data/academy';
 
 type AcademyEnrollButtonsProps = {
   course: 'reformer' | 'mat';
@@ -14,6 +15,7 @@ export function AcademyEnrollButtons({
   variant = 'course',
   showInstallments = true,
 }: AcademyEnrollButtonsProps) {
+  const { t } = useTranslation('academy');
   const prefix = variant === 'cta' ? 'cta-btn' : 'course-btn';
   return (
     <>
@@ -21,14 +23,14 @@ export function AcademyEnrollButtons({
         className={`${prefix} primary academy-enroll-btn`}
         data-course={course}
         data-location={location}
-        dangerouslySetInnerHTML={{ __html: ACADEMY_ENROLL_WIDGET }}
+        dangerouslySetInnerHTML={{ __html: academyEnrollWidget(t('enroll.button')) }}
       />
       {showInstallments ? (
         <div
           className={`${prefix} secondary academy-enroll-btn academy-enroll-btn--installments`}
           data-course={course}
           data-location={location}
-          dangerouslySetInnerHTML={{ __html: ACADEMY_INSTALLMENTS_WIDGET }}
+          dangerouslySetInnerHTML={{ __html: academyInstallmentsWidget(t('enroll.installments')) }}
         />
       ) : null}
     </>

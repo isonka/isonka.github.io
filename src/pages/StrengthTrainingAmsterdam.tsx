@@ -78,7 +78,7 @@ export const StrengthTrainingAmsterdam = () => {
           imageSrc="/assets/images/strength.webp"
           imageAlt={t('trust.imageAlt')}
           priceAnchor={t('trust.priceAnchor')}
-          testimonial="“Calm studio, professional trainers who guide every movement with care.”"
+          testimonial={t('trust.testimonial')}
           testimonialAuthor={`Ayşe · ${t('trust.reviewSource')}`}
           ctaTo={href('/pricing/')}
           ctaLabel={t('trust.ctaLabel')}

@@ -25,6 +25,7 @@ export const enReformer = {
     imageAlt: 'Instructor coaching a Reformer client at PT 7 Amsterdam',
     priceAnchor: 'Intro: €50 for 3 group classes · from {{memberPrice}} per class on membership',
     reviewSource: 'Google review',
+    testimonial: '“Professional, thoughtful, and exactly the Reformer studio I spent two years looking for.”',
     ctaLabel: 'View pricing',
   },
   intro: {

@@ -28,6 +28,7 @@ export const nlStrength: DeepStringify<EnStrength> = {
     imageAlt: 'Krachttraining bij PT 7 Amsterdam',
     priceAnchor: 'Kracht- & functionele training · pakketten op de prijzenpagina',
     reviewSource: 'Google-review',
+    testimonial: '“Rustige studio, professionele trainers die elke beweging met zorg begeleiden.”',
     ctaLabel: 'Bekijk prijzen',
   },
   intro: {

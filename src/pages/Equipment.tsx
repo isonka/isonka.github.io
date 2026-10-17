@@ -1,39 +1,31 @@
 import { Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
-import { equipmentProducts } from '../data/equipment';
+import { BASE_URL } from '../data/business';
+import { equipmentFor } from '../data/localized';
+import { homePath } from '../i18n/locale';
+import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import '../styles/Equipment.css';
 
-const equipmentMeta: Record<string, { description: string; tag?: string }> = {
-  reformer: {
-    description:
-      'The quintessential Pilates apparatus featuring a sliding carriage, springs, and straps for full-body conditioning.',
-    tag: 'Most popular',
-  },
-  'tower-reformer': {
-    description:
-      'Combines the reformer with a tower for added vertical spring resistance and exercise variety.',
-  },
-  cadillac: {
-    description:
-      'Versatile equipment with overhead bars and springs for advanced stretching and strength work.',
-  },
-  'wunda-chair': {
-    description:
-      'Compact yet powerful equipment for balance, strength, and functional movement training.',
-  },
-  'ladder-barrel': {
-    description:
-      'Available for purchase for home or studio use. Sold by PT 7; not used in our client trainings.',
-  },
-};
+const CARD_COPY = {
+  reformer: 'reformer',
+  'tower-reformer': 'towerReformer',
+  cadillac: 'cadillac',
+  'wunda-chair': 'wundaChair',
+  'ladder-barrel': 'ladderBarrel',
+} as const;
 
 export const Equipment= () => {
+  const { t } = useTranslation('equipment');
+  const page = useLocalizedPage('/equipment/');
+  const { href, isNl } = page;
   const navigate = useNavigate();
+  const equipmentProducts = equipmentFor(page.locale);
 
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    navigate('/');
+    navigate(homePath(page.locale));
     setTimeout(() => {
       const contactSection = document.getElementById('contact');
       if (contactSection) {
@@ -42,33 +34,38 @@ export const Equipment= () => {
     }, 100);
   };
 
-  const equipment = equipmentProducts.map((p) => ({
-    name: p.name,
-    image: p.images[0].src,
-    description: equipmentMeta[p.slug]?.description || p.shortDesc,
-    link: `/equipment/${p.slug}/`,
-    tag: equipmentMeta[p.slug]?.tag,
-  }));
+  const equipment = equipmentProducts.map((p) => {
+    const copyKey = CARD_COPY[p.slug as keyof typeof CARD_COPY];
+    return {
+      name: p.name,
+      image: p.images[0].src,
+      description: copyKey ? t(`cards.${copyKey}`) : p.shortDesc,
+      link: href(`/equipment/${p.slug}/`),
+      tag: p.slug === 'reformer' ? t('cards.mostPopular') : undefined,
+    };
+  });
 
   return (
     <>
       <SEOHead
-        title="Pilates Equipment & Reformer Kopen | Sole Pilates Dealer"
-        description="Official Sole Pilates dealer in the Netherlands. Reformer kopen? Try Pilates apparatus at our Amsterdam studio and ask us for advice. Prices on request."
-        keywords="pilates equipment, pilates equipment amsterdam, reformer kopen, pilates reformer kopen, pilates apparatuur, pilates apparatuur kopen, sole pilates, sole pilates dealer nederland, tower reformer, cadillac pilates"
-        canonical="https://www.pt7.nl/equipment/"
-        ogTitle="Pilates Equipment & Reformer Kopen | Sole Pilates Dealer NL"
-        ogDescription="PT 7 is the official Sole Pilates dealer in the Netherlands. Try Pilates apparatus at our Museumplein studio. Prices on request."
+        title={t('seo.title')}
+        description={t('seo.description')}
+        keywords={t('seo.keywords')}
+        canonical={page.canonical}
+        ogTitle={t('seo.ogTitle')}
+        ogDescription={t('seo.ogDescription')}
+        hreflangAlternates={page.hreflang}
+        {...page.seoLocale}
       />
       <StructuredData
         type="ItemList"
         data={{
           itemList: {
-            name: 'Pilates Equipment at PT 7 Amsterdam',
+            name: t('seo.listName'),
             itemListElement: equipmentProducts.map((product) => ({
               name: product.name,
-              url: `https://www.pt7.nl/equipment/${product.slug}/`,
-              image: `https://www.pt7.nl${product.images[0].src}`,
+              url: `${BASE_URL}${href(`/equipment/${product.slug}/`)}`,
+              image: `${BASE_URL}${product.images[0].src}`,
             })),
           },
         }}
@@ -76,39 +73,31 @@ export const Equipment= () => {
 
       <div className="equipment-page">
         <header className="equipment-hero">
-          <p className="kicker">Equipment</p>
-          <h1>Pilates Equipment in Amsterdam</h1>
-          <p className="equipment-hero-line">
-            Train on Reformer, Tower, Cadillac, and Chair in our classes at Museumplein. Looking to buy? PT 7 is the official Sole Pilates dealer in the Netherlands.
-          </p>
+          <p className="kicker">{t('hero.kicker')}</p>
+          <h1>{t('hero.title')}</h1>
+          <p className="equipment-hero-line">{t('hero.line')}</p>
         </header>
 
         <section className="equipment-dealer" aria-labelledby="equipment-dealer-heading">
-          <h2 id="equipment-dealer-heading">Official Sole Pilates dealer in the Netherlands</h2>
-          <p>
-            Equipping a studio or training at home? We advise you on the right apparatus for your space and goals. Try
-            Pilates apparatus in person at our studio at Museumplein, then order through us. Prices on request.
-          </p>
-          <p lang="nl">
-            Reformer kopen of andere pilates apparatuur? PT 7 is officieel dealer van Sole Pilates in Nederland. Probeer
-            de apparaten in onze studio aan het Museumplein en vraag vrijblijvend een offerte aan. Prijzen op aanvraag.
-          </p>
+          <h2 id="equipment-dealer-heading">{t('dealer.title')}</h2>
+          <p>{t('dealer.text')}</p>
+          {isNl ? null : <p lang="nl">{t('dealer.dutchNote')}</p>}
           <p>
             <a
-              href={`mailto:info@pt7.nl?subject=${encodeURIComponent('Sole Pilates quote request')}`}
+              href={`mailto:info@pt7.nl?subject=${encodeURIComponent(t('dealer.quoteSubject'))}`}
               className="btn-gold"
             >
-              Request a Sole Pilates quote
+              {t('dealer.quoteButton')}
             </a>
           </p>
         </section>
 
         <div className="equipment-intent-notice">
           <p>
-            <strong>Looking for Pilates classes?</strong> These machines are what we teach on.{' '}
-            <Link to="/reformer-pilates-amsterdam/">Book Reformer Pilates classes in Amsterdam</Link>
+            <strong>{t('intent.lead')}</strong> {t('intent.text')}{' '}
+            <Link to={href('/reformer-pilates-amsterdam/')}>{t('intent.bookReformer')}</Link>
             {' · '}
-            <Link to="/schedule/">View class schedule</Link>
+            <Link to={href('/schedule/')}>{t('intent.schedule')}</Link>
           </p>
         </div>
 
@@ -120,7 +109,7 @@ export const Equipment= () => {
                   <div className="equipment-media">
                     <img
                       src={item.image}
-                      alt={`${item.name} Pilates Equipment`}
+                      alt={t('cards.imageAlt', { name: item.name })}
                       width="640"
                       height="480"
                       loading="lazy"
@@ -130,13 +119,13 @@ export const Equipment= () => {
                   {item.tag ? <span className="equipment-note">{item.tag}</span> : null}
                   <h2 className="equipment-title">{item.name}</h2>
                   <p className="equipment-desc">{item.description}</p>
-                  <span className="prose-link equipment-more">Learn more</span>
+                  <span className="prose-link equipment-more">{t('cards.learnMore')}</span>
                 </Link>
                 <a
                   className="equipment-quote-btn"
-                  href={`mailto:info@pt7.nl?subject=${encodeURIComponent(`Quote request: ${item.name}`)}&body=${encodeURIComponent(`Hi PT 7,\n\nI would like a quote for the ${item.name}.\n\nThanks,`)}`}
+                  href={`mailto:info@pt7.nl?subject=${encodeURIComponent(t('cards.quoteSubject', { name: item.name }))}&body=${encodeURIComponent(t('cards.quoteBody', { name: item.name }))}`}
                 >
-                  Request a quote
+                  {t('cards.quote')}
                 </a>
               </li>
             ))}
@@ -144,16 +133,14 @@ export const Equipment= () => {
         </div>
 
         <section className="cta-band equipment-cta-band">
-          <h2>Need help choosing?</h2>
-          <p>
-            Compare models, review specs, and request an order for home or studio use. We can advise based on your space and goals.
-          </p>
+          <h2>{t('help.title')}</h2>
+          <p>{t('help.text')}</p>
           <div className="equipment-cta-actions">
             <a href="#contact" onClick={handleContactClick} className="btn-gold">
-              Contact for Order
+              {t('help.contact')}
             </a>
-            <Link to="/reformer-pilates-amsterdam/" className="btn-ghost">
-              Book Pilates Classes
+            <Link to={href('/reformer-pilates-amsterdam/')} className="btn-ghost">
+              {t('help.book')}
             </Link>
           </div>
         </section>

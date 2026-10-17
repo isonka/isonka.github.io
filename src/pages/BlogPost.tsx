@@ -1,26 +1,33 @@
 import { useParams, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { getBlogPostBySlug, getRecentPosts } from '../data/blog';
+import { BASE_URL } from '../data/business';
+import { dateLocale } from '../i18n/locale';
+import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import { trackBlogPostView, trackBlogPostRead, trackPageView } from '../utils/gtmTracking';
 import { NotFound } from './NotFound';
 import '../styles/BlogPost.css';
 import { blogSeoTitle } from '../data/blog';
 
 export const BlogPost= () => {
+  const { t } = useTranslation('blog');
   const { slug } = useParams<{ slug: string }>();
-  const post = slug ? getBlogPostBySlug(slug) : undefined;
-  const recentPosts = getRecentPosts(3).filter((p) => p.slug !== slug);
+  const page = useLocalizedPage(`/blog/${slug}/`);
+  const { href, locale } = page;
+  const post = slug ? getBlogPostBySlug(slug, locale) : undefined;
+  const recentPosts = getRecentPosts(3, locale).filter((p) => p.slug !== slug);
   const [readStartTime] = useState(Date.now());
 
   useEffect(() => {
     if (post) {
-      trackPageView(`/blog/${post.slug}`, post.title);
+      trackPageView(page.path, post.title);
       trackBlogPostView(post.title, post.slug);
     }
-  }, [post]);
+  }, [post, page.path]);
 
   useEffect(() => {
     if (!post) return;
@@ -51,10 +58,12 @@ export const BlogPost= () => {
         title={blogSeoTitle(post)}
         description={post.metaDescription}
         keywords={post.keywords.join(', ')}
-        canonical={`https://www.pt7.nl/blog/${post.slug}/`}
+        canonical={page.canonical}
         ogTitle={post.title}
         ogDescription={post.metaDescription}
-        ogImage={`https://www.pt7.nl${post.image}`}
+        ogImage={`${BASE_URL}${post.image}`}
+        hreflangAlternates={page.hreflang}
+        {...page.seoLocale}
       />
       <StructuredData
         type="BlogPosting"
@@ -67,7 +76,8 @@ export const BlogPost= () => {
             dateModified: post.dateModified ?? post.date,
             authorName: post.author === 'PT 7 Team' ? 'Elif Arzu Ogan' : post.author,
             keywords: post.keywords,
-            slug: post.slug,
+            url: page.canonical,
+            inLanguage: locale,
             articleSection: post.tags[0] || 'Pilates',
           },
         }}
@@ -78,25 +88,25 @@ export const BlogPost= () => {
 
       <Breadcrumbs
         items={[
-          { name: 'Blog', path: '/blog/' },
-          { name: post.title, path: `/blog/${post.slug}/` },
+          { name: t('post.breadcrumb'), path: href('/blog/') },
+          { name: post.title, path: page.path },
         ]}
       />
 
       <div className="blog-post-page">
         <article className="blog-post">
           <header className="blog-post-header">
-            <p className="kicker">Blog</p>
+            <p className="kicker">{t('kicker')}</p>
             <p className="blog-post-meta">
               <time dateTime={post.date}>
-                {new Date(post.date).toLocaleDateString('en-US', {
+                {new Date(post.date).toLocaleDateString(dateLocale(locale), {
                   year: 'numeric',
                   month: 'long',
                   day: 'numeric',
                 })}
               </time>
               <span aria-hidden="true"> · </span>
-              <span>By {post.author}</span>
+              <span>{t('post.byAuthor', { author: post.author })}</span>
             </p>
             <h1>{post.title}</h1>
             {post.tags.length > 0 ? (
@@ -127,11 +137,11 @@ export const BlogPost= () => {
         <aside className="blog-sidebar">
           {recentPosts.length > 0 ? (
             <div className="sidebar-section">
-              <h2 className="sidebar-heading">Recent posts</h2>
+              <h2 className="sidebar-heading">{t('post.recent')}</h2>
               <ul className="recent-posts">
                 {recentPosts.map((recentPost) => (
                   <li key={recentPost.id}>
-                    <Link to={`/blog/${recentPost.slug}/`} className="recent-post-link">
+                    <Link to={href(`/blog/${recentPost.slug}/`)} className="recent-post-link">
                       <div className="recent-post-image">
                         <img
                           src={recentPost.image}
@@ -146,7 +156,7 @@ export const BlogPost= () => {
                       <div className="recent-post-content">
                         <span className="recent-post-title">{recentPost.title}</span>
                         <time className="recent-post-date" dateTime={recentPost.date}>
-                          {new Date(recentPost.date).toLocaleDateString('en-US', {
+                          {new Date(recentPost.date).toLocaleDateString(dateLocale(locale), {
                             year: 'numeric',
                             month: 'short',
                             day: 'numeric',
@@ -161,26 +171,21 @@ export const BlogPost= () => {
           ) : null}
 
           <div className="sidebar-section">
-            <h2 className="sidebar-heading">About PT 7</h2>
-            <p>
-              Located at Museumplein in Amsterdam, PT 7 offers premium Pilates, TRX, and
-              functional fitness with expert instructors in an intimate setting.
-            </p>
-            <Link to="/pricing/" className="prose-link">
-              View our packages
+            <h2 className="sidebar-heading">{t('post.aboutTitle')}</h2>
+            <p>{t('post.aboutText')}</p>
+            <Link to={href('/pricing/')} className="prose-link">
+              {t('post.packages')}
             </Link>
           </div>
         </aside>
       </div>
 
       <section className="cta-band blog-post-cta-band">
-        <h2>Experience it yourself</h2>
-        <p>
-          Ready to try Pilates at PT 7 Amsterdam? Book a class at our Museumplein studio.
-        </p>
+        <h2>{t('post.ctaTitle')}</h2>
+        <p>{t('post.ctaText')}</p>
         <div className="blog-post-cta-actions">
-          <Link to="/schedule/" className="btn-gold">
-            Book Your Class
+          <Link to={href('/schedule/')} className="btn-gold">
+            {t('cta.book')}
           </Link>
         </div>
       </section>

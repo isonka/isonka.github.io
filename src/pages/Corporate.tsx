@@ -1,74 +1,77 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/Corporate.css';
 import { studioAddressLine } from '../data/business';
+import { useLocalizedPage } from '../i18n/useLocalizedPage';
 
 export const Corporate= () => {
+  const { t } = useTranslation('corporate');
+  const page = useLocalizedPage('/corporate/');
+  const { href } = page;
+
   useEffect(() => {
-    trackPageView('/corporate/', 'Corporate Pilates Amsterdam | For Business | PT 7 Pilates');
-  }, []);
+    trackPageView(page.path, t('seo.analyticsTitle'));
+  }, [page.path, t]);
 
   return (
     <>
       <SEOHead
-        title="Corporate Pilates Amsterdam | Bedrijfsfitness | PT 7 Pilates"
-        description="Corporate Pilates and bedrijfsfitness in Amsterdam: Reformer sessions at Museumplein or on-site mat classes for teams. Tax-friendly WKR options."
-        keywords="corporate Pilates Amsterdam, bedrijfsfitness Amsterdam, corporate wellness Amsterdam, team Pilates Amsterdam, office Pilates Amsterdam, WKR pilates, bedrijfssport Amsterdam, Reformer Pilates teams"
-        canonical="https://www.pt7.nl/corporate/"
-        ogTitle="Corporate Pilates Amsterdam | For Business | PT 7 Pilates"
-        ogDescription="Stronger backs, clearer heads, fewer sick days. Boutique Reformer Pilates for your team, at Museumplein or on-site at your office."
+        title={t('seo.title')}
+        description={t('seo.description')}
+        keywords={t('seo.keywords')}
+        canonical={page.canonical}
+        ogTitle={t('seo.ogTitle')}
+        ogDescription={t('seo.ogDescription')}
+        hreflangAlternates={page.hreflang}
+        {...page.seoLocale}
       />
       <StructuredData
         type="Service"
         data={{
           service: {
-            name: 'Corporate Pilates Amsterdam',
-            description:
-              'Boutique Reformer and mat Pilates for teams, at PT 7 Museumplein or on-site at your office. Small groups (max 5), certified instructors, tax-friendly employer options (WKR).',
-            serviceUrl: 'https://www.pt7.nl/corporate/',
+            name: t('service.name'),
+            description: t('service.description'),
+            serviceUrl: page.canonical,
             areaServed: 'Amsterdam',
             offers: [
-              { name: 'Studio team sessions', url: 'https://www.pt7.nl/corporate/' },
-              { name: 'On-site office mat Pilates', url: 'https://www.pt7.nl/corporate/' },
+              { name: t('service.offerStudio'), url: page.canonical },
+              { name: t('service.offerOnsite'), url: page.canonical },
             ],
           },
         }}
       />
-      <Breadcrumbs items={[{ name: 'For Business', path: '/corporate/' }]} />
+      <Breadcrumbs items={[{ name: t('breadcrumb'), path: page.path }]} />
 
       <div className="corporate-page">
         <section className="corporate-hero">
           <div className="corporate-hero-content">
-            <h1>Corporate Pilates in Amsterdam | For Teams</h1>
-            <p className="hero-subtitle">For Business</p>
-            <p className="hero-description">
-              Stronger backs, clearer heads, fewer sick days. Boutique Reformer Pilates for your team, at our Museumplein studio or on-site at your office.
-            </p>
+            <h1>{t('hero.title')}</h1>
+            <p className="hero-subtitle">{t('hero.subtitle')}</p>
+            <p className="hero-description">{t('hero.description')}</p>
           </div>
         </section>
 
         <section className="corporate-pilates-rehab">
           <div className="corporate-container">
-            <h2>Why teams train with PT 7</h2>
-            <p className="rehab-intro">
-              Desk work wrecks posture, tight hips, stiff necks, lower-back pain. Certified instructors run focused small-group Reformer and mat sessions that undo exactly that. Max 5 per class means real attention. 15+ years expertise, minutes from Zuid.
-            </p>
+            <h2>{t('why.title')}</h2>
+            <p className="rehab-intro">{t('why.intro')}</p>
             <div className="rehab-grid">
               <div className="rehab-card">
-                <h3>Undoes desk damage</h3>
-                <p>Focused Reformer and mat work for tight hips, stiff necks, and lower-back pain, the exact issues long days at a laptop create.</p>
+                <h3>{t('why.deskTitle')}</h3>
+                <p>{t('why.deskText')}</p>
               </div>
               <div className="rehab-card">
-                <h3>Max 5 per class</h3>
-                <p>Small groups mean real coaching, not a crowded gym floor. Every person gets attention and safe progression.</p>
+                <h3>{t('why.smallTitle')}</h3>
+                <p>{t('why.smallText')}</p>
               </div>
               <div className="rehab-card">
-                <h3>Minutes from Zuid</h3>
-                <p>15+ years of expertise at our Museumplein studio, easy for teams based in Amsterdam Zuid and nearby.</p>
+                <h3>{t('why.zuidTitle')}</h3>
+                <p>{t('why.zuidText')}</p>
               </div>
             </div>
           </div>
@@ -76,17 +79,17 @@ export const Corporate= () => {
 
         <section className="corporate-who">
           <div className="corporate-container">
-            <h2>Two formats</h2>
+            <h2>{t('formats.title')}</h2>
             <div className="who-grid">
               <div className="who-card">
-                <span className="who-icon">Studio</span>
-                <h3>At our studio</h3>
-                <p>Private small-group slot at Museumplein, as a recurring perk or a one-off team session.</p>
+                <span className="who-icon">{t('formats.studioTag')}</span>
+                <h3>{t('formats.studioTitle')}</h3>
+                <p>{t('formats.studioText')}</p>
               </div>
               <div className="who-card">
-                <span className="who-icon">On-site</span>
-                <h3>At your office</h3>
-                <p>We bring mat Pilates to you. Just floor space needed, no Reformer required on location.</p>
+                <span className="who-icon">{t('formats.onsiteTag')}</span>
+                <h3>{t('formats.onsiteTitle')}</h3>
+                <p>{t('formats.onsiteText')}</p>
               </div>
             </div>
           </div>
@@ -94,45 +97,43 @@ export const Corporate= () => {
 
         <section className="corporate-offer">
           <div className="corporate-container">
-            <h2>Tax-friendly for employers (WKR)</h2>
+            <h2>{t('tax.title')}</h2>
             <div className="offer-grid">
               <div className="offer-card">
-                <h3>Vrije ruimte</h3>
-                <p>Reimburse a Pilates subscription from the employer&apos;s free space (vrije ruimte).</p>
+                <h3>{t('tax.vrijeTitle')}</h3>
+                <p>{t('tax.vrijeText')}</p>
               </div>
               <div className="offer-card">
-                <h3>Cafetariamodel</h3>
-                <p>Let employees pay pre-tax via a cafetariamodel salary swap, same mechanic as the bike plan, roughly cost-neutral for the company.</p>
+                <h3>{t('tax.cafetariaTitle')}</h3>
+                <p>{t('tax.cafetariaText')}</p>
               </div>
               <div className="offer-card">
-                <h3>Nihilwaardering</h3>
-                <p>On-site sessions at the company&apos;s own premises count as a workplace provision (nihilwaardering) and don&apos;t touch the free space.</p>
+                <h3>{t('tax.nihilTitle')}</h3>
+                <p>{t('tax.nihilText')}</p>
               </div>
             </div>
-            <p className="corporate-disclaimer">
-              Exact treatment depends on the employer&apos;s payroll setup; their own tax/payroll advisor confirms details.
-            </p>
+            <p className="corporate-disclaimer">{t('tax.disclaimer')}</p>
           </div>
         </section>
 
         <section className="corporate-how">
           <div className="corporate-container">
-            <h2>How it works</h2>
+            <h2>{t('how.title')}</h2>
             <div className="how-steps">
               <div className="how-step">
                 <span className="step-number">1</span>
-                <span className="step-title">Tell us team size + format</span>
-                <p>Studio slot or on-site mat, share headcount and how often you want to train.</p>
+                <span className="step-title">{t('how.step1Title')}</span>
+                <p>{t('how.step1Text')}</p>
               </div>
               <div className="how-step">
                 <span className="step-number">2</span>
-                <span className="step-title">Corporate rate + HR sheet</span>
-                <p>We send a corporate rate and a one-page sheet HR can hand to payroll.</p>
+                <span className="step-title">{t('how.step2Title')}</span>
+                <p>{t('how.step2Text')}</p>
               </div>
               <div className="how-step">
                 <span className="step-number">3</span>
-                <span className="step-title">We schedule and run it</span>
-                <p>Sessions booked, instructors assigned, your team trains.</p>
+                <span className="step-title">{t('how.step3Title')}</span>
+                <p>{t('how.step3Text')}</p>
               </div>
             </div>
           </div>
@@ -140,14 +141,17 @@ export const Corporate= () => {
 
         <section className="corporate-cta">
           <div className="corporate-container">
-            <h2>Ask about corporate rates</h2>
-            <p>Email or WhatsApp, we&apos;ll reply with options for your team size and format.</p>
+            <h2>{t('cta.title')}</h2>
+            <p>{t('cta.text')}</p>
             <div className="cta-buttons">
-              <a href="mailto:info@pt7.nl?subject=Corporate%20rates%20-%20For%20Business" className="cta-button primary">
-                Email Us
+              <a
+                href={`mailto:info@pt7.nl?subject=${encodeURIComponent(t('cta.emailSubject'))}`}
+                className="cta-button primary"
+              >
+                {t('cta.email')}
               </a>
               <a
-                href="https://wa.me/31685162693?text=Hi%2C%20I%27d%20like%20to%20ask%20about%20corporate%20Pilates%20rates%20for%20our%20team."
+                href={`https://wa.me/31685162693?text=${encodeURIComponent(t('cta.whatsappText'))}`}
                 className="cta-button secondary"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -155,21 +159,21 @@ export const Corporate= () => {
                 WhatsApp
               </a>
             </div>
-            <p className="cta-note">{studioAddressLine} (Museumplein, Oud-Zuid)</p>
+            <p className="cta-note">{t('cta.note', { address: studioAddressLine })}</p>
           </div>
         </section>
 
         <section className="corporate-back">
           <div className="corporate-container">
             <div style={{ marginBottom: '1rem' }}>
-              <h3>Related Service Pages</h3>
+              <h3>{t('related.title')}</h3>
               <p>
-                <Link to="/reformer-pilates-amsterdam/">Reformer Pilates</Link> ·{' '}
-                <Link to="/healthcare-providers/">For Healthcare</Link> ·{' '}
-                <Link to="/pricing/">Pricing</Link>
+                <Link to={href('/reformer-pilates-amsterdam/')}>{t('related.reformer')}</Link> ·{' '}
+                <Link to={href('/healthcare-providers/')}>{t('related.healthcare')}</Link> ·{' '}
+                <Link to={href('/pricing/')}>{t('related.pricing')}</Link>
               </p>
             </div>
-            <Link to="/" className="back-link">← Back to PT 7</Link>
+            <Link to={href('/')} className="back-link">{t('related.back')}</Link>
           </div>
         </section>
       </div>

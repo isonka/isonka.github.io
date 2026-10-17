@@ -79,7 +79,7 @@ export const TRXTrainingAmsterdam = () => {
           imageSrc="/assets/images/trx.webp"
           imageAlt={t('trust.imageAlt')}
           priceAnchor={t('trust.priceAnchor', { memberPrice: formatEur(MEMBERSHIP.four.perClass) })}
-          testimonial="“Six months in. Incredible results, motivating atmosphere, pristine equipment.”"
+          testimonial={t('trust.testimonial')}
           testimonialAuthor={`Yeşim · ${t('trust.reviewSource')}`}
           ctaTo={href('/pricing/')}
           ctaLabel={t('trust.ctaLabel')}
@@ -143,7 +143,7 @@ export const TRXTrainingAmsterdam = () => {
           <p>{t('cta.text')}</p>
           <div className="service-cta-buttons">
             <Link to={href('/schedule/')} className="service-cta-btn-primary">{t('cta.book')}</Link>
-            <Link to="/workouts/trx/" className="service-cta-btn-secondary">{t('cta.guide')}</Link>
+            <Link to={href('/workouts/trx/')} className="service-cta-btn-secondary">{t('cta.guide')}</Link>
           </div>
         </Reveal>
       </div>

@@ -1,55 +1,51 @@
 import { useParams, Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { StructuredData } from '../components/StructuredData';
 import { Reveal } from '../components/Reveal';
 import { PHOTO_FOCUS } from '../data/photoFocus';
-import { trainerProfiles } from '../data/trainers';
+import { trainersFor } from '../data/localized';
+import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import { NotFound } from './NotFound';
 import '../styles/Trainer.css';
 
+type RelatedLinkKey = 'reformer' | 'academyTraining' | 'prenatal' | 'strength' | 'academyBecome';
+
+const RELATED_LINK_PATHS: Record<RelatedLinkKey, string> = {
+  reformer: '/reformer-pilates-amsterdam/',
+  academyTraining: '/academy/',
+  prenatal: '/prenatal-pilates-amsterdam/',
+  strength: '/workouts/functional-training/',
+  academyBecome: '/academy/',
+};
+
+const RELATED_LINKS_BY_TRAINER: Record<string, RelatedLinkKey[]> = {
+  elif: ['reformer', 'academyTraining', 'prenatal'],
+  gokben: ['reformer'],
+  goknur: ['reformer', 'strength'],
+  gulce: ['reformer', 'academyBecome'],
+  lal: ['reformer', 'academyBecome'],
+  nisan: ['reformer', 'academyBecome'],
+  kelly: ['reformer', 'academyBecome'],
+  gamze: ['reformer', 'academyBecome'],
+};
+
 export const TrainerDetail= () => {
+  const { t } = useTranslation('instructors');
   const { slug } = useParams<{ slug: string }>();
-  const trainer = trainerProfiles.find(t => t.slug === slug);
+  const page = useLocalizedPage(`/trainer/${slug}/`);
+  const { href } = page;
+  const trainer = trainersFor(page.locale).find(p => p.slug === slug);
 
   if (!trainer) {
     return <NotFound />;
   }
 
-  const relatedLinksByTrainer: Record<string, { to: string; label: string }[]> = {
-    elif: [
-      { to: '/reformer-pilates-amsterdam/', label: 'Reformer Pilates classes' },
-      { to: '/academy/', label: 'Pilates teacher training at PT7 Academy' },
-      { to: '/prenatal-pilates-amsterdam/', label: 'Prenatal Pilates page' },
-    ],
-    gokben: [{ to: '/reformer-pilates-amsterdam/', label: 'Reformer Pilates classes' }],
-    goknur: [
-      { to: '/reformer-pilates-amsterdam/', label: 'Reformer Pilates classes' },
-      { to: '/workouts/functional-training/', label: 'Strength training classes' },
-    ],
-    gulce: [
-      { to: '/reformer-pilates-amsterdam/', label: 'Reformer Pilates classes' },
-      { to: '/academy/', label: 'Become a Pilates instructor | PT7 Academy' },
-    ],
-    lal: [
-      { to: '/reformer-pilates-amsterdam/', label: 'Reformer Pilates classes' },
-      { to: '/academy/', label: 'Become a Pilates instructor | PT7 Academy' },
-    ],
-    nisan: [
-      { to: '/reformer-pilates-amsterdam/', label: 'Reformer Pilates classes' },
-      { to: '/academy/', label: 'Become a Pilates instructor | PT7 Academy' },
-    ],
-    kelly: [
-      { to: '/reformer-pilates-amsterdam/', label: 'Reformer Pilates classes' },
-      { to: '/academy/', label: 'Become a Pilates instructor | PT7 Academy' },
-    ],
-    gamze: [
-      { to: '/reformer-pilates-amsterdam/', label: 'Reformer Pilates classes' },
-      { to: '/academy/', label: 'Become a Pilates instructor | PT7 Academy' },
-    ],
-  };
-
-  const relatedLinks = relatedLinksByTrainer[trainer.slug] || [];
+  const relatedLinks = (RELATED_LINKS_BY_TRAINER[trainer.slug] ?? []).map((key) => ({
+    to: href(RELATED_LINK_PATHS[key]),
+    label: t(`detail.links.${key}`),
+  }));
   const role = trainer.heroTitle.replace(/\n/g, ' · ');
 
   return (
@@ -58,7 +54,9 @@ export const TrainerDetail= () => {
         title={trainer.seo.title}
         description={trainer.seo.description}
         keywords={trainer.seo.keywords}
-        canonical={`https://www.pt7.nl/trainer/${trainer.slug}/`}
+        canonical={page.canonical}
+        hreflangAlternates={page.hreflang}
+        {...page.seoLocale}
       />
       <StructuredData
         type="Person"
@@ -78,8 +76,8 @@ export const TrainerDetail= () => {
         }}
       />
       <Breadcrumbs items={[
-        { name: 'Instructors', path: '/instructors/' },
-        { name: trainer.name, path: `/trainer/${trainer.slug}/` },
+        { name: t('breadcrumb'), path: href('/instructors/') },
+        { name: trainer.name, path: page.path },
       ]} />
 
       <div className="trainer-page">
@@ -96,17 +94,17 @@ export const TrainerDetail= () => {
             />
           </div>
           <div className="trainer-hero-text">
-            <p className="trainer-kicker trainer-reveal" style={{ transitionDelay: '80ms' }}>Instructor</p>
+            <p className="trainer-kicker trainer-reveal" style={{ transitionDelay: '80ms' }}>{t('detail.kicker')}</p>
             <h1 className="trainer-reveal" style={{ transitionDelay: '140ms' }}>{trainer.displayName}</h1>
             <p className="trainer-title trainer-reveal" style={{ transitionDelay: '220ms' }}>{role}</p>
             <p className="trainer-meta trainer-reveal" style={{ transitionDelay: '300ms' }}>
               {trainer.languages.join(' · ')}
             </p>
             <div className="trainer-hero-actions trainer-reveal" style={{ transitionDelay: '380ms' }}>
-              <Link to="/schedule/" className="trainer-btn-primary">
-                Book a session with {trainer.displayName.split(' ')[0]}
+              <Link to={href('/schedule/')} className="trainer-btn-primary">
+                {t('detail.bookWith', { name: trainer.displayName.split(' ')[0] })}
               </Link>
-              <Link to="/pricing/" className="trainer-btn-secondary">View Pricing</Link>
+              <Link to={href('/pricing/')} className="trainer-btn-secondary">{t('detail.viewPricing')}</Link>
             </div>
           </div>
         </Reveal>
@@ -121,7 +119,7 @@ export const TrainerDetail= () => {
           </Reveal>
 
           <Reveal className="trainer-qualifications">
-            <h2 className="trainer-reveal">Qualifications & Experience</h2>
+            <h2 className="trainer-reveal">{t('detail.qualifications')}</h2>
             <ul>
               {trainer.qualifications.map((q, i) => (
                 <li
@@ -137,7 +135,7 @@ export const TrainerDetail= () => {
 
           {relatedLinks.length > 0 && (
             <Reveal className="trainer-related">
-              <h2 className="trainer-reveal">Explore Related Pages</h2>
+              <h2 className="trainer-reveal">{t('detail.related')}</h2>
               <ul>
                 {relatedLinks.map((link, i) => (
                   <li
@@ -154,16 +152,16 @@ export const TrainerDetail= () => {
         </div>
 
         <Reveal className="trainer-cta">
-          <h2 className="trainer-reveal">Ready to Start Your Journey?</h2>
+          <h2 className="trainer-reveal">{t('detail.ctaTitle')}</h2>
           <p className="trainer-reveal" style={{ transitionDelay: '80ms' }}>{trainer.ctaText}</p>
           <div className="trainer-cta-buttons trainer-reveal" style={{ transitionDelay: '160ms' }}>
-            <Link to="/schedule/" className="trainer-btn-primary">Book a Session</Link>
-            <Link to="/pricing/" className="trainer-btn-secondary">View Pricing</Link>
+            <Link to={href('/schedule/')} className="trainer-btn-primary">{t('detail.book')}</Link>
+            <Link to={href('/pricing/')} className="trainer-btn-secondary">{t('detail.viewPricing')}</Link>
           </div>
         </Reveal>
 
         <p className="trainer-back">
-          <Link to="/instructors/">← Back to All Instructors</Link>
+          <Link to={href('/instructors/')}>{t('detail.back')}</Link>
         </p>
       </div>
     </>

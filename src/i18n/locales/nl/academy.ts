@@ -231,6 +231,19 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
         'Elke trainee wordt door een lead trainer beoordeeld via een verplichte oefeningsevaluatie. Deze kost EUR 250 inclusief BTW en is vereist om je certificaat te ontvangen.',
     },
   },
+  proof: {
+    eyebrow: 'PT7 Academy · Museumplein, Amsterdam',
+    imageAlt: 'Reformer-instructeursopleiding van PT7 Academy in de studio aan het Museumplein',
+    lead: 'Reformer-docentenopleiding in het weekend, in de studio: colleges, oefenen en aantekeningen op de vloer.',
+    guide: 'Gids voor carrièreswitchers',
+    courseLead: 'Cursusleider',
+  },
+  enroll: {
+    button: 'Inschrijven',
+    installments: 'Inschrijven in 3 termijnen',
+    stickyAria: 'Inschrijven',
+  },
+  termBadge: 'Winter 2026/27',
   faqSection: {
     heading: 'Vragen vóór inschrijving',
     further:

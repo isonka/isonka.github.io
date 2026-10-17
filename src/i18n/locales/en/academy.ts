@@ -228,6 +228,19 @@ export const enAcademy = {
         'Each trainee is checked by a lead trainer through a mandatory exercise assessment. It costs EUR 250 including BTW and is required to receive your certificate.',
     },
   },
+  proof: {
+    eyebrow: 'PT7 Academy · Museumplein, Amsterdam',
+    imageAlt: 'PT7 Academy Reformer instructor training at the Museumplein studio',
+    lead: 'Weekend Reformer teacher training in the studio: lectures, practice, and notebooks on the floor.',
+    guide: 'Career-change guide',
+    courseLead: 'Course lead',
+  },
+  enroll: {
+    button: 'Enroll',
+    installments: 'Enroll with 3 Installments',
+    stickyAria: 'Enroll',
+  },
+  termBadge: 'Winter 2026/27',
   faqSection: {
     heading: 'Questions before you enroll',
     further:

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { trainerProfiles } from '../data/trainers';
 import {
   CLASS_MINUTES,
@@ -8,31 +9,52 @@ import {
   GROUP_MAX,
   INTRO,
   MEMBERSHIP,
+  PRIVATE,
   formatEur,
-  privatePackLine,
 } from '../data/pricing';
+import { localeHref } from '../i18n/locale';
+import { useLocale } from '../i18n/useLocale';
 import '../styles/Chatbot.css';
+
+const GOAL_OPTIONS = ['strength', 'weight', 'rehab', 'pregnancy', 'wellness', 'curious'] as const;
+const EXPERIENCE_OPTIONS = ['experienced', 'someExperience', 'beginner'] as const;
+const GROUP_OPTIONS = ['private', 'couple', 'group'] as const;
+const INJURY_OPTIONS = ['injuries', 'noInjuries', 'minorConcerns'] as const;
+const PREGNANCY_FOCUS_OPTIONS = ['backPain', 'pelvicFloor', 'generalFitness', 'birthPrep', 'noConcerns'] as const;
+const FOLLOW_UP_OPTIONS = ['book', 'equipment', 'trainers', 'restart', 'showEquipment', 'noThanks'] as const;
+
+type OptionId =
+  | (typeof GOAL_OPTIONS)[number]
+  | (typeof EXPERIENCE_OPTIONS)[number]
+  | (typeof GROUP_OPTIONS)[number]
+  | (typeof INJURY_OPTIONS)[number]
+  | (typeof PREGNANCY_FOCUS_OPTIONS)[number]
+  | (typeof FOLLOW_UP_OPTIONS)[number];
+
+const includes = <T extends string>(list: readonly T[], value: string): value is T =>
+  (list as readonly string[]).includes(value);
 
 interface Message {
   id: number;
   text: string;
   sender: 'bot' | 'user';
-  options?: string[];
+  options?: readonly OptionId[];
 }
 
 let lastMessageId = 0;
 const nextMessageId = () => (lastMessageId += 1);
 
 interface UserProfile {
-  goal?: string;
-  experience?: string;
-  groupSize?: string;
-  hasInjuries?: string;
-  isPregnant?: string;
-  budget?: string;
+  goal?: OptionId;
+  experience?: OptionId;
+  groupSize?: OptionId;
+  hasInjuries?: OptionId;
+  isPregnant?: boolean;
 }
 
 export const Chatbot= () => {
+  const { t } = useTranslation('common');
+  const locale = useLocale();
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -41,10 +63,13 @@ export const Chatbot= () => {
   const [isTyping, setIsTyping] = useState(false);
   const timersRef = useRef<number[]>([]);
 
-  const juniors = trainerProfiles.filter((t) => t.tier === 'junior').map((t) => t.name);
-  const seniors = trainerProfiles.filter((t) => t.tier === 'senior');
-  const master = trainerProfiles.find((t) => t.tier === 'master');
+  const juniors = trainerProfiles.filter((p) => p.tier === 'junior').map((p) => p.name);
+  const seniors = trainerProfiles.filter((p) => p.tier === 'senior');
+  const master = trainerProfiles.find((p) => p.tier === 'master');
   const instructorCount = trainerProfiles.length;
+
+  const optionLabel = (id: OptionId) =>
+    id === 'group' ? t('chatbot.options.group', { max: String(GROUP_MAX) }) : t(`chatbot.options.${id}`);
 
   const clearTimers = () => {
     timersRef.current.forEach((id) => window.clearTimeout(id));
@@ -68,30 +93,16 @@ export const Chatbot= () => {
 
   useEffect(() => {
     if (isOpen && messages.length === 0) {
-      addBotMessage(
-        "Hi! I'm here to help you find a class and instructor at PT 7. A few quick questions.",
-        500
-      );
+      addBotMessage(t('chatbot.greeting'), 500);
 
       later(() => {
-        addBotMessage(
-          "What brings you to PT 7?",
-          1500,
-          [
-            "Improve strength & fitness",
-            "Lose weight & tone",
-            "Rehabilitation/injury recovery",
-            "Pregnancy fitness",
-            "General wellness",
-            "Just curious"
-          ]
-        );
+        addBotMessage(t('chatbot.askGoal'), 1500, GOAL_OPTIONS);
       }, 1500);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
-  const addBotMessage = (text: string, delay: number = 0, options?: string[]) => {
+  const addBotMessage = (text: string, delay: number = 0, options?: readonly OptionId[]) => {
     later(() => {
       setIsTyping(true);
       later(() => {
@@ -120,203 +131,211 @@ export const Chatbot= () => {
     ]);
   };
 
-  const handleUserResponse = (response: string, field: keyof UserProfile) => {
-    addUserMessage(response);
-    
-    const newProfile = { ...userProfile, [field]: response };
+  const handleUserResponse = (response: OptionId, field: Exclude<keyof UserProfile, 'isPregnant'>) => {
+    addUserMessage(optionLabel(response));
+
+    const newProfile: UserProfile = { ...userProfile, [field]: response };
     setUserProfile(newProfile);
 
     if (field === 'goal') {
-      if (response === "Pregnancy fitness") {
-        setUserProfile({ ...newProfile, isPregnant: 'yes' });
-        addBotMessage(
-          "Great! We offer specialized pregnancy Pilates. For safety, we only accept pregnant clients for one-on-one private classes.",
-          1000
-        );
-        addBotMessage(
-          "Have you done Pilates before?",
-          2000,
-          ["Yes, I'm experienced", "Some experience", "I'm a beginner"]
-        );
+      if (response === 'pregnancy') {
+        setUserProfile({ ...newProfile, isPregnant: true });
+        addBotMessage(t('chatbot.pregnancyIntro'), 1000);
+        addBotMessage(t('chatbot.askExperience'), 2000, EXPERIENCE_OPTIONS);
       } else {
-        addBotMessage(
-          "Perfect! Have you done Pilates before?",
-          1000,
-          ["Yes, I'm experienced", "Some experience", "I'm a beginner"]
-        );
+        addBotMessage(t('chatbot.askExperiencePerfect'), 1000, EXPERIENCE_OPTIONS);
       }
     } else if (field === 'experience') {
-      if (newProfile.isPregnant === 'yes') {
-        addBotMessage(
-          "Do you have any specific concerns or areas you'd like to focus on during pregnancy?",
-          1000,
-          ["Back pain", "Pelvic floor", "General fitness", "Preparing for birth", "No specific concerns"]
-        );
+      if (newProfile.isPregnant) {
+        addBotMessage(t('chatbot.askPregnancyFocus'), 1000, PREGNANCY_FOCUS_OPTIONS);
       } else {
-        addBotMessage(
-          "Would you like to train alone or with others?",
-          1000,
-          ["Private (just me)", "With a partner (couple)", "Group class (max 5)"]
-        );
+        addBotMessage(t('chatbot.askGroupSize'), 1000, GROUP_OPTIONS);
       }
     } else if (field === 'groupSize') {
-      addBotMessage(
-        "Do you have any injuries or specific concerns?",
-        1000,
-        ["Yes, I have injuries", "No injuries", "Some minor concerns"]
-      );
-    } else if (field === 'hasInjuries' || field === 'budget') {
+      addBotMessage(t('chatbot.askInjuries'), 1000, INJURY_OPTIONS);
+    } else if (field === 'hasInjuries') {
       generateRecommendation(newProfile);
     }
   };
 
+  const privateLine = (tier: keyof typeof PRIVATE) => {
+    const p = PRIVATE[tier];
+    const tierLabel = { master: 'tierMaster', senior: 'tierSenior', junior: 'tierJunior' } as const;
+    return t('chatbot.rec.privateLine', {
+      tier: t(`chatbot.rec.${tierLabel[tier]}`),
+      single: formatEur(p.single),
+      pack5: formatEur(p.pack5),
+      pack10: formatEur(p.pack10),
+      pack20: formatEur(p.pack20),
+    });
+  };
+
   const generateRecommendation = (profile: UserProfile) => {
-    addBotMessage("Let me find the perfect match for you!", 1000);
+    addBotMessage(t('chatbot.matching'), 1000);
 
     later(() => {
       let recommendedInstructor = '';
       let instructorReason = '';
 
-      if (profile.isPregnant === 'yes' || profile.goal === 'Pregnancy fitness') {
-        recommendedInstructor = master ? `${master.name} (Master Instructor)` : 'Our master instructor';
-        instructorReason = `${master?.displayName ?? 'Our master instructor'} offers specialized pregnancy Pilates in one-on-one private classes.`;
-      } else if (profile.hasInjuries === 'Yes, I have injuries' || profile.goal === 'Rehabilitation/injury recovery') {
+      if (profile.isPregnant || profile.goal === 'pregnancy') {
         recommendedInstructor = master
-          ? `${master.displayName} (Master) or ${seniors.map((s) => s.displayName).join(' / ')} (Senior)`
-          : 'Master or Senior instructor';
-        instructorReason = 'Master and Senior instructors have extensive experience in rehabilitation, including spinal disorders and low back care.';
-      } else if (profile.goal === 'Improve strength & fitness' || profile.goal === 'Lose weight & tone') {
-        if (profile.groupSize === 'Private (just me)') {
+          ? t('chatbot.rec.masterTitle', { name: master.name })
+          : t('chatbot.rec.ourMaster');
+        instructorReason = t('chatbot.rec.pregnancyReason', {
+          name: master?.displayName ?? t('chatbot.rec.ourMaster'),
+        });
+      } else if (profile.hasInjuries === 'injuries' || profile.goal === 'rehab') {
+        recommendedInstructor = master
+          ? t('chatbot.rec.rehabTitle', {
+              master: master.displayName,
+              seniors: seniors.map((s) => s.displayName).join(' / '),
+            })
+          : t('chatbot.rec.rehabFallback');
+        instructorReason = t('chatbot.rec.rehabReason');
+      } else if (profile.goal === 'strength' || profile.goal === 'weight') {
+        if (profile.groupSize === 'private') {
           const strengthSenior = seniors.find((s) => s.slug === 'goknur') ?? seniors[0];
           recommendedInstructor = strengthSenior
-            ? `${strengthSenior.name} (Senior Instructor)`
-            : 'A senior instructor';
-          instructorReason = 'Senior instructors specialize in functional training and strength building on Nike Strength equipment.';
+            ? t('chatbot.rec.seniorTitle', { name: strengthSenior.name })
+            : t('chatbot.rec.seniorFallback');
+          instructorReason = t('chatbot.rec.strengthReason');
         } else {
-          recommendedInstructor = `Any of our ${instructorCount} instructors`;
-          instructorReason = 'For group classes, all instructors can help you build strength.';
+          recommendedInstructor = t('chatbot.rec.anyInstructor', { total: String(instructorCount) });
+          instructorReason = t('chatbot.rec.groupStrengthReason');
         }
-      } else if (profile.experience === "I'm a beginner") {
+      } else if (profile.experience === 'beginner') {
         recommendedInstructor = juniors.length
-          ? `${juniors.slice(0, -1).join(', ')}, or ${juniors[juniors.length - 1]} (Junior Instructors)`
-          : 'A junior instructor';
-        instructorReason = 'Junior instructors are PT7 Academy certified and work well with beginners.';
-      } else if (profile.goal === 'General wellness' || profile.goal === 'Just curious') {
+          ? t('chatbot.rec.juniorTitle', {
+              names: juniors.slice(0, -1).join(', '),
+              last: juniors[juniors.length - 1],
+            })
+          : t('chatbot.rec.juniorFallback');
+        instructorReason = t('chatbot.rec.beginnerReason');
+      } else if (profile.goal === 'wellness' || profile.goal === 'curious') {
         const host = seniors[0];
-        recommendedInstructor = host ? `${host.name} (Senior Instructor)` : 'A senior instructor';
-        instructorReason = 'Senior instructors create a welcoming environment for all fitness levels.';
+        recommendedInstructor = host
+          ? t('chatbot.rec.seniorTitle', { name: host.name })
+          : t('chatbot.rec.seniorFallback');
+        instructorReason = t('chatbot.rec.wellnessReason');
       } else {
-        recommendedInstructor = `Any of our ${instructorCount} instructors`;
-        instructorReason = 'Master, Senior, and Junior instructors to match your needs and budget.';
+        recommendedInstructor = t('chatbot.rec.anyInstructor', { total: String(instructorCount) });
+        instructorReason = t('chatbot.rec.defaultReason');
       }
 
       let classType = '';
       let pricing = '';
 
-      if (profile.isPregnant === 'yes') {
-        classType = `**Private Classes** (required for pregnancy, ${CLASS_MINUTES} min)`;
-        pricing = `• Master: ${privatePackLine('master').replace(/^• /, '')}\n• Senior: ${privatePackLine('senior').replace(/^• /, '')}`;
-      } else if (profile.groupSize === 'Private (just me)') {
-        classType = '**Private Classes**';
-        pricing = `• Junior: ${privatePackLine('junior').replace(/^• /, '')}\n• Senior: ${privatePackLine('senior').replace(/^• /, '')}\n• Master: ${privatePackLine('master').replace(/^• /, '')}`;
-      } else if (profile.groupSize === 'With a partner (couple)') {
-        classType = '**Couple Classes**';
-        pricing = `• Single class: ${formatEur(COUPLE.single)}/person\n• 5-class pack: ${formatEur(COUPLE.pack5.perClass)}/person (${formatEur(COUPLE.pack5.total)} total)\n• 10-class pack: ${formatEur(COUPLE.pack10.perClass)}/person (${formatEur(COUPLE.pack10.total)} total)`;
+      if (profile.isPregnant) {
+        classType = t('chatbot.rec.classPregnancy', { minutes: String(CLASS_MINUTES) });
+        pricing = [privateLine('master'), privateLine('senior')].join('\n');
+      } else if (profile.groupSize === 'private') {
+        classType = t('chatbot.rec.classPrivate');
+        pricing = [privateLine('junior'), privateLine('senior'), privateLine('master')].join('\n');
+      } else if (profile.groupSize === 'couple') {
+        classType = t('chatbot.rec.classCouple');
+        pricing = t('chatbot.rec.coupleLines', {
+          single: formatEur(COUPLE.single),
+          pack5: formatEur(COUPLE.pack5.perClass),
+          pack5Total: formatEur(COUPLE.pack5.total),
+          pack10: formatEur(COUPLE.pack10.perClass),
+          pack10Total: formatEur(COUPLE.pack10.total),
+        });
       } else {
-        classType = `**Small Group Classes** (max ${GROUP_MAX})`;
-        pricing = `• Single class: ${formatEur(GROUP.single)}\n• 5-class pack: ${formatEur(GROUP.pack5.perClass)}/class (${formatEur(GROUP.pack5.total)} total)\n• 10-class pack: ${formatEur(GROUP.pack10.perClass)}/class (${formatEur(GROUP.pack10.total)} total)\n• 20-class pack: ${formatEur(GROUP.pack20.perClass)}/class (${formatEur(GROUP.pack20.total)} total)\n\nMembership (all days, 1 class/day):\n• ${MEMBERSHIP.four.classes} classes/month: ${formatEur(MEMBERSHIP.four.perClass)}/class (${formatEur(MEMBERSHIP.four.total)}/month)\n• ${MEMBERSHIP.eight.classes} classes/month: ${formatEur(MEMBERSHIP.eight.perClass)}/class (${formatEur(MEMBERSHIP.eight.total)}/month)\n• Unlimited 3 months: ${formatEur(MEMBERSHIP.unlimited3.perMonth)}/month\n• Annual unlimited: ${formatEur(MEMBERSHIP.annual.perMonth)}/month (${formatEur(MEMBERSHIP.annual.yearTotal)}/year)`;
+        classType = t('chatbot.rec.classGroup', { max: String(GROUP_MAX) });
+        pricing = t('chatbot.rec.groupLines', {
+          single: formatEur(GROUP.single),
+          pack5: formatEur(GROUP.pack5.perClass),
+          pack5Total: formatEur(GROUP.pack5.total),
+          pack10: formatEur(GROUP.pack10.perClass),
+          pack10Total: formatEur(GROUP.pack10.total),
+          pack20: formatEur(GROUP.pack20.perClass),
+          pack20Total: formatEur(GROUP.pack20.total),
+          fourClasses: String(MEMBERSHIP.four.classes),
+          fourPer: formatEur(MEMBERSHIP.four.perClass),
+          fourTotal: formatEur(MEMBERSHIP.four.total),
+          eightClasses: String(MEMBERSHIP.eight.classes),
+          eightPer: formatEur(MEMBERSHIP.eight.perClass),
+          eightTotal: formatEur(MEMBERSHIP.eight.total),
+          unlimited: formatEur(MEMBERSHIP.unlimited3.perMonth),
+          annual: formatEur(MEMBERSHIP.annual.perMonth),
+          annualTotal: formatEur(MEMBERSHIP.annual.yearTotal),
+        });
       }
 
-      const recommendation = `**Your match:**
-
-**Recommended instructor:** ${recommendedInstructor}
-${instructorReason}
-
-**Best class type:** ${classType}
-
-**Pricing:**
-${pricing}
-
-**Special offer:** New clients, introduction package: ${INTRO.classes} group classes for ${formatEur(INTRO.price)}. https://www.pt7.nl/intro/`;
+      const recommendation = t('chatbot.rec.summary', {
+        instructor: recommendedInstructor,
+        reason: instructorReason,
+        classType,
+        pricing,
+        introClasses: String(INTRO.classes),
+        introPrice: formatEur(INTRO.price),
+        introUrl: `https://www.pt7.nl${localeHref('/intro/', locale)}`,
+      });
 
       addBotMessage(recommendation, 2000);
       addBotMessage(
-        `All classes are ${CLASS_MINUTES} minutes. You can book on the schedule. Anything else?`,
+        t('chatbot.afterMatch', { minutes: String(CLASS_MINUTES) }),
         4000,
-        ["Book a class now", "Tell me about equipment", "View all trainers", "Start over"]
+        ['book', 'equipment', 'trainers', 'restart'],
       );
     }, 2000);
   };
 
-  const handleFollowUp = (response: string) => {
-    addUserMessage(response);
+  const handleFollowUp = (response: (typeof FOLLOW_UP_OPTIONS)[number]) => {
+    addUserMessage(optionLabel(response));
 
     switch (response) {
-      case "Book a class now":
-        addBotMessage("Taking you to the booking page.", 500);
-        later(() => navigate('/schedule/'), 2000);
+      case 'book':
+        addBotMessage(t('chatbot.goingToBooking'), 500);
+        later(() => navigate(localeHref('/schedule/', locale)), 2000);
         break;
 
-      case "Tell me about equipment":
-        addBotMessage("We train in one boutique studio at Museumplein with:\n\n**Pilates apparatus:** Reformers, Tower Reformer, Cadillac/Trapeze Table, Wunda Chair\n\n**Strength & cardio:** Nike Strength Half Rack, Olympic barbell, dumbbells, Concept2 RowErg, TRX", 500);
-        addBotMessage("See the equipment page?", 2000, ["Yes, show me", "No thanks", "Start over"]);
+      case 'equipment':
+        addBotMessage(t('chatbot.equipmentInfo'), 500);
+        addBotMessage(t('chatbot.askEquipmentPage'), 2000, ['showEquipment', 'noThanks', 'restart']);
         break;
 
-      case "Yes, show me":
-        addBotMessage("Opening equipment.", 500);
-        later(() => navigate('/equipment/'), 1500);
+      case 'showEquipment':
+        addBotMessage(t('chatbot.openingEquipment'), 500);
+        later(() => navigate(localeHref('/equipment/', locale)), 1500);
         break;
 
-      case "View all trainers": {
-        const juniorCount = juniors.length;
-        const seniorCount = seniors.length;
+      case 'trainers':
         addBotMessage(
-          `Opening instructors: ${instructorCount} trainers, ${master ? 1 : 0} Master, ${seniorCount} Senior, ${juniorCount} Junior.`,
+          t('chatbot.openingTrainers', {
+            total: String(instructorCount),
+            master: master ? '1' : '0',
+            senior: String(seniors.length),
+            junior: String(juniors.length),
+          }),
           500,
         );
-        later(() => navigate('/instructors/'), 1500);
+        later(() => navigate(localeHref('/instructors/', locale)), 1500);
         break;
-      }
 
-      case "Start over":
+      case 'restart':
         clearTimers();
         setMessages([]);
         setUserProfile({});
-        addBotMessage("Let's start fresh! What brings you to PT 7?", 500, [
-          "Improve strength & fitness",
-          "Lose weight & tone",
-          "Rehabilitation/injury recovery",
-          "Pregnancy fitness",
-          "General wellness",
-          "Just curious"
-        ]);
+        addBotMessage(t('chatbot.restart'), 500, GOAL_OPTIONS);
         break;
 
-      case "No thanks":
-        addBotMessage("Call +31 685 162693 or email info@pt7.nl anytime.", 500);
-        break;
-
-      default:
+      case 'noThanks':
+        addBotMessage(t('chatbot.noThanksReply'), 500);
         break;
     }
   };
 
-  const handleOptionClick = (option: string) => {
-    const goalOptions = ["Improve strength & fitness", "Lose weight & tone", "Rehabilitation/injury recovery", "Pregnancy fitness", "General wellness", "Just curious"];
-    const experienceOptions = ["Yes, I'm experienced", "Some experience", "I'm a beginner"];
-    const groupOptions = ["Private (just me)", "With a partner (couple)", "Group class (max 5)"];
-    const injuryOptions = ["Yes, I have injuries", "No injuries", "Some minor concerns", "Back pain", "Pelvic floor", "General fitness", "Preparing for birth", "No specific concerns"];
-    const followUpOptions = ["Book a class now", "Tell me about equipment", "View all trainers", "Start over", "Yes, show me", "No thanks"];
-
-    if (goalOptions.includes(option)) {
+  const handleOptionClick = (option: OptionId) => {
+    if (includes(GOAL_OPTIONS, option)) {
       handleUserResponse(option, 'goal');
-    } else if (experienceOptions.includes(option)) {
+    } else if (includes(EXPERIENCE_OPTIONS, option)) {
       handleUserResponse(option, 'experience');
-    } else if (groupOptions.includes(option)) {
+    } else if (includes(GROUP_OPTIONS, option)) {
       handleUserResponse(option, 'groupSize');
-    } else if (injuryOptions.includes(option)) {
+    } else if (includes(INJURY_OPTIONS, option) || includes(PREGNANCY_FOCUS_OPTIONS, option)) {
       handleUserResponse(option, 'hasInjuries');
-    } else if (followUpOptions.includes(option)) {
+    } else if (includes(FOLLOW_UP_OPTIONS, option)) {
       handleFollowUp(option);
     }
   };
@@ -327,12 +346,12 @@ ${pricing}
         <button
           className="chatbot-button"
           onClick={() => setIsOpen(true)}
-          aria-label="Open chat assistant"
+          aria-label={t('chatbot.openAria')}
         >
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM20 16H5.17L4 17.17V4H20V16ZM7 9H9V11H7V9ZM11 9H13V11H11V9ZM15 9H17V11H15V9Z" fill="currentColor"/>
           </svg>
-          <span className="chatbot-badge">Find Your Perfect Class</span>
+          <span className="chatbot-badge">{t('chatbot.badge')}</span>
         </button>
       )}
 
@@ -346,8 +365,8 @@ ${pricing}
                 </svg>
               </div>
               <div>
-                <h3>PT 7 Assistant</h3>
-                <p>Find your perfect class</p>
+                <h3>{t('chatbot.title')}</h3>
+                <p>{t('chatbot.subtitle')}</p>
               </div>
             </div>
             <button
@@ -356,7 +375,7 @@ ${pricing}
                 clearTimers();
                 setIsOpen(false);
               }}
-              aria-label="Close chat"
+              aria-label={t('chatbot.closeAria')}
             >
               ✕
             </button>
@@ -382,13 +401,13 @@ ${pricing}
                 </div>
                 {message.options && (
                   <div className="message-options">
-                    {message.options.map((option, index) => (
+                    {message.options.map((option) => (
                       <button
-                        key={index}
+                        key={option}
                         className="option-button"
                         onClick={() => handleOptionClick(option)}
                       >
-                        {option}
+                        {optionLabel(option)}
                       </button>
                     ))}
                   </div>
@@ -410,7 +429,7 @@ ${pricing}
           </div>
 
           <div className="chatbot-footer">
-            <p>Need help? Call <a href="tel:+31685162693">+31 685 162693</a></p>
+            <p>{t('chatbot.footer')} <a href="tel:+31685162693">+31 685 162693</a></p>
           </div>
         </div>
       )}

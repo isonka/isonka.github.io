@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Trans, useTranslation } from 'react-i18next';
 import {
   OPEN_COOKIE_SETTINGS_EVENT,
   applyConsent,
@@ -8,11 +9,15 @@ import {
   type Pt7Consent,
 } from '../utils/consentTracking';
 import { isPrerender } from '../utils/prerender';
+import { localeHref } from '../i18n/locale';
+import { useLocale } from '../i18n/useLocale';
 import '../styles/CookieConsent.css';
 
 type PanelMode = 'hidden' | 'banner' | 'settings';
 
 export const CookieConsent= () => {
+  const { t } = useTranslation('common');
+  const locale = useLocale();
   const [mode, setMode] = useState<PanelMode>('hidden');
   const [statistics, setStatistics] = useState(false);
   const [marketing, setMarketing] = useState(false);
@@ -73,12 +78,14 @@ export const CookieConsent= () => {
     <div className="pt7-consent" role="dialog" aria-modal="true" aria-labelledby="pt7-consent-title">
       <div className="pt7-consent-panel">
         <h2 id="pt7-consent-title" className="pt7-consent-title">
-          Cookie preferences
+          {t('cookies.title')}
         </h2>
         <p className="pt7-consent-text">
-          We use necessary cookies to run the site. With your OK we also use statistics (Google Analytics)
-          and marketing cookies (Google Ads, Meta) to measure visits and improve ads. Details in our{' '}
-          <Link to="/privacy/">privacy policy</Link>. Change this anytime via Cookie Settings in the footer.
+          <Trans
+            t={t}
+            i18nKey="cookies.text"
+            components={{ privacy: <Link to={localeHref('/privacy/', locale)} /> }}
+          />
         </p>
 
         {mode === 'settings' && (
@@ -86,8 +93,8 @@ export const CookieConsent= () => {
             <label className="pt7-consent-option">
               <input type="checkbox" checked disabled readOnly />
               <span>
-                <strong>Necessary</strong>
-                <small>Always on: security and basic site function</small>
+                <strong>{t('cookies.necessary')}</strong>
+                <small>{t('cookies.necessaryHint')}</small>
               </span>
             </label>
             <label className="pt7-consent-option">
@@ -97,8 +104,8 @@ export const CookieConsent= () => {
                 onChange={(e) => setStatistics(e.target.checked)}
               />
               <span>
-                <strong>Statistics</strong>
-                <small>Google Analytics only. No ads or Meta tags.</small>
+                <strong>{t('cookies.statistics')}</strong>
+                <small>{t('cookies.statisticsHint')}</small>
               </span>
             </label>
             <label className="pt7-consent-option">
@@ -108,8 +115,8 @@ export const CookieConsent= () => {
                 onChange={(e) => setMarketing(e.target.checked)}
               />
               <span>
-                <strong>Marketing</strong>
-                <small>Google Ads and Meta: measure ads and remarketing</small>
+                <strong>{t('cookies.marketing')}</strong>
+                <small>{t('cookies.marketingHint')}</small>
               </span>
             </label>
           </div>
@@ -119,25 +126,25 @@ export const CookieConsent= () => {
           {mode === 'banner' ? (
             <>
               <button type="button" className="pt7-consent-btn pt7-consent-btn--primary" onClick={acceptAll}>
-                Accept all
+                {t('cookies.acceptAll')}
               </button>
               <button type="button" className="pt7-consent-btn pt7-consent-btn--ghost" onClick={rejectNonEssential}>
-                Reject non-essential
+                {t('cookies.rejectNonEssential')}
               </button>
               <button type="button" className="pt7-consent-btn pt7-consent-btn--text" onClick={() => setMode('settings')}>
-                Customize
+                {t('cookies.customize')}
               </button>
             </>
           ) : (
             <>
               <button type="button" className="pt7-consent-btn pt7-consent-btn--primary" onClick={saveCustom}>
-                Save choices
+                {t('cookies.save')}
               </button>
               <button type="button" className="pt7-consent-btn pt7-consent-btn--ghost" onClick={acceptAll}>
-                Accept all
+                {t('cookies.acceptAll')}
               </button>
               <button type="button" className="pt7-consent-btn pt7-consent-btn--text" onClick={rejectNonEssential}>
-                Reject non-essential
+                {t('cookies.rejectNonEssential')}
               </button>
             </>
           )}

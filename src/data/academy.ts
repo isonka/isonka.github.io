@@ -1,8 +1,8 @@
-export const ACADEMY_ENROLL_WIDGET =
-  '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100058" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Enroll"></healcode-widget>';
+export const academyEnrollWidget = (label: string) =>
+  `<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100058" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${label}"></healcode-widget>`;
 
-export const ACADEMY_INSTALLMENTS_WIDGET =
-  '<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100065" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Enroll with 3 Installments"></healcode-widget>';
+export const academyInstallmentsWidget = (label: string) =>
+  `<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100065" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${label}"></healcode-widget>`;
 
 export const ACADEMY_INQUIRY_WIDGET =
   '<healcode-widget data-type="registrations" data-widget-partner="object" data-widget-id="2b154644c036" data-widget-version="0"></healcode-widget>';

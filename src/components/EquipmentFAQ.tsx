@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface FAQItem {
   question: string;
@@ -6,33 +7,12 @@ interface FAQItem {
 }
 
 interface EquipmentFAQProps {
-  items?: FAQItem[];
+  items: FAQItem[];
 }
 
-const defaultFAQItems: FAQItem[] = [
-  {
-    question: 'How can I order this equipment?',
-    answer: 'You can contact us directly via email or phone to place your order or request more information about our Pilates equipment.'
-  },
-  {
-    question: 'Is installation included?',
-    answer: 'We do not arrange installation, but the equipment is delivered with clear instructions and can be assembled by two people.'
-  },
-  {
-    question: 'What is the delivery time and method?',
-    answer: 'Delivery time is typically 3-8 weeks depending on stock and your location. Delivery can be arranged to your door throughout the Netherlands.'
-  },
-  {
-    question: 'Is there a warranty?',
-    answer: 'All our equipment comes with a 2-year warranty covering manufacturing defects and materials.'
-  },
-  {
-    question: 'Can I return it after purchase?',
-    answer: 'Returns are not possible for this product after purchase, as each product is made to order.'
-  }
-];
+export const EquipmentFAQ = ({ items }: EquipmentFAQProps) => {
+  const { t } = useTranslation('equipment');
 
-export const EquipmentFAQ = ({ items = defaultFAQItems }: EquipmentFAQProps) => {
   useEffect(() => {
     const faqQuestions = document.querySelectorAll('.faq-question');
     
@@ -69,7 +49,7 @@ export const EquipmentFAQ = ({ items = defaultFAQItems }: EquipmentFAQProps) => 
 
   return (
     <section className="product-faq">
-      <h2>Frequently Asked Questions</h2>
+      <h2>{t('faqTitle')}</h2>
       <div className="faq-list">
         {items.map((item, index) => (
           <div key={index} className="faq-item">

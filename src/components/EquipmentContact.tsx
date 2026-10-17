@@ -1,14 +1,15 @@
+import { useTranslation } from 'react-i18next';
 import { studioAddressLine } from '../data/business';
 
 export const EquipmentContact= () => {
+  const { t } = useTranslation('equipment');
+
   return (
     <section id="product-contact" className="product-contact">
       <div className="product-contact-inner">
         <div className="product-contact-text">
-          <h2>Ready to Order?</h2>
-          <p className="product-contact-subtitle">
-            Visit our Amsterdam studio to try the equipment in person, or get in touch to discuss your order.
-          </p>
+          <h2>{t('contact.title')}</h2>
+          <p className="product-contact-subtitle">{t('contact.subtitle')}</p>
           <p className="product-contact-address">
             {studioAddressLine} Oud-Zuid
           </p>

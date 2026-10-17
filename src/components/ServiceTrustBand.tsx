@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 type ServiceTrustBandProps = {
   imageSrc: string;
@@ -21,15 +22,17 @@ export function ServiceTrustBand({
   testimonial,
   testimonialAuthor,
   ctaTo = '/pricing/',
-  ctaLabel = 'View pricing',
+  ctaLabel,
   layout = 'band',
   imageWidth = 1200,
   imageHeight = 800,
 }: ServiceTrustBandProps) {
+  const { t } = useTranslation('common');
+
   return (
     <section
       className={layout === 'proof' ? 'service-trust service-trust--proof' : 'service-trust'}
-      aria-label="Trust signals"
+      aria-label={t('trustBand.aria')}
     >
       <div className="service-trust-media">
         <img
@@ -48,7 +51,7 @@ export function ServiceTrustBand({
           <cite>{testimonialAuthor}</cite>
         </blockquote>
         <Link to={ctaTo} className="service-trust-link">
-          {ctaLabel}
+          {ctaLabel ?? t('trustBand.viewPricing')}
         </Link>
       </div>
     </section>

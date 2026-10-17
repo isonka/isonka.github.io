@@ -28,6 +28,7 @@ export const nlPrivatePilates: DeepStringify<EnPrivatePilates> = {
     imageAlt: 'Privéles Reformer pilates bij PT 7',
     priceAnchor: 'Privé vanaf {{privateFrom}} · één-op-één of duo',
     reviewSource: 'Google-review',
+    testimonial: '“Warm, gastvrij en vol zorg. Ik ga na elke les sterker en met een glimlach naar huis.”',
     ctaLabel: 'Bekijk privéprijzen',
   },
   intro: {

@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { PHOTO_FOCUS } from '../data/photoFocus';
-import { trainerProfiles, type TrainerProfile } from '../data/trainers';
+import { BASE_URL } from '../data/business';
+import { trainersFor } from '../data/localized';
+import type { TrainerProfile } from '../data/trainers';
+import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import { useInViewOnce } from '../hooks/useInViewOnce';
 import '../styles/Trainers.css';
 
@@ -16,6 +20,8 @@ const InstructorRow = ({
   index: number;
   eager: boolean;
 }) => {
+  const { t } = useTranslation('instructors');
+  const { href } = useLocalizedPage('/instructors/');
   const { ref, inView } = useInViewOnce<HTMLAnchorElement>();
   const role = instructor.heroTitle.replace(/\n/g, ' · ');
   const bio = instructor.bio[0];
@@ -23,7 +29,7 @@ const InstructorRow = ({
   return (
     <Link
       ref={ref}
-      to={`/trainer/${instructor.slug}/`}
+      to={href(`/trainer/${instructor.slug}/`)}
       className={`instructor-row${inView ? ' is-in' : ''}`}
       style={{ '--row-delay': `${(index % 4) * 90}ms` } as React.CSSProperties}
     >
@@ -52,7 +58,7 @@ const InstructorRow = ({
           {instructor.languages.join(' · ')}
         </p>
         <span className="instructor-link">
-          View profile →
+          {t('viewProfile')}
         </span>
       </div>
     </Link>
@@ -60,40 +66,46 @@ const InstructorRow = ({
 };
 
 export const Trainers= () => {
-  const availableInstructors = trainerProfiles.filter(t => t.available);
-  const hasComingSoon = trainerProfiles.some(t => !t.available);
+  const { t } = useTranslation('instructors');
+  const page = useLocalizedPage('/instructors/');
+  const { href } = page;
+  const trainerProfiles = trainersFor(page.locale);
+  const availableInstructors = trainerProfiles.filter(p => p.available);
+  const hasComingSoon = trainerProfiles.some(p => !p.available);
 
   return (
     <>
       <SEOHead
-        title="Our Instructors | PT 7 Pilates Amsterdam"
-        description="Meet our expert team of certified Pilates and fitness instructors at PT 7 Amsterdam. Master, senior, and junior instructors dedicated to your fitness journey."
-        keywords="Pilates instructors Amsterdam, polestar pilates amsterdam, Pilates leraren Amsterdam, gecertificeerde Pilates instructeurs, Pilates teachers Museumplein, Pilates team Oud-Zuid"
-        canonical="https://www.pt7.nl/instructors/"
+        title={t('seo.title')}
+        description={t('seo.description')}
+        keywords={t('seo.keywords')}
+        canonical={page.canonical}
+        hreflangAlternates={page.hreflang}
+        {...page.seoLocale}
       />
       <StructuredData
         type="ItemList"
         data={{
           itemList: {
-            name: 'PT 7 Pilates Instructors',
+            name: t('seo.listName'),
             itemListElement: availableInstructors.map((instructor) => ({
               name: instructor.name,
-              url: `https://www.pt7.nl/trainer/${instructor.slug}/`,
-              image: `https://www.pt7.nl${instructor.image}`,
+              url: `${BASE_URL}${href(`/trainer/${instructor.slug}/`)}`,
+              image: `${BASE_URL}${instructor.image}`,
             })),
           },
         }}
       />
-      <Breadcrumbs items={[{ name: 'Instructors', path: '/instructors/' }]} />
+      <Breadcrumbs items={[{ name: t('breadcrumb'), path: page.path }]} />
 
       <div className="trainers-page">
 
         {availableInstructors.length > 0 && (
           <section className="instructors-stack" aria-labelledby="instructors-heading">
             <header className="instructors-header">
-              <p className="instructors-kicker">The team</p>
-              <h1 id="instructors-heading">Meet Our Team</h1>
-              <p>Experienced professionals with advanced certifications</p>
+              <p className="instructors-kicker">{t('kicker')}</p>
+              <h1 id="instructors-heading">{t('title')}</h1>
+              <p>{t('lead')}</p>
             </header>
 
             {availableInstructors.map((instructor, index) => (
@@ -111,22 +123,22 @@ export const Trainers= () => {
           <section className="trainers-growing-banner">
             <div className="growing-banner-inner">
               <div className="growing-banner-text">
-                <h2>Our Team is Growing</h2>
-                <p>New instructors are joining soon. Interested in teaching at PT 7?</p>
+                <h2>{t('growing.title')}</h2>
+                <p>{t('growing.text')}</p>
               </div>
-              <Link to="/academy/" className="growing-banner-link">
-                Become a Pilates instructor →
+              <Link to={href('/academy/')} className="growing-banner-link">
+                {t('growing.link')}
               </Link>
             </div>
           </section>
         )}
 
         <section className="trainers-cta">
-          <h2>Ready to Train with Our Instructors?</h2>
-          <p>Book a session and experience personalized training at its finest</p>
+          <h2>{t('cta.title')}</h2>
+          <p>{t('cta.text')}</p>
           <div className="trainers-cta-buttons">
-            <Link to="/schedule/" className="trainers-btn-primary">Book a Class</Link>
-            <Link to="/pricing/" className="trainers-btn-secondary">View Pricing</Link>
+            <Link to={href('/schedule/')} className="trainers-btn-primary">{t('cta.book')}</Link>
+            <Link to={href('/pricing/')} className="trainers-btn-secondary">{t('cta.pricing')}</Link>
           </div>
         </section>
       </div>

@@ -25,6 +25,7 @@ export const enPrivatePilates = {
     imageAlt: 'Private Reformer Pilates session at PT 7',
     priceAnchor: 'Private from {{privateFrom}} · one-on-one or duo',
     reviewSource: 'Google review',
+    testimonial: '“Warm, welcoming, and filled with care. I leave every class stronger and smiling.”',
     ctaLabel: 'View private pricing',
   },
   intro: {

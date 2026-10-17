@@ -82,6 +82,7 @@ function TrainerTile({
   trainer: (typeof trainers)[number];
 }) {
   const { t } = useTranslation('home');
+  const locale = useLocale();
   const { ref, inView } = useInViewOnce<HTMLAnchorElement>();
   const slug = trainer.to.replace(/^\/trainer\//, '').replace(/\/$/, '');
   const focus = PHOTO_FOCUS[slug] ?? '50% 24%';
@@ -89,7 +90,7 @@ function TrainerTile({
   return (
     <Link
       ref={ref}
-      to={trainer.to}
+      to={localeHref(trainer.to, locale)}
       className={`home-person${inView ? ' is-inview' : ''}`}
     >
       <span className="home-person-role">
@@ -254,7 +255,7 @@ export const Home= () => {
                 components={{
                   reformer: <Link to={localeHref('/reformer-pilates-amsterdam/', locale)} />,
                   private: <Link to={localeHref('/private-pilates-amsterdam/', locale)} />,
-                  prenatal: <Link to="/prenatal-pilates-amsterdam/" />,
+                  prenatal: <Link to={localeHref('/prenatal-pilates-amsterdam/', locale)} />,
                   trx: <Link to={localeHref('/trx-training-amsterdam/', locale)} />,
                   strength: <Link to={localeHref('/strength-training-amsterdam/', locale)} />,
                 }}

@@ -1,24 +1,30 @@
 import { useParams, Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Trans, useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { trackPageView } from '../utils/gtmTracking';
 import { ensureHealcodeLoaded } from '../utils/healcode';
-import { workoutDetails } from '../data/workoutDetails';
+import { BASE_URL } from '../data/business';
+import { workoutDetailsFor } from '../data/localized';
+import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import { NotFound } from './NotFound';
 import '../styles/WorkoutDetail.css';
 
 export const WorkoutDetail= () => {
+  const { t } = useTranslation('workout');
   const { slug } = useParams<{ slug: string }>();
-  const workout = workoutDetails.find(w => w.slug === slug);
+  const page = useLocalizedPage(`/workouts/${slug}/`);
+  const { href } = page;
+  const workout = workoutDetailsFor(page.locale).find(w => w.slug === slug);
 
   useEffect(() => {
     if (workout) {
-      trackPageView(`/workouts/${workout.slug}/`, `${workout.hero.title} - PT 7 Pilates`);
+      trackPageView(page.path, `${workout.hero.title} - PT 7 Pilates`);
       void ensureHealcodeLoaded();
     }
-  }, [workout]);
+  }, [workout, page.path]);
 
   if (!workout) {
     return <NotFound />;
@@ -26,7 +32,8 @@ export const WorkoutDetail= () => {
 
   const isAnchorLink = (to: string) => to.startsWith('#');
   const isReformerGuide = workout.slug === 'reformer-pilates';
-  const baseUrl = 'https://www.pt7.nl';
+  // Guides that canonicalise to a service lander are not a language pair of their own.
+  const selfCanonical = workout.seo.canonical === page.canonical;
   const serviceOffers = workout.classOptions.cards.map((card) => {
     const combinedText = `${card.description} ${card.features.join(' ')}`;
     const priceMatch = combinedText.match(/€\s?(\d+(?:[.,]\d+)?)/);
@@ -34,7 +41,7 @@ export const WorkoutDetail= () => {
       name: card.title,
       ...(priceMatch ? { price: priceMatch[1].replace(',', '.') } : {}),
       priceCurrency: 'EUR',
-      url: `${baseUrl}/pricing/`,
+      url: `${BASE_URL}${href('/pricing/')}`,
     };
   });
 
@@ -48,6 +55,8 @@ export const WorkoutDetail= () => {
         ogTitle={workout.seo.ogTitle}
         ogDescription={workout.seo.ogDescription}
         ogImage={workout.seo.ogImage}
+        hreflangAlternates={selfCanonical ? page.hreflang : undefined}
+        {...page.seoLocale}
       />
       <StructuredData
         type="Service"
@@ -56,8 +65,8 @@ export const WorkoutDetail= () => {
             name: workout.hero.title,
             description: workout.intro.lead,
             serviceUrl: isReformerGuide
-              ? `${baseUrl}/reformer-pilates-amsterdam/`
-              : `${baseUrl}/workouts/${workout.slug}/`,
+              ? `${BASE_URL}${href('/reformer-pilates-amsterdam/')}`
+              : `${BASE_URL}${page.path}`,
             areaServed: 'Amsterdam',
             offers: serviceOffers,
           },
@@ -74,14 +83,16 @@ export const WorkoutDetail= () => {
           }}
         />
       )}
-      <Breadcrumbs items={[{ name: workout.breadcrumbName, path: `/workouts/${workout.slug}/` }]} />
+      <Breadcrumbs items={[{ name: workout.breadcrumbName, path: page.path }]} />
 
       {isReformerGuide && (
         <div className="workout-canonical-note">
           <p>
-            Looking for Reformer classes near Museumplein? See the main{' '}
-            <Link to="/reformer-pilates-amsterdam/">Reformer Pilates Amsterdam</Link> page to book.
-            This page is a detailed workout guide.
+            <Trans
+              t={t}
+              i18nKey="canonicalNote"
+              components={{ lander: <Link to={href('/reformer-pilates-amsterdam/')} /> }}
+            />
           </p>
         </div>
       )}
@@ -90,7 +101,7 @@ export const WorkoutDetail= () => {
         <div className="ssl-announcement-banner">
           <span className="ssl-banner-label">{workout.announcementBanner.label}</span>
           <span className="ssl-banner-text">{workout.announcementBanner.text}</span>
-          <a href={workout.announcementBanner.ctaHref} className="ssl-banner-cta">{workout.announcementBanner.ctaLabel}</a>
+          <a href={href(workout.announcementBanner.ctaHref)} className="ssl-banner-cta">{workout.announcementBanner.ctaLabel}</a>
         </div>
       )}
 
@@ -99,7 +110,7 @@ export const WorkoutDetail= () => {
           <section className="ssl-hero">
             <img
               src={workout.hero.image}
-              alt={`${workout.hero.title} | PT 7 Pilates`}
+              alt={t('heroAlt', { title: workout.hero.title })}
               className="ssl-hero-image"
               loading="eager"
               decoding="async"
@@ -108,7 +119,7 @@ export const WorkoutDetail= () => {
               {isAnchorLink(workout.hero.ctaTo) ? (
                 <a href={workout.hero.ctaTo} className="cta-button primary">{workout.hero.ctaLabel}</a>
               ) : (
-                <Link to={workout.hero.ctaTo} className="cta-button primary">{workout.hero.ctaLabel}</Link>
+                <Link to={href(workout.hero.ctaTo)} className="cta-button primary">{workout.hero.ctaLabel}</Link>
               )}
             </div>
           </section>
@@ -124,7 +135,7 @@ export const WorkoutDetail= () => {
               <div className="workout-hero-content">
                 <h1>{workout.hero.title}</h1>
                 <p className="workout-tagline">{workout.hero.tagline}</p>
-                <Link to={workout.hero.ctaTo} className="cta-button primary">{workout.hero.ctaLabel}</Link>
+                <Link to={href(workout.hero.ctaTo)} className="cta-button primary">{workout.hero.ctaLabel}</Link>
               </div>
             </div>
           </section>
@@ -190,7 +201,7 @@ export const WorkoutDetail= () => {
                       <li key={i}>{f}</li>
                     ))}
                   </ul>
-                  <Link to={workout.equipmentShowcase.linkTo} className="learn-more-link">{workout.equipmentShowcase.linkLabel}</Link>
+                  <Link to={href(workout.equipmentShowcase.linkTo)} className="learn-more-link">{workout.equipmentShowcase.linkLabel}</Link>
                 </div>
               </div>
             </section>
@@ -216,7 +227,7 @@ export const WorkoutDetail= () => {
                       dangerouslySetInnerHTML={{ __html: card.healcodeHtml }}
                     />
                   ) : card.linkTo ? (
-                    <Link to={card.linkTo} className="class-option-btn">{card.linkLabel}</Link>
+                    <Link to={href(card.linkTo)} className="class-option-btn">{card.linkLabel}</Link>
                   ) : null}
                 </div>
               ))}
@@ -239,14 +250,14 @@ export const WorkoutDetail= () => {
                   <h3>{trainer.name}</h3>
                   <p className="trainer-cert">{trainer.cert}</p>
                   <p>{trainer.description}</p>
-                  <Link to={`/trainer/${trainer.slug}/`} className="trainer-link">View Profile →</Link>
+                  <Link to={href(`/trainer/${trainer.slug}/`)} className="trainer-link">{t('viewProfile')}</Link>
                 </div>
               ))}
             </div>
           </section>
 
           <section className="faq-section">
-            <h2>Frequently Asked Questions</h2>
+            <h2>{t('faqTitle')}</h2>
             <div className="faq-list">
               {workout.faq.map((item, i) => (
                 <div key={i} className="faq-item">
@@ -264,9 +275,9 @@ export const WorkoutDetail= () => {
               {isAnchorLink(workout.finalCta.primaryTo) ? (
                 <a href={workout.finalCta.primaryTo} className="cta-button primary">{workout.finalCta.primaryLabel}</a>
               ) : (
-                <Link to={workout.finalCta.primaryTo} className="cta-button primary">{workout.finalCta.primaryLabel}</Link>
+                <Link to={href(workout.finalCta.primaryTo)} className="cta-button primary">{workout.finalCta.primaryLabel}</Link>
               )}
-              <Link to={workout.finalCta.secondaryTo} className="cta-button secondary">{workout.finalCta.secondaryLabel}</Link>
+              <Link to={href(workout.finalCta.secondaryTo)} className="cta-button secondary">{workout.finalCta.secondaryLabel}</Link>
             </div>
           </section>
         </div>

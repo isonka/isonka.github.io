@@ -1,7 +1,8 @@
-import { blogPosts, blogSeoTitle } from '../src/data/blog/index.ts';
+import { blogPosts, blogPostsNl, blogSeoTitle } from '../src/data/blog/index.ts';
 import { trainerProfiles } from '../src/data/trainers.ts';
 import { equipmentProducts } from '../src/data/equipment.ts';
 import { workoutDetails } from '../src/data/workoutDetails.ts';
+import { workoutDetailsNl } from '../src/data/workoutDetails.nl.ts';
 
 export const BASE_URL = 'https://www.pt7.nl';
 
@@ -151,9 +152,28 @@ const BLOG_PRIORITY_OVERRIDES: Record<string, string> = {
   'career-change-banker-to-pilates-instructor': '0.8',
 };
 
-const derived: Route[] = [
-  ...workoutDetails.map((workout) => {
-    const path = `/workouts/${workout.slug}/`;
+const nlPath = (path: string) => `${path}nl/`;
+
+/**
+ * Dutch mirrors for fixed pages that do not list one explicitly. Redirect-only routes (canonical override)
+ * have no mirror. The mirror reuses the English sitemap entry minus the image.
+ */
+const FIXED_NL_MIRRORS: Route[] = FIXED_PAGES.filter(
+  (route) =>
+    route.path !== '/' &&
+    !route.path.endsWith('/nl/') &&
+    !route.canonical &&
+    !FIXED_PAGES.some((other) => other.path === nlPath(route.path)),
+).map((route) => ({
+  path: nlPath(route.path),
+  prerender: route.prerender,
+  sitemap: route.sitemap ? { lastmod: '2026-10-17', changefreq: route.sitemap.changefreq, priority: route.sitemap.priority } : null,
+}));
+
+const workoutRoutes = (details: typeof workoutDetails, nl: boolean): Route[] =>
+  details.map((workout) => {
+    const enPath = `/workouts/${workout.slug}/`;
+    const path = nl ? nlPath(enPath) : enPath;
     // Guides that canonicalise to a service lander stay out of the sitemap.
     const selfCanonical = workout.seo.canonical === `${BASE_URL}${path}`;
     return {
@@ -161,30 +181,47 @@ const derived: Route[] = [
       prerender: true,
       sitemap: selfCanonical ? { ...WORKOUT_SITEMAP, ...WORKOUT_OVERRIDES[workout.slug] } : null,
     };
+  });
+
+const blogRoutes = (posts: typeof blogPosts, nl: boolean): Route[] =>
+  posts.map((post) => {
+    const enPath = `/blog/${post.slug}/`;
+    return {
+      path: nl ? nlPath(enPath) : enPath,
+      prerender: true,
+      sitemap: {
+        ...BLOG_SITEMAP,
+        lastmod: post.dateModified ?? post.date,
+        priority: BLOG_PRIORITY_OVERRIDES[post.slug] ?? BLOG_SITEMAP.priority,
+      },
+      meta: { title: blogSeoTitle(post), description: post.metaDescription },
+    };
+  });
+
+const derived: Route[] = [
+  ...workoutRoutes(workoutDetails, false),
+  ...workoutRoutes(workoutDetailsNl, true),
+  ...equipmentProducts.flatMap((product) => {
+    const path = `/equipment/${product.slug}/`;
+    const sitemap = { ...EQUIPMENT_SITEMAP, ...EQUIPMENT_OVERRIDES[product.slug] };
+    return [
+      { path, prerender: true, sitemap },
+      { path: nlPath(path), prerender: true, sitemap: { ...sitemap, image: undefined } },
+    ];
   }),
-  ...equipmentProducts.map((product) => ({
-    path: `/equipment/${product.slug}/`,
-    prerender: true,
-    sitemap: { ...EQUIPMENT_SITEMAP, ...EQUIPMENT_OVERRIDES[product.slug] },
-  })),
-  ...trainerProfiles.map((trainer) => ({
-    path: `/trainer/${trainer.slug}/`,
-    prerender: true,
-    sitemap: { ...TRAINER_SITEMAP, ...TRAINER_OVERRIDES[trainer.slug] },
-  })),
-  ...blogPosts.map((post) => ({
-    path: `/blog/${post.slug}/`,
-    prerender: true,
-    sitemap: {
-      ...BLOG_SITEMAP,
-      lastmod: post.dateModified ?? post.date,
-      priority: BLOG_PRIORITY_OVERRIDES[post.slug] ?? BLOG_SITEMAP.priority,
-    },
-    meta: { title: blogSeoTitle(post), description: post.metaDescription },
-  })),
+  ...trainerProfiles.flatMap((trainer) => {
+    const path = `/trainer/${trainer.slug}/`;
+    const sitemap = { ...TRAINER_SITEMAP, ...TRAINER_OVERRIDES[trainer.slug] };
+    return [
+      { path, prerender: true, sitemap },
+      { path: nlPath(path), prerender: true, sitemap: { ...sitemap, image: undefined } },
+    ];
+  }),
+  ...blogRoutes(blogPosts, false),
+  ...blogRoutes(blogPostsNl, true),
 ];
 
-export const routes: Route[] = [...FIXED_PAGES, ...derived];
+export const routes: Route[] = [...FIXED_PAGES, ...FIXED_NL_MIRRORS, ...derived];
 
 export const shellPaths: string[] = routes.map((route) => route.path);
 

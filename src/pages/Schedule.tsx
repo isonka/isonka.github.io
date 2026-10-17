@@ -303,7 +303,7 @@ export const Schedule= () => {
                         values={hoursValues}
                         components={{
                           private: <Link to={localeHref('/private-pilates-amsterdam/', locale)} />,
-                          prenatal: <Link to="/prenatal-pilates-amsterdam/" />,
+                          prenatal: <Link to={localeHref('/prenatal-pilates-amsterdam/', locale)} />,
                         }}
                       />
                     </p>

@@ -25,6 +25,7 @@ export const enStrength = {
     imageAlt: 'Strength training at PT 7 Amsterdam',
     priceAnchor: 'Strength & functional sessions · packages on the pricing page',
     reviewSource: 'Google review',
+    testimonial: '“Calm studio, professional trainers who guide every movement with care.”',
     ctaLabel: 'View pricing',
   },
   intro: {

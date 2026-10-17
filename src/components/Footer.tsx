@@ -52,13 +52,13 @@ export const Footer= () => {
             <li><Link to={localeHref('/trx-training-amsterdam/', locale)}>{t('footer.trx')}</Link></li>
             <li><Link to={localeHref('/private-pilates-amsterdam/', locale)}>{t('footer.privatePilates')}</Link></li>
             <li><Link to={localeHref('/strength-training-amsterdam/', locale)}>{t('footer.strength')}</Link></li>
-            <li><Link to="/prenatal-pilates-amsterdam/">{t('footer.prenatal')}</Link></li>
+            <li><Link to={localeHref('/prenatal-pilates-amsterdam/', locale)}>{t('footer.prenatal')}</Link></li>
             <li><Link to={academyHref}>{t('footer.academy')}</Link></li>
-            <li><Link to="/corporate/">{t('footer.forBusiness')}</Link></li>
-            <li><Link to="/healthcare-providers/">{t('footer.forHealthcare')}</Link></li>
-            <li><Link to="/blog/">{t('footer.blog')}</Link></li>
+            <li><Link to={localeHref('/corporate/', locale)}>{t('footer.forBusiness')}</Link></li>
+            <li><Link to={localeHref('/healthcare-providers/', locale)}>{t('footer.forHealthcare')}</Link></li>
+            <li><Link to={localeHref('/blog/', locale)}>{t('footer.blog')}</Link></li>
             <li><a href="#contact" onClick={handleContactClick}>{t('footer.contact')}</a></li>
-            <li><Link to="/privacy/">{t('footer.privacy')}</Link></li>
+            <li><Link to={localeHref('/privacy/', locale)}>{t('footer.privacy')}</Link></li>
             <li><a href="#" onClick={handleCookieSettings}>{t('footer.cookies')}</a></li>
           </ul>
         </nav>

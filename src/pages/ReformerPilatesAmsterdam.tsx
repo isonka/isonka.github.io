@@ -94,7 +94,7 @@ export const ReformerPilatesAmsterdam = () => {
           imageWidth={1600}
           imageHeight={2400}
           priceAnchor={t('trust.priceAnchor', { memberPrice: formatEur(MEMBERSHIP.four.perClass) })}
-          testimonial="“Professional, thoughtful, and exactly the Reformer studio I spent two years looking for.”"
+          testimonial={t('trust.testimonial')}
           testimonialAuthor={`Flaminia · ${t('trust.reviewSource')}`}
           ctaTo={href('/pricing/')}
           ctaLabel={t('trust.ctaLabel')}
@@ -110,7 +110,7 @@ export const ReformerPilatesAmsterdam = () => {
                 i18nKey="intro.p2"
                 components={{
                   private: <Link to={href('/private-pilates-amsterdam/')} />,
-                  prenatal: <Link to="/prenatal-pilates-amsterdam/" />,
+                  prenatal: <Link to={href('/prenatal-pilates-amsterdam/')} />,
                 }}
               />
             </p>

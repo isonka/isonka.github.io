@@ -14,7 +14,9 @@ interface BlogPostingData {
   dateModified: string;
   authorName: string;
   keywords: string[];
-  slug: string;
+  /** Absolute URL of the post page (locale-specific). */
+  url: string;
+  inLanguage: string;
   articleSection?: string;
 }
 
@@ -343,7 +345,7 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
       '@type': 'BlogPosting',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': `${baseUrl}/blog/${bp.slug}/`,
+        '@id': bp.url,
       },
       headline: bp.headline,
       description: bp.description,
@@ -364,7 +366,7 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
       },
       articleSection: bp.articleSection || 'Pilates',
       keywords: bp.keywords.join(', '),
-      inLanguage: 'en',
+      inLanguage: bp.inLanguage,
     };
   }
 

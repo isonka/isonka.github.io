@@ -7,6 +7,7 @@ import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Reveal } from '../components/Reveal';
 import { trackPageView } from '../utils/gtmTracking';
 import { OPENING_OFFER } from '../data/openingOffer';
+import { localeHref } from '../i18n/locale';
 import { useLocale } from '../i18n/useLocale';
 import '../styles/OpeningOffer.css';
 
@@ -129,7 +130,7 @@ export const OpeningOffer = () => {
               </Link>
             </div>
             <p className="oo-close-link">
-              <Link to="/blog/pt-7-moves-to-olympisch-stadion/">{t('close.moveLink')}</Link>
+              <Link to={localeHref('/blog/pt-7-moves-to-olympisch-stadion/', locale)}>{t('close.moveLink')}</Link>
             </p>
           </div>
         </Reveal>

@@ -1,11 +1,13 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Trans, useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
 import { trackBookingConfirmation, trackPageView } from '../utils/gtmTracking';
 import { trackAdsConversion } from '../utils/consentTracking';
 import { isPrerender } from '../utils/prerender';
 import '../styles/Congrats.css';
 import { business } from '../data/business';
+import { useLocalizedPage } from '../i18n/useLocalizedPage';
 
 const BOOKING_CONVERSION = {
   key: 'booking',
@@ -16,76 +18,82 @@ const BOOKING_CONVERSION = {
 };
 
 export const Congrats= () => {
+  const { t } = useTranslation('congrats');
+  const page = useLocalizedPage('/congrats/');
+  const { href } = page;
+
   useEffect(() => {
     if (isPrerender()) return;
 
-    trackPageView('/congrats/', 'Booking Confirmed');
+    trackPageView(page.path, t('seo.analyticsTitle'));
     trackBookingConfirmation();
 
     return trackAdsConversion(BOOKING_CONVERSION);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <>
       <SEOHead
-        title="Booking Confirmed - PT 7 Pilates Amsterdam"
-        description="Your class is booked! See you at PT 7 Amsterdam."
-        keywords="PT 7, booking confirmed"
-        canonical="https://www.pt7.nl/congrats/"
+        title={t('seo.title')}
+        description={t('seo.description')}
+        keywords={t('seo.keywords')}
+        canonical={page.canonical}
         robots="noindex, follow"
+        hreflangAlternates={page.hreflang}
+        {...page.seoLocale}
       />
 
       <div className="congrats-page">
         <div className="congrats-container">
           <div className="success-icon">✓</div>
-          <h1>Booking Confirmed!</h1>
-          <p className="congrats-message">
-            You're all set! We can't wait to see you at PT 7.
-          </p>
+          <h1>{t('title')}</h1>
+          <p className="congrats-message">{t('message')}</p>
 
           <div className="next-steps">
-            <h2>What's Next?</h2>
+            <h2>{t('nextTitle')}</h2>
             <ul>
-              <li>✓ Check your email for booking confirmation and details</li>
-              <li>✓ Arrive 10 minutes early if it's your first visit</li>
-              <li>✓ Bring water, a towel, and grip socks (or purchase at studio)</li>
-              <li>✓ Wear comfortable workout clothes</li>
+              <li>{t('next.email')}</li>
+              <li>{t('next.early')}</li>
+              <li>{t('next.bring')}</li>
+              <li>{t('next.wear')}</li>
             </ul>
           </div>
 
           <div className="studio-info">
-            <h3>📍 Studio Location</h3>
+            <h3>{t('locationTitle')}</h3>
             <p>
               <strong>{business.address.streetAddress}</strong><br />
               {business.address.postalCode} {business.address.addressLocality}<br />
-              (Museumplein, across from Stedelijk Museum)
+              {t('locationNote')}
             </p>
           </div>
 
           <div className="action-buttons">
-            <Link to="/schedule/" className="btn-primary">Book Another Class</Link>
-            <Link to="/pricing/" className="btn-secondary">View Packages</Link>
-            <Link to="/" className="btn-secondary">Back to Home</Link>
+            <Link to={href('/schedule/')} className="btn-primary">{t('bookAnother')}</Link>
+            <Link to={href('/pricing/')} className="btn-secondary">{t('packages')}</Link>
+            <Link to={href('/')} className="btn-secondary">{t('home')}</Link>
           </div>
 
           <div className="review-request">
-            <p>Enjoyed your experience at PT 7?</p>
+            <p>{t('reviewPrompt')}</p>
             <a
               href="https://g.page/r/CRkdrh58XUzkEBM/review"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-review"
             >
-              Leave Us a Google Review
+              {t('reviewButton')}
             </a>
           </div>
 
           <div className="contact-support">
-            <p>Questions? Contact us at <a href="mailto:info@pt7.nl">info@pt7.nl</a></p>
+            <p>
+              <Trans t={t} i18nKey="questions" components={{ email: <a href="mailto:info@pt7.nl" /> }} />
+            </p>
           </div>
         </div>
       </div>
     </>
   );
 };
-

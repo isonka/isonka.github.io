@@ -1,65 +1,59 @@
 import { Link } from 'react-router-dom';
+import { Trans, useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import '../styles/ClassPassOffer.css';
 
-const classPassFaqs = [
-  {
-    question: 'Can I still use ClassPass occasionally?',
-    answer:
-      'Yes. Many clients use direct plans as their main option and keep ClassPass for occasional flexibility.',
-  },
-  {
-    question: "What if I'm not ready to commit?",
-    answer:
-      'You can start with a class pack. It has no recurring subscription and lets you test the studio rhythm first.',
-  },
-  {
-    question: 'How do I claim the 20% off?',
-    answer:
-      'Email us at info@pt7.nl or ask at the studio to get your discount code for eligible monthly plans and first-time package purchases.',
-  },
-  {
-    question: 'Is the class experience different?',
-    answer:
-      'The class method is the same. Direct clients mainly benefit from earlier booking access and better continuity with instructors.',
-  },
-];
+const FAQ_KEYS = ['occasional', 'commit', 'claim', 'experience'] as const;
+const BENEFIT_KEYS = ['booking', 'coaching', 'tracking', 'results', 'community', 'value'] as const;
+const HEARD_KEYS = ['scheduling', 'instructors', 'simpler'] as const;
 
 export const ClassPassOffer = () => {
+  const { t } = useTranslation('classpass');
+  const page = useLocalizedPage('/classpass-offer/');
+  const { href } = page;
+
+  const classPassFaqs = FAQ_KEYS.map((key) => ({
+    question: t(`faq.${key}.q`),
+    answer: t(`faq.${key}.a`),
+  }));
+
   return (
     <>
       <SEOHead
-        title="ClassPass Transition Offer | PT 7 Pilates Amsterdam"
-        description="A clear transition offer for ClassPass clients moving to PT 7 direct pricing. Compare costs and claim 20% off eligible first purchases."
-        keywords="ClassPass Amsterdam, Pilates ClassPass, ClassPass offer, Pilates membership Amsterdam"
-        canonical="https://www.pt7.nl/classpass-offer/"
+        title={t('seo.title')}
+        description={t('seo.description')}
+        keywords={t('seo.keywords')}
+        canonical={page.canonical}
         robots="noindex, follow"
-        ogTitle="ClassPass Clients: PT 7 Direct Offer"
-        ogDescription="Compare ClassPass costs with PT 7 direct pricing and claim your transition discount."
+        ogTitle={t('seo.ogTitle')}
+        ogDescription={t('seo.ogDescription')}
+        hreflangAlternates={page.hreflang}
+        {...page.seoLocale}
       />
       <StructuredData type="FAQPage" data={{ faqs: classPassFaqs }} />
-      <Breadcrumbs items={[{ name: 'ClassPass Offer', path: '/classpass-offer/' }]} />
+      <Breadcrumbs items={[{ name: t('breadcrumb'), path: page.path }]} />
 
       <div className="classpass-offer-page">
         <section className="cp-hero">
           <div className="cp-hero-overlay">
             <div className="cp-hero-content">
-              <span className="cp-badge">For ClassPass Clients</span>
-              <h1>Prefer PT 7?<br />Book Direct.</h1>
-              <p className="cp-hero-subtitle">
-                If you already train with us through ClassPass, this page shows the direct pricing difference and your transition discount.
-              </p>
-              <a href="#offer" className="cp-cta-button hero-cta">View Offer Details</a>
+              <span className="cp-badge">{t('hero.badge')}</span>
+              <h1>
+                <Trans t={t} i18nKey="hero.title" components={{ br: <br /> }} />
+              </h1>
+              <p className="cp-hero-subtitle">{t('hero.subtitle')}</p>
+              <a href="#offer" className="cp-cta-button hero-cta">{t('hero.cta')}</a>
             </div>
           </div>
         </section>
 
         <section className="cp-comparison" id="offer">
-          <h2>Cost Comparison</h2>
-          <p className="section-subtitle">Our classes typically cost 13-20 credits on ClassPass. Here is a direct monthly comparison.</p>
-          
+          <h2>{t('comparison.title')}</h2>
+          <p className="section-subtitle">{t('comparison.subtitle')}</p>
+
           <div className="comparison-grid">
             <div className="comparison-card classpass-card">
               <div className="card-header">
@@ -70,27 +64,27 @@ export const ClassPassOffer = () => {
                   loading="lazy"
                   decoding="async"
                 />
-                <span className="card-label">ClassPass (for 4 classes/month)</span>
+                <span className="card-label">{t('comparison.classpassLabel')}</span>
               </div>
               <div className="card-body">
                 <div className="price-row">
-                  <span>Plan needed (68 credits)</span>
-                  <span className="price strike">€99/month</span>
+                  <span>{t('comparison.planNeeded')}</span>
+                  <span className="price strike">{t('comparison.perMonth', { price: '€99' })}</span>
                 </div>
                 <div className="price-row">
-                  <span>Cost per class</span>
+                  <span>{t('comparison.costPerClass')}</span>
                   <span className="price strike">~€25</span>
                 </div>
                 <div className="price-row">
-                  <span>Priority booking</span>
-                  <span className="price no">Last in line</span>
+                  <span>{t('comparison.priority')}</span>
+                  <span className="price no">{t('comparison.lastInLine')}</span>
                 </div>
                 <div className="price-row">
-                  <span>Same instructor</span>
+                  <span>{t('comparison.sameInstructor')}</span>
                   <span className="price no">✗</span>
                 </div>
                 <div className="price-row">
-                  <span>Progress tracking</span>
+                  <span>{t('comparison.progress')}</span>
                   <span className="price no">✗</span>
                 </div>
               </div>
@@ -107,27 +101,27 @@ export const ClassPassOffer = () => {
                   loading="lazy"
                   decoding="async"
                 />
-                <span className="card-label">Direct Membership (4 classes/month)</span>
+                <span className="card-label">{t('comparison.directLabel')}</span>
               </div>
               <div className="card-body">
                 <div className="price-row highlight">
-                  <span>Monthly cost</span>
-                  <span className="price">€86/month</span>
+                  <span>{t('comparison.monthlyCost')}</span>
+                  <span className="price">{t('comparison.perMonth', { price: '€86' })}</span>
                 </div>
                 <div className="price-row highlight">
-                  <span>Cost per class</span>
+                  <span>{t('comparison.costPerClass')}</span>
                   <span className="price">€21.50</span>
                 </div>
                 <div className="price-row">
-                  <span>Priority booking</span>
-                  <span className="price yes">First access</span>
+                  <span>{t('comparison.priority')}</span>
+                  <span className="price yes">{t('comparison.firstAccess')}</span>
                 </div>
                 <div className="price-row">
-                  <span>Same instructor</span>
+                  <span>{t('comparison.sameInstructor')}</span>
                   <span className="price yes">✓</span>
                 </div>
                 <div className="price-row">
-                  <span>Progress tracking</span>
+                  <span>{t('comparison.progress')}</span>
                   <span className="price yes">✓</span>
                 </div>
               </div>
@@ -135,96 +129,63 @@ export const ClassPassOffer = () => {
           </div>
 
           <div className="savings-highlight">
-            <span className="savings-number">€156/year</span>
-            <span className="savings-text">estimated yearly savings on a 4-class monthly plan</span>
+            <span className="savings-number">{t('comparison.savings', { amount: '€156' })}</span>
+            <span className="savings-text">{t('comparison.savingsText')}</span>
           </div>
         </section>
 
         <section className="cp-exclusive-offer">
           <div className="offer-container">
-            <span className="offer-badge">Transition Offer</span>
-            <h2>20% Off Your First Eligible Purchase</h2>
+            <span className="offer-badge">{t('offer.badge')}</span>
+            <h2>{t('offer.title')}</h2>
             <p className="offer-description">
-              Switch from ClassPass and get <strong>20% off your first month</strong> on all monthly plans, plus <strong>20% off your first purchase</strong> on class packs and private or couple packages.
+              <Trans t={t} i18nKey="offer.description" components={{ strong: <strong /> }} />
             </p>
             <div className="offer-details">
               <div className="offer-item">
-                <h4>4 Classes/Month</h4>
+                <h4>{t('offer.four')}</h4>
                 <p className="original-price">€86</p>
                 <p className="offer-price">€69</p>
-                <p className="per-class">€17.25 per class</p>
+                <p className="per-class">{t('offer.perClass', { price: '€17.25' })}</p>
               </div>
               <div className="offer-item">
-                <h4>8 Classes/Month</h4>
+                <h4>{t('offer.eight')}</h4>
                 <p className="original-price">€160</p>
                 <p className="offer-price">€128</p>
-                <p className="per-class">€16 per class</p>
+                <p className="per-class">{t('offer.perClass', { price: '€16' })}</p>
               </div>
             </div>
-            <p className="offer-note">Contact us for your discount code. Available for new direct clients on eligible first purchases.</p>
-            <Link to="/pricing/" className="cp-cta-button offer-cta">View All Pricing Options</Link>
+            <p className="offer-note">{t('offer.note')}</p>
+            <Link to={href('/pricing/')} className="cp-cta-button offer-cta">{t('offer.cta')}</Link>
           </div>
         </section>
 
         <section className="cp-benefits">
-          <h2>Why Clients Switch to Direct Booking</h2>
+          <h2>{t('benefits.title')}</h2>
           <div className="benefits-grid">
-            <div className="benefit-card">
-              <span className="benefit-icon">Booking</span>
-              <h3>Priority Booking</h3>
-              <p>Access classes earlier than ClassPass release windows.</p>
-            </div>
-            <div className="benefit-card">
-              <span className="benefit-icon">Coaching</span>
-              <h3>Your Instructor Knows You</h3>
-              <p>Train more consistently with instructors who know your history and goals.</p>
-            </div>
-            <div className="benefit-card">
-              <span className="benefit-icon">Progress</span>
-              <h3>Track Your Progress</h3>
-              <p>Build continuity across sessions instead of starting from zero each visit.</p>
-            </div>
-            <div className="benefit-card">
-              <span className="benefit-icon">Results</span>
-              <h3>Real Progress</h3>
-              <p>Consistent training in one studio usually leads to better long-term results.</p>
-            </div>
-            <div className="benefit-card">
-              <span className="benefit-icon">Community</span>
-              <h3>Community</h3>
-              <p>Join member updates, workshops, and events at the studio.</p>
-            </div>
-            <div className="benefit-card">
-              <span className="benefit-icon">Value</span>
-              <h3>Better Value</h3>
-              <p>Direct plans are often more predictable in both availability and cost.</p>
-            </div>
+            {BENEFIT_KEYS.map((key) => (
+              <div key={key} className="benefit-card">
+                <span className="benefit-icon">{t(`benefits.${key}.tag`)}</span>
+                <h3>{t(`benefits.${key}.title`)}</h3>
+                <p>{t(`benefits.${key}.text`)}</p>
+              </div>
+            ))}
           </div>
         </section>
 
         <section className="cp-testimonials">
-          <h2>What We Hear Most Often</h2>
+          <h2>{t('heard.title')}</h2>
           <div className="testimonials-grid">
-            <div className="testimonial-card">
-              <p className="testimonial-text">
-                More stable scheduling makes it easier to train consistently.
-              </p>
-            </div>
-            <div className="testimonial-card">
-              <p className="testimonial-text">
-                Working with familiar instructors improves continuity from week to week.
-              </p>
-            </div>
-            <div className="testimonial-card">
-              <p className="testimonial-text">
-                Direct plans feel simpler for clients who already train here regularly.
-              </p>
-            </div>
+            {HEARD_KEYS.map((key) => (
+              <div key={key} className="testimonial-card">
+                <p className="testimonial-text">{t(`heard.${key}`)}</p>
+              </div>
+            ))}
           </div>
         </section>
 
         <section className="cp-faq">
-          <h2>Frequently Asked Questions</h2>
+          <h2>{t('faqTitle')}</h2>
           <div className="faq-grid">
             {classPassFaqs.map((faq) => (
               <div key={faq.question} className="faq-item">
@@ -236,11 +197,11 @@ export const ClassPassOffer = () => {
         </section>
 
         <section className="cp-final-cta">
-          <h2>Ready to Switch to Direct?</h2>
-          <p>Review pricing options and choose the format that fits your schedule.</p>
+          <h2>{t('final.title')}</h2>
+          <p>{t('final.text')}</p>
           <div className="cta-buttons">
-            <Link to="/pricing/" className="cp-cta-button primary">View Pricing Options</Link>
-            <Link to="/schedule/" className="cp-cta-button secondary">View Schedule</Link>
+            <Link to={href('/pricing/')} className="cp-cta-button primary">{t('final.pricing')}</Link>
+            <Link to={href('/schedule/')} className="cp-cta-button secondary">{t('final.schedule')}</Link>
           </div>
         </section>
       </div>

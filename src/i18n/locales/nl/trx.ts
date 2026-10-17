@@ -28,6 +28,7 @@ export const nlTrx: DeepStringify<EnTrx> = {
     imageAlt: 'TRX-training bij PT 7 Amsterdam',
     priceAnchor: 'TRX in groep & privé · pakketten vanaf {{memberPrice}} per les',
     reviewSource: 'ClassPass-review',
+    testimonial: '“Zes maanden verder. Ongelooflijke resultaten, motiverende sfeer, perfect onderhouden apparatuur.”',
     ctaLabel: 'Bekijk prijzen',
   },
   intro: {

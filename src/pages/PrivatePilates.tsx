@@ -94,7 +94,7 @@ export const PrivatePilates = () => {
           imageSrc="/assets/images/reformer_2.webp"
           imageAlt={t('trust.imageAlt')}
           priceAnchor={t('trust.priceAnchor', prices)}
-          testimonial="“Warm, welcoming, and filled with care. I leave every class stronger and smiling.”"
+          testimonial={t('trust.testimonial')}
           testimonialAuthor={`Maya · ${t('trust.reviewSource')}`}
           ctaTo={href('/pricing/#private-classes')}
           ctaLabel={t('trust.ctaLabel')}
@@ -109,7 +109,7 @@ export const PrivatePilates = () => {
               <Trans
                 ns="privatePilates"
                 i18nKey="intro.p3"
-                components={{ prenatal: <Link to="/prenatal-pilates-amsterdam/" /> }}
+                components={{ prenatal: <Link to={href('/prenatal-pilates-amsterdam/')} /> }}
               />
             </p>
             <p>

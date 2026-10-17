@@ -1,74 +1,79 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/HealthcareProviders.css';
-import { studioAddressLine } from '../data/business';
+import { BASE_URL, studioAddressLine } from '../data/business';
+import { useLocalizedPage } from '../i18n/useLocalizedPage';
+
+const BENEFIT_KEYS = ['goals', 'destination', 'continuity', 'simple', 'professional'] as const;
 
 export const HealthcareProviders= () => {
+  const { t } = useTranslation('healthcare');
+  const page = useLocalizedPage('/healthcare-providers/');
+  const { href } = page;
+
   useEffect(() => {
-    trackPageView('/healthcare-providers/', 'For Healthcare Providers - PT 7 Pilates Amsterdam');
-  }, []);
+    trackPageView(page.path, t('seo.analyticsTitle'));
+  }, [page.path, t]);
 
   return (
     <>
       <SEOHead
-        title="Pilates for Rehabilitation Amsterdam | PT 7 Pilates"
-        description="For physiotherapists and GPs: refer clients to PT 7 for post-rehab Pilates and functional training. Small groups (max 5) and privates at Museumplein."
-        keywords="physiotherapist referral Amsterdam, Pilates post-rehab, fysiotherapeut doorverwijzing, beweegprogramma Amsterdam, Pilates fysiotherapie"
-        canonical="https://www.pt7.nl/healthcare-providers/"
-        ogTitle="Pilates for Rehabilitation Amsterdam | PT 7 Pilates"
-        ogDescription="Partner with PT 7. Refer your clients for post-rehab Pilates and functional training. Small groups, expert instructors."
+        title={t('seo.title')}
+        description={t('seo.description')}
+        keywords={t('seo.keywords')}
+        canonical={page.canonical}
+        ogTitle={t('seo.title')}
+        ogDescription={t('seo.ogDescription')}
+        hreflangAlternates={page.hreflang}
+        {...page.seoLocale}
       />
       <StructuredData
         type="Service"
         data={{
           service: {
-            name: 'Pilates for Rehabilitation Amsterdam',
-            description:
-              'Post-rehab Pilates and functional training for referred clients at Museumplein. Small groups max 5 and private sessions with certified instructors, coordinated with physiotherapists and GPs.',
-            serviceUrl: 'https://www.pt7.nl/healthcare-providers/',
+            name: t('service.name'),
+            description: t('service.description'),
+            serviceUrl: page.canonical,
             areaServed: 'Amsterdam',
             offers: [
-              { name: 'Post-rehab private session', url: 'https://www.pt7.nl/schedule/' },
-              { name: 'Small group rehabilitation training', url: 'https://www.pt7.nl/schedule/' },
+              { name: t('service.offerPrivate'), url: `${BASE_URL}${href('/schedule/')}` },
+              { name: t('service.offerGroup'), url: `${BASE_URL}${href('/schedule/')}` },
             ],
           },
         }}
       />
-      <Breadcrumbs items={[{ name: 'For Healthcare Providers', path: '/healthcare-providers/' }]} />
+      <Breadcrumbs items={[{ name: t('breadcrumb'), path: page.path }]} />
 
       <div className="healthcare-page">
         <section className="healthcare-hero">
           <div className="healthcare-hero-content">
-            <h1>Pilates for Rehabilitation Amsterdam</h1>
-            <p className="hero-subtitle">Refer Your Clients to PT 7</p>
-            <p className="hero-description">
-              Partner with Amsterdam&apos;s boutique Pilates and fitness studio. We offer a trusted destination for your clients after rehabilitation, Pilates, functional training, and small-group sessions designed to support long-term recovery and strength.
-            </p>
+            <h1>{t('hero.title')}</h1>
+            <p className="hero-subtitle">{t('hero.subtitle')}</p>
+            <p className="hero-description">{t('hero.description')}</p>
           </div>
         </section>
 
         <section className="healthcare-pilates-rehab">
           <div className="healthcare-container">
-            <h2>Why Pilates for Rehabilitation</h2>
-            <p className="rehab-intro">
-              Pilates is widely used in rehabilitation because it supports the goals you set in treatment: controlled movement, core stability, and progressive strength without high impact.
-            </p>
+            <h2>{t('why.title')}</h2>
+            <p className="rehab-intro">{t('why.intro')}</p>
             <div className="rehab-grid">
               <div className="rehab-card">
-                <h3>Controlled, Low-Impact Movement</h3>
-                <p>Pilates equipment provides resistance through springs, allowing clients to load tissues gradually and safely. Movement is guided and adjustable, ideal for post-surgery, chronic back pain, or joint limitations.</p>
+                <h3>{t('why.controlledTitle')}</h3>
+                <p>{t('why.controlledText')}</p>
               </div>
               <div className="rehab-card">
-                <h3>Core Stability & Posture</h3>
-                <p>Pilates targets deep stabilisers and alignment. This supports spinal health, reduces compensatory patterns, and builds the foundation for functional movement, directly reinforcing what you work on in treatment.</p>
+                <h3>{t('why.coreTitle')}</h3>
+                <p>{t('why.coreText')}</p>
               </div>
               <div className="rehab-card">
-                <h3>Body Awareness & Proprioception</h3>
-                <p>Clients learn to sense and control movement more precisely. This improves movement quality and reduces re-injury risk, especially after discharge when they return to daily and sporting activities.</p>
+                <h3>{t('why.awarenessTitle')}</h3>
+                <p>{t('why.awarenessText')}</p>
               </div>
             </div>
           </div>
@@ -76,22 +81,22 @@ export const HealthcareProviders= () => {
 
         <section className="healthcare-who">
           <div className="healthcare-container">
-            <h2>Who We Work With</h2>
+            <h2>{t('who.title')}</h2>
             <div className="who-grid">
               <div className="who-card">
-                <span className="who-icon">Fysiotherapeuten</span>
-                <h3>Physiotherapists</h3>
-                <p>Post-rehab clients ready for movement and strength. Equipment Pilates and functional training complement your treatment plan.</p>
+                <span className="who-icon">{t('who.physioTag')}</span>
+                <h3>{t('who.physioTitle')}</h3>
+                <p>{t('who.physioText')}</p>
               </div>
               <div className="who-card">
-                <span className="who-icon">Huisartsen</span>
-                <h3>General Practitioners</h3>
-                <p>Patients needing structured exercise for chronic conditions, mobility, or general fitness. We can work with your recommendations.</p>
+                <span className="who-icon">{t('who.gpTag')}</span>
+                <h3>{t('who.gpTitle')}</h3>
+                <p>{t('who.gpText')}</p>
               </div>
               <div className="who-card">
-                <span className="who-icon">Specialisten</span>
-                <h3>Medical Specialists</h3>
-                <p>Post-surgery, post-injury, or ongoing care. Small groups (max 5) and private sessions allow for tailored modifications.</p>
+                <span className="who-icon">{t('who.specialistTag')}</span>
+                <h3>{t('who.specialistTitle')}</h3>
+                <p>{t('who.specialistText')}</p>
               </div>
             </div>
           </div>
@@ -99,22 +104,22 @@ export const HealthcareProviders= () => {
 
         <section className="healthcare-how">
           <div className="healthcare-container">
-            <h2>How Referrals Work</h2>
+            <h2>{t('how.title')}</h2>
             <div className="how-steps">
               <div className="how-step">
                 <span className="step-number">1</span>
-                <span className="step-title">You refer your client</span>
-                <p>Send us the client&apos;s name and a brief note (e.g. post-LBP, post-ACL, chronic back). Email or WhatsApp.</p>
+                <span className="step-title">{t('how.step1Title')}</span>
+                <p>{t('how.step1Text')}</p>
               </div>
               <div className="how-step">
                 <span className="step-number">2</span>
-                <span className="step-title">We schedule an intro</span>
-                <p>We contact the client to arrange a private or small-group session. We take into account any limitations you share.</p>
+                <span className="step-title">{t('how.step2Title')}</span>
+                <p>{t('how.step2Text')}</p>
               </div>
               <div className="how-step">
                 <span className="step-number">3</span>
-                <span className="step-title">Client continues training</span>
-                <p>Pilates and functional training support ongoing strength, mobility, and recovery. We can provide feedback when you request it.</p>
+                <span className="step-title">{t('how.step3Title')}</span>
+                <p>{t('how.step3Text')}</p>
               </div>
             </div>
           </div>
@@ -122,23 +127,23 @@ export const HealthcareProviders= () => {
 
         <section className="healthcare-offer">
           <div className="healthcare-container">
-            <h2>What We Offer Your Clients</h2>
+            <h2>{t('offer.title')}</h2>
             <div className="offer-grid">
               <div className="offer-card">
-                <h3>Equipment Pilates</h3>
-                <p>Spring-based resistance allows gradual, controlled loading, ideal for post-rehab. Builds core stability, posture, and flexibility. Every exercise can be modified for injuries and limitations.</p>
+                <h3>{t('offer.equipmentTitle')}</h3>
+                <p>{t('offer.equipmentText')}</p>
               </div>
               <div className="offer-card">
-                <h3>Functional Training</h3>
-                <p>Strength training with Nike equipment. Builds stability and functional capacity. Can be adapted for post-rehab.</p>
+                <h3>{t('offer.functionalTitle')}</h3>
+                <p>{t('offer.functionalText')}</p>
               </div>
               <div className="offer-card">
-                <h3>Small Groups</h3>
-                <p>Maximum 5 participants per class. Personalized attention and safe progression.</p>
+                <h3>{t('offer.groupsTitle')}</h3>
+                <p>{t('offer.groupsText')}</p>
               </div>
               <div className="offer-card">
-                <h3>Private Sessions</h3>
-                <p>One-on-one training for clients who need more control or individual programming.</p>
+                <h3>{t('offer.privateTitle')}</h3>
+                <p>{t('offer.privateText')}</p>
               </div>
             </div>
           </div>
@@ -146,44 +151,50 @@ export const HealthcareProviders= () => {
 
         <section className="healthcare-benefits">
           <div className="healthcare-container">
-            <h2>Benefits for You</h2>
+            <h2>{t('benefits.title')}</h2>
             <ul className="benefits-list">
-              <li>Pilates reinforces your treatment goals, controlled movement, core stability, progressive loading</li>
-              <li>A trusted destination for clients after discharge</li>
-              <li>Continuity of care, clients stay active and reduce relapse risk</li>
-              <li>Simple referral process, no paperwork, just a quick message</li>
-              <li>Professional studio with qualified instructors and 15+ years experience</li>
+              {BENEFIT_KEYS.map((key) => (
+                <li key={key}>{t(`benefits.${key}`)}</li>
+              ))}
             </ul>
           </div>
         </section>
 
         <section className="healthcare-cta">
           <div className="healthcare-container">
-            <h2>Start Referring</h2>
-            <p>Email or WhatsApp with your client&apos;s name and a brief note. We&apos;ll take it from there.</p>
+            <h2>{t('cta.title')}</h2>
+            <p>{t('cta.text')}</p>
             <div className="cta-buttons">
-              <a href="mailto:info@pt7.nl?subject=Referral%20-%20Healthcare%20Provider" className="cta-button primary">
-                Email Referral
+              <a
+                href={`mailto:info@pt7.nl?subject=${encodeURIComponent(t('cta.emailSubject'))}`}
+                className="cta-button primary"
+              >
+                {t('cta.email')}
               </a>
-              <a href="https://wa.me/31685162693?text=Hi%2C%20I%27d%20like%20to%20refer%20a%20client%20to%20PT%20Studio%207." className="cta-button secondary" target="_blank" rel="noopener noreferrer">
+              <a
+                href={`https://wa.me/31685162693?text=${encodeURIComponent(t('cta.whatsappText'))}`}
+                className="cta-button secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 WhatsApp
               </a>
             </div>
-            <p className="cta-note">{studioAddressLine} (Museumplein, Oud-Zuid)</p>
+            <p className="cta-note">{t('cta.note', { address: studioAddressLine })}</p>
           </div>
         </section>
 
         <section className="healthcare-back">
           <div className="healthcare-container">
             <div style={{ marginBottom: '1rem' }}>
-              <h3>Related Service Pages</h3>
+              <h3>{t('related.title')}</h3>
               <p>
-                <Link to="/reformer-pilates-amsterdam/">Reformer Pilates</Link> ·{' '}
-                <Link to="/trainer/elif/">Elif Arzu Ogan profile</Link> ·{' '}
-                <Link to="/trainer/goknur/">Göknur Dipli profile</Link>
+                <Link to={href('/reformer-pilates-amsterdam/')}>{t('related.reformer')}</Link> ·{' '}
+                <Link to={href('/trainer/elif/')}>{t('related.elif')}</Link> ·{' '}
+                <Link to={href('/trainer/goknur/')}>{t('related.goknur')}</Link>
               </p>
             </div>
-            <Link to="/" className="back-link">← Back to PT 7</Link>
+            <Link to={href('/')} className="back-link">{t('related.back')}</Link>
           </div>
         </section>
       </div>

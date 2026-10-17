@@ -25,6 +25,7 @@ export const enTrx = {
     imageAlt: 'TRX training at PT 7 Amsterdam',
     priceAnchor: 'Group & private TRX · see packages from {{memberPrice}} per class',
     reviewSource: 'ClassPass review',
+    testimonial: '“Six months in. Incredible results, motivating atmosphere, pristine equipment.”',
     ctaLabel: 'View pricing',
   },
   intro: {

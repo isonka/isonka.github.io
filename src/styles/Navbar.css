@@ -57,6 +57,7 @@
   letter-spacing: -0.01em;
   line-height: 1;
   padding: 8px 0;
+  white-space: nowrap;
   transition: color 0.2s ease;
 }
 
@@ -218,7 +219,7 @@
   color: var(--gold-text, #c9a800);
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1181px) {
   .navbar-booknow-mobile {
     display: none !important;
   }
@@ -226,7 +227,8 @@
   .navbar-booknow-desktop {
     background: var(--gold, #ffd700) !important;
     color: var(--ink, #111) !important;
-    padding: 11px 20px !important;
+    padding: 11px 18px !important;
+    white-space: nowrap;
     border-radius: var(--radius-pill, 999px) !important;
     font-weight: 600 !important;
     font-size: 0.9rem !important;
@@ -245,7 +247,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1180px) {
   .navbar-container {
     display: flex;
     align-items: center;
@@ -405,5 +407,70 @@
 
   .navbar-dropdown:hover .navbar-dropdown-menu:not(.open) {
     max-height: 0;
+  }
+}
+
+/* Language switch: light-theme pill, scoped to the navbar so it doesn't
+   depend on Footer.css (which styles the dark footer variant). */
+.navbar .lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+  margin-left: 14px;
+  padding: 2px;
+  border: 1px solid rgba(17, 17, 17, 0.18);
+  border-radius: var(--radius-pill, 999px);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.navbar .lang-switch a,
+.navbar .lang-switch span[aria-current='page'] {
+  display: block;
+  padding: 5px 8px;
+  border-radius: var(--radius-pill, 999px);
+  color: var(--ink, #111);
+  line-height: 1;
+  text-decoration: none;
+}
+
+.navbar .lang-switch span[aria-hidden='true'] {
+  display: none;
+}
+
+.navbar .lang-switch a {
+  opacity: 0.6;
+  transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.navbar .lang-switch a:hover {
+  opacity: 1;
+  background: rgba(17, 17, 17, 0.06);
+  color: var(--ink, #111);
+}
+
+.navbar .lang-switch span[aria-current='page'] {
+  opacity: 1;
+  background: var(--ink, #111);
+  color: #fffdf4;
+}
+
+@media (max-width: 1180px) {
+  /* Sits right of the logo; Book now + menu toggle are pinned to the right. */
+  .navbar .lang-switch {
+    position: absolute;
+    left: 74px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 0;
+    z-index: 105;
+    font-size: 0.75rem;
+  }
+
+  .navbar .lang-switch a,
+  .navbar .lang-switch span[aria-current='page'] {
+    padding: 6px 9px;
   }
 }

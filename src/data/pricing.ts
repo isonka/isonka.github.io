@@ -42,10 +42,3 @@ export function formatEur(n: number): string {
 export function packTotal(perClass: number, classes: number): number {
   return perClass * classes;
 }
-
-export function privatePackLine(
-  tier: keyof typeof PRIVATE,
-): string {
-  const p = PRIVATE[tier];
-  return `• ${formatEur(p.single)} single, ${formatEur(p.pack5)}/class (5-pack), ${formatEur(p.pack10)}/class (10-pack), ${formatEur(p.pack20)}/class (20-pack)`;
-}
