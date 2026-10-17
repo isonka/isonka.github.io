@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot, hydrateRoot } from 'react-dom/client'
 import { initI18n } from './i18n/config'
+import './styles/brand-c.css'
 import './index.css'
 import App from './App.tsx'
 import { studioAddressLine } from './data/business';

@@ -1,0 +1,2 @@
+/* Re-export Version C tokens used by the app via src/styles/brand-c.css */
+@import '../src/styles/brand-c.css';

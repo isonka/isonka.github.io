@@ -1,0 +1,29 @@
+<!-- @dsCard group="Content" height=420 subtitle="Seven lanes: list + panel" -->
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Lanes — preview</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+<style>
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--font-sans);}
+  .wrap{display:flex;gap:var(--space-6);padding:var(--space-8);}
+  .list{flex:0 0 300px;border-top:1px solid var(--line);}
+  .row{display:flex;align-items:center;gap:18px;padding:14px 12px;border-bottom:1px solid var(--line);font-size:18px;font-weight:300;}
+  .row.on{background:var(--ground-raised);font-weight:500;}
+  .n{width:20px;font-size:14px;font-weight:500;color:var(--gold-text);} .t{margin-left:auto;font-size:13px;color:var(--ink-muted);}
+  .panel{flex:1;position:relative;background:var(--ground-raised);padding:36px 36px 36px 68px;}
+  .stripe{position:absolute;left:0;top:0;bottom:0;width:40px;clip-path:polygon(24px 0,40px 0,14px 100%,0 100%);background:var(--gold);}
+  .eyebrow{font-size:14px;font-weight:500;color:var(--ink-muted);}
+  h3{margin:10px 0 0;font-weight:300;font-size:44px;line-height:1.05;letter-spacing:-.02em;}
+  p{margin:16px 0 0;font-size:16px;line-height:26px;color:var(--ink-muted);max-width:380px;}
+</style></head>
+<body><div class="wrap">
+  <div class="list">
+    <div class="row on"><span class="n">1</span>Reformer<span class="t">Pilates</span></div>
+    <div class="row"><span class="n">2</span>Strength<span class="t">Strength</span></div>
+    <div class="row"><span class="n">3</span>Yoga<span class="t">Yoga</span></div>
+    <div class="row"><span class="n">4</span>Mat Pilates<span class="t">Pilates</span></div>
+  </div>
+  <div class="panel"><span class="stripe"></span>
+    <span class="eyebrow">Lane 1 · Pilates</span>
+    <h3>Reformer</h3>
+    <p>Springs, straps and a coach who corrects your alignment before it drifts. Where PT7 started.</p>
+  </div>
+</div></body></html>

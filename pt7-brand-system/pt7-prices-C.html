@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PT7 — Prices (version C)</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,900&amp;family=Poppins:wght@400;600&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap">
+<style>
+body{margin:0;background:#f5f0e6;}
+a{color:#7a6400;}a:hover{color:#0b0b0b;}
+.nw{white-space:normal;}
+@media (max-width: 720px){
+  .p-sec{padding-top:56px !important;padding-bottom:56px !important;}
+  .p-h1{font-size:44px !important;}
+  .p-tabs button{flex:1 1 40%;}
+  .p-facts{grid-template-columns:repeat(2, minmax(0, 1fr)) !important;}
+  .p-art{display:none !important;}
+
+  .hero-art-d{order:-1;flex:1 1 100% !important;min-height:240px !important;margin:0 -24px;}
+  .nav-logo{width:74px;height:60px;}
+  .ticker span:not(:nth-child(2)){display:none;}
+  .hero-art-d svg{width:100% !important;}
+  .hero-art-d svg{right:0 !important;}
+  .nav-links a:not(.nav-cta){display:none;}
+  .nav-menu{display:inline-flex !important;}
+  .hero-copy{padding:20px 0 48px !important;}
+  .hero-copy p{font-size:16px !important;line-height:24px !important;margin-top:20px !important;}
+  .hero-ctas{margin-top:28px !important;}
+  .hero-ctas a{flex:1 1 140px;text-align:center;}
+  .lanes{padding:72px 16px !important;}
+  .lanes-grid{margin-top:32px !important;gap:16px !important;}
+  .lane-list{flex-direction:row !important;flex-wrap:wrap;flex:1 1 100% !important;gap:8px;border-bottom:0 !important;}
+  .lane-list button{width:auto !important;flex:1 1 auto;gap:8px !important;padding:10px 14px !important;border:1px solid #ddd5c6 !important;}
+  .lane-list .lane-n{width:auto !important;font-size:24px !important;}
+  .lane-list .lane-name{flex:0 1 auto !important;font-size:16px !important;}
+  .lane-list .lane-tag{display:none;}
+  .lane-panel{padding:28px 24px !important;min-height:0 !important;gap:28px !important;flex:1 1 100% !important;}
+  .lane-panel .lane-big{font-size:220px !important;top:-28px !important;right:-16px !important;}
+  .lane-panel h3{font-size:48px !important;}
+  .lane-panel p{font-size:16px !important;line-height:24px !important;}
+  .lane-panel .lane-cta{flex:1 1 100%;text-align:center;}
+  .ticket{flex-direction:column;}
+  .ticket-main{padding:24px !important;min-height:0 !important;gap:24px !important;}
+  .ticket-main > div:first-child{flex-direction:column;gap:4px !important;}
+  .ticket-big{font-size:60px !important;}
+  .ticket-perf{width:auto !important;height:0;border-left:0 !important;border-top:4px dashed #f5f0e6;}
+  .ticket-stub{flex:0 0 auto !important;flex-direction:row !important;flex-wrap:wrap;align-items:center !important;padding:20px 24px !important;}
+  .ticket-stub a{margin-left:auto;}
+  .acad-stripes{height:56px !important;padding-right:24px !important;gap:16px !important;}
+  section h2{font-size:34px !important;}
+  .board{grid-template-columns:repeat(2, minmax(0, 1fr)) !important;padding:0 !important;}
+  .board-cell{padding:12px 16px !important;border-bottom:1px solid #2a2a2e;}
+  .board-v{font-size:24px !important;}
+  .board-l{font-size:12px !important;}
+  .acad-inner{padding:96px 24px 72px !important;}
+}
+summary{cursor:pointer;list-style:none;}
+summary::-webkit-details-marker{display:none;}
+details[open] .faq-plus{transform:rotate(45deg);}
+</style>
+
+</head>
+<body>
+
+
+<div style="background: #f5f0e6; color: #0b0b0b; font-family: Poppins, system-ui, sans-serif; font-size: 16px; line-height: 24px; overflow: hidden;">
+
+  <!-- Ticker -->
+  <div style="background: #ffd700; color: #0b0b0b; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase;">
+    <div class="ticker" style="max-width: 1280px; margin: 0 auto; padding: 10px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 24px;">
+      <span>● Pilates · Yoga · Strength · TRX</span>
+      <span>Olympisch Stadion 15 · Amsterdam</span>
+      <span>Intro: 3 classes · €50</span>
+    </div>
+  </div>
+
+  <!-- Nav (dark, joins the hero) -->
+  <div style="background: #1c1a18;">
+  <nav style="max-width: 1280px; margin: 0 auto; padding: 24px 24px 8px; display: flex; flex-wrap: nowrap; align-items: center; justify-content: space-between; gap: 16px;">
+    <a href="#top" aria-label="PT7 home" style="display: flex; align-items: center; color: #f5f0e6; text-decoration: none;"><svg class="nav-logo" width="98" height="80" viewBox="325 322 480 392" role="img" aria-label="PT7"><g fill="none" stroke="#f5f0e6" stroke-width="12"><path d="M343 594V335H392C458 335 482 368 482 402C482 432 466 450 430 463"></path><path d="M503 368H671M588 368V571"></path></g><path d="M663 466H788C744 540 690 620 703 705" fill="none" stroke="#ffd700" stroke-width="12"></path></svg></a>
+    <div class="nav-links" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase;">
+      <a href="#top" style="color: #f5f0e6; text-decoration: none;">Train</a>
+      <a href="#top" style="color: #f5f0e6; text-decoration: none;">Coaches</a>
+      <a href="#top" aria-current="page" style="color: #ffd700; text-decoration: none;">Prices</a>
+      <a href="#top" style="color: #ff5a2e; text-decoration: none;">Academy</a>
+      <a href="#top" style="color: #f5f0e6; text-decoration: none;">Venue</a>
+      <button type="button" class="nav-menu" aria-label="Open menu" style="display: none; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 2px solid #f5f0e6; background: transparent; cursor: pointer;"><svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><path d="M0 1H20M0 7H20M0 13H20" stroke="#f5f0e6" stroke-width="2"></path></svg></button>
+      <a href="#offer" class="nav-cta" style="background: #ffd700; color: #0b0b0b; text-decoration: none; padding: 12px 20px; font-family: Poppins, sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0; text-transform: none;">Book a class</a>
+    </div>
+  </nav>
+  </div>
+
+
+  <!-- Header (dark band) -->
+  <header id="top" style="position: relative; background: #1c1a18; color: #f5f0e6; overflow: hidden;">
+    <div class="p-art" aria-hidden="true" style="position: absolute; top: 0; bottom: 0; right: 8%; display: flex; gap: 24px;">
+      <span style="width: 14px; background: #ffd700; transform: skewX(-12deg);"></span>
+      <span style="width: 14px; background: #ffd700; transform: skewX(-12deg);"></span>
+      <span style="width: 14px; background: #ffd700; transform: skewX(-12deg);"></span>
+    </div>
+    <div class="p-sec" style="position: relative; max-width: 1280px; margin: 0 auto; padding: 72px 24px 88px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #ffd700;">Prices · Entry · Memberships</div>
+      <h1 class="p-h1" style="margin: 24px 0 0; max-width: 780px; font-family: Poppins, sans-serif; font-weight: 500; font-size: clamp(52px, 6vw, 88px); line-height: 1.02; letter-spacing: -0.03em;">Pick your plan. <span style="color: #ffd700;">Find your lane.</span></h1>
+      <p style="margin: 28px 0 0; max-width: 520px; font-size: 18px; line-height: 28px; color: #c9c3b8;">Every class is 45 minutes with a coach on the floor. Start with the intro ticket, then choose how often you train.</p>
+    </div>
+  </header>
+
+  <!-- Facts (black strip) -->
+  <section aria-label="Every class" style="background: #0b0b0b; color: #f5f0e6;">
+    <div class="p-facts" style="max-width: 1280px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));">
+      
+        <div style="padding: 16px 20px; border-left: 1px solid #2a2a2e; display: flex; align-items: baseline; gap: 12px;">
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 40px; line-height: 1; color: #ffd700;">45</span>
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; line-height: 1.1; letter-spacing: 0.12em; text-transform: uppercase; color: #a8a39a;">Minutes</span>
+        </div>
+      
+        <div style="padding: 16px 20px; border-left: 1px solid #2a2a2e; display: flex; align-items: baseline; gap: 12px;">
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 40px; line-height: 1; color: #ffd700;">≤10</span>
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; line-height: 1.1; letter-spacing: 0.12em; text-transform: uppercase; color: #a8a39a;">Per class</span>
+        </div>
+      
+        <div style="padding: 16px 20px; border-left: 1px solid #2a2a2e; display: flex; align-items: baseline; gap: 12px;">
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 40px; line-height: 1; color: #ffd700;">7</span>
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; line-height: 1.1; letter-spacing: 0.12em; text-transform: uppercase; color: #a8a39a;">Lanes</span>
+        </div>
+      
+        <div style="padding: 16px 20px; border-left: 1px solid #2a2a2e; display: flex; align-items: baseline; gap: 12px;">
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 40px; line-height: 1; color: #ffd700;">1</span>
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; line-height: 1.1; letter-spacing: 0.12em; text-transform: uppercase; color: #a8a39a;">Coach on the floor</span>
+        </div>
+      
+    </div>
+  </section>
+
+  <!-- Intro ticket -->
+  <section id="offer" class="p-sec" style="max-width: 1280px; margin: 0 auto; padding: 96px 24px 0; display: flex; flex-wrap: wrap; align-items: center; gap: 40px 80px;">
+    <div style="flex: 1 1 380px; min-width: 0;">
+      <h2 style="margin: 0; font-family: Poppins, sans-serif; font-weight: 500; font-size: clamp(40px, 4.6vw, 68px); line-height: 1.05; letter-spacing: -0.02em;">First time? <span style="color: #7a6400;">You're in.</span></h2>
+      <p style="margin: 20px 0 0; max-width: 400px; color: #5c574f;">Three group classes, any lane. Reformer on Monday, yoga on Wednesday, barbell on Friday — or the same lane three times.</p>
+    </div>
+    <div class="ticket" style="flex: 1 1 560px; min-width: 0; display: flex;">
+      <div class="ticket-main" style="flex: 1 1 auto; background: #0b0b0b; color: #f5f0e6; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; min-height: 240px;">
+        <div style="display: flex; justify-content: space-between; gap: 16px; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #ffd700;"><span>Admit one</span><span>New members</span></div>
+        <div>
+          <div class="ticket-big" style="font-family: Poppins, sans-serif; font-weight: 500; font-size: 56px; line-height: 1; letter-spacing: -0.02em;">3 group classes</div>
+          <div style="margin-top: 10px; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #a8a39a;">Any lane · first-time clients</div>
+        </div>
+      </div>
+      <div class="ticket-perf" style="width: 0; border-left: 4px dashed #f5f0e6; background: #0b0b0b;"></div>
+      <div class="ticket-stub" style="flex: 0 0 180px; background: #ffd700; color: #0b0b0b; padding: 32px 24px; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; gap: 16px;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;">Entry</span>
+        <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 72px; line-height: 0.9;">€50</span>
+        <a href="#offer" style="background: #0b0b0b; color: #ffd700; text-decoration: none; padding: 12px 18px; font-weight: 600; font-size: 15px;">Claim it</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plans -->
+  <section class="p-sec" style="max-width: 1280px; margin: 0 auto; padding: 112px 24px;">
+    <h2 style="margin: 0; font-family: Poppins, sans-serif; font-weight: 500; font-size: clamp(40px, 4.6vw, 68px); line-height: 1.05; letter-spacing: -0.02em;">Choose how you <span style="color: #7a6400;">train.</span></h2>
+    <div class="p-tabs" role="tablist" aria-label="Price categories" style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 8px;">
+      
+        <button type="button" role="tab" aria-selected="true" style="padding: 12px 22px; border: 2px solid #ffd700; background: #ffd700; color: #0b0b0b; font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;">Memberships</button>
+      
+        <button type="button" role="tab" aria-selected="false" style="padding: 12px 22px; border: 2px solid #0b0b0b; background: transparent; color: #0b0b0b; font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;">Class packs</button>
+      
+        <button type="button" role="tab" aria-selected="false" style="padding: 12px 22px; border: 2px solid #0b0b0b; background: transparent; color: #0b0b0b; font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;">Private</button>
+      
+        <button type="button" role="tab" aria-selected="false" style="padding: 12px 22px; border: 2px solid #0b0b0b; background: transparent; color: #0b0b0b; font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;">Couples</button>
+      
+    </div>
+    <p style="margin: 20px 0 0; max-width: 640px; color: #5c574f;">For training every week. Group classes, any day, one class per day. Memberships renew automatically and can be cancelled after the minimum period.</p>
+
+    
+
+    <div style="margin-top: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+      
+        <article style="position: relative; overflow: hidden; background: #1c1a18; color: #f5f0e6; padding: 28px 24px 28px 60px; display: flex; flex-direction: column; gap: 20px;">
+          <span aria-hidden="true" style="position: absolute; left: 0; top: 0; bottom: 0; width: 40px; clip-path: polygon(24px 0, 40px 0, 14px 100%, 0 100%); background: #f5f0e6;"></span>
+          <span aria-hidden="true" style="position: absolute; right: -10px; top: -30px; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 160px; line-height: 1; color: #292623;">1</span>
+          <div style="position: relative; display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 24px;">
+            <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #f5f0e6;">4 classes a month</span>
+            
+          </div>
+          <div style="position: relative;">
+            <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 64px; font-weight: 800; line-height: 0.9;">€86<span style="font-family: Poppins, sans-serif; font-size: 15px; font-weight: 400; color: #a8a39a;"> / month</span></div>
+            <div style="margin-top: 10px; font-size: 15px; font-weight: 500; color: #ffd700;">€21.50 per class</div>
+          </div>
+          <ul style="position: relative; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 20px; color: #a8a39a; flex: 1 1 auto;">
+            <li>— Monthly, renews automatically</li><li>— Cancel any time after month one</li>
+          </ul>
+          <a href="#offer" style="position: relative; text-align: center; text-decoration: none; padding: 12px 18px; font-weight: 600; background: transparent; color: #f5f0e6; box-shadow: inset 0 0 0 2px #f5f0e6;">Start membership</a>
+        </article>
+      
+        <article style="position: relative; overflow: hidden; background: #1c1a18; color: #f5f0e6; padding: 28px 24px 28px 60px; display: flex; flex-direction: column; gap: 20px;">
+          <span aria-hidden="true" style="position: absolute; left: 0; top: 0; bottom: 0; width: 40px; clip-path: polygon(24px 0, 40px 0, 14px 100%, 0 100%); background: #f5f0e6;"></span>
+          <span aria-hidden="true" style="position: absolute; right: -10px; top: -30px; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 160px; line-height: 1; color: #292623;">2</span>
+          <div style="position: relative; display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 24px;">
+            <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #f5f0e6;">8 classes a month</span>
+            
+          </div>
+          <div style="position: relative;">
+            <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 64px; font-weight: 800; line-height: 0.9;">€160<span style="font-family: Poppins, sans-serif; font-size: 15px; font-weight: 400; color: #a8a39a;"> / month</span></div>
+            <div style="margin-top: 10px; font-size: 15px; font-weight: 500; color: #ffd700;">€20 per class</div>
+          </div>
+          <ul style="position: relative; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 20px; color: #a8a39a; flex: 1 1 auto;">
+            <li>— Monthly, renews automatically</li><li>— Cancel any time after month one</li>
+          </ul>
+          <a href="#offer" style="position: relative; text-align: center; text-decoration: none; padding: 12px 18px; font-weight: 600; background: transparent; color: #f5f0e6; box-shadow: inset 0 0 0 2px #f5f0e6;">Start membership</a>
+        </article>
+      
+        <article style="position: relative; overflow: hidden; background: #1c1a18; color: #f5f0e6; padding: 28px 24px 28px 60px; display: flex; flex-direction: column; gap: 20px;">
+          <span aria-hidden="true" style="position: absolute; left: 0; top: 0; bottom: 0; width: 40px; clip-path: polygon(24px 0, 40px 0, 14px 100%, 0 100%); background: #ffd700;"></span>
+          <span aria-hidden="true" style="position: absolute; right: -10px; top: -30px; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 160px; line-height: 1; color: #292623;">3</span>
+          <div style="position: relative; display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 24px;">
+            <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #ffd700;">Unlimited</span>
+            <span style="background: #ffd700; color: #0b0b0b; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 8px;">Most popular</span>
+          </div>
+          <div style="position: relative;">
+            <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 64px; font-weight: 800; line-height: 0.9;">€350<span style="font-family: Poppins, sans-serif; font-size: 15px; font-weight: 400; color: #a8a39a;"> / month</span></div>
+            <div style="margin-top: 10px; font-size: 15px; font-weight: 500; color: #ffd700;">Unlimited classes</div>
+          </div>
+          <ul style="position: relative; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 20px; color: #a8a39a; flex: 1 1 auto;">
+            <li>— 3-month commitment</li><li>— Then renews monthly</li>
+          </ul>
+          <a href="#offer" style="position: relative; text-align: center; text-decoration: none; padding: 12px 18px; font-weight: 600; background: #ffd700; color: #0b0b0b; box-shadow: inset 0 0 0 2px #ffd700;">Start membership</a>
+        </article>
+      
+        <article style="position: relative; overflow: hidden; background: #1c1a18; color: #f5f0e6; padding: 28px 24px 28px 60px; display: flex; flex-direction: column; gap: 20px;">
+          <span aria-hidden="true" style="position: absolute; left: 0; top: 0; bottom: 0; width: 40px; clip-path: polygon(24px 0, 40px 0, 14px 100%, 0 100%); background: #ffd700;"></span>
+          <span aria-hidden="true" style="position: absolute; right: -10px; top: -30px; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 160px; line-height: 1; color: #292623;">4</span>
+          <div style="position: relative; display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 24px;">
+            <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #ffd700;">Unlimited annual</span>
+            <span style="background: #ffd700; color: #0b0b0b; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 8px;">Best value</span>
+          </div>
+          <div style="position: relative;">
+            <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 64px; font-weight: 800; line-height: 0.9;">€250<span style="font-family: Poppins, sans-serif; font-size: 15px; font-weight: 400; color: #a8a39a;"> / month</span></div>
+            <div style="margin-top: 10px; font-size: 15px; font-weight: 500; color: #ffd700;">€3,000 per year</div>
+          </div>
+          <ul style="position: relative; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 20px; color: #a8a39a; flex: 1 1 auto;">
+            <li>— 12-month commitment</li><li>— Includes a 4-week freeze</li>
+          </ul>
+          <a href="#offer" style="position: relative; text-align: center; text-decoration: none; padding: 12px 18px; font-weight: 600; background: #ffd700; color: #0b0b0b; box-shadow: inset 0 0 0 2px #ffd700;">Start membership</a>
+        </article>
+      
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background: #ffffff;">
+    <div class="p-sec" style="max-width: 1280px; margin: 0 auto; padding: 112px 24px; display: flex; flex-wrap: wrap; gap: 40px 80px;">
+      <div style="flex: 1 1 320px; min-width: 0;">
+        <h2 style="margin: 0; font-family: Poppins, sans-serif; font-weight: 500; font-size: clamp(40px, 4.6vw, 68px); line-height: 1.05; letter-spacing: -0.02em;">Good to <span style="color: #7a6400;">know.</span></h2>
+        <p style="margin: 20px 0 0; max-width: 340px; color: #5c574f;">Not sure which plan fits? Message us and a coach will help you choose.</p>
+        <a href="https://wa.me/31685162693" style="display: inline-block; margin-top: 24px; background: #0b0b0b; color: #ffd700; text-decoration: none; padding: 14px 24px; font-weight: 600;">WhatsApp us</a>
+      </div>
+      <div style="flex: 2 1 560px; min-width: 0; border-top: 3px solid #0b0b0b;">
+        
+          <details style="border-bottom: 1px solid #ddd5c6;">
+            <summary style="display: flex; align-items: baseline; gap: 20px; padding: 20px 0; font-size: 18px; font-weight: 500;"><span style="font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 14px; color: #7a6400;">01</span><span style="flex: 1 1 auto;">How does pack validity work?</span><span class="faq-plus" aria-hidden="true" style="flex: 0 0 auto; font-size: 26px; font-weight: 300; line-height: 1; transition: transform 0.2s;">+</span></summary>
+            <p style="margin: 0 0 20px 44px; max-width: 600px; color: #5c574f;">A pack is valid for as many weeks as it has classes, starting on the day you buy it. A 5-class pack runs 5 weeks; a 20-class pack runs 20 weeks.</p>
+          </details>
+        
+          <details style="border-bottom: 1px solid #ddd5c6;">
+            <summary style="display: flex; align-items: baseline; gap: 20px; padding: 20px 0; font-size: 18px; font-weight: 500;"><span style="font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 14px; color: #7a6400;">02</span><span style="flex: 1 1 auto;">How do I cancel a membership?</span><span class="faq-plus" aria-hidden="true" style="flex: 0 0 auto; font-size: 26px; font-weight: 300; line-height: 1; transition: transform 0.2s;">+</span></summary>
+            <p style="margin: 0 0 20px 44px; max-width: 600px; color: #5c574f;">Memberships renew automatically. Cancel before your renewal date by emailing info@pt7.nl or calling +31 685 162693, after the minimum period of your plan.</p>
+          </details>
+        
+          <details style="border-bottom: 1px solid #ddd5c6;">
+            <summary style="display: flex; align-items: baseline; gap: 20px; padding: 20px 0; font-size: 18px; font-weight: 500;"><span style="font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 14px; color: #7a6400;">03</span><span style="flex: 1 1 auto;">Can I freeze my membership?</span><span class="faq-plus" aria-hidden="true" style="flex: 0 0 auto; font-size: 26px; font-weight: 300; line-height: 1; transition: transform 0.2s;">+</span></summary>
+            <p style="margin: 0 0 20px 44px; max-width: 600px; color: #5c574f;">The annual unlimited membership includes a 4-week freeze. Ask us about other plans.</p>
+          </details>
+        
+          <details style="border-bottom: 1px solid #ddd5c6;">
+            <summary style="display: flex; align-items: baseline; gap: 20px; padding: 20px 0; font-size: 18px; font-weight: 500;"><span style="font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 14px; color: #7a6400;">04</span><span style="flex: 1 1 auto;">I am pregnant. Can I join group classes?</span><span class="faq-plus" aria-hidden="true" style="flex: 0 0 auto; font-size: 26px; font-weight: 300; line-height: 1; transition: transform 0.2s;">+</span></summary>
+            <p style="margin: 0 0 20px 44px; max-width: 600px; color: #5c574f;">During pregnancy we train one-on-one only, so your coach can adapt every exercise safely. See the Private tab.</p>
+          </details>
+        
+          <details style="border-bottom: 1px solid #ddd5c6;">
+            <summary style="display: flex; align-items: baseline; gap: 20px; padding: 20px 0; font-size: 18px; font-weight: 500;"><span style="font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 14px; color: #7a6400;">05</span><span style="flex: 1 1 auto;">I have an injury. Is that a problem?</span><span class="faq-plus" aria-hidden="true" style="flex: 0 0 auto; font-size: 26px; font-weight: 300; line-height: 1; transition: transform 0.2s;">+</span></summary>
+            <p style="margin: 0 0 20px 44px; max-width: 600px; color: #5c574f;">Tell us before you book. Our coaches adapt exercises, and private sessions are a good way to start back.</p>
+          </details>
+        
+          <details style="border-bottom: 1px solid #ddd5c6;">
+            <summary style="display: flex; align-items: baseline; gap: 20px; padding: 20px 0; font-size: 18px; font-weight: 500;"><span style="font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 14px; color: #7a6400;">06</span><span style="flex: 1 1 auto;">What is the difference between coach levels?</span><span class="faq-plus" aria-hidden="true" style="flex: 0 0 auto; font-size: 26px; font-weight: 300; line-height: 1; transition: transform 0.2s;">+</span></summary>
+            <p style="margin: 0 0 20px 44px; max-width: 600px; color: #5c574f;">Private sessions are priced by experience: master coach (Elif), senior coaches and coaches. Every coach is certified and trained in the PT7 method.</p>
+          </details>
+        
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #1c1a18; color: #f5f0e6;">
+    <div aria-hidden="true" style="height: 48px; background-color: #1c1a18; background-image: linear-gradient(45deg, #ffd700 25%, transparent 25%, transparent 75%, #ffd700 75%), linear-gradient(45deg, #ffd700 25%, transparent 25%, transparent 75%, #ffd700 75%); background-size: 48px 48px; background-position: 0 0, 24px 24px;"></div>
+    <div style="max-width: 1280px; margin: 0 auto; padding: 80px 24px 56px; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 40px;">
+      <div style="font-family: Poppins, sans-serif; font-weight: 500; font-size: clamp(44px, 7vw, 104px); line-height: 1; letter-spacing: -0.03em;"><span class="nw">See you</span><br><span class="nw">at the <em style="font-style: normal; color: #ffd700;">start.</em></span></div>
+      <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+        <svg width="88" height="72" viewBox="325 322 480 392" role="img" aria-label="PT7"><g fill="none" stroke="#f5f0e6" stroke-width="11"><path d="M343 594V335H392C458 335 482 368 482 402C482 432 466 450 430 463"></path><path d="M503 368H671M588 368V571"></path></g><path d="M663 466H788C744 540 690 620 703 705" fill="none" stroke="#ffd700" stroke-width="11"></path></svg>
+        <a href="#top" style="color: #f5f0e6; text-decoration: none;">Train</a>
+        <a href="#top" style="color: #f5f0e6; text-decoration: none;">Coaches</a>
+        <a href="#top" style="color: #f5f0e6; text-decoration: none;">Academy</a>
+        <a href="https://www.instagram.com/pt7amsterdam" style="color: #f5f0e6; text-decoration: none;">Instagram</a>
+        <a href="mailto:info@pt7.nl" style="color: #f5f0e6; text-decoration: none;">info@pt7.nl</a>
+        <span style="color: #a8a39a;">EN | NL</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+</body>
+</html>

@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { Ticker } from './components/Ticker';
 import { ScrollToTop } from './components/ScrollToTop';
 import { CookieConsent } from './components/CookieConsent';
 import { StructuredData } from './components/StructuredData';
@@ -137,6 +138,7 @@ function Layout() {
       <LocaleSync />
       <div className="app instructors-silk-host">
         <div className="site-header">
+          <Ticker />
           <Navbar />
         </div>
         <main className="main-content">

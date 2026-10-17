@@ -1,0 +1,40 @@
+/* Version C — track palette + display fonts */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=JetBrains+Mono:wght@500;700&display=swap');
+
+:root {
+  --cream: #f5f0e6;
+  --cream-deep: #ebe4d6;
+  --ink: #0b0b0b;
+  --ink-deep: #0b0b0b;
+  --charcoal: #1c1a18;
+  --charcoal-soft: #292623;
+  --gold: #ffd700;
+  --gold-text: #7a6400;
+  --strength: #ff5a2e;
+  --muted: #5c574f;
+  --muted-on-dark: #a8a39a;
+  --line: #ddd5c6;
+  --line-dark: #2a2a2e;
+  --yoga: #127048;
+  --yoga-bright: #3ddc97;
+  --cream-on-dark: #c9c3b8;
+
+  --font-body: 'Poppins', system-ui, sans-serif;
+  --font-display: 'Barlow Condensed', 'Poppins', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --page-max-width: 1280px;
+  --radius: 0;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}

@@ -16,7 +16,7 @@ export const business = {
   url: BASE_URL,
   logo: `${BASE_URL}/assets/images/pt7logo.webp`,
   description:
-    "Boutique Reformer Pilates studio at Amsterdam Museumplein offering small group classes (max 5), private sessions, TRX, and strength training with 15+ years of expertise.",
+    'Boutique Reformer Pilates studio at Olympisch Stadion 15, Amsterdam, offering small group classes (max 10), private sessions, TRX, and strength training with 15+ years of expertise.',
   foundingDate: '2009',
   telephone: '+31685162693',
   email: 'info@pt7.nl',
@@ -34,9 +34,9 @@ export const business = {
   ],
 
   address: {
-    streetAddress: 'Van Baerlestraat 76C',
+    streetAddress: 'Olympisch Stadion 15',
     addressLocality: 'Amsterdam',
-    postalCode: '1071 BB',
+    postalCode: '1076 DE',
     addressRegion: 'Noord-Holland',
     addressCountry: 'NL',
   },

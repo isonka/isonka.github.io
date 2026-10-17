@@ -3,191 +3,138 @@ import type { EnPricing } from '../en/pricing';
 
 export const nlPricing: DeepStringify<EnPricing> = {
   seo: {
-    title: 'Hoeveel kost pilates Amsterdam Oud-Zuid | PT 7',
+    title: 'Pilates prijzen Amsterdam | Vanaf €50 intro | PT 7',
     description:
-      'Pilates prijzen aan het Museumplein, Amsterdam Zuid: 3 groepslessen voor €50, daarna vanaf {{groupPrice}}/les (max. {{groupMax}}). Abonnementen en privé.',
+      'Pilates prijzen op Olympisch Stadion 15: intro van 3 groepslessen €50, daarna vanaf {{groupPrice}}/les (max {{groupMax}}). Abonnementen en privé.',
     keywords:
-      'pilates lesprijzen amsterdam, pilates prijzen amsterdam, Pilates prijzen Amsterdam, Pilates abonnement Amsterdam, Pilates prijzen Museumplein, reformer pilates prive amsterdam, kleine groep pilates amsterdam, private Pilates kosten, proefles Pilates Amsterdam, strippenkaart Pilates',
-    ogTitle: 'Hoeveel kost pilates Amsterdam Oud-Zuid | PT 7',
+      'pilates prijzen amsterdam, Pilates prijzen Amsterdam, Pilates abonnement Amsterdam, strippenkaart Pilates',
+    ogTitle: 'Kies je plan. Vind je baan. | PT 7',
     ogDescription:
-      'Introductiepakket 3 lessen voor €50. Kleine groepen (max. {{groupMax}}) vanaf {{groupPrice}}/les aan het Museumplein. Abonnementen en privésessies — online boeken.',
-    analyticsTitle: 'Pilates prijzen Amsterdam Zuid | PT 7 Pilates',
+      'Intro 3 lessen €50. Kleine groepen (max {{groupMax}}) vanaf {{groupPrice}}/les in het Olympisch Stadion.',
+    analyticsTitle: 'Pilates prijzen Amsterdam | PT 7 Pilates',
   },
-  breadcrumbName: 'Pilates lesprijzen Amsterdam',
+  breadcrumbName: 'Prijzen',
   hero: {
-    kicker: 'Prijzen',
-    title: 'Pilateslesprijzen & abonnementen in Amsterdam',
-    lead: 'Kleine groepen (max. {{groupMax}}) voor <reformer>Reformer pilates</reformer> en <trx>TRX</trx>, abonnementen en private sessies aan het Museumplein. Klaar om te boeken? <schedule>Bekijk het lesrooster</schedule>.',
+    eyebrow: 'Prijzen · Entry · Abonnementen',
+    title: 'Kies je plan.',
+    titleAccent: 'Vind je baan.',
+    lead:
+      'Elke les is 45 minuten met een coach op de vloer. Begin met het intro-ticket, kies daarna hoe vaak je traint.',
   },
-  summary: {
-    group:
-      'Groepslessen pilates bij PT 7 kosten vanaf {{pack20PerClass}} per les met een 20-lessenkaart; een losse groepsles kost {{groupSingle}}.',
-    intro:
-      'Nieuwe klanten kunnen starten met een introductiepakket van {{introClasses}} lessen voor {{introPrice}}.',
-    monthly:
-      'Maandabonnementen kosten {{fourTotal}} voor 4 lessen en {{eightTotal}} voor 8 lessen.',
-    unlimited:
-      'Onbeperkte abonnementen kosten {{unlimited3}} per maand bij een verplichting van 3 maanden, of {{annualMonth}} per maand bij een jaarabonnement ({{annualYear}} per jaar, inclusief een pauzeoptie van 4 weken).',
-    private:
-      'Privésessies beginnen bij {{privateFrom}}, met de volle aandacht van je instructeur. Duo-sessies beginnen bij {{coupleFrom}} per persoon.',
-    membershipRules:
-      'Alle abonnementen staan maximaal één les per dag toe en worden automatisch verlengd tenzij opgezegd vóór de verlengingsdatum.',
+  facts: {
+    aria: 'Elke les',
+    minutes: 'Minuten',
+    perClass: 'Per les',
+    lanes: 'Banen',
+    coach: 'Coach op de vloer',
   },
-  offer: {
-    badge: 'Speciale aanbieding',
-    title: 'Introductiepakket',
-    description: 'Alleen voor nieuwe klanten: {{classes}} groepslessen voor {{price}}',
-    details: 'Bekijk het introductieaanbod',
+  ticket: {
+    title: 'Eerste keer?',
+    titleAccent: 'Je hoort erbij.',
+    lead:
+      'Drie groepslessen, elke baan. Reformer maandag, yoga woensdag, barbell vrijdag — of drie keer dezelfde.',
+    admit: 'Admit one',
+    badge: 'Nieuwe leden',
+    big: '3 groepslessen',
+    sub: 'Elke baan · eerste keer',
+    stubLabel: 'Entry',
+    cta: 'Claim het',
   },
-  nav: {
-    aria: 'Prijzensecties',
-    membership: 'Abonnement',
-    group: 'Groep',
+  plans: {
+    title: 'Kies hoe je',
+    titleAccent: 'traint.',
+    tabsAria: 'Prijscategorieën',
+    memberships: 'Abonnementen',
+    packs: 'Strippenkaarten',
     private: 'Privé',
-    couple: 'Duo',
+    couples: 'Duo',
+    membershipLead:
+      'Voor wekelijks trainen. Groepslessen, elke dag, max. één les per dag. Abonnementen verlengen automatisch; opzeggen na de minimale periode.',
+    packsLead:
+      'Betaal per les. Kaarten zijn geldig zoveel weken als er lessen op staan, vanaf aankoopdatum.',
+    privateLead:
+      'One-on-one met een coach. Kies niveau — master (Elif), senior of coach.',
+    couplesLead: 'Twee personen, één coach. Prijs per persoon.',
   },
   labels: {
     perClass: 'per les',
-    perPerson: 'per persoon',
-    perMonth: 'per maand',
-    inTotal: '{{amount}} in totaal',
-    mostPopular: 'Meest populair',
-    bestValue: 'Beste waarde',
-    singleClass: 'Losse les',
-    classPack: '{{count}}-lessenkaart',
-    validFor_one: 'Geldig voor {{count}} week',
-    validFor_other: 'Geldig voor {{count}} weken',
-    allDaysOneClass: 'Alle dagen • 1 les/dag',
-    buyNow: 'Nu kopen',
+    perMonth: '/ maand',
+    mostPopular: 'Meest gekozen',
+    bestValue: 'Beste deal',
+    buyNow: 'Kopen',
+    startMembership: 'Start abonnement',
+    buyPack: 'Koop kaart',
+    bookPrivate: 'Boek privé',
+    bookCouple: 'Boek duo',
+    unlimitedClasses: 'Onbeperkt lessen',
+    yearTotal: '{{amount}} per jaar',
+    tierMaster: 'Master coach',
+    tierSenior: 'Senior coach',
+    tierJunior: 'Coach',
   },
   membership: {
-    kicker: 'Abonnement',
-    title: 'Abonnementen',
-    subtitle: 'Geldig alle dagen • Maximaal 1 les per dag',
-    classesInMonth: '{{count}} lessen in 1 maand',
-    monthlyFineprint:
-      '1-maands periode • Opzeggen kan na de eerste maand • Wordt maandelijks automatisch verlengd tenzij opgezegd',
-    unlimited3Name: 'Onbeperkt 3 maanden',
-    unlimitedClasses: 'Onbeperkt lessen',
-    unlimited3Fineprint:
-      '3 maanden verplichting • Opzeggen kan na 3 maanden • Wordt automatisch verlengd tenzij opgezegd',
-    annualName: 'Jaarlijks onbeperkt',
-    annualTotalNote: '{{yearTotal}}/jaar • Inclusief 4 weken pauzeoptie',
-    annualFineprint:
-      '12 maanden verplichting • Opzeggen kan na 12 maanden • Wordt automatisch verlengd tenzij opgezegd',
+    four: '4 lessen per maand',
+    eight: '8 lessen per maand',
+    unlimited: 'Onbeperkt',
+    annual: 'Onbeperkt jaar',
+    fourB1: 'Maandelijks, verlengt automatisch',
+    fourB2: 'Opzeggen na de eerste maand',
+    eightB1: 'Maandelijks, verlengt automatisch',
+    eightB2: 'Opzeggen na de eerste maand',
+    unlimitedB1: '3 maanden commitment',
+    unlimitedB2: 'Daarna maandelijks',
+    annualB1: '12 maanden commitment',
+    annualB2: 'Inclusief 4 weken freeze',
   },
   group: {
-    kicker: 'Groep',
-    title: 'Kleine groepslessen',
-    subtitle:
-      'Kleinschalige groepstraining met maximaal {{groupMax}} deelnemers. Deskundige begeleiding in een energieke omgeving. Sessies van {{minutes}} minuten.',
+    single: 'Losse les',
+    pack5: '5-rittenkaart',
+    pack10: '10-rittenkaart',
+    pack20: '20-rittenkaart',
+    valid: 'Geldig {{weeks}} weken',
   },
   private: {
-    kicker: 'Privé',
-    title: 'Privélessen',
-    subtitle:
-      'Persoonlijke 1-op-1 training afgestemd op jouw doelen en fitnessniveau. Sessies beginnen bij {{privateFrom}}. Kies je instructeurniveau. Lessen van {{minutes}} minuten.',
-    tabsAria: 'Instructeurniveau',
-    master: 'Master-instructeur',
-    senior: 'Senior instructeur',
-    junior: 'Junior instructeur',
-    juniorInfoLabel: 'Junior instructeurs:',
-    seniorInfoLabel: 'Senior instructeurs:',
-    masterInfoLabel: 'Master-instructeur:',
-    masterRole: 'eigenaar & hoofdinstructeur met 15+ jaar ervaring',
+    single: 'Losse sessie',
+    pack5: '5-sessie pack',
+    pack10: '10-sessie pack',
+    pack20: '20-sessie pack',
   },
   couple: {
-    kicker: 'Duo',
-    title: 'Duo-lessen',
-    subtitle:
-      'Train samen met je partner. Deel de ervaring en motiveer elkaar. Prijs per persoon. Lessen van {{minutes}} minuten.',
-  },
-  info: {
-    kicker: 'Studio',
-    title: 'Wat neem je mee',
-    clothing: {
-      title: 'Comfortabele kleding',
-      text: 'Draag comfortabele sportkleding waarin je vrij kunt bewegen. We raden sportkleding aan die niet te los zit.',
-    },
-    socks: {
-      title: 'Antislipsokken',
-      text: 'Antislipsokken worden aangeraden voor alle lessen. Heb je ze nog niet? Je kunt antislipsokken kopen bij onze studio.',
-    },
-    water: {
-      title: 'Waterfles',
-      text: 'Blijf gehydrateerd! Neem je waterfles mee om verfrist te blijven tijdens je les van {{minutes}} minuten.',
-    },
-    towel: {
-      title: 'Handdoek (aanbevolen)',
-      text: 'We raden aan een kleine handdoek mee te nemen voor je comfort, al is dit niet verplicht.',
-    },
+    single: 'Los (per persoon)',
+    pack5: '5-rittenkaart',
+    pack10: '10-rittenkaart',
+    pack20: '20-rittenkaart',
   },
   faq: {
-    kicker: 'FAQ',
-    title: 'Vragen voor je boekt',
-    validity: {
-      question: 'Hoe lang zijn de pakketten geldig?',
-      answer:
-        'Elk pakket heeft een geldigheidsperiode in weken gelijk aan het aantal lessen. Een 5-lessenpakket is bijvoorbeeld 5 weken geldig vanaf de aankoopdatum.',
+    title: 'Goed om',
+    titleAccent: 'te weten.',
+    lead: 'Twijfel je welk plan past? App ons — een coach helpt je kiezen.',
+    whatsapp: 'WhatsApp ons',
+    items: {
+      validity: {
+        q: 'Hoe werkt de geldigheid van een kaart?',
+        a: 'Een kaart is geldig zoveel weken als er lessen op staan, vanaf aankoop. 5 lessen = 5 weken; 20 lessen = 20 weken.',
+      },
+      cancel: {
+        q: 'Hoe zeg ik een abonnement op?',
+        a: 'Abonnementen verlengen automatisch. Zeg op voor de verlengdatum via info@pt7.nl of +31 685 162693, na de minimale periode.',
+      },
+      freeze: {
+        q: 'Kan ik mijn abonnement bevriezen?',
+        a: 'Het jaarlijkse onbeperkte abonnement heeft 4 weken freeze. Vraag ons naar andere plannen.',
+      },
+      pregnant: {
+        q: 'Ik ben zwanger. Mag ik groepsles?',
+        a: 'Tijdens zwangerschap trainen we alleen one-on-one, zodat je coach alles veilig kan aanpassen. Zie tab Privé.',
+      },
+      injury: {
+        q: 'Ik heb een blessure. Is dat een probleem?',
+        a: 'Vertel het voor je boekt. Onze coaches passen oefeningen aan; privé is een goede start terug.',
+      },
+      levels: {
+        q: 'Wat is het verschil tussen coach-niveaus?',
+        a: 'Privé is geprijsd op ervaring: master coach (Elif), senior coaches en coaches. Iedereen is gecertificeerd in de PT7-methode.',
+      },
     },
-    pregnancy: {
-      question: 'Kan ik meedoen tijdens mijn zwangerschap?',
-      answer:
-        'Zwangere klanten worden alleen toegelaten voor 1-op-1 lessen, zodat we persoonlijke aandacht kunnen bieden om de veiligheid te waarborgen.',
-    },
-    injuries: {
-      question: 'Wat als ik blessures heb?',
-      answer:
-        'Laat het ons vóór het boeken weten als je blessures of gewrichtsklachten hebt. Onze trainers kunnen oefeningen aanpassen aan jouw behoeften.',
-    },
-    tryBefore: {
-      question: 'Kan ik het uitproberen voordat ik een pakket koop?',
-      answer:
-        'Ja! We bieden losse lessen aan voor alle trainingsvormen en raden aan om te starten met een kleiner pakket om onze lessen uit te proberen.',
-    },
-    renewals: {
-      question: 'Hoe werkt de verlenging van abonnementen?',
-      answer:
-        '1-maands abonnementen (4 & 8 lessen): 1 maand periode. Je kunt opzeggen na de eerste maand. Wordt maandelijks automatisch verlengd tenzij opgezegd. 3-maands abonnement: 3 maanden verplichting. Je kunt opzeggen na 3 maanden. Wordt automatisch verlengd tenzij opgezegd. Jaarabonnement: 12 maanden verplichting. Je kunt opzeggen na 12 maanden. Wordt automatisch verlengd tenzij opgezegd. Als je niet opzegt vóór de verlengingsdatum, worden betalingen automatisch verwerkt.',
-    },
-    cancel: {
-      question: 'Kan ik mijn abonnement opzeggen?',
-      answer:
-        'Ja! Bij 1-maands abonnementen (4 & 8 lessen) heb je het recht om op te zeggen na de eerste maand. De 3-maands en jaarabonnementen kunnen worden opgezegd na afloop van de initiële verplichtingsperiode (3 of 12 maanden). Om op te zeggen, neem contact met ons op via info@pt7.nl of bel +31 685 162693 vóór je verlengingsdatum.',
-    },
-    annualUnlimited: {
-      question: 'Is het jaarabonnement onbeperkt?',
-      answer:
-        'Ja! Het jaarabonnement voor {{perMonth}} per maand ({{yearTotal}} voor 12 maanden totaal) geeft je onbeperkt toegang tot lessen alle dagen dat de studio open is (maandag–vrijdag {{weekdayHours}}, zaterdag–zondag {{weekendHours}}), met een maximum van 1 les per dag. Dit is onze voordeligste optie en bevat een pauzeoptie van 4 weken.',
-    },
-    duration: {
-      question: 'Hoe lang duurt een les?',
-      answer:
-        'Al onze lessen duren {{minutes}} minuten, voor een effectieve en efficiënte workout die past in je drukke schema.',
-    },
-    groupSize: {
-      question: 'Hoeveel mensen zitten er in een groepsles?',
-      answer:
-        'Onze groepslessen hebben een maximum van {{groupMax}} deelnemers, zodat je persoonlijke aandacht krijgt terwijl je geniet van de energie van een groep.',
-    },
-  },
-  faqSeoOnly: {
-    cost: {
-      question: 'Hoeveel kosten pilateslessen in Amsterdam?',
-      answer:
-        'Groepslessen Reformer pilates beginnen vanaf {{groupPerClass}} per les bij een 20-lessenkaart ({{groupTotal}} totaal). Losse groepslessen kosten {{groupSingle}}. Privésessies beginnen vanaf {{juniorSingle}}. Alle pakketten staan op deze pagina.',
-    },
-    intro: {
-      question: 'Is er een introductieaanbieding voor nieuwe klanten?',
-      answer:
-        'Ja. Nieuwe klanten kunnen starten met ons introductiepakket: {{classes}} groepslessen voor {{price}} (alleen voor nieuwe klanten).',
-    },
-  },
-  contact: {
-    kicker: 'Contact',
-    title: 'Hulp nodig?',
-    text: 'Mail of bel ons voor advies over pakketten en abonnementen.',
-    emailUs: 'Mail ons',
-    call: 'Bel: {{phone}}',
   },
 };

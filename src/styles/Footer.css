@@ -1,154 +1,86 @@
-.footer {
-  width: 100%;
-  background: var(--ink, #111);
-  color: #fff;
-  padding: 56px 24px 40px;
-  text-align: left;
-  margin-top: auto;
-  position: relative;
-  z-index: 1;
-  flex-shrink: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+.footer--c {
+  background: var(--charcoal, #1c1a18);
+  color: var(--cream, #f5f0e6);
 }
 
-.footer-inner {
-  max-width: var(--page-max-width, 1100px);
+.footer--c .footer-checker {
+  height: 48px;
+  background-color: var(--charcoal, #1c1a18);
+  background-image:
+    linear-gradient(45deg, #ffd700 25%, transparent 25%, transparent 75%, #ffd700 75%),
+    linear-gradient(45deg, #ffd700 25%, transparent 25%, transparent 75%, #ffd700 75%);
+  background-size: 48px 48px;
+  background-position: 0 0, 24px 24px;
+}
+
+.footer--c .footer-inner {
+  max-width: var(--page-max-width, 1280px);
   margin: 0 auto;
-}
-
-.footer-brand {
-  margin: 0 0 8px;
-  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  line-height: 1.15;
-  color: #fff;
-}
-
-.footer-tag {
-  margin: 0 0 28px;
-  max-width: 36em;
-  font-size: 0.95rem;
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.55);
-}
-
-.footer-nav {
-  padding: 20px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 24px;
-}
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 80px 24px 56px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 22px;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
 }
 
-.footer-links li {
+.footer--c .footer-headline {
   margin: 0;
-}
-
-.footer-links li a {
-  color: rgba(255, 255, 255, 0.78);
-  text-decoration: none;
+  font-family: var(--font-body, Poppins, sans-serif);
   font-weight: 500;
-  font-size: 0.9rem;
-  letter-spacing: -0.01em;
-  line-height: 1.3;
-  transition: color 0.2s ease;
-}
-
-.footer-links li a:hover {
-  color: var(--gold, #ffd700);
-}
-
-.footer-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 24px;
-  align-items: center;
-}
-
-.lang-switch {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: var(--radius-pill, 999px);
-  padding: 3px;
-}
-
-.lang-switch a,
-.lang-switch span[aria-current='page'] {
-  color: #fff;
-  text-decoration: none;
+  font-size: clamp(44px, 7vw, 104px);
   line-height: 1;
-  display: block;
-  padding: 5px 9px;
-  border-radius: var(--radius-pill, 999px);
+  letter-spacing: -0.03em;
 }
 
-.lang-switch span[aria-hidden='true'] {
-  display: none;
-}
-
-.lang-switch a {
-  opacity: 0.55;
-}
-
-.lang-switch a:hover {
-  opacity: 1;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-/* Needs to match the specificity of the `.lang-switch a, .lang-switch
-   span[aria-current='page']` rule above, or that rule's `color: #fff` wins on
-   specificity and the active language renders white on gold. */
-.lang-switch span[aria-current='page'] {
-  opacity: 1;
-  color: var(--ink, #111);
-  background: var(--gold, #ffd700);
-}
-
-.footer-copyright,
-.footer-credit {
-  margin: 0;
-  font-size: 0.8rem;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.45);
-}
-
-.footer-credit a {
-  color: rgba(255, 255, 255, 0.55);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.footer-credit a:hover {
+.footer--c .footer-headline em {
+  font-style: normal;
   color: var(--gold, #ffd700);
 }
 
-@media (max-width: 640px) {
-  .footer {
-    padding: 44px 20px 32px;
-  }
+.footer--c .footer-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+}
 
-  .footer-links {
-    gap: 10px 18px;
-  }
+.footer--c .footer-logo {
+  display: block;
+  width: 88px;
+  height: 72px;
+  margin-bottom: 8px;
+}
 
-  .footer-meta {
-    flex-direction: column;
-    gap: 4px;
-  }
+.footer--c .footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer--c .footer-nav a {
+  color: var(--cream, #f5f0e6);
+  text-decoration: none;
+}
+
+.footer--c .footer-nav a:hover {
+  color: var(--gold, #ffd700);
+}
+
+.footer--c .footer-meta {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--muted-on-dark, #a8a39a);
+}
+
+.footer--c .footer-copyright,
+.footer--c .footer-credit {
+  margin: 0;
+  font-size: 13px;
+}
+
+.footer--c .footer-credit a {
+  color: var(--cream, #f5f0e6);
 }
