@@ -218,7 +218,7 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
     cost: {
       question: 'Wat kost de cursus?',
       answer:
-        'De cursusprijs is EUR 2.000 plus BTW. Schrijf je in via MindBody om in één keer te betalen, of kies Enroll with 3 Installments (3 × EUR 667 + BTW).',
+        'De cursusprijs is EUR 2.000 plus BTW. Schrijf je in via MindBody om in één keer te betalen, of kies ‘Inschrijven in 3 termijnen’ (3 × EUR 667 + BTW).',
     },
     assessments: {
       question: 'Welke assessments zijn inbegrepen?',

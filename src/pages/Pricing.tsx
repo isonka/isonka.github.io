@@ -261,7 +261,7 @@ export const Pricing= () => {
             <div className="packages-grid">
               <div className="package-card">
                 <div className="price-display">
-                  <h4 className="price-per-class">{formatEur(GROUP.single)} <span className="per-person">{t('labels.perPerson')}</span></h4>
+                  <h4 className="price-per-class price-single">{formatEur(GROUP.single)} <span className="per-person">{t('labels.perPerson')}</span></h4>
                   <span className="package-name">{t('labels.singleClass')}</span>
                 </div>
                 <p className="validity">{t('labels.validFor', { count: 1 })}</p>
@@ -358,7 +358,7 @@ export const Pricing= () => {
             <div className="packages-grid">
               <div className="package-card">
                 <div className="price-display">
-                  <h4 className="price-per-class">{formatEur(PRIVATE.junior.single)}</h4>
+                  <h4 className="price-per-class price-single">{formatEur(PRIVATE.junior.single)}</h4>
                   <span className="package-name">{t('labels.singleClass')}</span>
                 </div>
                 <p className="validity">{t('labels.validFor', { count: 1 })}</p>
@@ -418,7 +418,7 @@ export const Pricing= () => {
             <div className="packages-grid">
               <div className="package-card">
                 <div className="price-display">
-                  <h4 className="price-per-class">{formatEur(PRIVATE.senior.single)}</h4>
+                  <h4 className="price-per-class price-single">{formatEur(PRIVATE.senior.single)}</h4>
                   <span className="package-name">{t('labels.singleClass')}</span>
                 </div>
                 <p className="validity">{t('labels.validFor', { count: 1 })}</p>
@@ -481,7 +481,7 @@ export const Pricing= () => {
             <div className="packages-grid">
               <div className="package-card">
                 <div className="price-display">
-                  <h4 className="price-per-class">{formatEur(PRIVATE.master.single)}</h4>
+                  <h4 className="price-per-class price-single">{formatEur(PRIVATE.master.single)}</h4>
                   <span className="package-name">{t('labels.singleClass')}</span>
                 </div>
                 <p className="validity">{t('labels.validFor', { count: 1 })}</p>
@@ -542,7 +542,7 @@ export const Pricing= () => {
             <div className="packages-grid">
               <div className="package-card">
                 <div className="price-display">
-                  <h4 className="price-per-class">{formatEur(COUPLE.single)} <span className="per-person">{t('labels.perPerson')}</span></h4>
+                  <h4 className="price-per-class price-single">{formatEur(COUPLE.single)} <span className="per-person">{t('labels.perPerson')}</span></h4>
                   <span className="package-name">{t('labels.singleClass')}</span>
                 </div>
                 <p className="validity">{t('labels.validFor', { count: 1 })}</p>

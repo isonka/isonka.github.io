@@ -386,6 +386,14 @@
   margin-bottom: 4px;
 }
 
+.price-per-class.price-single {
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #111;
+  line-height: 1.2;
+}
+
 .per-person {
   font-size: 0.9rem;
   color: #666;
