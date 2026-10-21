@@ -38,7 +38,6 @@ export const enReformer = {
     title: 'Where we are',
     p1: 'PT 7 is at {{studioAddress}}, across from the Stedelijk Museum at Museumplein in Amsterdam Oud-Zuid.',
     p2: 'The studio is close to Oud-Zuid, the Museumkwartier, the Concertgebouwbuurt, the Vondelpark and De Pijp.',
-    transit: 'Tram lines 2, 5, 12 and 24, buses 357 and 397, night buses, and cycle routes serve Museumplein.',
     hours: 'Studio hours: Monday–Friday {{weekdays}}, Saturday–Sunday {{weekends}}.',
   },
   firstVisit: {

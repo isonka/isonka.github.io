@@ -41,7 +41,6 @@ export const nlReformer: DeepStringify<EnReformer> = {
     title: 'Waar we zitten',
     p1: 'PT 7 zit aan de {{studioAddress}}, tegenover het Stedelijk Museum aan het Museumplein in Amsterdam Oud-Zuid.',
     p2: 'De studio ligt dicht bij Oud-Zuid, het Museumkwartier, de Concertgebouwbuurt, het Vondelpark en De Pijp.',
-    transit: 'Tram 2, 5, 12 en 24, bus 357 en 397, nachtbussen en fietsroutes bedienen het Museumplein.',
     hours: 'Openingstijden: maandag–vrijdag {{weekdays}}, zaterdag–zondag {{weekends}}.',
   },
   firstVisit: {

@@ -1,0 +1,132 @@
+name: Weekly SEO agent
+
+# Collect Search Console + GA4 → snapshot the live site → evaluate past changes
+# → let Claude carry out the budgeted plan → verify → open a PR for review.
+# History (daily data, snapshots, reports, proposals) lives on the `seo-data`
+# branch, so main only ever changes through reviewed PRs.
+
+on:
+  schedule:
+    - cron: '0 5 * * 1' # Mondays 05:00 UTC
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: 'Let Claude edit the site and open a PR (off = report only)'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: seo-agent
+  cancel-in-progress: false
+
+jobs:
+  seo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      SEO_DATA_DIR: .seo-data
+      GSC_SITE_URL: ${{ vars.GSC_SITE_URL }}
+      GA4_PROPERTY_ID: ${{ vars.GA4_PROPERTY_ID }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # the agent reads git history for content regressions
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Check out history branch
+        run: |
+          git config user.name "pt7-seo-agent"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git fetch origin seo-data:refs/remotes/origin/seo-data 2>/dev/null; then
+            git worktree add -B seo-data .seo-data origin/seo-data
+          else
+            git worktree add --orphan -b seo-data .seo-data
+          fi
+          echo "RUN_DATE=$(date -u +%F)" >> "$GITHUB_ENV"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Collect Search Console + GA4
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: npm run seo:collect
+
+      - name: Snapshot live site
+        run: npm run seo:snapshot
+
+      - name: Evaluate
+        run: |
+          npm run seo:evaluate
+          cat .seo-data/reports/latest.md >> "$GITHUB_STEP_SUMMARY"
+          echo "ACTIONS=$(node -p 'require("./.seo-data/reports/latest.json").actions.length')" >> "$GITHUB_ENV"
+
+      - name: Save history
+        working-directory: .seo-data
+        run: |
+          git add -A
+          git diff --cached --quiet || git commit -q -m "data: $RUN_DATE"
+          git push -q origin seo-data
+
+      - name: Install Chrome for prerender
+        if: env.ACTIONS != '0' && github.event.inputs.apply != 'false'
+        run: npx puppeteer browsers install chrome
+
+      - name: Apply plan with Claude
+        if: env.ACTIONS != '0' && github.event.inputs.apply != 'false'
+        env:
+          # Runs on the claude.ai subscription (token from `claude setup-token`),
+          # so usage counts against the plan's limits instead of API billing.
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          sed "s/{{RUN_DATE}}/$RUN_DATE/g" scripts/seo-agent/prompt.md > "$RUNNER_TEMP/prompt.md"
+          claude -p "$(cat "$RUNNER_TEMP/prompt.md")" \
+            --max-turns 80 \
+            --permission-mode acceptEdits \
+            --allowedTools "Read,Edit,Write,Glob,Grep,Bash(npm run lint),Bash(npm run build),Bash(npm run build:only),Bash(node scripts/seo-agent/verify.js),Bash(git log:*),Bash(git show:*),Bash(git diff:*),Bash(grep:*)"
+
+      - name: Verify
+        if: env.ACTIONS != '0' && github.event.inputs.apply != 'false'
+        run: |
+          npm run lint
+          npm run build
+          node scripts/seo-agent/verify.js
+
+      - name: Save proposal
+        if: env.ACTIONS != '0' && github.event.inputs.apply != 'false'
+        working-directory: .seo-data
+        run: |
+          git add -A
+          git diff --cached --quiet || git commit -q -m "proposal: $RUN_DATE"
+          git push -q origin seo-data
+          {
+            cat "proposals/$RUN_DATE.md" 2>/dev/null || echo "_The agent wrote no summary._"
+            echo; echo "---"; echo
+            cat reports/latest.md
+            echo; echo "🤖 Generated with [Claude Code](https://claude.com/claude-code)"
+          } > "$RUNNER_TEMP/pr-body.md"
+
+      - name: Open PR
+        if: env.ACTIONS != '0' && github.event.inputs.apply != 'false'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: seo-agent/${{ env.RUN_DATE }}
+          title: 'SEO agent: week of ${{ env.RUN_DATE }}'
+          body-path: ${{ runner.temp }}/pr-body.md
+          commit-message: |
+            SEO agent: weekly changes ${{ env.RUN_DATE }}
+
+            Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+          labels: seo
+          delete-branch: true

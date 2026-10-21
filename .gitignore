@@ -28,3 +28,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Weekly SEO agent history (lives on the seo-data branch)
+.seo-data

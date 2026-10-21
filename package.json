@@ -16,6 +16,11 @@
     "fonts": "node scripts/fetch-fonts.js",
     "images:webp": "node scripts/convert-to-webp.js",
     "images:share": "node scripts/make-share-image.js",
+    "seo:collect": "node scripts/seo-agent/collect.js",
+    "seo:snapshot": "node scripts/seo-agent/snapshot.js",
+    "seo:evaluate": "node scripts/seo-agent/evaluate.js",
+    "seo:weekly": "npm run seo:collect && npm run seo:snapshot && npm run seo:evaluate",
+    "seo:test": "node --test scripts/seo-agent/test/evaluate.test.js",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"

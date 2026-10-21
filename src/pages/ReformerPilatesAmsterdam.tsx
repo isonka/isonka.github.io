@@ -132,7 +132,6 @@ export const ReformerPilatesAmsterdam = () => {
             <h2>{t('where.title')}</h2>
             <p>{t('where.p1')}</p>
             <p>{t('where.p2')}</p>
-            <p>{t('where.transit')}</p>
             <p>
               {t('where.hours', {
                 weekdays: formatOpeningClock(studioHoursFor('Monday')),

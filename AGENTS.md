@@ -16,6 +16,7 @@ For day-to-day human setup, see [README.md](./README.md).
 | **Repo / hosting** | GitHub repo `isonka.github.io`; **GitHub Pages** deploy via [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml) on push to `main` (and manual `workflow_dispatch`). |
 | **Node** | `>=22.12.0` (CI uses Node 24; see `package.json` and workflow). |
 | **Build** | `npm run build` runs TypeScript, Vite build, static route generation, and **Puppeteer prerender** for HTML snapshots (important for crawlers and first paint). |
+| **SEO strategy** | [`docs/seo-strategy.md`](./docs/seo-strategy.md) — goals, keyword map, technical checklist, content plan, 90-day roadmap. Tick items off there as they ship; change decisions there first. |
 | **AI / LLM context** | `public/llms.txt` — curated business facts; keep in sync when marketing facts change. |
 
 **Do not** change production canonical base (`https://www.pt7.nl`) in SEO components unless the business explicitly moves domain — `SEOHead` hardcodes the OG image base URL.
@@ -61,6 +62,7 @@ The home route is implemented in **`src/pages/Home.tsx`**. SEO work here include
 | Prerender | `scripts/prerender-static-html.js` — reads the manifest; uses Puppeteer, CI installs Chrome (see workflow). |
 | Breadcrumbs | `src/components/Breadcrumbs.tsx` |
 | Public hints | `public/llms.txt`, `index.html` default meta if any |
+| Weekly SEO agent | `scripts/seo-agent/` + `.github/workflows/seo-weekly.yml`: GSC + GA4 → evaluates every title/description/content change as an experiment → PR that reverts losers, strengthens winners. History on the `seo-data` branch. See its README. |
 
 ### Route reference (sync with `src/App.tsx`)
 
@@ -173,6 +175,7 @@ Any single change that spans areas should list touched files in the PR or automa
 | `scripts/generate-static-routes.js` | Static HTML shells for GitHub Pages |
 | `scripts/prerender-static-html.js` | Static HTML generation |
 | `.github/workflows/deploy.yml` | CI build and GitHub Pages deploy |
+| `scripts/seo-agent/` | Weekly SEO agent (collect, snapshot, evaluate, verify, Claude prompt) |
 
 ---
 
