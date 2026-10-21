@@ -26,11 +26,11 @@ const fixedPageMeta = {
     description: 'Special offer for ClassPass members. Save money and get priority booking when you join PT 7 directly. Same great Pilates classes, better value.',
   },
   '/pricing/': {
-    title: 'Pilates Prices Amsterdam Zuid | Packages & Trial Class | PT 7 Pilates',
+    title: 'Pilates Prices Amsterdam Oud-Zuid | From €50 Intro | PT 7',
     description: 'Pilates prices at Museumplein (Amsterdam Zuid): intro pack 3 group classes for €50, then from €28/class (max 5). Memberships, privates, Reformer, TRX & strength. Book online.',
   },
   '/pricing/nl/': {
-    title: 'Pilates prijzen Amsterdam Zuid | Pakketten & proefles | PT 7 Pilates',
+    title: 'Hoeveel kost pilates Amsterdam Oud-Zuid | PT 7',
     description: 'Pilates prijzen aan het Museumplein (Amsterdam Zuid): introductiepakket 3 groepslessen voor €50, daarna vanaf €28/les (max. 5). Abonnementen, privé, Reformer, TRX & kracht. Online boeken.',
   },
   '/intro/': {
@@ -42,11 +42,11 @@ const fixedPageMeta = {
     description: 'Nieuwe klanten bij PT 7 Museumplein: 3 groepslessen voor €50. Maximaal 5 personen, 45 minuten. Geldig 3 weken. Online kopen.',
   },
   '/academy/': {
-    title: 'Reformer Pilates Instructor Course Amsterdam | Teacher Training | PT7 Academy',
+    title: 'Reformer Pilates Instructor Course Amsterdam | PT7 Academy',
     description: 'Reformer Pilates instructor course and teacher training in Amsterdam. 300-hour Reformer Pilates instructor course (PMA ITTAP approved), Mat Pilates track, weekend schedule for career changers. Course fee from €2,000 + VAT.',
   },
   '/academy/nl/': {
-    title: 'Reformer Pilates Opleiding Amsterdam | Docentenopleiding | PT7 Academy',
+    title: 'Pilates Docentenopleiding Amsterdam | Reformer | PT7 Academy',
     description: 'Reformer pilates opleiding Amsterdam en pilates docentenopleiding bij Museumplein. 300 uur Reformer instructeurscursus (PMA ITTAP goedgekeurd) plus Mat & Trapeze Table. Weekendrooster. Lessen in het Engels. Vanaf €2.000 + BTW.',
   },
   '/healthcare-providers/': {
