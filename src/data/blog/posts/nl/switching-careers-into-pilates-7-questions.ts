@@ -42,14 +42,14 @@ export const post: BlogPost = {
       <h2>2. Observatie en zelf oefenen: waar, en tegen welke prijs?</h2>
       <p>Observatie en zelf oefenen zitten in de cursus ingebouwd: <strong>60 uur observatie</strong> in een actieve boutique studio en <strong>60 uur zelf oefenen</strong>, zodat het werk in je lichaam zit en niet alleen in je aantekeningen.</p>
 
+      <p>Gebruik van de studio voor observatie, zelfpraktijk en lespraktijk is kosteloos gedurende 1 jaar vanaf de startdatum van de cursus.</p>
+
       <p>Wie de cursus afrondt, heeft ook een route naar werk: geslaagde afgestudeerden kunnen bij ons in de studio lesgeven, en verschillende afgestudeerden van PT7 Academy geven nu les bij PT7.</p>
 
       <p><strong>Vraag bij elke cursus:</strong> maak je deze uren in een echte studio, en houd je daarna toegang?</p>
 
       <h2>3. Lespraktijk: begeleid of alleen?</h2>
       <p>Begeleid. De cursus bevat 40 uur lespraktijk, 10 uur geassisteerd lesgeven met een master trainer en 5 uur QTT-observatie en -beoordeling van je proeflessen. Je krijgt de hele tijd feedback, niet alleen een lijst met oefeningen om af te werken.</p>
-
-      <p>Lespraktijk blijft een jaar gratis: afgestudeerden kunnen hun lespraktijk tot een jaar na de cursus kosteloos bij PT7 doen.</p>
 
       <p><strong>Vraag bij elke cursus:</strong> hoeveel lesuren worden begeleid, en door wie?</p>
 

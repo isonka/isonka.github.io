@@ -125,6 +125,8 @@ export const enAcademy = {
   },
   breakdown: {
     title: 'Training Breakdown (300 Hours Total)',
+    studioAccess:
+      'Using the studio for observation, self practice, and teaching practice is free of charge for 1 year from the course start date.',
   },
   certification: {
     title: 'Certification',
@@ -216,7 +218,7 @@ export const enAcademy = {
     cost: {
       question: 'How much does the course cost?',
       answer:
-        'The course fee is EUR 2,000 plus VAT. Enroll via MindBody to pay in full, or choose Enroll with 3 Installments (3 × EUR 667 + VAT).',
+        'The course fee is EUR 2,000 plus VAT. Enroll via MindBody to pay in full, or choose Enroll with 3 Installments (3 × EUR 667 + VAT). Using the studio for observation, self practice, and teaching practice is free of charge for 1 year from the course start date.',
     },
     assessments: {
       question: 'What assessments are included?',

@@ -41,14 +41,14 @@ export const post: BlogPost = {
       <h2>2. Observation and self-practice: where, and at what price?</h2>
       <p>Inside the course, observation and self-practice are built in: <strong>60 hours of observation</strong> in a live boutique studio and <strong>60 hours of self-practice</strong>, so the work lives in your body and not only in your notes.</p>
 
+      <p>Using the studio for observation, self practice, and teaching practice is free of charge for 1 year from the course start date.</p>
+
       <p>Graduates who complete the course also have a route into work: we offer teaching opportunities at our studio for successful graduates, and several PT7 Academy graduates now teach at PT7.</p>
 
       <p><strong>Ask any course:</strong> are these hours in a real studio, and do you keep access afterwards?</p>
 
       <h2>3. Teaching practice: supervised or alone?</h2>
       <p>Supervised. The course includes 40 hours of teaching practice, 10 hours of assisted teaching with a master trainer, and 5 hours of QTT observation and assessment of your student teaching. You get feedback throughout, not only a list of exercises to run through.</p>
-
-      <p>Teaching practice stays free for a year: graduates can do their teaching practice at PT7 at no cost for a year after finishing the course.</p>
 
       <p><strong>Ask any course:</strong> how many teaching hours are supervised, and by whom?</p>
 

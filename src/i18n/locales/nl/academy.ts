@@ -128,6 +128,8 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
   },
   breakdown: {
     title: 'Trainingsoverzicht (300 uur totaal)',
+    studioAccess:
+      'Gebruik van de studio voor observatie, zelfpraktijk en lespraktijk is kosteloos gedurende 1 jaar vanaf de startdatum van de cursus.',
   },
   certification: {
     title: 'Certificering',
@@ -219,7 +221,7 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
     cost: {
       question: 'Wat kost de cursus?',
       answer:
-        'De cursusprijs is EUR 2.000 plus BTW. Schrijf je in via MindBody om in één keer te betalen, of kies ‘Inschrijven in 3 termijnen’ (3 × EUR 667 + BTW).',
+        'De cursusprijs is EUR 2.000 plus BTW. Schrijf je in via MindBody om in één keer te betalen, of kies ‘Inschrijven in 3 termijnen’ (3 × EUR 667 + BTW). Gebruik van de studio voor observatie, zelfpraktijk en lespraktijk is kosteloos gedurende 1 jaar vanaf de startdatum van de cursus.',
     },
     assessments: {
       question: 'Welke assessments zijn inbegrepen?',

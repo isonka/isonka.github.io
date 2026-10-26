@@ -473,6 +473,7 @@ export const Academy= () => {
                     </div>
                   ))}
                 </div>
+                <p>{t('breakdown.studioAccess')}</p>
               </div>
 
               <div className="academy-course-section academy-course-section--certification">
