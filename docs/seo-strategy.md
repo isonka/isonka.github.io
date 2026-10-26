@@ -18,7 +18,7 @@ What holds it back:
 | NL pages thin | /nl/ is 450–700 words vs 1,100+ on EN; reviews on /nl/ are in English | Dutch queries (opleiding, rugklachten, kopen) under-served |
 | GBP under-used | 33 reviews at 4.8, yet local queries sit at positions 6–8 with zero clicks | Map pack is where local Pilates searches convert |
 | Content gaps | No back-pain page, no mat/yoga page, no Olympisch Stadion location page, no proefles page | Misses the injury segment you said you want and the move |
-| Small inconsistencies | Live pages showed a "from €28" pricing meta, a duplicated tram sentence and a "move on 2 Nov" post; none of these are in the source, so the deployed prerender may be stale | Trust and CTR leaks |
+| Small inconsistencies | Live pages showed a "from €28" pricing meta, a duplicated tram sentence and a "move on 2 Nov" post. Checked 21 Oct: the prerender was not stale. €28 is the correct 20-pack per-class price, the post already says the move is postponed, and the tram sentence was a real duplicate in source (fixed) | Trust and CTR leaks |
 
 Sources: [pt7.nl sitemap](https://www.pt7.nl/sitemap.xml), [pt7.nl](https://www.pt7.nl/), [/nl/](https://www.pt7.nl/nl/), [/pricing/](https://www.pt7.nl/pricing/), [/academy/](https://www.pt7.nl/academy/), [/equipment/](https://www.pt7.nl/equipment/), [USC listing](https://urbansportsclub.com/en/venues/pt-studio-7-museumplein). Search checks ran through a US-oriented tool, not Google NL; treat rankings as indicative.
 
@@ -78,7 +78,7 @@ One page owns one intent. Two pages chasing the same query cancel each other out
 | pilates proefles amsterdam, pilates intro aanbieding | /intro/ | Exists. Rename title to include "proefles" |
 | pilates olympisch stadion, pilates stadionbuurt, pilates zuidas | New: /olympisch-stadion/ location page | Missing. Build before move, not after |
 | mat pilates amsterdam, yoga amsterdam zuid | New: /mat-pilates-yoga-amsterdam/ | Missing. 10 classes/week with no page |
-| pilates prijzen amsterdam, pilates kosten | /pricing/ + existing blog post | Exists. Fix the €28 vs €37 mismatch |
+| pilates prijzen amsterdam, pilates kosten | /pricing/ + existing blog post | Exists. €28 (20-pack per class) and €37 (single class) are both correct; consider showing both in the meta |
 | prenatal pilates amsterdam, zwangerschap pilates | /prenatal-pilates-amsterdam/ | Exists |
 | pilates voor mannen, pilates for men | Blog post | Exists |
 
@@ -88,9 +88,9 @@ Rule for the EN/NL split: EN stays primary for class landers and the homepage, s
 
 The repo already has most of the plumbing: hreflang in `SEOHead`, JSON-LD for LocalBusiness, Service, Product, Course and FAQPage in `StructuredData`, `llms.txt`, a 404 page, a trailing-slash normalizer, sitemap `lastmod`, and a weekly SEO agent that runs title and description experiments. What is left is short. Claude Code does these under `AGENTS.md` rules; each is one PR.
 
-- [ ] Bare URLs. Search Console indexes `/pricing` next to `/pricing/`. GitHub Pages cannot 301; the fix is on your side: every internal `Link`, breadcrumb and `href` in trailing-slash form (grep for `to="/[^"]*[^/]"`), canonicals already slashed, then request indexing of the slash form in GSC and watch the "Google-selected canonical" column until the bare ones drop.
-- [ ] Verify live vs source. Fetch the deployed `/pricing/`, `/reformer-pilates-amsterdam/` and `/blog/pt-7-moves-to-olympisch-stadion/` and diff against a fresh `npm run build`. If the live HTML still shows "from €28", the duplicate tram sentence or "2 November", the prerender in `dist/` is stale: rebuild and redeploy.
-- [ ] Academy page title is 78 characters; cut to under 60. Pricing `og:title` differs from `<title>`; align them. Hand both to the weekly SEO agent as experiments rather than editing by hand.
+- [x] Bare URLs. Search Console indexes `/pricing` next to `/pricing/`. Done 21 Oct: no code change needed. GitHub Pages already 301s bare paths to the slash form, and every internal link, canonical, hreflang, breadcrumb and sitemap URL in the built `dist/` is already slashed. Indexing of the slash form requested in GSC; watch the "Google-selected canonical" column until the bare ones drop.
+- [x] Verify live vs source. Done 21 Oct: live `/pricing/`, `/reformer-pilates-amsterdam/` and `/blog/pt-7-moves-to-olympisch-stadion/` matched a fresh `npm run build`, so the prerender was not stale. "From €28" and "2 November" are correct. The duplicate tram sentence was in source (Reformer page paragraph plus map caption); the paragraph was removed in `244ddb8`.
+- [x] Titles. Done 21 Oct in `e8fd553`, by hand because the weekly SEO agent was not live yet. The Academy title was already 58 characters; the 78-character one was the stale fallback shell in `scripts/generate-static-routes.js`, now synced. Pricing and Academy `og:title` now match `<title>`.
 - [ ] `/nl/` parity. The NL homepage has half the words of EN and English reviews. Bring it to the same sections and schema as EN, with Dutch reviews.
 - [ ] Product schema on equipment pages: keep `Offer` but drop any `price` field, since price is on request. Add `availability` and a `url` to the quote form.
 - [ ] Trim the nav. Navbar has 11 links and the footer 16; move trainer and individual equipment links into their hub pages.
@@ -114,6 +114,18 @@ Google Business Profile:
 Second location: create the Olympisch Stadion GBP the day you have a signed lease and keys, mark it "opening soon", and give it its own page on the site. Do not merge the two profiles when you move; keep the Van Baerlestraat one live until the last class, then mark it permanently closed and point the page to the new one with a 301.
 
 Citations (NAP consistency): Apple Maps, Bing Places, Yelp NL, Treatwell (Pilates is listed there), iamexpat.nl business directory, Oozo/Telefoonboek, ClassPass and USC venue pages. Same name, address, phone, URL everywhere.
+
+## ClassPass listing
+
+On 21 Oct 2026 a ClassPass search for Pilates at postcode 1071 BB, the studio's own, showed PT7 in 8th place behind Saints & Stars, PILAT3S, Movements, PLTS and De Roos. Distance is not the ranking; engagement signals are. Every studio above PT7 carries 2–3 category tags; PT7 carries one.
+
+- [ ] Category tags in the partner dashboard: add Strength Training, TRX, Yoga, Stretching, Prenatal alongside Pilates. Tag matches drive relevance.
+- [ ] Inventory: keep bookable spots visible for the next 7 days, especially 7–9am and 17–19h. Sync the 10-person cap so spots show rather than "full".
+- [ ] Reviews on ClassPass: ask the regulars who book through it. Rating is 4.9; count is what moves rank.
+- [ ] Profile: 8+ photos, description naming reformer, Museumplein and Oud-Zuid, full amenities list.
+- [ ] Name: "PT 7" to match GBP and the site.
+
+No paid placement exists on ClassPass. Re-check the same search monthly from the studio postcode.
 
 ## Content plan
 
@@ -174,7 +186,7 @@ Do not buy links, do not use link exchanges with unrelated sites, and do not pos
 
 Three phases, each gated. Do not start the next until the gate is met.
 
-1. Weeks 1–2, fix the plumbing. www 301, hreflang, JSON-LD on homepage and academy, the three content errors, GBP name and categories, Search Console and GA4 verified. Gate: Search Console shows pt7.nl indexed with no duplicate-URL warnings and GBP name is final everywhere.
+1. Weeks 1–2, fix the plumbing. www 301, hreflang, JSON-LD on homepage and academy, the tram duplicate (the other two "content errors" were correct), GBP name and categories, Search Console and GA4 verified. Gate: Search Console shows pt7.nl indexed with no duplicate-URL warnings and GBP name is final everywhere.
 2. Weeks 3–6, build the four pages and the two upgrades. Rugklachten page first, academy NL rewrite second, equipment upgrade third, Olympisch Stadion page fourth. Review drive starts: 33 to 50 Google reviews by week 6. Gate: four pages live in both languages with schema, 50 reviews.
 3. Weeks 7–12, authority. PMA and PPN listings confirmed, Sole dealer locator, 5 graduate links, 2 fysio partnerships, 1 expat-press placement. Blog cadence running at one a week. Gate: 15 referring domains in Search Console, 75 reviews.
 

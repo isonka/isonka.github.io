@@ -26,6 +26,7 @@ interface CourseInstanceData {
   price: string;
   priceCurrency: string;
   url?: string;
+  availability?: string;
 }
 
 interface CourseData {
@@ -410,7 +411,7 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
           '@type': 'Offer',
           price: instance.price,
           priceCurrency: instance.priceCurrency,
-          availability: 'https://schema.org/InStock',
+          availability: instance.availability ?? 'https://schema.org/InStock',
           url: instance.url ?? courseUrl,
         },
       })),

@@ -54,7 +54,7 @@ export const post: BlogPost = {
       <p><strong>Vraag bij elke cursus:</strong> hoeveel lesuren worden begeleid, en door wie?</p>
 
       <h2>4. Totale kosten</h2>
-      <p>Cursusgeld vanaf <strong>€2.000 + btw</strong>, of 3 termijnen van €667 + btw. De <strong>winterlichting 2026/27</strong> (november-januari) en de <strong>voorjaarslichting 2027</strong> (maart-mei) zijn open; de najaarslichting 2026 is volgeboekt.</p>
+      <p>Cursusgeld vanaf <strong>€2.000 + btw</strong>, of 3 termijnen van €667 + btw. De <strong>najaarslichting 2026</strong> en de <strong>winterlichting 2026/27</strong> (november-januari) zijn volgeboekt. De <strong>voorjaarslichting 2027</strong> (maart-mei) is open.</p>
 
       <p>Nog één kostenpost: de verplichte oefentoets, <strong>€250 inclusief btw</strong>. De eerste poging voor beide examens is gratis; voor herkansingen geldt een extra vergoeding. Anatomie zit bij de Reformer-cursus inbegrepen.</p>
 
@@ -144,7 +144,7 @@ export const post: BlogPost = {
       <p><strong>Klaar om over te stappen zonder je inkomen op te geven?</strong> <a href="/academy/nl/">Bekijk de data en inschrijving van PT7 Academy</a> of mail <a href="mailto:info@pt7.nl">info@pt7.nl</a>.</p>
 
       <h2>Schrijf je in voor diepgang, niet voor snelheid</h2>
-      <p>Reformer-najaarslichting 2026: volgeboekt. De <strong>winterlichting 2026/27</strong> (november-januari) en de <strong>voorjaarslichting 2027</strong> (maart-mei) zijn open. Cursusgeld vanaf €2.000 + btw, met de mogelijkheid om in termijnen te betalen.</p>
+      <p>Reformer-najaarslichting 2026 en de <strong>winterlichting 2026/27</strong> (november-januari) zijn volgeboekt. De <strong>voorjaarslichting 2027</strong> (maart-mei) is open. Cursusgeld vanaf €2.000 + btw, met de mogelijkheid om in termijnen te betalen.</p>
 
       <p><em>Klaar om over te stappen zonder je inkomen op te geven?</em> <a href="/academy/nl/">Bekijk de data en inschrijving van PT7 Academy</a> of mail <a href="mailto:info@pt7.nl">info@pt7.nl</a>.</p>
 

@@ -96,8 +96,8 @@ const FIXED_PAGES: Route[] = [
   { path: '/schedule/', prerender: true, sitemap: { lastmod: '2026-09-15', changefreq: 'daily', priority: '0.9' } },
   { path: '/schedule/nl/', prerender: true, sitemap: { lastmod: '2026-09-15', changefreq: 'daily', priority: '0.9' } },
   { path: '/instructors/', prerender: true, sitemap: { lastmod: '2026-03-10', changefreq: 'monthly', priority: '0.8' } },
-  { path: '/academy/', prerender: true, sitemap: { lastmod: '2026-09-01', changefreq: 'weekly', priority: '0.9' } },
-  { path: '/academy/nl/', prerender: true, sitemap: { lastmod: '2026-09-01', changefreq: 'weekly', priority: '0.9' } },
+  { path: '/academy/', prerender: true, sitemap: { lastmod: '2026-10-26', changefreq: 'weekly', priority: '0.9' } },
+  { path: '/academy/nl/', prerender: true, sitemap: { lastmod: '2026-10-26', changefreq: 'weekly', priority: '0.9' } },
   { path: '/classpass-offer/', prerender: true, sitemap: null },
   { path: '/healthcare-providers/', prerender: true, sitemap: { lastmod: '2026-03-10', changefreq: 'monthly', priority: '0.7' } },
   { path: '/corporate/', prerender: true, sitemap: { lastmod: '2026-08-27', changefreq: 'monthly', priority: '0.7' } },
@@ -137,7 +137,7 @@ const TRAINER_SITEMAP: SitemapEntry = { lastmod: '2026-03-10', changefreq: 'mont
 const TRAINER_OVERRIDES: Record<string, Partial<SitemapEntry>> = {
   elif: { image: image('elif.webp', 'Elif Arzu Ogan - Owner & Head Instructor PT 7') },
   kelly: {
-    lastmod: '2026-08-16',
+    lastmod: '2026-10-24',
     image: image('kelly.webp', 'Kelly Tin - Reformer Pilates Instructor PT 7'),
   },
   gamze: {

@@ -15,8 +15,8 @@ export const nlHome: DeepStringify<EnHome> = {
   },
   banner: {
     strong: 'Word pilatesinstructeur',
-    full: ' · Pilates docentenopleiding · PMA ITTAP Approved · Volgende: nov 2026',
-    short: ' · Docentenopleiding · Volgende: nov 2026',
+    full: ' · Pilates docentenopleiding · PMA ITTAP Approved · Volgende: mrt 2027',
+    short: ' · Docentenopleiding · Volgende: mrt 2027',
     cta: 'Bekijk de opleiding →',
   },
   openingBanner: {

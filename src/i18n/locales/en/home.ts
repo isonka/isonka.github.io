@@ -12,8 +12,8 @@ export const enHome = {
   },
   banner: {
     strong: 'Become a Pilates instructor',
-    full: ' · Pilates teacher training · PMA ITTAP Approved · Next: Nov 2026',
-    short: ' · Teacher training · Next: Nov 2026',
+    full: ' · Pilates teacher training · PMA ITTAP Approved · Next: Mar 2027',
+    short: ' · Teacher training · Next: Mar 2027',
     cta: 'View Course →',
   },
   openingBanner: {
