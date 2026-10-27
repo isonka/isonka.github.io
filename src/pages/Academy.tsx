@@ -441,8 +441,8 @@ export const Academy= () => {
                 </div>
                 <div className="academy-assessment-pay">
                   <h4>{t('assessment.feeLabel')}</h4>
-                  {(t('assessment.day', { returnObjects: true }) as string[]).map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
+                  {(['assessment.day.0', 'assessment.day.1', 'assessment.day.2', 'assessment.day.3'] as const).map((key) => (
+                    <p key={key}>{t(key)}</p>
                   ))}
                   <p className="academy-assessment-pay-note">{t('assessment.feeNote')}</p>
                   <div
