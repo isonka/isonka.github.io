@@ -124,7 +124,7 @@ const reformerNl: WorkoutDetailData = {
     { question: 'Hoe vaak moet ik Reformer pilates doen?', answer: 'Voor het beste resultaat raden we 2 à 3 sessies per week aan. Regelmaat is de sleutel tot vooruitgang in kracht, flexibiliteit en houding.' },
     { question: 'Kan ik Reformer pilates doen als ik een blessure heb?', answer: 'Ja! Reformer pilates is uitstekend voor revalidatie. Vertel je instructeur vóór de les over eventuele blessures, zodat die passende aanpassingen kan bieden.' },
     { question: 'Wat is het verschil tussen Reformer pilates en matpilates?', answer: 'Bij Reformer pilates gebruik je speciale apparatuur met veren voor weerstand. Dat geeft meer variatie, ondersteuning en uitdaging. Het is uitstekend voor zowel beginners als gevorderden.' },
-    { question: 'Kan ik hier een opleiding tot Reformer-instructeur volgen?', answer: 'Ja. PT7 Academy biedt een Reformer Pilates-instructeurscursus van 300 uur (ITTAP-goedgekeurd door de Pilates Method Alliance). September 2026 is volgeboekt. November 2026–januari 2027 heeft 1 plek vrij. Maart–mei 2027 is ook open. Meer informatie op /academy/nl/.' },
+    { question: 'Kan ik hier een opleiding tot Reformer-instructeur volgen?', answer: 'Ja. PT7 Academy biedt een Reformer Pilates-instructeurscursus van 300 uur (ITTAP-goedgekeurd door de Pilates Method Alliance). September–november 2026 en november 2026–januari 2027 zijn volgeboekt. De volgende lichting loopt van maart tot mei 2027. Meer informatie op /academy/nl/.' },
   ],
   finalCta: {
     ...reformer.finalCta,

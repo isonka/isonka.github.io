@@ -101,9 +101,9 @@ export const post: BlogPost = {
         <li><strong>Imagine your life in one year</strong>: Same desk, or something new?</li>
       </ol>
 
-      <h2>The Next Open Term Starts November 2026</h2>
+      <h2>The Next Open Term Starts March 2027</h2>
 
-      <p>PT 7 Academy's Reformer Pilates Instructor Course has an Autumn 2026 term (September–November) that is fully booked. Winter 2026/27 (November–January) has 1 spot left. Spring 2027 (March–May) is also open. Lectures are weekend-only (12:00–18:00) at our Museumplein studio, so you can keep your weekday job while you train, taught by instructors with 15+ years of experience.</p>
+      <p>PT 7 Academy's Reformer Pilates Instructor Course has an Autumn 2026 term (September–November) and a Winter 2026/27 term (November–January) that are fully booked. The next open term runs March–May 2027 on selected weekends at our Museumplein studio. Lectures are weekend-only (12:00–18:00), so you can keep your weekday job while you train, taught by instructors with 15+ years of experience.</p>
 
       <p>If you're curious, reach out. No pressure, no sales pitch, just an honest conversation about whether this path might be right for you.</p>
 

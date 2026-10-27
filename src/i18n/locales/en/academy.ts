@@ -2,18 +2,18 @@ export const enAcademy = {
   seo: {
     title: 'Reformer Pilates Instructor Course Amsterdam | PT7 Academy',
     description:
-      '300-hour Reformer Pilates instructor course in Amsterdam, PMA ITTAP approved. Weekend schedule for career changers. Next term Nov 2026–Jan 2027, 1 spot left.',
+      '300-hour Reformer Pilates instructor course in Amsterdam, PMA ITTAP approved. Weekend schedule for career changers. Next term Mar–May 2027.',
     keywords:
       'reformer pilates instructor course amsterdam, pilates instructor course amsterdam, reformer pilates teacher training amsterdam, pilates teacher training amsterdam, reformer pilates instructor course, reformer teacher training amsterdam, become a pilates instructor amsterdam, ITTAP approved pilates course, PMA ITTAP reformer course netherlands, weekend pilates teacher training, pilates instructor course for career changers, pilates instructor course amsterdam price',
     ogTitle: 'Reformer Pilates Instructor Course Amsterdam | PT7 Academy',
     ogDescription:
-      'Become a Reformer Pilates instructor in Amsterdam: 300-hour Reformer teacher training (PMA ITTAP approved). Next term November 2026–January 2027, 1 spot left. Weekend intensives at Museumplein.',
+      'Become a Reformer Pilates instructor in Amsterdam: 300-hour Reformer teacher training (PMA ITTAP approved). Next term March–May 2027. Weekend intensives at Museumplein.',
     analyticsTitle: 'Reformer Pilates Instructor Course Amsterdam | PT7 Academy',
     schemaName: 'PMA ITTAP-Approved 300-Hour Reformer Pilates Instructor Course',
     schemaAlternateName:
       'The only Dutch Reformer instructor course with globally recognized PMA ITTAP accreditation',
     schemaDescription:
-      'The only Dutch Reformer Pilates instructor course with globally recognized PMA ITTAP accreditation (Pilates Method Alliance). 300-hour teacher training in Amsterdam. Next term November 2026–January 2027, 1 spot left. Weekend schedule. Course fee from €2,000 + VAT.',
+      'The only Dutch Reformer Pilates instructor course with globally recognized PMA ITTAP accreditation (Pilates Method Alliance). 300-hour teacher training in Amsterdam. Next term March–May 2027. Weekend schedule. Course fee from €2,000 + VAT.',
   },
   hero: {
     title: 'Reformer Pilates instructor course Amsterdam',
@@ -22,7 +22,7 @@ export const enAcademy = {
   },
   offer: {
     nextTermLabel: 'Next Reformer term',
-    nextTermValue: '21 Nov 2026 – 31 Jan 2027',
+    nextTermValue: '13 Mar 2027 – 16 May 2027',
     formatLabel: 'Format',
     formatValue: 'Selected weekends · {{hours}}',
     feeLabel: 'Course fee',
@@ -31,7 +31,7 @@ export const enAcademy = {
     installmentsValue: '3 × €667 + VAT',
     viewScheduleBtn: 'View full schedule',
     inquireBtn: 'Inquire',
-    note: 'Winter 2026/27 has 1 spot left. Spring 2027 is also open. September 2026 term is fully booked. Mat & Trapeze Table coming later.',
+    note: 'Winter 2026/27 and September 2026 are fully booked. Spring 2027 now enrolling. Mat & Trapeze Table coming later.',
   },
   intro: {
     p1: "PT7 Academy's <strong>{{courseTitle}}</strong> is <strong>ITTAP approved</strong> by the <pma>{{pmaName}}</pma>, the international organization dedicated to elevating the Pilates profession and setting standards for teacher training worldwide.",
@@ -66,7 +66,7 @@ export const enAcademy = {
     accreditation: '300 hours · ITTAP approved by the <strong>{{pmaName}}</strong> · 4 weekends · {{hours}}',
     upcomingTermsTitle: 'Upcoming Term Schedules',
     upcomingTermsText:
-      'Lectures are not held every weekend. Each term runs on four selected weekends at PT 7, Museumplein, Amsterdam. Each lecture weekend runs {{hours}}. Autumn 2026 is fully booked. Winter 2026/27 has 1 spot left. Spring 2027 is also open. Anatomy is included in the Reformer course (Pilates Introduction & Anatomy weekend).',
+      'Lectures are not held every weekend. Each term runs on four selected weekends at PT 7, Museumplein, Amsterdam. Each lecture weekend runs {{hours}}. Autumn 2026 and Winter 2026/27 are fully booked. Enroll now for Spring 2027. Anatomy is included in the Reformer course (Pilates Introduction & Anatomy weekend).',
     feeTitle: 'Course Fee',
     standardFeeLabel: 'Standard Fee',
     feeAmount: '€2,000',
@@ -91,10 +91,10 @@ export const enAcademy = {
     },
     winter2026: {
       heading: 'Winter 2026/27 (November–January)',
-      statusLabel: 'Winter 2026/27, 1 spot left',
+      statusLabel: 'Winter 2026/27, fully booked',
       description:
-        '300 hours Reformer Pilates Instructor Course, ITTAP approved by the Pilates Method Alliance (PMA) in Amsterdam. Winter 2026/27 term (November–January) has 1 spot left. Lectures, observation, self practice, teaching practice, and master trainer sessions.',
-      schedule: 'Selected weekends Nov 2026–Jan 2027, 12:00-18:00 (1 spot left)',
+        '300 hours Reformer Pilates Instructor Course, ITTAP approved by the Pilates Method Alliance (PMA) in Amsterdam. Winter 2026/27 term (November–January) is fully booked. Lectures, observation, self practice, teaching practice, and master trainer sessions.',
+      schedule: 'Selected weekends Nov 2026–Jan 2027, 12:00-18:00 (fully booked)',
     },
     spring2027: {
       heading: 'Spring 2027 (March–May)',
@@ -119,9 +119,15 @@ export const enAcademy = {
       'The first attempt for both exams is free of charge. Any exam retakes are subject to an additional fee.',
     mandatoryNote:
       'The exercise assessment is mandatory for certification, costs EUR 250 including BTW.',
-    feeLabel: 'Exercise assessment',
+    feeLabel: 'Exercise Assessment Day',
+    day: [
+      'Exercise Assessment Day is an evaluation session designed to assess both your ability to perform the Reformer exercises correctly and your competence in teaching them to others.',
+      'During this assessment, you will be expected to perform each of the Reformer exercises covered throughout your training at least once and instruct another individual in performing them. Your practical skills, exercise execution, teaching techniques, and ability to provide clear and accurate instructions will be observed. You will then receive individual feedback on your performance, highlighting your strengths and identifying areas for further development.',
+      'Given its practical nature, this assessment will be highly beneficial in preparing you for your final practical examination. Participation is flexible, and you may choose to complete the assessment at a time that best suits your learning progress and preparation.',
+      'Exercise Assessment Day is part of the 300-hour training programme and is required to receive the PT7 Academy Reformer Pilates Instructor Certificate.',
+    ],
     feeNote:
-      'This payment covers only the mandatory exercise assessment. €250 including BTW. Required for certification.',
+      'This payment covers only the exercise assessment. €250 including BTW.',
     buyButton: 'Pay €250 assessment',
   },
   requirements: {
@@ -156,7 +162,7 @@ export const enAcademy = {
     },
     weekendLectures: {
       title: 'Weekend lectures',
-      text: 'Four scheduled weekends per Reformer term (next: Nov 2026–Jan 2027, 1 spot left), {{hours}}. Keep your day job while training.',
+      text: 'Four scheduled weekends per Reformer term (next: Mar–May 2027), {{hours}}. Keep your day job while training.',
     },
     pmaProgram: {
       title: 'PMA ITTAP Reformer program',
@@ -189,7 +195,7 @@ export const enAcademy = {
     schedule: {
       question: 'When are classes held?',
       answer:
-        'Lectures are held on selected weekends, not every week. Reformer: Autumn 2026 (September–November) is fully booked. Winter 2026/27 (November–January) has 1 spot left: {{winterSchedule}}. Spring 2027 (March–May) is also open: {{springSchedule}}. Each lecture weekend runs {{hours}}, so you can keep your weekday job while you train.',
+        'Lectures are held on selected weekends, not every week. Reformer: Autumn 2026 (September–November) and Winter 2026/27 (November–January) are fully booked. Next open Reformer term is Spring 2027 (March–May): {{springSchedule}}. Each lecture weekend runs {{hours}}, so you can keep your weekday job while you train.',
     },
     courses: {
       question: 'What courses does PT7 Academy offer?',
@@ -248,7 +254,7 @@ export const enAcademy = {
     installments: 'Enroll with 3 Installments',
     stickyAria: 'Enroll',
   },
-  termBadge: 'Winter 2026/27',
+  termBadge: 'Spring 2027',
   faqSection: {
     heading: 'Questions before you enroll',
     further:

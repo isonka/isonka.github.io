@@ -250,7 +250,7 @@ export const workoutDetails: WorkoutDetailData[] = [
       { question: 'How often should I practice Reformer Pilates?', answer: 'For best results, we recommend 2-3 sessions per week. Consistency is key to seeing improvements in strength, flexibility, and posture.' },
       { question: 'Can I do Reformer Pilates if I have injuries?', answer: 'Yes! Reformer Pilates is excellent for rehabilitation. Please inform your instructor about any injuries before class so they can provide appropriate modifications.' },
       { question: 'How is Reformer Pilates different from mat Pilates?', answer: 'Reformer Pilates uses specialized equipment with springs for resistance, offering more variety, support, and challenge. It\'s excellent for beginners and advanced practitioners alike.' },
-      { question: 'Can I train to become a Reformer instructor here?', answer: 'Yes. PT7 Academy offers a 300-hour Reformer Pilates Instructor Course (ITTAP approved by the Pilates Method Alliance). September 2026 is fully booked. November 2026–January 2027 has 1 spot left. March–May 2027 is also open. Details at /academy.' },
+      { question: 'Can I train to become a Reformer instructor here?', answer: 'Yes. PT7 Academy offers a 300-hour Reformer Pilates Instructor Course (ITTAP approved by the Pilates Method Alliance). September–November 2026 and November 2026–January 2027 are fully booked. The next term runs March–May 2027. Details at /academy.' },
     ],
     finalCta: {
       title: 'Ready to Transform Your Body?',
