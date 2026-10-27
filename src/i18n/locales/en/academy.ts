@@ -119,6 +119,10 @@ export const enAcademy = {
       'The first attempt for both exams is free of charge. Any exam retakes are subject to an additional fee.',
     mandatoryNote:
       'The exercise assessment is mandatory for certification, costs EUR 250 including BTW.',
+    feeLabel: 'Exercise assessment',
+    feeNote:
+      'This payment covers only the mandatory exercise assessment. €250 including BTW. Required for certification.',
+    buyButton: 'Pay €250 assessment',
   },
   requirements: {
     title: 'Course Requirements',

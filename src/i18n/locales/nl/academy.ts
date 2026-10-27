@@ -122,6 +122,10 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
       'Het eerste examenpoging voor beide examens is gratis. Herkansingen zijn tegen meerprijs.',
     mandatoryNote:
       'De oefeningsevaluatie is verplicht voor certificering en kost EUR 250 inclusief BTW.',
+    feeLabel: 'Oefeningsevaluatie',
+    feeNote:
+      'Deze betaling dekt alleen de verplichte oefeningsevaluatie. €250 inclusief BTW. Verplicht voor certificering.',
+    buyButton: 'Betaal €250 evaluatie',
   },
   requirements: {
     title: 'Cursusvereisten',

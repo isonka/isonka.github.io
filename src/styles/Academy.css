@@ -824,9 +824,38 @@
   padding: 14px 22px;
 }
 
+.academy-assessment-pay {
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid var(--pebble, #d5d3d4);
+  text-align: left;
+  max-width: 40em;
+}
+
+.academy-assessment-pay h4 {
+  font-size: 1.05rem;
+  color: #111;
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.academy-assessment-pay p {
+  margin: 0 0 16px;
+  color: #555;
+  line-height: 1.65;
+}
+
+.academy-assessment-btn {
+  margin-top: 0;
+  align-self: flex-start;
+}
+
 .academy-enroll-btn a,
 .academy-enroll-btn healcode-widget,
-.academy-enroll-btn .healcode-pricing-option-text-link {
+.academy-enroll-btn .healcode-pricing-option-text-link,
+.academy-assessment-btn a,
+.academy-assessment-btn healcode-widget,
+.academy-assessment-btn .healcode-pricing-option-text-link {
   display: block !important;
   width: 100% !important;
   height: 100% !important;

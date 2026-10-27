@@ -4,6 +4,9 @@ export const academyEnrollWidget = (label: string) =>
 export const academyInstallmentsWidget = (label: string) =>
   `<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100065" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${label}"></healcode-widget>`;
 
+export const academyAssessmentWidget = (label: string) =>
+  `<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100073" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${label}"></healcode-widget>`;
+
 export const ACADEMY_INQUIRY_WIDGET =
   '<healcode-widget data-type="prospects" data-widget-partner="object" data-widget-id="2b54789c036" data-widget-version="0"></healcode-widget>';
 

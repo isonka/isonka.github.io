@@ -1,0 +1,45 @@
+.academy-practice-page {
+  min-height: 70vh;
+  padding: 72px 0 80px;
+}
+
+.academy-practice-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.academy-practice-kicker {
+  margin: 0 0 12px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #111;
+}
+
+.academy-practice-kicker::before {
+  content: '→';
+  display: inline-block;
+  margin-right: 0.45em;
+  color: var(--gold-text, #c9a800);
+  font-weight: 400;
+}
+
+.academy-practice-page h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  color: #111;
+}
+
+.academy-practice-lead {
+  margin: 0 0 28px;
+  max-width: 40em;
+  color: #555;
+  line-height: 1.65;
+}
+
+.academy-practice-page .mindbody-widget {
+  min-height: 640px;
+}

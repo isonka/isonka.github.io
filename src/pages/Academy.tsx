@@ -29,8 +29,10 @@ import {
   termSchedule2027,
   termScheduleWinter2026,
   trainingBreakdown,
+  academyAssessmentWidget,
 } from '../data/academy';
 import {
+  trackAcademyAssessmentClick,
   trackAcademyEnrollClick,
   trackAcademyInquiryClick,
   trackPageView,
@@ -67,6 +69,12 @@ export const Academy= () => {
     const onClick = (event: MouseEvent) => {
       const target = event.target as HTMLElement | null;
       if (!target) return;
+
+      const assessmentBtn = target.closest('.academy-assessment-btn') as HTMLElement | null;
+      if (assessmentBtn) {
+        trackAcademyAssessmentClick(assessmentBtn.dataset.location ?? 'academy_page');
+        return;
+      }
 
       const enrollBtn = target.closest('.academy-enroll-btn') as HTMLElement | null;
       if (enrollBtn) {
@@ -429,6 +437,15 @@ export const Academy= () => {
                   <div className="academy-enroll-buttons">
                     <AcademyEnrollButtons course="reformer" location="reformer_fee" />
                   </div>
+                </div>
+                <div className="academy-assessment-pay">
+                  <h4>{t('assessment.feeLabel')}</h4>
+                  <p>{t('assessment.feeNote')}</p>
+                  <div
+                    className="course-btn secondary academy-assessment-btn"
+                    data-location="reformer_fee"
+                    dangerouslySetInnerHTML={{ __html: academyAssessmentWidget(t('assessment.buyButton')) }}
+                  />
                 </div>
               </div>
 

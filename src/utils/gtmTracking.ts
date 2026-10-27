@@ -160,6 +160,16 @@ export const trackAcademyEnrollClick = (
   });
 };
 
+export const trackAcademyAssessmentClick = (location: string = 'academy_page') => {
+  trackEvent('academy_assessment_click', {
+    event_category: 'conversion',
+    event_label: 'exercise_assessment',
+    button_location: location,
+    value: 250,
+    currency: 'EUR',
+  });
+};
+
 export const trackAcademyInquiryClick = (
   course: 'reformer' | 'mat' = 'reformer',
   method: 'email' | 'phone' = 'email',
