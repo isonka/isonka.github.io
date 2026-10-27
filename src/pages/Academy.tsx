@@ -106,6 +106,7 @@ export const Academy= () => {
     {
       question: t('faq.schedule.question'),
       answer: t('faq.schedule.answer', {
+        winterSchedule: formatTermSchedule(termScheduleWinter2026, isNl),
         springSchedule: formatTermSchedule(termSchedule2027, isNl),
         hours,
       }),
@@ -157,7 +158,7 @@ export const Academy= () => {
                 price: '2000',
                 priceCurrency: 'EUR',
                 url: courseUrl,
-                availability: 'https://schema.org/SoldOut',
+                availability: 'https://schema.org/LimitedAvailability',
               },
               {
                 startDate: '2027-03-13',
@@ -346,7 +347,7 @@ export const Academy= () => {
             </section>
 
             <div className="course-card featured full-width">
-              <p className="course-badge">{t('courseCard.enrollingBadge')} · {t('termBadge')}</p>
+              <p className="course-badge">{t('common.oneSpot')} · {t('termBadge')}</p>
               <h2 className="course-card-title">{courseTitle}</h2>
               <p className="academy-course-accreditation">
                 <Trans
@@ -362,6 +363,19 @@ export const Academy= () => {
                 <p>{t('courseCard.upcomingTermsText', { hours })}</p>
 
                 <h4 className="term-schedule-heading">
+                  {t('terms.winter2026.heading')}
+                  <span className="term-schedule-status">{t('common.oneSpot')}</span>
+                </h4>
+                <div className="term-schedule-grid">
+                  {termScheduleWinter2026.map((item) => (
+                    <div key={item.module} className="term-schedule-item">
+                      <span className="term-schedule-dates">{isNl ? item.datesNl : item.dates}</span>
+                      <span className="term-schedule-module">{isNl ? item.moduleNl : item.module}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <h4 className="term-schedule-heading">
                   {t('terms.spring2027.heading')}
                   <span className="term-schedule-status">{t('common.enrolling')}</span>
                 </h4>
@@ -373,21 +387,6 @@ export const Academy= () => {
                     </div>
                   ))}
                 </div>
-
-                <details className="term-schedule-closed">
-                  <summary className="term-schedule-heading term-schedule-heading--closed">
-                    {t('terms.winter2026.heading')}
-                    <span className="term-schedule-status">{t('common.fullyBooked')}</span>
-                  </summary>
-                  <div className="term-schedule-grid">
-                    {termScheduleWinter2026.map((item) => (
-                      <div key={item.module} className="term-schedule-item">
-                        <span className="term-schedule-dates">{isNl ? item.datesNl : item.dates}</span>
-                        <span className="term-schedule-module">{isNl ? item.moduleNl : item.module}</span>
-                      </div>
-                    ))}
-                  </div>
-                </details>
 
                 <details className="term-schedule-closed">
                   <summary className="term-schedule-heading term-schedule-heading--closed">

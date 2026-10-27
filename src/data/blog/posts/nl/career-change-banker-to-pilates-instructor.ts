@@ -102,9 +102,9 @@ export const post: BlogPost = {
         <li><strong>Stel je je leven over een jaar voor</strong>: hetzelfde bureau, of iets nieuws?</li>
       </ol>
 
-      <h2>De volgende open lichting start in maart 2027</h2>
+      <h2>De volgende open lichting start in november 2026</h2>
 
-      <p>De najaarslichting 2026 (september–november) en de winterlichting 2026/27 (november–januari) van de Reformer Pilates-instructeurscursus van PT 7 Academy zijn volgeboekt. De volgende open lichting loopt van maart tot mei 2027 op geselecteerde weekenden in onze studio aan het Museumplein. De colleges zijn alleen in het weekend (12:00–18:00), zodat je doordeweeks kunt blijven werken, en worden gegeven door instructeurs met meer dan 15 jaar ervaring. De colleges zijn in het Engels.</p>
+      <p>De najaarslichting 2026 (september–november) van de Reformer Pilates-instructeurscursus van PT 7 Academy is volgeboekt. De winterlichting 2026/27 (november–januari) heeft 1 plek vrij. De voorjaarslichting 2027 (maart–mei) is ook open. De colleges zijn alleen in het weekend (12:00–18:00) in onze studio aan het Museumplein, zodat je doordeweeks kunt blijven werken, en worden gegeven door instructeurs met meer dan 15 jaar ervaring. De colleges zijn in het Engels.</p>
 
       <p>Ben je nieuwsgierig? Neem contact op. Geen druk, geen verkooppraatje, gewoon een eerlijk gesprek over de vraag of dit pad bij je past.</p>
 

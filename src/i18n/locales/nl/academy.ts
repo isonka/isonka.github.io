@@ -5,18 +5,18 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
   seo: {
     title: 'Pilates Docentenopleiding Amsterdam | Reformer | PT7 Academy',
     description:
-      'Pilates docentenopleiding in Amsterdam: 300 uur Reformer opleiding, PMA ITTAP goedgekeurd. Weekendrooster. Volgende termijn mrt–mei 2027.',
+      'Pilates docentenopleiding in Amsterdam: 300 uur Reformer opleiding, PMA ITTAP goedgekeurd. Weekendrooster. Volgende termijn nov 2026–jan 2027, 1 plek vrij.',
     keywords:
       'reformer pilates opleiding amsterdam, pilates opleiding amsterdam, reformer pilates docentenopleiding, pilates docentenopleiding, pilates instructeur opleiding, PMA ITTAP, weekend pilates opleiding, carrièreswitch pilates',
     ogTitle: 'Pilates Docentenopleiding Amsterdam | Reformer | PT7 Academy',
     ogDescription:
-      'Reformer pilates docentenopleiding in Amsterdam: 300 uur Reformer (PMA ITTAP goedgekeurd). Volgende termijn maart–mei 2027. Weekendintensieven bij Museumplein. Training in het Engels.',
+      'Reformer pilates docentenopleiding in Amsterdam: 300 uur Reformer (PMA ITTAP goedgekeurd). Volgende termijn november 2026–januari 2027, 1 plek vrij. Weekendintensieven bij Museumplein. Training in het Engels.',
     analyticsTitle: 'Pilates Docentenopleiding Amsterdam | PT7 Academy',
     schemaName: 'PMA ITTAP-Approved 300-Hour Reformer Pilates Instructor Course',
     schemaAlternateName:
       'De enige Nederlandse Reformer-instructeurscursus met wereldwijd erkende PMA ITTAP-accreditatie',
     schemaDescription:
-      'De enige Nederlandse Reformer pilates instructeurscursus met wereldwijd erkende PMA ITTAP-accreditatie (Pilates Method Alliance). 300-uur docentenopleiding in Amsterdam. Volgende termijn maart–mei 2027. Weekendrooster. Lessen in het Engels. Vanaf €2.000 + BTW.',
+      'De enige Nederlandse Reformer pilates instructeurscursus met wereldwijd erkende PMA ITTAP-accreditatie (Pilates Method Alliance). 300-uur docentenopleiding in Amsterdam. Volgende termijn november 2026–januari 2027, 1 plek vrij. Weekendrooster. Lessen in het Engels. Vanaf €2.000 + BTW.',
   },
   hero: {
     title: 'Pilates docentenopleiding Amsterdam (Reformer)',
@@ -25,7 +25,7 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
   },
   offer: {
     nextTermLabel: 'Volgende Reformer-termijn',
-    nextTermValue: '13 mrt 2027 – 16 mei 2027',
+    nextTermValue: '21 nov 2026 – 31 jan 2027',
     formatLabel: 'Formaat',
     formatValue: 'Geselecteerde weekenden · {{hours}}',
     feeLabel: 'Cursusprijs',
@@ -34,7 +34,7 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
     installmentsValue: '3 × €667 + BTW',
     viewScheduleBtn: 'Bekijk volledig rooster',
     inquireBtn: 'Informeer',
-    note: 'Winter 2026/27 en september 2026 zijn volgeboekt. Lente 2027 nu open voor inschrijving. Mat & Trapeze Table volgt later.',
+    note: 'Winter 2026/27 heeft 1 plek vrij. Lente 2027 is ook open. September 2026-termijn is volgeboekt. Mat & Trapeze Table volgt later.',
   },
   intro: {
     p1: 'De <strong>{{courseTitle}}</strong> van PT7 Academy is <strong>ITTAP goedgekeurd</strong> door de <pma>{{pmaName}}</pma>, de internationale organisatie die zich inzet voor het verhogen van het pilatesberoep en het vaststellen van standaarden voor docentenopleidingen wereldwijd.',
@@ -69,7 +69,7 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
     accreditation: '300 uur · ITTAP goedgekeurd door de <strong>{{pmaName}}</strong> · 4 weekenden · {{hours}}',
     upcomingTermsTitle: 'Komende termijnroosters',
     upcomingTermsText:
-      'Colleges vinden niet elk weekend plaats. Elke termijn loopt over vier geselecteerde weekenden bij PT 7, Museumplein, Amsterdam. Elk college-weekend duurt {{hours}}. Herfst 2026 en Winter 2026/27 zijn volgeboekt. Schrijf nu in voor Lente 2027. Anatomie is inbegrepen in de Reformer-cursus (Pilates Introductie & Anatomie-weekend).',
+      'Colleges vinden niet elk weekend plaats. Elke termijn loopt over vier geselecteerde weekenden bij PT 7, Museumplein, Amsterdam. Elk college-weekend duurt {{hours}}. Herfst 2026 is volgeboekt. Winter 2026/27 heeft 1 plek vrij. Lente 2027 is ook open. Anatomie is inbegrepen in de Reformer-cursus (Pilates Introductie & Anatomie-weekend).',
     feeTitle: 'Cursusprijs',
     standardFeeLabel: 'Standaard tarief',
     feeAmount: '€2.000',
@@ -94,10 +94,10 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
     },
     winter2026: {
       heading: 'Winter 2026/27 (november–januari)',
-      statusLabel: 'Winter 2026/27, volgeboekt',
+      statusLabel: 'Winter 2026/27, 1 plek vrij',
       description:
-        '300 uur Reformer Pilates Instructeurscursus, ITTAP goedgekeurd door de Pilates Method Alliance (PMA) in Amsterdam. Winter 2026/27-termijn (november–januari) is volgeboekt. Colleges, observatie, zelfpraktijk, lesgeven in de praktijk en sessies met master trainer.',
-      schedule: 'Geselecteerde weekenden nov 2026–jan 2027, 12:00-18:00 (volgeboekt)',
+        '300 uur Reformer Pilates Instructeurscursus, ITTAP goedgekeurd door de Pilates Method Alliance (PMA) in Amsterdam. Winter 2026/27-termijn (november–januari) heeft 1 plek vrij. Colleges, observatie, zelfpraktijk, lesgeven in de praktijk en sessies met master trainer.',
+      schedule: 'Geselecteerde weekenden nov 2026–jan 2027, 12:00-18:00 (1 plek vrij)',
     },
     spring2027: {
       heading: 'Lente 2027 (maart–mei)',
@@ -110,6 +110,7 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
   common: {
     fullyBooked: 'Volgeboekt',
     enrolling: 'Inschrijving',
+    oneSpot: '1 plek vrij',
   },
   assessment: {
     title: 'Assessment & evaluatie',
@@ -154,7 +155,7 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
     },
     weekendLectures: {
       title: 'Weekendcolleges',
-      text: 'Vier geplande weekenden per Reformer-termijn (volgende: mrt–mei 2027), {{hours}}. Behoud je dagbaan tijdens de opleiding.',
+      text: 'Vier geplande weekenden per Reformer-termijn (volgende: nov 2026–jan 2027, 1 plek vrij), {{hours}}. Behoud je dagbaan tijdens de opleiding.',
     },
     pmaProgram: {
       title: 'PMA ITTAP Reformer-programma',
@@ -187,7 +188,7 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
     schedule: {
       question: 'Wanneer vinden de lessen plaats?',
       answer:
-        'Colleges vinden plaats op geselecteerde weekenden, niet elke week. Reformer: Herfst 2026 (september–november) en Winter 2026/27 (november–januari) zijn volgeboekt. Volgende open Reformer-termijn is Lente 2027 (maart–mei): {{springSchedule}}. Elk college-weekend duurt {{hours}}, zodat je doordeweeks kunt blijven werken.',
+        'Colleges vinden plaats op geselecteerde weekenden, niet elke week. Reformer: Herfst 2026 (september–november) is volgeboekt. Winter 2026/27 (november–januari) heeft 1 plek vrij: {{winterSchedule}}. Lente 2027 (maart–mei) is ook open: {{springSchedule}}. Elk college-weekend duurt {{hours}}, zodat je doordeweeks kunt blijven werken.',
     },
     courses: {
       question: 'Welke cursussen biedt PT7 Academy aan?',
@@ -246,7 +247,7 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
     installments: 'Inschrijven in 3 termijnen',
     stickyAria: 'Inschrijven',
   },
-  termBadge: 'Lente 2027',
+  termBadge: 'Winter 2026/27',
   faqSection: {
     heading: 'Vragen vóór inschrijving',
     further:

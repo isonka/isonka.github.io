@@ -53,7 +53,7 @@ export const post: BlogPost = {
       <p><strong>Ask any course:</strong> how many teaching hours are supervised, and by whom?</p>
 
       <h2>4. Total cost</h2>
-      <p>Fee from <strong>€2,000 + VAT</strong>, or 3 installments of €667 + VAT. <strong>Autumn 2026</strong> and <strong>Winter 2026/27</strong> (November-January) are fully booked. <strong>Spring 2027</strong> (March-May) is open.</p>
+      <p>Fee from <strong>€2,000 + VAT</strong>, or 3 installments of €667 + VAT. <strong>Autumn 2026</strong> is fully booked. <strong>Winter 2026/27</strong> (November-January) has 1 spot left. <strong>Spring 2027</strong> (March-May) is open.</p>
 
       <p>One more cost: the mandatory exercise assessment, <strong>€250 including BTW</strong>. The first attempt at both exams is free; retakes carry an additional fee. Anatomy is included in the Reformer course.</p>
 
@@ -143,7 +143,7 @@ export const post: BlogPost = {
       <p><strong>Ready to switch without burning your income?</strong> <a href="/academy/">See PT7 Academy dates and enrollment</a> or email <a href="mailto:info@pt7.nl">info@pt7.nl</a>.</p>
 
       <h2>Enroll for Depth, Not Speed</h2>
-      <p>Autumn 2026 and <strong>Winter 2026/27</strong> (November-January) Reformer terms are fully booked. <strong>Spring 2027</strong> (March-May) is open. Fee from €2,000 + VAT, with installment options.</p>
+      <p>Autumn 2026 Reformer term is fully booked. <strong>Winter 2026/27</strong> (November-January) has 1 spot left. <strong>Spring 2027</strong> (March-May) is open. Fee from €2,000 + VAT, with installment options.</p>
 
       <p><em>Ready to switch without burning your income?</em> <a href="/academy/">See PT7 Academy dates and enrollment</a> or email <a href="mailto:info@pt7.nl">info@pt7.nl</a>.</p>
 
