@@ -132,6 +132,9 @@
   height: 100%;
   object-fit: cover;
   opacity: 0;
+}
+
+.home-hero--can-fade .home-hero-bg {
   transition: opacity 1s ease-in-out;
 }
 
@@ -846,7 +849,8 @@
   .workout-card-media img,
   .home-person,
   .home-person-media img,
-  .home-hero-bg {
+  .home-hero-bg,
+  .home-hero--can-fade .home-hero-bg {
     transition: none;
   }
 

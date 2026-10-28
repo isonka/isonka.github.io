@@ -189,7 +189,7 @@ export const Home= () => {
       <OpeningOfferHomeBanner />
       <AcademyUrgencyBanner />
 
-      <section className="home-hero">
+      <section className={`home-hero${secondHeroReady ? ' home-hero--can-fade' : ''}`}>
         {heroImages.map((image, index) => {
           if (index > 0 && !secondHeroReady) return null;
           const isActive = index === currentImageIndex;
