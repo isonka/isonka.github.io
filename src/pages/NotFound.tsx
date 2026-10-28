@@ -15,7 +15,7 @@ export const NotFound = () => {
 
   useEffect(() => {
     if (isPrerender()) return;
-    trackPageView(location.pathname, 'Page not found | PT 7 Pilates Amsterdam');
+    trackPageView(location.pathname, 'Page not found | PT7 Pilates Amsterdam');
   }, [location.pathname]);
 
   return (

@@ -4,17 +4,17 @@ export const post: BlogPost = {
   id: '1',
   slug: 'prenatal-pilates-supporting-body-through-every-trimester',
   title: 'Prenatal Pilates: Supporting the Body Through Every Trimester',
-  seoTitle: 'Prenatal Pilates Through Every Trimester | PT 7',
+  seoTitle: 'Prenatal Pilates Through Every Trimester | PT7',
   excerpt: 'A complete trimester-by-trimester guide to prenatal Pilates in Amsterdam, including pelvic floor training, safe movement adaptations, warning signs, and when to choose private sessions.',
   content: `
       <p>Pregnancy changes everything: posture, breathing, sleep, stress levels, and how your body responds to movement. If you are expecting and wondering what kind of training is actually safe and useful, you are not alone. Most women I meet ask the same practical questions: "Can I still train my core?", "Should I do pelvic floor exercises every day?", "What is safe in each trimester?", and "How do I prepare for birth without overdoing it?"</p>
 
       <p>The short answer: with the right guidance, prenatal Pilates can be one of the most effective ways to stay strong, mobile, and connected to your body throughout pregnancy. The key is not doing "more" exercise; it is doing the right exercises at the right time, with the right modifications.</p>
 
-      <p>In this guide, I will walk you through a trimester-specific approach we use at PT 7 in Amsterdam: what to focus on, what to avoid, how to train your pelvic floor intelligently, and when private sessions are the smartest option.</p>
+      <p>In this guide, I will walk you through a trimester-specific approach we use at PT7 in Amsterdam: what to focus on, what to avoid, how to train your pelvic floor intelligently, and when private sessions are the smartest option.</p>
 
       <div class="blog-figure">
-        <img src="/assets/images/pregnancy1.webp" width="787" height="1400" alt="Prenatal Pilates at PT 7 Amsterdam" />
+        <img src="/assets/images/pregnancy1.webp" width="787" height="1400" alt="Prenatal Pilates at PT7 Amsterdam" />
       </div>
 
       <h2>Why Prenatal Pilates Works So Well</h2>
@@ -151,7 +151,7 @@ export const post: BlogPost = {
       <p>When we train this way, women often report less heaviness, improved bladder confidence, better bowel comfort, and less fear around labor mechanics. It also supports a smoother transition into postpartum rehab.</p>
 
       <h2>Why Prenatal Sessions Are Private Only</h2>
-      <p>At PT 7, prenatal Pilates is offered exclusively as private training. Pregnancy is highly individual, and session planning must be tailored to each person's medical history, symptoms, trimester stage, and day-to-day changes.</p>
+      <p>At PT7, prenatal Pilates is offered exclusively as private training. Pregnancy is highly individual, and session planning must be tailored to each person's medical history, symptoms, trimester stage, and day-to-day changes.</p>
 
       <h3>Private Sessions Are Ideal If You Have:</h3>
       <ul>
@@ -220,7 +220,7 @@ export const post: BlogPost = {
         <li><a href="/healthcare-providers/">For healthcare providers</a>, referral information for physiotherapists, GPs, and specialists.</li>
       </ul>
 
-      <p><em>Ready for personalized prenatal support? See our <a href="/pricing/">private session pricing</a>, then <a href="/schedule/">book your session</a> at PT 7 Museumplein.</em></p>
+      <p><em>Ready for personalized prenatal support? See our <a href="/pricing/">private session pricing</a>, then <a href="/schedule/">book your session</a> at PT7 Museumplein.</em></p>
     `,
   author: 'Elif Arzu Ogan',
   date: '2025-11-05',

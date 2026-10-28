@@ -1,14 +1,14 @@
 export const enPrivatePilates = {
   seo: {
-    title: 'Private Pilates Amsterdam | 1-on-1 Reformer | PT 7',
+    title: 'Private Pilates Amsterdam | 1-on-1 Reformer | PT7',
     description:
       'Private and duo Reformer Pilates at Museumplein, Amsterdam Zuid, from {{privateFrom}}. Your instructor’s full attention and a program built around you. Book online.',
     keywords:
       'private pilates amsterdam, privé pilates amsterdam, prive pilates les amsterdam, one on one pilates amsterdam, personal pilates amsterdam, private reformer pilates, private pilates amsterdam zuid, prive pilates museumplein',
-    ogTitle: 'Private Pilates Amsterdam | From {{privateFrom}} | PT 7',
+    ogTitle: 'Private Pilates Amsterdam | From {{privateFrom}} | PT7',
     ogDescription:
       'Private Reformer sessions at Museumplein from {{privateFrom}}. One-on-one or duo, with your instructor’s full attention.',
-    analyticsTitle: 'Private Pilates Amsterdam | PT 7',
+    analyticsTitle: 'Private Pilates Amsterdam | PT7',
   },
   breadcrumb: 'Private Pilates Amsterdam',
   hero: {
@@ -22,7 +22,7 @@ export const enPrivatePilates = {
     cta: 'Book a Private Session',
   },
   trust: {
-    imageAlt: 'Private Reformer Pilates session at PT 7',
+    imageAlt: 'Private Reformer Pilates session at PT7',
     priceAnchor: 'Private from {{privateFrom}} · one-on-one or duo',
     reviewSource: 'Google review',
     testimonial: '“Warm, welcoming, and filled with care. I leave every class stronger and smiling.”',
@@ -31,8 +31,8 @@ export const enPrivatePilates = {
   intro: {
     title: 'Why private Pilates?',
     p1: 'Group classes are energising and social, but there is a ceiling to how much attention one instructor can give to five people at once. Private sessions remove that ceiling entirely. Your instructor has one job: to make your session as effective as possible for you, specifically.',
-    p2: 'At PT 7, private sessions are the format we are most proud of. Every program is built from scratch after an intake conversation about your goals, movement history, injuries, and schedule. The session evolves week by week as your strength, mobility, and body awareness develop.',
-    p3: 'Whether you are a complete beginner wanting to learn proper technique, an athlete looking to improve performance and prevent injury, someone recovering from a back injury or surgery, or a pregnant or postpartum woman needing specialist guidance (see <prenatal>prenatal Pilates</prenatal>), private sessions at PT 7 are designed to deliver real results, not just a good workout.',
+    p2: 'At PT7, private sessions are the format we are most proud of. Every program is built from scratch after an intake conversation about your goals, movement history, injuries, and schedule. The session evolves week by week as your strength, mobility, and body awareness develop.',
+    p3: 'Whether you are a complete beginner wanting to learn proper technique, an athlete looking to improve performance and prevent injury, someone recovering from a back injury or surgery, or a pregnant or postpartum woman needing specialist guidance (see <prenatal>prenatal Pilates</prenatal>), private sessions at PT7 are designed to deliver real results, not just a good workout.',
     p4: 'We use classical Pilates apparatus: Reformer, Tower Reformer, Cadillac, Wunda Chair, and Spine Corrector. Your instructor selects the right tools for each phase of your program. Prefer to train in a small group? See <reformer>Reformer Pilates in Amsterdam Zuid</reformer>.',
   },
   formats: {
@@ -72,11 +72,11 @@ export const enPrivatePilates = {
     },
     price: {
       q: 'How much is a private Pilates session in Amsterdam?',
-      a: 'Private Reformer sessions at PT 7 start at {{privateFrom}}. A 20-class pack brings the junior rate to {{privatePack20}} per class. Duo sessions start at {{coupleFrom}} per person. Full rates are on the pricing page.',
+      a: 'Private Reformer sessions at PT7 start at {{privateFrom}}. A 20-class pack brings the junior rate to {{privatePack20}} per class. Duo sessions start at {{coupleFrom}} per person. Full rates are on the pricing page.',
     },
     equipment: {
       q: 'What equipment is used in private Pilates sessions?',
-      a: 'Depending on your goals, private sessions at PT 7 can include the Reformer, Tower Reformer, Cadillac (Trapeze Table), Wunda Chair, and Spine Corrector. Your instructor selects the most appropriate equipment for each session.',
+      a: 'Depending on your goals, private sessions at PT7 can include the Reformer, Tower Reformer, Cadillac (Trapeze Table), Wunda Chair, and Spine Corrector. Your instructor selects the most appropriate equipment for each session.',
     },
   },
   cta: {

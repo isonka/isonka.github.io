@@ -3,15 +3,15 @@ import type { EnHome } from '../en/home';
 
 export const nlHome: DeepStringify<EnHome> = {
   seo: {
-    title: 'PT 7 (PT Studio 7) | Pilates & Krachttraining Amsterdam Zuid',
+    title: 'PT7 (PT Studio 7) | Pilates & Krachttraining Amsterdam Zuid',
     description:
-      'PT 7 (voorheen PT Studio 7): boutique pilates- en krachtstudio aan de {{studioStreet}}, Museumplein, Amsterdam Zuid. Max. 5 per les. Intro: 3 lessen €50.',
+      'PT7 (voorheen PT Studio 7): boutique pilates- en krachtstudio aan de {{studioStreet}}, Museumplein, Amsterdam Zuid. Max. 5 per les. Intro: 3 lessen €50.',
     keywords:
-      'PT 7, PT 7 Pilates, pilates Amsterdam, pilateslessen Amsterdam, pilates bij mij in de buurt, Reformer pilates Amsterdam, one-on-one training Amsterdam, pilates Museumplein, private pilates Amsterdam, small group pilates, pilatesstudio Van Baerlestraat, TRX Amsterdam, prenatale pilates Amsterdam',
-    ogTitle: 'PT 7 (PT Studio 7) | Pilates & Krachttraining Amsterdam Zuid',
+      'PT7, PT7 Pilates, pilates Amsterdam, pilateslessen Amsterdam, pilates bij mij in de buurt, Reformer pilates Amsterdam, one-on-one training Amsterdam, pilates Museumplein, private pilates Amsterdam, small group pilates, pilatesstudio Van Baerlestraat, TRX Amsterdam, prenatale pilates Amsterdam',
+    ogTitle: 'PT7 (PT Studio 7) | Pilates & Krachttraining Amsterdam Zuid',
     ogDescription:
-      'PT 7 boutique studio aan het Museumplein: Reformer pilates, kleine groepen (max. 5) en private sessies in Amsterdam Oud-Zuid. Online boeken.',
-    analyticsTitle: 'Home - PT 7 Pilates Amsterdam',
+      'PT7 boutique studio aan het Museumplein: Reformer pilates, kleine groepen (max. 5) en private sessies in Amsterdam Oud-Zuid. Online boeken.',
+    analyticsTitle: 'Home - PT7 Pilates Amsterdam',
   },
   banner: {
     strong: 'Word pilatesinstructeur',
@@ -25,7 +25,7 @@ export const nlHome: DeepStringify<EnHome> = {
     cta: 'Lees de update',
   },
   hero: {
-    brand: 'PT 7',
+    brand: 'PT7',
     title: 'Pilates & krachttraining in Amsterdam Zuid',
     line: 'Pilateslessen in Amsterdam Oud-Zuid, boutique studio aan het Museumplein',
     bookClass: 'Les boeken',
@@ -33,20 +33,20 @@ export const nlHome: DeepStringify<EnHome> = {
     viewPricing: 'Prijzen',
   },
   heroImages: {
-    studio: 'PT 7 - pilates Reformer studio',
-    nike: 'PT 7 - Nike Strength trainingsruimte',
+    studio: 'PT7 - pilates Reformer studio',
+    nike: 'PT7 - Nike Strength trainingsruimte',
   },
   about: {
     kicker: 'Over ons',
     title: 'Reformer pilates & krachttraining studio aan het Museumplein',
-    p1: 'Reformer pilates & krachttraining in Amsterdam, in onze studio aan het Museumplein in Oud-Zuid. Met meer dan 15 jaar ervaring biedt PT 7 een boutique fitnesservaring gericht op aandacht en resultaat. Aan de {{studioStreet}}, tegenover het Stedelijk Museum, combineren we professionele Reformers en klassieke pilatesapparatuur met Nike-krachtapparatuur, TRX en Concept2-machines in één ruimte.',
+    p1: 'Reformer pilates & krachttraining in Amsterdam, in onze studio aan het Museumplein in Oud-Zuid. Met meer dan 15 jaar ervaring biedt PT7 een boutique fitnesservaring gericht op aandacht en resultaat. Aan de {{studioStreet}}, tegenover het Stedelijk Museum, combineren we professionele Reformers en klassieke pilatesapparatuur met Nike-krachtapparatuur, TRX en Concept2-machines in één ruimte.',
     p2: 'We bieden 1-op-1 private sessies waarin je 100% aandacht van je instructeur krijgt. Daarnaast zijn er intieme small-group lessen (maximaal 5 personen) als je graag met vrienden traint. Elk programma is afgestemd op kracht opbouwen, flexibiliteit verbeteren of jouw wellnessdoelen.',
     p3: 'Onze instructeurs maken een persoonlijk plan, passen elke sessie aan op jouw voortgang en vieren elke mijlpaal met je.',
     links:
       'Begin hier: <reformer>Reformer pilates Amsterdam Zuid</reformer> · <private>Private pilates</private> · <prenatal>Prenatale pilates</prenatal> · <trx>TRX</trx> · <strength>Krachttraining</strength>',
     ownerName: 'Elif Arzu Ogan',
-    signatureRole: 'Eigenaar & hoofdinstructeur, PT 7',
-    imageAlt: 'PT 7 Museumplein — small-group pilatesstudio',
+    signatureRole: 'Eigenaar & hoofdinstructeur, PT7',
+    imageAlt: 'PT7 Museumplein — small-group pilatesstudio',
   },
   workouts: {
     heading: "Pilates & trainingsprogramma's Amsterdam",
@@ -54,12 +54,12 @@ export const nlHome: DeepStringify<EnHome> = {
     reformerPilates: {
       title: 'Reformer & Trapeze Table pilates',
       description: 'Fullbody-training voor corekracht, flexibiliteit en houding',
-      alt: 'PT 7 Amsterdam boutique studio voor Reformer pilates en training',
+      alt: 'PT7 Amsterdam boutique studio voor Reformer pilates en training',
     },
     trx: {
       title: 'TRX-training',
       description: 'Suspension training voor kracht, balans en functionele fitness',
-      alt: 'TRX suspension training bij PT 7 Amsterdam',
+      alt: 'TRX suspension training bij PT7 Amsterdam',
     },
     functionalTraining: {
       title: 'Nike Strength Training',
@@ -123,13 +123,13 @@ export const nlHome: DeepStringify<EnHome> = {
         author: 'Lot Canter Cremers',
         meta: 'Google-review · Zwangerschap & postpartum',
         pull: '“Elif trainde me tot 38,5 weken. Comfortabele zwangerschap en soepele bevalling.”',
-        full: 'Via een buurvrouw in mijn gebouw kwam ik bij PT 7. Ik kom hier al 18 maanden, waarvan ik 9 maanden zwanger was. Tijdens mijn zwangerschap trainde Elif me tot het einde (38,5 weken). Haar training gaf mij en mijn lichaam een uiterst comfortabele zwangerschap en soepele bevalling. Haar ervaring en kennis van het menselijk lichaam, zwanger of niet, maakt het verschil. Natuurlijk ging ik daarna door en geniet ik van deze studio. Ik raad PT 7 aan iedereen aan die een Pilatesstudio zoekt met gekwalificeerde, ervaren instructeurs. Pilates is populair en er zijn veel plekken, maar de meeste instructeurs hebben niet genoeg kennis om te trainen zoals zij dat bij PT 7 doen.',
+        full: 'Via een buurvrouw in mijn gebouw kwam ik bij PT7. Ik kom hier al 18 maanden, waarvan ik 9 maanden zwanger was. Tijdens mijn zwangerschap trainde Elif me tot het einde (38,5 weken). Haar training gaf mij en mijn lichaam een uiterst comfortabele zwangerschap en soepele bevalling. Haar ervaring en kennis van het menselijk lichaam, zwanger of niet, maakt het verschil. Natuurlijk ging ik daarna door en geniet ik van deze studio. Ik raad PT7 aan iedereen aan die een Pilatesstudio zoekt met gekwalificeerde, ervaren instructeurs. Pilates is populair en er zijn veel plekken, maar de meeste instructeurs hebben niet genoeg kennis om te trainen zoals zij dat bij PT7 doen.',
       },
       flaminia: {
         author: 'Flaminia',
         meta: 'Google-review',
         pull: '“Professioneel, doordacht. Precies de Reformer-studio waar ik twee jaar naar zocht.”',
-        full: 'Ik zocht zo’n twee jaar naar een professionele Reformer-studio en probeerde veel studio’s in Amsterdam. PT 7 en Elif zijn precies wat ik zocht: professioneel, doordacht en betrokken bij je vooruitgang. Elif is fantastisch en heeft decennia ervaring als fitness trainer. Ze demonstreert technieken tot in detail en haar lessen zijn altijd anders en afgestemd op de groep.',
+        full: 'Ik zocht zo’n twee jaar naar een professionele Reformer-studio en probeerde veel studio’s in Amsterdam. PT7 en Elif zijn precies wat ik zocht: professioneel, doordacht en betrokken bij je vooruitgang. Elif is fantastisch en heeft decennia ervaring als fitness trainer. Ze demonstreert technieken tot in detail en haar lessen zijn altijd anders en afgestemd op de groep.',
       },
       maya: {
         author: 'Maya',
@@ -147,7 +147,7 @@ export const nlHome: DeepStringify<EnHome> = {
         author: 'Ayşe',
         meta: 'Google-review',
         pull: '“Rustige studio, professionele trainers die elke beweging met zorg begeleiden.”',
-        full: 'Ik train al een tijdje bij PT 7 en kan niet gelukkiger zijn. De studio heeft een rustige, positieve sfeer en de trainers zijn zeer professioneel en ondersteunend. Ze letten goed op jouw behoeften en begeleiden elke beweging met zorg. Een absolute aanrader!',
+        full: 'Ik train al een tijdje bij PT7 en kan niet gelukkiger zijn. De studio heeft een rustige, positieve sfeer en de trainers zijn zeer professioneel en ondersteunend. Ze letten goed op jouw behoeften en begeleiden elke beweging met zorg. Een absolute aanrader!',
       },
     },
   },
@@ -169,7 +169,7 @@ export const nlHome: DeepStringify<EnHome> = {
     where: {
       question: 'Waar kan ik pilateslessen volgen in Amsterdam?',
       answer:
-        'PT 7 biedt Reformer pilates, TRX, krachttraining en cardio aan de {{studioStreet}}, bij het Museumplein in Amsterdam Oud-Zuid. Boek groepsles (max. 5) of een private sessie online via pt7.nl/schedule/.',
+        'PT7 biedt Reformer pilates, TRX, krachttraining en cardio aan de {{studioStreet}}, bij het Museumplein in Amsterdam Oud-Zuid. Boek groepsles (max. 5) of een private sessie online via pt7.nl/schedule/.',
     },
     groupSize: {
       question: 'Hoeveel mensen zitten er in een pilates groepsles?',
@@ -177,17 +177,17 @@ export const nlHome: DeepStringify<EnHome> = {
         'Onze groepen hebben maximaal 5 deelnemers, zodat instructeurs techniek en voortgang persoonlijk kunnen begeleiden.',
     },
     booking: {
-      question: 'Hoe boek ik een les bij PT 7?',
+      question: 'Hoe boek ik een les bij PT7?',
       answer:
         'Gebruik het online rooster voor een groepsles of private afspraak. Nieuwe klanten starten met 3 groepslessen voor €50. Pakketten staan op de prijzenpagina.',
     },
     training: {
-      question: 'Welke training biedt PT 7?',
+      question: 'Welke training biedt PT7?',
       answer:
         'Reformer pilates is onze kern. Daarnaast bieden we TRX, kracht- en functional training, cardiosessies, prenatale private pilates en de instructeursopleiding via PT7 Academy.',
     },
     location: {
-      question: 'Waar zit PT 7?',
+      question: 'Waar zit PT7?',
       answer:
         '{{studioAddress}}, tegenover het Stedelijk Museum op het Museumplein in Oud-Zuid.',
     },

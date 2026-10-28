@@ -59,7 +59,7 @@ export const SEOHead = ({
 
     updateMetaTag('description', description);
     updateMetaTag('keywords', keywords);
-    updateMetaTag('author', 'PT 7 Pilates');
+    updateMetaTag('author', 'PT7 Pilates');
     updateMetaTag('robots', robots);
 
     updateMetaTag('geo.region', 'NL-NH');
@@ -84,18 +84,18 @@ export const SEOHead = ({
     } else {
       updateMetaTag('og:url', canonicalUrl, true);
     }
-    updateMetaTag('og:site_name', 'PT 7 Pilates', true);
+    updateMetaTag('og:site_name', 'PT7 Pilates', true);
     updateMetaTag('og:image', absoluteImageUrl, true);
     updateMetaTag('og:image:secure_url', absoluteImageUrl, true);
     updateMetaTag('og:image:width', '1200', true);
     updateMetaTag('og:image:height', '630', true);
-    updateMetaTag('og:image:alt', 'PT 7 Pilates Amsterdam - Pilates Studio', true);
+    updateMetaTag('og:image:alt', 'PT7 Pilates Amsterdam - Pilates Studio', true);
 
     updateMetaTag('twitter:card', 'summary_large_image');
     updateMetaTag('twitter:title', ogTitle || title);
     updateMetaTag('twitter:description', ogDescription || description);
     updateMetaTag('twitter:image', absoluteImageUrl);
-    updateMetaTag('twitter:image:alt', 'PT 7 Pilates Amsterdam - Pilates Studio');
+    updateMetaTag('twitter:image:alt', 'PT7 Pilates Amsterdam - Pilates Studio');
 
     const canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
     if (omitCanonical) {

@@ -8,7 +8,7 @@ import '../styles/AcademyPractice.css';
 const WIDGET_SRC = 'https://brandedweb.mindbodyonline.com/embed/widget.js';
 const AUTH_COOKIE = 'pt7-academy-practice';
 const AUTH_MAX_AGE = 60 * 60 * 24 * 30;
-const PRACTICE_USER = 'ptacademy';
+const PRACTICE_USER = 'pt7academy';
 const PRACTICE_PASSWORD = 'gRaduatE2026';
 
 const hasPracticeCookie = () =>
@@ -23,7 +23,7 @@ const copy = {
   en: {
     title: 'Book studio practice | PT7 Academy',
     description:
-      'Academy students book the PT 7 studio for observation, self practice, and teaching practice.',
+      'Academy students book the PT7 studio for observation, self practice, and teaching practice.',
     kicker: 'PT7 Academy students',
     heading: 'Book studio practice',
     lead: 'Book the studio for observation, self practice, and teaching practice. Studio use is free for 1 year from your course start date.',
@@ -36,7 +36,7 @@ const copy = {
   nl: {
     title: 'Studio boeken voor oefenen | PT7 Academy',
     description:
-      'Academy-studenten boeken de PT 7-studio voor observatie, zelfpraktijk en lespraktijk.',
+      'Academy-studenten boeken de PT7-studio voor observatie, zelfpraktijk en lespraktijk.',
     kicker: 'Studenten van PT7 Academy',
     heading: 'Studio boeken voor oefenen',
     lead: 'Boek de studio voor observatie, zelfpraktijk en lespraktijk. Gebruik van de studio is kosteloos gedurende 1 jaar vanaf de startdatum van je cursus.',

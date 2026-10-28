@@ -16,13 +16,13 @@ const reformerNl: WorkoutDetailData = {
   ...reformer,
   seo: {
     ...reformer.seo,
-    title: 'Wat is Reformer pilates? Gids met voordelen | PT 7',
+    title: 'Wat is Reformer pilates? Gids met voordelen | PT7',
     description:
-      'Gids over Reformer pilates: hoe de slede werkt, de voordelen en voor wie het geschikt is. Boek lessen via de pagina Reformer pilates Amsterdam van PT 7.',
+      'Gids over Reformer pilates: hoe de slede werkt, de voordelen en voor wie het geschikt is. Boek lessen via de pagina Reformer pilates Amsterdam van PT7.',
     keywords:
       'wat is reformer pilates, voordelen reformer pilates, reformer vs matpilates, pilates reformer workout, core kracht pilates, flexibiliteit, houding verbeteren pilates',
     canonical: 'https://www.pt7.nl/reformer-pilates-amsterdam/nl/',
-    ogTitle: 'Wat is Reformer pilates? | Gids van PT 7',
+    ogTitle: 'Wat is Reformer pilates? | Gids van PT7',
     ogDescription:
       'Hoe Reformer pilates werkt, voor wie het geschikt is en hoe het verschilt van matpilates. Boek lessen via de pagina Reformer pilates Amsterdam.',
   },
@@ -41,7 +41,7 @@ const reformerNl: WorkoutDetailData = {
   },
   intro: {
     title: 'Transformeer je lichaam met Reformer pilates',
-    lead: 'Reformer pilates is een dynamische workout voor je hele lichaam waarbij speciale apparatuur zorgt voor weerstand en ondersteuning. Bij PT 7 begeleiden onze ervaren instructeurs je door gecontroleerde, precieze bewegingen die je core versterken, je flexibiliteit verbeteren en je lichaamsbewustzijn vergroten. Wil je een les boeken in onze studio aan het Museumplein? Ga dan naar onze pagina Reformer pilates Amsterdam.',
+    lead: 'Reformer pilates is een dynamische workout voor je hele lichaam waarbij speciale apparatuur zorgt voor weerstand en ondersteuning. Bij PT7 begeleiden onze ervaren instructeurs je door gecontroleerde, precieze bewegingen die je core versterken, je flexibiliteit verbeteren en je lichaamsbewustzijn vergroten. Wil je een les boeken in onze studio aan het Museumplein? Ga dan naar onze pagina Reformer pilates Amsterdam.',
   },
   benefits: {
     title: 'Waarom kiezen voor Reformer pilates?',
@@ -139,13 +139,13 @@ const trxNl: WorkoutDetailData = {
   ...trx,
   seo: {
     ...trx.seo,
-    title: 'Wat is TRX suspension training? Gids | PT 7',
+    title: 'Wat is TRX suspension training? Gids | PT7',
     description:
-      'Gids over TRX suspension training: hoe het werkt, de voordelen en voor wie het geschikt is. Boek lessen in Amsterdam via de pagina TRX training Amsterdam van PT 7.',
+      'Gids over TRX suspension training: hoe het werkt, de voordelen en voor wie het geschikt is. Boek lessen in Amsterdam via de pagina TRX training Amsterdam van PT7.',
     keywords:
       'TRX training Amsterdam, suspension training Amsterdam, TRX Museumplein, functionele fitness Amsterdam, krachttraining, balanstraining, TRX lessen',
     canonical: 'https://www.pt7.nl/trx-training-amsterdam/nl/',
-    ogTitle: 'Wat is TRX suspension training? | Gids van PT 7',
+    ogTitle: 'Wat is TRX suspension training? | Gids van PT7',
     ogDescription: 'Hoe TRX suspension training werkt en voor wie het geschikt is. Boek lessen via de pagina TRX training Amsterdam.',
   },
   breadcrumbName: 'TRX-training',
@@ -220,7 +220,7 @@ const trxNl: WorkoutDetailData = {
   finalCta: {
     ...trx.finalCta,
     title: 'Klaar om TRX te ervaren?',
-    subtitle: 'Ontdek de kracht van suspension training bij PT 7',
+    subtitle: 'Ontdek de kracht van suspension training bij PT7',
     primaryLabel: 'Boek je sessie',
     secondaryLabel: 'Bekijk prijzen',
   },
@@ -230,13 +230,13 @@ const functionalNl: WorkoutDetailData = {
   ...functional,
   seo: {
     ...functional.seo,
-    title: 'Nike krachttraining Amsterdam | PT 7 Pilates Museumplein',
+    title: 'Nike krachttraining Amsterdam | PT7 Pilates Museumplein',
     description:
       'Nike-krachttraining aan het Museumplein in Amsterdam: Olympische halterstang, half rack en dumbbells. Eén-op-één of in kleine groepen (max. 5).',
     keywords:
       'Nike krachttraining Amsterdam, olympisch gewichtheffen Amsterdam, personal training Museumplein, training met halterstang Amsterdam, functionele fitness Amsterdam, Nike sportapparatuur',
     canonical: 'https://www.pt7.nl/workouts/functional-training/nl/',
-    ogTitle: 'Nike krachttraining Amsterdam | PT 7 Pilates',
+    ogTitle: 'Nike krachttraining Amsterdam | PT7 Pilates',
     ogDescription:
       'Hoogwaardige Nike Strength-apparatuur. Training met de Olympische halterstang onder begeleiding van ervaren coaches in onze boutique studio aan het Museumplein.',
   },
@@ -320,7 +320,7 @@ const functionalNl: WorkoutDetailData = {
   finalCta: {
     ...functional.finalCta,
     title: 'Begin met kracht voor het echte leven',
-    subtitle: 'Ervaar krachttraining bij PT 7 Museumplein',
+    subtitle: 'Ervaar krachttraining bij PT7 Museumplein',
     primaryLabel: 'Boek je sessie',
     secondaryLabel: 'Bekijk prijzen',
   },
@@ -330,13 +330,13 @@ const cardioNl: WorkoutDetailData = {
   ...cardio,
   seo: {
     ...cardio.seo,
-    title: 'Cardiotraining Amsterdam | PT 7 Pilates Museumplein',
+    title: 'Cardiotraining Amsterdam | PT7 Pilates Museumplein',
     description:
       'Intensieve cardioworkouts in Amsterdam aan het Museumplein. Meer uithoudingsvermogen, vetverbranding en een gezond hart. HIIT in kleine groepen en één-op-één training!',
     keywords:
       'cardiotraining Amsterdam, HIIT Amsterdam, vetverbrandende workout, conditietraining Museumplein, cardiolessen Amsterdam, hartgezondheid fitness',
     canonical: 'https://www.pt7.nl/workouts/cardio/nl/',
-    ogTitle: 'Cardiotraining Amsterdam | PT 7 Pilates',
+    ogTitle: 'Cardiotraining Amsterdam | PT7 Pilates',
     ogDescription: 'Energieke cardioworkouts om calorieën te verbranden en je conditie op te bouwen. Kleine groepen (max. 5) aan het Museumplein.',
   },
   breadcrumbName: 'Cardiotraining',
@@ -411,7 +411,7 @@ const cardioNl: WorkoutDetailData = {
   finalCta: {
     ...cardio.finalCta,
     title: 'Klaar om je uithoudingsvermogen te vergroten?',
-    subtitle: 'Doe mee met onze energieke cardiolessen bij PT 7',
+    subtitle: 'Doe mee met onze energieke cardiolessen bij PT7',
     primaryLabel: 'Boek je sessie',
     secondaryLabel: 'Bekijk prijzen',
   },

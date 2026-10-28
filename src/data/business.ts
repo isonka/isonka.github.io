@@ -7,11 +7,11 @@ export const SCHEMA_IDS = {
 } as const;
 
 export const business = {
-  name: 'PT 7 Pilates',
+  name: 'PT7 Pilates',
   alternateName: [
-    'PT 7',
+    'PT7',
     'PT Studio 7',
-    'PT 7 - Pilates & Strength Training Amsterdam Zuid',
+    'PT7 - Pilates & Strength Training Amsterdam Zuid',
   ],
   url: BASE_URL,
   logo: `${BASE_URL}/assets/images/pt7logo.webp`,

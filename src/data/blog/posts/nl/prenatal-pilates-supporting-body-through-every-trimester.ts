@@ -4,7 +4,7 @@ import { post as en } from '../prenatal-pilates-supporting-body-through-every-tr
 export const post: BlogPost = {
   ...en,
   title: 'Prenatale pilates: je lichaam ondersteunen in elk trimester',
-  seoTitle: 'Prenatale pilates in elk trimester | PT 7',
+  seoTitle: 'Prenatale pilates in elk trimester | PT7',
   excerpt:
     'Een complete gids per trimester over prenatale pilates in Amsterdam, met bekkenbodemtraining, veilige aanpassingen van bewegingen, alarmsignalen en wanneer je kiest voor privésessies.',
   content: `
@@ -12,10 +12,10 @@ export const post: BlogPost = {
 
       <p>Het korte antwoord: met de juiste begeleiding kan prenatale pilates een van de meest effectieve manieren zijn om tijdens je zwangerschap sterk, soepel en verbonden met je lichaam te blijven. Het gaat er niet om ‘meer’ te trainen, maar om de juiste oefeningen op het juiste moment te doen, met de juiste aanpassingen.</p>
 
-      <p>In deze gids neem ik je mee in de aanpak per trimester die we bij PT 7 in Amsterdam gebruiken: waar je je op richt, wat je vermijdt, hoe je je bekkenbodem slim traint en wanneer privésessies de verstandigste keuze zijn.</p>
+      <p>In deze gids neem ik je mee in de aanpak per trimester die we bij PT7 in Amsterdam gebruiken: waar je je op richt, wat je vermijdt, hoe je je bekkenbodem slim traint en wanneer privésessies de verstandigste keuze zijn.</p>
 
       <div class="blog-figure">
-        <img src="/assets/images/pregnancy1.webp" width="787" height="1400" alt="Prenatale pilates bij PT 7 Amsterdam" />
+        <img src="/assets/images/pregnancy1.webp" width="787" height="1400" alt="Prenatale pilates bij PT7 Amsterdam" />
       </div>
 
       <h2>Waarom prenatale pilates zo goed werkt</h2>
@@ -152,7 +152,7 @@ export const post: BlogPost = {
       <p>Als we zo trainen, vertellen vrouwen vaak dat ze minder een zwaar gevoel hebben, meer vertrouwen in hun blaas, minder ongemak bij de stoelgang en minder angst voor wat er tijdens de bevalling gebeurt. Het helpt ook bij een soepelere overgang naar herstel na de bevalling.</p>
 
       <h2>Waarom prenatale sessies alleen privé zijn</h2>
-      <p>Bij PT 7 bieden we prenatale pilates uitsluitend aan als privétraining. Elke zwangerschap is heel persoonlijk, en een sessie moet worden afgestemd op iemands medische geschiedenis, klachten, trimester en de veranderingen van dag tot dag.</p>
+      <p>Bij PT7 bieden we prenatale pilates uitsluitend aan als privétraining. Elke zwangerschap is heel persoonlijk, en een sessie moet worden afgestemd op iemands medische geschiedenis, klachten, trimester en de veranderingen van dag tot dag.</p>
 
       <h3>Privésessies zijn ideaal als je last hebt van:</h3>
       <ul>
@@ -221,7 +221,7 @@ export const post: BlogPost = {
         <li><a href="/healthcare-providers/nl/">Voor zorgverleners</a>: informatie over doorverwijzen voor fysiotherapeuten, huisartsen en specialisten.</li>
       </ul>
 
-      <p><em>Klaar voor persoonlijke prenatale begeleiding? Bekijk onze <a href="/pricing/nl/">prijzen voor privésessies</a> en <a href="/schedule/nl/">boek je sessie</a> bij PT 7 Museumplein.</em></p>
+      <p><em>Klaar voor persoonlijke prenatale begeleiding? Bekijk onze <a href="/pricing/nl/">prijzen voor privésessies</a> en <a href="/schedule/nl/">boek je sessie</a> bij PT7 Museumplein.</em></p>
     `,
   tags: ['Prenataal', 'Pilates', 'Zwangerschap', 'Vrouwengezondheid', 'Bekkenbodem'],
   metaDescription:

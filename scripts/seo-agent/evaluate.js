@@ -479,7 +479,7 @@ const advisory = [];
 if (brandCrossover) {
   advisory.push({
     type: 'brand-crossover',
-    note: '"pt 7" brand queries now out-number "pt studio 7" in two consecutive 28-day windows. PT7_SEO_PLAN.md decision #6 says to drop "PT Studio 7" from the homepage title/description now (and update the AGENTS.md exception).',
+    note: '"pt7" brand queries now out-number "pt studio 7" in two consecutive 28-day windows. PT7_SEO_PLAN.md decision #6 says to drop "PT Studio 7" from the homepage title/description now (and update the AGENTS.md exception).',
     data: brandCur,
   });
 }
@@ -548,7 +548,7 @@ for (const [label, key] of [['Clicks', 'clicks'], ['Impressions', 'impressions']
   md.push(`| ${label} | ${k.week[key]} | ${delta(k.week[key], k.prevWeek[key])} | ${k.cur28[key]} | ${delta(k.cur28[key], k.prev28[key])} |`);
 }
 md.push(`| Non-brand share | ${pct(k.week.nonbrandShare)} | | ${pct(k.cur28.nonbrandShare)} | (goal ≥30% at 6 months) |`, '');
-md.push(`Brand queries (28d): "pt 7" ${brandCur.pt7.impressions} impr / "pt studio 7" ${brandCur.ptStudio7.impressions} impr${brandCrossover ? ' → **crossover reached**' : ''}`, '');
+md.push(`Brand queries (28d): "pt7" ${brandCur.pt7.impressions} impr / "pt studio 7" ${brandCur.ptStudio7.impressions} impr${brandCrossover ? ' → **crossover reached**' : ''}`, '');
 
 md.push('## Experiments', '');
 const shown = changes.filter((c) => c.verdict !== 'superseded').slice(-15).reverse();

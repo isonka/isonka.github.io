@@ -3,11 +3,11 @@ import type { BlogPost } from '../types.ts';
 export const post: BlogPost = {
   id: '17',
   slug: 'pt-7-moves-to-olympisch-stadion',
-  title: 'PT 7’s Move to Olympisch Stadion Is Postponed',
+  title: 'PT7’s Move to Olympisch Stadion Is Postponed',
   excerpt:
     'A fire at Olympisch Stadion postponed the move. Classes continue at Van Baerlestraat 76C. The planned studio is still Olympisch Stadion 15. A new date will follow.',
   content: `
-      <p>PT 7’s move to Olympisch Stadion 15 is postponed. A fire at the stadium means we cannot open there on 2 November 2026. Classes continue at Van Baerlestraat 76C, including 30 October, 31 October, and 1 November. A new first-class date will follow.</p>
+      <p>PT7’s move to Olympisch Stadion 15 is postponed. A fire at the stadium means we cannot open there on 2 November 2026. Classes continue at Van Baerlestraat 76C, including 30 October, 31 October, and 1 November. A new first-class date will follow.</p>
 
       <div class="blog-callout">
         <h3>What changes</h3>
@@ -38,19 +38,19 @@ export const post: BlogPost = {
 
       <h2>Nederlands</h2>
 
-      <p>PT 7 stelt de verhuizing uit. Een brand in het Olympisch Stadion maakt de geplande opening op 2 november 2026 onmogelijk. Lessen gaan door op Van Baerlestraat 76C, ook op 30 oktober, 31 oktober en 1 november. De nieuwe studio blijft Olympisch Stadion 15, 1076 DE Amsterdam. Een nieuwe datum volgt. De introductie-aanbieding (3 groepslessen voor €50) blijft. Academy-weekenden, inclusief 7–8 november, blijven op de Van Baerlestraat tot de nieuwe verhuisdatum bekend is. Boeken blijft via het <a href="/schedule/nl/">lesrooster</a>.</p>
+      <p>PT7 stelt de verhuizing uit. Een brand in het Olympisch Stadion maakt de geplande opening op 2 november 2026 onmogelijk. Lessen gaan door op Van Baerlestraat 76C, ook op 30 oktober, 31 oktober en 1 november. De nieuwe studio blijft Olympisch Stadion 15, 1076 DE Amsterdam. Een nieuwe datum volgt. De introductie-aanbieding (3 groepslessen voor €50) blijft. Academy-weekenden, inclusief 7–8 november, blijven op de Van Baerlestraat tot de nieuwe verhuisdatum bekend is. Boeken blijft via het <a href="/schedule/nl/">lesrooster</a>.</p>
     `,
-  author: 'PT 7 Team',
+  author: 'PT7 Team',
   date: '2026-09-26',
   dateModified: '2026-10-13',
   image: '/assets/images/olympisch-stadion.webp',
   tags: ['Studio News', 'Olympisch Stadion', 'Amsterdam Zuid'],
   metaDescription:
-    'A fire at Olympisch Stadion postponed PT 7’s move. Classes continue at Van Baerlestraat 76C; Olympisch Stadion 15 is still the plan. New date to follow.',
+    'A fire at Olympisch Stadion postponed PT7’s move. Classes continue at Van Baerlestraat 76C; Olympisch Stadion 15 is still the plan. New date to follow.',
   keywords: [
-    'PT 7 Olympisch Stadion',
+    'PT7 Olympisch Stadion',
     'Pilates Olympisch Stadion',
-    'PT 7 new address',
+    'PT7 new address',
     'Pilates Amsterdam Zuid',
     'Van Baerlestraat Pilates',
   ],

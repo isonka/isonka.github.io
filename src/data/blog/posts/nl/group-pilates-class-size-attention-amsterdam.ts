@@ -5,7 +5,7 @@ import { post as en } from '../group-pilates-class-size-attention-amsterdam.ts';
 export const post: BlogPost = {
   ...en,
   title: 'Waarom een pilatesles met 20 mensen je niet de aandacht kan geven die je nodig hebt',
-  seoTitle: 'Waarom pilateslessen met 20 mensen tekortschieten | PT 7',
+  seoTitle: 'Waarom pilateslessen met 20 mensen tekortschieten | PT7',
   excerpt:
     'Groepsgrootte is een leerbeperking, geen sfeerkwestie. Onderzoek naar motorisch leren laat zien waarom een groep van zo’n 20 mensen zelden de individuele feedback geeft die pilates vraagt, en waarom kleinschalige lessen (max. 5) het verschil maken.',
   content: `
@@ -37,9 +37,9 @@ export const post: BlogPost = {
 
       <p>Een grote groep kan geschikt blijven als je vooral let op betaalbaarheid, kennismaking met basisbewegingen of sociale motivatie, en als je je verwachtingen daarop afstemt. Het is een minder goede keuze als je doel techniek is, revalidatie van een specifiek bewegingspatroon, veilig opbouwen op apparatuur met veren of meetbare verbetering van controle: precies de eigenschappen die pilates in de wetenschappelijke literatuur definiëren.<sup><a href="#ref-1">1</a></sup><sup><a href="#ref-2">2</a></sup></p>
 
-      <h2>Kleinschalig trainen bij PT 7</h2>
+      <h2>Kleinschalig trainen bij PT7</h2>
 
-      <p>Bij PT 7 Amsterdam (${studioStreet}, Museumplein) hebben groepslessen maximaal vijf deelnemers. Die grens is bewust: zo blijft er genoeg tijd om te observeren voor individuele correcties, de keuze van de veren en een opbouw die bij elk lichaam past. Heb je nog intensievere begeleiding nodig, dan zijn er privésessies.</p>
+      <p>Bij PT7 Amsterdam (${studioStreet}, Museumplein) hebben groepslessen maximaal vijf deelnemers. Die grens is bewust: zo blijft er genoeg tijd om te observeren voor individuele correcties, de keuze van de veren en een opbouw die bij elk lichaam past. Heb je nog intensievere begeleiding nodig, dan zijn er privésessies.</p>
 
       <p>Teams van zo’n twintig mensen vragen we niet om als één megales te trainen. Zakelijke en groepsboekingen organiseren we in rondes van kleine groepen in de studio, of als matlessen op locatie op het werk. Zie onze pagina <a href="/corporate/nl/">Voor bedrijven</a>.</p>
 
@@ -56,7 +56,7 @@ export const post: BlogPost = {
     `,
   tags: ['Groepsgrootte', 'Motorisch leren', 'Pilates in kleine groepen', 'Reformer pilates'],
   metaDescription:
-    'Waarom een pilatesles met 20 mensen zelden de feedback geeft die motorisch leren nodig heeft, en waarom kleine lessen (max. 5) bij PT 7 Museumplein werken.',
+    'Waarom een pilatesles met 20 mensen zelden de feedback geeft die motorisch leren nodig heeft, en waarom kleine lessen (max. 5) bij PT7 Museumplein werken.',
   keywords: [
     'pilates kleine groep amsterdam',
     'groepsgrootte pilates',

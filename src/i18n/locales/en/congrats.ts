@@ -1,12 +1,12 @@
 export const enCongrats = {
   seo: {
-    title: 'Booking Confirmed - PT 7 Pilates Amsterdam',
-    description: 'Your class is booked! See you at PT 7 Amsterdam.',
-    keywords: 'PT 7, booking confirmed',
+    title: 'Booking Confirmed - PT7 Pilates Amsterdam',
+    description: 'Your class is booked! See you at PT7 Amsterdam.',
+    keywords: 'PT7, booking confirmed',
     analyticsTitle: 'Booking Confirmed',
   },
   title: 'Booking Confirmed!',
-  message: "You're all set! We can't wait to see you at PT 7.",
+  message: "You're all set! We can't wait to see you at PT7.",
   nextTitle: "What's Next?",
   next: {
     email: '✓ Check your email for booking confirmation and details',
@@ -19,7 +19,7 @@ export const enCongrats = {
   bookAnother: 'Book Another Class',
   packages: 'View Packages',
   home: 'Back to Home',
-  reviewPrompt: 'Enjoyed your experience at PT 7?',
+  reviewPrompt: 'Enjoyed your experience at PT7?',
   reviewButton: 'Leave Us a Google Review',
   questions: 'Questions? Contact us at <email>info@pt7.nl</email>',
 } as const;

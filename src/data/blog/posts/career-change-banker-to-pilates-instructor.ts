@@ -4,7 +4,7 @@ export const post: BlogPost = {
   id: '5',
   slug: 'career-change-banker-to-pilates-instructor',
   title: 'From Banker to Pilates Instructor: How to Make the Career Switch',
-  seoTitle: 'Banker to Pilates Instructor: Career Switch | PT 7',
+  seoTitle: 'Banker to Pilates Instructor: Career Switch | PT7',
   excerpt: 'Tired of spreadsheets and stress? Discover how professionals from banking, tech, and corporate careers are becoming certified Pilates instructors, without quitting their day job first.',
   content: `
       <p>Five years ago, I was sitting in a corner office at a major bank in Amsterdam. Twelve-hour days, endless meetings, and a growing sense that something was missing. Sound familiar?</p>
@@ -15,7 +15,7 @@ export const post: BlogPost = {
 
       <h2>Why Corporate Professionals Make Great Pilates Instructors</h2>
 
-      <p>Here's something that might surprise you: many of the best Pilates instructors don't come from fitness backgrounds. At PT 7 Amsterdam, several of our instructors transitioned from banking, software development, and corporate careers.</p>
+      <p>Here's something that might surprise you: many of the best Pilates instructors don't come from fitness backgrounds. At PT7 Amsterdam, several of our instructors transitioned from banking, software development, and corporate careers.</p>
 
       <p>Why do they excel? Because the skills that made you successful in business translate directly:</p>
 
@@ -33,11 +33,11 @@ export const post: BlogPost = {
 
       <p>But here's what I learned: <strong>you don't have to quit your job to become certified.</strong></p>
 
-      <p>Weekend-only training programs exist specifically for professionals like us. At PT 7 Academy, courses run on Saturdays and Sundays, 12:00-18:00. You keep your income while you train. No dramatic leap required.</p>
+      <p>Weekend-only training programs exist specifically for professionals like us. At PT7 Academy, courses run on Saturdays and Sundays, 12:00-18:00. You keep your income while you train. No dramatic leap required.</p>
 
       <h2>What Does the Certification Process Look Like?</h2>
 
-      <p>The Reformer Pilates Instructor Course at PT 7 Academy is a <strong>300-hour</strong> program, ITTAP approved by the Pilates Method Alliance (PMA). It includes:</p>
+      <p>The Reformer Pilates Instructor Course at PT7 Academy is a <strong>300-hour</strong> program, ITTAP approved by the Pilates Method Alliance (PMA). It includes:</p>
 
       <ul>
         <li>85 hours of lectures and theory (selected weekends, 12:00–18:00)</li>
@@ -55,7 +55,7 @@ export const post: BlogPost = {
 
       <h2>The Part Nobody Talks About: Building Your Client Base</h2>
 
-      <p>Getting certified is one thing. Building a career is another. This is where PT 7 Academy differs from other programs.</p>
+      <p>Getting certified is one thing. Building a career is another. This is where PT7 Academy differs from other programs.</p>
 
       <p><strong>We offer work opportunities at our studio for successful graduates.</strong></p>
 
@@ -103,7 +103,7 @@ export const post: BlogPost = {
 
       <h2>The Next Open Term Starts March 2027</h2>
 
-      <p>PT 7 Academy's Reformer Pilates Instructor Course has an Autumn 2026 term (September–November) and a Winter 2026/27 term (November–January) that are fully booked. The next open term runs March–May 2027 on selected weekends at our Museumplein studio. Lectures are weekend-only (12:00–18:00), so you can keep your weekday job while you train, taught by instructors with 15+ years of experience.</p>
+      <p>PT7 Academy's Reformer Pilates Instructor Course has an Autumn 2026 term (September–November) and a Winter 2026/27 term (November–January) that are fully booked. The next open term runs March–May 2027 on selected weekends at our Museumplein studio. Lectures are weekend-only (12:00–18:00), so you can keep your weekday job while you train, taught by instructors with 15+ years of experience.</p>
 
       <p>If you're curious, reach out. No pressure, no sales pitch, just an honest conversation about whether this path might be right for you.</p>
 
@@ -111,10 +111,10 @@ export const post: BlogPost = {
 
       <p><em>Ready to explore? <a href="/academy/">Pilates teacher training at PT7 Academy</a> or <a href="mailto:info@pt7.nl?subject=Career Change - Reformer Course Inquiry">email us with your questions</a>.</em></p>
     `,
-  author: 'PT 7 Team',
+  author: 'PT7 Team',
   date: '2026-01-23',
   image: '/assets/images/pilates.webp',
-  tags: ['Career Change', 'Pilates Certification', 'PT 7 Academy', 'Lifestyle', 'Work-Life Balance'],
+  tags: ['Career Change', 'Pilates Certification', 'PT7 Academy', 'Lifestyle', 'Work-Life Balance'],
   metaDescription: 'How to move from banking, tech or corporate work into teaching Reformer Pilates: a 300-hour, PMA ITTAP-approved weekend course in Amsterdam.',
   keywords: [
     'career change pilates instructor',

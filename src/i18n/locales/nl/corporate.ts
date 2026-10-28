@@ -3,20 +3,20 @@ import type { EnCorporate } from '../en/corporate';
 
 export const nlCorporate: DeepStringify<EnCorporate> = {
   seo: {
-    title: 'Bedrijfsfitness Amsterdam | Pilates voor bedrijven | PT 7 Pilates',
+    title: 'Bedrijfsfitness Amsterdam | Pilates voor bedrijven | PT7 Pilates',
     description:
       'Bedrijfsfitness en pilates voor bedrijven in Amsterdam: Reformer-sessies aan het Museumplein of matlessen op locatie voor teams. Fiscaal voordelige WKR-opties.',
     keywords:
       'bedrijfsfitness Amsterdam, pilates voor bedrijven Amsterdam, bedrijfssport Amsterdam, corporate wellness Amsterdam, team pilates Amsterdam, pilates op kantoor Amsterdam, WKR pilates, Reformer pilates teams',
-    ogTitle: 'Bedrijfsfitness Amsterdam | Pilates voor bedrijven | PT 7 Pilates',
+    ogTitle: 'Bedrijfsfitness Amsterdam | Pilates voor bedrijven | PT7 Pilates',
     ogDescription:
       'Sterkere ruggen, heldere hoofden, minder ziekteverzuim. Boutique Reformer pilates voor je team, aan het Museumplein of op locatie bij jullie op kantoor.',
-    analyticsTitle: 'Bedrijfsfitness Amsterdam | Voor bedrijven | PT 7 Pilates',
+    analyticsTitle: 'Bedrijfsfitness Amsterdam | Voor bedrijven | PT7 Pilates',
   },
   service: {
     name: 'Bedrijfsfitness pilates Amsterdam',
     description:
-      'Boutique Reformer- en matpilates voor teams, bij PT 7 Museumplein of op locatie bij jullie op kantoor. Kleine groepen (max. 5), gecertificeerde instructeurs, fiscaal voordelige opties voor werkgevers (WKR).',
+      'Boutique Reformer- en matpilates voor teams, bij PT7 Museumplein of op locatie bij jullie op kantoor. Kleine groepen (max. 5), gecertificeerde instructeurs, fiscaal voordelige opties voor werkgevers (WKR).',
     offerStudio: 'Teamsessies in de studio',
     offerOnsite: 'Matpilates op kantoor',
   },
@@ -28,7 +28,7 @@ export const nlCorporate: DeepStringify<EnCorporate> = {
       'Sterkere ruggen, heldere hoofden, minder ziekteverzuim. Boutique Reformer pilates voor je team, in onze studio aan het Museumplein of op locatie bij jullie op kantoor.',
   },
   why: {
-    title: 'Waarom teams trainen bij PT 7',
+    title: 'Waarom teams trainen bij PT7',
     intro:
       'Bureauwerk sloopt je houding: stijve heupen, een stijve nek, pijn in de onderrug. Gecertificeerde instructeurs geven gerichte Reformer- en matlessen in kleine groepen die precies dat tegengaan. Maximaal 5 per les betekent echte aandacht. Meer dan 15 jaar ervaring, op een paar minuten van Zuid.',
     deskTitle: 'Gaat bureauklachten tegen',
@@ -82,6 +82,6 @@ export const nlCorporate: DeepStringify<EnCorporate> = {
     reformer: 'Reformer pilates',
     healthcare: 'Voor zorgverleners',
     pricing: 'Prijzen',
-    back: '← Terug naar PT 7',
+    back: '← Terug naar PT7',
   },
 };

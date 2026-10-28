@@ -5,7 +5,7 @@ export const post: BlogPost = {
   id: '15',
   slug: 'group-pilates-class-size-attention-amsterdam',
   title: 'Why a 20-Person Pilates Class Cannot Give You the Attention You Need',
-  seoTitle: 'Why 20-Person Pilates Classes Fall Short | PT 7',
+  seoTitle: 'Why 20-Person Pilates Classes Fall Short | PT7',
   excerpt:
     'Class size is a learning constraint, not a vibe. Motor-learning research explains why a ~20-person group rarely supplies the individual feedback Pilates requires, and why small-scale sessions (max 5) change the outcome.',
   content: `
@@ -37,9 +37,9 @@ export const post: BlogPost = {
 
       <p>A large group can remain appropriate when the primary aims are affordability, familiarity with basic movement, or social motivation, and when expectations are adjusted accordingly. It is a weaker choice when the aim is technique, rehabilitation of a specific pattern, safe progression on spring-loaded equipment, or measurable improvement in control: the qualities that define Pilates in the academic literature.<sup><a href="#ref-1">1</a></sup><sup><a href="#ref-2">2</a></sup></p>
 
-      <h2>Small-scale practice at PT 7</h2>
+      <h2>Small-scale practice at PT7</h2>
 
-      <p>At PT 7 Amsterdam (${studioStreet}, Museumplein), group sessions are capped at a maximum of five participants. That limit is intentional: it preserves enough observation time for individual correction, spring selection, and progression that matches each body. Private sessions remain available when even closer coaching is required.</p>
+      <p>At PT7 Amsterdam (${studioStreet}, Museumplein), group sessions are capped at a maximum of five participants. That limit is intentional: it preserves enough observation time for individual correction, spring selection, and progression that matches each body. Private sessions remain available when even closer coaching is required.</p>
 
       <p>Teams of roughly twenty people are not asked to train as one mega class. Corporate and group bookings are organised as waves of small groups in the studio, or as on-site mat sessions at the workplace. See our <a href="/corporate/">For Business</a> page.</p>
 
@@ -54,12 +54,12 @@ export const post: BlogPost = {
         <li id="ref-5">Wulf, G., Shea, C., &amp; Lewthwaite, R. (2010). Motor skill learning and performance: A review of influential factors. <em>Medical Education, 44</em>(1), 75–84. <a href="https://doi.org/10.1111/j.1365-2923.2009.03421.x" rel="noopener noreferrer" target="_blank">https://doi.org/10.1111/j.1365-2923.2009.03421.x</a></li>
       </ol>
     `,
-  author: 'PT 7 Team',
+  author: 'PT7 Team',
   date: '2026-09-17',
   image: '/assets/images/studio.webp',
   tags: ['Class Size', 'Motor Learning', 'Small Group Pilates', 'Reformer Pilates'],
   metaDescription:
-    'Why a 20-person Pilates class rarely gives the feedback motor learning needs, and the case for small classes (max 5) at PT 7 Museumplein.',
+    'Why a 20-person Pilates class rarely gives the feedback motor learning needs, and the case for small classes (max 5) at PT7 Museumplein.',
   keywords: [
     'small group pilates amsterdam',
     'pilates class size',

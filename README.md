@@ -1,6 +1,6 @@
-# PT 7 Amsterdam - React Website
+# PT7 Amsterdam - React Website
 
-Modern, maintainable React website for PT 7 Amsterdam, built with TypeScript and Vite.
+Modern, maintainable React website for PT7 Amsterdam, built with TypeScript and Vite.
 
 ## 🚀 Features
 

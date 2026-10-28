@@ -75,7 +75,7 @@ export const post: BlogPost = {
       </ul>
 
       <h2>Opleiden in Amsterdam, echte lesvaardigheden opbouwen</h2>
-      <p>De opleiding van PT7 Academy vindt plaats bij PT 7, ${studioStreet} (Museumplein). Je leert in een actieve boutique studio, met een cultuur van kleine groepen en de diepgang van privésessies.</p>
+      <p>De opleiding van PT7 Academy vindt plaats bij PT7, ${studioStreet} (Museumplein). Je leert in een actieve boutique studio, met een cultuur van kleine groepen en de diepgang van privésessies.</p>
 
       <p><em>Wil je meer weten over data, kosten en inschrijving? Bekijk onze <a href="/academy/nl/">pilates instructeurscursus in Amsterdam</a> of mail <a href="mailto:info@pt7.nl?subject=Vraag%20over%20PMA%20ITTAP-cursus">info@pt7.nl</a> voor de volgende lichting.</em></p>
     `,

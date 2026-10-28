@@ -1,19 +1,19 @@
 export const enCorporate = {
   seo: {
-    title: 'Corporate Pilates Amsterdam | Bedrijfsfitness | PT 7 Pilates',
+    title: 'Corporate Pilates Amsterdam | Bedrijfsfitness | PT7 Pilates',
     description:
       'Corporate Pilates and bedrijfsfitness in Amsterdam: Reformer sessions at Museumplein or on-site mat classes for teams. Tax-friendly WKR options.',
     keywords:
       'corporate Pilates Amsterdam, bedrijfsfitness Amsterdam, corporate wellness Amsterdam, team Pilates Amsterdam, office Pilates Amsterdam, WKR pilates, bedrijfssport Amsterdam, Reformer Pilates teams',
-    ogTitle: 'Corporate Pilates Amsterdam | For Business | PT 7 Pilates',
+    ogTitle: 'Corporate Pilates Amsterdam | For Business | PT7 Pilates',
     ogDescription:
       'Stronger backs, clearer heads, fewer sick days. Boutique Reformer Pilates for your team, at Museumplein or on-site at your office.',
-    analyticsTitle: 'Corporate Pilates Amsterdam | For Business | PT 7 Pilates',
+    analyticsTitle: 'Corporate Pilates Amsterdam | For Business | PT7 Pilates',
   },
   service: {
     name: 'Corporate Pilates Amsterdam',
     description:
-      'Boutique Reformer and mat Pilates for teams, at PT 7 Museumplein or on-site at your office. Small groups (max 5), certified instructors, tax-friendly employer options (WKR).',
+      'Boutique Reformer and mat Pilates for teams, at PT7 Museumplein or on-site at your office. Small groups (max 5), certified instructors, tax-friendly employer options (WKR).',
     offerStudio: 'Studio team sessions',
     offerOnsite: 'On-site office mat Pilates',
   },
@@ -25,7 +25,7 @@ export const enCorporate = {
       'Stronger backs, clearer heads, fewer sick days. Boutique Reformer Pilates for your team, at our Museumplein studio or on-site at your office.',
   },
   why: {
-    title: 'Why teams train with PT 7',
+    title: 'Why teams train with PT7',
     intro:
       'Desk work wrecks posture, tight hips, stiff necks, lower-back pain. Certified instructors run focused small-group Reformer and mat sessions that undo exactly that. Max 5 per class means real attention. 15+ years expertise, minutes from Zuid.',
     deskTitle: 'Undoes desk damage',
@@ -79,7 +79,7 @@ export const enCorporate = {
     reformer: 'Reformer Pilates',
     healthcare: 'For Healthcare',
     pricing: 'Pricing',
-    back: '← Back to PT 7',
+    back: '← Back to PT7',
   },
 } as const;
 

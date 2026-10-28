@@ -1,18 +1,18 @@
 export const enOpeningOffer = {
   seo: {
-    title: 'Move Postponed | Olympisch Stadion | PT 7 Amsterdam',
+    title: 'Move Postponed | Olympisch Stadion | PT7 Amsterdam',
     description:
-      'PT 7’s move to Olympisch Stadion 15 is postponed after a fire at the stadium. Classes continue at Van Baerlestraat 76C. A new date will follow.',
+      'PT7’s move to Olympisch Stadion 15 is postponed after a fire at the stadium. Classes continue at Van Baerlestraat 76C. A new date will follow.',
     keywords:
-      'PT 7 Olympisch Stadion, pilates olympisch stadion, PT 7 move postponed, Van Baerlestraat pilates',
-    ogTitle: 'Move postponed · Olympisch Stadion | PT 7',
+      'PT7 Olympisch Stadion, pilates olympisch stadion, PT7 move postponed, Van Baerlestraat pilates',
+    ogTitle: 'Move postponed · Olympisch Stadion | PT7',
     ogDescription:
       'A fire at Olympisch Stadion postponed the move. Classes continue at Van Baerlestraat. New date to follow.',
-    analyticsTitle: 'Move postponed | PT 7 Pilates Amsterdam',
+    analyticsTitle: 'Move postponed | PT7 Pilates Amsterdam',
   },
   breadcrumb: 'Move update',
   hero: {
-    brand: 'PT 7',
+    brand: 'PT7',
     kicker: 'Studio update · Amsterdam Zuid',
     title: 'Move postponed',
     lead: 'A fire at Olympisch Stadion postponed our move to Olympisch Stadion 15. Classes continue at Van Baerlestraat 76C. A new date will follow.',
@@ -27,7 +27,7 @@ export const enOpeningOffer = {
     seconds: 'Seconds',
     aria: '{{days}} days, {{hours}} hours, {{minutes}} minutes, and {{seconds}} seconds until opening',
   },
-  imageAlt: 'Olympisch Stadion exterior — PT 7’s new Amsterdam Zuid studio',
+  imageAlt: 'Olympisch Stadion exterior — PT7’s new Amsterdam Zuid studio',
   limited: 'Limited · one time only',
   packages: {
     kicker: 'Packages',

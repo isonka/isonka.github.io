@@ -4,14 +4,14 @@ import { post as en } from '../pilates-for-men-strength-flexibility-athletic-per
 export const post: BlogPost = {
   ...en,
   title: 'Pilates voor mannen: kracht, flexibiliteit en betere sportprestaties',
-  seoTitle: 'Pilates voor mannen: kracht & prestaties | PT 7',
+  seoTitle: 'Pilates voor mannen: kracht & prestaties | PT7',
   excerpt:
     'Ontdek waarom topsporters en fanatieke sporters Reformer pilates gebruiken voor kracht in hun core, blessurepreventie en betere prestaties.',
   content: `
       <p>Bij pilates denken veel mensen aan een workout die vooral voor vrouwen is. Toch werd pilates ontwikkeld door Joseph Pilates, een man die de methode ontwierp voor mannelijke sporters, gewonde soldaten en boksers. Vandaag de dag nemen topsporters uit de NBA, de NFL en Olympische teams pilates op in hun trainingsschema.</p>
 
       <div class="blog-figure">
-        <img src="/assets/images/men-pilates.webp" width="1200" height="879" alt="Pilatestraining voor mannen bij PT 7" />
+        <img src="/assets/images/men-pilates.webp" width="1200" height="879" alt="Pilatestraining voor mannen bij PT7" />
       </div>
 
       <h2>Waarom mannen Reformer pilates zouden moeten doen</h2>
@@ -30,7 +30,7 @@ export const post: BlogPost = {
       <p>Voor professionals die uren achter een bureau zitten, gaat pilates een slechte houding, stijve heupbuigers en zwakke bilspieren tegen. Het is een efficiënte workout voor je hele lichaam die disbalans corrigeert en functionele kracht opbouwt.</p>
 
       <h2>Wat je kunt verwachten in je eerste sessie</h2>
-      <p>Bij PT 7 Amsterdam werken onze instructeurs met mannen van elk niveau, van complete beginners tot profsporters. De sessies zijn uitdagend en richten zich op:</p>
+      <p>Bij PT7 Amsterdam werken onze instructeurs met mannen van elk niveau, van complete beginners tot profsporters. De sessies zijn uitdagend en richten zich op:</p>
       <ul>
         <li>Progressieve weerstandstraining op de Reformer</li>
         <li>Core-stabiliteit en rotatiekracht</li>
@@ -51,7 +51,7 @@ export const post: BlogPost = {
       <h2>Privésessies voor persoonlijke doelen</h2>
       <p>Veel mannen beginnen liever met privésessies om aan specifieke wensen te werken, of het nu gaat om herstel van een blessure, prestatiedoelen of gewoon de juiste techniek leren. Onze instructeurs stellen een programma op maat samen dat past bij jouw doelen.</p>
 
-      <p>Benieuwd waarom topsporters op Reformer pilates vertrouwen? Boek je sessie bij PT 7 Amsterdam en ontdek een workout die je kracht uitdaagt en tegelijk je lichaam beschermt.</p>
+      <p>Benieuwd waarom topsporters op Reformer pilates vertrouwen? Boek je sessie bij PT7 Amsterdam en ontdek een workout die je kracht uitdaagt en tegelijk je lichaam beschermt.</p>
     `,
   tags: ['Fitness voor mannen', 'Sportprestaties', 'Blessurepreventie', 'Core-kracht'],
   metaDescription:

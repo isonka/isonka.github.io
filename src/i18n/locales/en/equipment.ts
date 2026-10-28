@@ -7,19 +7,19 @@ export const enEquipment = {
       'pilates equipment, pilates equipment amsterdam, reformer kopen, pilates reformer kopen, pilates apparatuur, pilates apparatuur kopen, sole pilates, sole pilates dealer nederland, tower reformer, cadillac pilates',
     ogTitle: 'Pilates Equipment & Reformer Kopen | Sole Pilates Dealer NL',
     ogDescription:
-      'PT 7 is the official Sole Pilates dealer in the Netherlands. Try Pilates apparatus at our Museumplein studio. Prices on request.',
-    listName: 'Pilates Equipment at PT 7 Amsterdam',
+      'PT7 is the official Sole Pilates dealer in the Netherlands. Try Pilates apparatus at our Museumplein studio. Prices on request.',
+    listName: 'Pilates Equipment at PT7 Amsterdam',
   },
   hero: {
     kicker: 'Equipment',
     title: 'Pilates Equipment in Amsterdam',
-    line: 'Train on Reformer, Tower, Cadillac, and Chair in our classes at Museumplein. Looking to buy? PT 7 is the official Sole Pilates dealer in the Netherlands.',
+    line: 'Train on Reformer, Tower, Cadillac, and Chair in our classes at Museumplein. Looking to buy? PT7 is the official Sole Pilates dealer in the Netherlands.',
   },
   dealer: {
     title: 'Official Sole Pilates dealer in the Netherlands',
     text: 'Equipping a studio or training at home? We advise you on the right apparatus for your space and goals. Try Pilates apparatus in person at our studio at Museumplein, then order through us. Prices on request.',
     dutchNote:
-      'Reformer kopen of andere pilates apparatuur? PT 7 is officieel dealer van Sole Pilates in Nederland. Probeer de apparaten in onze studio aan het Museumplein en vraag vrijblijvend een offerte aan. Prijzen op aanvraag.',
+      'Reformer kopen of andere pilates apparatuur? PT7 is officieel dealer van Sole Pilates in Nederland. Probeer de apparaten in onze studio aan het Museumplein en vraag vrijblijvend een offerte aan. Prijzen op aanvraag.',
     quoteSubject: 'Sole Pilates quote request',
     quoteButton: 'Request a Sole Pilates quote',
   },
@@ -34,14 +34,14 @@ export const enEquipment = {
     learnMore: 'Learn more',
     quote: 'Request a quote',
     quoteSubject: 'Quote request: {{name}}',
-    quoteBody: 'Hi PT 7,\n\nI would like a quote for the {{name}}.\n\nThanks,',
+    quoteBody: 'Hi PT7,\n\nI would like a quote for the {{name}}.\n\nThanks,',
     mostPopular: 'Most popular',
     reformer:
       'The quintessential Pilates apparatus featuring a sliding carriage, springs, and straps for full-body conditioning.',
     towerReformer: 'Combines the reformer with a tower for added vertical spring resistance and exercise variety.',
     cadillac: 'Versatile equipment with overhead bars and springs for advanced stretching and strength work.',
     wundaChair: 'Compact yet powerful equipment for balance, strength, and functional movement training.',
-    ladderBarrel: 'Available for purchase for home or studio use. Sold by PT 7; not used in our client trainings.',
+    ladderBarrel: 'Available for purchase for home or studio use. Sold by PT7; not used in our client trainings.',
   },
   help: {
     title: 'Need help choosing?',
@@ -55,7 +55,7 @@ export const enEquipment = {
     kickerForSale: 'Equipment for sale',
     kickerStudio: 'In the studio',
     titleForSale: '{{name}} for sale',
-    titleStudio: '{{name}} at PT 7 Amsterdam',
+    titleStudio: '{{name}} at PT7 Amsterdam',
     noticeForSale: 'This piece is for purchase and is not used in client sessions. ',
     noticeStudio: 'This is apparatus we use in classes at {{studioStreet}}, Museumplein. ',
     bookReformer: 'Book Reformer Pilates in Amsterdam',
@@ -70,7 +70,7 @@ export const enEquipment = {
       equipmentClasses: 'Book equipment-based Pilates classes',
       studioClasses: 'Book Pilates classes at our studio',
     },
-    faqTrainQ: 'Can I train on the {{name}} at PT 7?',
+    faqTrainQ: 'Can I train on the {{name}} at PT7?',
     faqTrainA: '{{name}} is used in classes at our Museumplein studio. Small groups are a maximum of 5. Book from the schedule.',
     faqSellingQ: 'Is this page selling equipment?',
     faqSellingA:

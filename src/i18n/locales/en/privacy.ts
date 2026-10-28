@@ -1,17 +1,17 @@
 export const enPrivacy = {
   seo: {
-    title: 'Privacy Policy | PT 7 Pilates Amsterdam',
+    title: 'Privacy Policy | PT7 Pilates Amsterdam',
     description:
-      'How PT 7 Amsterdam uses cookies, analytics, advertising, booking widgets, and contact data. GDPR information for visitors of pt7.nl.',
-    keywords: 'PT 7 privacy, cookie policy Amsterdam, AVG, GDPR',
+      'How PT7 Amsterdam uses cookies, analytics, advertising, booking widgets, and contact data. GDPR information for visitors of pt7.nl.',
+    keywords: 'PT7 privacy, cookie policy Amsterdam, AVG, GDPR',
     ogDescription: 'How we use cookies, analytics, ads, booking widgets, and contact data on pt7.nl.',
   },
   breadcrumb: 'Privacy',
   title: 'Privacy policy',
-  updated: 'Last updated 27 August 2026. PT 7 Amsterdam ({{address}}) is controller for this website.',
+  updated: 'Last updated 27 August 2026. PT7 Amsterdam ({{address}}) is controller for this website.',
   who: {
     title: 'Who we are',
-    text: 'PT 7 operates <site>www.pt7.nl</site>. Contact: <email>info@pt7.nl</email> · <phone>+31 685 162693</phone>.',
+    text: 'PT7 operates <site>www.pt7.nl</site>. Contact: <email>info@pt7.nl</email> · <phone>+31 685 162693</phone>.',
   },
   what: {
     title: 'What this site does',

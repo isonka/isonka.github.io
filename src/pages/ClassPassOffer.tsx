@@ -94,7 +94,7 @@ export const ClassPassOffer = () => {
               <div className="card-header">
                 <img
                   src="/assets/images/pt7logo.webp"
-                  alt="PT 7"
+                  alt="PT7"
                   className="pt7-logo"
                   width={40}
                   height={40}

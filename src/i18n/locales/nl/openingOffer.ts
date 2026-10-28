@@ -3,19 +3,19 @@ import type { EnOpeningOffer } from '../en/openingOffer';
 
 export const nlOpeningOffer: DeepStringify<EnOpeningOffer> = {
   seo: {
-    title: 'Verhuizing uitgesteld | Olympisch Stadion | PT 7 Amsterdam',
+    title: 'Verhuizing uitgesteld | Olympisch Stadion | PT7 Amsterdam',
     description:
-      'De verhuizing van PT 7 naar Olympisch Stadion 15 is uitgesteld na een brand in het stadion. Lessen gaan door op Van Baerlestraat 76C. Een nieuwe datum volgt.',
+      'De verhuizing van PT7 naar Olympisch Stadion 15 is uitgesteld na een brand in het stadion. Lessen gaan door op Van Baerlestraat 76C. Een nieuwe datum volgt.',
     keywords:
-      'PT 7 Olympisch Stadion, pilates olympisch stadion, PT 7 verhuizing uitgesteld, Van Baerlestraat pilates',
-    ogTitle: 'Verhuizing uitgesteld · Olympisch Stadion | PT 7',
+      'PT7 Olympisch Stadion, pilates olympisch stadion, PT7 verhuizing uitgesteld, Van Baerlestraat pilates',
+    ogTitle: 'Verhuizing uitgesteld · Olympisch Stadion | PT7',
     ogDescription:
       'Een brand in het Olympisch Stadion stelt de verhuizing uit. Lessen gaan door op de Van Baerlestraat. Nieuwe datum volgt.',
-    analyticsTitle: 'Verhuizing uitgesteld | PT 7 Pilates Amsterdam',
+    analyticsTitle: 'Verhuizing uitgesteld | PT7 Pilates Amsterdam',
   },
   breadcrumb: 'Verhuisupdate',
   hero: {
-    brand: 'PT 7',
+    brand: 'PT7',
     kicker: 'Studioupdate · Amsterdam Zuid',
     title: 'Verhuizing uitgesteld',
     lead: 'Een brand in het Olympisch Stadion stelt onze verhuizing naar Olympisch Stadion 15 uit. Lessen gaan door op Van Baerlestraat 76C. Een nieuwe datum volgt.',
@@ -30,7 +30,7 @@ export const nlOpeningOffer: DeepStringify<EnOpeningOffer> = {
     seconds: 'Seconden',
     aria: 'Nog {{days}} dagen, {{hours}} uur, {{minutes}} minuten en {{seconds}} seconden tot de opening',
   },
-  imageAlt: 'Olympisch Stadion — de nieuwe studio van PT 7 in Amsterdam Zuid',
+  imageAlt: 'Olympisch Stadion — de nieuwe studio van PT7 in Amsterdam Zuid',
   limited: 'Beperkt · eenmalig',
   packages: {
     kicker: 'Pakketten',

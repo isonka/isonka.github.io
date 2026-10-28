@@ -18,7 +18,7 @@ export const Privacy= () => {
   const email = <a href="mailto:info@pt7.nl" />;
 
   useEffect(() => {
-    trackPageView(page.path, 'Privacy Policy | PT 7 Pilates Amsterdam');
+    trackPageView(page.path, 'Privacy Policy | PT7 Pilates Amsterdam');
   }, [page.path]);
 
   return (

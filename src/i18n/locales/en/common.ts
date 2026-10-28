@@ -1,6 +1,6 @@
 export const enCommon = {
   nav: {
-    homeAria: 'PT 7 Home',
+    homeAria: 'PT7 Home',
     bookNow: 'Book Now',
     bookNowAria: 'Book Now: reserve a session',
     bookClassAria: 'Book a class',
@@ -50,7 +50,7 @@ export const enCommon = {
     contact: 'Contact',
     privacy: 'Privacy',
     cookies: 'Cookies',
-    copyright: '© {{year}} PT 7 Amsterdam. All rights reserved.',
+    copyright: '© {{year}} PT7 Amsterdam. All rights reserved.',
     websiteBy: 'Website by',
   },
   moveBanner: {
@@ -60,7 +60,7 @@ export const enCommon = {
     cta: 'Read the update',
   },
   contactMap: {
-    iframeTitle: 'PT 7 Location',
+    iframeTitle: 'PT7 Location',
     consentNote:
       'Google Map loads after statistics or marketing cookies, or if you show it here.',
     showMap: 'Show map',
@@ -98,13 +98,13 @@ export const enCommon = {
   chatbot: {
     openAria: 'Open chat assistant',
     badge: 'Find Your Perfect Class',
-    title: 'PT 7 Assistant',
+    title: 'PT7 Assistant',
     subtitle: 'Find your perfect class',
     closeAria: 'Close chat',
     footer: 'Need help? Call',
-    greeting: "Hi! I'm here to help you find a class and instructor at PT 7. A few quick questions.",
-    askGoal: 'What brings you to PT 7?',
-    restart: "Let's start fresh! What brings you to PT 7?",
+    greeting: "Hi! I'm here to help you find a class and instructor at PT7. A few quick questions.",
+    askGoal: 'What brings you to PT7?',
+    restart: "Let's start fresh! What brings you to PT7?",
     pregnancyIntro:
       'Great! We offer specialized pregnancy Pilates. For safety, we only accept pregnant clients for one-on-one private classes.',
     askExperience: 'Have you done Pilates before?',

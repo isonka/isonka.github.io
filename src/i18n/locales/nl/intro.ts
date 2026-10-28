@@ -3,18 +3,18 @@ import type { EnIntro } from '../en/intro';
 
 export const nlIntro: DeepStringify<EnIntro> = {
   seo: {
-    title: 'Introductiepakket: {{classes}} groepslessen voor {{price}} | PT 7 Pilates',
+    title: 'Introductiepakket: {{classes}} groepslessen voor {{price}} | PT7 Pilates',
     description:
-      'Nieuwe klanten bij PT 7 Museumplein: {{classes}} groepslessen voor {{price}}. Maximaal {{groupMax}} personen, {{minutes}} minuten. Geldig {{weeks}} weken. Online kopen.',
+      'Nieuwe klanten bij PT7 Museumplein: {{classes}} groepslessen voor {{price}}. Maximaal {{groupMax}} personen, {{minutes}} minuten. Geldig {{weeks}} weken. Online kopen.',
     keywords:
       'introductiepakket pilates amsterdam, proefles pilates amsterdam, pilates proefpakket, nieuwe klant pilates amsterdam, reformer pilates introductie museumplein',
-    ogTitle: '{{classes}} groepslessen voor {{price}} | PT 7 Pilates',
+    ogTitle: '{{classes}} groepslessen voor {{price}} | PT7 Pilates',
     ogDescription:
       'Alleen voor nieuwe klanten. {{classes}} groepslessen aan het Museumplein voor {{price}}, geldig {{weeks}} weken.',
-    analyticsTitle: 'Introductieaanbod | PT 7 Pilates Amsterdam',
+    analyticsTitle: 'Introductieaanbod | PT7 Pilates Amsterdam',
   },
   breadcrumb: 'Introductie',
-  imageAlt: 'Instructeur begeleidt een Reformer-klant bij PT 7 Amsterdam',
+  imageAlt: 'Instructeur begeleidt een Reformer-klant bij PT7 Amsterdam',
   badges: {
     clients: 'Alleen nieuwe klanten',
     weeks: 'Geldig {{weeks}} weken',
@@ -52,7 +52,7 @@ export const nlIntro: DeepStringify<EnIntro> = {
     who: {
       question: 'Wie kan dit pakket kopen?',
       answer:
-        'Alleen nieuwe klanten. Train je al bij PT 7, gebruik dan de gewone lessenkaarten en abonnementen.',
+        'Alleen nieuwe klanten. Train je al bij PT7, gebruik dan de gewone lessenkaarten en abonnementen.',
     },
     valid: {
       question: 'Hoe lang is het geldig?',

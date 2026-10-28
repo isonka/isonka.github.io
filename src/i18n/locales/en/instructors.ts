@@ -1,11 +1,11 @@
 export const enInstructors = {
   seo: {
-    title: 'Our Instructors | PT 7 Pilates Amsterdam',
+    title: 'Our Instructors | PT7 Pilates Amsterdam',
     description:
-      'Meet our expert team of certified Pilates and fitness instructors at PT 7 Amsterdam. Master, senior, and junior instructors dedicated to your fitness journey.',
+      'Meet our expert team of certified Pilates and fitness instructors at PT7 Amsterdam. Master, senior, and junior instructors dedicated to your fitness journey.',
     keywords:
       'Pilates instructors Amsterdam, polestar pilates amsterdam, Pilates leraren Amsterdam, gecertificeerde Pilates instructeurs, Pilates teachers Museumplein, Pilates team Oud-Zuid',
-    listName: 'PT 7 Pilates Instructors',
+    listName: 'PT7 Pilates Instructors',
   },
   breadcrumb: 'Instructors',
   kicker: 'The team',
@@ -14,7 +14,7 @@ export const enInstructors = {
   viewProfile: 'View profile →',
   growing: {
     title: 'Our Team is Growing',
-    text: 'New instructors are joining soon. Interested in teaching at PT 7?',
+    text: 'New instructors are joining soon. Interested in teaching at PT7?',
     link: 'Become a Pilates instructor →',
   },
   cta: {

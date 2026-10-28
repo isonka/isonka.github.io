@@ -1,14 +1,14 @@
 export const enReformer = {
   seo: {
-    title: 'Reformer Pilates Amsterdam Zuid | Museumplein | PT 7',
+    title: 'Reformer Pilates Amsterdam Zuid | Museumplein | PT7',
     description:
       'Reformer Pilates in Amsterdam Zuid at Museumplein: small groups (max 5), private sessions and a full apparatus studio. New clients: 3 classes for €50.',
     keywords:
       'reformer pilates amsterdam, reformer pilates amsterdam zuid, pilates amsterdam zuid, pilates oud-zuid, pilates museumkwartier, pilates museumplein, small group pilates amsterdam, boutique pilates amsterdam',
-    ogTitle: 'Reformer Pilates Amsterdam Zuid | PT 7 Museumplein',
+    ogTitle: 'Reformer Pilates Amsterdam Zuid | PT7 Museumplein',
     ogDescription:
       'Boutique Reformer Pilates at Museumplein, Amsterdam Zuid. Small groups (max 5), private sessions, expert instructors.',
-    analyticsTitle: 'Reformer Pilates Amsterdam Zuid | PT 7',
+    analyticsTitle: 'Reformer Pilates Amsterdam Zuid | PT7',
   },
   breadcrumb: 'Reformer Pilates Amsterdam Zuid',
   hero: {
@@ -22,7 +22,7 @@ export const enReformer = {
     cta: 'Book a Reformer Class',
   },
   trust: {
-    imageAlt: 'Instructor coaching a Reformer client at PT 7 Amsterdam',
+    imageAlt: 'Instructor coaching a Reformer client at PT7 Amsterdam',
     priceAnchor: 'Intro: €50 for 3 group classes · from {{memberPrice}} per class on membership',
     reviewSource: 'Google review',
     testimonial: '“Professional, thoughtful, and exactly the Reformer studio I spent two years looking for.”',
@@ -30,13 +30,13 @@ export const enReformer = {
   },
   intro: {
     title: 'Reformer Pilates at Museumplein',
-    p1: 'Looking for Reformer Pilates in Amsterdam Zuid? PT 7 is a boutique studio at {{studioStreet}}, across from the Stedelijk Museum. We focus on equipment-based Reformer training, not crowded mat classes, with instructors who coach form, breath, and progression in every session.',
+    p1: 'Looking for Reformer Pilates in Amsterdam Zuid? PT7 is a boutique studio at {{studioStreet}}, across from the Stedelijk Museum. We focus on equipment-based Reformer training, not crowded mat classes, with instructors who coach form, breath, and progression in every session.',
     p2: 'Small group classes are capped at five people so you still get personal attention. Prefer one-on-one? <private>Private and duo Reformer sessions</private> are available for beginners, athletes, and rehab-minded clients. Pregnancy training is private only: see <prenatal>prenatal Pilates Amsterdam</prenatal>.',
     p3: 'Ready to compare options? See our <pricing>pricing</pricing> and <schedule>live schedule</schedule>.',
   },
   where: {
     title: 'Where we are',
-    p1: 'PT 7 is at {{studioAddress}}, across from the Stedelijk Museum at Museumplein in Amsterdam Oud-Zuid.',
+    p1: 'PT7 is at {{studioAddress}}, across from the Stedelijk Museum at Museumplein in Amsterdam Oud-Zuid.',
     p2: 'The studio is close to Oud-Zuid, the Museumkwartier, the Concertgebouwbuurt, the Vondelpark and De Pijp.',
     hours: 'Studio hours: Monday–Friday {{weekdays}}, Saturday–Sunday {{weekends}}.',
   },
@@ -53,7 +53,7 @@ export const enReformer = {
     nextText: 'After class we can point you to the right mix of group Reformer, private work, or strength/TRX in the same studio.',
   },
   forWhom: {
-    title: 'Who Reformer at PT 7 is for',
+    title: 'Who Reformer at PT7 is for',
     beginnersTitle: 'Beginners',
     beginnersText: 'New to Reformer or Pilates? Start in a max-5 group or book a private intro so you learn form before the room gets busy.',
     localsTitle: 'Expats & locals in Amsterdam Zuid',
@@ -82,7 +82,7 @@ export const enReformer = {
     },
     where: {
       q: 'Where can I take Reformer Pilates in Amsterdam Zuid?',
-      a: 'PT 7 is at {{studioStreet}}, across from the Stedelijk Museum at Museumplein in Oud-Zuid. We specialize in small group Reformer classes (maximum 5 people) and private sessions.',
+      a: 'PT7 is at {{studioStreet}}, across from the Stedelijk Museum at Museumplein in Oud-Zuid. We specialize in small group Reformer classes (maximum 5 people) and private sessions.',
     },
     groupSize: {
       q: 'How many people are in a Reformer class?',

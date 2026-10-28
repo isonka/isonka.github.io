@@ -4,7 +4,7 @@ import { post as en } from '../switching-careers-into-pilates-7-questions.ts';
 export const post: BlogPost = {
   ...en,
   title: 'Overstappen naar pilates? Stel eerst deze 7 vragen',
-  seoTitle: 'Carrièreswitch naar pilates? 7 vragen | PT 7',
+  seoTitle: 'Carrièreswitch naar pilates? 7 vragen | PT7',
   excerpt:
     'Elke dag start er een nieuwe pilates docentenopleiding, en elke opleiding belooft je een echte instructeur te maken. Sommige duren één weekend, andere vier.',
   content: `

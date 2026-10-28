@@ -4,7 +4,7 @@ import { post as en } from '../career-change-banker-to-pilates-instructor.ts';
 export const post: BlogPost = {
   ...en,
   title: 'Van bankier naar pilatesinstructeur: zo maak je de carrièreswitch',
-  seoTitle: 'Van bankier naar pilatesinstructeur | PT 7',
+  seoTitle: 'Van bankier naar pilatesinstructeur | PT7',
   excerpt:
     'Klaar met spreadsheets en stress? Ontdek hoe professionals uit de bankwereld, de tech en het bedrijfsleven gecertificeerd pilatesinstructeur worden, zonder eerst hun baan op te zeggen.',
   content: `
@@ -16,7 +16,7 @@ export const post: BlogPost = {
 
       <h2>Waarom professionals uit het bedrijfsleven goede pilatesinstructeurs worden</h2>
 
-      <p>Dit verrast je misschien: veel van de beste pilatesinstructeurs hebben geen achtergrond in fitness. Bij PT 7 Amsterdam zijn verschillende instructeurs overgestapt vanuit de bankwereld, softwareontwikkeling en het bedrijfsleven.</p>
+      <p>Dit verrast je misschien: veel van de beste pilatesinstructeurs hebben geen achtergrond in fitness. Bij PT7 Amsterdam zijn verschillende instructeurs overgestapt vanuit de bankwereld, softwareontwikkeling en het bedrijfsleven.</p>
 
       <p>Waarom blinken ze uit? Omdat de vaardigheden die je succesvol maakten in het bedrijfsleven direct van pas komen:</p>
 
@@ -34,11 +34,11 @@ export const post: BlogPost = {
 
       <p>Maar dit heb ik geleerd: <strong>je hoeft je baan niet op te zeggen om gecertificeerd te worden.</strong></p>
 
-      <p>Er bestaan opleidingen die alleen in het weekend plaatsvinden, speciaal voor professionals zoals wij. Bij PT 7 Academy lopen de cursussen op zaterdag en zondag, van 12:00 tot 18:00. Je behoudt je inkomen terwijl je de opleiding volgt. Een grote sprong in het diepe is niet nodig.</p>
+      <p>Er bestaan opleidingen die alleen in het weekend plaatsvinden, speciaal voor professionals zoals wij. Bij PT7 Academy lopen de cursussen op zaterdag en zondag, van 12:00 tot 18:00. Je behoudt je inkomen terwijl je de opleiding volgt. Een grote sprong in het diepe is niet nodig.</p>
 
       <h2>Hoe ziet het certificeringstraject eruit?</h2>
 
-      <p>De Reformer Pilates-instructeurscursus van PT 7 Academy is een programma van <strong>300 uur</strong>, ITTAP-goedgekeurd door de Pilates Method Alliance (PMA). Het bestaat uit:</p>
+      <p>De Reformer Pilates-instructeurscursus van PT7 Academy is een programma van <strong>300 uur</strong>, ITTAP-goedgekeurd door de Pilates Method Alliance (PMA). Het bestaat uit:</p>
 
       <ul>
         <li>85 uur colleges en theorie (geselecteerde weekenden, 12:00–18:00)</li>
@@ -56,7 +56,7 @@ export const post: BlogPost = {
 
       <h2>Waar niemand over praat: een klantenbestand opbouwen</h2>
 
-      <p>Gecertificeerd worden is één ding. Een carrière opbouwen is iets anders. Daarin verschilt PT 7 Academy van andere opleidingen.</p>
+      <p>Gecertificeerd worden is één ding. Een carrière opbouwen is iets anders. Daarin verschilt PT7 Academy van andere opleidingen.</p>
 
       <p><strong>Geslaagde afgestudeerden kunnen bij ons in de studio aan de slag.</strong></p>
 
@@ -104,7 +104,7 @@ export const post: BlogPost = {
 
       <h2>De volgende open lichting start in maart 2027</h2>
 
-      <p>De najaarslichting 2026 (september–november) en de winterlichting 2026/27 (november–januari) van de Reformer Pilates-instructeurscursus van PT 7 Academy zijn volgeboekt. De volgende open lichting loopt van maart tot mei 2027 op geselecteerde weekenden in onze studio aan het Museumplein. De colleges zijn alleen in het weekend (12:00–18:00), zodat je doordeweeks kunt blijven werken, en worden gegeven door instructeurs met meer dan 15 jaar ervaring. De colleges zijn in het Engels.</p>
+      <p>De najaarslichting 2026 (september–november) en de winterlichting 2026/27 (november–januari) van de Reformer Pilates-instructeurscursus van PT7 Academy zijn volgeboekt. De volgende open lichting loopt van maart tot mei 2027 op geselecteerde weekenden in onze studio aan het Museumplein. De colleges zijn alleen in het weekend (12:00–18:00), zodat je doordeweeks kunt blijven werken, en worden gegeven door instructeurs met meer dan 15 jaar ervaring. De colleges zijn in het Engels.</p>
 
       <p>Ben je nieuwsgierig? Neem contact op. Geen druk, geen verkooppraatje, gewoon een eerlijk gesprek over de vraag of dit pad bij je past.</p>
 
@@ -112,7 +112,7 @@ export const post: BlogPost = {
 
       <p><em>Klaar om te verkennen? Bekijk de <a href="/academy/nl/">pilates docentenopleiding bij PT7 Academy</a> of <a href="mailto:info@pt7.nl?subject=Carrièreswitch - vraag over Reformer-cursus">mail ons je vragen</a>.</em></p>
     `,
-  tags: ['Carrièreswitch', 'Pilatescertificering', 'PT 7 Academy', 'Levensstijl', 'Balans werk-privé'],
+  tags: ['Carrièreswitch', 'Pilatescertificering', 'PT7 Academy', 'Levensstijl', 'Balans werk-privé'],
   metaDescription:
     'Van de bank, tech of het bedrijfsleven naar lesgeven in Reformer pilates: een PMA ITTAP-goedgekeurde weekendopleiding van 300 uur in Amsterdam.',
   keywords: [

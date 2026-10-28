@@ -22,9 +22,9 @@ History (daily data, snapshots, reports, proposals) is committed to the **`seo-d
   - **neutral** after the full window → closed as *no effect*. That variant is never re-proposed.
 - **Content changes** are scored on impressions relative to the rest of the site (cancels seasonality) plus position.
 - **Unchanged pages**: a CTR at ≤0.6× the site-calibrated expectation gets a snippet *rewrite* from its real queries. Strong or growing pages and target pages with queries at positions 4–20 get *strengthened*.
-- Brand queries ("pt 7", "pt studio 7") are left out of scoring wherever there is enough non-brand data.
+- Brand queries ("pt7", "pt studio 7") are left out of scoring wherever there is enough non-brand data.
 - **Budget:** at most 3 snippet changes and 2 content changes per week, one action per page, and no edits to a page while its experiment is still running. This keeps every effect measurable.
-- **Humans only (reported, never auto-fixed):** cannibalisation, target keyword ranking on the wrong page, low GA4 engagement, the "pt 7" vs "pt studio 7" crossover (plan decision #6), sitemap URLs that 404 or are noindexed.
+- **Humans only (reported, never auto-fixed):** cannibalisation, target keyword ranking on the wrong page, low GA4 engagement, the "pt7" vs "pt studio 7" crossover (plan decision #6), sitemap URLs that 404 or are noindexed.
 
 Tune all thresholds, the target keywords and the frozen pages in `config.js`.
 

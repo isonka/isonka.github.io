@@ -3,7 +3,7 @@ import type { EnCommon } from '../en/common';
 
 export const nlCommon: DeepStringify<EnCommon> = {
   nav: {
-    homeAria: 'PT 7 home',
+    homeAria: 'PT7 home',
     bookNow: 'Boek nu',
     bookNowAria: 'Boek nu: reserveer een sessie',
     bookClassAria: 'Boek een les',
@@ -53,7 +53,7 @@ export const nlCommon: DeepStringify<EnCommon> = {
     contact: 'Contact',
     privacy: 'Privacy',
     cookies: 'Cookies',
-    copyright: '© {{year}} PT 7 Amsterdam. Alle rechten voorbehouden.',
+    copyright: '© {{year}} PT7 Amsterdam. Alle rechten voorbehouden.',
     websiteBy: 'Website door',
   },
   moveBanner: {
@@ -63,7 +63,7 @@ export const nlCommon: DeepStringify<EnCommon> = {
     cta: 'Lees de update',
   },
   contactMap: {
-    iframeTitle: 'Locatie PT 7',
+    iframeTitle: 'Locatie PT7',
     consentNote:
       'De Google-kaart laadt na statistiek- of marketingcookies, of als je hem hier toont.',
     showMap: 'Kaart tonen',
@@ -101,13 +101,13 @@ export const nlCommon: DeepStringify<EnCommon> = {
   chatbot: {
     openAria: 'Chatassistent openen',
     badge: 'Vind jouw perfecte les',
-    title: 'PT 7 assistent',
+    title: 'PT7 assistent',
     subtitle: 'Vind jouw perfecte les',
     closeAria: 'Chat sluiten',
     footer: 'Hulp nodig? Bel',
-    greeting: 'Hoi! Ik help je een les en instructeur bij PT 7 te vinden. Een paar korte vragen.',
-    askGoal: 'Wat brengt je naar PT 7?',
-    restart: 'We beginnen opnieuw! Wat brengt je naar PT 7?',
+    greeting: 'Hoi! Ik help je een les en instructeur bij PT7 te vinden. Een paar korte vragen.',
+    askGoal: 'Wat brengt je naar PT7?',
+    restart: 'We beginnen opnieuw! Wat brengt je naar PT7?',
     pregnancyIntro:
       'Fijn! We bieden speciale zwangerschapspilates. Voor je veiligheid trainen zwangere cliënten bij ons alleen in één-op-één privélessen.',
     askExperience: 'Heb je al eerder pilates gedaan?',

@@ -66,7 +66,7 @@ export const TrainerDetail= () => {
             jobTitle: trainer.structuredData.jobTitle,
             image: trainer.image,
             description: trainer.structuredData.description,
-            worksFor: 'PT 7 Pilates',
+            worksFor: 'PT7 Pilates',
             knowsAbout: trainer.specialties,
             hasCredential: trainer.qualifications,
             sameAs: trainer.slug === 'elif'

@@ -3,11 +3,11 @@ import { post as en } from '../pt-7-moves-to-olympisch-stadion.ts';
 
 export const post: BlogPost = {
   ...en,
-  title: 'Verhuizing van PT 7 naar het Olympisch Stadion uitgesteld',
+  title: 'Verhuizing van PT7 naar het Olympisch Stadion uitgesteld',
   excerpt:
     'Door een brand in het Olympisch Stadion is de verhuizing uitgesteld. De lessen gaan door op Van Baerlestraat 76C. De geplande studio blijft Olympisch Stadion 15. Een nieuwe datum volgt.',
   content: `
-      <p>De verhuizing van PT 7 naar Olympisch Stadion 15 is uitgesteld. Door een brand in het stadion kunnen we daar op 2 november 2026 niet openen. De lessen gaan door op Van Baerlestraat 76C, ook op 30 oktober, 31 oktober en 1 november. Een nieuwe datum voor de eerste les daar volgt.</p>
+      <p>De verhuizing van PT7 naar Olympisch Stadion 15 is uitgesteld. Door een brand in het stadion kunnen we daar op 2 november 2026 niet openen. De lessen gaan door op Van Baerlestraat 76C, ook op 30 oktober, 31 oktober en 1 november. Een nieuwe datum voor de eerste les daar volgt.</p>
 
       <div class="blog-callout">
         <h3>Wat er verandert</h3>
@@ -38,11 +38,11 @@ export const post: BlogPost = {
     `,
   tags: ['Studionieuws', 'Olympisch Stadion', 'Amsterdam Zuid'],
   metaDescription:
-    'Door een brand in het Olympisch Stadion is de verhuizing van PT 7 uitgesteld. Lessen gaan door op Van Baerlestraat 76C; Olympisch Stadion 15 blijft het plan.',
+    'Door een brand in het Olympisch Stadion is de verhuizing van PT7 uitgesteld. Lessen gaan door op Van Baerlestraat 76C; Olympisch Stadion 15 blijft het plan.',
   keywords: [
-    'PT 7 Olympisch Stadion',
+    'PT7 Olympisch Stadion',
     'pilates Olympisch Stadion',
-    'PT 7 nieuw adres',
+    'PT7 nieuw adres',
     'pilates Amsterdam Zuid',
     'pilates Van Baerlestraat',
   ],

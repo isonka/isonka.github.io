@@ -74,7 +74,7 @@ export const BlogPost= () => {
             image: post.image,
             datePublished: post.date,
             dateModified: post.dateModified ?? post.date,
-            authorName: post.author === 'PT 7 Team' ? 'Elif Arzu Ogan' : post.author,
+            authorName: post.author === 'PT7 Team' ? 'Elif Arzu Ogan' : post.author,
             keywords: post.keywords,
             url: page.canonical,
             inLanguage: locale,

@@ -1,12 +1,12 @@
 # Contact Studio Skill
 
-Provide direct contact and location for PT 7 Amsterdam.
+Provide direct contact and location for PT7 Amsterdam.
 
 ## Facts
 
-- **Name**: PT 7
-- **Also known as**: PT Studio 7 (former public name; same studio). Google Business: PT 7 - Pilates & Strength Training Amsterdam Zuid (https://www.google.com/maps?cid=16450626326549634329)
-- **SEO name**: PT 7 Pilates
+- **Name**: PT7
+- **Also known as**: PT Studio 7 (former public name; same studio). Google Business: PT7 - Pilates & Strength Training Amsterdam Zuid (https://www.google.com/maps?cid=16450626326549634329)
+- **SEO name**: PT7 Pilates
 - **Address**: Van Baerlestraat 76C, 1071 BB Amsterdam (Museumplein, across from Stedelijk Museum)
 - **Phone**: +31 685 162693
 - **Email**: info@pt7.nl

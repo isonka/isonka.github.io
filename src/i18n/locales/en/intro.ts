@@ -1,17 +1,17 @@
 export const enIntro = {
   seo: {
-    title: 'Intro pack: {{classes}} group classes for {{price}} | PT 7 Pilates Amsterdam',
+    title: 'Intro pack: {{classes}} group classes for {{price}} | PT7 Pilates Amsterdam',
     description:
-      'New clients at PT 7 Museumplein: {{classes}} small-group classes for {{price}}. Max {{groupMax}} people, {{minutes}} minutes. Valid {{weeks}} weeks. Buy online.',
+      'New clients at PT7 Museumplein: {{classes}} small-group classes for {{price}}. Max {{groupMax}} people, {{minutes}} minutes. Valid {{weeks}} weeks. Buy online.',
     keywords:
       'intro pilates amsterdam, pilates intro pack amsterdam, proefles pilates amsterdam, new client pilates amsterdam, reformer pilates trial museumplein',
-    ogTitle: '{{classes}} group classes for {{price}} | PT 7 Pilates',
+    ogTitle: '{{classes}} group classes for {{price}} | PT7 Pilates',
     ogDescription:
       'New clients only. {{classes}} small-group classes at Museumplein for {{price}}, valid {{weeks}} weeks.',
-    analyticsTitle: 'Intro offer | PT 7 Pilates Amsterdam',
+    analyticsTitle: 'Intro offer | PT7 Pilates Amsterdam',
   },
   breadcrumb: 'Intro offer',
-  imageAlt: 'Instructor coaching a Reformer client at PT 7 Amsterdam',
+  imageAlt: 'Instructor coaching a Reformer client at PT7 Amsterdam',
   badges: {
     clients: 'New clients only',
     weeks: 'Valid {{weeks}} weeks',
@@ -49,7 +49,7 @@ export const enIntro = {
     who: {
       question: 'Who can buy this pack?',
       answer:
-        'New clients only. If you already train at PT 7, use the regular class packs and memberships.',
+        'New clients only. If you already train at PT7, use the regular class packs and memberships.',
     },
     valid: {
       question: 'How long is it valid?',

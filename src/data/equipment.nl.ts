@@ -33,8 +33,8 @@ const nlText: Record<string, EquipmentText> = {
   reformer: {
     name: 'Pilates Reformer',
     seo: {
-      title: 'Reformer pilatesapparatuur bij PT 7 Amsterdam | In de studio',
-      description: `De Reformer die we gebruiken in groeps- en privélessen bij PT 7, ${studioStreet}, Museumplein. Specificaties van het apparaat in de studio en hoe je een les boekt.`,
+      title: 'Reformer pilatesapparatuur bij PT7 Amsterdam | In de studio',
+      description: `De Reformer die we gebruiken in groeps- en privélessen bij PT7, ${studioStreet}, Museumplein. Specificaties van het apparaat in de studio en hoe je een les boekt.`,
       keywords: 'pilates reformer apparatuur, reformer pilates amsterdam, pilates apparaat museumplein, tower reformer studio',
     },
     imageAlts: [
@@ -84,8 +84,8 @@ const nlText: Record<string, EquipmentText> = {
   'tower-reformer': {
     name: 'Tower Reformer',
     seo: {
-      title: 'Tower Reformer bij PT 7 Amsterdam | Apparaat in de studio',
-      description: `De Tower Reformer die we in lessen gebruiken bij PT 7, ${studioStreet}, Museumplein, Amsterdam Oud-Zuid. Specificaties van het apparaat in de studio en hoe je een les boekt.`,
+      title: 'Tower Reformer bij PT7 Amsterdam | Apparaat in de studio',
+      description: `De Tower Reformer die we in lessen gebruiken bij PT7, ${studioStreet}, Museumplein, Amsterdam Oud-Zuid. Specificaties van het apparaat in de studio en hoe je een les boekt.`,
       keywords: 'tower reformer, tower reformer pilates, reformer met tower amsterdam, pilatesapparatuur museumplein',
     },
     imageAlts: [
@@ -135,8 +135,8 @@ const nlText: Record<string, EquipmentText> = {
   cadillac: {
     name: 'Combo Cadillac',
     seo: {
-      title: 'Cadillac pilates Amsterdam | In de studio bij PT 7',
-      description: `De Cadillac (Trapeze Table) die we in lessen gebruiken bij PT 7, ${studioStreet}, Museumplein. Specificaties van het apparaat in de studio en hoe je een les boekt.`,
+      title: 'Cadillac pilates Amsterdam | In de studio bij PT7',
+      description: `De Cadillac (Trapeze Table) die we in lessen gebruiken bij PT7, ${studioStreet}, Museumplein. Specificaties van het apparaat in de studio en hoe je een les boekt.`,
       keywords: 'cadillac pilates amsterdam, trapeze table amsterdam, pilates cadillac museumplein',
     },
     imageAlts: [
@@ -187,8 +187,8 @@ const nlText: Record<string, EquipmentText> = {
   'wunda-chair': {
     name: 'Wunda Chair',
     seo: {
-      title: 'Wunda Chair bij PT 7 Amsterdam | Apparaat in de studio',
-      description: `De Wunda Chair die we in lessen gebruiken bij PT 7, ${studioStreet}, Museumplein. Specificaties van het apparaat in de studio en hoe je een les boekt.`,
+      title: 'Wunda Chair bij PT7 Amsterdam | Apparaat in de studio',
+      description: `De Wunda Chair die we in lessen gebruiken bij PT7, ${studioStreet}, Museumplein. Specificaties van het apparaat in de studio en hoe je een les boekt.`,
       keywords: 'wunda chair pilates, pilates chair amsterdam, pilatesapparatuur museumplein',
     },
     imageAlts: [
@@ -236,9 +236,9 @@ const nlText: Record<string, EquipmentText> = {
   'ladder-barrel': {
     name: 'Ladder Barrel',
     seo: {
-      title: 'Ladder Barrel te koop | PT 7 Pilates Amsterdam',
+      title: 'Ladder Barrel te koop | PT7 Pilates Amsterdam',
       description:
-        'Koop een professionele pilates Ladder Barrel in Amsterdam. Specificaties en bestellen voor thuis of in de studio. Verkocht door PT 7; niet gebruikt in onze lessen.',
+        'Koop een professionele pilates Ladder Barrel in Amsterdam. Specificaties en bestellen voor thuis of in de studio. Verkocht door PT7; niet gebruikt in onze lessen.',
       keywords: 'Ladder Barrel te koop, pilates barrel kopen Amsterdam, pilatesapparatuur kopen Nederland, professioneel pilatesapparaat',
     },
     imageAlts: [
@@ -262,7 +262,7 @@ const nlText: Record<string, EquipmentText> = {
       'Gewicht: ca. 40 kg',
     ],
     description:
-      'De Ladder Barrel ondersteunt extensie van de wervelkolom, rekoefeningen en flexibiliteitswerk met een gebogen barrel en een ladder. Via PT 7 te koop voor thuis of in de studio. We verkopen dit apparaat; het maakt geen deel uit van onze reguliere lessen aan het Museumplein.',
+      'De Ladder Barrel ondersteunt extensie van de wervelkolom, rekoefeningen en flexibiliteitswerk met een gebogen barrel en een ladder. Via PT7 te koop voor thuis of in de studio. We verkopen dit apparaat; het maakt geen deel uit van onze reguliere lessen aan het Museumplein.',
     specs: [
       { label: 'Frame', value: 'Constructie van massief hout' },
       { label: 'Barrel', value: 'Glad, gebogen oppervlak met vulling' },
@@ -282,7 +282,7 @@ const nlText: Record<string, EquipmentText> = {
         answer: 'De Ladder Barrel heeft ongeveer 1,5 x 1,5 m vloeroppervlak nodig voor veilig gebruik.',
       },
       {
-        question: 'Gebruiken jullie de Ladder Barrel in de lessen van PT 7?',
+        question: 'Gebruiken jullie de Ladder Barrel in de lessen van PT7?',
         answer:
           'Nee. We verkopen de Ladder Barrel voor gebruik thuis of in een studio. In onze studio aan het Museumplein trainen cliënten op Reformers, de Tower Reformer, de Cadillac, de Wunda Chair en vergelijkbare apparaten, niet op de Ladder Barrel.',
       },

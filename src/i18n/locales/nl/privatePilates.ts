@@ -3,15 +3,15 @@ import type { EnPrivatePilates } from '../en/privatePilates';
 
 export const nlPrivatePilates: DeepStringify<EnPrivatePilates> = {
   seo: {
-    title: 'Privé pilates les Amsterdam | 1-op-1 Reformer | PT 7',
+    title: 'Privé pilates les Amsterdam | 1-op-1 Reformer | PT7',
     description:
       'Privé- en duolessen Reformer pilates aan het Museumplein, Amsterdam Zuid, vanaf {{privateFrom}}. De volle aandacht van je instructeur en een programma op maat.',
     keywords:
       'privé pilates amsterdam, prive pilates les amsterdam, privéles pilates amsterdam, private pilates amsterdam, personal pilates amsterdam, privé reformer pilates, prive pilates amsterdam zuid, prive pilates museumplein',
-    ogTitle: 'Privé pilates les Amsterdam | Vanaf {{privateFrom}} | PT 7',
+    ogTitle: 'Privé pilates les Amsterdam | Vanaf {{privateFrom}} | PT7',
     ogDescription:
       'Privélessen op de Reformer aan het Museumplein vanaf {{privateFrom}}. Eén-op-één of duo, met de volle aandacht van je instructeur.',
-    analyticsTitle: 'Privé pilates les Amsterdam (NL) | PT 7',
+    analyticsTitle: 'Privé pilates les Amsterdam (NL) | PT7',
   },
   breadcrumb: 'Privé pilates Amsterdam',
   hero: {
@@ -25,7 +25,7 @@ export const nlPrivatePilates: DeepStringify<EnPrivatePilates> = {
     cta: 'Boek een privéles',
   },
   trust: {
-    imageAlt: 'Privéles Reformer pilates bij PT 7',
+    imageAlt: 'Privéles Reformer pilates bij PT7',
     priceAnchor: 'Privé vanaf {{privateFrom}} · één-op-één of duo',
     reviewSource: 'Google-review',
     testimonial: '“Warm, gastvrij en vol zorg. Ik ga na elke les sterker en met een glimlach naar huis.”',
@@ -34,8 +34,8 @@ export const nlPrivatePilates: DeepStringify<EnPrivatePilates> = {
   intro: {
     title: 'Waarom privé pilates?',
     p1: 'Groepslessen zijn energiek en gezellig, maar een instructeur kan maar een beperkte hoeveelheid aandacht verdelen over vijf mensen. In een privéles valt die grens helemaal weg. Je instructeur heeft maar één taak: jouw les zo effectief mogelijk maken, speciaal voor jou.',
-    p2: 'Bij PT 7 zijn privélessen het format waar we het meest trots op zijn. Elk programma bouwen we vanaf nul op na een intakegesprek over je doelen, bewegingsgeschiedenis, blessures en agenda. De les ontwikkelt zich week na week, naarmate je kracht, mobiliteit en lichaamsbewustzijn groeien.',
-    p3: 'Of je nu een beginner bent die de techniek goed wil leren, een sporter die beter wil presteren en blessures wil voorkomen, iemand die herstelt van een rugblessure of operatie, of zwanger of net bevallen bent en specialistische begeleiding zoekt (zie <prenatal>prenatale pilates</prenatal>): privélessen bij PT 7 zijn gericht op echt resultaat, niet alleen een goede workout.',
+    p2: 'Bij PT7 zijn privélessen het format waar we het meest trots op zijn. Elk programma bouwen we vanaf nul op na een intakegesprek over je doelen, bewegingsgeschiedenis, blessures en agenda. De les ontwikkelt zich week na week, naarmate je kracht, mobiliteit en lichaamsbewustzijn groeien.',
+    p3: 'Of je nu een beginner bent die de techniek goed wil leren, een sporter die beter wil presteren en blessures wil voorkomen, iemand die herstelt van een rugblessure of operatie, of zwanger of net bevallen bent en specialistische begeleiding zoekt (zie <prenatal>prenatale pilates</prenatal>): privélessen bij PT7 zijn gericht op echt resultaat, niet alleen een goede workout.',
     p4: 'We werken met klassieke pilatesapparaten: Reformer, Tower Reformer, Cadillac, Wunda Chair en Spine Corrector. Je instructeur kiest per fase van je programma de juiste apparaten. Liever in een kleine groep trainen? Bekijk <reformer>Reformer pilates in Amsterdam Zuid</reformer>.',
   },
   formats: {
@@ -75,11 +75,11 @@ export const nlPrivatePilates: DeepStringify<EnPrivatePilates> = {
     },
     price: {
       q: 'Wat kost een privéles pilates in Amsterdam?',
-      a: 'Privélessen op de Reformer bij PT 7 beginnen bij {{privateFrom}}. Met een 20-lessenkaart betaal je bij een junior instructeur {{privatePack20}} per les. Duolessen beginnen bij {{coupleFrom}} per persoon. Alle tarieven staan op de prijzenpagina.',
+      a: 'Privélessen op de Reformer bij PT7 beginnen bij {{privateFrom}}. Met een 20-lessenkaart betaal je bij een junior instructeur {{privatePack20}} per les. Duolessen beginnen bij {{coupleFrom}} per persoon. Alle tarieven staan op de prijzenpagina.',
     },
     equipment: {
       q: 'Welke apparaten worden gebruikt in privélessen?',
-      a: 'Afhankelijk van je doelen gebruik je in een privéles bij PT 7 de Reformer, Tower Reformer, Cadillac (Trapeze Table), Wunda Chair en Spine Corrector. Je instructeur kiest per les de meest geschikte apparaten.',
+      a: 'Afhankelijk van je doelen gebruik je in een privéles bij PT7 de Reformer, Tower Reformer, Cadillac (Trapeze Table), Wunda Chair en Spine Corrector. Je instructeur kiest per les de meest geschikte apparaten.',
     },
   },
   cta: {

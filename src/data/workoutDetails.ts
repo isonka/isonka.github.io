@@ -137,13 +137,13 @@ export const workoutDetails: WorkoutDetailData[] = [
   {
     slug: 'reformer-pilates',
     seo: {
-      title: 'What Is Reformer Pilates? Benefits Guide | PT 7',
+      title: 'What Is Reformer Pilates? Benefits Guide | PT7',
       description:
-        'Guide to Reformer Pilates: how the carriage works, the benefits, and who it suits. Book classes on the Reformer Pilates Amsterdam page at PT 7.',
+        'Guide to Reformer Pilates: how the carriage works, the benefits, and who it suits. Book classes on the Reformer Pilates Amsterdam page at PT7.',
       keywords:
         'what is reformer pilates, reformer pilates benefits, reformer vs mat pilates, pilates reformer workout, core strength pilates, flexibility training, posture correction pilates',
       canonical: 'https://www.pt7.nl/reformer-pilates-amsterdam/',
-      ogTitle: 'What Is Reformer Pilates? | PT 7 Guide',
+      ogTitle: 'What Is Reformer Pilates? | PT7 Guide',
       ogDescription:
         'How Reformer Pilates works, who it suits, and how it differs from mat. Book classes on the Reformer Pilates Amsterdam page.',
       ogImage: '/assets/images/studio.webp',
@@ -166,7 +166,7 @@ export const workoutDetails: WorkoutDetailData[] = [
     intro: {
       title: 'Transform Your Body with Reformer Pilates',
       lead:
-        'Reformer Pilates is a dynamic, full-body workout that uses specialized equipment to create resistance and support. At PT 7, our expert instructors guide you through controlled, precise movements that strengthen your core, improve flexibility, and enhance your overall body awareness. To book a class at our Museumplein studio, visit our Reformer Pilates Amsterdam page.',
+        'Reformer Pilates is a dynamic, full-body workout that uses specialized equipment to create resistance and support. At PT7, our expert instructors guide you through controlled, precise movements that strengthen your core, improve flexibility, and enhance your overall body awareness. To book a class at our Museumplein studio, visit our Reformer Pilates Amsterdam page.',
     },
     benefits: {
       title: 'Why Choose Reformer Pilates?',
@@ -264,11 +264,11 @@ export const workoutDetails: WorkoutDetailData[] = [
   {
     slug: 'trx',
     seo: {
-      title: 'What Is TRX Suspension Training? Guide | PT 7',
-      description: 'Guide to TRX suspension training: how it works, benefits, and who it suits. To book classes in Amsterdam, use the TRX Training Amsterdam page at PT 7.',
+      title: 'What Is TRX Suspension Training? Guide | PT7',
+      description: 'Guide to TRX suspension training: how it works, benefits, and who it suits. To book classes in Amsterdam, use the TRX Training Amsterdam page at PT7.',
       keywords: 'TRX training Amsterdam, suspension training Amsterdam, TRX Museumplein, functional fitness Amsterdam, strength training, balance training, TRX classes',
       canonical: 'https://www.pt7.nl/trx-training-amsterdam/',
-      ogTitle: 'What Is TRX Suspension Training? | PT 7 Guide',
+      ogTitle: 'What Is TRX Suspension Training? | PT7 Guide',
       ogDescription: 'How TRX suspension training works and who it suits. Book classes on the TRX Training Amsterdam page.',
       ogImage: '/assets/images/trx.webp',
     },
@@ -346,7 +346,7 @@ export const workoutDetails: WorkoutDetailData[] = [
     ],
     finalCta: {
       title: 'Ready to Experience TRX?',
-      subtitle: 'Discover the power of suspension training at PT 7',
+      subtitle: 'Discover the power of suspension training at PT7',
       primaryLabel: 'Book Your Session',
       primaryTo: '/schedule/',
       secondaryLabel: 'View Pricing',
@@ -356,11 +356,11 @@ export const workoutDetails: WorkoutDetailData[] = [
   {
     slug: 'functional-training',
     seo: {
-      title: 'Nike Strength Training Amsterdam | PT 7 Pilates Museumplein',
+      title: 'Nike Strength Training Amsterdam | PT7 Pilates Museumplein',
       description: 'Nike strength training at Museumplein, Amsterdam: Olympic barbell, half rack and dumbbells. Coached one-on-one or in small groups (max 5).',
       keywords: 'Nike strength training Amsterdam, olympic lifting Amsterdam, one-on-one training Museumplein, barbell training Amsterdam, functional fitness Amsterdam, Nike gym equipment',
       canonical: 'https://www.pt7.nl/workouts/functional-training/',
-      ogTitle: 'Nike Strength Training Amsterdam | PT 7 Pilates',
+      ogTitle: 'Nike Strength Training Amsterdam | PT7 Pilates',
       ogDescription: 'Premium Nike Strength equipment. Olympic barbell training with expert coaches at our boutique Museumplein studio.',
       ogImage: '/assets/images/og-share.webp',
     },
@@ -445,7 +445,7 @@ export const workoutDetails: WorkoutDetailData[] = [
     ],
     finalCta: {
       title: 'Start Building Real-World Strength',
-      subtitle: 'Experience strength training at PT 7 Museumplein',
+      subtitle: 'Experience strength training at PT7 Museumplein',
       primaryLabel: 'Book Your Session',
       primaryTo: '/schedule/',
       secondaryLabel: 'View Pricing',
@@ -455,11 +455,11 @@ export const workoutDetails: WorkoutDetailData[] = [
   {
     slug: 'cardio',
     seo: {
-      title: 'Cardio Training Amsterdam | PT 7 Pilates Museumplein',
+      title: 'Cardio Training Amsterdam | PT7 Pilates Museumplein',
       description: 'High-intensity cardio workouts in Amsterdam at Museumplein. Boost endurance, burn fat, improve heart health. Small group HIIT classes & one-on-one training!',
       keywords: 'cardio training Amsterdam, HIIT Amsterdam, fat burning workout, endurance training Museumplein, cardio classes Amsterdam, heart health fitness',
       canonical: 'https://www.pt7.nl/workouts/cardio/',
-      ogTitle: 'Cardio Training Amsterdam | PT 7 Pilates',
+      ogTitle: 'Cardio Training Amsterdam | PT7 Pilates',
       ogDescription: 'High-energy cardio workouts to burn calories and build endurance. Small groups (max 5) at Museumplein.',
       ogImage: '/assets/images/cardio.webp',
     },
@@ -536,7 +536,7 @@ export const workoutDetails: WorkoutDetailData[] = [
     ],
     finalCta: {
       title: 'Ready to Boost Your Endurance?',
-      subtitle: 'Join our high-energy cardio classes at PT 7',
+      subtitle: 'Join our high-energy cardio classes at PT7',
       primaryLabel: 'Book Your Session',
       primaryTo: '/schedule/',
       secondaryLabel: 'View Pricing',

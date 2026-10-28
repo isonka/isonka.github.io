@@ -66,7 +66,7 @@ export const enAcademy = {
     accreditation: '300 hours · ITTAP approved by the <strong>{{pmaName}}</strong> · 4 weekends · {{hours}}',
     upcomingTermsTitle: 'Upcoming Term Schedules',
     upcomingTermsText:
-      'Lectures are not held every weekend. Each term runs on four selected weekends at PT 7, Museumplein, Amsterdam. Each lecture weekend runs {{hours}}. Autumn 2026 and Winter 2026/27 are fully booked. Enroll now for Spring 2027. Anatomy is included in the Reformer course (Pilates Introduction & Anatomy weekend).',
+      'Lectures are not held every weekend. Each term runs on four selected weekends at PT7, Museumplein, Amsterdam. Each lecture weekend runs {{hours}}. Autumn 2026 and Winter 2026/27 are fully booked. Enroll now for Spring 2027. Anatomy is included in the Reformer course (Pilates Introduction & Anatomy weekend).',
     feeTitle: 'Course Fee',
     standardFeeLabel: 'Standard Fee',
     feeAmount: '€2,000',
@@ -170,7 +170,7 @@ export const enAcademy = {
     },
     realStudio: {
       title: 'Real boutique studio',
-      text: 'Training at PT 7 Museumplein, where clients book Reformer, private, and small-group sessions every week. You learn where you will teach.',
+      text: 'Training at PT7 Museumplein, where clients book Reformer, private, and small-group sessions every week. You learn where you will teach.',
     },
     assessmentPath: {
       title: 'Clear assessment path',

@@ -10,7 +10,7 @@ const faqs = [
   {
     question: 'Wat kost een privésessie pilates in Amsterdam?',
     answer:
-      'Privésessies kosten meestal €60–120, afhankelijk van de ervaring van de instructeur en de locatie van de studio. Bij PT 7 beginnen privé Reformer-sessies bij €70. Met een 20-lessenkaart betaal je voor een junior-instructeur €60 per les. Privésessies bij boutique studio’s in Amsterdam kosten vaak €90–120.',
+      'Privésessies kosten meestal €60–120, afhankelijk van de ervaring van de instructeur en de locatie van de studio. Bij PT7 beginnen privé Reformer-sessies bij €70. Met een 20-lessenkaart betaal je voor een junior-instructeur €60 per les. Privésessies bij boutique studio’s in Amsterdam kosten vaak €90–120.',
   },
   {
     question: 'Is een abonnement of een lessenkaart voordeliger?',
@@ -27,7 +27,7 @@ const faqs = [
 export const post: BlogPost = {
   ...en,
   title: 'Pilates prijzen Amsterdam 2026: complete kostenvergelijking',
-  seoTitle: 'Pilates prijzen Amsterdam 2026: kostengids | PT 7',
+  seoTitle: 'Pilates prijzen Amsterdam 2026: kostengids | PT7',
   excerpt:
     'Wat kost pilates in Amsterdam? We onderzochten meer dan 20 studio’s voor een compleet prijsoverzicht van groepslessen, privésessies en abonnementen in 2026.',
   content: `
@@ -42,7 +42,7 @@ export const post: BlogPost = {
         <ul>
           <li><strong>Gemiddelde groepsles:</strong> €30-45 per les</li>
           <li><strong>Gemiddelde privésessie:</strong> €70-100 per sessie</li>
-          <li><strong>Privésessies bij PT 7:</strong> vanaf €70, met 20-lessenkaarten vanaf €60</li>
+          <li><strong>Privésessies bij PT7:</strong> vanaf €70, met 20-lessenkaarten vanaf €60</li>
           <li><strong>Meerprijs boutique studio:</strong> 20-40% hoger dan sportschoolketens</li>
           <li><strong>Beste prijs-kwaliteit:</strong> lessenkaarten van 10-20 lessen geven 15-25% korting</li>
           <li><strong>Groepsgrootte telt:</strong> kleinere groepen (4-5 personen) hebben een hogere prijs</li>
@@ -156,9 +156,9 @@ export const post: BlogPost = {
 
       <p>Naast de workout zelf bouwt pilates functionele kracht op die je merkt in het dagelijks leven: boodschappen dragen, trappen lopen, spelen met je kinderen. Je krijgt meer controle over je lichaam, een betere houding en een sterkere core die alles ondersteunt wat je doet. Veel cliënten zijn verrast hoeveel sterker ze zich na een paar weken al voelen, ook als ze al jaren naar de sportschool gaan.</p>
 
-      <p>Onze cliënten bij PT 7 vertellen dat ze door regelmatig pilates minder vaak naar de fysiotherapeut hoeven, beter slapen, van chronische pijnklachten af zijn en een lichaamsbewustzijn hebben gekregen dat ze nooit eerder hadden. Zie je het als een investering in kracht, controle en preventieve gezondheid in plaats van ‘gewoon sporten’, dan verandert het perspectief flink.</p>
+      <p>Onze cliënten bij PT7 vertellen dat ze door regelmatig pilates minder vaak naar de fysiotherapeut hoeven, beter slapen, van chronische pijnklachten af zijn en een lichaamsbewustzijn hebben gekregen dat ze nooit eerder hadden. Zie je het als een investering in kracht, controle en preventieve gezondheid in plaats van ‘gewoon sporten’, dan verandert het perspectief flink.</p>
 
-      <p><em>Op zoek naar een pilatessessie die is afgestemd op jouw wensen en doelen? Privé Reformer-sessies bij PT 7 Museumplein beginnen bij €70, met één-op-één aandacht van ervaren instructeurs. <a href="/pricing/nl/">Bekijk onze pakketten voor privésessies</a> of <a href="/schedule/nl/">boek je eerste sessie</a>.</em></p>
+      <p><em>Op zoek naar een pilatessessie die is afgestemd op jouw wensen en doelen? Privé Reformer-sessies bij PT7 Museumplein beginnen bij €70, met één-op-één aandacht van ervaren instructeurs. <a href="/pricing/nl/">Bekijk onze pakketten voor privésessies</a> of <a href="/schedule/nl/">boek je eerste sessie</a>.</em></p>
 
       <h2>Veelgestelde vragen</h2>
 ${faqs.map((faq) => `      <h3>${faq.question}</h3>\n      <p>${faq.answer}</p>`).join('\n')}

@@ -3,14 +3,14 @@ import type { EnHealthcare } from '../en/healthcare';
 
 export const nlHealthcare: DeepStringify<EnHealthcare> = {
   seo: {
-    title: 'Pilates voor revalidatie Amsterdam | PT 7 Pilates',
+    title: 'Pilates voor revalidatie Amsterdam | PT7 Pilates',
     description:
-      'Voor fysiotherapeuten en huisartsen: verwijs cliënten door naar PT 7 voor pilates en functionele training na revalidatie. Kleine groepen (max. 5) en privé aan het Museumplein.',
+      'Voor fysiotherapeuten en huisartsen: verwijs cliënten door naar PT7 voor pilates en functionele training na revalidatie. Kleine groepen (max. 5) en privé aan het Museumplein.',
     keywords:
       'fysiotherapeut doorverwijzing Amsterdam, pilates na revalidatie, beweegprogramma Amsterdam, pilates fysiotherapie, doorverwijzen pilates Amsterdam',
     ogDescription:
-      'Werk samen met PT 7. Verwijs je cliënten door voor pilates en functionele training na revalidatie. Kleine groepen, ervaren instructeurs.',
-    analyticsTitle: 'Voor zorgverleners - PT 7 Pilates Amsterdam',
+      'Werk samen met PT7. Verwijs je cliënten door voor pilates en functionele training na revalidatie. Kleine groepen, ervaren instructeurs.',
+    analyticsTitle: 'Voor zorgverleners - PT7 Pilates Amsterdam',
   },
   service: {
     name: 'Pilates voor revalidatie Amsterdam',
@@ -22,7 +22,7 @@ export const nlHealthcare: DeepStringify<EnHealthcare> = {
   breadcrumb: 'Voor zorgverleners',
   hero: {
     title: 'Pilates voor revalidatie Amsterdam',
-    subtitle: 'Verwijs je cliënten door naar PT 7',
+    subtitle: 'Verwijs je cliënten door naar PT7',
     description:
       'Werk samen met een boutique pilates- en fitnessstudio in Amsterdam. Wij zijn een vertrouwde plek voor je cliënten na hun revalidatie, met pilates, functionele training en sessies in kleine groepen die gericht zijn op herstel en kracht op de lange termijn.',
   },
@@ -91,7 +91,7 @@ export const nlHealthcare: DeepStringify<EnHealthcare> = {
     text: 'Mail of WhatsApp ons met de naam van je cliënt en een korte notitie. Wij doen de rest.',
     email: 'Verwijs door via e-mail',
     emailSubject: 'Doorverwijzing - zorgverlener',
-    whatsappText: 'Hoi, ik wil graag een cliënt doorverwijzen naar PT 7.',
+    whatsappText: 'Hoi, ik wil graag een cliënt doorverwijzen naar PT7.',
     note: '{{address}} (Museumplein, Oud-Zuid)',
   },
   related: {
@@ -99,6 +99,6 @@ export const nlHealthcare: DeepStringify<EnHealthcare> = {
     reformer: 'Reformer pilates',
     elif: 'Profiel van Elif Arzu Ogan',
     goknur: 'Profiel van Göknur Dipli',
-    back: '← Terug naar PT 7',
+    back: '← Terug naar PT7',
   },
 };

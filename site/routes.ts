@@ -41,7 +41,7 @@ const FIXED_PAGES: Route[] = [
       lastmod: '2026-09-14',
       changefreq: 'weekly',
       priority: '1.0',
-      image: image('pt7logo.webp', 'PT 7 Pilates Amsterdam - Reformer Pilates Studio Museumplein'),
+      image: image('pt7logo.webp', 'PT7 Pilates Amsterdam - Reformer Pilates Studio Museumplein'),
     },
   },
   { path: '/nl/', prerender: true, sitemap: { lastmod: '2026-09-14', changefreq: 'weekly', priority: '1.0' } },
@@ -53,9 +53,9 @@ const FIXED_PAGES: Route[] = [
     prerender: true,
     sitemap: { lastmod: '2026-09-25', changefreq: 'monthly', priority: '0.8' },
     meta: {
-      title: 'Intro pack: 3 group classes for €50 | PT 7 Pilates Amsterdam',
+      title: 'Intro pack: 3 group classes for €50 | PT7 Pilates Amsterdam',
       description:
-        'New clients at PT 7 Museumplein: 3 small-group classes for €50. Max 5 people, 45 minutes. Valid 3 weeks. Buy online.',
+        'New clients at PT7 Museumplein: 3 small-group classes for €50. Max 5 people, 45 minutes. Valid 3 weeks. Buy online.',
     },
   },
   {
@@ -63,9 +63,9 @@ const FIXED_PAGES: Route[] = [
     prerender: true,
     sitemap: { lastmod: '2026-09-25', changefreq: 'monthly', priority: '0.8' },
     meta: {
-      title: 'Introductiepakket: 3 groepslessen voor €50 | PT 7 Pilates',
+      title: 'Introductiepakket: 3 groepslessen voor €50 | PT7 Pilates',
       description:
-        'Nieuwe klanten bij PT 7 Museumplein: 3 groepslessen voor €50. Maximaal 5 personen, 45 minuten. Geldig 3 weken. Online kopen.',
+        'Nieuwe klanten bij PT7 Museumplein: 3 groepslessen voor €50. Maximaal 5 personen, 45 minuten. Geldig 3 weken. Online kopen.',
     },
   },
   {
@@ -75,12 +75,12 @@ const FIXED_PAGES: Route[] = [
       lastmod: '2026-10-13',
       changefreq: 'weekly',
       priority: '0.6',
-      image: image('olympisch-stadion.webp', 'Olympisch Stadion — PT 7 move postponed'),
+      image: image('olympisch-stadion.webp', 'Olympisch Stadion — PT7 move postponed'),
     },
     meta: {
-      title: 'Move Postponed | Olympisch Stadion | PT 7 Amsterdam',
+      title: 'Move Postponed | Olympisch Stadion | PT7 Amsterdam',
       description:
-        'PT 7’s move to Olympisch Stadion 15 is postponed after a fire at the stadium. Classes continue at Van Baerlestraat 76C.',
+        'PT7’s move to Olympisch Stadion 15 is postponed after a fire at the stadium. Classes continue at Van Baerlestraat 76C.',
     },
   },
   {
@@ -88,9 +88,9 @@ const FIXED_PAGES: Route[] = [
     prerender: true,
     sitemap: { lastmod: '2026-10-13', changefreq: 'weekly', priority: '0.6' },
     meta: {
-      title: 'Verhuizing uitgesteld | Olympisch Stadion | PT 7 Amsterdam',
+      title: 'Verhuizing uitgesteld | Olympisch Stadion | PT7 Amsterdam',
       description:
-        'De verhuizing van PT 7 naar Olympisch Stadion 15 is uitgesteld na een brand in het stadion. Lessen gaan door op Van Baerlestraat 76C.',
+        'De verhuizing van PT7 naar Olympisch Stadion 15 is uitgesteld na een brand in het stadion. Lessen gaan door op Van Baerlestraat 76C.',
     },
   },
   { path: '/schedule/', prerender: true, sitemap: { lastmod: '2026-09-15', changefreq: 'daily', priority: '0.9' } },
@@ -137,14 +137,14 @@ const EQUIPMENT_OVERRIDES: Record<string, Partial<SitemapEntry>> = {
 
 const TRAINER_SITEMAP: SitemapEntry = { lastmod: '2026-03-10', changefreq: 'monthly', priority: '0.7' };
 const TRAINER_OVERRIDES: Record<string, Partial<SitemapEntry>> = {
-  elif: { image: image('elif.webp', 'Elif Arzu Ogan - Owner & Head Instructor PT 7') },
+  elif: { image: image('elif.webp', 'Elif Arzu Ogan - Owner & Head Instructor PT7') },
   kelly: {
     lastmod: '2026-10-24',
-    image: image('kelly.webp', 'Kelly Tin - Reformer Pilates Instructor PT 7'),
+    image: image('kelly.webp', 'Kelly Tin - Reformer Pilates Instructor PT7'),
   },
   gamze: {
     lastmod: '2026-08-23',
-    image: image('gamze.webp', 'E. Gamze Karadağ - Reformer Pilates Instructor PT 7'),
+    image: image('gamze.webp', 'E. Gamze Karadağ - Reformer Pilates Instructor PT7'),
   },
 };
 

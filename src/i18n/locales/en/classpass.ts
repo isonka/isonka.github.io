@@ -1,11 +1,11 @@
 export const enClasspass = {
   seo: {
-    title: 'ClassPass Transition Offer | PT 7 Pilates Amsterdam',
+    title: 'ClassPass Transition Offer | PT7 Pilates Amsterdam',
     description:
-      'A clear transition offer for ClassPass clients moving to PT 7 direct pricing. Compare costs and claim 20% off eligible first purchases.',
+      'A clear transition offer for ClassPass clients moving to PT7 direct pricing. Compare costs and claim 20% off eligible first purchases.',
     keywords: 'ClassPass Amsterdam, Pilates ClassPass, ClassPass offer, Pilates membership Amsterdam',
-    ogTitle: 'ClassPass Clients: PT 7 Direct Offer',
-    ogDescription: 'Compare ClassPass costs with PT 7 direct pricing and claim your transition discount.',
+    ogTitle: 'ClassPass Clients: PT7 Direct Offer',
+    ogDescription: 'Compare ClassPass costs with PT7 direct pricing and claim your transition discount.',
   },
   breadcrumb: 'ClassPass Offer',
   faq: {
@@ -28,7 +28,7 @@ export const enClasspass = {
   },
   hero: {
     badge: 'For ClassPass Clients',
-    title: 'Prefer PT 7?<br/>Book Direct.',
+    title: 'Prefer PT7?<br/>Book Direct.',
     subtitle:
       'If you already train with us through ClassPass, this page shows the direct pricing difference and your transition discount.',
     cta: 'View Offer Details',

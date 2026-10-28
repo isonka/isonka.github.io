@@ -3,12 +3,12 @@ import type { EnInstructors } from '../en/instructors';
 
 export const nlInstructors: DeepStringify<EnInstructors> = {
   seo: {
-    title: 'Onze instructeurs | PT 7 Pilates Amsterdam',
+    title: 'Onze instructeurs | PT7 Pilates Amsterdam',
     description:
-      'Maak kennis met ons team van gecertificeerde pilates- en fitnessinstructeurs bij PT 7 Amsterdam. Master-, senior- en junior-instructeurs die je helpen je doelen te bereiken.',
+      'Maak kennis met ons team van gecertificeerde pilates- en fitnessinstructeurs bij PT7 Amsterdam. Master-, senior- en junior-instructeurs die je helpen je doelen te bereiken.',
     keywords:
       'pilates instructeurs Amsterdam, pilates leraren Amsterdam, gecertificeerde pilates instructeurs, polestar pilates amsterdam, pilatesdocenten Museumplein, pilates team Oud-Zuid',
-    listName: 'Pilatesinstructeurs van PT 7',
+    listName: 'Pilatesinstructeurs van PT7',
   },
   breadcrumb: 'Instructeurs',
   kicker: 'Het team',
@@ -17,7 +17,7 @@ export const nlInstructors: DeepStringify<EnInstructors> = {
   viewProfile: 'Bekijk profiel →',
   growing: {
     title: 'Ons team groeit',
-    text: 'Binnenkort komen er nieuwe instructeurs bij. Wil jij lesgeven bij PT 7?',
+    text: 'Binnenkort komen er nieuwe instructeurs bij. Wil jij lesgeven bij PT7?',
     link: 'Word pilatesinstructeur →',
   },
   cta: {

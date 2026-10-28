@@ -57,8 +57,8 @@ export const equipmentProducts: EquipmentProduct[] = [
     slug: 'reformer',
     name: 'Pilates Reformer',
     seo: {
-      title: 'Reformer Pilates Equipment at PT 7 Amsterdam | In-Studio',
-      description: `The Reformer used in small-group and private classes at PT 7, ${studioStreet}, Museumplein. Specs of the in-studio apparatus and how to book a class.`,
+      title: 'Reformer Pilates Equipment at PT7 Amsterdam | In-Studio',
+      description: `The Reformer used in small-group and private classes at PT7, ${studioStreet}, Museumplein. Specs of the in-studio apparatus and how to book a class.`,
       keywords: 'pilates reformer equipment, reformer pilates amsterdam, pilates apparatus museumplein, tower reformer studio',
     },
     images: [
@@ -111,8 +111,8 @@ export const equipmentProducts: EquipmentProduct[] = [
     slug: 'tower-reformer',
     name: 'Tower Reformer',
     seo: {
-      title: 'Tower Reformer at PT 7 Amsterdam | In-Studio Apparatus',
-      description: `Tower Reformer used in classes at PT 7, ${studioStreet}, Museumplein, Amsterdam Oud-Zuid. Specs of the in-studio apparatus and how to book a class.`,
+      title: 'Tower Reformer at PT7 Amsterdam | In-Studio Apparatus',
+      description: `Tower Reformer used in classes at PT7, ${studioStreet}, Museumplein, Amsterdam Oud-Zuid. Specs of the in-studio apparatus and how to book a class.`,
       keywords: 'tower reformer, tower reformer pilates, reformer with tower amsterdam, pilates equipment museumplein',
     },
     images: [
@@ -165,8 +165,8 @@ export const equipmentProducts: EquipmentProduct[] = [
     slug: 'cadillac',
     name: 'Combo Cadillac',
     seo: {
-      title: 'Cadillac Pilates Amsterdam | In-Studio at PT 7',
-      description: `Cadillac (Trapeze Table) used in classes at PT 7, ${studioStreet}, Museumplein. Specs of the in-studio apparatus and how to book a class.`,
+      title: 'Cadillac Pilates Amsterdam | In-Studio at PT7',
+      description: `Cadillac (Trapeze Table) used in classes at PT7, ${studioStreet}, Museumplein. Specs of the in-studio apparatus and how to book a class.`,
       keywords: 'cadillac pilates amsterdam, trapeze table amsterdam, pilates cadillac museumplein',
     },
     images: [
@@ -217,8 +217,8 @@ export const equipmentProducts: EquipmentProduct[] = [
     slug: 'wunda-chair',
     name: 'Wunda Chair',
     seo: {
-      title: 'Wunda Chair at PT 7 Amsterdam | In-Studio Apparatus',
-      description: `Wunda Chair used in classes at PT 7, ${studioStreet}, Museumplein. Specs of the in-studio apparatus and how to book a class.`,
+      title: 'Wunda Chair at PT7 Amsterdam | In-Studio Apparatus',
+      description: `Wunda Chair used in classes at PT7, ${studioStreet}, Museumplein. Specs of the in-studio apparatus and how to book a class.`,
       keywords: 'wunda chair pilates, pilates chair amsterdam, pilates equipment museumplein',
     },
     images: [
@@ -265,8 +265,8 @@ export const equipmentProducts: EquipmentProduct[] = [
     slug: 'ladder-barrel',
     name: 'Ladder Barrel',
     seo: {
-      title: 'Ladder Barrel for Sale | PT 7 Pilates Amsterdam',
-      description: 'Buy a professional Pilates Ladder Barrel in Amsterdam. Specs and ordering for home or studio use. Sold by PT 7; not used in our client training sessions.',
+      title: 'Ladder Barrel for Sale | PT7 Pilates Amsterdam',
+      description: 'Buy a professional Pilates Ladder Barrel in Amsterdam. Specs and ordering for home or studio use. Sold by PT7; not used in our client training sessions.',
       keywords: 'Ladder Barrel for sale, Pilates barrel for sale Amsterdam, buy Pilates equipment Netherlands, professional Pilates apparatus',
     },
     images: [
@@ -288,7 +288,7 @@ export const equipmentProducts: EquipmentProduct[] = [
       'Dimensions: 90 x 75 x 90 cm',
       'Weight: approx. 40 kg',
     ],
-    description: 'The Ladder Barrel supports spinal extension, stretching, and flexibility work with a curved barrel and ladder. Available for sale through PT 7 for home or studio use. We sell this apparatus; it is not part of our regular client training sessions at Museumplein.',
+    description: 'The Ladder Barrel supports spinal extension, stretching, and flexibility work with a curved barrel and ladder. Available for sale through PT7 for home or studio use. We sell this apparatus; it is not part of our regular client training sessions at Museumplein.',
     specs: [
       { label: 'Frame', value: 'Solid wood construction' },
       { label: 'Barrel', value: 'Smooth curved surface with padding' },
@@ -308,7 +308,7 @@ export const equipmentProducts: EquipmentProduct[] = [
         answer: 'The Ladder Barrel requires approximately 1.5m x 1.5m of floor space for safe use.',
       },
       {
-        question: 'Do you use the Ladder Barrel in PT 7 classes?',
+        question: 'Do you use the Ladder Barrel in PT7 classes?',
         answer: 'No. We sell the Ladder Barrel for home or studio purchase. Client trainings at our Museumplein studio use Reformers, Tower Reformer, Cadillac, Wunda Chair, and related apparatus, not the Ladder Barrel.',
       },
       commonFAQ[1],

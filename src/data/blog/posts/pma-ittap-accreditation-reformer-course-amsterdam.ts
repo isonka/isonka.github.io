@@ -74,11 +74,11 @@ export const post: BlogPost = {
       </ul>
 
       <h2>Train in Amsterdam, Build Real Teaching Skills</h2>
-      <p>PT7 Academy training takes place at PT 7, ${studioStreet} (Museumplein). You learn inside an active boutique studio context with small-group culture and private-session depth.</p>
+      <p>PT7 Academy training takes place at PT7, ${studioStreet} (Museumplein). You learn inside an active boutique studio context with small-group culture and private-session depth.</p>
 
       <p><em>Want details on dates, fees, and enrollment? Visit our <a href="/academy/">Pilates instructor course in Amsterdam</a> or email <a href="mailto:info@pt7.nl?subject=PMA%20ITTAP%20Course%20Inquiry">info@pt7.nl</a> for the next intake.</em></p>
     `,
-  author: 'PT 7 Team',
+  author: 'PT7 Team',
   date: '2026-07-29',
   image: '/assets/images/reformer_1.webp',
   tags: ['PMA ITTAP', 'Pilates Teacher Training', 'PT7 Academy', 'Reformer Instructor Course'],

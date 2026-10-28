@@ -21,7 +21,7 @@ export const WorkoutDetail= () => {
 
   useEffect(() => {
     if (workout) {
-      trackPageView(page.path, `${workout.hero.title} - PT 7 Pilates`);
+      trackPageView(page.path, `${workout.hero.title} - PT7 Pilates`);
       void ensureHealcodeLoaded();
     }
   }, [workout, page.path]);

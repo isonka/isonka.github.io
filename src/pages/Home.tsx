@@ -70,10 +70,10 @@ const trainers = [
 const REVIEW_KEYS = ['lot', 'flaminia', 'maya', 'yesim', 'ayse'] as const;
 
 const reviewsData = [
-  { author: 'Lot Canter Cremers', reviewBody: 'Through a neighbor in my building I was introduced to PT 7...', ratingValue: 5 },
-  { author: 'Ayşe', reviewBody: "I've been training at PT 7 for a while now...", ratingValue: 5 },
+  { author: 'Lot Canter Cremers', reviewBody: 'Through a neighbor in my building I was introduced to PT7...', ratingValue: 5 },
+  { author: 'Ayşe', reviewBody: "I've been training at PT7 for a while now...", ratingValue: 5 },
   { author: 'Maya', reviewBody: "This is a truly special Pilates Reformer studio...", ratingValue: 5 },
-  { author: 'Flaminia', reviewBody: "PT 7 and Elif are exactly what I was looking for...", ratingValue: 5 },
+  { author: 'Flaminia', reviewBody: "PT7 and Elif are exactly what I was looking for...", ratingValue: 5 },
 ];
 
 function TrainerTile({

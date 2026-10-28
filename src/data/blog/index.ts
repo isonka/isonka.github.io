@@ -45,7 +45,7 @@ export const blogPostsNl: BlogPost[] = [
 
 export const blogPostsFor = (locale: BlogLocale): BlogPost[] => (locale === 'nl' ? blogPostsNl : blogPosts);
 
-export const blogSeoTitle = (post: BlogPost): string => post.seoTitle ?? `${post.title} | PT 7`;
+export const blogSeoTitle = (post: BlogPost): string => post.seoTitle ?? `${post.title} | PT7`;
 
 export const getBlogPostBySlug = (slug: string, locale: BlogLocale = 'en'): BlogPost | undefined => {
   return blogPostsFor(locale).find(post => post.slug === slug);

@@ -13,7 +13,7 @@ What holds it back:
 | Issue | Evidence | Impact |
 | --- | --- | --- |
 | Zero third-party links beyond USC | No press, no PPN listing, no PMA directory hit, no Sole dealer-locator link found | Google has no reason to rank pt7.nl over aggregators |
-| Brand split | "PT Studio 7" on USC, "PT 7" on the new site | Branded search is diluted; GBP name unclear |
+| Brand split | "PT Studio 7" on USC, "PT7" on the new site | Branded search is diluted; GBP name unclear |
 | Bare and trailing-slash URLs both indexed | Search Console lists `/pricing` and `/pricing/`, `/trainer/elif` and `/trainer/elif/`; the client-side normalizer does not stop Google indexing the bare path | Signals split across two URLs per page |
 | NL pages thin | /nl/ is 450–700 words vs 1,100+ on EN; reviews on /nl/ are in English | Dutch queries (opleiding, rugklachten, kopen) under-served |
 | GBP under-used | 33 reviews at 4.8, yet local queries sit at positions 6–8 with zero clicks | Map pack is where local Pilates searches convert |
@@ -103,7 +103,7 @@ For a studio, the map pack beats the organic ten blue links. Most "pilates amste
 
 Google Business Profile:
 
-- [ ] Settle the name once: "PT 7 - Pilates & Strength Training Amsterdam Zuid" was the plan. Use exactly that on GBP, USC, ClassPass, Instagram, Facebook, LinkedIn and the site footer. Keep "PT Studio 7" only as an alias in schema `alternateName`.
+- [ ] Settle the name once: "PT7 - Pilates & Strength Training Amsterdam Zuid" was the plan. Use exactly that on GBP, USC, ClassPass, Instagram, Facebook, LinkedIn and the site footer. Keep "PT Studio 7" only as an alias in schema `alternateName`.
 - [ ] Primary category: Pilates studio. Secondary: Personal trainer, Physical fitness program, Training centre (for the Academy).
 - [ ] Services list: one entry per lander (Reformer Pilates, Private Pilates, Prenatal, TRX, Strength, Instructor Course, Equipment sales) each linking to its page.
 - [ ] Reviews: 33 at 4.8 today. Target 75 in 90 days. You have \~20 private students at 1.5 sessions/week and sold-out Academy cohorts: ask every graduate and every private client in person, then WhatsApp the short link. Ask for Dutch-language reviews that mention "reformer" or "opleiding". Reply to every review within 48 hours.
@@ -123,7 +123,7 @@ On 21 Oct 2026 a ClassPass search for Pilates at postcode 1071 BB, the studio's 
 - [ ] Inventory: keep bookable spots visible for the next 7 days, especially 7–9am and 17–19h. Sync the 10-person cap so spots show rather than "full".
 - [ ] Reviews on ClassPass: ask the regulars who book through it. Rating is 4.9; count is what moves rank.
 - [ ] Profile: 8+ photos, description naming reformer, Museumplein and Oud-Zuid, full amenities list.
-- [ ] Name: "PT 7" to match GBP and the site.
+- [ ] Name: "PT7" to match GBP and the site.
 
 No paid placement exists on ClassPass. Re-check the same search monthly from the studio postcode.
 

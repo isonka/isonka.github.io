@@ -1,14 +1,14 @@
 export const enSchedule = {
   seo: {
-    title: 'Pilates Classes Amsterdam Zuid | Book Online | PT 7',
+    title: 'Pilates Classes Amsterdam Zuid | Book Online | PT7',
     description:
       'Live class schedule at Museumplein, Amsterdam Zuid: Reformer Pilates, TRX and strength in small groups (max 5) or privates at {{studioStreet}}. Book online.',
     keywords:
       'pilates classes amsterdam, pilates classes near me, Pilates boeken Amsterdam, Pilates rooster Amsterdam, Pilates reserveren, TRX boeken Amsterdam, les boeken Museumplein, Pilates schedule Amsterdam, groepsles boeken, reformer pilates book amsterdam',
-    ogTitle: 'Pilates Classes Amsterdam Zuid | Book Online | PT 7',
+    ogTitle: 'Pilates Classes Amsterdam Zuid | Book Online | PT7',
     ogDescription:
       'Live schedule near Museumplein: Reformer, TRX & strength. Small groups (max 5) and private sessions. Book your spot online today.',
-    analyticsTitle: 'Pilates Classes Amsterdam | Book Online | PT 7 Pilates',
+    analyticsTitle: 'Pilates Classes Amsterdam | Book Online | PT7 Pilates',
   },
   breadcrumbName: 'Pilates Classes Amsterdam',
   hero: {
@@ -97,7 +97,7 @@ export const enSchedule = {
         'Yes. Instructors give modifications in every session. Groups stay at a maximum of 5 people so you still get personal cues. Many beginners start with a private intro, then join a small group.',
     },
     pregnancy: {
-      question: 'Can I train with PT 7 during pregnancy?',
+      question: 'Can I train with PT7 during pregnancy?',
       answer:
         'Pregnant clients are welcome in one-on-one private sessions only, where we adapt exercises safely. See <prenatal>Prenatal Pilates Amsterdam</prenatal> for our pregnancy-focused private Reformer option.',
     },

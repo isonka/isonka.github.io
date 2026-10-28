@@ -3,12 +3,12 @@ import type { EnClasspass } from '../en/classpass';
 
 export const nlClasspass: DeepStringify<EnClasspass> = {
   seo: {
-    title: 'Overstapaanbod ClassPass | PT 7 Pilates Amsterdam',
+    title: 'Overstapaanbod ClassPass | PT7 Pilates Amsterdam',
     description:
-      'Een helder overstapaanbod voor ClassPass-klanten die overstappen naar de directe prijzen van PT 7. Vergelijk de kosten en krijg 20% korting op je eerste geldige aankoop.',
+      'Een helder overstapaanbod voor ClassPass-klanten die overstappen naar de directe prijzen van PT7. Vergelijk de kosten en krijg 20% korting op je eerste geldige aankoop.',
     keywords: 'ClassPass Amsterdam, pilates ClassPass, ClassPass aanbieding, pilates abonnement Amsterdam',
-    ogTitle: 'ClassPass-klanten: direct aanbod van PT 7',
-    ogDescription: 'Vergelijk de kosten van ClassPass met de directe prijzen van PT 7 en claim je overstapkorting.',
+    ogTitle: 'ClassPass-klanten: direct aanbod van PT7',
+    ogDescription: 'Vergelijk de kosten van ClassPass met de directe prijzen van PT7 en claim je overstapkorting.',
   },
   breadcrumb: 'ClassPass-aanbod',
   faq: {
@@ -31,7 +31,7 @@ export const nlClasspass: DeepStringify<EnClasspass> = {
   },
   hero: {
     badge: 'Voor ClassPass-klanten',
-    title: 'Liever PT 7?<br/>Boek direct.',
+    title: 'Liever PT7?<br/>Boek direct.',
     subtitle:
       'Train je al bij ons via ClassPass? Op deze pagina zie je het verschil met onze directe prijzen en je overstapkorting.',
     cta: 'Bekijk het aanbod',

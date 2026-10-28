@@ -1,14 +1,14 @@
 export const enPrenatal = {
   seo: {
-    title: 'Prenatal & Pregnancy Pilates Amsterdam | PT 7',
+    title: 'Prenatal & Pregnancy Pilates Amsterdam | PT7',
     description:
       'Private prenatal Reformer Pilates at Museumplein: 45-minute 1:1 sessions with trimester adaptations and pelvic floor focus. With Elif or Göknur.',
     keywords:
       'prenatal pilates amsterdam, pregnancy pilates amsterdam, private prenatal pilates, reformer pilates pregnancy, pelvic floor pilates amsterdam, postnatal pilates amsterdam, pregnancy pilates museumplein',
-    ogTitle: 'Prenatal & Pregnancy Pilates Amsterdam | PT 7 Pilates',
+    ogTitle: 'Prenatal & Pregnancy Pilates Amsterdam | PT7 Pilates',
     ogDescription:
       'Private 45-minute prenatal Reformer sessions at Museumplein. Trimester-specific coaching with Elif and Göknur, not group classes.',
-    analyticsTitle: 'Prenatal Pilates Amsterdam | PT 7 Pilates',
+    analyticsTitle: 'Prenatal Pilates Amsterdam | PT7 Pilates',
   },
   service: {
     name: 'Prenatal & Pregnancy Pilates Amsterdam',
@@ -21,11 +21,11 @@ export const enPrenatal = {
   faq: {
     safe: {
       q: 'Is prenatal Reformer Pilates safe in every trimester?',
-      a: 'Yes, when supervised by instructors experienced in pregnancy training. At PT 7, every exercise is adapted to your trimester, symptoms, and energy level. We modify load, range, and positions as your body changes. Clients commonly train safely through 38+ weeks.',
+      a: 'Yes, when supervised by instructors experienced in pregnancy training. At PT7, every exercise is adapted to your trimester, symptoms, and energy level. We modify load, range, and positions as your body changes. Clients commonly train safely through 38+ weeks.',
     },
     approval: {
       q: 'Do I need approval from my midwife or doctor?',
-      a: 'Yes. Confirm with your midwife or doctor that exercise is appropriate before you start. If they say no, or set limits that rule out this training, we will not begin or continue sessions. Prenatal Pilates at PT 7 is supportive movement coaching, not medical care. Share any restrictions so we can stay within them.',
+      a: 'Yes. Confirm with your midwife or doctor that exercise is appropriate before you start. If they say no, or set limits that rule out this training, we will not begin or continue sessions. Prenatal Pilates at PT7 is supportive movement coaching, not medical care. Share any restrictions so we can stay within them.',
     },
     anyWeek: {
       q: 'Can I start at any week of pregnancy?',
@@ -37,7 +37,7 @@ export const enPrenatal = {
     },
     private: {
       q: 'Are pregnancy / prenatal sessions private or group-based?',
-      a: 'Pregnancy and prenatal Pilates at PT 7 are offered exclusively as private sessions. Each pregnancy has unique medical history and trimester needs, so an individual format is required for safe, appropriate programming. Small group classes (max 5) are for non-pregnancy clients.',
+      a: 'Pregnancy and prenatal Pilates at PT7 are offered exclusively as private sessions. Each pregnancy has unique medical history and trimester needs, so an individual format is required for safe, appropriate programming. Small group classes (max 5) are for non-pregnancy clients.',
     },
     pelvic: {
       q: 'Can this help with pelvic floor and lower-back discomfort?',
@@ -49,7 +49,7 @@ export const enPrenatal = {
     },
     where: {
       q: 'Where is the studio and how do I get there?',
-      a: 'PT 7 is at {{studioAddress}}, across from the Stedelijk Museum at Museumplein in Oud-Zuid. The location is easy to reach by tram or metro to the Museumplein area. Arrive a few minutes early for your first private intake so we can settle in without rushing.',
+      a: 'PT7 is at {{studioAddress}}, across from the Stedelijk Museum at Museumplein in Oud-Zuid. The location is easy to reach by tram or metro to the Museumplein area. Arrive a few minutes early for your first private intake so we can settle in without rushing.',
     },
     same: {
       q: 'Is this the same as “pregnancy Pilates Amsterdam”?',
@@ -71,14 +71,14 @@ export const enPrenatal = {
     cta: 'Book a Prenatal Session',
   },
   trust: {
-    imageAlt: 'Prenatal Pilates at PT 7 Amsterdam',
+    imageAlt: 'Prenatal Pilates at PT7 Amsterdam',
     priceAnchor: 'Private prenatal sessions only · see private pricing',
     testimonial: '“Elif trained me until 38.5 weeks. Comfortable pregnancy and a smooth delivery.”',
     reviewSource: 'Google review',
     ctaLabel: 'View private pricing',
   },
   why: {
-    title: 'Why prenatal Pilates at PT 7',
+    title: 'Why prenatal Pilates at PT7',
     p1: 'Pregnancy changes breathing mechanics, posture, and load through your spine and pelvis. Our prenatal sessions use the Reformer to provide support and controlled resistance so you can keep moving well without overloading sensitive areas.',
     p2: 'We prioritize breathing, pelvic floor muscles control, leg strength, and upper-back strength. That combination helps reduce common complaints like lower-back tension, pelvic discomfort, and shoulder tightness while preparing you for labor and recovery.',
     p3: 'If you want a deeper trimester-by-trimester guide, read our full article: <post>Prenatal Pilates: Supporting Your Body Through Every Trimester</post>.',

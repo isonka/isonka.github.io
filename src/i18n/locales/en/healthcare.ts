@@ -1,13 +1,13 @@
 export const enHealthcare = {
   seo: {
-    title: 'Pilates for Rehabilitation Amsterdam | PT 7 Pilates',
+    title: 'Pilates for Rehabilitation Amsterdam | PT7 Pilates',
     description:
-      'For physiotherapists and GPs: refer clients to PT 7 for post-rehab Pilates and functional training. Small groups (max 5) and privates at Museumplein.',
+      'For physiotherapists and GPs: refer clients to PT7 for post-rehab Pilates and functional training. Small groups (max 5) and privates at Museumplein.',
     keywords:
       'physiotherapist referral Amsterdam, Pilates post-rehab, fysiotherapeut doorverwijzing, beweegprogramma Amsterdam, Pilates fysiotherapie',
     ogDescription:
-      'Partner with PT 7. Refer your clients for post-rehab Pilates and functional training. Small groups, expert instructors.',
-    analyticsTitle: 'For Healthcare Providers - PT 7 Pilates Amsterdam',
+      'Partner with PT7. Refer your clients for post-rehab Pilates and functional training. Small groups, expert instructors.',
+    analyticsTitle: 'For Healthcare Providers - PT7 Pilates Amsterdam',
   },
   service: {
     name: 'Pilates for Rehabilitation Amsterdam',
@@ -19,7 +19,7 @@ export const enHealthcare = {
   breadcrumb: 'For Healthcare Providers',
   hero: {
     title: 'Pilates for Rehabilitation Amsterdam',
-    subtitle: 'Refer Your Clients to PT 7',
+    subtitle: 'Refer Your Clients to PT7',
     description:
       "Partner with Amsterdam's boutique Pilates and fitness studio. We offer a trusted destination for your clients after rehabilitation, Pilates, functional training, and small-group sessions designed to support long-term recovery and strength.",
   },
@@ -88,7 +88,7 @@ export const enHealthcare = {
     text: "Email or WhatsApp with your client's name and a brief note. We'll take it from there.",
     email: 'Email Referral',
     emailSubject: 'Referral - Healthcare Provider',
-    whatsappText: "Hi, I'd like to refer a client to PT 7.",
+    whatsappText: "Hi, I'd like to refer a client to PT7.",
     note: '{{address}} (Museumplein, Oud-Zuid)',
   },
   related: {
@@ -96,7 +96,7 @@ export const enHealthcare = {
     reformer: 'Reformer Pilates',
     elif: 'Elif Arzu Ogan profile',
     goknur: 'Göknur Dipli profile',
-    back: '← Back to PT 7',
+    back: '← Back to PT7',
   },
 } as const;
 

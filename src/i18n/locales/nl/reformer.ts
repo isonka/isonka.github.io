@@ -3,15 +3,15 @@ import type { EnReformer } from '../en/reformer';
 
 export const nlReformer: DeepStringify<EnReformer> = {
   seo: {
-    title: 'Reformer Pilates Amsterdam Zuid | Kleine groepen | PT 7',
+    title: 'Reformer Pilates Amsterdam Zuid | Kleine groepen | PT7',
     description:
       'Reformer pilates in Amsterdam Zuid aan het Museumplein: kleine groepen (max. 5), privélessen en een volledige studio. Nieuwe klanten: 3 lessen voor €50.',
     keywords:
       'reformer pilates amsterdam, reformer pilates amsterdam zuid, pilates amsterdam zuid, pilates oud-zuid, pilates museumkwartier, pilates museumplein, reformer pilates lessen amsterdam, pilates kleine groepen amsterdam',
-    ogTitle: 'Reformer Pilates Amsterdam Zuid | PT 7 Museumplein',
+    ogTitle: 'Reformer Pilates Amsterdam Zuid | PT7 Museumplein',
     ogDescription:
       'Boutique Reformer pilates aan het Museumplein, Amsterdam Zuid. Kleine groepen (max. 5), privélessen en ervaren instructeurs.',
-    analyticsTitle: 'Reformer Pilates Amsterdam Zuid (NL) | PT 7',
+    analyticsTitle: 'Reformer Pilates Amsterdam Zuid (NL) | PT7',
   },
   breadcrumb: 'Reformer Pilates Amsterdam Zuid',
   hero: {
@@ -25,7 +25,7 @@ export const nlReformer: DeepStringify<EnReformer> = {
     cta: 'Boek een Reformer-les',
   },
   trust: {
-    imageAlt: 'Instructeur begeleidt een Reformer-cliënt bij PT 7 Amsterdam',
+    imageAlt: 'Instructeur begeleidt een Reformer-cliënt bij PT7 Amsterdam',
     priceAnchor: 'Intro: €50 voor 3 groepslessen · vanaf {{memberPrice}} per les met een abonnement',
     reviewSource: 'Google-review',
     testimonial: '“Professioneel, doordacht en precies de Reformer-studio waar ik twee jaar naar zocht.”',
@@ -33,13 +33,13 @@ export const nlReformer: DeepStringify<EnReformer> = {
   },
   intro: {
     title: 'Reformer pilates aan het Museumplein',
-    p1: 'Op zoek naar Reformer pilates in Amsterdam Zuid? PT 7 is een boutique studio aan de {{studioStreet}}, tegenover het Stedelijk Museum. We richten ons op Reformer-training met apparaten, geen volle matlessen, met instructeurs die in elke les letten op houding, ademhaling en opbouw.',
+    p1: 'Op zoek naar Reformer pilates in Amsterdam Zuid? PT7 is een boutique studio aan de {{studioStreet}}, tegenover het Stedelijk Museum. We richten ons op Reformer-training met apparaten, geen volle matlessen, met instructeurs die in elke les letten op houding, ademhaling en opbouw.',
     p2: 'Groepslessen hebben maximaal vijf deelnemers, zodat je persoonlijke aandacht krijgt. Liever één-op-één? <private>Privé- en duolessen op de Reformer</private> zijn er voor beginners, sporters en mensen die herstellen van een blessure. Zwangerschapstraining is alleen privé: zie <prenatal>prenatale pilates Amsterdam</prenatal>.',
     p3: 'Opties vergelijken? Bekijk onze <pricing>prijzen</pricing> en het <schedule>actuele rooster</schedule>.',
   },
   where: {
     title: 'Waar we zitten',
-    p1: 'PT 7 zit aan de {{studioAddress}}, tegenover het Stedelijk Museum aan het Museumplein in Amsterdam Oud-Zuid.',
+    p1: 'PT7 zit aan de {{studioAddress}}, tegenover het Stedelijk Museum aan het Museumplein in Amsterdam Oud-Zuid.',
     p2: 'De studio ligt dicht bij Oud-Zuid, het Museumkwartier, de Concertgebouwbuurt, het Vondelpark en De Pijp.',
     hours: 'Openingstijden: maandag–vrijdag {{weekdays}}, zaterdag–zondag {{weekends}}.',
   },
@@ -56,7 +56,7 @@ export const nlReformer: DeepStringify<EnReformer> = {
     nextText: 'Na de les adviseren we je over de juiste mix van Reformer-groepslessen, privélessen of kracht/TRX in dezelfde studio.',
   },
   forWhom: {
-    title: 'Voor wie Reformer bij PT 7 is',
+    title: 'Voor wie Reformer bij PT7 is',
     beginnersTitle: 'Beginners',
     beginnersText: 'Nieuw met Reformer of pilates? Begin in een groep van max. 5 of boek een privé-intro, zodat je de techniek leert voordat het druk wordt.',
     localsTitle: 'Expats & bewoners van Amsterdam Zuid',
@@ -85,7 +85,7 @@ export const nlReformer: DeepStringify<EnReformer> = {
     },
     where: {
       q: 'Waar kan ik Reformer pilates doen in Amsterdam Zuid?',
-      a: 'PT 7 zit aan de {{studioStreet}}, tegenover het Stedelijk Museum aan het Museumplein in Oud-Zuid. We zijn gespecialiseerd in Reformer-groepslessen (maximaal 5 personen) en privélessen.',
+      a: 'PT7 zit aan de {{studioStreet}}, tegenover het Stedelijk Museum aan het Museumplein in Oud-Zuid. We zijn gespecialiseerd in Reformer-groepslessen (maximaal 5 personen) en privélessen.',
     },
     groupSize: {
       q: 'Hoeveel mensen zitten er in een Reformer-les?',

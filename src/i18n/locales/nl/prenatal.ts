@@ -3,15 +3,15 @@ import type { EnPrenatal } from '../en/prenatal';
 
 export const nlPrenatal: DeepStringify<EnPrenatal> = {
   seo: {
-    title: 'Zwangerschapspilates Amsterdam | Prenatale pilates | PT 7',
+    title: 'Zwangerschapspilates Amsterdam | Prenatale pilates | PT7',
     description:
       'Prenatale Reformer pilates in privésessies aan het Museumplein: 45 minuten één-op-één, aangepast per trimester, met focus op de bekkenbodem. Met Elif of Göknur.',
     keywords:
       'zwangerschapspilates amsterdam, prenatale pilates amsterdam, pilates zwanger amsterdam, privé prenatale pilates, reformer pilates zwangerschap, bekkenbodem pilates amsterdam, postnatale pilates amsterdam, zwangerschapspilates museumplein',
-    ogTitle: 'Zwangerschapspilates & prenatale pilates Amsterdam | PT 7 Pilates',
+    ogTitle: 'Zwangerschapspilates & prenatale pilates Amsterdam | PT7 Pilates',
     ogDescription:
       'Prenatale Reformer-privésessies van 45 minuten aan het Museumplein. Coaching per trimester met Elif en Göknur, geen groepslessen.',
-    analyticsTitle: 'Prenatale pilates Amsterdam (NL) | PT 7 Pilates',
+    analyticsTitle: 'Prenatale pilates Amsterdam (NL) | PT7 Pilates',
   },
   service: {
     name: 'Prenatale pilates & zwangerschapspilates Amsterdam',
@@ -24,11 +24,11 @@ export const nlPrenatal: DeepStringify<EnPrenatal> = {
   faq: {
     safe: {
       q: 'Is prenatale Reformer pilates veilig in elk trimester?',
-      a: 'Ja, onder begeleiding van instructeurs met ervaring in zwangerschapstraining. Bij PT 7 wordt elke oefening aangepast aan je trimester, klachten en energie. We passen belasting, bewegingsuitslag en houdingen aan naarmate je lichaam verandert. Cliënten trainen vaak veilig door tot 38+ weken.',
+      a: 'Ja, onder begeleiding van instructeurs met ervaring in zwangerschapstraining. Bij PT7 wordt elke oefening aangepast aan je trimester, klachten en energie. We passen belasting, bewegingsuitslag en houdingen aan naarmate je lichaam verandert. Cliënten trainen vaak veilig door tot 38+ weken.',
     },
     approval: {
       q: 'Heb ik toestemming nodig van mijn verloskundige of arts?',
-      a: 'Ja. Overleg met je verloskundige of arts of sporten verantwoord is voordat je begint. Zeggen zij nee, of stellen ze grenzen die deze training uitsluiten, dan beginnen we niet of stoppen we met de sessies. Prenatale pilates bij PT 7 is ondersteunende bewegingscoaching, geen medische zorg. Deel eventuele beperkingen, zodat we daarbinnen blijven.',
+      a: 'Ja. Overleg met je verloskundige of arts of sporten verantwoord is voordat je begint. Zeggen zij nee, of stellen ze grenzen die deze training uitsluiten, dan beginnen we niet of stoppen we met de sessies. Prenatale pilates bij PT7 is ondersteunende bewegingscoaching, geen medische zorg. Deel eventuele beperkingen, zodat we daarbinnen blijven.',
     },
     anyWeek: {
       q: 'Kan ik in elke week van mijn zwangerschap beginnen?',
@@ -40,7 +40,7 @@ export const nlPrenatal: DeepStringify<EnPrenatal> = {
     },
     private: {
       q: 'Zijn zwangerschaps- / prenatale sessies privé of in een groep?',
-      a: 'Zwangerschapspilates en prenatale pilates bij PT 7 worden uitsluitend als privésessies aangeboden. Elke zwangerschap heeft een eigen medische geschiedenis en eigen behoeften per trimester, dus een individuele vorm is nodig voor een veilig, passend programma. Kleine groepslessen (max. 5) zijn voor cliënten die niet zwanger zijn.',
+      a: 'Zwangerschapspilates en prenatale pilates bij PT7 worden uitsluitend als privésessies aangeboden. Elke zwangerschap heeft een eigen medische geschiedenis en eigen behoeften per trimester, dus een individuele vorm is nodig voor een veilig, passend programma. Kleine groepslessen (max. 5) zijn voor cliënten die niet zwanger zijn.',
     },
     pelvic: {
       q: 'Helpt dit bij klachten aan bekkenbodem en onderrug?',
@@ -52,7 +52,7 @@ export const nlPrenatal: DeepStringify<EnPrenatal> = {
     },
     where: {
       q: 'Waar is de studio en hoe kom ik er?',
-      a: 'PT 7 zit aan de {{studioAddress}}, tegenover het Stedelijk Museum aan het Museumplein in Oud-Zuid. De locatie is goed bereikbaar met tram of metro richting het Museumplein. Kom voor je eerste intake een paar minuten eerder, zodat we rustig kunnen beginnen.',
+      a: 'PT7 zit aan de {{studioAddress}}, tegenover het Stedelijk Museum aan het Museumplein in Oud-Zuid. De locatie is goed bereikbaar met tram of metro richting het Museumplein. Kom voor je eerste intake een paar minuten eerder, zodat we rustig kunnen beginnen.',
     },
     same: {
       q: 'Is dit hetzelfde als “zwangerschapspilates Amsterdam”?',
@@ -74,14 +74,14 @@ export const nlPrenatal: DeepStringify<EnPrenatal> = {
     cta: 'Boek een prenatale sessie',
   },
   trust: {
-    imageAlt: 'Prenatale pilates bij PT 7 Amsterdam',
+    imageAlt: 'Prenatale pilates bij PT7 Amsterdam',
     priceAnchor: 'Alleen prenatale privésessies · bekijk de privéprijzen',
     testimonial: '“Elif trainde me tot 38,5 week. Een comfortabele zwangerschap en een vlotte bevalling.”',
     reviewSource: 'Google-review',
     ctaLabel: 'Bekijk privéprijzen',
   },
   why: {
-    title: 'Waarom prenatale pilates bij PT 7',
+    title: 'Waarom prenatale pilates bij PT7',
     p1: 'Zwangerschap verandert je ademhaling, je houding en de belasting van je wervelkolom en bekken. In onze prenatale sessies gebruiken we de Reformer voor ondersteuning en gecontroleerde weerstand, zodat je goed blijft bewegen zonder gevoelige zones te overbelasten.',
     p2: 'We geven voorrang aan ademhaling, controle over je bekkenbodemspieren, kracht in je benen en kracht in je bovenrug. Die combinatie helpt veelvoorkomende klachten te verminderen, zoals spanning in de onderrug, ongemak in het bekken en stijve schouders, en bereidt je voor op de bevalling en het herstel.',
     p3: 'Wil je een uitgebreidere gids per trimester? Lees ons volledige artikel: <post>Prenatale pilates: je lichaam ondersteunen in elk trimester</post>.',

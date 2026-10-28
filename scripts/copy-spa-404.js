@@ -12,7 +12,7 @@ if (!fs.existsSync(indexPath)) {
   process.exit(1);
 }
 
-const title = 'Page not found | PT 7 Pilates Amsterdam';
+const title = 'Page not found | PT7 Pilates Amsterdam';
 const description =
   'This page does not exist or has moved. Book a Reformer Pilates class, view pricing, or return home.';
 
