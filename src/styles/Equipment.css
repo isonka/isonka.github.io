@@ -109,6 +109,21 @@
   color: var(--gold-text, #c9a800);
 }
 
+.equipment-price {
+  margin: 0 0 4px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink, #111);
+}
+
+.equipment-price-note {
+  margin: 0 0 10px;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #666;
+}
+
 .equipment-title {
   margin: 0 0 8px;
   font-size: clamp(1.15rem, 2vw, 1.45rem);

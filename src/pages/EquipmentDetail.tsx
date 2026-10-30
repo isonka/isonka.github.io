@@ -1,23 +1,33 @@
 import { useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { EquipmentFAQ } from '../components/EquipmentFAQ';
 import { EquipmentContact } from '../components/EquipmentContact';
+import { BASE_URL, studioStreet } from '../data/business';
+import { formatEquipmentPrice } from '../data/equipment';
 import { equipmentFor } from '../data/localized';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import { NotFound } from './NotFound';
 import '../styles/EquipmentProduct.css';
-import { studioStreet } from '../data/business';
 
-const RELATED_BY_EQUIPMENT = {
-  reformer: 'reformer',
-  'tower-reformer': 'reformer',
-  cadillac: 'equipmentClasses',
-  'wunda-chair': 'studioClasses',
-} as const;
+/** Poppins draws 7 taller than capitals. Scale it to the cap height of PT. */
+function titleWithAlignedPt7(title: string) {
+  const parts = title.split('PT7');
+  if (parts.length === 1) return title;
+  return parts.map((part, i) => (
+    <span key={i}>
+      {part}
+      {i < parts.length - 1 ? (
+        <>
+          PT<span className="pt7-digit">7</span>
+        </>
+      ) : null}
+    </span>
+  ));
+}
 
 export const EquipmentDetail= () => {
   const { t } = useTranslation('equipment');
@@ -34,11 +44,8 @@ export const EquipmentDetail= () => {
 
   const hasGallery = product.images.length > 1;
   const currentImage = product.images[activeImage] || product.images[0];
-  const relatedKey = RELATED_BY_EQUIPMENT[product.slug as keyof typeof RELATED_BY_EQUIPMENT];
-  const relatedWorkout = relatedKey
-    ? { to: href('/reformer-pilates-amsterdam/'), label: t(`detail.related.${relatedKey}`) }
-    : undefined;
   const forSaleOnly = product.slug === 'ladder-barrel';
+  const inquiryHref = `mailto:info@pt7.nl?subject=${encodeURIComponent(t('cards.quoteSubject', { name: product.name }))}&body=${encodeURIComponent(t('cards.quoteBody', { name: product.name }))}`;
   const visibleFaq = forSaleOnly
     ? product.faq
     : [
@@ -63,10 +70,30 @@ export const EquipmentDetail= () => {
         {...page.seoLocale}
       />
       <StructuredData type="FAQPage" data={{ faqs: visibleFaq }} />
+      <StructuredData
+        type="Product"
+        data={{
+          product: {
+            name: product.name,
+            description: product.shortDesc,
+            image: product.images.map((img) => `${BASE_URL}${img.src}`),
+            sku: product.slug,
+            brand: 'Sole Pilates',
+            url: page.canonical,
+            price: String(product.priceEur),
+            priceCurrency: 'EUR',
+            valueAddedTaxIncluded: false,
+            offerDescription: t('price.note'),
+            availability: 'https://schema.org/PreOrder',
+            itemCondition: 'https://schema.org/NewCondition',
+            category: 'Pilates Equipment',
+          },
+        }}
+      />
 
       <Breadcrumbs
         items={[
-          { name: forSaleOnly ? t('detail.breadcrumbForSale') : t('detail.breadcrumbStudio'), path: href('/equipment/') },
+          { name: t('detail.breadcrumb'), path: href('/equipment/') },
           { name: product.name, path: page.path },
         ]}
       />
@@ -105,19 +132,16 @@ export const EquipmentDetail= () => {
           <div className="product-info">
             <p className="kicker">{forSaleOnly ? t('detail.kickerForSale') : t('detail.kickerStudio')}</p>
             <h1>
-              {forSaleOnly
-                ? t('detail.titleForSale', { name: product.name })
-                : t('detail.titleStudio', { name: product.name })}
+              {titleWithAlignedPt7(
+                forSaleOnly
+                  ? t('detail.titleForSale', { name: product.name })
+                  : t('detail.titleStudio', { name: product.name }),
+              )}
             </h1>
+            <p className="product-price">{formatEquipmentPrice(product.priceEur, page.locale)}</p>
+            <p className="product-price-note">{t('price.note')}</p>
             <p className="product-intent-notice">
               {forSaleOnly ? t('detail.noticeForSale') : t('detail.noticeStudio', { studioStreet })}
-              <Link to={href('/reformer-pilates-amsterdam/')} className="prose-link">
-                {t('detail.bookReformer')}
-              </Link>
-              {' · '}
-              <Link to={href('/schedule/')} className="prose-link">
-                {t('detail.schedule')}
-              </Link>
             </p>
             <p className="product-short-desc">{product.shortDesc}</p>
             <ul className="product-features">
@@ -126,15 +150,12 @@ export const EquipmentDetail= () => {
               ))}
             </ul>
             <div className="product-cta">
-              {forSaleOnly ? (
-                <a href="#product-contact" className="btn-gold">
-                  {t('detail.contactForOrder')}
-                </a>
-              ) : (
-                <Link to={href('/schedule/')} className="btn-gold">
-                  {t('detail.bookClass')}
-                </Link>
-              )}
+              <a href={inquiryHref} className="btn-gold">
+                {t('detail.inquire')}
+              </a>
+              <a href="#product-contact" className="product-cta-secondary">
+                {t('detail.contact')}
+              </a>
             </div>
           </div>
         </section>
@@ -151,19 +172,11 @@ export const EquipmentDetail= () => {
                 </li>
               ))}
             </ul>
-            {relatedWorkout ? (
-              <p className="product-related">
-                <Link to={relatedWorkout.to} className="prose-link">
-                  {relatedWorkout.label}
-                </Link>
-                {t('detail.relatedSuffix', { studioStreet })}
-              </p>
-            ) : null}
           </div>
         </section>
 
         <EquipmentFAQ items={visibleFaq} />
-        {forSaleOnly ? <EquipmentContact /> : null}
+        <EquipmentContact />
       </main>
     </>
   );

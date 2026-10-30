@@ -8,7 +8,8 @@ type EquipmentText = Pick<EquipmentProduct, 'name' | 'seo' | 'shortDesc' | 'feat
 const commonFAQ: FAQItem[] = [
   {
     question: 'Hoe kan ik deze apparatuur bestellen?',
-    answer: 'Neem direct contact met ons op via e-mail of telefoon om te bestellen of meer informatie te vragen over onze pilatesapparatuur.',
+    answer:
+      'Neem contact op via e-mail of telefoon om te bestellen en de definitieve prijs te bevestigen. Douanekosten, verzending en BTW zitten niet in de getoonde prijs. De apparatuur wordt geïmporteerd uit Turkije.',
   },
   {
     question: 'Wat is de levertijd en hoe wordt er geleverd?',

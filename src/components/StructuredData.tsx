@@ -90,6 +90,8 @@ interface StructuredDataProps {
       url: string;
       price?: string;
       priceCurrency?: string;
+      valueAddedTaxIncluded?: boolean;
+      offerDescription?: string;
       availability: string;
       itemCondition?: string;
       category?: string;
@@ -101,6 +103,8 @@ interface StructuredDataProps {
         name: string;
         url: string;
         image?: string;
+        price?: string;
+        priceCurrency?: string;
       }[];
     };
   };
@@ -252,6 +256,17 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
         ...(p.price ? { price: p.price } : {}),
         availability: p.availability,
         ...(p.itemCondition ? { itemCondition: p.itemCondition } : {}),
+        ...(p.offerDescription ? { description: p.offerDescription } : {}),
+        ...(p.price && p.priceCurrency && p.valueAddedTaxIncluded === false
+          ? {
+              priceSpecification: {
+                '@type': 'UnitPriceSpecification',
+                price: p.price,
+                priceCurrency: p.priceCurrency,
+                valueAddedTaxIncluded: false,
+              },
+            }
+          : {}),
         seller: { '@id': SCHEMA_IDS.organization },
       },
       ...(p.additionalProperty && p.additionalProperty.length > 0
@@ -274,13 +289,34 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
       itemListElement: data.itemList.itemListElement.map((item, index) => ({
         '@type': 'ListItem',
         position: index + 1,
-        // Contact-to-order catalog: no Product (needs offers/price Google does not have).
-        item: {
-          '@type': 'WebPage',
-          name: item.name,
-          url: item.url,
-          ...(item.image ? { image: item.image } : {}),
-        },
+        item:
+          item.price && item.priceCurrency
+            ? {
+                '@type': 'Product',
+                name: item.name,
+                url: item.url,
+                ...(item.image ? { image: item.image } : {}),
+                brand: { '@type': 'Brand', name: 'Sole Pilates' },
+                offers: {
+                  '@type': 'Offer',
+                  url: item.url,
+                  price: item.price,
+                  priceCurrency: item.priceCurrency,
+                  availability: 'https://schema.org/PreOrder',
+                  priceSpecification: {
+                    '@type': 'UnitPriceSpecification',
+                    price: item.price,
+                    priceCurrency: item.priceCurrency,
+                    valueAddedTaxIncluded: false,
+                  },
+                },
+              }
+            : {
+                '@type': 'WebPage',
+                name: item.name,
+                url: item.url,
+                ...(item.image ? { image: item.image } : {}),
+              },
       })),
     };
   }

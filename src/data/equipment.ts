@@ -20,6 +20,8 @@ export interface EquipmentSpec {
 export interface EquipmentProduct {
   slug: string;
   name: string;
+  /** Apparatus price in EUR. Excludes customs duty, shipping, and VAT (BTW). */
+  priceEur: number;
   seo: {
     title: string;
     description: string;
@@ -33,10 +35,19 @@ export interface EquipmentProduct {
   faq: FAQItem[];
 }
 
+export function formatEquipmentPrice(amount: number, locale: string): string {
+  return new Intl.NumberFormat(locale === 'nl' ? 'nl-NL' : 'en-GB', {
+    style: 'currency',
+    currency: 'EUR',
+    maximumFractionDigits: 0,
+  }).format(amount);
+}
+
 const commonFAQ: FAQItem[] = [
   {
     question: 'How can I order this equipment?',
-    answer: 'You can contact us directly via email or phone to place your order or request more information about our Pilates equipment.',
+    answer:
+      'Contact us by email or phone to order and to confirm the final price. The listed price does not include customs duty, shipping, or VAT (BTW). Apparatus is imported from Türkiye.',
   },
   {
     question: 'What is the delivery time and method?',
@@ -56,6 +67,7 @@ export const equipmentProducts: EquipmentProduct[] = [
   {
     slug: 'reformer',
     name: 'Pilates Reformer',
+    priceEur: 1900,
     seo: {
       title: 'Reformer Pilates Equipment at PT7 Amsterdam | In-Studio',
       description: `The Reformer used in small-group and private classes at PT7, ${studioStreet}, Museumplein. Specs of the in-studio apparatus and how to book a class.`,
@@ -110,6 +122,7 @@ export const equipmentProducts: EquipmentProduct[] = [
   {
     slug: 'tower-reformer',
     name: 'Tower Reformer',
+    priceEur: 2300,
     seo: {
       title: 'Tower Reformer at PT7 Amsterdam | In-Studio Apparatus',
       description: `Tower Reformer used in classes at PT7, ${studioStreet}, Museumplein, Amsterdam Oud-Zuid. Specs of the in-studio apparatus and how to book a class.`,
@@ -164,6 +177,7 @@ export const equipmentProducts: EquipmentProduct[] = [
   {
     slug: 'cadillac',
     name: 'Combo Cadillac',
+    priceEur: 2700,
     seo: {
       title: 'Cadillac Pilates Amsterdam | In-Studio at PT7',
       description: `Cadillac (Trapeze Table) used in classes at PT7, ${studioStreet}, Museumplein. Specs of the in-studio apparatus and how to book a class.`,
@@ -216,6 +230,7 @@ export const equipmentProducts: EquipmentProduct[] = [
   {
     slug: 'wunda-chair',
     name: 'Wunda Chair',
+    priceEur: 1200,
     seo: {
       title: 'Wunda Chair at PT7 Amsterdam | In-Studio Apparatus',
       description: `Wunda Chair used in classes at PT7, ${studioStreet}, Museumplein. Specs of the in-studio apparatus and how to book a class.`,
@@ -264,6 +279,7 @@ export const equipmentProducts: EquipmentProduct[] = [
   {
     slug: 'ladder-barrel',
     name: 'Ladder Barrel',
+    priceEur: 1200,
     seo: {
       title: 'Ladder Barrel for Sale | PT7 Pilates Amsterdam',
       description: 'Buy a professional Pilates Ladder Barrel in Amsterdam. Specs and ordering for home or studio use. Sold by PT7; not used in our client training sessions.',

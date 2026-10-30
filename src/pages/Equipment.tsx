@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { BASE_URL } from '../data/business';
+import { formatEquipmentPrice } from '../data/equipment';
 import { equipmentFor } from '../data/localized';
 import { homePath } from '../i18n/locale';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
@@ -41,6 +42,7 @@ export const Equipment= () => {
       image: p.images[0].src,
       description: copyKey ? t(`cards.${copyKey}`) : p.shortDesc,
       link: href(`/equipment/${p.slug}/`),
+      price: formatEquipmentPrice(p.priceEur, page.locale),
       tag: p.slug === 'reformer' ? t('cards.mostPopular') : undefined,
     };
   });
@@ -66,6 +68,8 @@ export const Equipment= () => {
               name: product.name,
               url: `${BASE_URL}${href(`/equipment/${product.slug}/`)}`,
               image: `${BASE_URL}${product.images[0].src}`,
+              price: String(product.priceEur),
+              priceCurrency: 'EUR',
             })),
           },
         }}
@@ -92,15 +96,6 @@ export const Equipment= () => {
           </p>
         </section>
 
-        <div className="equipment-intent-notice">
-          <p>
-            <strong>{t('intent.lead')}</strong> {t('intent.text')}{' '}
-            <Link to={href('/reformer-pilates-amsterdam/')}>{t('intent.bookReformer')}</Link>
-            {' · '}
-            <Link to={href('/schedule/')}>{t('intent.schedule')}</Link>
-          </p>
-        </div>
-
         <div className="equipment-content">
           <ul className="equipment-list">
             {equipment.map((item) => (
@@ -118,6 +113,8 @@ export const Equipment= () => {
                   </div>
                   {item.tag ? <span className="equipment-note">{item.tag}</span> : null}
                   <h2 className="equipment-title">{item.name}</h2>
+                  <p className="equipment-price">{item.price}</p>
+                  <p className="equipment-price-note">{t('price.excludes')}</p>
                   <p className="equipment-desc">{item.description}</p>
                   <span className="prose-link equipment-more">{t('cards.learnMore')}</span>
                 </Link>
@@ -136,12 +133,15 @@ export const Equipment= () => {
           <h2>{t('help.title')}</h2>
           <p>{t('help.text')}</p>
           <div className="equipment-cta-actions">
-            <a href="#contact" onClick={handleContactClick} className="btn-gold">
+            <a
+              href={`mailto:info@pt7.nl?subject=${encodeURIComponent(t('dealer.quoteSubject'))}`}
+              className="btn-gold"
+            >
+              {t('help.inquire')}
+            </a>
+            <a href="#contact" onClick={handleContactClick} className="btn-ghost">
               {t('help.contact')}
             </a>
-            <Link to={href('/reformer-pilates-amsterdam/')} className="btn-ghost">
-              {t('help.book')}
-            </Link>
           </div>
         </section>
       </div>

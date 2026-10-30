@@ -82,6 +82,25 @@
   font-family: inherit;
 }
 
+.product-info h1 .pt7-digit {
+  font-size: 0.96em;
+}
+
+.product-price {
+  margin: 0 0 8px;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink, #111);
+}
+
+.product-price-note {
+  margin: 0 0 20px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #555;
+}
+
 .product-short-desc {
   margin: 0 0 24px;
   font-size: 1.05rem;
@@ -106,6 +125,27 @@
 
 .product-cta {
   margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.product-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 15px 22px 16px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  color: var(--ink, #111);
+  border: 1px solid rgba(17, 17, 17, 0.35);
+  border-radius: var(--radius-pill, 1000px);
+}
+
+.product-cta-secondary:hover {
+  border-color: #111;
+  background: rgba(17, 17, 17, 0.05);
 }
 
 .product-details {
