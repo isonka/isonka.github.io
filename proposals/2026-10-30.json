@@ -1,17 +1,47 @@
 { "changes": [
- { "page": "/", "action": "rewrite-snippet", "kind": "snippet",
-   "before": { "title": "PT7 (PT Studio 7) | Pilates & Strength Amsterdam Zuid", "description": "PT7 (formerly PT Studio 7): boutique Pilates & strength studio at Van Baerlestraat 76C, Museumplein, Amsterdam Zuid. Max 5 per class. Intro: 3 classes for €50." },
-   "after": { "title": "Pilates Studio Amsterdam Zuid | PT7 (PT Studio 7)", "description": "Reformer Pilates & strength studio at Van Baerlestraat 76C, Museumplein, Amsterdam Zuid. Max 5 per class. Intro: 3 classes for €50. PT7, formerly PT Studio 7." },
-   "hypothesis": "Leading with 'Pilates Studio Amsterdam Zuid' and 'Reformer Pilates' matches the page's real non-brand queries (pilates studio amsterdam, reformer pilates, pilates amsterdam) better than the brand-first title.",
-   "files": ["src/i18n/locales/en/home.ts"] },
- { "page": "/blog/pilates-prices-amsterdam-2026-complete-guide/", "action": "rewrite-snippet", "kind": "snippet",
-   "before": { "title": "Pilates Prices Amsterdam 2026: Cost Guide | PT7", "description": "Pilates prices in Amsterdam for 2026: group classes, private sessions and memberships compared, and what drives the difference in cost." },
-   "after": { "title": "Pilates Class Prices Amsterdam 2026: Cost Guide | PT7", "description": "How much do Pilates classes cost in Amsterdam in 2026? Group class, private session and package prices compared, plus what drives the difference." },
-   "hypothesis": "Phrasing the description as the question people search ('how much do pilates classes cost') and using 'class prices' targets the 24-impression position-2 query and 'pilates class price'.",
-   "files": ["src/data/blog/posts/pilates-prices-amsterdam-2026-complete-guide.ts"] },
- { "page": "/instructors/", "action": "rewrite-snippet", "kind": "snippet",
-   "before": { "title": "Our Instructors | PT7 Pilates Amsterdam", "description": "Meet our expert team of certified Pilates and fitness instructors at PT7 Amsterdam. Master, senior, and junior instructors dedicated to your fitness journey." },
-   "after": { "title": "Pilates Instructors Amsterdam | PT7", "description": "Meet the Pilates instructors at PT7 Amsterdam Zuid: Polestar-trained, PMA-registered, 15+ years of experience in Reformer, Mat, TRX and prenatal Pilates." },
-   "hypothesis": "Leading with 'Pilates instructors' (queries: pilates instructor, pilates instructors) and concrete credentials from the trainer profiles should lift CTR over the generic 'Our Instructors'.",
-   "files": ["src/i18n/locales/en/instructors.ts", "scripts/generate-static-routes.js"] }
+  {
+    "page": "/",
+    "action": "rewrite-snippet",
+    "kind": "snippet",
+    "before": {
+      "title": "PT7 (PT Studio 7) | Pilates & Strength Amsterdam Zuid",
+      "description": "PT7 (formerly PT Studio 7): boutique Pilates & strength studio at Van Baerlestraat 76C, Museumplein, Amsterdam Zuid. Max 5 per class. Intro: 3 classes for €50."
+    },
+    "after": {
+      "title": "Pilates Studio Amsterdam Zuid | PT7 (PT Studio 7)",
+      "description": "PT7 (formerly PT Studio 7): Reformer Pilates studio at Van Baerlestraat 76C, Museumplein, Amsterdam Zuid. Max 5 per class. Intro: 3 classes for €50."
+    },
+    "hypothesis": "Leading with 'Pilates Studio Amsterdam Zuid' and 'Reformer Pilates' matches the page's real non-brand queries ('pilates studio amsterdam', 'reformer pilates'); PT Studio 7 is kept per AGENTS.md.",
+    "files": ["src/i18n/locales/en/home.ts"]
+  },
+  {
+    "page": "/blog/pilates-prices-amsterdam-2026-complete-guide/",
+    "action": "rewrite-snippet",
+    "kind": "snippet",
+    "before": {
+      "title": "Pilates Prices Amsterdam 2026: Cost Guide | PT7",
+      "description": "Pilates prices in Amsterdam for 2026: group classes, private sessions and memberships compared, and what drives the difference in cost."
+    },
+    "after": {
+      "title": "How Much Does Pilates Cost in Amsterdam? 2026 Guide | PT7",
+      "description": "How much does a Pilates class cost in Amsterdam? Group classes €30-45, privates €70-100, plus memberships and packs compared across 20+ studios."
+    },
+    "hypothesis": "The page's impressions come from question-style queries ('how much do pilates classes cost', 'how much does pilates class cost'); a question title with concrete price ranges from the article should earn the click.",
+    "files": ["src/data/blog/posts/pilates-prices-amsterdam-2026-complete-guide.ts"]
+  },
+  {
+    "page": "/instructors/",
+    "action": "rewrite-snippet",
+    "kind": "snippet",
+    "before": {
+      "title": "Our Instructors | PT7 Pilates Amsterdam",
+      "description": "Meet our expert team of certified Pilates and fitness instructors at PT7 Amsterdam. Master, senior, and junior instructors dedicated to your fitness journey."
+    },
+    "after": {
+      "title": "Pilates Instructors Amsterdam | PT7",
+      "description": "Meet the certified Pilates instructors at PT7, Museumplein: Reformer, prenatal Pilates and strength training in small groups (max 5) and privates."
+    },
+    "hypothesis": "Queries are 'pilates instructor(s)'; the new title leads with that term plus location, and the description names the specialisms and small-group size.",
+    "files": ["src/i18n/locales/en/instructors.ts", "scripts/generate-static-routes.js"]
+  }
 ] }
