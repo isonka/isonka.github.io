@@ -1,0 +1,33 @@
+{
+  "date": "2026-09-03",
+  "rows": [
+    {
+      "date": "2026-09-03",
+      "landingPage": "/",
+      "sessions": 9,
+      "engagedSessions": 9,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-03",
+      "landingPage": "(not set)",
+      "sessions": 1,
+      "engagedSessions": 0,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-03",
+      "landingPage": "/instructors",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-03",
+      "landingPage": "/schedule",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

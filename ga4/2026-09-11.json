@@ -1,0 +1,54 @@
+{
+  "date": "2026-09-11",
+  "rows": [
+    {
+      "date": "2026-09-11",
+      "landingPage": "/",
+      "sessions": 11,
+      "engagedSessions": 11,
+      "keyEvents": 1
+    },
+    {
+      "date": "2026-09-11",
+      "landingPage": "(not set)",
+      "sessions": 1,
+      "engagedSessions": 0,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-11",
+      "landingPage": "/academy",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-11",
+      "landingPage": "/blog/career-change-banker-to-pilates-instructor",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-11",
+      "landingPage": "/instructors",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-11",
+      "landingPage": "/pricing",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-11",
+      "landingPage": "/schedule",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

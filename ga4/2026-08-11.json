@@ -1,0 +1,54 @@
+{
+  "date": "2026-08-11",
+  "rows": [
+    {
+      "date": "2026-08-11",
+      "landingPage": "/",
+      "sessions": 7,
+      "engagedSessions": 7,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-11",
+      "landingPage": "/academy",
+      "sessions": 4,
+      "engagedSessions": 4,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-11",
+      "landingPage": "(not set)",
+      "sessions": 2,
+      "engagedSessions": 0,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-11",
+      "landingPage": "/pricing",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-11",
+      "landingPage": "/trainer/elif",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-11",
+      "landingPage": "/schedule",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-11",
+      "landingPage": "/trainer/gokben",
+      "sessions": 1,
+      "engagedSessions": 0,
+      "keyEvents": 0
+    }
+  ]
+}

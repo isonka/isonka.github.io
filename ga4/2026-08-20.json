@@ -1,0 +1,47 @@
+{
+  "date": "2026-08-20",
+  "rows": [
+    {
+      "date": "2026-08-20",
+      "landingPage": "/",
+      "sessions": 12,
+      "engagedSessions": 11,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-20",
+      "landingPage": "/pricing",
+      "sessions": 3,
+      "engagedSessions": 3,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-20",
+      "landingPage": "/academy",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-20",
+      "landingPage": "(not set)",
+      "sessions": 1,
+      "engagedSessions": 0,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-20",
+      "landingPage": "/congrats",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 2
+    },
+    {
+      "date": "2026-08-20",
+      "landingPage": "/schedule",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

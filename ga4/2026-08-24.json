@@ -1,0 +1,40 @@
+{
+  "date": "2026-08-24",
+  "rows": [
+    {
+      "date": "2026-08-24",
+      "landingPage": "/",
+      "sessions": 8,
+      "engagedSessions": 8,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-24",
+      "landingPage": "(not set)",
+      "sessions": 3,
+      "engagedSessions": 0,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-24",
+      "landingPage": "/academy",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-24",
+      "landingPage": "/academy/nl",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-24",
+      "landingPage": "/schedule",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

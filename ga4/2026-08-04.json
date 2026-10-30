@@ -1,0 +1,26 @@
+{
+  "date": "2026-08-04",
+  "rows": [
+    {
+      "date": "2026-08-04",
+      "landingPage": "/",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 1
+    },
+    {
+      "date": "2026-08-04",
+      "landingPage": "/blog/career-change-banker-to-pilates-instructor",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-04",
+      "landingPage": "/trainer/gulce",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

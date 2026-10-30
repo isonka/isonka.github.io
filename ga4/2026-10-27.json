@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-27",
+  "rows": [
+    {
+      "date": "2026-10-27",
+      "landingPage": "(not set)",
+      "sessions": 10,
+      "engagedSessions": 2,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-10-27",
+      "landingPage": "/schedule",
+      "sessions": 3,
+      "engagedSessions": 3,
+      "keyEvents": 1
+    },
+    {
+      "date": "2026-10-27",
+      "landingPage": "/blog/pt-7-moves-to-olympisch-stadion",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "keyEvents": 2
+    },
+    {
+      "date": "2026-10-27",
+      "landingPage": "/pricing",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-10-27",
+      "landingPage": "/reformer-pilates-amsterdam",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-10-27",
+      "landingPage": "/schedule/nl",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

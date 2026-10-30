@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-28",
+  "rows": [
+    {
+      "date": "2026-10-28",
+      "landingPage": "(not set)",
+      "sessions": 6,
+      "engagedSessions": 2,
+      "keyEvents": 1
+    },
+    {
+      "date": "2026-10-28",
+      "landingPage": "/pricing",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-10-28",
+      "landingPage": "/reformer-pilates-amsterdam",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 5
+    },
+    {
+      "date": "2026-10-28",
+      "landingPage": "/schedule/nl",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

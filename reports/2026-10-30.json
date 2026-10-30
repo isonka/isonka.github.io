@@ -1,0 +1,7246 @@
+{
+  "generatedAt": "2026-10-30T09:12:43.827Z",
+  "runDate": "2026-10-30",
+  "dataThrough": "2026-10-27",
+  "sources": {
+    "gscDays": 120,
+    "ga4Days": 120,
+    "snapshots": 1
+  },
+  "windows": {
+    "cur": {
+      "start": "2026-09-30",
+      "end": "2026-10-27"
+    },
+    "prev": {
+      "start": "2026-09-02",
+      "end": "2026-09-29"
+    },
+    "week": {
+      "start": "2026-10-21",
+      "end": "2026-10-27"
+    },
+    "prevWeek": {
+      "start": "2026-10-14",
+      "end": "2026-10-20"
+    }
+  },
+  "siteCtrCalibration": 0.122,
+  "kpis": {
+    "week": {
+      "clicks": 94,
+      "impressions": 2574,
+      "position": 9.1,
+      "nonbrandClicks": 17,
+      "brandClicks": 24,
+      "nonbrandShare": 0.415,
+      "organicSessions": 102,
+      "organicKeyEvents": 13
+    },
+    "prevWeek": {
+      "clicks": 59,
+      "impressions": 1983,
+      "position": 9,
+      "nonbrandClicks": 3,
+      "brandClicks": 17,
+      "nonbrandShare": 0.15,
+      "organicSessions": 53,
+      "organicKeyEvents": 8
+    },
+    "cur28": {
+      "clicks": 275,
+      "impressions": 7402,
+      "position": 7.8,
+      "nonbrandClicks": 26,
+      "brandClicks": 84,
+      "nonbrandShare": 0.236,
+      "organicSessions": 255,
+      "organicKeyEvents": 39
+    },
+    "prev28": {
+      "clicks": 245,
+      "impressions": 6818,
+      "position": 7.9,
+      "nonbrandClicks": 28,
+      "brandClicks": 52,
+      "nonbrandShare": 0.35,
+      "organicSessions": 321,
+      "organicKeyEvents": 29
+    }
+  },
+  "brand": {
+    "cur28": {
+      "ptStudio7": {
+        "clicks": 56,
+        "impressions": 464
+      },
+      "pt7": {
+        "clicks": 28,
+        "impressions": 259
+      }
+    },
+    "prev28": {
+      "ptStudio7": {
+        "clicks": 35,
+        "impressions": 381
+      },
+      "pt7": {
+        "clicks": 17,
+        "impressions": 106
+      }
+    },
+    "crossover": false
+  },
+  "targets": [
+    {
+      "keyword": "reformer pilates amsterdam zuid",
+      "page": "/reformer-pilates-amsterdam/",
+      "impressions": 20,
+      "clicks": 0,
+      "position": 3.6,
+      "intendedPagePosition": 5,
+      "topPage": "/",
+      "queries": 1,
+      "positionPrev": 5.4,
+      "impressionsPrev": 8,
+      "wrongPage": true
+    },
+    {
+      "keyword": "reformer pilates amsterdam",
+      "page": "/reformer-pilates-amsterdam/",
+      "impressions": 95,
+      "clicks": 1,
+      "position": 10.1,
+      "intendedPagePosition": 32.1,
+      "topPage": "/",
+      "queries": 7,
+      "positionPrev": 11.7,
+      "impressionsPrev": 67,
+      "wrongPage": true
+    },
+    {
+      "keyword": "pilates amsterdam zuid",
+      "page": "/reformer-pilates-amsterdam/",
+      "impressions": 39,
+      "clicks": 2,
+      "position": 5.5,
+      "intendedPagePosition": 11.4,
+      "topPage": "/",
+      "queries": 2,
+      "positionPrev": 5.6,
+      "impressionsPrev": 30,
+      "wrongPage": true
+    },
+    {
+      "keyword": "pilates oud-zuid",
+      "page": "/reformer-pilates-amsterdam/",
+      "impressions": 62,
+      "clicks": 0,
+      "position": 4.9,
+      "intendedPagePosition": null,
+      "topPage": "/nl/",
+      "queries": 1,
+      "positionPrev": 8.8,
+      "impressionsPrev": 42,
+      "wrongPage": true
+    },
+    {
+      "keyword": "trx amsterdam",
+      "page": "/trx-training-amsterdam/",
+      "impressions": 53,
+      "clicks": 0,
+      "position": 10.4,
+      "intendedPagePosition": 4.4,
+      "topPage": "/trx-training-amsterdam/",
+      "queries": 1,
+      "positionPrev": 11.8,
+      "impressionsPrev": 75,
+      "wrongPage": false
+    },
+    {
+      "keyword": "pilates equipment",
+      "page": "/equipment/",
+      "impressions": 96,
+      "clicks": 0,
+      "position": 7.8,
+      "intendedPagePosition": 10.5,
+      "topPage": "/equipment/",
+      "queries": 8,
+      "positionPrev": 10.3,
+      "impressionsPrev": 131,
+      "wrongPage": false
+    },
+    {
+      "keyword": "reformer kopen",
+      "page": "/equipment/",
+      "impressions": 19,
+      "clicks": 0,
+      "position": 10.8,
+      "intendedPagePosition": 10,
+      "topPage": "/equipment/nl/",
+      "queries": 5,
+      "positionPrev": null,
+      "impressionsPrev": 0,
+      "wrongPage": true
+    },
+    {
+      "keyword": "private pilates amsterdam",
+      "page": "/private-pilates-amsterdam/",
+      "impressions": 0,
+      "clicks": 0,
+      "position": null,
+      "intendedPagePosition": null,
+      "topPage": null,
+      "queries": 0,
+      "positionPrev": null,
+      "impressionsPrev": 0,
+      "wrongPage": false
+    },
+    {
+      "keyword": "prive pilates les",
+      "page": "/private-pilates-amsterdam/nl/",
+      "impressions": 1,
+      "clicks": 0,
+      "position": 7,
+      "intendedPagePosition": 7,
+      "topPage": "/private-pilates-amsterdam/nl/",
+      "queries": 1,
+      "positionPrev": null,
+      "impressionsPrev": 0,
+      "wrongPage": false
+    },
+    {
+      "keyword": "personal training amsterdam zuid",
+      "page": "/strength-training-amsterdam/",
+      "impressions": 1,
+      "clicks": 0,
+      "position": 29,
+      "intendedPagePosition": null,
+      "topPage": "/",
+      "queries": 1,
+      "positionPrev": null,
+      "impressionsPrev": 0,
+      "wrongPage": true
+    },
+    {
+      "keyword": "pilates docentenopleiding",
+      "page": "/academy/nl/",
+      "impressions": 0,
+      "clicks": 0,
+      "position": null,
+      "intendedPagePosition": null,
+      "topPage": null,
+      "queries": 0,
+      "positionPrev": null,
+      "impressionsPrev": 0,
+      "wrongPage": false
+    },
+    {
+      "keyword": "pilates instructor course amsterdam",
+      "page": "/academy/",
+      "impressions": 5,
+      "clicks": 0,
+      "position": 6.2,
+      "intendedPagePosition": 2,
+      "topPage": "/",
+      "queries": 1,
+      "positionPrev": 12,
+      "impressionsPrev": 4,
+      "wrongPage": true
+    },
+    {
+      "keyword": "prenatal pilates amsterdam",
+      "page": "/prenatal-pilates-amsterdam/",
+      "impressions": 2,
+      "clicks": 0,
+      "position": 6.5,
+      "intendedPagePosition": null,
+      "topPage": "/prenatal-pilates-amsterdam/nl/",
+      "queries": 1,
+      "positionPrev": 5.7,
+      "impressionsPrev": 6,
+      "wrongPage": true
+    }
+  ],
+  "experiments": [],
+  "learnings": [],
+  "actions": [
+    {
+      "type": "strengthen",
+      "budget": "content",
+      "priority": 70,
+      "page": "/academy/",
+      "reason": "clicks up 3→10 vs previous 28d",
+      "keepSnippet": true,
+      "uncoveredQueries": [],
+      "addInternalLinksFrom": [
+        "/blog/pilates-prices-amsterdam-2026-complete-guide/",
+        "/instructors/",
+        "/equipment/reformer/"
+      ],
+      "currentInboundContentLinks": 12
+    },
+    {
+      "type": "strengthen",
+      "budget": "content",
+      "priority": 70,
+      "page": "/equipment/",
+      "reason": "target page with striking-distance queries",
+      "keepSnippet": true,
+      "uncoveredQueries": [],
+      "addInternalLinksFrom": [
+        "/",
+        "/reformer-pilates-amsterdam/",
+        "/blog/pilates-prices-amsterdam-2026-complete-guide/"
+      ],
+      "currentInboundContentLinks": 0
+    },
+    {
+      "type": "rewrite-snippet",
+      "budget": "snippet",
+      "priority": 58.4,
+      "page": "/",
+      "current": {
+        "title": "PT7 (PT Studio 7) | Pilates & Strength Amsterdam Zuid",
+        "description": "PT7 (formerly PT Studio 7): boutique Pilates & strength studio at Van Baerlestraat 76C, Museumplein, Amsterdam Zuid. Max 5 per class. Intro: 3 classes for €50."
+      },
+      "why": "CTR is 0.57× what its positions predict (site-calibrated); ~8 clicks/28d missed",
+      "topQueries": [
+        {
+          "query": "pt",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 236,
+          "position": 4.2,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 59,
+          "position": 2.5,
+          "ctr": 0
+        },
+        {
+          "query": "pilates studio amsterdam",
+          "brand": false,
+          "clicks": 2,
+          "impressions": 57,
+          "position": 7.7,
+          "ctr": 0.0351
+        },
+        {
+          "query": "pilates amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 48,
+          "position": 10,
+          "ctr": 0
+        },
+        {
+          "query": "duet pilates sessions",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 42,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pilates equipment sessions",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 39,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pt studio",
+          "brand": false,
+          "clicks": 1,
+          "impressions": 39,
+          "position": 9.2,
+          "ctr": 0.0256
+        }
+      ],
+      "hygiene": [],
+      "doNotReuse": []
+    },
+    {
+      "type": "rewrite-snippet",
+      "budget": "snippet",
+      "priority": 51.2,
+      "page": "/blog/pilates-prices-amsterdam-2026-complete-guide/",
+      "current": {
+        "title": "Pilates Prices Amsterdam 2026: Cost Guide | PT7",
+        "description": "Pilates prices in Amsterdam for 2026: group classes, private sessions and memberships compared, and what drives the difference in cost."
+      },
+      "why": "CTR is 0× what its positions predict (site-calibrated); ~1 clicks/28d missed",
+      "topQueries": [
+        {
+          "query": "how much do pilates classes cost and are there any affordable options in netherlands?",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 24,
+          "position": 2,
+          "ctr": 0
+        },
+        {
+          "query": "what are the best private personal trainers in amsterdam for one-to-one coaching and nutrition? asking as: remote or travelling professional",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 6.5,
+          "ctr": 0
+        },
+        {
+          "query": "pilates amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 16,
+          "ctr": 0
+        },
+        {
+          "query": "pilates class price",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 6,
+          "ctr": 0
+        },
+        {
+          "query": "wat kost pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 18.7,
+          "ctr": 0
+        },
+        {
+          "query": "pilates price",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 9.3,
+          "ctr": 0
+        },
+        {
+          "query": "how much does pilates class cost",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pilates fee",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 7,
+          "ctr": 0
+        }
+      ],
+      "hygiene": [],
+      "doNotReuse": []
+    },
+    {
+      "type": "rewrite-snippet",
+      "budget": "snippet",
+      "priority": 51.2,
+      "page": "/instructors/",
+      "current": {
+        "title": "Our Instructors | PT7 Pilates Amsterdam",
+        "description": "Meet our expert team of certified Pilates and fitness instructors at PT7 Amsterdam. Master, senior, and junior instructors dedicated to your fitness journey."
+      },
+      "why": "CTR is 0.45× what its positions predict (site-calibrated); ~1 clicks/28d missed",
+      "topQueries": [
+        {
+          "query": "pilates instructor",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 3.8,
+          "ctr": 0
+        },
+        {
+          "query": "studio 7 rockanje",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 53.5,
+          "ctr": 0
+        },
+        {
+          "query": "pilates instructors",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 11,
+          "ctr": 0
+        },
+        {
+          "query": "strong pilates instructors",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 9,
+          "ctr": 0
+        }
+      ],
+      "hygiene": [],
+      "doNotReuse": []
+    }
+  ],
+  "deferred": [
+    {
+      "type": "strengthen",
+      "page": "/reformer-pilates-amsterdam/",
+      "priority": 70
+    },
+    {
+      "type": "strengthen",
+      "page": "/trx-training-amsterdam/",
+      "priority": 70
+    },
+    {
+      "type": "strengthen",
+      "page": "/nl/",
+      "priority": 60.4
+    },
+    {
+      "type": "strengthen",
+      "page": "/schedule/nl/",
+      "priority": 60
+    },
+    {
+      "type": "rewrite-snippet",
+      "page": "/equipment/",
+      "priority": 51.8
+    },
+    {
+      "type": "rewrite-snippet",
+      "page": "/equipment/reformer/",
+      "priority": 51.1
+    },
+    {
+      "type": "rewrite-snippet",
+      "page": "/blog/",
+      "priority": 50.6
+    },
+    {
+      "type": "rewrite-snippet",
+      "page": "/blog/pma-ittap-accreditation-reformer-course-amsterdam/",
+      "priority": 50.6
+    },
+    {
+      "type": "rewrite-snippet",
+      "page": "/equipment/tower-reformer/",
+      "priority": 50.5
+    },
+    {
+      "type": "rewrite-snippet",
+      "page": "/pricing/",
+      "priority": 50.5
+    },
+    {
+      "type": "rewrite-snippet",
+      "page": "/trx-training-amsterdam/",
+      "priority": 50.5
+    },
+    {
+      "type": "fix-snippet-hygiene",
+      "page": "/blog/prenatal-pilates-supporting-body-through-every-trimester/nl/",
+      "priority": 30.5
+    },
+    {
+      "type": "fix-snippet-hygiene",
+      "page": "/equipment/cadillac/nl/",
+      "priority": 30.4
+    },
+    {
+      "type": "fix-snippet-hygiene",
+      "page": "/instructors/nl/",
+      "priority": 30.2
+    },
+    {
+      "type": "fix-snippet-hygiene",
+      "page": "/equipment/reformer/nl/",
+      "priority": 30.2
+    },
+    {
+      "type": "fix-snippet-hygiene",
+      "page": "/equipment/ladder-barrel/nl/",
+      "priority": 30.1
+    },
+    {
+      "type": "fix-snippet-hygiene",
+      "page": "/corporate/nl/",
+      "priority": 30.1
+    },
+    {
+      "type": "fix-snippet-hygiene",
+      "page": "/equipment/tower-reformer/nl/",
+      "priority": 30.1
+    },
+    {
+      "type": "fix-snippet-hygiene",
+      "page": "/healthcare-providers/nl/",
+      "priority": 30.1
+    },
+    {
+      "type": "fix-snippet-hygiene",
+      "page": "/trainer/kelly/nl/",
+      "priority": 30.1
+    },
+    {
+      "type": "fix-snippet-hygiene",
+      "page": "/blog/nl/",
+      "priority": 30
+    },
+    {
+      "type": "fix-snippet-hygiene",
+      "page": "/workouts/cardio/nl/",
+      "priority": 30
+    },
+    {
+      "type": "fix-snippet-hygiene",
+      "page": "/trainer/lal/nl/",
+      "priority": 30
+    }
+  ],
+  "advisory": [
+    {
+      "type": "target-on-wrong-page",
+      "note": "\"reformer pilates amsterdam zuid\" mostly shows / instead of /reformer-pilates-amsterdam/",
+      "data": {
+        "keyword": "reformer pilates amsterdam zuid",
+        "page": "/reformer-pilates-amsterdam/",
+        "impressions": 20,
+        "clicks": 0,
+        "position": 3.6,
+        "intendedPagePosition": 5,
+        "topPage": "/",
+        "queries": 1,
+        "positionPrev": 5.4,
+        "impressionsPrev": 8,
+        "wrongPage": true
+      }
+    },
+    {
+      "type": "target-on-wrong-page",
+      "note": "\"reformer pilates amsterdam\" mostly shows / instead of /reformer-pilates-amsterdam/",
+      "data": {
+        "keyword": "reformer pilates amsterdam",
+        "page": "/reformer-pilates-amsterdam/",
+        "impressions": 95,
+        "clicks": 1,
+        "position": 10.1,
+        "intendedPagePosition": 32.1,
+        "topPage": "/",
+        "queries": 7,
+        "positionPrev": 11.7,
+        "impressionsPrev": 67,
+        "wrongPage": true
+      }
+    },
+    {
+      "type": "target-on-wrong-page",
+      "note": "\"pilates amsterdam zuid\" mostly shows / instead of /reformer-pilates-amsterdam/",
+      "data": {
+        "keyword": "pilates amsterdam zuid",
+        "page": "/reformer-pilates-amsterdam/",
+        "impressions": 39,
+        "clicks": 2,
+        "position": 5.5,
+        "intendedPagePosition": 11.4,
+        "topPage": "/",
+        "queries": 2,
+        "positionPrev": 5.6,
+        "impressionsPrev": 30,
+        "wrongPage": true
+      }
+    },
+    {
+      "type": "target-on-wrong-page",
+      "note": "\"pilates oud-zuid\" mostly shows /nl/ instead of /reformer-pilates-amsterdam/",
+      "data": {
+        "keyword": "pilates oud-zuid",
+        "page": "/reformer-pilates-amsterdam/",
+        "impressions": 62,
+        "clicks": 0,
+        "position": 4.9,
+        "intendedPagePosition": null,
+        "topPage": "/nl/",
+        "queries": 1,
+        "positionPrev": 8.8,
+        "impressionsPrev": 42,
+        "wrongPage": true
+      }
+    },
+    {
+      "type": "cannibalization",
+      "note": "\"reformer pilates\" splits impressions across /, /reformer-pilates-amsterdam/",
+      "data": {
+        "query": "reformer pilates",
+        "impressions": 128,
+        "pages": [
+          {
+            "page": "/",
+            "share": 0.47
+          },
+          {
+            "page": "/reformer-pilates-amsterdam/",
+            "share": 0.53
+          }
+        ]
+      }
+    },
+    {
+      "type": "cannibalization",
+      "note": "\"pt studio\" splits impressions across /, /nl/",
+      "data": {
+        "query": "pt studio",
+        "impressions": 87,
+        "pages": [
+          {
+            "page": "/",
+            "share": 0.45
+          },
+          {
+            "page": "/nl/",
+            "share": 0.44
+          }
+        ]
+      }
+    },
+    {
+      "type": "cannibalization",
+      "note": "\"pilates oud zuid\" splits impressions across /, /nl/",
+      "data": {
+        "query": "pilates oud zuid",
+        "impressions": 62,
+        "pages": [
+          {
+            "page": "/",
+            "share": 0.37
+          },
+          {
+            "page": "/nl/",
+            "share": 0.56
+          }
+        ]
+      }
+    },
+    {
+      "type": "cannibalization",
+      "note": "\"trx amsterdam\" splits impressions across /workouts/trx/, /trx-training-amsterdam/",
+      "data": {
+        "query": "trx amsterdam",
+        "impressions": 53,
+        "pages": [
+          {
+            "page": "/workouts/trx/",
+            "share": 0.4
+          },
+          {
+            "page": "/trx-training-amsterdam/",
+            "share": 0.55
+          }
+        ]
+      }
+    },
+    {
+      "type": "cannibalization",
+      "note": "\"cadillac pilates\" splits impressions across /equipment/cadillac/, /equipment/cadillac/nl/",
+      "data": {
+        "query": "cadillac pilates",
+        "impressions": 37,
+        "pages": [
+          {
+            "page": "/equipment/cadillac/",
+            "share": 0.73
+          },
+          {
+            "page": "/equipment/cadillac/nl/",
+            "share": 0.24
+          }
+        ]
+      }
+    }
+  ],
+  "hygiene": [
+    {
+      "page": "/blog/nl/",
+      "issues": [
+        "description 175 chars (>160)"
+      ],
+      "snippetFix": true
+    },
+    {
+      "page": "/blog/prenatal-pilates-supporting-body-through-every-trimester/nl/",
+      "issues": [
+        "description 174 chars (>160)"
+      ],
+      "snippetFix": true
+    },
+    {
+      "page": "/blog/pt-7-moves-to-olympisch-stadion/nl/",
+      "issues": [
+        "title 62 chars (>60)"
+      ],
+      "snippetFix": true
+    },
+    {
+      "page": "/corporate/nl/",
+      "issues": [
+        "title 64 chars (>60)"
+      ],
+      "snippetFix": true
+    },
+    {
+      "page": "/equipment/cadillac/nl/",
+      "issues": [
+        "description 167 chars (>160)"
+      ],
+      "snippetFix": true
+    },
+    {
+      "page": "/equipment/ladder-barrel/nl/",
+      "issues": [
+        "description 162 chars (>160)"
+      ],
+      "snippetFix": true
+    },
+    {
+      "page": "/equipment/reformer/nl/",
+      "issues": [
+        "description 167 chars (>160)"
+      ],
+      "snippetFix": true
+    },
+    {
+      "page": "/equipment/tower-reformer/nl/",
+      "issues": [
+        "description 177 chars (>160)"
+      ],
+      "snippetFix": true
+    },
+    {
+      "page": "/healthcare-providers/nl/",
+      "issues": [
+        "description 174 chars (>160)"
+      ],
+      "snippetFix": true
+    },
+    {
+      "page": "/instructors/nl/",
+      "issues": [
+        "description 172 chars (>160)"
+      ],
+      "snippetFix": true
+    },
+    {
+      "page": "/trainer/kelly/nl/",
+      "issues": [
+        "description 164 chars (>160)"
+      ],
+      "snippetFix": true
+    },
+    {
+      "page": "/trainer/lal/nl/",
+      "issues": [
+        "description 175 chars (>160)"
+      ],
+      "snippetFix": true
+    },
+    {
+      "page": "/workouts/cardio/nl/",
+      "issues": [
+        "description 167 chars (>160)"
+      ],
+      "snippetFix": true
+    }
+  ],
+  "pages": {
+    "/": {
+      "page": "/",
+      "live": {
+        "title": "PT7 (PT Studio 7) | Pilates & Strength Amsterdam Zuid",
+        "description": "PT7 (formerly PT Studio 7): boutique Pilates & strength studio at Van Baerlestraat 76C, Museumplein, Amsterdam Zuid. Max 5 per class. Intro: 3 classes for €50.",
+        "h1": [
+          "Pilates & Strength Training in Amsterdam Zuid"
+        ],
+        "lang": "en",
+        "words": 1017,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "weak",
+      "ctrVsExpected": 0.57,
+      "gsc": {
+        "clicks": 137,
+        "impressions": 2634,
+        "position": 5,
+        "nonbrandClicks": 11,
+        "nonbrandImpressions": 1269,
+        "clicksPrev": 149,
+        "impressionsPrev": 2992
+      },
+      "ga4": {
+        "sessions": 5,
+        "engagementRate": 1,
+        "keyEvents": 1
+      },
+      "expectedClicksAtSiteRate": 19.4,
+      "scoredClicks": 11,
+      "topQueries": [
+        {
+          "query": "pt",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 236,
+          "position": 4.2,
+          "ctr": 0
+        },
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 13,
+          "impressions": 95,
+          "position": 4.1,
+          "ctr": 0.1368
+        },
+        {
+          "query": "reformer pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 59,
+          "position": 2.5,
+          "ctr": 0
+        },
+        {
+          "query": "pilates studio amsterdam",
+          "brand": false,
+          "clicks": 2,
+          "impressions": 57,
+          "position": 7.7,
+          "ctr": 0.0351
+        },
+        {
+          "query": "pilates amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 48,
+          "position": 10,
+          "ctr": 0
+        },
+        {
+          "query": "duet pilates sessions",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 42,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pilates equipment sessions",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 39,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pt studio",
+          "brand": false,
+          "clicks": 1,
+          "impressions": 39,
+          "position": 9.2,
+          "ctr": 0.0256
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 30,
+          "impressions": 37,
+          "position": 1.2,
+          "ctr": 0.8108
+        },
+        {
+          "query": "pt studio 7",
+          "brand": true,
+          "clicks": 22,
+          "impressions": 36,
+          "position": 1.7,
+          "ctr": 0.6111
+        }
+      ],
+      "striking": [
+        {
+          "query": "pt",
+          "impressions": 236,
+          "clicks": 0,
+          "position": 4.2,
+          "inTitle": false,
+          "inHeadings": false
+        },
+        {
+          "query": "pilates studio amsterdam",
+          "impressions": 57,
+          "clicks": 2,
+          "position": 7.7,
+          "inTitle": true,
+          "inHeadings": true
+        },
+        {
+          "query": "pilates amsterdam",
+          "impressions": 48,
+          "clicks": 0,
+          "position": 10,
+          "inTitle": true,
+          "inHeadings": true
+        },
+        {
+          "query": "pt studio",
+          "impressions": 39,
+          "clicks": 1,
+          "position": 9.2,
+          "inTitle": true,
+          "inHeadings": true
+        },
+        {
+          "query": "reformer pilates amsterdam",
+          "impressions": 31,
+          "clicks": 0,
+          "position": 9.7,
+          "inTitle": false,
+          "inHeadings": true
+        },
+        {
+          "query": "pilates classes near me",
+          "impressions": 29,
+          "clicks": 0,
+          "position": 7.8,
+          "inTitle": false,
+          "inHeadings": false
+        }
+      ],
+      "inboundContentLinks": [
+        "/corporate/",
+        "/healthcare-providers/",
+        "/privacy/",
+        "/privacy/nl/"
+      ]
+    },
+    "/academy/": {
+      "page": "/academy/",
+      "live": {
+        "title": "Reformer Pilates Instructor Course Amsterdam | PT7 Academy",
+        "description": "300-hour Reformer Pilates instructor course in Amsterdam, PMA ITTAP approved. Weekend schedule for career changers. Next term Mar–May 2027.",
+        "h1": [
+          "Reformer Pilates instructor course Amsterdam"
+        ],
+        "lang": "en",
+        "words": 1883,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 6.52,
+      "gsc": {
+        "clicks": 10,
+        "impressions": 157,
+        "position": 6.5,
+        "nonbrandClicks": 3,
+        "nonbrandImpressions": 37,
+        "clicksPrev": 3,
+        "impressionsPrev": 45
+      },
+      "ga4": {
+        "sessions": 6,
+        "engagementRate": 1,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.5,
+      "scoredClicks": 3,
+      "topQueries": [
+        {
+          "query": "pilates teacher training amsterdam",
+          "brand": false,
+          "clicks": 1,
+          "impressions": 10,
+          "position": 18.9,
+          "ctr": 0.1
+        },
+        {
+          "query": "pilates instructor training",
+          "brand": false,
+          "clicks": 1,
+          "impressions": 5,
+          "position": 3.8,
+          "ctr": 0.2
+        },
+        {
+          "query": "pilates teacher training",
+          "brand": false,
+          "clicks": 1,
+          "impressions": 3,
+          "position": 11.3,
+          "ctr": 0.3333
+        },
+        {
+          "query": "pilates instructor training amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 5.3,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates teacher training",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 5.7,
+          "ctr": 0
+        },
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 2,
+          "ctr": 0
+        },
+        {
+          "query": "pilates instructor course",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 6.5,
+          "ctr": 0
+        },
+        {
+          "query": "google ads training course amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 95,
+          "ctr": 0
+        },
+        {
+          "query": "give me pricing",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pilates certificate",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/",
+        "/blog/career-change-banker-to-pilates-instructor/",
+        "/blog/pma-ittap-accreditation-reformer-course-amsterdam/",
+        "/blog/pt-7-moves-to-olympisch-stadion/",
+        "/blog/switching-careers-into-pilates-7-questions/",
+        "/reformer-pilates-amsterdam/",
+        "/trainer/elif/",
+        "/trainer/gamze/",
+        "/trainer/gulce/",
+        "/trainer/kelly/",
+        "/trainer/lal/",
+        "/trainer/nisan/"
+      ]
+    },
+    "/academy/nl/": {
+      "page": "/academy/nl/",
+      "live": {
+        "title": "Pilates Docentenopleiding Amsterdam | Reformer | PT7 Academy",
+        "description": "Pilates docentenopleiding in Amsterdam: 300 uur Reformer opleiding, PMA ITTAP goedgekeurd. Weekendrooster. Volgende termijn mrt–mei 2027.",
+        "h1": [
+          "Pilates docentenopleiding Amsterdam (Reformer)"
+        ],
+        "lang": "nl",
+        "words": 1761,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 4.75,
+      "gsc": {
+        "clicks": 6,
+        "impressions": 121,
+        "position": 24.5,
+        "nonbrandClicks": 1,
+        "nonbrandImpressions": 43,
+        "clicksPrev": 5,
+        "impressionsPrev": 96
+      },
+      "ga4": {
+        "sessions": 1,
+        "engagementRate": 1,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.2,
+      "scoredClicks": 1,
+      "topQueries": [
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 13,
+          "position": 4.3,
+          "ctr": 0
+        },
+        {
+          "query": "opleiding pilates reformer",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 10,
+          "position": 62,
+          "ctr": 0
+        },
+        {
+          "query": "pilates opleiding reformer",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 8,
+          "position": 55.3,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates opleiding",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 5,
+          "position": 60.2,
+          "ctr": 0
+        },
+        {
+          "query": "pilates teacher training amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 62.8,
+          "ctr": 0
+        },
+        {
+          "query": "pilates cursus",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 65.5,
+          "ctr": 0
+        },
+        {
+          "query": "pilates instructeur worden",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 85,
+          "ctr": 0
+        },
+        {
+          "query": "pilates academy",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 29,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates instructor course",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 52,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates teacher training",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 57,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/blog/career-change-banker-to-pilates-instructor/nl/",
+        "/blog/pma-ittap-accreditation-reformer-course-amsterdam/nl/",
+        "/blog/pt-7-moves-to-olympisch-stadion/nl/",
+        "/blog/switching-careers-into-pilates-7-questions/nl/",
+        "/nl/",
+        "/reformer-pilates-amsterdam/nl/",
+        "/trainer/elif/nl/",
+        "/trainer/gamze/nl/",
+        "/trainer/gulce/nl/",
+        "/trainer/kelly/nl/",
+        "/trainer/lal/nl/",
+        "/trainer/nisan/nl/"
+      ]
+    },
+    "/blog/": {
+      "page": "/blog/",
+      "live": {
+        "title": "Pilates & Fitness Blog | PT7 Pilates Amsterdam",
+        "description": "Read expert articles about Pilates, prenatal fitness, and wellness from PT7 Amsterdam. Tips, guides, and insights from our certified trainers at Museumplein.",
+        "h1": [
+          "Pilates & Fitness Blog"
+        ],
+        "lang": "en",
+        "words": 393,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "weak",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 1,
+        "impressions": 109,
+        "position": 4.8,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 1,
+        "clicksPrev": 2,
+        "impressionsPrev": 116
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.6,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 13,
+          "position": 7.4,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 12,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pt studio 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pt pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 11,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": []
+    },
+    "/blog/career-change-banker-to-pilates-instructor/": {
+      "page": "/blog/career-change-banker-to-pilates-instructor/",
+      "live": {
+        "title": "Banker to Pilates Instructor: Career Switch | PT7",
+        "description": "How to move from banking, tech or corporate work into teaching Reformer Pilates: a 300-hour, PMA ITTAP-approved weekend course in Amsterdam.",
+        "h1": [
+          "From Banker to Pilates Instructor: How to Make the Career Switch"
+        ],
+        "lang": "en",
+        "words": 953,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 2,
+        "impressions": 234,
+        "position": 7.8,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 34,
+        "clicksPrev": 4,
+        "impressionsPrev": 208
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.2,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "career change pilates instructor",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 20,
+          "position": 7.2,
+          "ctr": 0
+        },
+        {
+          "query": "pilates instructor",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 5,
+          "position": 55.4,
+          "ctr": 0
+        },
+        {
+          "query": "pilates instructor training",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 56,
+          "ctr": 0
+        },
+        {
+          "query": "how do i become a certified pilates instructor?",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 10,
+          "ctr": 0
+        },
+        {
+          "query": "pilates instructor course",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 47,
+          "ctr": 0
+        },
+        {
+          "query": "corporate pilates classes",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 4,
+          "ctr": 0
+        },
+        {
+          "query": "how to become a pilates instructor",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 4,
+          "ctr": 0
+        },
+        {
+          "query": "oui",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 5,
+          "ctr": 0
+        },
+        {
+          "query": "lavoro in banca",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "reformer",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
+          "ctr": 0
+        }
+      ],
+      "striking": [
+        {
+          "query": "career change pilates instructor",
+          "impressions": 20,
+          "clicks": 0,
+          "position": 7.2,
+          "inTitle": false,
+          "inHeadings": true
+        }
+      ],
+      "inboundContentLinks": [
+        "/academy/",
+        "/blog/",
+        "/blog/switching-careers-into-pilates-7-questions/"
+      ]
+    },
+    "/blog/career-change-banker-to-pilates-instructor/nl/": {
+      "page": "/blog/career-change-banker-to-pilates-instructor/nl/",
+      "live": {
+        "title": "Van bankier naar pilatesinstructeur | PT7",
+        "description": "Van de bank, tech of het bedrijfsleven naar lesgeven in Reformer pilates: een PMA ITTAP-goedgekeurde weekendopleiding van 300 uur in Amsterdam.",
+        "h1": [
+          "Van bankier naar pilatesinstructeur: zo maak je de carrièreswitch"
+        ],
+        "lang": "nl",
+        "words": 1018,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 0,
+        "position": null,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/academy/nl/",
+        "/blog/nl/",
+        "/blog/switching-careers-into-pilates-7-questions/nl/"
+      ]
+    },
+    "/blog/group-pilates-class-size-attention-amsterdam/": {
+      "page": "/blog/group-pilates-class-size-attention-amsterdam/",
+      "live": {
+        "title": "Why 20-Person Pilates Classes Fall Short | PT7",
+        "description": "Why a 20-person Pilates class rarely gives the feedback motor learning needs, and the case for small classes (max 5) at PT7 Museumplein.",
+        "h1": [
+          "Why a 20-Person Pilates Class Cannot Give You the Attention You Need"
+        ],
+        "lang": "en",
+        "words": 958,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 26,
+        "position": 5.9,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/blog/",
+        "/blog/career-change-banker-to-pilates-instructor/",
+        "/blog/pilates-for-men-strength-flexibility-athletic-performance/",
+        "/blog/pilates-prices-amsterdam-2026-complete-guide/",
+        "/blog/pma-ittap-accreditation-reformer-course-amsterdam/",
+        "/blog/prenatal-pilates-supporting-body-through-every-trimester/",
+        "/blog/pt-7-moves-to-olympisch-stadion/",
+        "/blog/switching-careers-into-pilates-7-questions/"
+      ]
+    },
+    "/blog/group-pilates-class-size-attention-amsterdam/nl/": {
+      "page": "/blog/group-pilates-class-size-attention-amsterdam/nl/",
+      "live": {
+        "title": "Waarom pilateslessen met 20 mensen tekortschieten | PT7",
+        "description": "Waarom een pilatesles met 20 mensen zelden de feedback geeft die motorisch leren nodig heeft, en waarom kleine lessen (max. 5) bij PT7 Museumplein werken.",
+        "h1": [
+          "Waarom een pilatesles met 20 mensen je niet de aandacht kan geven die je nodig hebt"
+        ],
+        "lang": "nl",
+        "words": 1012,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 6,
+        "position": 7,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/blog/career-change-banker-to-pilates-instructor/nl/",
+        "/blog/nl/",
+        "/blog/pilates-for-men-strength-flexibility-athletic-performance/nl/",
+        "/blog/pilates-prices-amsterdam-2026-complete-guide/nl/",
+        "/blog/pma-ittap-accreditation-reformer-course-amsterdam/nl/",
+        "/blog/prenatal-pilates-supporting-body-through-every-trimester/nl/",
+        "/blog/pt-7-moves-to-olympisch-stadion/nl/",
+        "/blog/switching-careers-into-pilates-7-questions/nl/"
+      ]
+    },
+    "/blog/nl/": {
+      "page": "/blog/nl/",
+      "live": {
+        "title": "Pilates- & fitnessblog | PT7 Pilates Amsterdam",
+        "description": "Lees artikelen over pilates, fit blijven tijdens de zwangerschap en welzijn van PT7 Amsterdam. Tips, gidsen en inzichten van onze gecertificeerde trainers aan het Museumplein.",
+        "h1": [
+          "Pilates- & fitnessblog"
+        ],
+        "lang": "nl",
+        "words": 393,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 4,
+        "position": 9.8,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 1,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "does trypor.pt have a blog",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 9,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": []
+    },
+    "/blog/pilates-for-men-strength-flexibility-athletic-performance/": {
+      "page": "/blog/pilates-for-men-strength-flexibility-athletic-performance/",
+      "live": {
+        "title": "Pilates for Men: Strength & Performance | PT7",
+        "description": "Reformer Pilates for men in Amsterdam: build core strength, prevent injuries and improve athletic performance. All fitness levels, at Museumplein.",
+        "h1": [
+          "Pilates for Men: Building Strength, Flexibility, and Athletic Performance"
+        ],
+        "lang": "en",
+        "words": 490,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 6,
+        "position": 6.3,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/blog/"
+      ]
+    },
+    "/blog/pilates-for-men-strength-flexibility-athletic-performance/nl/": {
+      "page": "/blog/pilates-for-men-strength-flexibility-athletic-performance/nl/",
+      "live": {
+        "title": "Pilates voor mannen: kracht & prestaties | PT7",
+        "description": "Reformer pilates voor mannen in Amsterdam: bouw kracht in je core op, voorkom blessures en verbeter je sportprestaties. Alle niveaus, aan het Museumplein.",
+        "h1": [
+          "Pilates voor mannen: kracht, flexibiliteit en betere sportprestaties"
+        ],
+        "lang": "nl",
+        "words": 510,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 26,
+        "position": 9.9,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 9,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "pilates voor mannen",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 8,
+          "position": 10.3,
+          "ctr": 0
+        },
+        {
+          "query": "pilates mannen",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 10,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/blog/nl/"
+      ]
+    },
+    "/blog/pilates-prices-amsterdam-2026-complete-guide/": {
+      "page": "/blog/pilates-prices-amsterdam-2026-complete-guide/",
+      "live": {
+        "title": "Pilates Prices Amsterdam 2026: Cost Guide | PT7",
+        "description": "Pilates prices in Amsterdam for 2026: group classes, private sessions and memberships compared, and what drives the difference in cost.",
+        "h1": [
+          "Pilates Prices Amsterdam 2026: Complete Cost Comparison Guide"
+        ],
+        "lang": "en",
+        "words": 930,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "weak",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 6,
+        "impressions": 395,
+        "position": 6.7,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 76,
+        "clicksPrev": 3,
+        "impressionsPrev": 365
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 1.2,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "how much do pilates classes cost and are there any affordable options in netherlands?",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 24,
+          "position": 2,
+          "ctr": 0
+        },
+        {
+          "query": "what are the best private personal trainers in amsterdam for one-to-one coaching and nutrition? asking as: remote or travelling professional",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 6.5,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pilates amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 16,
+          "ctr": 0
+        },
+        {
+          "query": "pilates class price",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 6,
+          "ctr": 0
+        },
+        {
+          "query": "wat kost pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 18.7,
+          "ctr": 0
+        },
+        {
+          "query": "pilates price",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 9.3,
+          "ctr": 0
+        },
+        {
+          "query": "how much does pilates class cost",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pilates fee",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 7,
+          "ctr": 0
+        },
+        {
+          "query": "pilates kosten",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 79,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/blog/"
+      ]
+    },
+    "/blog/pilates-prices-amsterdam-2026-complete-guide/nl/": {
+      "page": "/blog/pilates-prices-amsterdam-2026-complete-guide/nl/",
+      "live": {
+        "title": "Pilates prijzen Amsterdam 2026: kostengids | PT7",
+        "description": "Pilates prijzen in Amsterdam voor 2026: groepslessen, privésessies en abonnementen vergeleken, en wat de verschillen in kosten bepaalt.",
+        "h1": [
+          "Pilates prijzen Amsterdam 2026: complete kostenvergelijking"
+        ],
+        "lang": "nl",
+        "words": 989,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 1,
+        "impressions": 89,
+        "position": 6.3,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 10,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "pilates abonnement amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 13,
+          "ctr": 0
+        },
+        {
+          "query": "pilates prijs",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 6.7,
+          "ctr": 0
+        },
+        {
+          "query": "wat kost pilates les",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 6,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates prijs",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 11,
+          "ctr": 0
+        },
+        {
+          "query": "pilates les kosten",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 9,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/blog/nl/"
+      ]
+    },
+    "/blog/pma-ittap-accreditation-reformer-course-amsterdam/": {
+      "page": "/blog/pma-ittap-accreditation-reformer-course-amsterdam/",
+      "live": {
+        "title": "PMA ITTAP Accreditation Explained | PT7 Academy",
+        "description": "What PMA ITTAP accreditation means for Pilates teacher training, and how PT7 Academy's 300-hour Reformer course in Amsterdam meets it.",
+        "h1": [
+          "PMA ITTAP Accreditation: Global Recognition for Reformer Teacher Training"
+        ],
+        "lang": "en",
+        "words": 741,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "weak",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 1,
+        "impressions": 98,
+        "position": 4.4,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 33,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.6,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "ittap",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 25,
+          "position": 2.6,
+          "ctr": 0
+        },
+        {
+          "query": "ittap pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 4.5,
+          "ctr": 0
+        },
+        {
+          "query": "itap teacher training meaning",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 75,
+          "ctr": 0
+        },
+        {
+          "query": "pma pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 8,
+          "ctr": 0
+        },
+        {
+          "query": "ittap pilates certification",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 8,
+          "ctr": 0
+        },
+        {
+          "query": "pma ittap",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 5,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/blog/",
+        "/blog/switching-careers-into-pilates-7-questions/"
+      ]
+    },
+    "/blog/pma-ittap-accreditation-reformer-course-amsterdam/nl/": {
+      "page": "/blog/pma-ittap-accreditation-reformer-course-amsterdam/nl/",
+      "live": {
+        "title": "PMA ITTAP-accreditatie uitgelegd | PT7 Academy",
+        "description": "Wat PMA ITTAP-accreditatie betekent voor een pilates docentenopleiding, en hoe de Reformer-cursus van 300 uur van PT7 Academy in Amsterdam daaraan voldoet.",
+        "h1": [
+          "PMA ITTAP-accreditatie: wereldwijde erkenning voor de Reformer-docentenopleiding"
+        ],
+        "lang": "nl",
+        "words": 785,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 8,
+        "position": 4,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/blog/nl/",
+        "/blog/switching-careers-into-pilates-7-questions/nl/"
+      ]
+    },
+    "/blog/prenatal-pilates-supporting-body-through-every-trimester/": {
+      "page": "/blog/prenatal-pilates-supporting-body-through-every-trimester/",
+      "live": {
+        "title": "Prenatal Pilates Through Every Trimester | PT7",
+        "description": "A trimester-by-trimester prenatal Pilates guide by Elif Arzu Ogan: pelvic floor work, safe exercise in pregnancy, birth prep and private sessions.",
+        "h1": [
+          "Prenatal Pilates: Supporting the Body Through Every Trimester"
+        ],
+        "lang": "en",
+        "words": 1789,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 34,
+        "position": 8.6,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 11,
+        "clicksPrev": 0,
+        "impressionsPrev": 6
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "prenatal pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 6,
+          "position": 10,
+          "ctr": 0
+        },
+        {
+          "query": "pilates prenatal",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 10.5,
+          "ctr": 0
+        },
+        {
+          "query": "pregnancy pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 12,
+          "ctr": 0
+        },
+        {
+          "query": "pilates for pregnant women",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 8,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/blog/",
+        "/prenatal-pilates-amsterdam/"
+      ]
+    },
+    "/blog/prenatal-pilates-supporting-body-through-every-trimester/nl/": {
+      "page": "/blog/prenatal-pilates-supporting-body-through-every-trimester/nl/",
+      "live": {
+        "title": "Prenatale pilates in elk trimester | PT7",
+        "description": "Een gids per trimester over prenatale pilates door Elif Arzu Ogan: bekkenbodemtraining, veilig sporten tijdens de zwangerschap, voorbereiding op de bevalling en privésessies.",
+        "h1": [
+          "Prenatale pilates: je lichaam ondersteunen in elk trimester"
+        ],
+        "lang": "nl",
+        "words": 2118,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 50,
+        "position": 25.5,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 37,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.1,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "pilates zwangere vrouwen",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 7,
+          "position": 43.1,
+          "ctr": 0
+        },
+        {
+          "query": "prenatal pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 7,
+          "position": 6.1,
+          "ctr": 0
+        },
+        {
+          "query": "zwanger pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 5,
+          "position": 31.6,
+          "ctr": 0
+        },
+        {
+          "query": "pilates tijdens zwangerschap",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 41.5,
+          "ctr": 0
+        },
+        {
+          "query": "pilates zwangerschap",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 31.3,
+          "ctr": 0
+        },
+        {
+          "query": "kan je pilates doen als je zwanger bent",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 24,
+          "ctr": 0
+        },
+        {
+          "query": "pilates en zwangerschap",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 47,
+          "ctr": 0
+        },
+        {
+          "query": "zwanger en pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 61,
+          "ctr": 0
+        },
+        {
+          "query": "prenatale pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 12,
+          "ctr": 0
+        },
+        {
+          "query": "prenatal reformer pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 12,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/blog/nl/",
+        "/prenatal-pilates-amsterdam/nl/"
+      ]
+    },
+    "/blog/pt-7-moves-to-olympisch-stadion/": {
+      "page": "/blog/pt-7-moves-to-olympisch-stadion/",
+      "live": {
+        "title": "PT7’s Move to Olympisch Stadion Is Postponed | PT7",
+        "description": "A fire at Olympisch Stadion postponed PT7’s move. Classes continue at Van Baerlestraat 76C; Olympisch Stadion 15 is still the plan. New date to follow.",
+        "h1": [
+          "PT7’s Move to Olympisch Stadion Is Postponed"
+        ],
+        "lang": "en",
+        "words": 378,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": true,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 0,
+        "position": null,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 11,
+        "engagementRate": 1,
+        "keyEvents": 3
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/",
+        "/blog/",
+        "/blog/career-change-banker-to-pilates-instructor/",
+        "/blog/group-pilates-class-size-attention-amsterdam/",
+        "/blog/pilates-for-men-strength-flexibility-athletic-performance/",
+        "/blog/pilates-prices-amsterdam-2026-complete-guide/",
+        "/blog/pma-ittap-accreditation-reformer-course-amsterdam/",
+        "/blog/prenatal-pilates-supporting-body-through-every-trimester/",
+        "/blog/switching-careers-into-pilates-7-questions/",
+        "/nl/",
+        "/opening-offer/",
+        "/opening-offer/nl/"
+      ]
+    },
+    "/blog/pt-7-moves-to-olympisch-stadion/nl/": {
+      "page": "/blog/pt-7-moves-to-olympisch-stadion/nl/",
+      "live": {
+        "title": "Verhuizing van PT7 naar het Olympisch Stadion uitgesteld | PT7",
+        "description": "Door een brand in het Olympisch Stadion is de verhuizing van PT7 uitgesteld. Lessen gaan door op Van Baerlestraat 76C; Olympisch Stadion 15 blijft het plan.",
+        "h1": [
+          "Verhuizing van PT7 naar het Olympisch Stadion uitgesteld"
+        ],
+        "lang": "nl",
+        "words": 313,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": true,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 4,
+        "position": 5.5,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/blog/career-change-banker-to-pilates-instructor/nl/",
+        "/blog/group-pilates-class-size-attention-amsterdam/nl/",
+        "/blog/nl/",
+        "/blog/pilates-for-men-strength-flexibility-athletic-performance/nl/",
+        "/blog/pilates-prices-amsterdam-2026-complete-guide/nl/",
+        "/blog/pma-ittap-accreditation-reformer-course-amsterdam/nl/",
+        "/blog/prenatal-pilates-supporting-body-through-every-trimester/nl/",
+        "/blog/switching-careers-into-pilates-7-questions/nl/",
+        "/opening-offer/nl/"
+      ]
+    },
+    "/blog/switching-careers-into-pilates-7-questions/": {
+      "page": "/blog/switching-careers-into-pilates-7-questions/",
+      "live": {
+        "title": "Switching Careers Into Pilates? 7 Questions | PT7",
+        "description": "Seven questions that will tell you what to look for in a Pilates teacher training, including PT7 Academy's 300-hour Reformer Pilates Instructor Course.",
+        "h1": [
+          "Switching Careers Into Pilates? Ask These 7 Questions First"
+        ],
+        "lang": "en",
+        "words": 1163,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 39,
+        "position": 6.6,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 2,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "cout",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 3,
+          "ctr": 0
+        },
+        {
+          "query": "career",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 7,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/academy/",
+        "/blog/",
+        "/blog/career-change-banker-to-pilates-instructor/",
+        "/blog/group-pilates-class-size-attention-amsterdam/",
+        "/blog/pilates-for-men-strength-flexibility-athletic-performance/",
+        "/blog/pilates-prices-amsterdam-2026-complete-guide/",
+        "/blog/pma-ittap-accreditation-reformer-course-amsterdam/",
+        "/blog/prenatal-pilates-supporting-body-through-every-trimester/",
+        "/blog/pt-7-moves-to-olympisch-stadion/"
+      ]
+    },
+    "/blog/switching-careers-into-pilates-7-questions/nl/": {
+      "page": "/blog/switching-careers-into-pilates-7-questions/nl/",
+      "live": {
+        "title": "Carrièreswitch naar pilates? 7 vragen | PT7",
+        "description": "Zeven vragen die je laten zien waar je op let bij een pilates docentenopleiding, inclusief de Reformer Pilates-instructeurscursus van 300 uur van PT7 Academy.",
+        "h1": [
+          "Overstappen naar pilates? Stel eerst deze 7 vragen"
+        ],
+        "lang": "nl",
+        "words": 1210,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 13,
+        "position": 6.5,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/academy/nl/",
+        "/blog/career-change-banker-to-pilates-instructor/nl/",
+        "/blog/group-pilates-class-size-attention-amsterdam/nl/",
+        "/blog/nl/",
+        "/blog/pilates-for-men-strength-flexibility-athletic-performance/nl/",
+        "/blog/pilates-prices-amsterdam-2026-complete-guide/nl/",
+        "/blog/pma-ittap-accreditation-reformer-course-amsterdam/nl/",
+        "/blog/prenatal-pilates-supporting-body-through-every-trimester/nl/",
+        "/blog/pt-7-moves-to-olympisch-stadion/nl/"
+      ]
+    },
+    "/corporate/": {
+      "page": "/corporate/",
+      "live": {
+        "title": "Corporate Pilates Amsterdam | Bedrijfsfitness | PT7 Pilates",
+        "description": "Corporate Pilates and bedrijfsfitness in Amsterdam: Reformer sessions at Museumplein or on-site mat classes for teams. Tax-friendly WKR options.",
+        "h1": [
+          "Corporate Pilates in Amsterdam | For Teams"
+        ],
+        "lang": "en",
+        "words": 348,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 21,
+        "position": 10.5,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 5,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.1,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "비지니스피티",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 47.5,
+          "ctr": 0
+        },
+        {
+          "query": "pt studio 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "personal training pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 64,
+          "ctr": 0
+        },
+        {
+          "query": "pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 5,
+          "ctr": 0
+        },
+        {
+          "query": "team building pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/blog/group-pilates-class-size-attention-amsterdam/"
+      ]
+    },
+    "/corporate/nl/": {
+      "page": "/corporate/nl/",
+      "live": {
+        "title": "Bedrijfsfitness Amsterdam | Pilates voor bedrijven | PT7 Pilates",
+        "description": "Bedrijfsfitness en pilates voor bedrijven in Amsterdam: Reformer-sessies aan het Museumplein of matlessen op locatie voor teams. Fiscaal voordelige WKR-opties.",
+        "h1": [
+          "Pilates voor bedrijven in Amsterdam | Voor teams"
+        ],
+        "lang": "nl",
+        "words": 391,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 1,
+        "impressions": 7,
+        "position": 4.1,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 1,
+        "engagementRate": 1,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/blog/group-pilates-class-size-attention-amsterdam/nl/"
+      ]
+    },
+    "/equipment/": {
+      "page": "/equipment/",
+      "live": {
+        "title": "Pilates Equipment & Reformer Kopen | Sole Pilates Dealer",
+        "description": "Official Sole Pilates dealer in the Netherlands. Reformer kopen? Try Pilates apparatus at our Amsterdam studio and ask us for advice. Prices on request.",
+        "h1": [
+          "Pilates Equipment in Amsterdam"
+        ],
+        "lang": "en",
+        "words": 269,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "weak",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 2,
+        "impressions": 187,
+        "position": 6.6,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 71,
+        "clicksPrev": 10,
+        "impressionsPrev": 323
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 1.8,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "pilates equipment",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 35,
+          "position": 9.1,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 28,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pt studio 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 20,
+          "position": 1.3,
+          "ctr": 0
+        },
+        {
+          "query": "pilates reformer equipment",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 17.3,
+          "ctr": 0
+        },
+        {
+          "query": "your reformer kopen",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 10,
+          "ctr": 0
+        },
+        {
+          "query": "pilates gear",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 12,
+          "ctr": 0
+        },
+        {
+          "query": "shop pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 5,
+          "ctr": 0
+        },
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 8.5,
+          "ctr": 0
+        },
+        {
+          "query": "pilates machines for sale",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 22,
+          "ctr": 0
+        },
+        {
+          "query": "reformer price",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 11.5,
+          "ctr": 0
+        }
+      ],
+      "striking": [
+        {
+          "query": "pilates equipment",
+          "impressions": 35,
+          "clicks": 0,
+          "position": 9.1,
+          "inTitle": true,
+          "inHeadings": true
+        }
+      ],
+      "inboundContentLinks": []
+    },
+    "/equipment/cadillac/": {
+      "page": "/equipment/cadillac/",
+      "live": {
+        "title": "Cadillac Pilates Amsterdam | In-Studio at PT7",
+        "description": "Cadillac (Trapeze Table) used in classes at PT7, Van Baerlestraat 76C, Museumplein. Specs of the in-studio apparatus and how to book a class.",
+        "h1": [
+          "Combo Cadillac at PT7 Amsterdam"
+        ],
+        "lang": "en",
+        "words": 259,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 2.47,
+      "gsc": {
+        "clicks": 4,
+        "impressions": 76,
+        "position": 9.5,
+        "nonbrandClicks": 1,
+        "nonbrandImpressions": 47,
+        "clicksPrev": 1,
+        "impressionsPrev": 57
+      },
+      "ga4": {
+        "sessions": 1,
+        "engagementRate": 1,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.4,
+      "scoredClicks": 1,
+      "topQueries": [
+        {
+          "query": "cadillac pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 27,
+          "position": 8.7,
+          "ctr": 0
+        },
+        {
+          "query": "cadillac pilates amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 11,
+          "position": 8.3,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 5,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pilates cadillac",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 28.5,
+          "ctr": 0
+        },
+        {
+          "query": "pilates cadillac dimensions",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 60,
+          "ctr": 0
+        },
+        {
+          "query": "pt studio 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "caddilac pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 10,
+          "ctr": 0
+        },
+        {
+          "query": "cadillac pialtes",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 11,
+          "ctr": 0
+        },
+        {
+          "query": "cadilac class",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 6,
+          "ctr": 0
+        },
+        {
+          "query": "cadillac reformer pilates",
+          "brand": false,
+          "clicks": 1,
+          "impressions": 1,
+          "position": 22,
+          "ctr": 1
+        }
+      ],
+      "striking": [
+        {
+          "query": "cadillac pilates",
+          "impressions": 27,
+          "clicks": 0,
+          "position": 8.7,
+          "inTitle": true,
+          "inHeadings": false
+        }
+      ],
+      "inboundContentLinks": [
+        "/equipment/"
+      ]
+    },
+    "/equipment/cadillac/nl/": {
+      "page": "/equipment/cadillac/nl/",
+      "live": {
+        "title": "Cadillac pilates Amsterdam | In de studio bij PT7",
+        "description": "De Cadillac (Trapeze Table) die we in lessen gebruiken bij PT7, Van Baerlestraat 76C, Museumplein. Specificaties van het apparaat in de studio en hoe je een les boekt.",
+        "h1": [
+          "Combo Cadillac bij PT7 Amsterdam"
+        ],
+        "lang": "nl",
+        "words": 241,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 7.92,
+      "gsc": {
+        "clicks": 2,
+        "impressions": 40,
+        "position": 13.9,
+        "nonbrandClicks": 1,
+        "nonbrandImpressions": 34,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.1,
+      "scoredClicks": 1,
+      "topQueries": [
+        {
+          "query": "pilates cadillac",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 14,
+          "position": 27.2,
+          "ctr": 0
+        },
+        {
+          "query": "cadillac pilates amsterdam",
+          "brand": false,
+          "clicks": 1,
+          "impressions": 10,
+          "position": 4.6,
+          "ctr": 0.1
+        },
+        {
+          "query": "cadillac pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 9,
+          "position": 8.7,
+          "ctr": 0
+        },
+        {
+          "query": "cadilac pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 5,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/equipment/nl/"
+      ]
+    },
+    "/equipment/ladder-barrel/": {
+      "page": "/equipment/ladder-barrel/",
+      "live": {
+        "title": "Ladder Barrel for Sale | PT7 Pilates Amsterdam",
+        "description": "Buy a professional Pilates Ladder Barrel in Amsterdam. Specs and ordering for home or studio use. Sold by PT7; not used in our client training sessions.",
+        "h1": [
+          "Ladder Barrel for sale"
+        ],
+        "lang": "en",
+        "words": 362,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 14,
+        "position": 28.9,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 13,
+        "clicksPrev": 0,
+        "impressionsPrev": 4
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "ladder barrel",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 13,
+          "position": 30,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/equipment/"
+      ]
+    },
+    "/equipment/ladder-barrel/nl/": {
+      "page": "/equipment/ladder-barrel/nl/",
+      "live": {
+        "title": "Ladder Barrel te koop | PT7 Pilates Amsterdam",
+        "description": "Koop een professionele pilates Ladder Barrel in Amsterdam. Specificaties en bestellen voor thuis of in de studio. Verkocht door PT7; niet gebruikt in onze lessen.",
+        "h1": [
+          "Ladder Barrel te koop"
+        ],
+        "lang": "nl",
+        "words": 383,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 1,
+        "impressions": 8,
+        "position": 28.3,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 5,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "ladder barrel",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 5,
+          "position": 41,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/equipment/nl/"
+      ]
+    },
+    "/equipment/nl/": {
+      "page": "/equipment/nl/",
+      "live": {
+        "title": "Pilates apparatuur & Reformer kopen | Sole Pilates dealer",
+        "description": "Officieel Sole Pilates-dealer in Nederland. Reformer kopen? Probeer pilatesapparatuur in onze studio in Amsterdam en vraag ons om advies. Prijzen op aanvraag.",
+        "h1": [
+          "Pilatesapparatuur in Amsterdam"
+        ],
+        "lang": "nl",
+        "words": 249,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 146,
+        "position": 32.8,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 128,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.1,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "pilates apparaat",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 27,
+          "position": 38.2,
+          "ctr": 0
+        },
+        {
+          "query": "pilates machine",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 26,
+          "position": 48.8,
+          "ctr": 0
+        },
+        {
+          "query": "pilates op apparaten",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 13,
+          "position": 30.5,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates apparaat",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 11,
+          "position": 45.8,
+          "ctr": 0
+        },
+        {
+          "query": "reformer leasen",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 8,
+          "position": 29.5,
+          "ctr": 0
+        },
+        {
+          "query": "pilates reformer leasen",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 8,
+          "position": 29.1,
+          "ctr": 0
+        },
+        {
+          "query": "reformer kopen",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 8,
+          "position": 10.6,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates leasen",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 6,
+          "position": 32.8,
+          "ctr": 0
+        },
+        {
+          "query": "pilates reformer",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 6,
+          "position": 46.5,
+          "ctr": 0
+        },
+        {
+          "query": "pilates equipment",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 18,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": []
+    },
+    "/equipment/reformer/": {
+      "page": "/equipment/reformer/",
+      "live": {
+        "title": "Reformer Pilates Equipment at PT7 Amsterdam | In-Studio",
+        "description": "The Reformer used in small-group and private classes at PT7, Van Baerlestraat 76C, Museumplein. Specs of the in-studio apparatus and how to book a class.",
+        "h1": [
+          "Pilates Reformer at PT7 Amsterdam"
+        ],
+        "lang": "en",
+        "words": 250,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "weak",
+      "ctrVsExpected": 0.48,
+      "gsc": {
+        "clicks": 1,
+        "impressions": 225,
+        "position": 8,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 115,
+        "clicksPrev": 3,
+        "impressionsPrev": 269
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 2.1,
+      "scoredClicks": 1,
+      "topQueries": [
+        {
+          "query": "reformer pilates machine",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 34,
+          "position": 8.9,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 1,
+          "impressions": 33,
+          "position": 1,
+          "ctr": 0.0303
+        },
+        {
+          "query": "pilates reformer machine",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 24,
+          "position": 10.7,
+          "ctr": 0
+        },
+        {
+          "query": "pt studio 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 17,
+          "position": 1.2,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates equipment",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 13,
+          "ctr": 0
+        },
+        {
+          "query": "pilates equipment",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 14.5,
+          "ctr": 0
+        },
+        {
+          "query": "reformer apparatus",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 9.8,
+          "ctr": 0
+        },
+        {
+          "query": "reformer machine",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 11,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates buy",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 5.7,
+          "ctr": 0
+        },
+        {
+          "query": "pilates reformer buy",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 7.7,
+          "ctr": 0
+        }
+      ],
+      "striking": [
+        {
+          "query": "reformer pilates machine",
+          "impressions": 34,
+          "clicks": 0,
+          "position": 8.9,
+          "inTitle": false,
+          "inHeadings": false
+        },
+        {
+          "query": "pilates reformer machine",
+          "impressions": 24,
+          "clicks": 0,
+          "position": 10.7,
+          "inTitle": false,
+          "inHeadings": false
+        }
+      ],
+      "inboundContentLinks": [
+        "/equipment/"
+      ]
+    },
+    "/equipment/reformer/nl/": {
+      "page": "/equipment/reformer/nl/",
+      "live": {
+        "title": "Reformer pilatesapparatuur bij PT7 Amsterdam | In de studio",
+        "description": "De Reformer die we gebruiken in groeps- en privélessen bij PT7, Van Baerlestraat 76C, Museumplein. Specificaties van het apparaat in de studio en hoe je een les boekt.",
+        "h1": [
+          "Pilates Reformer bij PT7 Amsterdam"
+        ],
+        "lang": "nl",
+        "words": 249,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 17,
+        "position": 40.6,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 16,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "pilates op apparaten",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 40.3,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates apparaat",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 56.3,
+          "ctr": 0
+        },
+        {
+          "query": "pilates apparaat",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 44,
+          "ctr": 0
+        },
+        {
+          "query": "pilates machine",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 18,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates equipment",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 42,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates toestellen",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 41,
+          "ctr": 0
+        },
+        {
+          "query": "pilates apparaten",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 15,
+          "ctr": 0
+        },
+        {
+          "query": "pilates reformers",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 53,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/equipment/nl/"
+      ]
+    },
+    "/equipment/tower-reformer/": {
+      "page": "/equipment/tower-reformer/",
+      "live": {
+        "title": "Tower Reformer at PT7 Amsterdam | In-Studio Apparatus",
+        "description": "Tower Reformer used in classes at PT7, Van Baerlestraat 76C, Museumplein, Amsterdam Oud-Zuid. Specs of the in-studio apparatus and how to book a class.",
+        "h1": [
+          "Tower Reformer at PT7 Amsterdam"
+        ],
+        "lang": "en",
+        "words": 257,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "weak",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 3,
+        "impressions": 117,
+        "position": 8.2,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 62,
+        "clicksPrev": 1,
+        "impressionsPrev": 85
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.5,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "reformer tower",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 11,
+          "position": 7.5,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates tower",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 8,
+          "position": 11.4,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 8,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "tower reformer",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 6,
+          "position": 8.8,
+          "ctr": 0
+        },
+        {
+          "query": "tower reformer pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 6,
+          "position": 9.7,
+          "ctr": 0
+        },
+        {
+          "query": "pilates reformer with tower",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 26,
+          "ctr": 0
+        },
+        {
+          "query": "pilates reformer and tower",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 15,
+          "ctr": 0
+        },
+        {
+          "query": "tower pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 7.3,
+          "ctr": 0
+        },
+        {
+          "query": "reformer tower pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 6,
+          "ctr": 0
+        },
+        {
+          "query": "tower pilates reformer",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 11.5,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/equipment/"
+      ]
+    },
+    "/equipment/tower-reformer/nl/": {
+      "page": "/equipment/tower-reformer/nl/",
+      "live": {
+        "title": "Tower Reformer bij PT7 Amsterdam | Apparaat in de studio",
+        "description": "De Tower Reformer die we in lessen gebruiken bij PT7, Van Baerlestraat 76C, Museumplein, Amsterdam Oud-Zuid. Specificaties van het apparaat in de studio en hoe je een les boekt.",
+        "h1": [
+          "Tower Reformer bij PT7 Amsterdam"
+        ],
+        "lang": "nl",
+        "words": 254,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 6,
+        "position": 23.8,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 3,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "tower reformer",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 6,
+          "ctr": 0
+        },
+        {
+          "query": "pilates reformer and tower",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 43,
+          "ctr": 0
+        },
+        {
+          "query": "pilates reformer with tower",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 76,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/equipment/nl/"
+      ]
+    },
+    "/equipment/wunda-chair/": {
+      "page": "/equipment/wunda-chair/",
+      "live": {
+        "title": "Wunda Chair at PT7 Amsterdam | In-Studio Apparatus",
+        "description": "Wunda Chair used in classes at PT7, Van Baerlestraat 76C, Museumplein. Specs of the in-studio apparatus and how to book a class.",
+        "h1": [
+          "Wunda Chair at PT7 Amsterdam"
+        ],
+        "lang": "en",
+        "words": 243,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 8,
+        "position": 6.9,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 2,
+        "clicksPrev": 1,
+        "impressionsPrev": 12
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "wunda chair",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 8,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/equipment/"
+      ]
+    },
+    "/equipment/wunda-chair/nl/": {
+      "page": "/equipment/wunda-chair/nl/",
+      "live": {
+        "title": "Wunda Chair bij PT7 Amsterdam | Apparaat in de studio",
+        "description": "De Wunda Chair die we in lessen gebruiken bij PT7, Van Baerlestraat 76C, Museumplein. Specificaties van het apparaat in de studio en hoe je een les boekt.",
+        "h1": [
+          "Wunda Chair bij PT7 Amsterdam"
+        ],
+        "lang": "nl",
+        "words": 250,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 0,
+        "position": null,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/equipment/nl/"
+      ]
+    },
+    "/healthcare-providers/": {
+      "page": "/healthcare-providers/",
+      "live": {
+        "title": "Pilates for Rehabilitation Amsterdam | PT7 Pilates",
+        "description": "For physiotherapists and GPs: refer clients to PT7 for post-rehab Pilates and functional training. Small groups (max 5) and privates at Museumplein.",
+        "h1": [
+          "Pilates for Rehabilitation Amsterdam"
+        ],
+        "lang": "en",
+        "words": 465,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 10,
+      "gsc": {
+        "clicks": 2,
+        "impressions": 62,
+        "position": 13.2,
+        "nonbrandClicks": 1,
+        "nonbrandImpressions": 10,
+        "clicksPrev": 0,
+        "impressionsPrev": 79
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.1,
+      "scoredClicks": 1,
+      "topQueries": [
+        {
+          "query": "clinical pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 8,
+          "ctr": 0
+        },
+        {
+          "query": "medical pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 8.5,
+          "ctr": 0
+        },
+        {
+          "query": "pilates medical",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 6,
+          "ctr": 0
+        },
+        {
+          "query": "pt studio 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "rehapilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 11,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "sanctuary 7 pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 40,
+          "ctr": 0
+        },
+        {
+          "query": "revalidatie",
+          "brand": false,
+          "clicks": 1,
+          "impressions": 1,
+          "position": 5,
+          "ctr": 1
+        },
+        {
+          "query": "pilates for healthcare workers",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 221,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/blog/prenatal-pilates-supporting-body-through-every-trimester/",
+        "/corporate/"
+      ]
+    },
+    "/healthcare-providers/nl/": {
+      "page": "/healthcare-providers/nl/",
+      "live": {
+        "title": "Pilates voor revalidatie Amsterdam | PT7 Pilates",
+        "description": "Voor fysiotherapeuten en huisartsen: verwijs cliënten door naar PT7 voor pilates en functionele training na revalidatie. Kleine groepen (max. 5) en privé aan het Museumplein.",
+        "h1": [
+          "Pilates voor revalidatie Amsterdam"
+        ],
+        "lang": "nl",
+        "words": 529,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 5,
+        "position": 40.2,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 1,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "pilates therapie",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 23,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/blog/prenatal-pilates-supporting-body-through-every-trimester/nl/",
+        "/corporate/nl/"
+      ]
+    },
+    "/instructors/": {
+      "page": "/instructors/",
+      "live": {
+        "title": "Our Instructors | PT7 Pilates Amsterdam",
+        "description": "Meet our expert team of certified Pilates and fitness instructors at PT7 Amsterdam. Master, senior, and junior instructors dedicated to your fitness journey.",
+        "h1": [
+          "Meet Our Team"
+        ],
+        "lang": "en",
+        "words": 502,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "weak",
+      "ctrVsExpected": 0.45,
+      "gsc": {
+        "clicks": 10,
+        "impressions": 231,
+        "position": 4,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 8,
+        "clicksPrev": 10,
+        "impressionsPrev": 208
+      },
+      "ga4": {
+        "sessions": 5,
+        "engagementRate": 1,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 2.2,
+      "scoredClicks": 1,
+      "topQueries": [
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 1,
+          "impressions": 33,
+          "position": 1,
+          "ctr": 0.0303
+        },
+        {
+          "query": "pt studio 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 32,
+          "position": 1.4,
+          "ctr": 0
+        },
+        {
+          "query": "pilates instructor",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 3.8,
+          "ctr": 0
+        },
+        {
+          "query": "studio 7 rockanje",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 53.5,
+          "ctr": 0
+        },
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 7.5,
+          "ctr": 0
+        },
+        {
+          "query": "pilates instructors",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 11,
+          "ctr": 0
+        },
+        {
+          "query": "pt 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "strong pilates instructors",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 9,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 amsterdam",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 4,
+          "ctr": 0
+        },
+        {
+          "query": "pt-7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 2,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/trainer/elif/",
+        "/trainer/gamze/",
+        "/trainer/gokben/",
+        "/trainer/goknur/",
+        "/trainer/gulce/",
+        "/trainer/kelly/",
+        "/trainer/lal/",
+        "/trainer/nisan/"
+      ]
+    },
+    "/instructors/nl/": {
+      "page": "/instructors/nl/",
+      "live": {
+        "title": "Onze instructeurs | PT7 Pilates Amsterdam",
+        "description": "Maak kennis met ons team van gecertificeerde pilates- en fitnessinstructeurs bij PT7 Amsterdam. Master-, senior- en junior-instructeurs die je helpen je doelen te bereiken.",
+        "h1": [
+          "Maak kennis met ons team"
+        ],
+        "lang": "nl",
+        "words": 489,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 20,
+        "position": 7.9,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 1,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 3,
+        "engagementRate": 1,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.1,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "pt studio 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 1.3,
+          "ctr": 0
+        },
+        {
+          "query": "pilates trainers",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 70,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/trainer/elif/nl/",
+        "/trainer/gamze/nl/",
+        "/trainer/gokben/nl/",
+        "/trainer/goknur/nl/",
+        "/trainer/gulce/nl/",
+        "/trainer/kelly/nl/",
+        "/trainer/lal/nl/",
+        "/trainer/nisan/nl/"
+      ]
+    },
+    "/intro/": {
+      "page": "/intro/",
+      "live": {
+        "title": "Intro pack: 3 group classes for €50 | PT7 Pilates Amsterdam",
+        "description": "New clients at PT7 Museumplein: 3 small-group classes for €50. Max 5 people, 45 minutes. Valid 3 weeks. Buy online.",
+        "h1": [
+          "3 group classes for €50"
+        ],
+        "lang": "en",
+        "words": 291,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 31,
+        "position": 5.8,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.3,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "pt studio 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 8,
+          "ctr": 0
+        },
+        {
+          "query": "pt-7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 2,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/pricing/"
+      ]
+    },
+    "/intro/nl/": {
+      "page": "/intro/nl/",
+      "live": {
+        "title": "Introductiepakket: 3 groepslessen voor €50 | PT7 Pilates",
+        "description": "Nieuwe klanten bij PT7 Museumplein: 3 groepslessen voor €50. Maximaal 5 personen, 45 minuten. Geldig 3 weken. Online kopen.",
+        "h1": [
+          "3 groepslessen voor €50"
+        ],
+        "lang": "nl",
+        "words": 271,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 7,
+        "position": 14.1,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 34.5,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/pricing/nl/"
+      ]
+    },
+    "/nl/": {
+      "page": "/nl/",
+      "live": {
+        "title": "PT7 (PT Studio 7) | Pilates & Krachttraining Amsterdam Zuid",
+        "description": "PT7 (voorheen PT Studio 7): boutique pilates- en krachtstudio aan de Van Baerlestraat 76C, Museumplein, Amsterdam Zuid. Max. 5 per les. Intro: 3 lessen €50.",
+        "h1": [
+          "Pilates & krachttraining in Amsterdam Zuid"
+        ],
+        "lang": "nl",
+        "words": 901,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "strong",
+      "ctrVsExpected": 7.04,
+      "gsc": {
+        "clicks": 43,
+        "impressions": 463,
+        "position": 5.5,
+        "nonbrandClicks": 2,
+        "nonbrandImpressions": 137,
+        "clicksPrev": 22,
+        "impressionsPrev": 198
+      },
+      "ga4": {
+        "sessions": 1,
+        "engagementRate": 1,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 2.3,
+      "scoredClicks": 16,
+      "topQueries": [
+        {
+          "query": "pt studio",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 37,
+          "position": 5.9,
+          "ctr": 0
+        },
+        {
+          "query": "pilates oud zuid",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 35,
+          "position": 5.3,
+          "ctr": 0
+        },
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 11,
+          "impressions": 29,
+          "position": 1.6,
+          "ctr": 0.3793
+        },
+        {
+          "query": "studio 7",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 19,
+          "position": 7.1,
+          "ctr": 0
+        },
+        {
+          "query": "pt studio 7",
+          "brand": true,
+          "clicks": 2,
+          "impressions": 9,
+          "position": 1.3,
+          "ctr": 0.2222
+        },
+        {
+          "query": "studio 79 amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 6,
+          "position": 26.7,
+          "ctr": 0
+        },
+        {
+          "query": "pt 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 5,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pilates amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 12,
+          "ctr": 0
+        },
+        {
+          "query": "pilates zuid",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 9,
+          "ctr": 0
+        },
+        {
+          "query": "pilates 7",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 2.5,
+          "ctr": 0
+        }
+      ],
+      "striking": [
+        {
+          "query": "pt studio",
+          "impressions": 37,
+          "clicks": 0,
+          "position": 5.9,
+          "inTitle": true,
+          "inHeadings": true
+        },
+        {
+          "query": "pilates oud zuid",
+          "impressions": 35,
+          "clicks": 0,
+          "position": 5.3,
+          "inTitle": false,
+          "inHeadings": false
+        }
+      ],
+      "inboundContentLinks": [
+        "/corporate/nl/",
+        "/healthcare-providers/nl/"
+      ]
+    },
+    "/opening-offer/": {
+      "page": "/opening-offer/",
+      "live": {
+        "title": "Move Postponed | Olympisch Stadion | PT7 Amsterdam",
+        "description": "PT7’s move to Olympisch Stadion 15 is postponed after a fire at the stadium. Classes continue at Van Baerlestraat 76C. A new date will follow.",
+        "h1": [
+          "Move postponed"
+        ],
+        "lang": "en",
+        "words": 183,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": true,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 35,
+        "position": 4.5,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 2,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 2,
+        "engagementRate": 1,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.3,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 9,
+          "position": 4.3,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pt studio 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 1.7,
+          "ctr": 0
+        },
+        {
+          "query": "pt-74",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pt amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 38,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": []
+    },
+    "/opening-offer/nl/": {
+      "page": "/opening-offer/nl/",
+      "live": {
+        "title": "Verhuizing uitgesteld | Olympisch Stadion | PT7 Amsterdam",
+        "description": "De verhuizing van PT7 naar Olympisch Stadion 15 is uitgesteld na een brand in het stadion. Lessen gaan door op Van Baerlestraat 76C. Een nieuwe datum volgt.",
+        "h1": [
+          "Verhuizing uitgesteld"
+        ],
+        "lang": "nl",
+        "words": 191,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": true,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 0,
+        "position": null,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": []
+    },
+    "/prenatal-pilates-amsterdam/": {
+      "page": "/prenatal-pilates-amsterdam/",
+      "live": {
+        "title": "Prenatal & Pregnancy Pilates Amsterdam | PT7",
+        "description": "Private prenatal Reformer Pilates at Museumplein: 45-minute 1:1 sessions with trimester adaptations and pelvic floor focus. With Elif or Göknur.",
+        "h1": [
+          "Prenatal & Pregnancy Pilates Amsterdam"
+        ],
+        "lang": "en",
+        "words": 1092,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 17.45,
+      "gsc": {
+        "clicks": 2,
+        "impressions": 25,
+        "position": 7.3,
+        "nonbrandClicks": 1,
+        "nonbrandImpressions": 8,
+        "clicksPrev": 6,
+        "impressionsPrev": 128
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.1,
+      "scoredClicks": 1,
+      "topQueries": [
+        {
+          "query": "prenatal amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 9.5,
+          "ctr": 0
+        },
+        {
+          "query": "prenatal pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 7.5,
+          "ctr": 0
+        },
+        {
+          "query": "prenatal workout classes near me",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "prenatal reformer pilates",
+          "brand": false,
+          "clicks": 1,
+          "impressions": 1,
+          "position": 6,
+          "ctr": 1
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/",
+        "/private-pilates-amsterdam/",
+        "/reformer-pilates-amsterdam/",
+        "/schedule/",
+        "/trainer/elif/"
+      ]
+    },
+    "/prenatal-pilates-amsterdam/nl/": {
+      "page": "/prenatal-pilates-amsterdam/nl/",
+      "live": {
+        "title": "Zwangerschapspilates Amsterdam | Prenatale pilates | PT7",
+        "description": "Prenatale Reformer pilates in privésessies aan het Museumplein: 45 minuten één-op-één, aangepast per trimester, met focus op de bekkenbodem. Met Elif of Göknur.",
+        "h1": [
+          "Zwangerschapspilates & prenatale pilates Amsterdam"
+        ],
+        "lang": "nl",
+        "words": 1173,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 9,
+        "position": 12,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 2,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "prenatal pilates amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 6.5,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/nl/",
+        "/private-pilates-amsterdam/nl/",
+        "/reformer-pilates-amsterdam/nl/",
+        "/schedule/nl/",
+        "/trainer/elif/nl/"
+      ]
+    },
+    "/pricing/": {
+      "page": "/pricing/",
+      "live": {
+        "title": "Pilates Prices Amsterdam Oud-Zuid | From €50 Intro | PT7",
+        "description": "Pilates prices at Museumplein, Amsterdam Zuid: intro pack of 3 group classes for €50, then from €28/class (max 5). Memberships and privates.",
+        "h1": [
+          "Pilates class prices & memberships in Amsterdam"
+        ],
+        "lang": "en",
+        "words": 1133,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "weak",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 51,
+        "position": 5.1,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 7,
+        "clicksPrev": 6,
+        "impressionsPrev": 286
+      },
+      "ga4": {
+        "sessions": 24,
+        "engagementRate": 1,
+        "keyEvents": 1
+      },
+      "expectedClicksAtSiteRate": 0.5,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "pt studio 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 6,
+          "position": 2.7,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 5,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 4.3,
+          "ctr": 0
+        },
+        {
+          "query": "how much do pilates classes cost and are there any affordable options in netherlands?",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pt room costi",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 40,
+          "ctr": 0
+        },
+        {
+          "query": "pilates membership",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 11,
+          "ctr": 0
+        },
+        {
+          "query": "pilates oud zuid",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 37,
+          "ctr": 0
+        },
+        {
+          "query": "unlimited pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 7,
+          "ctr": 0
+        },
+        {
+          "query": "7 prices",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 4,
+          "ctr": 0
+        },
+        {
+          "query": "pt-7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 2,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/",
+        "/blog/career-change-banker-to-pilates-instructor/",
+        "/blog/group-pilates-class-size-attention-amsterdam/",
+        "/blog/pilates-for-men-strength-flexibility-athletic-performance/",
+        "/blog/pilates-prices-amsterdam-2026-complete-guide/",
+        "/blog/pma-ittap-accreditation-reformer-course-amsterdam/",
+        "/blog/prenatal-pilates-supporting-body-through-every-trimester/",
+        "/blog/pt-7-moves-to-olympisch-stadion/",
+        "/blog/switching-careers-into-pilates-7-questions/",
+        "/corporate/",
+        "/instructors/",
+        "/intro/",
+        "/opening-offer/",
+        "/prenatal-pilates-amsterdam/",
+        "/privacy/",
+        "/private-pilates-amsterdam/",
+        "/reformer-pilates-amsterdam/",
+        "/schedule/",
+        "/strength-training-amsterdam/",
+        "/trainer/elif/",
+        "/trainer/gamze/",
+        "/trainer/gokben/",
+        "/trainer/goknur/",
+        "/trainer/gulce/",
+        "/trainer/kelly/",
+        "/trainer/lal/",
+        "/trainer/nisan/",
+        "/trx-training-amsterdam/",
+        "/workouts/cardio/",
+        "/workouts/functional-training/"
+      ]
+    },
+    "/pricing/nl/": {
+      "page": "/pricing/nl/",
+      "live": {
+        "title": "Hoeveel kost pilates Amsterdam Oud-Zuid | PT7",
+        "description": "Pilates prijzen aan het Museumplein, Amsterdam Zuid: 3 groepslessen voor €50, daarna vanaf €28/les (max. 5). Abonnementen en privé.",
+        "h1": [
+          "Pilateslesprijzen & abonnementen in Amsterdam"
+        ],
+        "lang": "nl",
+        "words": 1117,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 2,
+        "impressions": 92,
+        "position": 8.9,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 15,
+        "clicksPrev": 0,
+        "impressionsPrev": 156
+      },
+      "ga4": {
+        "sessions": 3,
+        "engagementRate": 1,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.2,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "pilates prijs per les",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 9.3,
+          "ctr": 0
+        },
+        {
+          "query": "pilates oud zuid",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 7.3,
+          "ctr": 0
+        },
+        {
+          "query": "hoeveel kost pilates per maand",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "wat kost pilates les",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 7,
+          "ctr": 0
+        },
+        {
+          "query": "groepslessen pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 83.5,
+          "ctr": 0
+        },
+        {
+          "query": "groepslessen amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 5,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pilates abonnement amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 12,
+          "ctr": 0
+        },
+        {
+          "query": "pt-7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 2,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/blog/career-change-banker-to-pilates-instructor/nl/",
+        "/blog/group-pilates-class-size-attention-amsterdam/nl/",
+        "/blog/pilates-for-men-strength-flexibility-athletic-performance/nl/",
+        "/blog/pilates-prices-amsterdam-2026-complete-guide/nl/",
+        "/blog/pma-ittap-accreditation-reformer-course-amsterdam/nl/",
+        "/blog/prenatal-pilates-supporting-body-through-every-trimester/nl/",
+        "/blog/pt-7-moves-to-olympisch-stadion/nl/",
+        "/blog/switching-careers-into-pilates-7-questions/nl/",
+        "/corporate/nl/",
+        "/instructors/nl/",
+        "/intro/nl/",
+        "/nl/",
+        "/opening-offer/nl/",
+        "/prenatal-pilates-amsterdam/nl/",
+        "/privacy/nl/",
+        "/private-pilates-amsterdam/nl/",
+        "/reformer-pilates-amsterdam/nl/",
+        "/schedule/nl/",
+        "/strength-training-amsterdam/nl/",
+        "/trainer/elif/nl/",
+        "/trainer/gamze/nl/",
+        "/trainer/gokben/nl/",
+        "/trainer/goknur/nl/",
+        "/trainer/gulce/nl/",
+        "/trainer/kelly/nl/",
+        "/trainer/lal/nl/",
+        "/trainer/nisan/nl/",
+        "/trx-training-amsterdam/nl/",
+        "/workouts/cardio/nl/",
+        "/workouts/functional-training/nl/"
+      ]
+    },
+    "/privacy/": {
+      "page": "/privacy/",
+      "live": {
+        "title": "Privacy Policy | PT7 Pilates Amsterdam",
+        "description": "How PT7 Amsterdam uses cookies, analytics, advertising, booking widgets, and contact data. GDPR information for visitors of pt7.nl.",
+        "h1": [
+          "Privacy policy"
+        ],
+        "lang": "en",
+        "words": 364,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": true,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 2,
+        "position": 3.5,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 23
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": []
+    },
+    "/privacy/nl/": {
+      "page": "/privacy/nl/",
+      "live": {
+        "title": "Privacybeleid | PT7 Pilates Amsterdam",
+        "description": "Hoe PT7 Amsterdam cookies, analytics, advertenties, boekingswidgets en contactgegevens gebruikt. AVG-informatie voor bezoekers van pt7.nl.",
+        "h1": [
+          "Privacybeleid"
+        ],
+        "lang": "nl",
+        "words": 375,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 2,
+        "position": 8,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": []
+    },
+    "/private-pilates-amsterdam/": {
+      "page": "/private-pilates-amsterdam/",
+      "live": {
+        "title": "Private Pilates Amsterdam | 1-on-1 Reformer | PT7",
+        "description": "Private and duo Reformer Pilates at Museumplein, Amsterdam Zuid, from €70. Your instructor’s full attention and a program built around you. Book online.",
+        "h1": [
+          "Private Reformer Pilates in Amsterdam"
+        ],
+        "lang": "en",
+        "words": 791,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 1,
+        "impressions": 28,
+        "position": 8.3,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 1,
+        "clicksPrev": 0,
+        "impressionsPrev": 16
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.1,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pt studio 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "in person 1-on-1 tailored",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 10,
+          "ctr": 0
+        },
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 3,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/",
+        "/prenatal-pilates-amsterdam/",
+        "/reformer-pilates-amsterdam/",
+        "/schedule/",
+        "/trx-training-amsterdam/"
+      ]
+    },
+    "/private-pilates-amsterdam/nl/": {
+      "page": "/private-pilates-amsterdam/nl/",
+      "live": {
+        "title": "Privé pilates les Amsterdam | 1-op-1 Reformer | PT7",
+        "description": "Privé- en duolessen Reformer pilates aan het Museumplein, Amsterdam Zuid, vanaf €70. De volle aandacht van je instructeur en een programma op maat.",
+        "h1": [
+          "Privé pilates les in Amsterdam"
+        ],
+        "lang": "nl",
+        "words": 767,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 2,
+        "position": 5,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 1,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "prive pilates les",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 7,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/nl/",
+        "/prenatal-pilates-amsterdam/nl/",
+        "/reformer-pilates-amsterdam/nl/",
+        "/schedule/nl/",
+        "/trx-training-amsterdam/nl/"
+      ]
+    },
+    "/reformer-pilates-amsterdam/": {
+      "page": "/reformer-pilates-amsterdam/",
+      "live": {
+        "title": "Reformer Pilates Amsterdam Zuid | Museumplein | PT7",
+        "description": "Reformer Pilates in Amsterdam Zuid at Museumplein: small groups (max 5), private sessions and a full apparatus studio. New clients: 3 classes for €50.",
+        "h1": [
+          "Reformer Pilates in Amsterdam Zuid"
+        ],
+        "lang": "en",
+        "words": 889,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 5,
+        "impressions": 398,
+        "position": 13.3,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 157,
+        "clicksPrev": 0,
+        "impressionsPrev": 1
+      },
+      "ga4": {
+        "sessions": 3,
+        "engagementRate": 1,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.3,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "reformer pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 68,
+          "position": 10.8,
+          "ctr": 0
+        },
+        {
+          "query": "pt studio 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 26,
+          "position": 1.2,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 24,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates classes",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 16,
+          "position": 25.6,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 7,
+          "position": 32.1,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates studio",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 6,
+          "position": 86.7,
+          "ctr": 0
+        },
+        {
+          "query": "reformer studio",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 5,
+          "position": 60.2,
+          "ctr": 0
+        },
+        {
+          "query": "reformer classes",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 31.3,
+          "ctr": 0
+        },
+        {
+          "query": "pilates studio amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 61.5,
+          "ctr": 0
+        },
+        {
+          "query": "book reformer pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 6.7,
+          "ctr": 0
+        }
+      ],
+      "striking": [
+        {
+          "query": "reformer pilates",
+          "impressions": 68,
+          "clicks": 0,
+          "position": 10.8,
+          "inTitle": true,
+          "inHeadings": true
+        }
+      ],
+      "inboundContentLinks": [
+        "/",
+        "/blog/group-pilates-class-size-attention-amsterdam/",
+        "/blog/prenatal-pilates-supporting-body-through-every-trimester/",
+        "/corporate/",
+        "/equipment/",
+        "/equipment/cadillac/",
+        "/equipment/ladder-barrel/",
+        "/equipment/reformer/",
+        "/equipment/tower-reformer/",
+        "/equipment/wunda-chair/",
+        "/healthcare-providers/",
+        "/prenatal-pilates-amsterdam/",
+        "/pricing/",
+        "/private-pilates-amsterdam/",
+        "/schedule/",
+        "/strength-training-amsterdam/",
+        "/trainer/elif/",
+        "/trainer/gamze/",
+        "/trainer/gokben/",
+        "/trainer/goknur/",
+        "/trainer/gulce/",
+        "/trainer/kelly/",
+        "/trainer/lal/",
+        "/trainer/nisan/",
+        "/trx-training-amsterdam/"
+      ]
+    },
+    "/reformer-pilates-amsterdam/nl/": {
+      "page": "/reformer-pilates-amsterdam/nl/",
+      "live": {
+        "title": "Reformer Pilates Amsterdam Zuid | Kleine groepen | PT7",
+        "description": "Reformer pilates in Amsterdam Zuid aan het Museumplein: kleine groepen (max. 5), privélessen en een volledige studio. Nieuwe klanten: 3 lessen voor €50.",
+        "h1": [
+          "Reformer pilates in Amsterdam Zuid"
+        ],
+        "lang": "nl",
+        "words": 885,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 76,
+        "position": 10.4,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 15,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 1,
+        "engagementRate": 1,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.1,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "pilates abonnement amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 13,
+          "ctr": 0
+        },
+        {
+          "query": "pilates zuid",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 9.7,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates amsterdam zuid",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 10.7,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 24.5,
+          "ctr": 0
+        },
+        {
+          "query": "pt studio 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 1.5,
+          "ctr": 0
+        },
+        {
+          "query": "pilates reformer lessen",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 7,
+          "ctr": 0
+        },
+        {
+          "query": "pilates for her amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 38,
+          "ctr": 0
+        },
+        {
+          "query": "pt pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 6,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates les",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 76,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/blog/group-pilates-class-size-attention-amsterdam/nl/",
+        "/blog/prenatal-pilates-supporting-body-through-every-trimester/nl/",
+        "/corporate/nl/",
+        "/equipment/cadillac/nl/",
+        "/equipment/ladder-barrel/nl/",
+        "/equipment/nl/",
+        "/equipment/reformer/nl/",
+        "/equipment/tower-reformer/nl/",
+        "/equipment/wunda-chair/nl/",
+        "/healthcare-providers/nl/",
+        "/nl/",
+        "/prenatal-pilates-amsterdam/nl/",
+        "/pricing/nl/",
+        "/private-pilates-amsterdam/nl/",
+        "/schedule/nl/",
+        "/strength-training-amsterdam/nl/",
+        "/trainer/elif/nl/",
+        "/trainer/gamze/nl/",
+        "/trainer/gokben/nl/",
+        "/trainer/goknur/nl/",
+        "/trainer/gulce/nl/",
+        "/trainer/kelly/nl/",
+        "/trainer/lal/nl/",
+        "/trainer/nisan/nl/",
+        "/trx-training-amsterdam/nl/"
+      ]
+    },
+    "/schedule/": {
+      "page": "/schedule/",
+      "live": {
+        "title": "Pilates Classes Amsterdam Zuid | Book Online | PT7",
+        "description": "Live class schedule at Museumplein, Amsterdam Zuid: Reformer Pilates, TRX and strength in small groups (max 5) or privates at Van Baerlestraat 76C. Book online.",
+        "h1": [
+          "Pilates classes in Amsterdam: book online"
+        ],
+        "lang": "en",
+        "words": 483,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "ok",
+      "ctrVsExpected": 1.11,
+      "gsc": {
+        "clicks": 5,
+        "impressions": 154,
+        "position": 7,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 29,
+        "clicksPrev": 2,
+        "impressionsPrev": 322
+      },
+      "ga4": {
+        "sessions": 60,
+        "engagementRate": 1,
+        "keyEvents": 27
+      },
+      "expectedClicksAtSiteRate": 1.8,
+      "scoredClicks": 2,
+      "topQueries": [
+        {
+          "query": "pt studio 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 20,
+          "position": 1.3,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 18,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 2,
+          "impressions": 18,
+          "position": 2.4,
+          "ctr": 0.1111
+        },
+        {
+          "query": "pilates classes near me",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 6,
+          "position": 7.3,
+          "ctr": 0
+        },
+        {
+          "query": "pt studio",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 6,
+          "position": 35.8,
+          "ctr": 0
+        },
+        {
+          "query": "pilates near me",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 6.5,
+          "ctr": 0
+        },
+        {
+          "query": "studio 7 rockanje",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 23,
+          "ctr": 0
+        },
+        {
+          "query": "pt near me",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 15.5,
+          "ctr": 0
+        },
+        {
+          "query": "pilates class near me",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 5,
+          "ctr": 0
+        },
+        {
+          "query": "pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 7,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/",
+        "/blog/",
+        "/blog/career-change-banker-to-pilates-instructor/",
+        "/blog/group-pilates-class-size-attention-amsterdam/",
+        "/blog/pilates-for-men-strength-flexibility-athletic-performance/",
+        "/blog/pilates-prices-amsterdam-2026-complete-guide/",
+        "/blog/pma-ittap-accreditation-reformer-course-amsterdam/",
+        "/blog/prenatal-pilates-supporting-body-through-every-trimester/",
+        "/blog/pt-7-moves-to-olympisch-stadion/",
+        "/blog/switching-careers-into-pilates-7-questions/",
+        "/equipment/",
+        "/equipment/cadillac/",
+        "/equipment/ladder-barrel/",
+        "/equipment/reformer/",
+        "/equipment/tower-reformer/",
+        "/equipment/wunda-chair/",
+        "/instructors/",
+        "/intro/",
+        "/opening-offer/",
+        "/prenatal-pilates-amsterdam/",
+        "/pricing/",
+        "/privacy/",
+        "/private-pilates-amsterdam/",
+        "/reformer-pilates-amsterdam/",
+        "/strength-training-amsterdam/",
+        "/trainer/elif/",
+        "/trainer/gamze/",
+        "/trainer/gokben/",
+        "/trainer/goknur/",
+        "/trainer/gulce/",
+        "/trainer/kelly/",
+        "/trainer/lal/",
+        "/trainer/nisan/",
+        "/trx-training-amsterdam/",
+        "/workouts/cardio/",
+        "/workouts/functional-training/"
+      ]
+    },
+    "/schedule/nl/": {
+      "page": "/schedule/nl/",
+      "live": {
+        "title": "Pilateslessen Amsterdam Zuid | Online boeken | PT7",
+        "description": "Live lesrooster aan het Museumplein, Amsterdam Zuid: Reformer pilates, TRX en kracht in kleine groepen (max. 5) of privé, Van Baerlestraat 76C. Online boeken.",
+        "h1": [
+          "Pilateslessen in Amsterdam: online boeken"
+        ],
+        "lang": "nl",
+        "words": 455,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "strong",
+      "ctrVsExpected": 3.03,
+      "gsc": {
+        "clicks": 7,
+        "impressions": 144,
+        "position": 3.7,
+        "nonbrandClicks": 4,
+        "nonbrandImpressions": 15,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 7,
+        "engagementRate": 1,
+        "keyEvents": 4
+      },
+      "expectedClicksAtSiteRate": 1.3,
+      "scoredClicks": 4,
+      "topQueries": [
+        {
+          "query": "pt studio 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 22,
+          "position": 1.2,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 12,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pilates les in de buurt",
+          "brand": false,
+          "clicks": 3,
+          "impressions": 6,
+          "position": 5,
+          "ctr": 0.5
+        },
+        {
+          "query": "pilateslessen",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 3,
+          "ctr": 0
+        },
+        {
+          "query": "pilates",
+          "brand": false,
+          "clicks": 1,
+          "impressions": 2,
+          "position": 2,
+          "ctr": 0.5
+        },
+        {
+          "query": "pt-7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 3,
+          "ctr": 0
+        },
+        {
+          "query": "muse pilates amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 12,
+          "ctr": 0
+        },
+        {
+          "query": "pilates amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 21,
+          "ctr": 0
+        },
+        {
+          "query": "pilates7",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 4,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 amsterdam",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 4,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/blog/career-change-banker-to-pilates-instructor/nl/",
+        "/blog/group-pilates-class-size-attention-amsterdam/nl/",
+        "/blog/nl/",
+        "/blog/pilates-for-men-strength-flexibility-athletic-performance/nl/",
+        "/blog/pilates-prices-amsterdam-2026-complete-guide/nl/",
+        "/blog/pma-ittap-accreditation-reformer-course-amsterdam/nl/",
+        "/blog/prenatal-pilates-supporting-body-through-every-trimester/nl/",
+        "/blog/pt-7-moves-to-olympisch-stadion/",
+        "/blog/pt-7-moves-to-olympisch-stadion/nl/",
+        "/blog/switching-careers-into-pilates-7-questions/nl/",
+        "/equipment/cadillac/nl/",
+        "/equipment/ladder-barrel/nl/",
+        "/equipment/nl/",
+        "/equipment/reformer/nl/",
+        "/equipment/tower-reformer/nl/",
+        "/equipment/wunda-chair/nl/",
+        "/instructors/nl/",
+        "/intro/nl/",
+        "/nl/",
+        "/opening-offer/nl/",
+        "/prenatal-pilates-amsterdam/nl/",
+        "/pricing/nl/",
+        "/privacy/nl/",
+        "/private-pilates-amsterdam/nl/",
+        "/reformer-pilates-amsterdam/nl/",
+        "/strength-training-amsterdam/nl/",
+        "/trainer/elif/nl/",
+        "/trainer/gamze/nl/",
+        "/trainer/gokben/nl/",
+        "/trainer/goknur/nl/",
+        "/trainer/gulce/nl/",
+        "/trainer/kelly/nl/",
+        "/trainer/lal/nl/",
+        "/trainer/nisan/nl/",
+        "/trx-training-amsterdam/nl/",
+        "/workouts/cardio/nl/",
+        "/workouts/functional-training/nl/"
+      ]
+    },
+    "/strength-training-amsterdam/": {
+      "page": "/strength-training-amsterdam/",
+      "live": {
+        "title": "Strength & Personal Training Amsterdam Zuid | PT7",
+        "description": "Personal strength training at Museumplein, Amsterdam Zuid: Nike equipment, expert trainers, small groups (max 5) and one-on-one private sessions.",
+        "h1": [
+          "Strength Training in Amsterdam Zuid"
+        ],
+        "lang": "en",
+        "words": 777,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 26,
+        "position": 17.5,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 7,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "pt studio",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 56,
+          "ctr": 0
+        },
+        {
+          "query": "sport studio 79",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 57,
+          "ctr": 0
+        },
+        {
+          "query": "pilates amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 21,
+          "ctr": 0
+        },
+        {
+          "query": "kracht amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 58,
+          "ctr": 0
+        },
+        {
+          "query": "personal training amsterdam south",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 43,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/",
+        "/reformer-pilates-amsterdam/",
+        "/trx-training-amsterdam/"
+      ]
+    },
+    "/strength-training-amsterdam/nl/": {
+      "page": "/strength-training-amsterdam/nl/",
+      "live": {
+        "title": "Personal training & krachttraining Amsterdam Zuid | PT7",
+        "description": "Persoonlijke krachttraining aan het Museumplein, Amsterdam Zuid: Nike-apparatuur, ervaren trainers, kleine groepen (max. 5) en één-op-één privélessen.",
+        "h1": [
+          "Krachttraining in Amsterdam Zuid"
+        ],
+        "lang": "nl",
+        "words": 751,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 14,
+        "position": 52.7,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 11,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "personal trainer amsterdam zuid",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 6,
+          "position": 65.8,
+          "ctr": 0
+        },
+        {
+          "query": "www.pt.nl",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 83.3,
+          "ctr": 0
+        },
+        {
+          "query": "training amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 71,
+          "ctr": 0
+        },
+        {
+          "query": "training 7",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 7,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/nl/",
+        "/reformer-pilates-amsterdam/nl/",
+        "/trx-training-amsterdam/nl/"
+      ]
+    },
+    "/trainer/elif/": {
+      "page": "/trainer/elif/",
+      "live": {
+        "title": "Elif Arzu Ogan | Pilates Instructor at PT7 Amsterdam",
+        "description": "Meet Elif Arzu Ogan, expert Pilates and functional training instructor at PT7 Amsterdam. Book your personalized session today.",
+        "h1": [
+          "Elif Arzu Ogan"
+        ],
+        "lang": "en",
+        "words": 345,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 3,
+        "impressions": 46,
+        "position": 5.7,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 13,
+        "clicksPrev": 3,
+        "impressionsPrev": 82
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.1,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "elif arzu",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 11,
+          "position": 5.8,
+          "ctr": 0
+        },
+        {
+          "query": "elif ilhan pilates studio",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 14,
+          "ctr": 0
+        },
+        {
+          "query": "fiyat",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 4,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/",
+        "/academy/",
+        "/healthcare-providers/",
+        "/instructors/",
+        "/prenatal-pilates-amsterdam/",
+        "/workouts/cardio/",
+        "/workouts/functional-training/"
+      ]
+    },
+    "/trainer/elif/nl/": {
+      "page": "/trainer/elif/nl/",
+      "live": {
+        "title": "Elif Arzu Ogan | Pilatesinstructeur bij PT7 Amsterdam",
+        "description": "Maak kennis met Elif Arzu Ogan, ervaren pilates- en functioneel trainingsinstructeur bij PT7 Amsterdam. Boek vandaag je persoonlijke sessie.",
+        "h1": [
+          "Elif Arzu Ogan"
+        ],
+        "lang": "nl",
+        "words": 316,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 5,
+        "position": 3.6,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/academy/nl/",
+        "/healthcare-providers/nl/",
+        "/instructors/nl/",
+        "/nl/",
+        "/prenatal-pilates-amsterdam/nl/",
+        "/workouts/cardio/nl/",
+        "/workouts/functional-training/nl/"
+      ]
+    },
+    "/trainer/gamze/": {
+      "page": "/trainer/gamze/",
+      "live": {
+        "title": "E. Gamze Karadağ | Pilates Instructor at PT7 Amsterdam",
+        "description": "Meet E. Gamze Karadağ, certified Reformer Pilates instructor at PT7 Amsterdam. Yoga background and PT7 Academy graduate.",
+        "h1": [
+          "E. Gamze Karadağ"
+        ],
+        "lang": "en",
+        "words": 141,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 13,
+        "position": 5.6,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 1,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "gamze pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 9,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/",
+        "/academy/",
+        "/academy/nl/",
+        "/instructors/"
+      ]
+    },
+    "/trainer/gamze/nl/": {
+      "page": "/trainer/gamze/nl/",
+      "live": {
+        "title": "E. Gamze Karadağ | Pilatesinstructeur bij PT7 Amsterdam",
+        "description": "Maak kennis met E. Gamze Karadağ, gecertificeerd Reformer pilatesinstructeur bij PT7 Amsterdam. Achtergrond in yoga en afgestudeerd aan PT7 Academy.",
+        "h1": [
+          "E. Gamze Karadağ"
+        ],
+        "lang": "nl",
+        "words": 123,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 0,
+        "position": null,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/instructors/nl/",
+        "/nl/"
+      ]
+    },
+    "/trainer/gokben/": {
+      "page": "/trainer/gokben/",
+      "live": {
+        "title": "Gökben Öztekin | Pilates Instructor at PT7 Amsterdam",
+        "description": "Meet Gökben Öztekin, expert Reformer Pilates instructor at PT7 Amsterdam. Specializing in precise technique and mindful movement.",
+        "h1": [
+          "Gokben Oztekin"
+        ],
+        "lang": "en",
+        "words": 98,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 2,
+        "impressions": 23,
+        "position": 4.7,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 3,
+        "clicksPrev": 2,
+        "impressionsPrev": 19
+      },
+      "ga4": {
+        "sessions": 4,
+        "engagementRate": 1,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.1,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "gokben",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 9.3,
+          "ctr": 0
+        },
+        {
+          "query": "pt studio 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 4,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/",
+        "/instructors/"
+      ]
+    },
+    "/trainer/gokben/nl/": {
+      "page": "/trainer/gokben/nl/",
+      "live": {
+        "title": "Gökben Öztekin | Pilatesinstructeur bij PT7 Amsterdam",
+        "description": "Maak kennis met Gökben Öztekin, ervaren Reformer pilatesinstructeur bij PT7 Amsterdam. Gespecialiseerd in precieze techniek en bewust bewegen.",
+        "h1": [
+          "Gokben Oztekin"
+        ],
+        "lang": "nl",
+        "words": 90,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 3,
+        "position": 1.3,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/instructors/nl/",
+        "/nl/"
+      ]
+    },
+    "/trainer/goknur/": {
+      "page": "/trainer/goknur/",
+      "live": {
+        "title": "Göknur Dipli | Pilates Instructor at PT7 Amsterdam",
+        "description": "Meet Göknur Dipli, expert Pilates and functional training instructor at PT7 Amsterdam. Holistic approach to fitness and wellness.",
+        "h1": [
+          "Goknur Dipli"
+        ],
+        "lang": "en",
+        "words": 238,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 1,
+        "impressions": 32,
+        "position": 5.3,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 1,
+        "impressionsPrev": 55
+      },
+      "ga4": {
+        "sessions": 2,
+        "engagementRate": 1,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/",
+        "/healthcare-providers/",
+        "/instructors/",
+        "/prenatal-pilates-amsterdam/",
+        "/workouts/cardio/",
+        "/workouts/functional-training/"
+      ]
+    },
+    "/trainer/goknur/nl/": {
+      "page": "/trainer/goknur/nl/",
+      "live": {
+        "title": "Göknur Dipli | Pilatesinstructeur bij PT7 Amsterdam",
+        "description": "Maak kennis met Göknur Dipli, ervaren pilates- en functioneel trainingsinstructeur bij PT7 Amsterdam. Holistische aanpak van fitheid en welzijn.",
+        "h1": [
+          "Goknur Dipli"
+        ],
+        "lang": "nl",
+        "words": 222,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 2,
+        "position": 3.5,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/healthcare-providers/nl/",
+        "/instructors/nl/",
+        "/nl/",
+        "/prenatal-pilates-amsterdam/nl/",
+        "/workouts/cardio/nl/",
+        "/workouts/functional-training/nl/"
+      ]
+    },
+    "/trainer/gulce/": {
+      "page": "/trainer/gulce/",
+      "live": {
+        "title": "Gülce Koç | Pilates Instructor at PT7 Amsterdam",
+        "description": "Meet Gülce Koç, certified Reformer Pilates instructor at PT7 Amsterdam. Passionate about sharing strength, balance, and joy through Pilates.",
+        "h1": [
+          "Gülce Koç"
+        ],
+        "lang": "en",
+        "words": 187,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 4,
+        "impressions": 61,
+        "position": 4.1,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 13,
+        "clicksPrev": 2,
+        "impressionsPrev": 90
+      },
+      "ga4": {
+        "sessions": 1,
+        "engagementRate": 1,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.1,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "gülce koç",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 7,
+          "position": 6.4,
+          "ctr": 0
+        },
+        {
+          "query": "gulce",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 5.8,
+          "ctr": 0
+        },
+        {
+          "query": "gülce",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 3,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/",
+        "/academy/",
+        "/academy/nl/",
+        "/instructors/"
+      ]
+    },
+    "/trainer/gulce/nl/": {
+      "page": "/trainer/gulce/nl/",
+      "live": {
+        "title": "Gülce Koç | Pilatesinstructeur bij PT7 Amsterdam",
+        "description": "Maak kennis met Gülce Koç, gecertificeerd Reformer pilatesinstructeur bij PT7 Amsterdam. Deelt met passie kracht, balans en plezier via pilates.",
+        "h1": [
+          "Gülce Koç"
+        ],
+        "lang": "nl",
+        "words": 169,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 4,
+        "position": 5.3,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 1,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "gulce",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 7,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/instructors/nl/",
+        "/nl/"
+      ]
+    },
+    "/trainer/kelly/": {
+      "page": "/trainer/kelly/",
+      "live": {
+        "title": "Kelly Tin | Pilates Instructor at PT7 Amsterdam",
+        "description": "Meet Kelly Tin, certified Reformer Pilates instructor at PT7 Amsterdam. English- and Dutch-speaking coach with a strength and HIIT background.",
+        "h1": [
+          "Kelly Tin"
+        ],
+        "lang": "en",
+        "words": 157,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 0,
+        "position": null,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 1,
+        "engagementRate": 1,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/",
+        "/academy/",
+        "/academy/nl/",
+        "/instructors/"
+      ]
+    },
+    "/trainer/kelly/nl/": {
+      "page": "/trainer/kelly/nl/",
+      "live": {
+        "title": "Kelly Tin | Pilatesinstructeur bij PT7 Amsterdam",
+        "description": "Maak kennis met Kelly Tin, gecertificeerd Reformer pilatesinstructeur bij PT7 Amsterdam. Engels- en Nederlandssprekende coach met een achtergrond in kracht en HIIT.",
+        "h1": [
+          "Kelly Tin"
+        ],
+        "lang": "nl",
+        "words": 153,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 11.75,
+      "gsc": {
+        "clicks": 2,
+        "impressions": 5,
+        "position": 3,
+        "nonbrandClicks": 1,
+        "nonbrandImpressions": 4,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.1,
+      "scoredClicks": 1,
+      "topQueries": [
+        {
+          "query": "kelly tin",
+          "brand": false,
+          "clicks": 1,
+          "impressions": 3,
+          "position": 1.7,
+          "ctr": 0.3333
+        },
+        {
+          "query": "kelly pt",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 8,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/instructors/nl/",
+        "/nl/"
+      ]
+    },
+    "/trainer/lal/": {
+      "page": "/trainer/lal/",
+      "live": {
+        "title": "Lal Avgen | Pilates Instructor at PT7 Amsterdam",
+        "description": "Meet Lal Avgen, certified Reformer Pilates instructor at PT7 Amsterdam. Visual artist and creative technologist bringing mindful movement to her teaching.",
+        "h1": [
+          "Lal Avgen"
+        ],
+        "lang": "en",
+        "words": 198,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 0,
+        "position": null,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/",
+        "/academy/",
+        "/academy/nl/",
+        "/instructors/"
+      ]
+    },
+    "/trainer/lal/nl/": {
+      "page": "/trainer/lal/nl/",
+      "live": {
+        "title": "Lal Avgen | Pilatesinstructeur bij PT7 Amsterdam",
+        "description": "Maak kennis met Lal Avgen, gecertificeerd Reformer pilatesinstructeur bij PT7 Amsterdam. Beeldend kunstenaar en creative technologist die bewust bewegen in haar lessen brengt.",
+        "h1": [
+          "Lal Avgen"
+        ],
+        "lang": "nl",
+        "words": 179,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 0,
+        "position": null,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/instructors/nl/",
+        "/nl/"
+      ]
+    },
+    "/trainer/nisan/": {
+      "page": "/trainer/nisan/",
+      "live": {
+        "title": "Nisan Atalay | Pilates Instructor at PT7 Amsterdam",
+        "description": "Meet Nisan Atalay, certified Reformer Pilates instructor at PT7 Amsterdam. Dutch-speaking instructor passionate about mindful movement.",
+        "h1": [
+          "Nisan Atalay"
+        ],
+        "lang": "en",
+        "words": 125,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 3,
+        "impressions": 40,
+        "position": 3.2,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 5,
+        "impressionsPrev": 48
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/",
+        "/academy/",
+        "/academy/nl/",
+        "/instructors/"
+      ]
+    },
+    "/trainer/nisan/nl/": {
+      "page": "/trainer/nisan/nl/",
+      "live": {
+        "title": "Nisan Atalay | Pilatesinstructeur bij PT7 Amsterdam",
+        "description": "Maak kennis met Nisan Atalay, gecertificeerd Reformer pilatesinstructeur bij PT7 Amsterdam. Nederlandssprekende instructeur met passie voor bewust bewegen.",
+        "h1": [
+          "Nisan Atalay"
+        ],
+        "lang": "nl",
+        "words": 129,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 0,
+        "position": null,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/instructors/nl/",
+        "/nl/"
+      ]
+    },
+    "/trx-training-amsterdam/": {
+      "page": "/trx-training-amsterdam/",
+      "live": {
+        "title": "TRX Amsterdam | Suspension Training Museumplein | PT7",
+        "description": "TRX Amsterdam at Van Baerlestraat 76C, Museumplein. Suspension training in small groups (max 5) and privates. New clients: 3 group classes for €50.",
+        "h1": [
+          "TRX Training Amsterdam"
+        ],
+        "lang": "en",
+        "words": 767,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "weak",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 3,
+        "impressions": 96,
+        "position": 5.7,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 33,
+        "clicksPrev": 1,
+        "impressionsPrev": 131
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.5,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "trx amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 29,
+          "position": 4.4,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 5,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "trx class",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 5,
+          "ctr": 0
+        },
+        {
+          "query": "trx classes near me for beginners",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 2,
+          "ctr": 0
+        },
+        {
+          "query": "trx nederland",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 60,
+          "ctr": 0
+        },
+        {
+          "query": "trx training",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 2,
+          "ctr": 0
+        }
+      ],
+      "striking": [
+        {
+          "query": "trx amsterdam",
+          "impressions": 29,
+          "clicks": 0,
+          "position": 4.4,
+          "inTitle": true,
+          "inHeadings": true
+        }
+      ],
+      "inboundContentLinks": [
+        "/",
+        "/pricing/",
+        "/reformer-pilates-amsterdam/",
+        "/schedule/",
+        "/strength-training-amsterdam/"
+      ]
+    },
+    "/trx-training-amsterdam/nl/": {
+      "page": "/trx-training-amsterdam/nl/",
+      "live": {
+        "title": "TRX training Amsterdam | Suspension training | PT7",
+        "description": "TRX in Amsterdam aan de Van Baerlestraat 76C, Museumplein. Suspension training in kleine groepen (max. 5) en privé. Nieuwe klanten: 3 groepslessen voor €50.",
+        "h1": [
+          "TRX training Amsterdam"
+        ],
+        "lang": "nl",
+        "words": 775,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 0,
+        "position": null,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/nl/",
+        "/pricing/nl/",
+        "/reformer-pilates-amsterdam/nl/",
+        "/schedule/nl/",
+        "/strength-training-amsterdam/nl/"
+      ]
+    },
+    "/workouts/cardio/": {
+      "page": "/workouts/cardio/",
+      "live": {
+        "title": "Cardio Training Amsterdam | PT7 Pilates Museumplein",
+        "description": "High-intensity cardio workouts in Amsterdam at Museumplein. Boost endurance, burn fat, improve heart health. Small group HIIT classes & one-on-one training!",
+        "h1": [
+          "Cardio Training"
+        ],
+        "lang": "en",
+        "words": 499,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 69,
+        "position": 18.8,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 38,
+        "clicksPrev": 0,
+        "impressionsPrev": 29
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.3,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "high intensity training amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 15,
+          "position": 28.6,
+          "ctr": 0
+        },
+        {
+          "query": "hiit workout amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 12,
+          "position": 35.1,
+          "ctr": 0
+        },
+        {
+          "query": "high intensity interval training amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 11,
+          "position": 29.7,
+          "ctr": 0
+        },
+        {
+          "query": "pt studio 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 9,
+          "position": 1.2,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/"
+      ]
+    },
+    "/workouts/cardio/nl/": {
+      "page": "/workouts/cardio/nl/",
+      "live": {
+        "title": "Cardiotraining Amsterdam | PT7 Pilates Museumplein",
+        "description": "Intensieve cardioworkouts in Amsterdam aan het Museumplein. Meer uithoudingsvermogen, vetverbranding en een gezond hart. HIIT in kleine groepen en één-op-één training!",
+        "h1": [
+          "Cardiotraining"
+        ],
+        "lang": "nl",
+        "words": 515,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": null,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 1,
+        "position": 69,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 0,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [],
+      "striking": [],
+      "inboundContentLinks": [
+        "/nl/"
+      ]
+    },
+    "/workouts/functional-training/": {
+      "page": "/workouts/functional-training/",
+      "live": {
+        "title": "Nike Strength Training Amsterdam | PT7 Pilates Museumplein",
+        "description": "Nike strength training at Museumplein, Amsterdam: Olympic barbell, half rack and dumbbells. Coached one-on-one or in small groups (max 5).",
+        "h1": [
+          "Nike Strength Training"
+        ],
+        "lang": "en",
+        "words": 544,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 1,
+        "impressions": 39,
+        "position": 12.2,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 5,
+        "clicksPrev": 3,
+        "impressionsPrev": 54
+      },
+      "ga4": {
+        "sessions": 1,
+        "engagementRate": 1,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "functional training amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 39.5,
+          "ctr": 0
+        },
+        {
+          "query": "f45 training amsterdam centrum",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 55,
+          "ctr": 0
+        },
+        {
+          "query": "nike strength studio",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 6,
+          "ctr": 0
+        },
+        {
+          "query": "dumbbells in amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 11,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/",
+        "/trainer/goknur/"
+      ]
+    },
+    "/workouts/functional-training/nl/": {
+      "page": "/workouts/functional-training/nl/",
+      "live": {
+        "title": "Nike krachttraining Amsterdam | PT7 Pilates Museumplein",
+        "description": "Nike-krachttraining aan het Museumplein in Amsterdam: Olympische halterstang, half rack en dumbbells. Eén-op-één of in kleine groepen (max. 5).",
+        "h1": [
+          "Nike krachttraining"
+        ],
+        "lang": "nl",
+        "words": 562,
+        "status": 200
+      },
+      "indexable": true,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 3,
+        "position": 14.7,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 1,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "kracht amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 33,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/nl/",
+        "/trainer/goknur/nl/"
+      ]
+    },
+    "/classpass-offer/": {
+      "page": "/classpass-offer/",
+      "live": null,
+      "indexable": null,
+      "frozen": true,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 1,
+        "impressions": 53,
+        "position": 6.8,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 2,
+        "clicksPrev": 0,
+        "impressionsPrev": 1
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "pilates in amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 30,
+          "ctr": 0
+        },
+        {
+          "query": "in amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 9,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": []
+    },
+    "/workouts/reformer-pilates/": {
+      "page": "/workouts/reformer-pilates/",
+      "live": null,
+      "indexable": null,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 38,
+        "position": 5,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 1,
+        "clicksPrev": 0,
+        "impressionsPrev": 189
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pilates reform",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 4,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": []
+    },
+    "/workouts/trx/": {
+      "page": "/workouts/trx/",
+      "live": null,
+      "indexable": null,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 67,
+        "position": 12.6,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 41,
+        "clicksPrev": 0,
+        "impressionsPrev": 125
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0.1,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "trx amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 21,
+          "position": 19.7,
+          "ctr": 0
+        },
+        {
+          "query": "are there any specialized suspension training programs available in brazil for fitness enthusiasts?",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 10,
+          "position": 9.1,
+          "ctr": 0
+        },
+        {
+          "query": "trx training",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 9.3,
+          "ctr": 0
+        },
+        {
+          "query": "trx training near me",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 8.5,
+          "ctr": 0
+        },
+        {
+          "query": "trx class",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 9,
+          "ctr": 0
+        },
+        {
+          "query": "suspension pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 9,
+          "ctr": 0
+        },
+        {
+          "query": "trx classes near me for beginners",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 10,
+          "ctr": 0
+        },
+        {
+          "query": "wat is trx training",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 48,
+          "ctr": 0
+        },
+        {
+          "query": "suspension training near me",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 22,
+          "ctr": 0
+        }
+      ],
+      "striking": [
+        {
+          "query": "trx amsterdam",
+          "impressions": 21,
+          "clicks": 0,
+          "position": 19.7,
+          "inTitle": false,
+          "inHeadings": false
+        }
+      ],
+      "inboundContentLinks": [
+        "/trx-training-amsterdam/"
+      ]
+    }
+  }
+}

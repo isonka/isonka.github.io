@@ -1,0 +1,33 @@
+{
+  "date": "2026-08-12",
+  "rows": [
+    {
+      "date": "2026-08-12",
+      "landingPage": "/",
+      "sessions": 3,
+      "engagedSessions": 3,
+      "keyEvents": 1
+    },
+    {
+      "date": "2026-08-12",
+      "landingPage": "/academy",
+      "sessions": 3,
+      "engagedSessions": 3,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-12",
+      "landingPage": "/pricing",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-12",
+      "landingPage": "/trainer/elif",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

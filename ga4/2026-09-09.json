@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-09",
+  "rows": [
+    {
+      "date": "2026-09-09",
+      "landingPage": "/schedule",
+      "sessions": 4,
+      "engagedSessions": 4,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-09",
+      "landingPage": "/",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-09",
+      "landingPage": "/academy/nl",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

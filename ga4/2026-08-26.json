@@ -1,0 +1,26 @@
+{
+  "date": "2026-08-26",
+  "rows": [
+    {
+      "date": "2026-08-26",
+      "landingPage": "/",
+      "sessions": 6,
+      "engagedSessions": 6,
+      "keyEvents": 1
+    },
+    {
+      "date": "2026-08-26",
+      "landingPage": "/trainer/gokben",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-26",
+      "landingPage": "/trainer/kelly",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "date": "2026-08-23",
+  "rows": [
+    {
+      "date": "2026-08-23",
+      "landingPage": "/",
+      "sessions": 6,
+      "engagedSessions": 6,
+      "keyEvents": 2
+    },
+    {
+      "date": "2026-08-23",
+      "landingPage": "/equipment",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-23",
+      "landingPage": "(not set)",
+      "sessions": 1,
+      "engagedSessions": 0,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-23",
+      "landingPage": "/academy/nl",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-23",
+      "landingPage": "/blog/career-change-banker-to-pilates-instructor",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-23",
+      "landingPage": "/equipment/tower-reformer",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-23",
+      "landingPage": "/prenatal-pilates-amsterdam",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-23",
+      "landingPage": "/pricing",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-23",
+      "landingPage": "/schedule",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-23",
+      "landingPage": "/trainer/gulce",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

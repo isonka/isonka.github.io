@@ -1,0 +1,19 @@
+{
+  "date": "2026-08-10",
+  "rows": [
+    {
+      "date": "2026-08-10",
+      "landingPage": "/",
+      "sessions": 3,
+      "engagedSessions": 3,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-10",
+      "landingPage": "/trainer/gokben",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

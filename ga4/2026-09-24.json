@@ -1,0 +1,47 @@
+{
+  "date": "2026-09-24",
+  "rows": [
+    {
+      "date": "2026-09-24",
+      "landingPage": "(not set)",
+      "sessions": 4,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-24",
+      "landingPage": "/schedule",
+      "sessions": 4,
+      "engagedSessions": 4,
+      "keyEvents": 1
+    },
+    {
+      "date": "2026-09-24",
+      "landingPage": "/equipment",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-24",
+      "landingPage": "/pricing",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-24",
+      "landingPage": "/academy",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-24",
+      "landingPage": "/prenatal-pilates-amsterdam",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

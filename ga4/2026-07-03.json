@@ -1,0 +1,19 @@
+{
+  "date": "2026-07-03",
+  "rows": [
+    {
+      "date": "2026-07-03",
+      "landingPage": "/",
+      "sessions": 3,
+      "engagedSessions": 3,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-07-03",
+      "landingPage": "/blog",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "date": "2026-09-27",
+  "rows": [
+    {
+      "date": "2026-09-27",
+      "landingPage": "(not set)",
+      "sessions": 8,
+      "engagedSessions": 1,
+      "keyEvents": 1
+    },
+    {
+      "date": "2026-09-27",
+      "landingPage": "/schedule",
+      "sessions": 3,
+      "engagedSessions": 3,
+      "keyEvents": 1
+    },
+    {
+      "date": "2026-09-27",
+      "landingPage": "/pricing",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-27",
+      "landingPage": "/academy",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-27",
+      "landingPage": "/equipment",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-27",
+      "landingPage": "/pricing/nl",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

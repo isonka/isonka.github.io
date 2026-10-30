@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-04",
+  "rows": [
+    {
+      "date": "2026-09-04",
+      "landingPage": "/",
+      "sessions": 13,
+      "engagedSessions": 13,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-04",
+      "landingPage": "/schedule",
+      "sessions": 3,
+      "engagedSessions": 3,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-04",
+      "landingPage": "/reformer-pilates-amsterdam",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "date": "2026-09-19",
+  "rows": [
+    {
+      "date": "2026-09-19",
+      "landingPage": "(not set)",
+      "sessions": 9,
+      "engagedSessions": 2,
+      "keyEvents": 1
+    },
+    {
+      "date": "2026-09-19",
+      "landingPage": "/",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-19",
+      "landingPage": "/schedule",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "keyEvents": 1
+    },
+    {
+      "date": "2026-09-19",
+      "landingPage": "/pricing",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-19",
+      "landingPage": "/pricing/nl",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-19",
+      "landingPage": "/schedule/nl",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

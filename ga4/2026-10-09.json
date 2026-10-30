@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-09",
+  "rows": [
+    {
+      "date": "2026-10-09",
+      "landingPage": "(not set)",
+      "sessions": 2,
+      "engagedSessions": 0,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-10-09",
+      "landingPage": "/pricing/nl",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-10-09",
+      "landingPage": "/schedule",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "date": "2026-08-29",
+  "rows": [
+    {
+      "date": "2026-08-29",
+      "landingPage": "/",
+      "sessions": 3,
+      "engagedSessions": 3,
+      "keyEvents": 1
+    },
+    {
+      "date": "2026-08-29",
+      "landingPage": "/trainer/nisan",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

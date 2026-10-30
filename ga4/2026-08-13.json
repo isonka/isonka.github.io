@@ -1,0 +1,19 @@
+{
+  "date": "2026-08-13",
+  "rows": [
+    {
+      "date": "2026-08-13",
+      "landingPage": "/schedule",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-13",
+      "landingPage": "/prenatal-pilates-amsterdam",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2026-08-15",
+  "rows": [
+    {
+      "date": "2026-08-15",
+      "landingPage": "/",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-15",
+      "landingPage": "/equipment",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-15",
+      "landingPage": "/healthcare-providers",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

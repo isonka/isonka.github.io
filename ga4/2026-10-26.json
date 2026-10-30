@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-26",
+  "rows": [
+    {
+      "date": "2026-10-26",
+      "landingPage": "(not set)",
+      "sessions": 11,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-10-26",
+      "landingPage": "/schedule",
+      "sessions": 7,
+      "engagedSessions": 7,
+      "keyEvents": 3
+    },
+    {
+      "date": "2026-10-26",
+      "landingPage": "/equipment/cadillac",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-10-26",
+      "landingPage": "/pricing",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "date": "2026-08-28",
+  "rows": [
+    {
+      "date": "2026-08-28",
+      "landingPage": "/",
+      "sessions": 12,
+      "engagedSessions": 12,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-28",
+      "landingPage": "(not set)",
+      "sessions": 2,
+      "engagedSessions": 0,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-28",
+      "landingPage": "/schedule",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-28",
+      "landingPage": "/trx-training-amsterdam",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

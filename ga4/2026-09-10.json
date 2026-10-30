@@ -1,0 +1,33 @@
+{
+  "date": "2026-09-10",
+  "rows": [
+    {
+      "date": "2026-09-10",
+      "landingPage": "/",
+      "sessions": 6,
+      "engagedSessions": 6,
+      "keyEvents": 3
+    },
+    {
+      "date": "2026-09-10",
+      "landingPage": "/schedule",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-10",
+      "landingPage": "/academy",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-10",
+      "landingPage": "/workouts/functional-training",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

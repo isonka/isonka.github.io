@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-20",
+  "rows": [
+    {
+      "date": "2026-10-20",
+      "landingPage": "(not set)",
+      "sessions": 4,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-10-20",
+      "landingPage": "/schedule",
+      "sessions": 4,
+      "engagedSessions": 4,
+      "keyEvents": 3
+    },
+    {
+      "date": "2026-10-20",
+      "landingPage": "/blog/pt-7-moves-to-olympisch-stadion",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-10-20",
+      "landingPage": "/pricing",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-10-20",
+      "landingPage": "/schedule/nl",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-10-20",
+      "landingPage": "/trainer/kelly",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

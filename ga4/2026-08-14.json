@@ -1,0 +1,40 @@
+{
+  "date": "2026-08-14",
+  "rows": [
+    {
+      "date": "2026-08-14",
+      "landingPage": "/",
+      "sessions": 5,
+      "engagedSessions": 5,
+      "keyEvents": 1
+    },
+    {
+      "date": "2026-08-14",
+      "landingPage": "/schedule",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-14",
+      "landingPage": "/academy",
+      "sessions": 1,
+      "engagedSessions": 0,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-14",
+      "landingPage": "/trainer/elif",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-08-14",
+      "landingPage": "/trainer/gulce",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

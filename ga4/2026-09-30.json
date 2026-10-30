@@ -1,0 +1,33 @@
+{
+  "date": "2026-09-30",
+  "rows": [
+    {
+      "date": "2026-09-30",
+      "landingPage": "(not set)",
+      "sessions": 4,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-30",
+      "landingPage": "/schedule",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "keyEvents": 5
+    },
+    {
+      "date": "2026-09-30",
+      "landingPage": "/blog/pt-7-moves-to-olympisch-stadion",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-30",
+      "landingPage": "/pricing",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

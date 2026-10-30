@@ -1,0 +1,437 @@
+{
+  "date": "2026-08-17",
+  "pages": [
+    {
+      "page": "https://www.pt7.nl/",
+      "clicks": 8,
+      "impressions": 109,
+      "position": 5.963302752293578
+    },
+    {
+      "page": "https://www.pt7.nl/blog/",
+      "clicks": 1,
+      "impressions": 14,
+      "position": 8.5
+    },
+    {
+      "page": "https://www.pt7.nl/academy/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4
+    },
+    {
+      "page": "https://www.pt7.nl/blog/career-change-banker-to-pilates-instructor/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 6.333333333333333
+    },
+    {
+      "page": "https://www.pt7.nl/blog/prenatal-pilates-supporting-body-through-every-trimester",
+      "clicks": 0,
+      "impressions": 5,
+      "position": 16.4
+    },
+    {
+      "page": "https://www.pt7.nl/equipment/",
+      "clicks": 0,
+      "impressions": 8,
+      "position": 6.25
+    },
+    {
+      "page": "https://www.pt7.nl/equipment/reformer/",
+      "clicks": 0,
+      "impressions": 8,
+      "position": 23.375
+    },
+    {
+      "page": "https://www.pt7.nl/healthcare-providers/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 1.6666666666666665
+    },
+    {
+      "page": "https://www.pt7.nl/prenatal-pilates-amsterdam",
+      "clicks": 0,
+      "impressions": 7,
+      "position": 9.571428571428571
+    },
+    {
+      "page": "https://www.pt7.nl/pricing",
+      "clicks": 0,
+      "impressions": 6,
+      "position": 6.333333333333333
+    },
+    {
+      "page": "https://www.pt7.nl/schedule",
+      "clicks": 0,
+      "impressions": 8,
+      "position": 8.375
+    },
+    {
+      "page": "https://www.pt7.nl/trainer/elif",
+      "clicks": 0,
+      "impressions": 7,
+      "position": 2.857142857142857
+    },
+    {
+      "page": "https://www.pt7.nl/trainer/goknur/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 7
+    },
+    {
+      "page": "https://www.pt7.nl/trainer/gulce/",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 6.75
+    },
+    {
+      "page": "https://www.pt7.nl/trx-training-amsterdam",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 5
+    },
+    {
+      "page": "https://www.pt7.nl/workouts/functional-training/",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 2.5
+    },
+    {
+      "page": "https://www.pt7.nl/workouts/reformer-pilates/",
+      "clicks": 0,
+      "impressions": 13,
+      "position": 16.53846153846154
+    },
+    {
+      "page": "https://www.pt7.nl/workouts/trx",
+      "clicks": 0,
+      "impressions": 10,
+      "position": 10.9
+    }
+  ],
+  "queries": [
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "pt studio 7",
+      "clicks": 2,
+      "impressions": 2,
+      "position": 1
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "core training amsterdam",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 21
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "p.t",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "pilat3s oud zuid",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 13
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "pilates",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 6.333333333333333
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "pilates amsterdam",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 7
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "pilates classes near me",
+      "clicks": 0,
+      "impressions": 10,
+      "position": 4
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "pilates oud zuid",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 11
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "pilates reformer",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "pilates reformer amsterdam",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 11
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "pilates studio",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 7
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "pilates studio amsterdam",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 8.666666666666668
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "posture studios",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "pt",
+      "clicks": 0,
+      "impressions": 25,
+      "position": 5
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "pt 7",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 9.5
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "pt studio",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 7
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "reformer amsterdam",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "reformer pilate",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "reformer pilates amsterdam",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 1.6666666666666665
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "reformer pilates amsterdam zuid",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 15
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "sculpting workout",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 13
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "studio fits",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 7
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "studio pilates",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 7
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "top rated pilates reformer",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "trx amsterdam",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 18
+    },
+    {
+      "page": "https://www.pt7.nl/",
+      "query": "workiut",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 7
+    },
+    {
+      "page": "https://www.pt7.nl/blog/",
+      "query": "pt studio 7",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2
+    },
+    {
+      "page": "https://www.pt7.nl/equipment/",
+      "query": "pilates apparatus",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1
+    },
+    {
+      "page": "https://www.pt7.nl/equipment/",
+      "query": "pilates equipment",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 10.5
+    },
+    {
+      "page": "https://www.pt7.nl/equipment/",
+      "query": "pilates tools",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10
+    },
+    {
+      "page": "https://www.pt7.nl/equipment/",
+      "query": "pt studio 7",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2
+    },
+    {
+      "page": "https://www.pt7.nl/equipment/",
+      "query": "reformer buy",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 6
+    },
+    {
+      "page": "https://www.pt7.nl/equipment/reformer/",
+      "query": "pilates reformer",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 10.5
+    },
+    {
+      "page": "https://www.pt7.nl/equipment/reformer/",
+      "query": "reformer amsterdam",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 61
+    },
+    {
+      "page": "https://www.pt7.nl/equipment/reformer/",
+      "query": "reformer pilates teacher training amsterdam",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 68
+    },
+    {
+      "page": "https://www.pt7.nl/healthcare-providers/",
+      "query": "pt studio 7",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2
+    },
+    {
+      "page": "https://www.pt7.nl/pricing",
+      "query": "pt studio 7",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2
+    },
+    {
+      "page": "https://www.pt7.nl/schedule",
+      "query": "pt studio 7",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 1.5
+    },
+    {
+      "page": "https://www.pt7.nl/trainer/elif",
+      "query": "elif arzu",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 5.5
+    },
+    {
+      "page": "https://www.pt7.nl/trainer/gulce/",
+      "query": "gulce",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2
+    },
+    {
+      "page": "https://www.pt7.nl/trx-training-amsterdam",
+      "query": "trx amsterdam",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 5
+    },
+    {
+      "page": "https://www.pt7.nl/workouts/functional-training/",
+      "query": "both",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1
+    },
+    {
+      "page": "https://www.pt7.nl/workouts/reformer-pilates/",
+      "query": "pt studio 7",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 1.5
+    },
+    {
+      "page": "https://www.pt7.nl/workouts/trx",
+      "query": "are there any specialized suspension training programs available in brazil for fitness enthusiasts?",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 9
+    },
+    {
+      "page": "https://www.pt7.nl/workouts/trx",
+      "query": "trx amsterdam",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 14.5
+    },
+    {
+      "page": "https://www.pt7.nl/workouts/trx",
+      "query": "trx class",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10
+    }
+  ]
+}

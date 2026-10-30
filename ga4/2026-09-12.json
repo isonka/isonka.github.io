@@ -1,0 +1,47 @@
+{
+  "date": "2026-09-12",
+  "rows": [
+    {
+      "date": "2026-09-12",
+      "landingPage": "/",
+      "sessions": 7,
+      "engagedSessions": 7,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-12",
+      "landingPage": "/academy",
+      "sessions": 3,
+      "engagedSessions": 3,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-12",
+      "landingPage": "/blog/pilates-prices-amsterdam-2026-complete-guide",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-12",
+      "landingPage": "/equipment",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-12",
+      "landingPage": "/pricing",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-12",
+      "landingPage": "/schedule",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

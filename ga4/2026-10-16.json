@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-16",
+  "rows": [
+    {
+      "date": "2026-10-16",
+      "landingPage": "/schedule/nl",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "keyEvents": 2
+    },
+    {
+      "date": "2026-10-16",
+      "landingPage": "(not set)",
+      "sessions": 1,
+      "engagedSessions": 0,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-10-16",
+      "landingPage": "/blog/pt-7-moves-to-olympisch-stadion",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-10-16",
+      "landingPage": "/schedule",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 2
+    },
+    {
+      "date": "2026-10-16",
+      "landingPage": "/trainer/gokben",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "date": "2026-09-16",
+  "rows": [
+    {
+      "date": "2026-09-16",
+      "landingPage": "(not set)",
+      "sessions": 6,
+      "engagedSessions": 3,
+      "keyEvents": 1
+    },
+    {
+      "date": "2026-09-16",
+      "landingPage": "/schedule",
+      "sessions": 6,
+      "engagedSessions": 6,
+      "keyEvents": 2
+    },
+    {
+      "date": "2026-09-16",
+      "landingPage": "/",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-16",
+      "landingPage": "/academy",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-16",
+      "landingPage": "/reformer-pilates-amsterdam",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-09-16",
+      "landingPage": "/trainer/gokben",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}
