@@ -94,8 +94,8 @@ const fixedPageMeta = {
     description: 'Boek pilateslessen bij jou in de buurt aan het Museumplein (Amsterdam Zuid). Live rooster voor Reformer, TRX & kracht — kleine groepen (max. 5) en privé aan de Van Baerlestraat 76C. Reserveer vandaag online.',
   },
   '/instructors/': {
-    title: 'Our Instructors | PT7 Pilates Amsterdam',
-    description: 'Meet our expert certified Pilates instructors. 10+ years experience, specialized in Reformer Pilates, pregnancy Pilates, and strength training.',
+    title: 'Pilates Instructors Amsterdam | PT7',
+    description: 'Meet the certified Pilates instructors at PT7, Museumplein: Reformer, prenatal Pilates and strength training in small groups (max 5) and privates.',
   },
   '/equipment/': {
     title: 'Buy Pilates Equipment Amsterdam | Reformers & More | PT7 Pilates',

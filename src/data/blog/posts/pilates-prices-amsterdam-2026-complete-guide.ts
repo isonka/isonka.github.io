@@ -4,7 +4,7 @@ export const post: BlogPost = {
   id: '10',
   slug: 'pilates-prices-amsterdam-2026-complete-guide',
   title: 'Pilates Prices Amsterdam 2026: Complete Cost Comparison Guide',
-  seoTitle: 'Pilates Prices Amsterdam 2026: Cost Guide | PT7',
+  seoTitle: 'How Much Does Pilates Cost in Amsterdam? 2026 Guide | PT7',
   excerpt: 'What does Pilates cost in Amsterdam? We researched 20+ studios to bring you the complete price breakdown for group classes, private sessions, and memberships in 2026.',
   content: `
       <p>Planning to start Pilates in Amsterdam but unsure what to budget? We've researched pricing across Amsterdam's Pilates studios to give you a complete picture of what to expect in 2026.</p>
@@ -151,7 +151,7 @@ export const post: BlogPost = {
   dateModified: '2026-09-29',
   image: '/assets/images/studio.webp',
   tags: ['Pilates Prices', 'Amsterdam Fitness', 'Cost Guide', 'Pilates Classes'],
-  metaDescription: 'Pilates prices in Amsterdam for 2026: group classes, private sessions and memberships compared, and what drives the difference in cost.',
+  metaDescription: 'How much does a Pilates class cost in Amsterdam? Group classes €30-45, privates €70-100, plus memberships and packs compared across 20+ studios.',
   keywords: [
     'pilates prices amsterdam',
     'pilates cost amsterdam',

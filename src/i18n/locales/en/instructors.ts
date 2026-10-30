@@ -1,8 +1,8 @@
 export const enInstructors = {
   seo: {
-    title: 'Our Instructors | PT7 Pilates Amsterdam',
+    title: 'Pilates Instructors Amsterdam | PT7',
     description:
-      'Meet our expert team of certified Pilates and fitness instructors at PT7 Amsterdam. Master, senior, and junior instructors dedicated to your fitness journey.',
+      'Meet the certified Pilates instructors at PT7, Museumplein: Reformer, prenatal Pilates and strength training in small groups (max 5) and privates.',
     keywords:
       'Pilates instructors Amsterdam, polestar pilates amsterdam, Pilates leraren Amsterdam, gecertificeerde Pilates instructeurs, Pilates teachers Museumplein, Pilates team Oud-Zuid',
     listName: 'PT7 Pilates Instructors',
