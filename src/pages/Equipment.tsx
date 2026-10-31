@@ -68,6 +68,7 @@ export const Equipment= () => {
               name: product.name,
               url: `${BASE_URL}${href(`/equipment/${product.slug}/`)}`,
               image: `${BASE_URL}${product.images[0].src}`,
+              description: product.shortDesc,
               price: String(product.priceEur),
               priceCurrency: 'EUR',
             })),

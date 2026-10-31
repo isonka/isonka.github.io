@@ -103,10 +103,47 @@ interface StructuredDataProps {
         name: string;
         url: string;
         image?: string;
+        description?: string;
         price?: string;
         priceCurrency?: string;
       }[];
     };
+  };
+}
+
+/** Equipment is made to order. FAQ: returns are not possible after purchase. */
+const equipmentReturnPolicy = {
+  '@type': 'MerchantReturnPolicy',
+  applicableCountry: 'NL',
+  returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+};
+
+/** Google merchant listings require a numeric price, on the offer or inside PriceSpecification. */
+function numericPrice(price: string | number | undefined): number | undefined {
+  if (price === undefined || price === '') return undefined;
+  const value = typeof price === 'number' ? price : Number(price);
+  return Number.isFinite(value) ? value : undefined;
+}
+
+function equipmentPriceSpecification(price: number, priceCurrency: string) {
+  return {
+    '@type': 'UnitPriceSpecification',
+    price,
+    priceCurrency,
+    valueAddedTaxIncluded: false as const,
+  };
+}
+
+function equipmentOffer(url: string, price: number, priceCurrency: string) {
+  return {
+    '@type': 'Offer',
+    url,
+    priceCurrency,
+    price,
+    priceSpecification: equipmentPriceSpecification(price, priceCurrency),
+    availability: 'https://schema.org/PreOrder',
+    itemCondition: 'https://schema.org/NewCondition',
+    hasMerchantReturnPolicy: equipmentReturnPolicy,
   };
 }
 
@@ -236,6 +273,7 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
 
   if (type === 'Product' && data?.product) {
     const p = data.product;
+    const price = numericPrice(p.price);
     schema = {
       '@context': 'https://schema.org',
       '@type': 'Product',
@@ -249,26 +287,16 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
         '@type': 'Brand',
         name: p.brand,
       },
-      offers: {
-        '@type': 'Offer',
-        url: p.url,
-        ...(p.priceCurrency ? { priceCurrency: p.priceCurrency } : {}),
-        ...(p.price ? { price: p.price } : {}),
-        availability: p.availability,
-        ...(p.itemCondition ? { itemCondition: p.itemCondition } : {}),
-        ...(p.offerDescription ? { description: p.offerDescription } : {}),
-        ...(p.price && p.priceCurrency && p.valueAddedTaxIncluded === false
+      offers:
+        price !== undefined && p.priceCurrency
           ? {
-              priceSpecification: {
-                '@type': 'UnitPriceSpecification',
-                price: p.price,
-                priceCurrency: p.priceCurrency,
-                valueAddedTaxIncluded: false,
-              },
+              ...equipmentOffer(p.url, price, p.priceCurrency),
+              ...(p.availability ? { availability: p.availability } : {}),
+              ...(p.itemCondition ? { itemCondition: p.itemCondition } : {}),
+              ...(p.offerDescription ? { description: p.offerDescription } : {}),
+              seller: { '@id': SCHEMA_IDS.organization },
             }
-          : {}),
-        seller: { '@id': SCHEMA_IDS.organization },
-      },
+          : undefined,
       ...(p.additionalProperty && p.additionalProperty.length > 0
         ? {
             additionalProperty: p.additionalProperty.map((prop) => ({
@@ -286,38 +314,30 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       name: data.itemList.name,
-      itemListElement: data.itemList.itemListElement.map((item, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        item:
-          item.price && item.priceCurrency
-            ? {
-                '@type': 'Product',
-                name: item.name,
-                url: item.url,
-                ...(item.image ? { image: item.image } : {}),
-                brand: { '@type': 'Brand', name: 'Sole Pilates' },
-                offers: {
-                  '@type': 'Offer',
+      itemListElement: data.itemList.itemListElement.map((item, index) => {
+        const price = numericPrice(item.price);
+        return {
+          '@type': 'ListItem',
+          position: index + 1,
+          item:
+            price !== undefined && item.priceCurrency
+              ? {
+                  '@type': 'Product',
+                  name: item.name,
                   url: item.url,
-                  price: item.price,
-                  priceCurrency: item.priceCurrency,
-                  availability: 'https://schema.org/PreOrder',
-                  priceSpecification: {
-                    '@type': 'UnitPriceSpecification',
-                    price: item.price,
-                    priceCurrency: item.priceCurrency,
-                    valueAddedTaxIncluded: false,
-                  },
+                  ...(item.image ? { image: item.image } : {}),
+                  brand: { '@type': 'Brand', name: 'Sole Pilates' },
+                  offers: equipmentOffer(item.url, price, item.priceCurrency),
+                  ...(item.description ? { description: item.description } : {}),
+                }
+              : {
+                  '@type': 'WebPage',
+                  name: item.name,
+                  url: item.url,
+                  ...(item.image ? { image: item.image } : {}),
                 },
-              }
-            : {
-                '@type': 'WebPage',
-                name: item.name,
-                url: item.url,
-                ...(item.image ? { image: item.image } : {}),
-              },
-      })),
+        };
+      }),
     };
   }
 
