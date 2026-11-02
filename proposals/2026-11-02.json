@@ -1,0 +1,36 @@
+{ "changes": [
+  {
+    "page": "/equipment/reformer/",
+    "action": "rewrite-snippet",
+    "kind": "snippet",
+    "before": { "title": "Reformer Pilates Equipment at PT7 Amsterdam | In-Studio", "description": "The Reformer used in small-group and private classes at PT7, Van Baerlestraat 76C, Museumplein. Specs of the in-studio apparatus and how to book a class." },
+    "after": { "title": "Pilates Reformer Machine: Specs & Classes | PT7", "description": "The Pilates Reformer machine we use in small-group and private classes at PT7, Van Baerlestraat 76C, Museumplein. See the specs and how to book a class." },
+    "hypothesis": "Leading with 'Pilates Reformer Machine' matches the top queries 'reformer pilates machine' / 'pilates reformer machine' (39 impressions, 0 clicks).",
+    "files": ["src/data/equipment.ts"]
+  },
+  {
+    "page": "/equipment/tower-reformer/",
+    "action": "rewrite-snippet",
+    "kind": "snippet",
+    "before": { "title": "Tower Reformer at PT7 Amsterdam | In-Studio Apparatus", "description": "Tower Reformer used in classes at PT7, Van Baerlestraat 76C, Museumplein, Amsterdam Oud-Zuid. Specs of the in-studio apparatus and how to book a class." },
+    "after": { "title": "Tower Reformer Pilates: Specs & Classes | PT7", "description": "The Tower Reformer used in classes at PT7, Van Baerlestraat 76C, Museumplein, Amsterdam Oud-Zuid. See its specs and how to book a class." },
+    "hypothesis": "Title now mirrors 'tower reformer pilates' / 'reformer tower' queries (positions 7.5-10.8, 0 clicks).",
+    "files": ["src/data/equipment.ts"]
+  },
+  {
+    "page": "/blog/pma-ittap-accreditation-reformer-course-amsterdam/",
+    "action": "rewrite-snippet",
+    "kind": "snippet",
+    "before": { "title": "PMA ITTAP Accreditation Explained | PT7 Academy", "description": "What PMA ITTAP accreditation means for Pilates teacher training, and how PT7 Academy's 300-hour Reformer course in Amsterdam meets it." },
+    "after": { "title": "ITTAP Pilates: What PMA Accreditation Means | PT7", "description": "What ITTAP means for Pilates teacher training: how PMA accreditation works and how PT7 Academy's 300-hour Reformer course in Amsterdam meets it." },
+    "hypothesis": "Leads with 'ITTAP' / 'ITTAP Pilates' (38 impressions at positions 3.5-7, 0 clicks) and promises an explanation of the term.",
+    "files": ["src/data/blog/posts/pma-ittap-accreditation-reformer-course-amsterdam.ts"]
+  },
+  {
+    "page": "/reformer-pilates-amsterdam/",
+    "action": "strengthen",
+    "kind": "content",
+    "hypothesis": "No uncovered queries. Added one internal link from /blog/pilates-prices-amsterdam-2026-complete-guide/ ('Reformer Pilates in Amsterdam at PT7'). Skipped the career-change blog and /instructors/ (instructors already links to Reformer classes).",
+    "files": ["src/data/blog/posts/pilates-prices-amsterdam-2026-complete-guide.ts"]
+  }
+] }
