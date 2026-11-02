@@ -69,8 +69,8 @@ export const equipmentProducts: EquipmentProduct[] = [
     name: 'Pilates Reformer',
     priceEur: 1900,
     seo: {
-      title: 'Reformer Pilates Equipment at PT7 Amsterdam | In-Studio',
-      description: `The Reformer used in small-group and private classes at PT7, ${studioStreet}, Museumplein. Specs of the in-studio apparatus and how to book a class.`,
+      title: 'Pilates Reformer Machine: Specs & Classes | PT7',
+      description: `The Pilates Reformer machine we use in small-group and private classes at PT7, ${studioStreet}, Museumplein. See the specs and how to book a class.`,
       keywords: 'pilates reformer equipment, reformer pilates amsterdam, pilates apparatus museumplein, tower reformer studio',
     },
     images: [
@@ -124,8 +124,8 @@ export const equipmentProducts: EquipmentProduct[] = [
     name: 'Tower Reformer',
     priceEur: 2300,
     seo: {
-      title: 'Tower Reformer at PT7 Amsterdam | In-Studio Apparatus',
-      description: `Tower Reformer used in classes at PT7, ${studioStreet}, Museumplein, Amsterdam Oud-Zuid. Specs of the in-studio apparatus and how to book a class.`,
+      title: 'Tower Reformer Pilates: Specs & Classes | PT7',
+      description: `The Tower Reformer used in classes at PT7, ${studioStreet}, Museumplein, Amsterdam Oud-Zuid. See its specs and how to book a class.`,
       keywords: 'tower reformer, tower reformer pilates, reformer with tower amsterdam, pilates equipment museumplein',
     },
     images: [
