@@ -3,6 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -11,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -51,15 +52,34 @@ jobs:
           npm run build
           echo "✅ Build step finished"
 
+      - name: Lighthouse
+        timeout-minutes: 15
+        run: |
+          export CHROME_PATH="$(node --input-type=module -e "import puppeteer from 'puppeteer'; process.stdout.write(puppeteer.executablePath())")"
+          test -x "$CHROME_PATH"
+          echo "Chrome: $CHROME_PATH"
+          npm run lighthouse
+
+      - name: Upload Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse
+          path: lighthouse-reports
+          if-no-files-found: warn
+
       - name: Setup Pages
+        if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
   deploy:
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:

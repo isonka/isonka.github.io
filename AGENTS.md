@@ -13,7 +13,7 @@ For day-to-day human setup, see [README.md](./README.md).
 | **What this is** | Marketing site for **PT7** (PT7 Pilates Amsterdam) — Reformer Pilates, TRX, strength training, small groups and privates. |
 | **Stack** | React 19, TypeScript, Vite 7, React Router 7. Static output in `dist/` after build. |
 | **Production site** | `https://www.pt7.nl` (canonical URLs and structured data assume this host). |
-| **Repo / hosting** | GitHub repo `isonka.github.io`; **GitHub Pages** deploy via [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml) on push to `main` (and manual `workflow_dispatch`). |
+| **Repo / hosting** | GitHub repo `isonka.github.io`; **GitHub Pages** deploy via [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml) on push to `main` (and manual `workflow_dispatch`). Pull requests run the same build plus Lighthouse, and do not deploy. |
 | **Node** | `>=22.12.0` (CI uses Node 24; see `package.json` and workflow). |
 | **Build** | `npm run build` runs TypeScript, Vite build, static route generation, and **Puppeteer prerender** for HTML snapshots (important for crawlers and first paint). |
 | **SEO strategy** | [`docs/seo-strategy.md`](./docs/seo-strategy.md) — goals, keyword map, technical checklist, content plan, 90-day roadmap. Tick items off there as they ship; change decisions there first. |
@@ -132,6 +132,7 @@ npm run lint         # ESLint
 npm run build        # full production build + static routes + prerender
 npm run build:only   # tsc + vite only (no prerender) — faster debug
 npm run preview      # serve dist locally
+npm run lighthouse   # after a production build: mobile + desktop budgets for / and /nl/
 ```
 
 Deploy: merging to `main` triggers GitHub Actions; no separate `npm run deploy` needed for Pages if that workflow is enabled.
@@ -174,7 +175,7 @@ Any single change that spans areas should list touched files in the PR or automa
 | `scripts/generate-routes-manifest.js` | Builds `.routes-manifest.json` + `dist/sitemap.xml` from the manifest |
 | `scripts/generate-static-routes.js` | Static HTML shells for GitHub Pages |
 | `scripts/prerender-static-html.js` | Static HTML generation |
-| `.github/workflows/deploy.yml` | CI build and GitHub Pages deploy |
+| `.github/workflows/deploy.yml` | CI build, Lighthouse budgets, and GitHub Pages deploy |
 | `scripts/seo-agent/` | Weekly SEO agent (collect, snapshot, evaluate, verify, Claude prompt) |
 
 ---

@@ -17,6 +17,8 @@ dist-ssr
 
 # Lighthouse reports
 *.report.html
+.lighthouseci
+lighthouse-reports
 
 # Editor directories and files
 .vscode/*
