@@ -55,7 +55,7 @@ jobs:
       - name: Lighthouse
         timeout-minutes: 15
         run: |
-          export CHROME_PATH="$(node --input-type=module -e "import puppeteer from 'puppeteer'; process.stdout.write(puppeteer.executablePath())")"
+          export CHROME_PATH="$(node --input-type=module -e "import puppeteer from 'puppeteer'; process.stdout.write(await puppeteer.executablePath())")"
           test -x "$CHROME_PATH"
           echo "Chrome: $CHROME_PATH"
           npm run lighthouse
