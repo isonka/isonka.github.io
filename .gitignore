@@ -15,10 +15,9 @@ dist-ssr
 # Build artefact generated from site/routes.ts
 .routes-manifest.json
 
-# Lighthouse reports
+# Lighthouse results
 *.report.html
 .lighthouseci
-lighthouse-reports
 
 # Editor directories and files
 .vscode/*
