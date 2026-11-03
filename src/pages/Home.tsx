@@ -39,7 +39,7 @@ const WORKOUT_COPY = {
 
 const heroImages = [
   {
-    src: '/assets/images/studio.webp',
+    src: '/assets/images/studio-800.webp',
     srcSet:
       '/assets/images/studio-800.webp 800w, /assets/images/studio-1200.webp 1200w, /assets/images/studio.webp 1600w',
     width: 1600,
@@ -148,15 +148,16 @@ export const Home= () => {
 
   useEffect(() => {
     if (isPrerender()) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const enable = () => setSecondHeroReady(true);
-    const ric = window.requestIdleCallback?.bind(window);
-    if (ric) {
-      const id = ric(enable, { timeout: 4000 });
-      return () => window.cancelIdleCallback?.(id);
-    }
-    const timer = window.setTimeout(enable, 2500);
-    return () => window.clearTimeout(timer);
+    const events = ['pointerdown', 'keydown'] as const;
+    events.forEach((event) =>
+      window.addEventListener(event, enable, { once: true, passive: true }),
+    );
+    return () => {
+      events.forEach((event) => window.removeEventListener(event, enable));
+    };
   }, []);
 
   useEffect(() => {
@@ -205,7 +206,7 @@ export const Home= () => {
               height={image.height}
               fetchPriority={index === 0 ? 'high' : 'low'}
               loading={index === 0 ? 'eager' : 'lazy'}
-              decoding="async"
+              decoding={index === 0 ? 'sync' : 'async'}
             />
           );
         })}
