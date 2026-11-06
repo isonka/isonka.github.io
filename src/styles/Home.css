@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+.home-works,
+.home-team,
+.home-reviews,
+.home-faq,
+.home-contact {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
+}
+
 .home-kicker {
   margin: 0 0 20px;
   display: inline-block;

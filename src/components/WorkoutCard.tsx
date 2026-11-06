@@ -54,7 +54,7 @@ export const WorkoutCard: FC<WorkoutCardProps> = ({ workout }) => {
           <div className="workout-card-media">
             <div className="workout-card-media-inner" ref={mediaInnerRef}>
               <img
-                src={workout.src}
+                src={inView ? workout.src : undefined}
                 alt={workout.alt}
                 width="720"
                 height="720"

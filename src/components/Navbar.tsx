@@ -87,6 +87,7 @@ export const Navbar= () => {
               height={56}
               loading="eager"
               decoding="async"
+              fetchPriority="low"
             />
           </Link>
         </div>

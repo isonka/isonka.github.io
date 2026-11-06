@@ -98,7 +98,7 @@ function TrainerTile({
       </span>
       <div className="home-person-media">
         <img
-          src={trainer.src}
+          src={inView ? trainer.src : undefined}
           alt={t(`trainers.${trainer.id}.alt`)}
           loading="lazy"
           decoding="async"
@@ -117,6 +117,7 @@ export const Home= () => {
   const locale = useLocale();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [secondHeroReady, setSecondHeroReady] = useState(false);
+  const aboutImage = useInViewOnce<HTMLDivElement>();
   const canonical = locale === 'nl' ? 'https://www.pt7.nl/nl/' : 'https://www.pt7.nl/';
   const academyHref = locale === 'nl' ? '/academy/nl/' : '/academy/';
   const pricingHref = locale === 'nl' ? '/pricing/nl/' : '/pricing/';
@@ -207,6 +208,7 @@ export const Home= () => {
               fetchPriority={index === 0 ? 'high' : 'low'}
               loading={index === 0 ? 'eager' : 'lazy'}
               decoding={index === 0 ? 'sync' : 'async'}
+              style={index === 0 ? { opacity: 1 } : undefined}
             />
           );
         })}
@@ -268,9 +270,9 @@ export const Home= () => {
               {t('about.signatureRole')}
             </p>
           </div>
-          <div className="home-bleed-frame">
+          <div className="home-bleed-frame" ref={aboutImage.ref}>
             <img
-              src="/assets/images/about-us-web.webp"
+              src={aboutImage.inView ? '/assets/images/about-us-web.webp' : undefined}
               alt={t('about.imageAlt')}
               width="1200"
               height="750"

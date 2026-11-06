@@ -160,6 +160,26 @@ const FORBIDDEN_SNIPPETS = [
   { needle: 'Unexpected Application Error', reason: 'router error boundary' },
 ];
 
+function pinSmallestSrcsetCandidate(html) {
+  return html.replace(/<img\b[^>]*>/gi, (tag) => {
+    const srcsetMatch = tag.match(/\ssrcset="([^"]*)"/i);
+    const srcMatch = tag.match(/\ssrc="([^"]*)"/i);
+    if (!srcsetMatch || !srcMatch) return tag;
+
+    const smallest = srcsetMatch[1]
+      .split(',')
+      .map((part) => {
+        const [url, descriptor] = part.trim().split(/\s+/);
+        const width = descriptor?.endsWith('w') ? Number.parseInt(descriptor, 10) : Number.POSITIVE_INFINITY;
+        return { url, width };
+      })
+      .sort((a, b) => a.width - b.width)[0];
+
+    if (!smallest?.url || smallest.url === srcMatch[1]) return tag;
+    return tag.replace(srcMatch[0], ` src="${smallest.url}"`);
+  });
+}
+
 function findSnapshotProblems(html) {
   const problems = [];
 
@@ -311,7 +331,7 @@ async function prerenderRoutes() {
           }
         });
 
-        const html = await page.content();
+        const html = pinSmallestSrcsetCandidate(await page.content());
 
         const problems = findSnapshotProblems(html);
         if (problems.length > 0) {
