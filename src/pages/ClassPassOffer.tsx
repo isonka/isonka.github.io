@@ -1,9 +1,11 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Trans, useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
+import { trackPageView } from '../utils/gtmTracking';
 import '../styles/ClassPassOffer.css';
 
 const FAQ_KEYS = ['occasional', 'commit', 'claim', 'experience'] as const;
@@ -14,6 +16,10 @@ export const ClassPassOffer = () => {
   const { t } = useTranslation('classpass');
   const page = useLocalizedPage('/classpass-offer/');
   const { href } = page;
+
+  useEffect(() => {
+    trackPageView(page.path, t('seo.title'));
+  }, [page.path, t]);
 
   const classPassFaqs = FAQ_KEYS.map((key) => ({
     question: t(`faq.${key}.q`),

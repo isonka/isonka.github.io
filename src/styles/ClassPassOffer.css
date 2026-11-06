@@ -40,7 +40,7 @@
 
 .cp-hero h1 {
   font-size: clamp(2.2rem, 5vw, 3.4rem);
-  font-weight: 600;
+  font-weight: 700;
   margin: 0 0 16px;
   line-height: 1.08;
   letter-spacing: -0.03em;
@@ -61,7 +61,7 @@
   color: #fff;
   padding: 16px 40px;
   border-radius: var(--radius-pill);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1rem;
   text-decoration: none;
   transition: background 0.2s ease;
@@ -232,7 +232,7 @@
   padding: 0;
   border-radius: 0;
   border: none;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.92rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;

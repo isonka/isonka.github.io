@@ -1,52 +1,62 @@
-import { useEffect, useState, lazy, Suspense } from 'react';
+import { useEffect, useState, lazy, Suspense, type ComponentType } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
-  createBrowserRouter,
-  RouterProvider,
+  BrowserRouter,
   Navigate,
   Outlet,
+  Route,
+  Routes,
   useNavigate,
   useLocation,
 } from 'react-router-dom';
+import { AnalyticsClicks } from './components/AnalyticsClicks';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
 import { CookieConsent } from './components/CookieConsent';
 import { StructuredData } from './components/StructuredData';
 import { LocaleSync } from './i18n/LocaleSync';
+import { loadNamespaces, type PageNamespace } from './i18n/config';
 import { withTrailingSlash, safeInternalRedirect } from './utils/urls';
 import { isPrerender } from './utils/prerender';
 import { Home } from './pages/Home';
 import './App.css';
 import './styles/design.css';
 
-const Chatbot = lazy(() => import('./components/Chatbot').then(m => ({ default: m.Chatbot })));
-const Pricing = lazy(() => import('./pages/Pricing').then(m => ({ default: m.Pricing })));
-const IntroOffer = lazy(() => import('./pages/IntroOffer').then(m => ({ default: m.IntroOffer })));
-const OpeningOffer = lazy(() => import('./pages/OpeningOffer').then(m => ({ default: m.OpeningOffer })));
-const Schedule = lazy(() => import('./pages/Schedule').then(m => ({ default: m.Schedule })));
-const Equipment = lazy(() => import('./pages/Equipment').then(m => ({ default: m.Equipment })));
-const EquipmentDetail = lazy(() => import('./pages/EquipmentDetail').then(m => ({ default: m.EquipmentDetail })));
-const Congrats = lazy(() => import('./pages/Congrats').then(m => ({ default: m.Congrats })));
-const Trainers = lazy(() => import('./pages/Trainers').then(m => ({ default: m.Trainers })));
-const TrainerDetail = lazy(() => import('./pages/TrainerDetail').then(m => ({ default: m.TrainerDetail })));
-const Academy = lazy(() => import('./pages/Academy').then(m => ({ default: m.Academy })));
-const AcademyPractice = lazy(() => import('./pages/AcademyPractice').then(m => ({ default: m.AcademyPractice })));
-const Blog = lazy(() => import('./pages/Blog').then(m => ({ default: m.Blog })));
-const BlogPost = lazy(() => import('./pages/BlogPost').then(m => ({ default: m.BlogPost })));
-const WorkoutDetail = lazy(() => import('./pages/WorkoutDetail').then(m => ({ default: m.WorkoutDetail })));
-const ClassPassOffer = lazy(() => import('./pages/ClassPassOffer').then(m => ({ default: m.ClassPassOffer })));
-const HealthcareProviders = lazy(() => import('./pages/HealthcareProviders').then(m => ({ default: m.HealthcareProviders })));
-const Corporate = lazy(() => import('./pages/Corporate').then(m => ({ default: m.Corporate })));
-const PregnancyPilates = lazy(() => import('./pages/PregnancyPilates').then(m => ({ default: m.PregnancyPilates })));
-const PrenatalPilatesAmsterdam = lazy(() => import('./pages/PrenatalPilatesAmsterdam').then(m => ({ default: m.PrenatalPilatesAmsterdam })));
-const PrivatePilates = lazy(() => import('./pages/PrivatePilates').then(m => ({ default: m.PrivatePilates })));
-const TRXTrainingAmsterdam = lazy(() => import('./pages/TRXTrainingAmsterdam').then(m => ({ default: m.TRXTrainingAmsterdam })));
-const StrengthTrainingAmsterdam = lazy(() => import('./pages/StrengthTrainingAmsterdam').then(m => ({ default: m.StrengthTrainingAmsterdam })));
-const ReformerPilatesAmsterdam = lazy(() => import('./pages/ReformerPilatesAmsterdam').then(m => ({ default: m.ReformerPilatesAmsterdam })));
-const Privacy = lazy(() => import('./pages/Privacy').then(m => ({ default: m.Privacy })));
-const Screen = lazy(() => import('./pages/Screen').then(m => ({ default: m.Screen })));
-const NotFound = lazy(() => import('./pages/NotFound').then(m => ({ default: m.NotFound })));
+function lazyPage(
+  load: () => Promise<{ default: ComponentType }>,
+  namespaces: readonly PageNamespace[] = [],
+) {
+  return lazy(() => Promise.all([load(), loadNamespaces(namespaces)]).then(([page]) => page));
+}
+
+const Chatbot = lazyPage(() => import('./components/Chatbot').then(m => ({ default: m.Chatbot })));
+const Pricing = lazyPage(() => import('./pages/Pricing').then(m => ({ default: m.Pricing })), ['pricing']);
+const IntroOffer = lazyPage(() => import('./pages/IntroOffer').then(m => ({ default: m.IntroOffer })), ['intro']);
+const OpeningOffer = lazyPage(() => import('./pages/OpeningOffer').then(m => ({ default: m.OpeningOffer })), ['openingOffer']);
+const Schedule = lazyPage(() => import('./pages/Schedule').then(m => ({ default: m.Schedule })), ['schedule']);
+const Equipment = lazyPage(() => import('./pages/Equipment').then(m => ({ default: m.Equipment })), ['equipment']);
+const EquipmentDetail = lazyPage(() => import('./pages/EquipmentDetail').then(m => ({ default: m.EquipmentDetail })), ['equipment', 'notFound']);
+const Congrats = lazyPage(() => import('./pages/Congrats').then(m => ({ default: m.Congrats })), ['congrats']);
+const Trainers = lazyPage(() => import('./pages/Trainers').then(m => ({ default: m.Trainers })), ['instructors']);
+const TrainerDetail = lazyPage(() => import('./pages/TrainerDetail').then(m => ({ default: m.TrainerDetail })), ['instructors', 'notFound']);
+const Academy = lazyPage(() => import('./pages/Academy').then(m => ({ default: m.Academy })), ['academy']);
+const AcademyPractice = lazyPage(() => import('./pages/AcademyPractice').then(m => ({ default: m.AcademyPractice })));
+const Blog = lazyPage(() => import('./pages/Blog').then(m => ({ default: m.Blog })), ['blog']);
+const BlogPost = lazyPage(() => import('./pages/BlogPost').then(m => ({ default: m.BlogPost })), ['blog', 'notFound']);
+const WorkoutDetail = lazyPage(() => import('./pages/WorkoutDetail').then(m => ({ default: m.WorkoutDetail })), ['workout', 'notFound']);
+const ClassPassOffer = lazyPage(() => import('./pages/ClassPassOffer').then(m => ({ default: m.ClassPassOffer })), ['classpass']);
+const HealthcareProviders = lazyPage(() => import('./pages/HealthcareProviders').then(m => ({ default: m.HealthcareProviders })), ['healthcare']);
+const Corporate = lazyPage(() => import('./pages/Corporate').then(m => ({ default: m.Corporate })), ['corporate']);
+const PregnancyPilates = lazyPage(() => import('./pages/PregnancyPilates').then(m => ({ default: m.PregnancyPilates })));
+const PrenatalPilatesAmsterdam = lazyPage(() => import('./pages/PrenatalPilatesAmsterdam').then(m => ({ default: m.PrenatalPilatesAmsterdam })), ['prenatal']);
+const PrivatePilates = lazyPage(() => import('./pages/PrivatePilates').then(m => ({ default: m.PrivatePilates })), ['privatePilates']);
+const TRXTrainingAmsterdam = lazyPage(() => import('./pages/TRXTrainingAmsterdam').then(m => ({ default: m.TRXTrainingAmsterdam })), ['trx']);
+const StrengthTrainingAmsterdam = lazyPage(() => import('./pages/StrengthTrainingAmsterdam').then(m => ({ default: m.StrengthTrainingAmsterdam })), ['strength']);
+const ReformerPilatesAmsterdam = lazyPage(() => import('./pages/ReformerPilatesAmsterdam').then(m => ({ default: m.ReformerPilatesAmsterdam })), ['reformer']);
+const Privacy = lazyPage(() => import('./pages/Privacy').then(m => ({ default: m.Privacy })), ['privacy']);
+const Screen = lazyPage(() => import('./pages/Screen').then(m => ({ default: m.Screen })));
+const NotFound = lazyPage(() => import('./pages/NotFound').then(m => ({ default: m.NotFound })), ['notFound']);
 
 function TrailingSlashNormalizer() {
   const location = useLocation();
@@ -80,8 +90,6 @@ function RedirectHandler() {
   return null;
 }
 
-const CHATBOT_DEFER_MS = 4000;
-
 function DeferredChatbot() {
   const [shouldLoad, setShouldLoad] = useState(false);
 
@@ -94,20 +102,8 @@ function DeferredChatbot() {
       window.addEventListener(event, load, { once: true, passive: true }),
     );
 
-    const w = window as Window & {
-      requestIdleCallback?: (cb: IdleRequestCallback, options?: IdleRequestOptions) => number;
-      cancelIdleCallback?: (handle: number) => void;
-    };
-    const idleId = w.requestIdleCallback?.(load, { timeout: CHATBOT_DEFER_MS });
-    const timeoutId =
-      typeof w.requestIdleCallback === 'function'
-        ? undefined
-        : window.setTimeout(load, CHATBOT_DEFER_MS);
-
     return () => {
       events.forEach((event) => window.removeEventListener(event, load));
-      if (idleId !== undefined) w.cancelIdleCallback?.(idleId);
-      if (timeoutId !== undefined) window.clearTimeout(timeoutId);
     };
   }, [shouldLoad]);
 
@@ -145,6 +141,7 @@ function Layout() {
     <>
       {!kiosk && <StructuredData type="Organization" />}
       {!kiosk && <CookieConsent />}
+      {!kiosk && <AnalyticsClicks />}
       <ScrollToTop />
       <TrailingSlashNormalizer />
       <RedirectHandler />
@@ -167,74 +164,69 @@ function Layout() {
   );
 }
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Layout />,
-    children: [
-      { index: true, element: <Home /> },
-      { path: 'nl', element: <Home /> },
-      { path: 'pricing', element: <Pricing /> },
-      { path: 'pricing/nl', element: <Pricing /> },
-      { path: 'intro', element: <IntroOffer /> },
-      { path: 'intro/nl', element: <IntroOffer /> },
-      { path: 'opening-offer', element: <OpeningOffer /> },
-      { path: 'opening-offer/nl', element: <OpeningOffer /> },
-      { path: 'schedule', element: <Schedule /> },
-      { path: 'schedule/nl', element: <Schedule /> },
-      { path: 'equipment', element: <Equipment /> },
-      { path: 'equipment/nl', element: <Equipment /> },
-      { path: 'equipment/:slug', element: <EquipmentDetail /> },
-      { path: 'equipment/:slug/nl', element: <EquipmentDetail /> },
-      { path: 'workouts/:slug', element: <WorkoutDetail /> },
-      { path: 'workouts/:slug/nl', element: <WorkoutDetail /> },
-      { path: 'congrats', element: <Congrats /> },
-      { path: 'congrats/nl', element: <Congrats /> },
-      { path: 'screen', element: <Screen /> },
-      { path: 'index.html', element: <Navigate to="/" replace /> },
-      { path: 'congrats.html', element: <Navigate to="/congrats/" replace /> },
-      { path: 'instructors', element: <Trainers /> },
-      { path: 'instructors/nl', element: <Trainers /> },
-      { path: 'trainer/:slug', element: <TrainerDetail /> },
-      { path: 'trainer/:slug/nl', element: <TrainerDetail /> },
-      { path: 'academy/practice', element: <AcademyPractice /> },
-      { path: 'academy/practice/nl', element: <AcademyPractice /> },
-      { path: 'academy', element: <Academy /> },
-      { path: 'academy/nl', element: <Academy /> },
-      {
-        path: 'pilates-instructor-course-amsterdam',
-        element: <Navigate to="/academy/" replace />,
-      },
-      { path: 'blog', element: <Blog /> },
-      { path: 'blog/nl', element: <Blog /> },
-      { path: 'blog/:slug', element: <BlogPost /> },
-      { path: 'blog/:slug/nl', element: <BlogPost /> },
-      { path: 'classpass-offer', element: <ClassPassOffer /> },
-      { path: 'classpass-offer/nl', element: <ClassPassOffer /> },
-      { path: 'healthcare-providers', element: <HealthcareProviders /> },
-      { path: 'healthcare-providers/nl', element: <HealthcareProviders /> },
-      { path: 'corporate', element: <Corporate /> },
-      { path: 'corporate/nl', element: <Corporate /> },
-      { path: 'prenatal-pilates-amsterdam', element: <PrenatalPilatesAmsterdam /> },
-      { path: 'prenatal-pilates-amsterdam/nl', element: <PrenatalPilatesAmsterdam /> },
-      { path: 'pregnancy-pilates-amsterdam', element: <PregnancyPilates /> },
-      { path: 'private-pilates-amsterdam', element: <PrivatePilates /> },
-      { path: 'private-pilates-amsterdam/nl', element: <PrivatePilates /> },
-      { path: 'trx-training-amsterdam', element: <TRXTrainingAmsterdam /> },
-      { path: 'trx-training-amsterdam/nl', element: <TRXTrainingAmsterdam /> },
-      { path: 'strength-training-amsterdam', element: <StrengthTrainingAmsterdam /> },
-      { path: 'strength-training-amsterdam/nl', element: <StrengthTrainingAmsterdam /> },
-      { path: 'reformer-pilates-amsterdam', element: <ReformerPilatesAmsterdam /> },
-      { path: 'reformer-pilates-amsterdam/nl', element: <ReformerPilatesAmsterdam /> },
-      { path: 'privacy', element: <Privacy /> },
-      { path: 'privacy/nl', element: <Privacy /> },
-      { path: '*', element: <NotFound /> },
-    ],
-  },
-]);
-
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="nl" element={<Home />} />
+          <Route path="pricing" element={<Pricing />} />
+          <Route path="pricing/nl" element={<Pricing />} />
+          <Route path="intro" element={<IntroOffer />} />
+          <Route path="intro/nl" element={<IntroOffer />} />
+          <Route path="opening-offer" element={<OpeningOffer />} />
+          <Route path="opening-offer/nl" element={<OpeningOffer />} />
+          <Route path="schedule" element={<Schedule />} />
+          <Route path="schedule/nl" element={<Schedule />} />
+          <Route path="equipment" element={<Equipment />} />
+          <Route path="equipment/nl" element={<Equipment />} />
+          <Route path="equipment/:slug" element={<EquipmentDetail />} />
+          <Route path="equipment/:slug/nl" element={<EquipmentDetail />} />
+          <Route path="workouts/:slug" element={<WorkoutDetail />} />
+          <Route path="workouts/:slug/nl" element={<WorkoutDetail />} />
+          <Route path="congrats" element={<Congrats />} />
+          <Route path="congrats/nl" element={<Congrats />} />
+          <Route path="screen" element={<Screen />} />
+          <Route path="index.html" element={<Navigate to="/" replace />} />
+          <Route path="congrats.html" element={<Navigate to="/congrats/" replace />} />
+          <Route path="instructors" element={<Trainers />} />
+          <Route path="instructors/nl" element={<Trainers />} />
+          <Route path="trainer/:slug" element={<TrainerDetail />} />
+          <Route path="trainer/:slug/nl" element={<TrainerDetail />} />
+          <Route path="academy/practice" element={<AcademyPractice />} />
+          <Route path="academy/practice/nl" element={<AcademyPractice />} />
+          <Route path="academy" element={<Academy />} />
+          <Route path="academy/nl" element={<Academy />} />
+          <Route path="pilates-instructor-course-amsterdam" element={<Navigate to="/academy/" replace />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="blog/nl" element={<Blog />} />
+          <Route path="blog/:slug" element={<BlogPost />} />
+          <Route path="blog/:slug/nl" element={<BlogPost />} />
+          <Route path="classpass-offer" element={<ClassPassOffer />} />
+          <Route path="classpass-offer/nl" element={<ClassPassOffer />} />
+          <Route path="healthcare-providers" element={<HealthcareProviders />} />
+          <Route path="healthcare-providers/nl" element={<HealthcareProviders />} />
+          <Route path="corporate" element={<Corporate />} />
+          <Route path="corporate/nl" element={<Corporate />} />
+          <Route path="prenatal-pilates-amsterdam" element={<PrenatalPilatesAmsterdam />} />
+          <Route path="prenatal-pilates-amsterdam/nl" element={<PrenatalPilatesAmsterdam />} />
+          <Route path="pregnancy-pilates-amsterdam" element={<PregnancyPilates />} />
+          <Route path="private-pilates-amsterdam" element={<PrivatePilates />} />
+          <Route path="private-pilates-amsterdam/nl" element={<PrivatePilates />} />
+          <Route path="trx-training-amsterdam" element={<TRXTrainingAmsterdam />} />
+          <Route path="trx-training-amsterdam/nl" element={<TRXTrainingAmsterdam />} />
+          <Route path="strength-training-amsterdam" element={<StrengthTrainingAmsterdam />} />
+          <Route path="strength-training-amsterdam/nl" element={<StrengthTrainingAmsterdam />} />
+          <Route path="reformer-pilates-amsterdam" element={<ReformerPilatesAmsterdam />} />
+          <Route path="reformer-pilates-amsterdam/nl" element={<ReformerPilatesAmsterdam />} />
+          <Route path="privacy" element={<Privacy />} />
+          <Route path="privacy/nl" element={<Privacy />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;

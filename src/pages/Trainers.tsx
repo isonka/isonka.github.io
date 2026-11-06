@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
@@ -8,6 +9,7 @@ import { BASE_URL } from '../data/business';
 import { trainersFor } from '../data/localized';
 import type { TrainerProfile } from '../data/trainers';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
+import { trackPageView } from '../utils/gtmTracking';
 import { useInViewOnce } from '../hooks/useInViewOnce';
 import '../styles/Trainers.css';
 
@@ -72,6 +74,10 @@ export const Trainers= () => {
   const trainerProfiles = trainersFor(page.locale);
   const availableInstructors = trainerProfiles.filter(p => p.available);
   const hasComingSoon = trainerProfiles.some(p => !p.available);
+
+  useEffect(() => {
+    trackPageView(page.path, t('seo.title'));
+  }, [page.path, t]);
 
   return (
     <>

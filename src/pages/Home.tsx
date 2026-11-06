@@ -207,7 +207,7 @@ export const Home= () => {
               height={image.height}
               fetchPriority={index === 0 ? 'high' : 'low'}
               loading={index === 0 ? 'eager' : 'lazy'}
-              decoding={index === 0 ? 'sync' : 'async'}
+              decoding="async"
               style={index === 0 ? { opacity: 1 } : undefined}
             />
           );
@@ -364,13 +364,13 @@ export const Home= () => {
           <div className="home-contact-grid">
             <ContactMap />
             <div className="home-contact-actions">
-              <a href="tel:+31685162693" className="home-btn home-btn-light" onClick={() => { trackPhoneClick(); trackFBPhoneClick(); }}>
+              <a href="tel:+31685162693" data-analytics="skip" className="home-btn home-btn-light" onClick={() => { trackPhoneClick(); trackFBPhoneClick(); }}>
                 +31 685 162693
               </a>
-              <a href="https://wa.me/31685162693" target="_blank" rel="noopener noreferrer" className="home-btn home-btn-ghost" onClick={() => { trackSocialClick('whatsapp'); trackFBWhatsAppClick(); }}>
+              <a href="https://wa.me/31685162693" data-analytics="skip" target="_blank" rel="noopener noreferrer" className="home-btn home-btn-ghost" onClick={() => { trackSocialClick('whatsapp'); trackFBWhatsAppClick(); }}>
                 WhatsApp
               </a>
-              <a href="mailto:info@pt7.nl" className="home-btn home-btn-ghost" onClick={() => { trackEmailClick(); trackFBEmailClick(); }}>
+              <a href="mailto:info@pt7.nl" data-analytics="skip" className="home-btn home-btn-ghost" onClick={() => { trackEmailClick(); trackFBEmailClick(); }}>
                 {t('contact.emailUs')}
               </a>
               <div className="home-contact-socials">

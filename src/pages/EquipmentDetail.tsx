@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
@@ -10,6 +10,7 @@ import { BASE_URL, studioStreet } from '../data/business';
 import { formatEquipmentPrice } from '../data/equipment';
 import { equipmentFor } from '../data/localized';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
+import { trackEquipmentView, trackPageView } from '../utils/gtmTracking';
 import { NotFound } from './NotFound';
 import '../styles/EquipmentProduct.css';
 
@@ -37,6 +38,12 @@ export const EquipmentDetail= () => {
   const [activeImage, setActiveImage] = useState(0);
 
   const product = equipmentFor(page.locale).find((p) => p.slug === slug);
+
+  useEffect(() => {
+    if (!product) return;
+    trackPageView(page.path, `${product.name} | PT7 Pilates`);
+    trackEquipmentView(product.slug);
+  }, [page.path, product]);
 
   if (!product) {
     return <NotFound />;

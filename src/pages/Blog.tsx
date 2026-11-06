@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
@@ -6,6 +7,7 @@ import { BASE_URL } from '../data/business';
 import { blogPostsFor } from '../data/blog';
 import { dateLocale } from '../i18n/locale';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
+import { trackPageView } from '../utils/gtmTracking';
 import '../styles/Blog.css';
 
 export const Blog= () => {
@@ -13,6 +15,10 @@ export const Blog= () => {
   const page = useLocalizedPage('/blog/');
   const { href } = page;
   const blogPosts = blogPostsFor(page.locale);
+
+  useEffect(() => {
+    trackPageView(page.path, t('seo.title'));
+  }, [page.path, t]);
 
   return (
     <>

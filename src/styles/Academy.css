@@ -15,7 +15,7 @@
   margin: 0 0 20px;
   display: inline-block;
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: none;
   line-height: 1.2;
@@ -49,7 +49,7 @@
 .course-card-title {
   margin: 0 0 12px;
   font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.15;
   color: #111;
@@ -158,7 +158,7 @@
 
 .academy-offer-label {
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: none;
   color: #888;
@@ -166,7 +166,7 @@
 
 .academy-offer-value {
   font-size: 1.05rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #111;
   line-height: 1.35;
 }
@@ -227,7 +227,7 @@
   font-size: 1.15rem;
   line-height: 1.45;
   color: #111;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .academy-proof-meta {
@@ -239,7 +239,7 @@
 
 .academy-proof-meta a {
   color: #111;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -311,7 +311,7 @@
   color: #111;
   text-align: left;
   letter-spacing: -0.03em;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .academy-audience > p {
@@ -370,7 +370,7 @@
 .benefit-card h3,
 .academy-editorial-list h3 {
   font-size: 1.05rem;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0 0 8px;
   color: #111;
   letter-spacing: -0.01em;
@@ -409,7 +409,7 @@
   border: 1px solid #111;
   border-radius: var(--radius-pill);
   font-size: 0.92rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease;
   color: #111;
@@ -527,7 +527,7 @@
 
 .academy-course-section h3 {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.02em;
   color: #111;
   margin: 0 0 12px;
@@ -535,7 +535,7 @@
 
 .academy-course-section h4 {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #111;
   margin: 20px 0 12px;
 }
@@ -611,7 +611,7 @@
   gap: 10px;
   margin: 28px 0 0;
   font-size: 1.05rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #111;
 }
 
@@ -637,7 +637,7 @@
   content: '+';
   display: inline-block;
   margin-right: 8px;
-  font-weight: 600;
+  font-weight: 700;
   color: #888;
 }
 
@@ -680,7 +680,7 @@
 .term-schedule-dates,
 .hours-breakdown-hours {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #111;
 }
 
@@ -727,7 +727,7 @@
 
 .price-option-label {
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: none;
   letter-spacing: 0.04em;
   color: #888;
@@ -735,7 +735,7 @@
 
 .price-option-amount {
   font-size: 1.75rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #111;
   letter-spacing: -0.02em;
 }
@@ -760,7 +760,7 @@
   font-size: 1.05rem;
   color: #111;
   margin: 0 0 8px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .payment-info > p {
@@ -796,12 +796,12 @@
   color: #888;
   text-transform: none;
   letter-spacing: 0.04em;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .payment-step-amount {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #111;
 }
 
@@ -836,7 +836,7 @@
   font-size: 1.35rem;
   color: #111;
   margin: 0 0 12px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .academy-assessment-pay p {
@@ -846,7 +846,7 @@
 }
 
 .academy-assessment-pay p.academy-assessment-pay-note {
-  font-weight: 600;
+  font-weight: 700;
   color: #111;
 }
 
@@ -1104,7 +1104,7 @@ button.cta-btn {
   margin-bottom: 12px;
   color: #fff;
   letter-spacing: -0.03em;
-  font-weight: 600;
+  font-weight: 700;
   text-align: left;
 }
 

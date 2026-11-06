@@ -96,6 +96,7 @@ export const Navbar= () => {
           to={scheduleHref}
           className="navbar-booknow-mobile"
           aria-label={t('nav.bookNowAria')}
+          data-analytics="skip"
           onClick={() => trackBookNowClick('navbar-mobile')}
         >
           {t('nav.bookNow')}
@@ -112,8 +113,8 @@ export const Navbar= () => {
         </button>
 
         <ul className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
-          <li><a href="#about" aria-label={t('nav.aboutAria')} onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>{t('nav.about')}</a></li>
-          <li><a href="#reviews" aria-label={t('nav.reviewsAria')} onClick={(e) => { e.preventDefault(); scrollToSection('reviews'); }}>{t('nav.reviews')}</a></li>
+          <li><a href="#about" data-analytics="skip" aria-label={t('nav.aboutAria')} onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>{t('nav.about')}</a></li>
+          <li><a href="#reviews" data-analytics="skip" aria-label={t('nav.reviewsAria')} onClick={(e) => { e.preventDefault(); scrollToSection('reviews'); }}>{t('nav.reviews')}</a></li>
           <li><Link to={localeHref('/instructors/', locale)} aria-label={t('nav.instructorsAria')} onClick={closeMenu}>{t('nav.instructors')}</Link></li>
           <li><Link to={localeHref('/reformer-pilates-amsterdam/', locale)} aria-label={t('nav.classesAria')} onClick={closeMenu}>{t('nav.classes')}</Link></li>
           <li><Link to={pricingHref} aria-label={t('nav.pricesAria')} onClick={closeMenu}>{t('nav.prices')}</Link></li>
@@ -145,11 +146,11 @@ export const Navbar= () => {
               {t('nav.more')}
             </button>
             <ul className={`navbar-dropdown-menu ${openDropdown === 'more' ? 'open' : ''}`}>
-              <li><a href="#workouts" onClick={(e) => { e.preventDefault(); closeMenu(); scrollToSection('workouts'); }}>{t('nav.workouts')}</a></li>
+              <li><a href="#workouts" data-analytics="skip" onClick={(e) => { e.preventDefault(); closeMenu(); scrollToSection('workouts'); }}>{t('nav.workouts')}</a></li>
               <li><Link to={localeHref('/blog/', locale)} onClick={closeMenu}>{t('nav.blog')}</Link></li>
             </ul>
           </li>
-          <li><a href="#contact" aria-label={t('nav.contactAria')} onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>{t('nav.contact')}</a></li>
+          <li><a href="#contact" data-analytics="skip" aria-label={t('nav.contactAria')} onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>{t('nav.contact')}</a></li>
           <li
             className="navbar-login"
             onPointerEnter={loadLoginWidget}
@@ -163,7 +164,7 @@ export const Navbar= () => {
             />
           </li>
           <li className="navbar-booknow-desktop-wrapper">
-            <Link to={scheduleHref} className="navbar-booknow-desktop" aria-label={t('nav.bookClassAria')} onClick={() => { closeMenu(); trackBookNowClick('navbar-desktop'); }}>
+            <Link to={scheduleHref} className="navbar-booknow-desktop" data-analytics="skip" aria-label={t('nav.bookClassAria')} onClick={() => { closeMenu(); trackBookNowClick('navbar-desktop'); }}>
               {t('nav.bookNow')}
             </Link>
           </li>

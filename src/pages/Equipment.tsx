@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
@@ -7,6 +8,7 @@ import { formatEquipmentPrice } from '../data/equipment';
 import { equipmentFor } from '../data/localized';
 import { homePath } from '../i18n/locale';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
+import { trackPageView } from '../utils/gtmTracking';
 import '../styles/Equipment.css';
 
 const CARD_COPY = {
@@ -23,6 +25,10 @@ export const Equipment= () => {
   const { href, isNl } = page;
   const navigate = useNavigate();
   const equipmentProducts = equipmentFor(page.locale);
+
+  useEffect(() => {
+    trackPageView(page.path, t('seo.title'));
+  }, [page.path, t]);
 
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();

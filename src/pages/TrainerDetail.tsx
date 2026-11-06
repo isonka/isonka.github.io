@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
@@ -7,6 +8,7 @@ import { Reveal } from '../components/Reveal';
 import { PHOTO_FOCUS } from '../data/photoFocus';
 import { trainersFor } from '../data/localized';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
+import { trackPageView } from '../utils/gtmTracking';
 import { NotFound } from './NotFound';
 import '../styles/Trainer.css';
 
@@ -37,6 +39,11 @@ export const TrainerDetail= () => {
   const page = useLocalizedPage(`/trainer/${slug}/`);
   const { href } = page;
   const trainer = trainersFor(page.locale).find(p => p.slug === slug);
+
+  useEffect(() => {
+    if (!trainer) return;
+    trackPageView(page.path, trainer.seo.title);
+  }, [page.path, trainer]);
 
   if (!trainer) {
     return <NotFound />;

@@ -2,50 +2,108 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import { studioAddressLine, studioStreet } from '../data/business';
 import { localeFromPath } from './locale';
-import { enAcademy } from './locales/en/academy';
-import { enBlog } from './locales/en/blog';
-import { enClasspass } from './locales/en/classpass';
 import { enCommon } from './locales/en/common';
-import { enCongrats } from './locales/en/congrats';
-import { enCorporate } from './locales/en/corporate';
-import { enEquipment } from './locales/en/equipment';
-import { enHealthcare } from './locales/en/healthcare';
 import { enHome } from './locales/en/home';
-import { enInstructors } from './locales/en/instructors';
-import { enIntro } from './locales/en/intro';
-import { enNotFound } from './locales/en/notFound';
-import { enOpeningOffer } from './locales/en/openingOffer';
-import { enPrenatal } from './locales/en/prenatal';
-import { enPricing } from './locales/en/pricing';
-import { enPrivacy } from './locales/en/privacy';
-import { enPrivatePilates } from './locales/en/privatePilates';
-import { enReformer } from './locales/en/reformer';
-import { enSchedule } from './locales/en/schedule';
-import { enStrength } from './locales/en/strength';
-import { enTrx } from './locales/en/trx';
-import { enWorkout } from './locales/en/workout';
-import { nlAcademy } from './locales/nl/academy';
-import { nlBlog } from './locales/nl/blog';
-import { nlClasspass } from './locales/nl/classpass';
 import { nlCommon } from './locales/nl/common';
-import { nlCongrats } from './locales/nl/congrats';
-import { nlCorporate } from './locales/nl/corporate';
-import { nlEquipment } from './locales/nl/equipment';
-import { nlHealthcare } from './locales/nl/healthcare';
 import { nlHome } from './locales/nl/home';
-import { nlInstructors } from './locales/nl/instructors';
-import { nlIntro } from './locales/nl/intro';
-import { nlNotFound } from './locales/nl/notFound';
-import { nlOpeningOffer } from './locales/nl/openingOffer';
-import { nlPrenatal } from './locales/nl/prenatal';
-import { nlPricing } from './locales/nl/pricing';
-import { nlPrivacy } from './locales/nl/privacy';
-import { nlPrivatePilates } from './locales/nl/privatePilates';
-import { nlReformer } from './locales/nl/reformer';
-import { nlSchedule } from './locales/nl/schedule';
-import { nlStrength } from './locales/nl/strength';
-import { nlTrx } from './locales/nl/trx';
-import { nlWorkout } from './locales/nl/workout';
+
+const PAGE_NAMESPACES = [
+  'pricing',
+  'academy',
+  'schedule',
+  'intro',
+  'openingOffer',
+  'reformer',
+  'privatePilates',
+  'strength',
+  'trx',
+  'workout',
+  'instructors',
+  'equipment',
+  'blog',
+  'notFound',
+  'congrats',
+  'privacy',
+  'corporate',
+  'healthcare',
+  'classpass',
+  'prenatal',
+] as const;
+
+export type PageNamespace = (typeof PAGE_NAMESPACES)[number];
+
+type Bundle = object;
+
+const bundles: Record<'en' | 'nl', Record<PageNamespace, () => Promise<Bundle>>> = {
+  en: {
+    pricing: () => import('./locales/en/pricing').then((m) => m.enPricing),
+    academy: () => import('./locales/en/academy').then((m) => m.enAcademy),
+    schedule: () => import('./locales/en/schedule').then((m) => m.enSchedule),
+    intro: () => import('./locales/en/intro').then((m) => m.enIntro),
+    openingOffer: () => import('./locales/en/openingOffer').then((m) => m.enOpeningOffer),
+    reformer: () => import('./locales/en/reformer').then((m) => m.enReformer),
+    privatePilates: () => import('./locales/en/privatePilates').then((m) => m.enPrivatePilates),
+    strength: () => import('./locales/en/strength').then((m) => m.enStrength),
+    trx: () => import('./locales/en/trx').then((m) => m.enTrx),
+    workout: () => import('./locales/en/workout').then((m) => m.enWorkout),
+    instructors: () => import('./locales/en/instructors').then((m) => m.enInstructors),
+    equipment: () => import('./locales/en/equipment').then((m) => m.enEquipment),
+    blog: () => import('./locales/en/blog').then((m) => m.enBlog),
+    notFound: () => import('./locales/en/notFound').then((m) => m.enNotFound),
+    congrats: () => import('./locales/en/congrats').then((m) => m.enCongrats),
+    privacy: () => import('./locales/en/privacy').then((m) => m.enPrivacy),
+    corporate: () => import('./locales/en/corporate').then((m) => m.enCorporate),
+    healthcare: () => import('./locales/en/healthcare').then((m) => m.enHealthcare),
+    classpass: () => import('./locales/en/classpass').then((m) => m.enClasspass),
+    prenatal: () => import('./locales/en/prenatal').then((m) => m.enPrenatal),
+  },
+  nl: {
+    pricing: () => import('./locales/nl/pricing').then((m) => m.nlPricing),
+    academy: () => import('./locales/nl/academy').then((m) => m.nlAcademy),
+    schedule: () => import('./locales/nl/schedule').then((m) => m.nlSchedule),
+    intro: () => import('./locales/nl/intro').then((m) => m.nlIntro),
+    openingOffer: () => import('./locales/nl/openingOffer').then((m) => m.nlOpeningOffer),
+    reformer: () => import('./locales/nl/reformer').then((m) => m.nlReformer),
+    privatePilates: () => import('./locales/nl/privatePilates').then((m) => m.nlPrivatePilates),
+    strength: () => import('./locales/nl/strength').then((m) => m.nlStrength),
+    trx: () => import('./locales/nl/trx').then((m) => m.nlTrx),
+    workout: () => import('./locales/nl/workout').then((m) => m.nlWorkout),
+    instructors: () => import('./locales/nl/instructors').then((m) => m.nlInstructors),
+    equipment: () => import('./locales/nl/equipment').then((m) => m.nlEquipment),
+    blog: () => import('./locales/nl/blog').then((m) => m.nlBlog),
+    notFound: () => import('./locales/nl/notFound').then((m) => m.nlNotFound),
+    congrats: () => import('./locales/nl/congrats').then((m) => m.nlCongrats),
+    privacy: () => import('./locales/nl/privacy').then((m) => m.nlPrivacy),
+    corporate: () => import('./locales/nl/corporate').then((m) => m.nlCorporate),
+    healthcare: () => import('./locales/nl/healthcare').then((m) => m.nlHealthcare),
+    classpass: () => import('./locales/nl/classpass').then((m) => m.nlClasspass),
+    prenatal: () => import('./locales/nl/prenatal').then((m) => m.nlPrenatal),
+  },
+};
+
+const pending = new Map<string, Promise<void>>();
+
+export function loadNamespaces(namespaces: readonly PageNamespace[]): Promise<void> {
+  if (namespaces.length === 0) return Promise.resolve();
+
+  const langs: Array<'en' | 'nl'> = ['en', 'nl'];
+
+  const jobs = langs.flatMap((lang) =>
+    namespaces.map((ns) => {
+      if (i18n.hasResourceBundle(lang, ns)) return Promise.resolve();
+      const key = `${lang}:${ns}`;
+      const existing = pending.get(key);
+      if (existing) return existing;
+      const job = bundles[lang][ns]().then((data) => {
+        i18n.addResourceBundle(lang, ns, data, true, true);
+      });
+      pending.set(key, job);
+      return job;
+    }),
+  );
+
+  return Promise.all(jobs).then(() => undefined);
+}
 
 function detectLng(): 'en' | 'nl' {
   if (typeof window === 'undefined') return 'en';
@@ -63,57 +121,18 @@ export function initI18n() {
       en: {
         common: enCommon,
         home: enHome,
-        pricing: enPricing,
-        academy: enAcademy,
-        schedule: enSchedule,
-        intro: enIntro,
-        openingOffer: enOpeningOffer,
-        reformer: enReformer,
-        privatePilates: enPrivatePilates,
-        strength: enStrength,
-        trx: enTrx,
-        workout: enWorkout,
-        instructors: enInstructors,
-        equipment: enEquipment,
-        blog: enBlog,
-        notFound: enNotFound,
-        congrats: enCongrats,
-        privacy: enPrivacy,
-        corporate: enCorporate,
-        healthcare: enHealthcare,
-        classpass: enClasspass,
-        prenatal: enPrenatal,
       },
       nl: {
         common: nlCommon,
         home: nlHome,
-        pricing: nlPricing,
-        academy: nlAcademy,
-        schedule: nlSchedule,
-        intro: nlIntro,
-        openingOffer: nlOpeningOffer,
-        reformer: nlReformer,
-        privatePilates: nlPrivatePilates,
-        strength: nlStrength,
-        trx: nlTrx,
-        workout: nlWorkout,
-        instructors: nlInstructors,
-        equipment: nlEquipment,
-        blog: nlBlog,
-        notFound: nlNotFound,
-        congrats: nlCongrats,
-        privacy: nlPrivacy,
-        corporate: nlCorporate,
-        healthcare: nlHealthcare,
-        classpass: nlClasspass,
-        prenatal: nlPrenatal,
       },
     },
     lng: detectLng(),
     fallbackLng: 'en',
     supportedLngs: ['en', 'nl'],
-    ns: ['common', 'home', 'pricing', 'academy', 'schedule', 'intro', 'openingOffer', 'reformer', 'privatePilates', 'strength', 'trx', 'workout', 'instructors', 'equipment', 'blog', 'notFound', 'congrats', 'privacy', 'corporate', 'healthcare', 'classpass', 'prenatal'],
+    ns: ['common', 'home'],
     defaultNS: 'common',
+    partialBundledLanguages: true,
     interpolation: {
       escapeValue: false,
       defaultVariables: { studioStreet, studioAddress: studioAddressLine },

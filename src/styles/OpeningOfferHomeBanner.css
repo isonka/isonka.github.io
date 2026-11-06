@@ -16,12 +16,12 @@
 
 .oo-home-banner-line strong {
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .oo-home-banner-link {
   color: var(--gold, #ffd700);
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 2px;
   white-space: nowrap;

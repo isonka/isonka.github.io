@@ -74,7 +74,7 @@
 
 .product-info h1 {
   font-size: clamp(1.85rem, 3.5vw, 2.75rem);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.1;
   color: var(--ink, #111);
@@ -89,7 +89,7 @@
 .product-price {
   margin: 0 0 8px;
   font-size: 1.75rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--ink, #111);
 }
@@ -163,7 +163,7 @@
 .product-section-title {
   margin: 40px 0 16px;
   font-size: clamp(1.35rem, 2.5vw, 1.75rem);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--ink, #111);
 }
@@ -200,7 +200,7 @@
 }
 
 .spec-label {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--ink, #111);
 }
 
@@ -236,7 +236,7 @@
 .product-faq h2 {
   font-size: clamp(1.5rem, 3vw, 2rem);
   margin: 0 0 28px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--ink, #111);
   text-align: left;
@@ -267,7 +267,7 @@
   border: none;
   text-align: left;
   font-size: 1.05rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--ink, #111);
   font-family: inherit;
   transition: color 0.2s ease;
@@ -322,7 +322,7 @@
 
 .product-contact-text h2 {
   font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.02em;
   color: #fff;
   margin: 0 0 12px;
@@ -358,7 +358,7 @@
   padding: 14px 22px;
   border-radius: var(--radius-pill, 999px);
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   transition: background 0.2s ease, color 0.2s ease;
   background: #fff;

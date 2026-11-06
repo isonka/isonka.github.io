@@ -14,6 +14,7 @@ import {
 } from '../data/pricing';
 import { localeHref } from '../i18n/locale';
 import { useLocale } from '../i18n/useLocale';
+import { trackChatbotNavigate, trackChatbotOpen, trackChatbotOption, trackPhoneClick } from '../utils/gtmTracking';
 import '../styles/Chatbot.css';
 
 const GOAL_OPTIONS = ['strength', 'weight', 'rehab', 'pregnancy', 'wellness', 'curious'] as const;
@@ -286,6 +287,7 @@ export const Chatbot= () => {
 
     switch (response) {
       case 'book':
+        trackChatbotNavigate('schedule');
         addBotMessage(t('chatbot.goingToBooking'), 500);
         later(() => navigate(localeHref('/schedule/', locale)), 2000);
         break;
@@ -296,11 +298,13 @@ export const Chatbot= () => {
         break;
 
       case 'showEquipment':
+        trackChatbotNavigate('equipment');
         addBotMessage(t('chatbot.openingEquipment'), 500);
         later(() => navigate(localeHref('/equipment/', locale)), 1500);
         break;
 
       case 'trainers':
+        trackChatbotNavigate('instructors');
         addBotMessage(
           t('chatbot.openingTrainers', {
             total: String(instructorCount),
@@ -327,6 +331,8 @@ export const Chatbot= () => {
   };
 
   const handleOptionClick = (option: OptionId) => {
+    trackChatbotOption(option);
+
     if (includes(GOAL_OPTIONS, option)) {
       handleUserResponse(option, 'goal');
     } else if (includes(EXPERIENCE_OPTIONS, option)) {
@@ -345,7 +351,10 @@ export const Chatbot= () => {
       {!isOpen && (
         <button
           className="chatbot-button"
-          onClick={() => setIsOpen(true)}
+          onClick={() => {
+            trackChatbotOpen();
+            setIsOpen(true);
+          }}
           aria-label={t('chatbot.openAria')}
         >
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -429,7 +438,7 @@ export const Chatbot= () => {
           </div>
 
           <div className="chatbot-footer">
-            <p>{t('chatbot.footer')} <a href="tel:+31685162693">+31 685 162693</a></p>
+            <p>{t('chatbot.footer')} <a href="tel:+31685162693" data-analytics="skip" onClick={() => trackPhoneClick('chatbot')}>+31 685 162693</a></p>
           </div>
         </div>
       )}

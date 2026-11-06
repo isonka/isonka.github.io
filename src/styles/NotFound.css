@@ -14,7 +14,7 @@
 
 .not-found h1 {
   font-size: clamp(2rem, 5vw, 3.4rem);
-  font-weight: 600;
+  font-weight: 700;
   margin: 0 0 16px;
   line-height: 1.08;
   letter-spacing: -0.03em;
