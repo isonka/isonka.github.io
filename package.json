@@ -30,7 +30,7 @@
     "i18next": "^25.4.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-i18next": "^15.7.3",
+    "react-i18next": "^17.1.11",
     "react-router-dom": "^7.18.5"
   },
   "devDependencies": {
