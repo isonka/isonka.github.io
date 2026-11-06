@@ -168,11 +168,14 @@ const nlPath = (path: string) => `${path}nl/`;
 
 /**
  * Dutch mirrors for fixed pages that do not list one explicitly. Redirect-only routes (canonical override)
- * have no mirror. The mirror reuses the English sitemap entry minus the image.
+ * have no mirror. The studio display is one URL. The mirror reuses the English sitemap entry minus the image.
  */
+const NO_NL_MIRROR = new Set(['/screen/']);
+
 const FIXED_NL_MIRRORS: Route[] = FIXED_PAGES.filter(
   (route) =>
     route.path !== '/' &&
+    !NO_NL_MIRROR.has(route.path) &&
     !route.path.endsWith('/nl/') &&
     !route.canonical &&
     !FIXED_PAGES.some((other) => other.path === nlPath(route.path)),
