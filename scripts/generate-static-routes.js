@@ -244,6 +244,12 @@ for (const route of shellRoutes) {
       /<meta name="twitter:description" content="[^"]*" \/>/,
       `<meta name="twitter:description" content="${meta.description}" />`,
     );
+    if (meta.robots) {
+      html = html.replace(
+        /<meta name="robots" content="[^"]*" \/>/,
+        `<meta name="robots" content="${meta.robots}" />`,
+      );
+    }
   }
 
   fs.writeFileSync(path.join(routeDir, 'index.html'), html);

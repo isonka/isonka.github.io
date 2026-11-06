@@ -94,6 +94,7 @@ export const config = {
   // blog post stay as written (PT7_SEO_PLAN.md, Phase 5).
   frozenPages: [
     '/congrats/',
+    '/screen/',
     '/privacy/',
     '/classpass-offer/',
     '/opening-offer/',

@@ -65,6 +65,15 @@ html {
   z-index: 1;
 }
 
+html.screen-kiosk,
+html.screen-kiosk body,
+.app-kiosk,
+.app-kiosk .main-content {
+  background: #000;
+  cursor: none;
+  overflow: hidden;
+}
+
 .route-fallback {
   display: flex;
   flex-direction: column;

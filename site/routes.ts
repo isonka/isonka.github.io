@@ -25,7 +25,7 @@ export type Route = {
   prerender: boolean;
   canonical?: string;
   sitemap: SitemapEntry | null;
-  meta?: { title: string; description: string };
+  meta?: { title: string; description: string; robots?: string };
 };
 
 const image = (file: string, title: string): SitemapImage => ({
@@ -118,6 +118,16 @@ const FIXED_PAGES: Route[] = [
   { path: '/reformer-pilates-amsterdam/nl/', prerender: true, sitemap: { lastmod: '2026-10-16', changefreq: 'monthly', priority: '0.9' } },
 
   { path: '/congrats/', prerender: true, sitemap: null },
+  {
+    path: '/screen/',
+    prerender: true,
+    sitemap: null,
+    meta: {
+      title: 'PT7',
+      description: 'PT7 studio display.',
+      robots: 'noindex, nofollow',
+    },
+  },
 
   {
     path: '/pregnancy-pilates-amsterdam/',
@@ -233,8 +243,8 @@ export const canonicalOverrides: Record<string, string> = Object.fromEntries(
   routes.filter((route) => route.canonical).map((route) => [route.path, route.canonical as string]),
 );
 
-export const shellMeta: Record<string, { title: string; description: string }> = Object.fromEntries(
+export const shellMeta: Record<string, { title: string; description: string; robots?: string }> = Object.fromEntries(
   routes
     .filter((route) => route.meta)
-    .map((route) => [route.path, route.meta as { title: string; description: string }]),
+    .map((route) => [route.path, route.meta as { title: string; description: string; robots?: string }]),
 );

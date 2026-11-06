@@ -45,6 +45,7 @@ const TRXTrainingAmsterdam = lazy(() => import('./pages/TRXTrainingAmsterdam').t
 const StrengthTrainingAmsterdam = lazy(() => import('./pages/StrengthTrainingAmsterdam').then(m => ({ default: m.StrengthTrainingAmsterdam })));
 const ReformerPilatesAmsterdam = lazy(() => import('./pages/ReformerPilatesAmsterdam').then(m => ({ default: m.ReformerPilatesAmsterdam })));
 const Privacy = lazy(() => import('./pages/Privacy').then(m => ({ default: m.Privacy })));
+const Screen = lazy(() => import('./pages/Screen').then(m => ({ default: m.Screen })));
 const NotFound = lazy(() => import('./pages/NotFound').then(m => ({ default: m.NotFound })));
 
 function TrailingSlashNormalizer() {
@@ -131,25 +132,36 @@ function RouteFallback() {
 }
 
 function Layout() {
+  const { pathname } = useLocation();
+  const kiosk = pathname === '/screen' || pathname === '/screen/';
+
+  useEffect(() => {
+    if (!kiosk) return;
+    document.documentElement.classList.add('screen-kiosk');
+    return () => document.documentElement.classList.remove('screen-kiosk');
+  }, [kiosk]);
+
   return (
     <>
-      <StructuredData type="Organization" />
-      <CookieConsent />
+      {!kiosk && <StructuredData type="Organization" />}
+      {!kiosk && <CookieConsent />}
       <ScrollToTop />
       <TrailingSlashNormalizer />
       <RedirectHandler />
       <LocaleSync />
-      <div className="app instructors-silk-host">
-        <div className="site-header">
-          <Navbar />
-        </div>
+      <div className={kiosk ? 'app app-kiosk' : 'app instructors-silk-host'}>
+        {!kiosk && (
+          <div className="site-header">
+            <Navbar />
+          </div>
+        )}
         <main className="main-content">
-          <Suspense fallback={<RouteFallback />}>
+          <Suspense fallback={kiosk ? null : <RouteFallback />}>
             <Outlet />
           </Suspense>
         </main>
-        <Footer />
-        <DeferredChatbot />
+        {!kiosk && <Footer />}
+        {!kiosk && <DeferredChatbot />}
       </div>
     </>
   );
@@ -178,6 +190,7 @@ const router = createBrowserRouter([
       { path: 'workouts/:slug/nl', element: <WorkoutDetail /> },
       { path: 'congrats', element: <Congrats /> },
       { path: 'congrats/nl', element: <Congrats /> },
+      { path: 'screen', element: <Screen /> },
       { path: 'index.html', element: <Navigate to="/" replace /> },
       { path: 'congrats.html', element: <Navigate to="/congrats/" replace /> },
       { path: 'instructors', element: <Trainers /> },
