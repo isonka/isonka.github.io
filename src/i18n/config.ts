@@ -7,30 +7,27 @@ import { enHome } from './locales/en/home';
 import { nlCommon } from './locales/nl/common';
 import { nlHome } from './locales/nl/home';
 
-const PAGE_NAMESPACES = [
-  'pricing',
-  'academy',
-  'schedule',
-  'intro',
-  'openingOffer',
-  'reformer',
-  'privatePilates',
-  'strength',
-  'trx',
-  'workout',
-  'instructors',
-  'equipment',
-  'blog',
-  'notFound',
-  'congrats',
-  'privacy',
-  'corporate',
-  'healthcare',
-  'classpass',
-  'prenatal',
-] as const;
-
-export type PageNamespace = (typeof PAGE_NAMESPACES)[number];
+export type PageNamespace =
+  | 'pricing'
+  | 'academy'
+  | 'schedule'
+  | 'intro'
+  | 'openingOffer'
+  | 'reformer'
+  | 'privatePilates'
+  | 'strength'
+  | 'trx'
+  | 'workout'
+  | 'instructors'
+  | 'equipment'
+  | 'blog'
+  | 'notFound'
+  | 'congrats'
+  | 'privacy'
+  | 'corporate'
+  | 'healthcare'
+  | 'classpass'
+  | 'prenatal';
 
 type Bundle = object;
 
