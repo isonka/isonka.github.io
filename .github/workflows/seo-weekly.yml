@@ -119,7 +119,7 @@ jobs:
 
       - name: Open PR
         if: env.ACTIONS != '0' && github.event.inputs.apply != 'false'
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           branch: seo-agent/${{ env.RUN_DATE }}
           title: 'SEO agent: week of ${{ env.RUN_DATE }}'
