@@ -174,14 +174,15 @@
   flex-wrap: wrap;
   gap: 8px;
   width: 100%;
-  max-width: var(--page-max-width, 1200px);
-  margin: 0 auto;
-  padding: 16px 24px;
+  max-width: none;
+  margin: 0;
+  padding: 16px max(24px, calc((100% - 1100px) / 2));
   border-bottom: 1px solid var(--pebble, #d5d3d4);
   position: sticky;
-  top: 72px;
+  top: 0;
   z-index: 40;
   background: #fffdf4;
+  box-sizing: border-box;
 }
 
 .pricing-jump a {
@@ -212,7 +213,7 @@
   max-width: 1100px;
   margin: 0 auto;
   padding: 56px 24px 24px;
-  scroll-margin-top: 96px;
+  scroll-margin-top: 72px;
 }
 
 .pricing-content + .pricing-content {
@@ -386,12 +387,60 @@
   margin-bottom: 4px;
 }
 
-.price-per-class.price-single {
+.price-per-class.price-single,
+.price-per-class.price-lead {
   font-size: 1.85rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: #111;
   line-height: 1.2;
+}
+
+.price-lead .per-unit {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.pack-meta {
+  text-align: left;
+  margin: 6px 0 12px;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #777;
+  line-height: 1.4;
+}
+
+#group-classes .price-display,
+#private-classes .price-display,
+#couple-classes .price-display {
+  margin-bottom: 0;
+}
+
+.package-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 12px;
+  margin-bottom: 6px;
+}
+
+.package-head .package-name {
+  margin-bottom: 0;
+}
+
+.package-save {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  padding: 4px 10px;
+  background: var(--gold, #ffd700);
+  color: #111;
+  border-radius: var(--radius-pill, 1000px);
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 .per-person {
@@ -425,19 +474,36 @@
   margin-bottom: 8px;
 }
 
+.bf-pricing-banner {
+  max-width: 1100px;
+  margin: 28px auto 0;
+  padding: 22px 24px;
+  background: #111;
+  color: #fff;
+}
+
+.bf-pricing-banner p:last-child {
+  margin: 0;
+  max-width: 40em;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
 .package-bonus {
   display: inline-flex;
   align-self: flex-start;
-  align-items: center;
-  margin: 4px 0 12px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 12px;
+  padding: 7px 12px;
   background: var(--gold, #ffd700);
   color: #111;
-  padding: 6px 12px;
   border-radius: var(--radius-pill, 1000px);
-  font-size: 0.8rem;
+  font-size: 0.92rem;
   font-weight: 700;
+  line-height: 1.2;
   white-space: nowrap;
-  line-height: 1;
 }
 
 .package-fineprint {
@@ -715,7 +781,6 @@
 
 @media (max-width: 1024px) {
   .pricing-jump {
-    top: 56px;
     flex-wrap: nowrap;
     gap: 4px;
     padding: 10px 16px;
@@ -730,7 +795,7 @@
   }
 
   .pricing-content {
-    scroll-margin-top: 120px;
+    scroll-margin-top: 64px;
   }
 }
 

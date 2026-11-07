@@ -42,3 +42,8 @@ export function formatEur(n: number): string {
 export function packTotal(perClass: number, classes: number): number {
   return perClass * classes;
 }
+
+/** Percent saved versus the single-class rate, rounded to the nearest whole number. */
+export function savePercent(single: number, perClass: number): number {
+  return Math.round(((single - perClass) / single) * 100);
+}

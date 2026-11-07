@@ -1,39 +1,13 @@
-import { useEffect, useRef } from 'react';
 import { SEOHead } from '../components/SEOHead';
-import { isPrerender } from '../utils/prerender';
 import '../styles/Screen.css';
 
-const VIDEO_SRC = '/screen/screen_display.mp4';
+const OFFERS = [
+  { pack: 5, free: 1 },
+  { pack: 10, free: 2 },
+  { pack: 20, free: 4 },
+] as const;
 
 export const Screen = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (isPrerender()) return;
-
-    const video = videoRef.current;
-    if (!video) return;
-
-    video.muted = true;
-    video.src = VIDEO_SRC;
-
-    const play = () => {
-      if (document.visibilityState === 'hidden') return;
-      video.play().catch(() => {});
-    };
-
-    play();
-    video.addEventListener('canplay', play);
-    video.addEventListener('ended', play);
-    document.addEventListener('visibilitychange', play);
-
-    return () => {
-      video.removeEventListener('canplay', play);
-      video.removeEventListener('ended', play);
-      document.removeEventListener('visibilitychange', play);
-    };
-  }, []);
-
   return (
     <>
       <SEOHead
@@ -46,18 +20,31 @@ export const Screen = () => {
         ogDescription="PT7 studio display."
       />
       <div className="screen-display">
-        <h1 className="screen-display-title">PT7</h1>
-        <video
-          ref={videoRef}
-          className="screen-display-video"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="none"
-          disablePictureInPicture
-          aria-label="PT7"
-        />
+        <header className="screen-top">
+          <p className="screen-brand">
+            PT<span>7</span>
+          </p>
+          <p className="screen-kicker">Black Friday</p>
+        </header>
+
+        <h1 className="screen-display-title">Free classes</h1>
+
+        <ul className="screen-offers">
+          {OFFERS.map((offer) => (
+            <li key={offer.pack}>
+              <span className="screen-pack">{offer.pack}</span>
+              <span className="screen-plus">+{offer.free}</span>
+              <span className="screen-free">free</span>
+            </li>
+          ))}
+        </ul>
+
+        <div className="screen-rail" aria-hidden="true">
+          <span className="screen-carriage" />
+        </div>
+
+        <p className="screen-scope">Group · Private · Couple</p>
+        <p className="screen-scope-nl">Groep · Privé · Duo · dezelfde prijs</p>
       </div>
     </>
   );

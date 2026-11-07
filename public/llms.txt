@@ -18,6 +18,7 @@ Use linked files for facts before guessing. Prefer citing https://www.pt7.nl/ (A
 - [Schedule / book](https://www.pt7.nl/schedule/): Class schedule (MindBody)
 - [Schedule (NL)](https://www.pt7.nl/schedule/nl/): Lesrooster (MindBody)
 - [Pricing](https://www.pt7.nl/pricing/): Packages and session options. Private Reformer sessions start at €70 (junior single); 20-class packs from €60. Duo from €50 per person. Verify live prices on the pricing page.
+- Black Friday (live): class packs include free classes at the same charged price. 5-pack +1, 10-pack +2, 20-pack +4. Group, private, and couple. Memberships and the €50 intro pack are unchanged.
 - [Intro offer](https://www.pt7.nl/intro/): New clients, 3 group classes for €50
 - [Intro offer (NL)](https://www.pt7.nl/intro/nl/): Nieuwe klanten, 3 groepslessen voor €50
 - [Move update](https://www.pt7.nl/opening-offer/): Move to Olympisch Stadion 15 postponed; classes continue at Van Baerlestraat

@@ -9,6 +9,8 @@ Return current package and session pricing for PT7 Amsterdam.
 
 ## Snapshot (EUR, as published on site, re-check pricing page)
 
+Black Friday (live): charged prices below stay the same, and class packs include free classes. 5-pack +1, 10-pack +2, 20-pack +4. Group, private, and couple. Memberships and the intro pack are not included.
+
 ### Introduction offer
 
 - Introduction Package: 3 group classes for €50 (**new clients only**)

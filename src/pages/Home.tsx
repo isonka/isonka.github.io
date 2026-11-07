@@ -14,6 +14,8 @@ import { ContactMap } from '../components/ContactMap';
 import { PHOTO_FOCUS } from '../data/photoFocus';
 import { useInViewOnce } from '../hooks/useInViewOnce';
 import { SilkBackground } from '../components/SilkBackground';
+import { BLACK_FRIDAY_BONUS, isBlackFridayHero } from '../data/blackFriday';
+import { GROUP } from '../data/pricing';
 import { homePath } from '../i18n/locale';
 import { useLocale } from '../i18n/useLocale';
 import { isPrerender } from '../utils/prerender';
@@ -27,6 +29,26 @@ const HOME_HREFLANG = [
 ];
 
 const FAQ_KEYS = ['where', 'groupSize', 'booking', 'training', 'location'] as const;
+
+const BF_GROUP_PACKS = [
+  { pack: 5, total: GROUP.pack5.total, was: GROUP.pack5.perClass, popular: false },
+  { pack: 10, total: GROUP.pack10.total, was: GROUP.pack10.perClass, popular: true },
+  { pack: 20, total: GROUP.pack20.total, was: GROUP.pack20.perClass, popular: false },
+] as const;
+
+function formatOfferEur(n: number, locale: 'en' | 'nl'): string {
+  const formatted = new Intl.NumberFormat(locale === 'nl' ? 'nl-NL' : 'en-US', {
+    style: 'currency',
+    currency: 'EUR',
+    minimumFractionDigits: Number.isInteger(n) ? 0 : 2,
+    maximumFractionDigits: 2,
+  }).format(n);
+  return formatted.replace(/[\s\u00a0]/g, '');
+}
+
+function offerPerClass(total: number, classes: number): number {
+  return Math.round((total / classes) * 100) / 100;
+}
 
 const WORKOUT_COPY = {
   'reformer-pilates': 'reformerPilates',
@@ -115,6 +137,7 @@ function TrainerTile({
 export const Home= () => {
   const { t } = useTranslation('home');
   const locale = useLocale();
+  const campaignHero = isBlackFridayHero();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [secondHeroReady, setSecondHeroReady] = useState(false);
   const aboutImage = useInViewOnce<HTMLDivElement>();
@@ -148,7 +171,7 @@ export const Home= () => {
   }, [locale, t]);
 
   useEffect(() => {
-    if (isPrerender()) return;
+    if (campaignHero || isPrerender()) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const enable = () => setSecondHeroReady(true);
@@ -159,7 +182,7 @@ export const Home= () => {
     return () => {
       events.forEach((event) => window.removeEventListener(event, enable));
     };
-  }, []);
+  }, [campaignHero]);
 
   useEffect(() => {
     if (!secondHeroReady) return;
@@ -191,55 +214,120 @@ export const Home= () => {
       <OpeningOfferHomeBanner />
       <AcademyUrgencyBanner />
 
-      <section className={`home-hero${secondHeroReady ? ' home-hero--can-fade' : ''}`}>
-        {heroImages.map((image, index) => {
-          if (index > 0 && !secondHeroReady) return null;
-          const isActive = index === currentImageIndex;
-          return (
-            <img
-              key={image.src}
-              src={image.src}
-              srcSet={image.srcSet}
-              sizes="100vw"
-              alt={t(image.altKey)}
-              className={`home-hero-bg${isActive ? ' is-active' : ''}`}
-              width={image.width}
-              height={image.height}
-              fetchPriority={index === 0 ? 'high' : 'low'}
-              loading={index === 0 ? 'eager' : 'lazy'}
-              decoding="async"
-              style={index === 0 ? { opacity: 1 } : undefined}
-            />
-          );
-        })}
-        <div className="home-hero-veil" />
-        <div className="home-hero-inner">
-          <p className="home-hero-brand brand-mark">
-            PT<span className="brand-mark-accent">7</span>
-          </p>
-          <h1 className="home-hero-title">{t('hero.title')}</h1>
-          <p className="home-hero-line">{t('hero.line')}</p>
-          <div className="home-hero-ratings">
-            <a href="https://maps.app.goo.gl/wrhyzYbov9eiGQJw5" target="_blank" rel="noopener noreferrer">
-              {t('reviews.google')}
-            </a>
-            <a href="https://classpass.com/studios/pt-studio-7-amsterdam" target="_blank" rel="noopener noreferrer">
-              {t('reviews.classpass')}
-            </a>
+      {campaignHero ? (
+        <section className="home-hero home-hero--bf">
+          <div className="home-hero-inner">
+            <div className="bf-hero">
+              <div className="bf-hero-copy">
+                <p className="home-hero-campaign">
+                  {t('hero.campaign')}
+                  <span aria-hidden="true"> · </span>
+                  {t('hero.dates')}
+                </p>
+                <h1 className="home-hero-title">
+                  <span className="bf-hero-lead">{t('hero.offerLead')}</span>
+                  <span className="bf-hero-gold">{t('hero.offerPrice')}</span>
+                </h1>
+                <p className="home-hero-line">{t('hero.line')}</p>
+                <div className="home-hero-actions">
+                  <Link to={pricingHref} className="home-btn home-btn-gold">
+                    {t('hero.seePacks')}
+                  </Link>
+                  <Link to={scheduleHref} className="home-btn home-btn-ghost" onClick={() => trackFBBookingClick()}>
+                    {t('hero.book')}
+                  </Link>
+                </div>
+              </div>
+              <ul className="bf-offers">
+                {BF_GROUP_PACKS.map((item) => {
+                  const free = BLACK_FRIDAY_BONUS[item.pack];
+                  const classes = item.pack + free;
+                  return (
+                    <li key={item.pack}>
+                      <div>
+                        <p className="bf-offer-name">
+                          {t('hero.classes', { count: item.pack })}
+                          <span className="bf-offer-free">{t('hero.free', { count: free })}</span>
+                        </p>
+                        <p className="bf-offer-detail">
+                          {t('hero.youGet', {
+                            count: classes,
+                            price: formatOfferEur(item.total, locale),
+                          })}
+                          {item.popular ? (
+                            <span className="bf-offer-popular">{` · ${t('hero.popular')}`}</span>
+                          ) : null}
+                        </p>
+                      </div>
+                      <p className="bf-offer-rate">
+                        <span className="bf-offer-now">
+                          {formatOfferEur(offerPerClass(item.total, classes), locale)}
+                        </span>
+                        <span className="bf-offer-was">
+                          {t('hero.aClass')}
+                          {' · '}
+                          <s>{formatOfferEur(item.was, locale)}</s>
+                        </span>
+                      </p>
+                    </li>
+                  );
+                })}
+              </ul>
+              <p className="bf-hero-note">{t('hero.ends')}</p>
+            </div>
           </div>
-          <div className="home-hero-actions">
-            <Link to={scheduleHref} className="home-btn home-btn-gold" onClick={() => trackFBBookingClick()}>
-              {t('hero.bookClass')}
-            </Link>
-            <Link to={localeHref('/reformer-pilates-amsterdam/', locale)} className="home-btn home-btn-ghost">
-              {t('hero.pilatesClasses')}
-            </Link>
-            <Link to={pricingHref} className="home-btn home-btn-ghost">
-              {t('hero.viewPricing')}
-            </Link>
+        </section>
+      ) : (
+        <section className={`home-hero${secondHeroReady ? ' home-hero--can-fade' : ''}`}>
+          {heroImages.map((image, index) => {
+            if (index > 0 && !secondHeroReady) return null;
+            const isActive = index === currentImageIndex;
+            return (
+              <img
+                key={image.src}
+                src={image.src}
+                srcSet={image.srcSet}
+                sizes="100vw"
+                alt={t(image.altKey)}
+                className={`home-hero-bg${isActive ? ' is-active' : ''}`}
+                width={image.width}
+                height={image.height}
+                fetchPriority={index === 0 ? 'high' : 'low'}
+                loading={index === 0 ? 'eager' : 'lazy'}
+                decoding="async"
+                style={index === 0 ? { opacity: 1 } : undefined}
+              />
+            );
+          })}
+          <div className="home-hero-veil" />
+          <div className="home-hero-inner">
+            <p className="home-hero-brand brand-mark">
+              PT<span className="brand-mark-accent">7</span>
+            </p>
+            <h1 className="home-hero-title">{t('hero.title')}</h1>
+            <p className="home-hero-line">{t('hero.studioLine')}</p>
+            <div className="home-hero-ratings">
+              <a href="https://maps.app.goo.gl/wrhyzYbov9eiGQJw5" target="_blank" rel="noopener noreferrer">
+                {t('reviews.google')}
+              </a>
+              <a href="https://classpass.com/studios/pt-studio-7-amsterdam" target="_blank" rel="noopener noreferrer">
+                {t('reviews.classpass')}
+              </a>
+            </div>
+            <div className="home-hero-actions">
+              <Link to={scheduleHref} className="home-btn home-btn-gold" onClick={() => trackFBBookingClick()}>
+                {t('hero.bookClass')}
+              </Link>
+              <Link to={localeHref('/reformer-pilates-amsterdam/', locale)} className="home-btn home-btn-ghost">
+                {t('hero.pilatesClasses')}
+              </Link>
+              <Link to={pricingHref} className="home-btn home-btn-ghost">
+                {t('hero.viewPricing')}
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section id="about" className="home-section home-manifesto">
         <p className="home-kicker">{t('about.kicker')}</p>

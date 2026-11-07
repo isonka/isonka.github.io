@@ -178,7 +178,7 @@ export const enCommon = {
       groupLines:
         '• Single class: {{single}}\n• 5-class pack: {{pack5}}/class ({{pack5Total}} total)\n• 10-class pack: {{pack10}}/class ({{pack10Total}} total)\n• 20-class pack: {{pack20}}/class ({{pack20Total}} total)\n\nMembership (all days, 1 class/day):\n• {{fourClasses}} classes/month: {{fourPer}}/class ({{fourTotal}}/month)\n• {{eightClasses}} classes/month: {{eightPer}}/class ({{eightTotal}}/month)\n• Unlimited 3 months: {{unlimited}}/month\n• Annual unlimited: {{annual}}/month ({{annualTotal}}/year)',
       summary:
-        '**Your match:**\n\n**Recommended instructor:** {{instructor}}\n{{reason}}\n\n**Best class type:** {{classType}}\n\n**Pricing:**\n{{pricing}}\n\n**Special offer:** New clients, introduction package: {{introClasses}} group classes for {{introPrice}}. {{introUrl}}',
+        '**Your match:**\n\n**Recommended instructor:** {{instructor}}\n{{reason}}\n\n**Best class type:** {{classType}}\n\n**Pricing:**\n{{pricing}}\n\n**Special offer:** New clients, introduction package: {{introClasses}} group classes for {{introPrice}}. {{introUrl}}\n\n**Black Friday:** 5-pack +1 free class, 10-pack +2 free classes, 20-pack +4 free classes. Same price on group, private, and couple packs.',
     },
   },
 } as const;

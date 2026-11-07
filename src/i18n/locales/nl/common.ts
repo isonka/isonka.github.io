@@ -181,7 +181,7 @@ export const nlCommon: DeepStringify<EnCommon> = {
       groupLines:
         '• Losse les: {{single}}\n• 5-lessenkaart: {{pack5}}/les ({{pack5Total}} totaal)\n• 10-lessenkaart: {{pack10}}/les ({{pack10Total}} totaal)\n• 20-lessenkaart: {{pack20}}/les ({{pack20Total}} totaal)\n\nAbonnement (alle dagen, 1 les per dag):\n• {{fourClasses}} lessen/maand: {{fourPer}}/les ({{fourTotal}}/maand)\n• {{eightClasses}} lessen/maand: {{eightPer}}/les ({{eightTotal}}/maand)\n• Onbeperkt 3 maanden: {{unlimited}}/maand\n• Jaarabonnement onbeperkt: {{annual}}/maand ({{annualTotal}}/jaar)',
       summary:
-        '**Jouw match:**\n\n**Aanbevolen instructeur:** {{instructor}}\n{{reason}}\n\n**Beste lesvorm:** {{classType}}\n\n**Prijzen:**\n{{pricing}}\n\n**Speciale aanbieding:** Nieuwe klanten, introductiepakket: {{introClasses}} groepslessen voor {{introPrice}}. {{introUrl}}',
+        '**Jouw match:**\n\n**Aanbevolen instructeur:** {{instructor}}\n{{reason}}\n\n**Beste lesvorm:** {{classType}}\n\n**Prijzen:**\n{{pricing}}\n\n**Speciale aanbieding:** Nieuwe klanten, introductiepakket: {{introClasses}} groepslessen voor {{introPrice}}. {{introUrl}}\n\n**Black Friday:** 5-lessenkaart +1 gratis les, 10-lessenkaart +2 gratis lessen, 20-lessenkaart +4 gratis lessen. Zelfde prijs voor groep, privé en duo.',
     },
   },
 };
