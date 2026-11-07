@@ -80,7 +80,7 @@ function ClassOffer({
       <div className="price-display">
         <div className="package-head">
           <span className="package-name">{name}</span>
-          {save != null ? <span className="package-save">{t('labels.save', { percent: save })}</span> : null}
+          {save != null ? <span className="package-save">{t('labels.save', { percent: String(save) })}</span> : null}
         </div>
         <h4 className="price-per-class price-lead">
           {formatEur(perClass)} <span className="per-unit">/ {unitLabel}</span>
