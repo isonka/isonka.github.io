@@ -1,0 +1,17 @@
+{ "changes": [
+ { "page": "/schedule/", "action": "rewrite-snippet", "kind": "snippet",
+   "before": { "title": "Pilates Classes Amsterdam Zuid | Book Online | PT7", "description": "Live class schedule at Museumplein, Amsterdam Zuid: Reformer Pilates, TRX and strength in small groups (max 5) or privates at Van Baerlestraat 76C. Book online." },
+   "after": { "title": "Pilates Near Me: Classes in Amsterdam Zuid | PT7", "description": "Book Pilates classes near Museumplein, Amsterdam Zuid. Reformer, TRX and strength in small groups (max 5) or privates at Van Baerlestraat 76C." },
+   "hypothesis": "Leading with 'Pilates near me' matches queries 'pilates classes near me' (pos 7.3) and 'pilates near me' (pos 6.5) that currently get zero clicks.",
+   "files": ["src/i18n/locales/en/schedule.ts"] },
+ { "page": "/blog/pma-ittap-accreditation-reformer-course-amsterdam/", "action": "rewrite-snippet", "kind": "snippet",
+   "before": { "title": "PMA ITTAP Accreditation Explained | PT7 Academy", "description": "What PMA ITTAP accreditation means for Pilates teacher training, and how PT7 Academy's 300-hour Reformer course in Amsterdam meets it." },
+   "after": { "title": "ITTAP Pilates: What PMA ITTAP Accreditation Means | PT7", "description": "What is PMA ITTAP? How the accreditation works for Pilates teacher training, and how PT7 Academy's 300-hour Reformer course in Amsterdam meets it." },
+   "hypothesis": "Leads with 'ittap' / 'ittap pilates' (48 and 15 impressions at pos 3-6) and answers the 'what is' intent directly.",
+   "files": ["src/data/blog/posts/pma-ittap-accreditation-reformer-course-amsterdam.ts"] },
+ { "page": "/equipment/reformer/", "action": "rewrite-snippet", "kind": "snippet",
+   "before": { "title": "Reformer Pilates Equipment at PT7 Amsterdam | In-Studio", "description": "The Reformer used in small-group and private classes at PT7, Van Baerlestraat 76C, Museumplein. Specs of the in-studio apparatus and how to book a class." },
+   "after": { "title": "Pilates Reformer Machine: How It Works | PT7", "description": "How the Pilates reformer machine works: adjustable footbar, smooth carriage, springs and straps, as used in PT7 classes at Van Baerlestraat 76C, Museumplein." },
+   "hypothesis": "Targets 'reformer pilates machine' (14 impr, pos 7.5) and 'pilates reformer machine' with an informational angle.",
+   "files": ["src/data/equipment.ts"] }
+] }
