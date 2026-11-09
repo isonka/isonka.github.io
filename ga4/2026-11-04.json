@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-04",
+  "rows": [
+    {
+      "date": "2026-11-04",
+      "landingPage": "(not set)",
+      "sessions": 7,
+      "engagedSessions": 2,
+      "keyEvents": 1
+    },
+    {
+      "date": "2026-11-04",
+      "landingPage": "/schedule",
+      "sessions": 4,
+      "engagedSessions": 4,
+      "keyEvents": 1
+    },
+    {
+      "date": "2026-11-04",
+      "landingPage": "/academy",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-11-04",
+      "landingPage": "/pricing",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    },
+    {
+      "date": "2026-11-04",
+      "landingPage": "/trainer/gulce/nl",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "keyEvents": 0
+    }
+  ]
+}
