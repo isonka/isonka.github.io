@@ -69,8 +69,8 @@ export const equipmentProducts: EquipmentProduct[] = [
     name: 'Pilates Reformer',
     priceEur: 1900,
     seo: {
-      title: 'Reformer Pilates Equipment at PT7 Amsterdam | In-Studio',
-      description: `The Reformer used in small-group and private classes at PT7, ${studioStreet}, Museumplein. Specs of the in-studio apparatus and how to book a class.`,
+      title: 'Pilates Reformer Machine: How It Works | PT7',
+      description: `How the Pilates reformer machine works: adjustable footbar, smooth carriage, springs and straps, as used in PT7 classes at ${studioStreet}, Museumplein.`,
       keywords: 'pilates reformer equipment, reformer pilates amsterdam, pilates apparatus museumplein, tower reformer studio',
     },
     images: [

@@ -1,8 +1,8 @@
 export const enSchedule = {
   seo: {
-    title: 'Pilates Classes Amsterdam Zuid | Book Online | PT7',
+    title: 'Pilates Near Me: Classes in Amsterdam Zuid | PT7',
     description:
-      'Live class schedule at Museumplein, Amsterdam Zuid: Reformer Pilates, TRX and strength in small groups (max 5) or privates at {{studioStreet}}. Book online.',
+      'Book Pilates classes near Museumplein, Amsterdam Zuid. Reformer, TRX and strength in small groups (max 5) or privates at {{studioStreet}}.',
     keywords:
       'pilates classes amsterdam, pilates classes near me, Pilates boeken Amsterdam, Pilates rooster Amsterdam, Pilates reserveren, TRX boeken Amsterdam, les boeken Museumplein, Pilates schedule Amsterdam, groepsles boeken, reformer pilates book amsterdam',
     ogTitle: 'Pilates Classes Amsterdam Zuid | Book Online | PT7',
