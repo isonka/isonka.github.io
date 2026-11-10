@@ -1725,4 +1725,9 @@ button.cta-btn {
   .academy-sticky-enroll {
     margin-right: 84px;
   }
+
+  .academy-sticky-enroll.is-covered {
+    transform: translateY(calc(100% + 32px));
+    pointer-events: none;
+  }
 }

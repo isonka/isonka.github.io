@@ -102,10 +102,8 @@ const reviewsData = [
 
 function TrainerTile({
   trainer,
-  extra,
 }: {
   trainer: (typeof trainers)[number];
-  extra?: boolean;
 }) {
   const { t } = useTranslation('home');
   const locale = useLocale();
@@ -118,7 +116,7 @@ function TrainerTile({
     <Link
       ref={ref}
       to={localeHref(trainer.to, locale)}
-      className={`home-person${extra ? ' home-person-extra' : ''}${inView ? ' is-inview' : ''}`}
+      className={`home-person${inView ? ' is-inview' : ''}`}
     >
       <div className="home-person-media">
         <img
@@ -416,8 +414,8 @@ export const Home= () => {
         </h2>
         <p className="home-sub">{t('trainers.sub')}</p>
         <div className="home-team-grid">
-          {trainers.map((trainer, index) => (
-            <TrainerTile key={trainer.to} trainer={trainer} extra={index >= 4} />
+          {trainers.map((trainer) => (
+            <TrainerTile key={trainer.to} trainer={trainer} />
           ))}
         </div>
         <p className="home-footnote">

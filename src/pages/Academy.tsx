@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Trans, useTranslation } from 'react-i18next';
 import { AcademyGraduates } from '../components/AcademyGraduates';
@@ -53,6 +53,7 @@ export const Academy= () => {
   const { t } = useTranslation('academy');
   const locale = useLocale();
   const isNl = locale === 'nl';
+  const stickyEnrollRef = useRef<HTMLDivElement>(null);
 
   const courseTitle = isNl ? COURSE_TITLE_NL : COURSE_TITLE;
   const matCourseTitle = isNl ? MAT_COURSE_TITLE_NL : MAT_COURSE_TITLE;
@@ -99,6 +100,36 @@ export const Academy= () => {
 
     document.addEventListener('click', onClick, true);
     return () => document.removeEventListener('click', onClick, true);
+  }, []);
+
+  useEffect(() => {
+    const sticky = stickyEnrollRef.current;
+    if (!sticky) return;
+
+    const targets = [...document.querySelectorAll<HTMLElement>('.academy-enroll-btn')].filter(
+      (el) => !el.closest('.academy-sticky-enroll'),
+    );
+    if (targets.length === 0) return;
+
+    const visible = new Set<Element>();
+    const sync = () => {
+      const covered = visible.size > 0;
+      sticky.classList.toggle('is-covered', covered);
+      sticky.setAttribute('aria-hidden', covered ? 'true' : 'false');
+    };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) visible.add(entry.target);
+          else visible.delete(entry.target);
+        }
+        sync();
+      },
+      { threshold: 0.25 },
+    );
+
+    targets.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
   }, []);
 
   const scrollToInquiry = () => {
@@ -646,7 +677,7 @@ export const Academy= () => {
           </div>
         </section>
 
-        <div className="academy-sticky-enroll" aria-label={t('enroll.stickyAria')}>
+        <div ref={stickyEnrollRef} className="academy-sticky-enroll" aria-label={t('enroll.stickyAria')}>
           <AcademyEnrollButtons course="reformer" location="sticky_bar" showInstallments={false} />
           <button
             type="button"

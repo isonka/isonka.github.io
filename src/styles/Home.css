@@ -1143,10 +1143,6 @@ h2.home-kicker-heading {
     width: calc(100% - 32px);
   }
 
-  .home-person-extra {
-    display: none;
-  }
-
   .workouts-list > .workout-item,
   .workouts-list > .workout-item:nth-child(odd),
   .workouts-list > .workout-item:nth-child(2n) {
