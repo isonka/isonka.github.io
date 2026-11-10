@@ -1,8 +1,4 @@
 import type { BlogPost } from './types.ts';
-import { post as whoTeachesPilatesInstructorCourseAmsterdam } from './posts/who-teaches-pilates-instructor-course-amsterdam.ts';
-import { post as pilatesInstructorCertificationsNetherlands } from './posts/pilates-instructor-certifications-netherlands.ts';
-import { post as supervisedPilatesTeachingPracticeAmsterdam } from './posts/supervised-pilates-teaching-practice-amsterdam.ts';
-import { post as pilatesInstructorCourseFeeWhatIsIncluded } from './posts/pilates-instructor-course-fee-what-is-included.ts';
 import { post as pt7MovesToOlympischStadion } from './posts/pt-7-moves-to-olympisch-stadion.ts';
 import { post as switchingCareersIntoPilates7Questions } from './posts/switching-careers-into-pilates-7-questions.ts';
 import { post as groupPilatesClassSizeAttentionAmsterdam } from './posts/group-pilates-class-size-attention-amsterdam.ts';
@@ -11,10 +7,6 @@ import { post as pmaIttapAccreditationReformerCourseAmsterdam } from './posts/pm
 import { post as pilatesPricesAmsterdam2026CompleteGuide } from './posts/pilates-prices-amsterdam-2026-complete-guide.ts';
 import { post as prenatalPilatesSupportingBodyThroughEveryTrimester } from './posts/prenatal-pilates-supporting-body-through-every-trimester.ts';
 import { post as pilatesForMenStrengthFlexibilityAthleticPerformance } from './posts/pilates-for-men-strength-flexibility-athletic-performance.ts';
-import { post as whoTeachesPilatesInstructorCourseAmsterdamNl } from './posts/nl/who-teaches-pilates-instructor-course-amsterdam.ts';
-import { post as pilatesInstructorCertificationsNetherlandsNl } from './posts/nl/pilates-instructor-certifications-netherlands.ts';
-import { post as supervisedPilatesTeachingPracticeAmsterdamNl } from './posts/nl/supervised-pilates-teaching-practice-amsterdam.ts';
-import { post as pilatesInstructorCourseFeeWhatIsIncludedNl } from './posts/nl/pilates-instructor-course-fee-what-is-included.ts';
 import { post as pt7MovesToOlympischStadionNl } from './posts/nl/pt-7-moves-to-olympisch-stadion.ts';
 import { post as switchingCareersIntoPilates7QuestionsNl } from './posts/nl/switching-careers-into-pilates-7-questions.ts';
 import { post as groupPilatesClassSizeAttentionAmsterdamNl } from './posts/nl/group-pilates-class-size-attention-amsterdam.ts';
@@ -29,10 +21,6 @@ export type { BlogPost };
 type BlogLocale = 'en' | 'nl';
 
 export const blogPosts: BlogPost[] = [
-  whoTeachesPilatesInstructorCourseAmsterdam,
-  pilatesInstructorCertificationsNetherlands,
-  supervisedPilatesTeachingPracticeAmsterdam,
-  pilatesInstructorCourseFeeWhatIsIncluded,
   pt7MovesToOlympischStadion,
   switchingCareersIntoPilates7Questions,
   groupPilatesClassSizeAttentionAmsterdam,
@@ -45,10 +33,6 @@ export const blogPosts: BlogPost[] = [
 
 /** Dutch translations, in the same order as `blogPosts`. Each spreads its English post and overrides the copy. */
 export const blogPostsNl: BlogPost[] = [
-  whoTeachesPilatesInstructorCourseAmsterdamNl,
-  pilatesInstructorCertificationsNetherlandsNl,
-  supervisedPilatesTeachingPracticeAmsterdamNl,
-  pilatesInstructorCourseFeeWhatIsIncludedNl,
   pt7MovesToOlympischStadionNl,
   switchingCareersIntoPilates7QuestionsNl,
   groupPilatesClassSizeAttentionAmsterdamNl,

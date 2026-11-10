@@ -318,7 +318,7 @@ export const Home= () => {
               <a href="https://maps.app.goo.gl/wrhyzYbov9eiGQJw5" target="_blank" rel="noopener noreferrer">
                 {t('reviews.google')}
               </a>
-              <a href="https://classpass.com/studios/pt-studio-7-amsterdam" target="_blank" rel="noopener noreferrer">
+              <a href="https://classpass.com/studios/pt7-amsterdam" target="_blank" rel="noopener noreferrer">
                 {t('reviews.classpass')}
               </a>
             </div>
@@ -457,7 +457,7 @@ export const Home= () => {
           <a href="https://maps.app.goo.gl/wrhyzYbov9eiGQJw5" target="_blank" rel="noopener noreferrer">
             {t('reviews.google')}
           </a>
-          <a href="https://classpass.com/studios/pt-studio-7-amsterdam" target="_blank" rel="noopener noreferrer">
+          <a href="https://classpass.com/studios/pt7-amsterdam" target="_blank" rel="noopener noreferrer">
             {t('reviews.classpass')}
           </a>
         </p>

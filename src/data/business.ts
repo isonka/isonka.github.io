@@ -55,7 +55,7 @@ export const business = {
     'https://www.instagram.com/pt7amsterdam',
     'https://www.facebook.com/ptstudio7',
     'https://www.linkedin.com/company/pt7',
-    'https://classpass.com/studios/pt-studio-7-amsterdam',
+    'https://classpass.com/studios/pt7-amsterdam',
     'https://www.google.com/maps?cid=16450626326549634329',
     'https://www.mindbodyonline.com/explore/locations/pt-studio-7',
   ],

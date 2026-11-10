@@ -85,14 +85,23 @@
   margin-top: 24px;
 }
 
-.trainer-hero-actions .trainer-btn-primary {
+.trainer-hero-actions .trainer-btn-primary,
+.trainer-hero-actions .trainer-btn-secondary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
   height: 44px;
   padding: 0 22px;
+  font-size: 15px;
+  line-height: 20px;
+  border-radius: var(--radius-pill, 999px);
+}
+
+.trainer-hero-actions .trainer-btn-primary {
   background: var(--gold, #ffd700);
   color: var(--ink, #1c1a18);
-  border-radius: var(--radius-pill, 999px);
+  border: 0;
 }
 
 .trainer-hero-actions .trainer-btn-primary:hover {
