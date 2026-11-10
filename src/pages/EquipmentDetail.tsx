@@ -60,7 +60,12 @@ export const EquipmentDetail= () => {
     policyHref: href(EQUIPMENT_RETURN_POLICY_PATH),
     policyLabel: t('returns.link'),
   };
-  const visibleFaq = forSaleOnly
+  const visibleFaq: Array<{
+    question: string;
+    answer: string;
+    policyHref?: string;
+    policyLabel?: string;
+  }> = forSaleOnly
     ? [...product.faq.filter((item) => item.question !== returnQuestion), returnFaq]
     : [
         {
