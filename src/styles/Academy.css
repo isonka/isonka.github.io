@@ -41,6 +41,7 @@
 .academy-courses h2,
 .academy-benefits h2,
 .academy-graduates h2,
+.academy-reviews h2,
 .academy-inquiry h2,
 .course-card-title {
   margin: 0 0 12px;
@@ -55,6 +56,7 @@
 .academy-pma-subtitle,
 .academy-sub,
 .academy-graduates-intro,
+.academy-reviews-intro,
 .academy-inquiry-intro {
   margin: 0 0 28px;
   font-size: 1rem;
@@ -981,6 +983,70 @@ button.cta-btn {
   background: transparent;
 }
 
+.academy-reviews {
+  padding: 0 0 72px;
+  background: transparent;
+}
+
+.academy-review-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.academy-review {
+  margin: 0;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid var(--line, #ddd5c6);
+  border-radius: 24px;
+}
+
+.academy-review blockquote,
+.academy-review p {
+  margin: 0;
+}
+
+.academy-review p {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--ink, #1c1a18);
+  white-space: pre-line;
+}
+
+.academy-review figcaption {
+  margin-top: 16px;
+}
+
+.academy-review cite {
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink, #1c1a18);
+}
+
+.academy-review-meta {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--muted, #5c574f);
+}
+
+.academy-review-more {
+  margin: 16px 0 0;
+}
+
+.academy-review-more a {
+  color: var(--gold-text, #7a6400);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.academy-review-more a:hover {
+  color: var(--ink, #1c1a18);
+}
+
 .academy-graduates-grid {
   list-style: none;
   margin: 0;
@@ -1166,6 +1232,14 @@ button.cta-btn {
   .academy-graduates,
   .academy-inquiry {
     padding: 56px 0;
+  }
+
+  .academy-reviews {
+    padding: 0 0 56px;
+  }
+
+  .academy-review-grid {
+    grid-template-columns: 1fr;
   }
 
   .academy-offer-facts {

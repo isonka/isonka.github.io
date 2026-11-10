@@ -26,7 +26,7 @@ export const enHome = {
     title: 'Pilates & Strength Training in Amsterdam Zuid',
     campaign: 'Pilates Black Friday',
     dates: 'until 20 November',
-    offerLead: 'Free classes.',
+    offerLead: 'More classes.',
     offerPrice: 'Same price.',
     line: 'Buy a class pack this Black Friday and we add up to four classes on top. Any group class: Reformer, TRX, strength, or cardio.',
     classes: '{{count}} classes',
@@ -86,7 +86,7 @@ export const enHome = {
     cardio: {
       title: 'Cardio',
       description: 'High-intensity cardio workouts to boost endurance and burn calories',
-      alt: 'Cardio Training',
+      alt: 'Technogym Skillrun',
     },
   },
   trainers: {
@@ -136,6 +136,12 @@ export const enHome = {
     classpass: 'ClassPass 4.9 · 2,500+ reviews',
     readMore: 'Read full review',
     items: {
+      mara: {
+        author: 'Mara',
+        meta: 'Google review · PT7 Academy',
+        pull: '“I learned so much during the course: Reformer Pilates, anatomy, and how to teach.”',
+        full: 'I had a really good experience at PT7 Academy. I learned so much during the course and gained a better understanding of Reformer Pilates, anatomy and how to teach. Elif has a great way of explaining things and makes sure you really understand the exercises and the reasoning behind them. I’ve gained a lot of confidence and really enjoyed the whole experience. Would definitely recommend!',
+      },
       lot: {
         author: 'Lot Canter Cremers',
         meta: 'Google review · Pregnancy & postpartum',

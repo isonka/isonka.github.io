@@ -27,7 +27,7 @@ export const Screen = () => {
           <p className="screen-kicker">Black Friday</p>
         </header>
 
-        <h1 className="screen-display-title">Free classes</h1>
+        <h1 className="screen-display-title">More classes</h1>
 
         <ul className="screen-offers">
           {OFFERS.map((offer) => (

@@ -91,7 +91,7 @@ const trainers = [
   { id: 'gamze', to: '/trainer/gamze/', src: '/assets/images/gamze.webp', name: 'E. Gamze Karadağ' },
 ] as const;
 
-const REVIEW_KEYS = ['lot', 'flaminia', 'maya', 'yesim', 'ayse'] as const;
+const REVIEW_KEYS = ['mara', 'lot', 'flaminia', 'maya', 'yesim', 'ayse'] as const;
 
 const reviewsData = [
   { author: 'Lot Canter Cremers', reviewBody: 'Through a neighbor in my building I was introduced to PT7...', ratingValue: 5 },

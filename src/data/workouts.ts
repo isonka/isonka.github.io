@@ -42,7 +42,7 @@ export const workouts: Workout[] = [
   {
     to: '/workouts/cardio/',
     src: '/assets/images/cardio.webp',
-    alt: 'Cardio Training',
+    alt: 'Technogym Skillrun',
     title: 'Cardio',
     description: 'High-intensity cardio workouts to boost endurance and burn calories',
     lane: 'strength',

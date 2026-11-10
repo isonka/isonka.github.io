@@ -29,7 +29,7 @@ export const nlHome: DeepStringify<EnHome> = {
     title: 'Pilates & krachttraining in Amsterdam Zuid',
     campaign: 'Pilates Black Friday',
     dates: 't/m 20 november',
-    offerLead: 'Gratis lessen.',
+    offerLead: 'Meer lessen.',
     offerPrice: 'Zelfde prijs.',
     line: 'Koop een lessenkaart tijdens Black Friday en we doen er tot vier lessen bij. Elke groepsles: Reformer, TRX, kracht of cardio.',
     classes: '{{count}} lessen',
@@ -89,7 +89,7 @@ export const nlHome: DeepStringify<EnHome> = {
     cardio: {
       title: 'Cardio',
       description: 'Intensieve cardio om uithoudingsvermogen te verbeteren en calorieën te verbranden',
-      alt: 'Cardiotraining',
+      alt: 'Technogym Skillrun',
     },
   },
   trainers: {
@@ -139,6 +139,12 @@ export const nlHome: DeepStringify<EnHome> = {
     classpass: 'ClassPass 4.9 · 2.500+ beoordelingen',
     readMore: 'Lees volledige review',
     items: {
+      mara: {
+        author: 'Mara',
+        meta: 'Google-review · PT7 Academy',
+        pull: '“Tijdens de opleiding veel geleerd: Reformer Pilates, anatomie en hoe je lesgeeft.”',
+        full: 'Ik had een heel goede ervaring bij PT7 Academy. Tijdens de opleiding heb ik veel geleerd en kreeg ik een beter begrip van Reformer Pilates, anatomie en hoe je lesgeeft. Elif legt dingen heel goed uit en zorgt dat je de oefeningen én de reden erachter echt begrijpt. Ik heb veel meer zelfvertrouwen gekregen en de hele ervaring was fijn. Ik raad het zeker aan!',
+      },
       lot: {
         author: 'Lot Canter Cremers',
         meta: 'Google-review · Zwangerschap & postpartum',

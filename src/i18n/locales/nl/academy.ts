@@ -262,6 +262,24 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
     stickyAria: 'Inschrijven',
   },
   termBadge: 'Lente 2027',
+  reviews: {
+    kicker: 'Reviews',
+    heading: 'Van de Academy',
+    sub: 'Google-reviews van mensen die de opleiding bij PT7 Academy volgden.',
+    googleLink: 'Lees op Google',
+    items: {
+      mara: {
+        author: 'Mara',
+        meta: 'Google-review',
+        text: 'Ik had een heel goede ervaring bij PT7 Academy. Tijdens de opleiding heb ik veel geleerd en kreeg ik een beter begrip van Reformer Pilates, anatomie en hoe je lesgeeft. Elif legt dingen heel goed uit en zorgt dat je de oefeningen én de reden erachter echt begrijpt. Ik heb veel meer zelfvertrouwen gekregen en de hele ervaring was fijn. Ik raad het zeker aan!',
+      },
+      kelly: {
+        author: 'Kelly Tin',
+        meta: 'Google-review',
+        text: 'Ik ben heel blij dat ik mijn Reformer Pilates-certificering bij PT7 Academy heb gedaan. Ik hield al van Reformer Pilates vanwege hoe ik me mentaal en fysiek voelde, maar tijdens de academy leerde ik veel meer over de oefeningen, het lichaam en anatomie.\n\nElif is ongelooflijk deskundig, steunend, en neemt de tijd om je persoonlijk te begeleiden. Ik ben gegroeid in mijn eigen practice en heb het vertrouwen gekregen om zelf les te geven.\n\nHet is waardevol om nu iets waar ik gepassioneerd over ben te delen, en anderen de fysieke en mentale voordelen van Reformer Pilates te laten ervaren. Ik ben dankbaar voor deze ervaring en raad PT7 Academy zeker aan.',
+      },
+    },
+  },
   faqSection: {
     heading: 'Vragen vóór inschrijving',
     further:

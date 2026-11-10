@@ -621,6 +621,34 @@ export const Academy= () => {
 
         <AcademyGraduates locale={locale} />
 
+        <section className="academy-reviews" aria-labelledby="academy-reviews-heading">
+          <div className="academy-container">
+            <p className="academy-kicker">{t('reviews.kicker')}</p>
+            <h2 id="academy-reviews-heading">
+              <MediumTail text={t('reviews.heading')} />
+            </h2>
+            <p className="academy-reviews-intro">{t('reviews.sub')}</p>
+            <div className="academy-review-grid">
+              {(['mara', 'kelly'] as const).map((key) => (
+                <figure key={key} className="academy-review">
+                  <blockquote>
+                    <p>{t(`reviews.items.${key}.text`)}</p>
+                  </blockquote>
+                  <figcaption>
+                    <cite>{t(`reviews.items.${key}.author`)}</cite>
+                    <span className="academy-review-meta">{t(`reviews.items.${key}.meta`)}</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+            <p className="academy-review-more">
+              <a href="https://maps.app.goo.gl/wrhyzYbov9eiGQJw5" target="_blank" rel="noopener noreferrer">
+                {t('reviews.googleLink')}
+              </a>
+            </p>
+          </div>
+        </section>
+
         <AcademyInquiry locale={locale} />
 
         <section className="academy-benefits">

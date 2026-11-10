@@ -466,6 +466,7 @@ export const workoutDetails: WorkoutDetailData[] = [
     breadcrumbName: 'Cardio Training',
     hero: {
       image: '/assets/images/cardio.webp',
+      imagePosition: '72% center',
       title: 'Cardio Training',
       tagline: 'High-intensity cardio workouts to boost endurance and burn calories',
       ctaLabel: 'Book a Session',

@@ -260,6 +260,24 @@ export const enAcademy = {
     stickyAria: 'Enroll',
   },
   termBadge: 'Spring 2027',
+  reviews: {
+    kicker: 'Reviews',
+    heading: 'From the Academy',
+    sub: 'Google reviews from people who trained at PT7 Academy.',
+    googleLink: 'Read on Google',
+    items: {
+      mara: {
+        author: 'Mara',
+        meta: 'Google review',
+        text: 'I had a really good experience at PT7 Academy. I learned so much during the course and gained a better understanding of Reformer Pilates, anatomy and how to teach. Elif has a great way of explaining things and makes sure you really understand the exercises and the reasoning behind them. I’ve gained a lot of confidence and really enjoyed the whole experience. Would definitely recommend!',
+      },
+      kelly: {
+        author: 'Kelly Tin',
+        meta: 'Google review',
+        text: 'I’m very happy I chose to do my Reformer Pilates certification at PT7 Academy! I already loved Reformer Pilates for how it made me feel mentally and physically, but during the academy I learned so much more about the exercises, the body and anatomy.\n\nElif is incredibly knowledgeable, supportive and takes the time to guide you personally. I’ve grown a lot in my own practice, but also gained the confidence to start teaching myself.\n\nIt’s so rewarding to now share something I’m passionate about with others and help them experience the physical and mental benefits of Reformer Pilates too. I’m very grateful for this experience and would definitely recommend PT7 Academy!',
+      },
+    },
+  },
   faqSection: {
     heading: 'Questions before you enroll',
     further:
