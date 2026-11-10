@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
-import { BASE_URL } from '../data/business';
+import { BASE_URL, EQUIPMENT_RETURN_POLICY_PATH } from '../data/business';
 import { formatEquipmentPrice } from '../data/equipment';
 import { equipmentFor } from '../data/localized';
 import { homePath } from '../i18n/locale';
@@ -94,6 +94,11 @@ export const Equipment= () => {
           <h2 id="equipment-dealer-heading"><MediumTail text={t('dealer.title')} /></h2>
           <p>{t('dealer.text')}</p>
           {isNl ? null : <p lang="nl">{t('dealer.dutchNote')}</p>}
+          <p>
+            <Link to={href(EQUIPMENT_RETURN_POLICY_PATH)}>{t('returns.link')}</Link>
+            {'. '}
+            {t('returns.answer')}
+          </p>
           <p>
             <a
               href={`mailto:info@pt7.nl?subject=${encodeURIComponent(t('dealer.quoteSubject'))}`}

@@ -65,6 +65,21 @@ export const enEquipment = {
     faqSellingA:
       'Yes. This apparatus is for sale and is also used in classes at our Museumplein studio. The listed price does not include customs duty, shipping, or VAT (BTW). Apparatus is imported from Türkiye. Contact us to order and for the final price.',
   },
+  returns: {
+    question: 'Can I return it after purchase?',
+    answer: 'Returns are not possible for this product after purchase, as each product is made to order.',
+    link: 'Equipment return policy',
+    pageTitle: 'Equipment return policy',
+    seoTitle: 'Equipment return policy | PT7 Pilates Amsterdam',
+    seoKeywords: 'equipment return policy, pilates equipment returns, PT7, made to order',
+    seoDescription:
+      'PT7 does not accept returns on Pilates equipment. Each piece is made to order. A 2-year warranty covers manufacturing defects.',
+    breadcrumb: 'Equipment return policy',
+    country: 'This applies to equipment orders delivered in the Netherlands.',
+    warrantyTitle: 'Warranty',
+    warranty:
+      'All our equipment comes with a 2-year warranty covering manufacturing defects and materials. A warranty claim is not a return.',
+  },
   faqTitle: 'Frequently Asked Questions',
   contact: {
     title: 'Ready to Order?',

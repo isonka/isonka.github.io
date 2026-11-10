@@ -105,6 +105,26 @@ const FIXED_PAGES: Route[] = [
   { path: '/corporate/', prerender: true, sitemap: { lastmod: '2026-08-27', changefreq: 'monthly', priority: '0.7' } },
   { path: '/privacy/', prerender: true, sitemap: { lastmod: '2026-08-27', changefreq: 'yearly', priority: '0.3' } },
   { path: '/equipment/', prerender: true, sitemap: { lastmod: '2026-03-10', changefreq: 'monthly', priority: '0.7' } },
+  {
+    path: '/equipment-return-policy/',
+    prerender: true,
+    sitemap: { lastmod: '2026-11-10', changefreq: 'yearly', priority: '0.3' },
+    meta: {
+      title: 'Equipment return policy | PT7 Pilates Amsterdam',
+      description:
+        'PT7 does not accept returns on Pilates equipment. Each piece is made to order. A 2-year warranty covers manufacturing defects.',
+    },
+  },
+  {
+    path: '/equipment-return-policy/nl/',
+    prerender: true,
+    sitemap: { lastmod: '2026-11-10', changefreq: 'yearly', priority: '0.3' },
+    meta: {
+      title: 'Retourbeleid apparatuur | PT7 Pilates Amsterdam',
+      description:
+        'PT7 neemt pilatesapparatuur na aankoop niet retour. Elk product wordt op bestelling gemaakt. Op fabricagefouten zit 2 jaar garantie.',
+    },
+  },
   { path: '/blog/', prerender: true, sitemap: { lastmod: '2026-09-17', changefreq: 'weekly', priority: '0.8' } },
 
   { path: '/prenatal-pilates-amsterdam/', prerender: true, sitemap: { lastmod: '2026-07-29', changefreq: 'monthly', priority: '0.9' } },

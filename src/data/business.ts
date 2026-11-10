@@ -1,5 +1,9 @@
 export const BASE_URL = 'https://www.pt7.nl';
 
+/** Public return-policy URL for equipment. Google Merchant Center uses this link. */
+export const EQUIPMENT_RETURN_POLICY_PATH = '/equipment-return-policy/';
+export const EQUIPMENT_RETURN_POLICY_URL = `${BASE_URL}${EQUIPMENT_RETURN_POLICY_PATH}`;
+
 export const SCHEMA_IDS = {
   organization: `${BASE_URL}/#organization`,
   localBusiness: `${BASE_URL}/#localbusiness`,

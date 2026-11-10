@@ -59,6 +59,7 @@ export const Footer= () => {
             <li><Link to={localeHref('/blog/', locale)}>{t('footer.blog')}</Link></li>
             <li><a href="#contact" onClick={handleContactClick}>{t('footer.contact')}</a></li>
             <li><Link to={localeHref('/privacy/', locale)}>{t('footer.privacy')}</Link></li>
+            <li><Link to={localeHref('/equipment-return-policy/', locale)}>{t('footer.equipmentReturns')}</Link></li>
             <li><a href="#" onClick={handleCookieSettings}>{t('footer.cookies')}</a></li>
           </ul>
         </nav>

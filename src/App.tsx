@@ -37,6 +37,7 @@ const OpeningOffer = lazyPage(() => import('./pages/OpeningOffer').then(m => ({ 
 const Schedule = lazyPage(() => import('./pages/Schedule').then(m => ({ default: m.Schedule })), ['schedule']);
 const Equipment = lazyPage(() => import('./pages/Equipment').then(m => ({ default: m.Equipment })), ['equipment']);
 const EquipmentDetail = lazyPage(() => import('./pages/EquipmentDetail').then(m => ({ default: m.EquipmentDetail })), ['equipment', 'notFound']);
+const EquipmentReturnPolicy = lazyPage(() => import('./pages/EquipmentReturnPolicy').then(m => ({ default: m.EquipmentReturnPolicy })), ['equipment']);
 const Congrats = lazyPage(() => import('./pages/Congrats').then(m => ({ default: m.Congrats })), ['congrats']);
 const Trainers = lazyPage(() => import('./pages/Trainers').then(m => ({ default: m.Trainers })), ['instructors']);
 const TrainerDetail = lazyPage(() => import('./pages/TrainerDetail').then(m => ({ default: m.TrainerDetail })), ['instructors', 'notFound']);
@@ -181,6 +182,8 @@ function App() {
           <Route path="schedule/nl" element={<Schedule />} />
           <Route path="equipment" element={<Equipment />} />
           <Route path="equipment/nl" element={<Equipment />} />
+          <Route path="equipment-return-policy" element={<EquipmentReturnPolicy />} />
+          <Route path="equipment-return-policy/nl" element={<EquipmentReturnPolicy />} />
           <Route path="equipment/:slug" element={<EquipmentDetail />} />
           <Route path="equipment/:slug/nl" element={<EquipmentDetail />} />
           <Route path="workouts/:slug" element={<WorkoutDetail />} />

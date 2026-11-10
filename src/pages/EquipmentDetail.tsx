@@ -6,7 +6,7 @@ import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { EquipmentFAQ } from '../components/EquipmentFAQ';
 import { EquipmentContact } from '../components/EquipmentContact';
-import { BASE_URL, studioStreet } from '../data/business';
+import { BASE_URL, EQUIPMENT_RETURN_POLICY_PATH, studioStreet } from '../data/business';
 import { formatEquipmentPrice } from '../data/equipment';
 import { equipmentFor } from '../data/localized';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
@@ -53,8 +53,15 @@ export const EquipmentDetail= () => {
   const currentImage = product.images[activeImage] || product.images[0];
   const forSaleOnly = product.slug === 'ladder-barrel';
   const inquiryHref = `mailto:info@pt7.nl?subject=${encodeURIComponent(t('cards.quoteSubject', { name: product.name }))}&body=${encodeURIComponent(t('cards.quoteBody', { name: product.name }))}`;
+  const returnQuestion = t('returns.question');
+  const returnFaq = {
+    question: returnQuestion,
+    answer: t('returns.answer'),
+    policyHref: href(EQUIPMENT_RETURN_POLICY_PATH),
+    policyLabel: t('returns.link'),
+  };
   const visibleFaq = forSaleOnly
-    ? product.faq
+    ? [...product.faq.filter((item) => item.question !== returnQuestion), returnFaq]
     : [
         {
           question: t('detail.faqTrainQ', { name: product.name }),
@@ -64,6 +71,7 @@ export const EquipmentDetail= () => {
           question: t('detail.faqSellingQ'),
           answer: t('detail.faqSellingA'),
         },
+        returnFaq,
       ];
 
   return (
@@ -76,7 +84,17 @@ export const EquipmentDetail= () => {
         hreflangAlternates={page.hreflang}
         {...page.seoLocale}
       />
-      <StructuredData type="FAQPage" data={{ faqs: visibleFaq }} />
+      <StructuredData
+        type="FAQPage"
+        data={{
+          faqs: visibleFaq.map((item) => ({
+            question: item.question,
+            answer: item.policyHref
+              ? `${item.answer} ${BASE_URL}${EQUIPMENT_RETURN_POLICY_PATH}`
+              : item.answer,
+          })),
+        }}
+      />
       <StructuredData
         type="Product"
         data={{

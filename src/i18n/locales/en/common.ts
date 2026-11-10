@@ -49,6 +49,7 @@ export const enCommon = {
     blog: 'Blog',
     contact: 'Contact',
     privacy: 'Privacy',
+    equipmentReturns: 'Equipment returns',
     cookies: 'Cookies',
     copyright: '© {{year}} PT7 Amsterdam. All rights reserved.',
     websiteBy: 'Website by',

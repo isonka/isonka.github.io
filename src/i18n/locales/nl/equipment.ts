@@ -67,6 +67,21 @@ export const nlEquipment: DeepStringify<EnEquipment> = {
     faqSellingA:
       'Ja. Dit apparaat is te koop en gebruiken we ook in lessen in onze studio aan het Museumplein. Douanekosten, verzending en BTW zitten niet in de getoonde prijs. De apparatuur wordt geïmporteerd uit Turkije. Neem contact op om te bestellen en voor de definitieve prijs.',
   },
+  returns: {
+    question: 'Kan ik het na aankoop retourneren?',
+    answer: 'Retourneren is na aankoop niet mogelijk, omdat elk product op bestelling wordt gemaakt.',
+    link: 'Retourbeleid apparatuur',
+    pageTitle: 'Retourbeleid apparatuur',
+    seoTitle: 'Retourbeleid apparatuur | PT7 Pilates Amsterdam',
+    seoKeywords: 'retourbeleid apparatuur, pilates apparatuur retour, PT7, op bestelling',
+    seoDescription:
+      'PT7 neemt pilatesapparatuur na aankoop niet retour. Elk product wordt op bestelling gemaakt. Op fabricagefouten zit 2 jaar garantie.',
+    breadcrumb: 'Retourbeleid apparatuur',
+    country: 'Dit geldt voor apparatuur die in Nederland wordt geleverd.',
+    warrantyTitle: 'Garantie',
+    warranty:
+      'Op al onze apparatuur zit 2 jaar garantie op fabricagefouten en materialen. Een garantieclaim is geen retour.',
+  },
   faqTitle: 'Veelgestelde vragen',
   contact: {
     title: 'Klaar om te bestellen?',

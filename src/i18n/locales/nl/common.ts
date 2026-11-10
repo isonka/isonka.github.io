@@ -52,6 +52,7 @@ export const nlCommon: DeepStringify<EnCommon> = {
     blog: 'Blog',
     contact: 'Contact',
     privacy: 'Privacy',
+    equipmentReturns: 'Retour apparatuur',
     cookies: 'Cookies',
     copyright: '© {{year}} PT7 Amsterdam. Alle rechten voorbehouden.',
     websiteBy: 'Website door',

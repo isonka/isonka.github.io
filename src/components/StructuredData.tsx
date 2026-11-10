@@ -1,4 +1,4 @@
-import { business, SCHEMA_IDS, BASE_URL } from '../data/business';
+import { business, SCHEMA_IDS, BASE_URL, EQUIPMENT_RETURN_POLICY_URL } from '../data/business';
 
 interface Review {
   author: string;
@@ -111,11 +111,12 @@ interface StructuredDataProps {
   };
 }
 
-/** Equipment is made to order. FAQ: returns are not possible after purchase. */
+/** Equipment is made to order. Returns are not possible after purchase. */
 const equipmentReturnPolicy = {
   '@type': 'MerchantReturnPolicy',
   applicableCountry: 'NL',
   returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+  merchantReturnLink: EQUIPMENT_RETURN_POLICY_URL,
 };
 
 /** Google merchant listings require a numeric price, on the offer or inside PriceSpecification. */
