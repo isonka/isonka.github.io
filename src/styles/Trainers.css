@@ -16,64 +16,61 @@
 
 .instructors-kicker {
   margin: 0 0 12px;
-  font-size: 0.72rem;
+  font-size: 13px;
   font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: #c9a800;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: var(--gold-text, #7a6400);
 }
 
 .instructors-header h1 {
   margin: 0 0 12px;
   font-size: clamp(2.4rem, 6vw, 4.2rem);
-  font-weight: 700;
+  font-weight: 300;
   letter-spacing: -0.035em;
   line-height: 1.05;
-  color: #111;
+  color: var(--ink, #1c1a18);
 }
 
 .instructors-header p:last-child {
   margin: 0;
   font-size: 1.05rem;
-  color: #555;
+  color: var(--muted, #5c574f);
 }
 
 .instructor-row {
   display: grid;
-  grid-template-columns: 200px minmax(0, 1fr);
+  grid-template-columns: 160px minmax(0, 1fr);
   grid-template-areas: "photo info";
-  gap: 28px 40px;
+  gap: 20px 28px;
   align-items: center;
-  padding: 40px 0;
+  padding: 20px 0;
   text-decoration: none;
   color: inherit;
-  border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+  border-bottom: 1px solid var(--line, #ddd5c6);
 }
 
 .instructor-row-photo {
   grid-area: photo;
   position: relative;
-  width: 200px;
+  width: 160px;
   height: 200px;
-  max-width: 200px;
+  max-width: 160px;
   overflow: hidden;
-  background: #f4f4f4;
-  border-radius: 50%;
-  border: 3px solid #ffd700;
+  background: var(--placeholder, #d6c9af);
+  border-radius: 24px;
+  border: 0;
   justify-self: start;
   opacity: 0;
-  transform: scale(0.72);
-  box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.5);
-  transition:
-    opacity 0.55s ease var(--row-delay, 0ms),
-    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) var(--row-delay, 0ms),
-    box-shadow 0.9s ease var(--row-delay, 0ms);
+  transform: none;
+  box-shadow: none;
+  transition: opacity 0.55s ease var(--row-delay, 0ms);
 }
 
 .instructor-row.is-in .instructor-row-photo {
   opacity: 1;
-  transform: scale(1);
-  box-shadow: 0 0 0 12px rgba(255, 215, 0, 0);
+  transform: none;
+  box-shadow: none;
 }
 
 .instructor-row-photo img {
@@ -88,21 +85,24 @@
 }
 
 .instructor-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin: 0;
-  font-size: clamp(2rem, 4.4vw, 3.6rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  color: #111;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 28px;
+  color: var(--ink, #1c1a18);
 }
 
 .instructor-role {
   margin: 14px 0 0;
-  font-size: 0.72rem;
+  font-size: 13px;
   font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #666;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: var(--muted, #5c574f);
 }
 
 .instructor-bio {
@@ -110,23 +110,23 @@
   max-width: 38em;
   font-size: 0.98rem;
   line-height: 1.7;
-  color: #444;
+  color: var(--ink, #1c1a18);
 }
 
 .instructor-meta {
   margin: 18px 0 0;
   font-size: 0.82rem;
   letter-spacing: 0.04em;
-  color: #777;
+  color: var(--muted, #5c574f);
 }
 
 .instructor-link {
   display: inline-block;
   margin-top: 22px;
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.02em;
-  color: #111;
+  color: var(--ink, #1c1a18);
   opacity: 1;
   transform: none;
 }
@@ -137,7 +137,7 @@
   }
 
   .instructor-row:hover .instructor-link {
-    color: #c9a800;
+    color: var(--gold-text, #7a6400);
     transform: translateX(4px);
   }
 
@@ -176,43 +176,48 @@
 
 .growing-banner-text h2 {
   font-size: 1.6rem;
-  font-weight: 700;
-  color: #111;
+  font-weight: 500;
+  color: var(--ink, #1c1a18);
   margin: 0 0 8px;
 }
 
 .growing-banner-text p {
   font-size: 1rem;
-  color: #666;
+  color: var(--muted, #5c574f);
   margin: 0;
 }
 
 .growing-banner-link {
   white-space: nowrap;
   padding: 14px 32px;
-  background: #111;
+  background: var(--ink, #1c1a18);
   color: #fff;
   text-decoration: none;
   border-radius: var(--radius-pill);
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.95rem;
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .growing-banner-link:hover {
-  background: #333;
+  background: #000;
   transform: translateY(-2px);
 }
 
 .trainers-cta {
   text-align: center;
-  padding: 80px 24px;
-  background: #111;
+  width: calc(100% - 48px);
+  max-width: var(--page-max-width, 1200px);
+  margin: 56px auto 0;
+  padding: 48px 32px;
+  border-radius: 24px;
+  box-sizing: border-box;
+  background: var(--ink, #1c1a18);
 }
 
 .trainers-cta h2 {
   font-size: 2.2rem;
-  font-weight: 700;
+  font-weight: 300;
   color: #fff;
   margin: 0 0 12px 0;
   letter-spacing: -0.01em;
@@ -236,7 +241,7 @@
   display: inline-block;
   padding: 16px 40px;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none;
   border-radius: var(--radius-pill);
   transition: background 0.2s ease, border-color 0.2s ease;
@@ -244,11 +249,11 @@
 
 .trainers-btn-primary {
   background: #fff;
-  color: #111;
+  color: var(--ink, #1c1a18);
 }
 
 .trainers-btn-primary:hover {
-  background: #f5f5f5;
+  background: var(--ground-stone, #ebe4d6);
 }
 
 .trainers-btn-secondary {
@@ -272,10 +277,10 @@
 
   .instructor-row-photo {
     width: 112px;
-    height: 112px;
+    height: 140px;
     max-width: 112px;
     justify-self: start;
-    border-width: 2px;
+    border-width: 0;
   }
 
   .instructor-name {
@@ -284,8 +289,8 @@
 
   .instructor-role {
     margin-top: 6px;
-    font-size: 0.65rem;
-    letter-spacing: 0.12em;
+    font-size: 13px;
+    letter-spacing: 0.04em;
   }
 
   .instructor-bio {
@@ -313,7 +318,8 @@
 
   .instructors-header h1 {
     font-size: 2.1rem;
-  }
+  font-weight: 300;
+}
 
   .growing-banner-inner {
     flex-direction: column;
@@ -326,7 +332,8 @@
 
   .trainers-cta h2 {
     font-size: 1.75rem;
-  }
+  font-weight: 300;
+}
 
   .trainers-cta-buttons {
     flex-direction: column;
@@ -351,5 +358,106 @@
     box-shadow: none;
     transition: none;
     animation: none;
+  }
+}
+
+/* ===== App language: instructors as the same 4:5 tiles as "Meet your coaches" ===== */
+.instructors-stack {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 16px;
+  row-gap: 36px;
+}
+
+.instructors-header {
+  grid-column: 1 / -1;
+  margin-bottom: 12px;
+}
+
+.instructor-row {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  border-bottom: 0;
+}
+
+.instructor-row-photo {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  aspect-ratio: 4 / 5;
+}
+
+.instructor-row-info {
+  padding: 10px 4px 0;
+}
+
+.instructor-name {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0;
+}
+
+.instructor-role {
+  margin: 2px 0 0 19px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.instructor-bio {
+  display: -webkit-box;
+  margin: 10px 0 0;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--muted, #5c574f);
+}
+
+.instructor-meta {
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+.instructor-link {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0;
+  color: var(--gold-text, #7a6400);
+}
+
+.trainers-growing-banner {
+  background: transparent;
+  border-top: 0;
+}
+
+@media (max-width: 960px) {
+  .instructors-stack {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 28px;
+  }
+}
+
+@media (max-width: 720px) {
+  .instructors-stack {
+    column-gap: 12px;
+    padding: 32px 16px 24px;
+  }
+
+  .instructor-bio,
+  .instructor-meta {
+    display: none;
+  }
+
+  .instructor-role {
+    margin-left: 0;
   }
 }

@@ -136,6 +136,11 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
     title: 'Cursusvereisten',
     text: 'Voorafgaande pilates- of leservaring is niet vereist om je in te schrijven. Tijdens het programma voltooien deelnemers de toegewezen huiswerkopdrachten en slagen zij voor de verplichte oefeningsevaluatie met een lead trainer.',
   },
+  learn: {
+    heading: 'Wat je leert.',
+    total: 'Totaal',
+    totalValue: '300 uur',
+  },
   breakdown: {
     title: 'Trainingsoverzicht (300 uur totaal)',
     studioAccess:

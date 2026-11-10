@@ -11,6 +11,8 @@ import { workoutDetailsFor } from '../data/localized';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import { NotFound } from './NotFound';
 import '../styles/WorkoutDetail.css';
+import { MediumTail } from '../components/MediumTail';
+import { laneFromText } from '../lib/lanes';
 
 export const WorkoutDetail= () => {
   const { t } = useTranslation('workout');
@@ -124,39 +126,40 @@ export const WorkoutDetail= () => {
             </div>
           </section>
         ) : (
-          <section
-            className="workout-hero"
-            style={{
-              backgroundImage: `url(${workout.hero.image})`,
-              backgroundPosition: workout.hero.imagePosition ?? 'center',
-            }}
-          >
-            <div className="workout-hero-overlay">
-              <div className="workout-hero-content">
-                <h1>{workout.hero.title}</h1>
-                <p className="workout-tagline">{workout.hero.tagline}</p>
-                <Link to={href(workout.hero.ctaTo)} className="cta-button primary">{workout.hero.ctaLabel}</Link>
-              </div>
+          <section className="workout-hero">
+            <img
+              className="workout-hero-photo"
+              src={workout.hero.image}
+              alt={t('heroAlt', { title: workout.hero.title })}
+              style={{ objectPosition: workout.hero.imagePosition ?? 'center' }}
+            />
+            <div className="workout-hero-sheet">
+              <h1 className="kit-title">
+                <span className={`lane-stripe lane-${laneFromText(workout.hero.title)}`} aria-hidden="true" />
+                <MediumTail text={workout.hero.title} />
+              </h1>
+              <p className="workout-tagline">{workout.hero.tagline}</p>
+              <Link to={href(workout.hero.ctaTo)} className="cta-button primary">{workout.hero.ctaLabel}</Link>
             </div>
           </section>
         )}
 
         <div className="workout-content">
-          <section className="workout-intro">
-            <h2>{workout.intro.title}</h2>
+            <section className="workout-intro">
+            <h2><MediumTail text={workout.intro.title} /></h2>
             <p className="lead">{workout.intro.lead}</p>
           </section>
 
           {workout.equipmentGallery && (
             <section className="equipment-gallery-section">
-              <h2>{workout.equipmentGallery.title}</h2>
-              <div className="equipment-gallery-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginTop: '2rem' }}>
+              <h2><MediumTail text={workout.equipmentGallery.title} /></h2>
+              <div className="equipment-gallery-grid">
                 {workout.equipmentGallery.items.map((item, i) => (
-                  <div key={i} className="equipment-gallery-item" style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 15px rgba(0,0,0,0.1)' }}>
-                    <img src={item.image} alt={item.imageAlt} width={item.width} height={item.height} style={{ width: '100%', height: '250px', objectFit: 'cover' }} loading="lazy" />
-                    <div style={{ padding: '1rem', background: '#fff' }}>
-                      <h4 style={{ margin: '0 0 0.5rem', color: '#333' }}>{item.title}</h4>
-                      <p style={{ margin: 0, color: '#666', fontSize: '0.9rem' }}>{item.description}</p>
+                  <div key={i} className="equipment-gallery-item">
+                    <img src={item.image} alt={item.imageAlt} width={item.width} height={item.height} loading="lazy" />
+                    <div className="equipment-gallery-copy">
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
                     </div>
                   </div>
                 ))}
@@ -165,7 +168,7 @@ export const WorkoutDetail= () => {
           )}
 
           <section className="benefits-section">
-            <h2>{workout.benefits.title}</h2>
+            <h2><MediumTail text={workout.benefits.title} /></h2>
             <div className="benefits-grid">
               {workout.benefits.cards.map((card, i) => (
                 <div key={i} className="benefit-card">
@@ -177,7 +180,7 @@ export const WorkoutDetail= () => {
           </section>
 
           <section className="for-whom-section">
-            <h2>{workout.forWhom.title}</h2>
+            <h2><MediumTail text={workout.forWhom.title} /></h2>
             <div className="for-whom-grid">
               {workout.forWhom.cards.map((card, i) => (
                 <div key={i} className="for-whom-card">
@@ -208,7 +211,7 @@ export const WorkoutDetail= () => {
           )}
 
           <section id="buy" className="class-options-section">
-            <h2>{workout.classOptions.title}</h2>
+            <h2><MediumTail text={workout.classOptions.title} /></h2>
             <div className="class-options-grid">
               {workout.classOptions.cards.map((card, i) => (
                 <div key={i} className={`class-option-card${card.featured ? ' featured' : ''}`}>
@@ -235,29 +238,32 @@ export const WorkoutDetail= () => {
           </section>
 
           <section className="trainers-section">
-            <h2>{workout.trainers.title}</h2>
+            <h2><MediumTail text={workout.trainers.title} /></h2>
             <div className="trainers-grid">
               {workout.trainers.cards.map((trainer) => (
-                <div key={trainer.slug} className="trainer-mini-card">
-                  <img
-                    src={trainer.image}
-                    alt={trainer.imageAlt}
-                    width="400"
-                    height="280"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <h3>{trainer.name}</h3>
-                  <p className="trainer-cert">{trainer.cert}</p>
-                  <p>{trainer.description}</p>
-                  <Link to={href(`/trainer/${trainer.slug}/`)} className="trainer-link">{t('viewProfile')}</Link>
-                </div>
+                <Link key={trainer.slug} to={href(`/trainer/${trainer.slug}/`)} className="trainer-mini-card">
+                  <span className="trainer-mini-media">
+                    <img
+                      src={trainer.image}
+                      alt={trainer.imageAlt}
+                      width="400"
+                      height="500"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </span>
+                  <span className="trainer-mini-name">
+                    <span className={`lane-stripe lane-stripe-sm lane-${laneFromText(trainer.cert || trainer.description)}`} aria-hidden="true" />
+                    {trainer.name}
+                  </span>
+                  <span className="trainer-mini-meta">{trainer.cert || trainer.description}</span>
+                </Link>
               ))}
             </div>
           </section>
 
           <section className="faq-section">
-            <h2>{t('faqTitle')}</h2>
+            <h2><MediumTail text={t('faqTitle')} /></h2>
             <div className="faq-list">
               {workout.faq.map((item, i) => (
                 <div key={i} className="faq-item">
@@ -269,7 +275,7 @@ export const WorkoutDetail= () => {
           </section>
 
           <section className="final-cta">
-            <h2>{workout.finalCta.title}</h2>
+            <h2><MediumTail text={workout.finalCta.title} /></h2>
             <p>{workout.finalCta.subtitle}</p>
             <div className="cta-buttons">
               {isAnchorLink(workout.finalCta.primaryTo) ? (

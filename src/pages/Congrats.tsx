@@ -6,6 +6,7 @@ import { trackBookingConfirmation, trackPageView } from '../utils/gtmTracking';
 import { trackAdsConversion } from '../utils/consentTracking';
 import { isPrerender } from '../utils/prerender';
 import '../styles/Congrats.css';
+import { MediumTail } from '../components/MediumTail';
 import { business } from '../data/business';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
 
@@ -47,11 +48,11 @@ export const Congrats= () => {
       <div className="congrats-page">
         <div className="congrats-container">
           <div className="success-icon">✓</div>
-          <h1>{t('title')}</h1>
+          <h1><MediumTail text={t('title')} /></h1>
           <p className="congrats-message">{t('message')}</p>
 
           <div className="next-steps">
-            <h2>{t('nextTitle')}</h2>
+            <h2><MediumTail text={t('nextTitle')} /></h2>
             <ul>
               <li>{t('next.email')}</li>
               <li>{t('next.early')}</li>

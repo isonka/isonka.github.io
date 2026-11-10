@@ -61,7 +61,7 @@
 .oo-hero h1 {
   margin: 0 0 16px;
   font-size: clamp(2rem, 5vw, 3.4rem);
-  font-weight: 700;
+  font-weight: 300;
   line-height: 1.08;
   letter-spacing: -0.03em;
   color: #fff;
@@ -88,10 +88,10 @@
 
 .oo-countdown-label {
   margin: 0 0 12px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: none;
   color: rgba(255, 255, 255, 0.82);
 }
 
@@ -114,7 +114,7 @@
 .oo-countdown-value {
   display: block;
   font-size: clamp(1.35rem, 4vw, 1.7rem);
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.03em;
   line-height: 1.1;
   color: var(--gold, #ffd700);
@@ -124,10 +124,10 @@
 .oo-countdown-unit-label {
   display: block;
   margin-top: 4px;
-  font-size: 0.68rem;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 500;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
+  text-transform: none;
   color: rgba(255, 255, 255, 0.72);
 }
 
@@ -135,17 +135,17 @@
 .oo-kicker {
   margin: 0 0 16px;
   display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 500;
   letter-spacing: 0.04em;
-  color: #111;
+  color: var(--ink, #1c1a18);
 }
 
 .oo-kicker::before {
   content: '→';
   display: inline-block;
   margin-right: 0.45em;
-  color: var(--gold-text, #c9a800);
+  color: var(--gold-text, var(--gold-text, #7a6400));
   font-weight: 400;
 }
 
@@ -162,12 +162,13 @@
 }
 
 .oo-section-ink {
-  background: var(--ink, #111);
+  background: var(--ink, var(--ink, #1c1a18));
   color: #fff;
 }
 
 .oo-section-ink h2 {
   color: #fff;
+  font-weight: 300;
 }
 
 .oo-container {
@@ -190,17 +191,17 @@
 .oo-close h2 {
   margin: 0 0 16px;
   font-size: clamp(1.55rem, 3.2vw, 2.2rem);
-  font-weight: 700;
+  font-weight: 300;
   letter-spacing: -0.02em;
   line-height: 1.15;
-  color: #111;
+  color: var(--ink, #1c1a18);
 }
 
 .oo-lead {
   margin: 0 0 36px;
   font-size: 1.05rem;
   line-height: 1.7;
-  color: #555;
+  color: var(--muted, #5c574f);
   max-width: 38em;
 }
 
@@ -211,7 +212,7 @@
   padding: 15px 28px;
   border-radius: var(--radius-pill, 1000px);
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none;
   line-height: 1;
   border: 1px solid transparent;
@@ -220,12 +221,12 @@
 
 .oo-btn-gold {
   background: var(--gold, #ffd700);
-  color: #111;
+  color: var(--ink, #1c1a18);
 }
 
 .oo-btn-gold:hover {
   background: var(--accent, #e5c100);
-  color: #111;
+  color: var(--ink, #1c1a18);
 }
 
 .oo-btn-ghost {
@@ -258,14 +259,14 @@
   font-family: var(--font-brand, 'Megrim', cursive);
   font-size: clamp(1.15rem, 2.5vw, 1.45rem);
   letter-spacing: 0.02em;
-  color: var(--gold-text, #c9a800);
+  color: var(--gold-text, var(--gold-text, #7a6400));
   white-space: nowrap;
 }
 
 .oo-package-block {
   margin-top: 36px;
   padding-top: 28px;
-  border-top: 1px solid var(--pebble, #d5d3d4);
+  border-top: 1px solid var(--pebble, var(--line, #ddd5c6));
 }
 
 .oo-package-title {
@@ -275,10 +276,10 @@
   align-items: baseline;
   gap: 10px 14px;
   font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #111;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: var(--ink, #1c1a18);
   background: linear-gradient(transparent 62%, var(--gold, #ffd700) 62%);
   padding: 2px 8px 2px 0;
 }
@@ -286,8 +287,8 @@
 .oo-package-sub {
   font-weight: 500;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #666;
+  text-transform: none;
+  color: var(--muted, #5c574f);
   background: none;
 }
 
@@ -312,7 +313,7 @@
 .oo-package-base {
   font-size: 1.05rem;
   font-weight: 500;
-  color: #111;
+  color: var(--ink, #1c1a18);
   letter-spacing: -0.01em;
 }
 
@@ -320,11 +321,11 @@
   display: inline-flex;
   align-items: center;
   background: var(--gold, #ffd700);
-  color: #111;
+  color: var(--ink, #1c1a18);
   padding: 8px 16px;
   border-radius: var(--radius-pill, 1000px);
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 500;
   white-space: nowrap;
   line-height: 1;
 }
@@ -347,9 +348,9 @@
 
 .oo-date-label {
   font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: none;
   color: var(--gold, #ffd700);
 }
 
@@ -371,8 +372,8 @@
 .oo-studio-item h3 {
   margin: 0 0 10px;
   font-size: 1.05rem;
-  font-weight: 700;
-  color: #111;
+  font-weight: 500;
+  color: var(--ink, #1c1a18);
 }
 
 .oo-studio-item h3::before {
@@ -388,7 +389,7 @@
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #555;
+  color: var(--muted, #5c574f);
 }
 
 /* —— Steps —— */
@@ -406,38 +407,38 @@
   grid-template-columns: 48px 1fr;
   gap: 18px;
   padding: 24px 0;
-  border-top: 1px solid var(--pebble, #d5d3d4);
+  border-top: 1px solid var(--pebble, var(--line, #ddd5c6));
 }
 
 .oo-step:last-child {
-  border-bottom: 1px solid var(--pebble, #d5d3d4);
+  border-bottom: 1px solid var(--pebble, var(--line, #ddd5c6));
 }
 
 .oo-step-num {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid var(--pebble, #d5d3d4);
+  border: 1px solid var(--pebble, var(--line, #ddd5c6));
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.9rem;
-  font-weight: 700;
-  color: #111;
+  font-weight: 500;
+  color: var(--ink, #1c1a18);
 }
 
 .oo-step h3 {
   margin: 0 0 8px;
   font-size: 1.05rem;
-  font-weight: 700;
-  color: #111;
+  font-weight: 500;
+  color: var(--ink, #1c1a18);
 }
 
 .oo-step p {
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.65;
-  color: #555;
+  color: var(--muted, #5c574f);
   max-width: 40em;
 }
 
@@ -458,22 +459,22 @@
 .oo-faq-item h3 {
   margin: 0 0 10px;
   font-size: 1rem;
-  font-weight: 700;
-  color: #111;
+  font-weight: 500;
+  color: var(--ink, #1c1a18);
 }
 
 .oo-faq-item p {
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.65;
-  color: #555;
+  color: var(--muted, #5c574f);
   max-width: 42em;
 }
 
 /* —— Close —— */
 .oo-close {
   padding: 80px 24px;
-  background: var(--ink, #111);
+  background: var(--ink, var(--ink, #1c1a18));
   color: #fff;
   text-align: center;
 }
@@ -490,6 +491,7 @@
 
 .oo-close h2 {
   color: #fff;
+  font-weight: 300;
 }
 
 .oo-close p {
@@ -512,7 +514,7 @@
 .oo-close-link a {
   color: var(--gold, #ffd700);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .oo-close-link a:hover {
@@ -566,7 +568,8 @@
 
   .oo-hero h1 {
     max-width: none;
-  }
+  font-weight: 300;
+}
 
   .oo-section {
     padding: 56px 20px;
@@ -596,5 +599,196 @@
     transition: none !important;
     opacity: 1 !important;
     transform: none !important;
+  }
+}
+
+/* ===== App language: same hero as the homepage (rounded photo + cream sheet),
+   dates as a charcoal card, questions as a white list card ===== */
+.oo-hero {
+  display: block;
+  min-height: 0;
+  max-width: calc(var(--page-max-width, 1200px) + 48px);
+  margin: 16px auto 0;
+  padding: 0 24px;
+  overflow: visible;
+  color: var(--ink, #1c1a18);
+}
+
+.oo-hero-media {
+  position: relative;
+  inset: auto;
+  height: 520px;
+  overflow: hidden;
+  border-radius: 32px;
+}
+
+.oo-hero-media img {
+  animation: none;
+  transform: none;
+}
+
+.oo-hero-shade {
+  display: none;
+}
+
+.oo-hero-content {
+  max-width: 620px;
+  margin: -200px 0 0 40px;
+  padding: 36px 40px 32px;
+  border-radius: 32px;
+  background: var(--ground, #f5f0e6);
+}
+
+.oo-brand {
+  display: none;
+}
+
+.oo-hero .oo-kicker,
+.oo-hero .oo-kicker-on-dark {
+  color: var(--gold-text, #7a6400);
+}
+
+.oo-hero h1 {
+  max-width: none;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.05;
+  color: var(--ink, #1c1a18);
+}
+
+.oo-hero-lead {
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--muted, #5c574f);
+}
+
+.oo-hero .oo-btn-ghost {
+  color: var(--ink, #1c1a18);
+  border: 0;
+  box-shadow: inset 0 0 0 1px var(--ink, #1c1a18);
+}
+
+.oo-hero .oo-btn-ghost:hover {
+  background: var(--ground-stone, #ebe4d6);
+  color: var(--ink, #1c1a18);
+}
+
+.oo-btn {
+  height: 52px;
+  padding: 0 28px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.oo-section-ink {
+  box-sizing: border-box;
+  width: calc(100% - 48px);
+  max-width: calc(var(--page-max-width, 1200px) - 48px);
+  margin: 96px auto 0;
+  padding: 48px;
+  border-radius: 32px;
+}
+
+.oo-section-ink .oo-kicker {
+  color: var(--gold, #ffd700);
+}
+
+.oo-section-ink h2 {
+  color: var(--ground, #f5f0e6);
+}
+
+.oo-date-row {
+  padding: 16px 0;
+  border-bottom-color: #3d3a36;
+}
+
+.oo-dates {
+  border-top-color: #3d3a36;
+}
+
+.oo-date-label {
+  font-size: 13px;
+}
+
+.oo-date-value {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--charcoal-muted, #a8a39a);
+}
+
+.oo-faq-list {
+  overflow: hidden;
+  border: 1px solid var(--line, #ddd5c6);
+  border-radius: 24px;
+  background: var(--ground-raised, #ffffff);
+}
+
+.oo-faq-item,
+.oo-faq-item:first-child {
+  padding: 18px 20px;
+  border-top: 0;
+  border-bottom: 1px solid var(--line, #ddd5c6);
+}
+
+.oo-faq-item:last-child {
+  border-bottom: 0;
+}
+
+@media (max-width: 720px) {
+  .oo-hero {
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .oo-hero-media {
+    height: 360px;
+    border-radius: 0;
+  }
+
+  .oo-hero-content {
+    margin: -36px 0 0;
+    padding: 28px 20px 8px;
+    max-width: none;
+    border-radius: 32px 32px 0 0;
+  }
+
+  .oo-hero h1 {
+    font-size: 40px;
+    line-height: 42px;
+  }
+
+  .oo-hero-lead {
+    font-size: 17px;
+    line-height: 26px;
+  }
+
+  .oo-section-ink {
+    width: calc(100% - 32px);
+    margin-top: 56px;
+    padding: 28px 20px;
+    border-radius: 24px;
+  }
+
+  .oo-date-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
+.oo-close {
+  box-sizing: border-box;
+  width: calc(100% - 48px);
+  max-width: calc(var(--page-max-width, 1200px) - 48px);
+  margin: 96px auto;
+  padding: 56px 48px;
+  border-radius: 32px;
+}
+
+@media (max-width: 720px) {
+  .oo-close {
+    width: calc(100% - 32px);
+    margin: 56px auto;
+    padding: 32px 20px;
+    border-radius: 24px;
   }
 }

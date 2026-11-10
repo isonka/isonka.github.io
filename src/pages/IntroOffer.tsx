@@ -14,6 +14,7 @@ import { business } from '../data/business';
 import { useLocale } from '../i18n/useLocale';
 import '../styles/ServicePage.css';
 import '../styles/IntroOffer.css';
+import { MediumTail } from '../components/MediumTail';
 
 const INTRO_URL_EN = 'https://www.pt7.nl/intro/';
 const INTRO_URL_NL = 'https://www.pt7.nl/intro/nl/';
@@ -86,7 +87,10 @@ export const IntroOffer = () => {
         <Reveal className="service-hero">
           <div className="service-hero-content">
             <p className="kicker">{t('hero.kicker')}</p>
-            <h1>{t('hero.title', values)}</h1>
+            <h1 className="kit-title">
+              <span className="lane-stripe lane-pilates" aria-hidden="true" />
+              <MediumTail text={t('hero.title', values)} />
+            </h1>
             <p>{t('hero.lead', values)}</p>
             <div className="service-hero-badges">
               <span className="service-badge">{t('badges.clients')}</span>
@@ -113,7 +117,7 @@ export const IntroOffer = () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>{t('included.title')}</h2>
+            <h2><MediumTail text={t('included.title')} /></h2>
             <p>{t('hero.fineprint', values)}</p>
             <div className="service-benefits-grid">
               <div className="service-benefit-card">
@@ -134,7 +138,7 @@ export const IntroOffer = () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>{t('steps.title')}</h2>
+            <h2><MediumTail text={t('steps.title')} /></h2>
             <div className="service-benefits-grid">
               <div className="service-benefit-card">
                 <h3>1. {t('steps.buyTitle')}</h3>
@@ -157,7 +161,7 @@ export const IntroOffer = () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>{t('faq.title')}</h2>
+            <h2><MediumTail text={t('faq.title')} /></h2>
             <div className="service-faq-list">
               {faqs.map((faq) => (
                 <div key={faq.question} className="service-faq-item">
@@ -170,7 +174,7 @@ export const IntroOffer = () => {
         </Reveal>
 
         <Reveal className="service-cta-section">
-          <h2>{t('close.title', values)}</h2>
+          <h2><MediumTail text={t('close.title', values)} /></h2>
           <p>{t('close.text')}</p>
           <div className="service-cta-buttons">
             <IntroBuy label={t('buy')} />

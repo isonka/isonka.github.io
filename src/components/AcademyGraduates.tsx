@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { academyGraduates } from '../data/academy';
+import { PHOTO_FOCUS } from '../data/photoFocus';
 import type { Locale } from '../i18n/locale';
 
 type AcademyGraduatesProps = {
@@ -17,24 +18,34 @@ export const AcademyGraduates = ({ locale }: AcademyGraduatesProps) => {
     <section className="academy-graduates" aria-labelledby="academy-graduates-heading">
       <div className="academy-container">
         <p className="academy-kicker">{isNl ? 'Afgestudeerden' : 'Graduates'}</p>
-        <h2 id="academy-graduates-heading">{heading}</h2>
+        <h2 id="academy-graduates-heading">
+          {heading.split(' ').slice(0, -1).join(' ')} <b>{heading.split(' ').slice(-1)[0]}</b>
+        </h2>
         <p className="academy-graduates-intro">{intro}</p>
         <ul className="academy-graduates-grid">
           {academyGraduates.map((grad) => {
             const outcome = isNl ? grad.outcomeNl : grad.outcomeEn;
+            const slug = grad.href?.replace(/^\/trainer\//, '').replace(/\/$/, '') ?? '';
             const inner = (
               <>
-                <img
-                  src={grad.image}
-                  alt={isNl ? `${grad.name}, instructeur bij PT7` : `${grad.name}, instructor at PT7`}
-                  width={280}
-                  height={350}
-                  loading="lazy"
-                />
-                <div className="academy-graduate-meta">
-                  <h3>{grad.name}</h3>
-                  <p>{outcome}</p>
-                </div>
+                <span className="academy-graduate-media">
+                  <img
+                    src={grad.image}
+                    alt={isNl ? `${grad.name}, instructeur bij PT7` : `${grad.name}, instructor at PT7`}
+                    width={280}
+                    height={350}
+                    loading="lazy"
+                    decoding="async"
+                    style={{ objectPosition: PHOTO_FOCUS[slug] ?? '50% 20%' }}
+                  />
+                </span>
+                <span className="academy-graduate-meta">
+                  <span className="lane-stripe lane-stripe-sm lane-pilates" aria-hidden="true" />
+                  <span className="academy-graduate-copy">
+                    <span className="academy-graduate-name">{grad.name}</span>
+                    <span className="academy-graduate-role">{outcome}</span>
+                  </span>
+                </span>
               </>
             );
 

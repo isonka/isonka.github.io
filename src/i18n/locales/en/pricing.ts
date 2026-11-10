@@ -84,7 +84,8 @@ export const enPricing = {
     unlimited3Fineprint:
       '3-month commitment • You can cancel after 3 months • Auto-renews unless cancelled',
     annualName: 'Annual Unlimited',
-    annualTotalNote: '{{yearTotal}}/year • Includes 4-week freeze option',
+    yearUnit: 'year',
+    annualFreeze: 'Includes 4-week freeze option',
     annualFineprint:
       '12-month commitment • You can cancel after 12 months • Auto-renews unless cancelled',
   },

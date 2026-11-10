@@ -1,48 +1,62 @@
 :root {
-  --ink: #111;
-  --muted: #8e8e95;
+  /* PT7 kit colour. Gold #ffd700 is a fill. Gold text is --gold-text. */
+  --ink: #1c1a18;
+  --muted: #5c574f;
   --gold: #ffd700;
-  --gold-text: #c9a800;
+  --gold-text: #7a6400;
   --accent: #e5c100;
-  --pebble: #d5d3d4;
+  --pebble: #ddd5c6;
   --canvas: #ffffff;
+  --ground: #f5f0e6;
+  --ground-raised: #ffffff;
+  --ground-stone: #ebe4d6;
+  --line: #ddd5c6;
+  --lane-pilates: #ffd700;
+  --lane-yoga: #8fae8b;
+  --lane-strength: #ff5a2e;
 
-  --color-deep-ink: #111;
+  --color-deep-ink: #1c1a18;
   --color-pure-white: #ffffff;
-  --color-cool-ash: #8e8e95;
-  --color-pebble: #d5d3d4;
+  --color-cool-ash: #5c574f;
+  --color-pebble: #ddd5c6;
   --color-gold: #ffd700;
   --color-gold-deep: #e5c100;
-  --color-gold-text: #c9a800;
+  --color-gold-text: #7a6400;
 
-  --text-caption: 17px;
-  --text-nav: 20px;
-  --text-subheading: 23px;
-  --text-heading: 37px;
-  --text-heading-lg: 52px;
-  --text-display: 63px;
+  --text-caption: 13px;
+  --text-nav: 15px;
+  --text-subheading: 22px;
+  --text-heading: 44px;
+  --text-heading-lg: 44px;
+  --text-display: 72px;
 
   --font-weight-regular: 400;
+  --font-weight-medium: 500;
   --font-weight-bold: 700;
   --font-brand: 'Megrim', cursive;
 
   --page-max-width: 1200px;
-  --section-gap: 80px;
-  --card-padding: 22px;
+  --section-gap: 96px;
+  --card-padding: 24px;
   --element-gap: 16px;
+  --gutter: 24px;
 
-  --radius-buttons: 1000px;
-  --radius-nav: 1000px;
-  --radius-heropanels: 0px;
-  --radius-media: 14px;
+  --radius-buttons: 999px;
+  --radius-nav: 999px;
+  --radius-pill: 999px;
+  --radius-heropanels: 32px;
+  --radius-media: 24px;
+  --radius-input: 16px;
+  --radius-thumb: 14px;
 }
 
 .kicker {
   margin: 0 0 12px;
-  font-size: 0.72rem;
+  font-size: 13px;
+  line-height: 18px;
   font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-transform: none;
   color: var(--gold-text);
 }
 
@@ -50,41 +64,47 @@
   text-align: center;
   padding: 80px 24px;
   background: var(--ink);
-  color: #fff;
+  color: var(--ground);
+}
+
+.btn-ink,
+a.btn-ink,
+.btn-gold,
+a.btn-gold,
+.btn-ghost,
+a.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 44px;
+  padding: 0 22px;
+  border-radius: var(--radius-pill);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .btn-ink,
 a.btn-ink {
-  display: inline-block;
   background: var(--ink);
-  color: #fff;
+  color: var(--ground);
   border: none;
-  border-radius: var(--radius-pill);
-  padding: 15px 22px 16px;
-  font-size: 17px;
-  font-weight: 700;
-  text-decoration: none;
-  line-height: 1;
 }
 
 .btn-ink:hover,
 a.btn-ink:hover {
   background: #000;
-  color: #fff;
+  color: var(--ground);
 }
 
 .btn-gold,
 a.btn-gold {
-  display: inline-block;
   background: var(--gold);
   color: var(--ink);
   border: none;
-  border-radius: var(--radius-pill);
-  padding: 15px 22px 16px;
-  font-size: 17px;
-  font-weight: 700;
-  text-decoration: none;
-  line-height: 1;
   box-shadow: none;
 }
 
@@ -96,16 +116,9 @@ a.btn-gold:hover {
 
 .btn-ghost,
 a.btn-ghost {
-  display: inline-block;
   background: transparent;
   color: #fff;
   border: 1px solid #fff;
-  border-radius: var(--radius-pill);
-  padding: 15px 22px 16px;
-  font-size: 17px;
-  font-weight: 700;
-  text-decoration: none;
-  line-height: 1;
 }
 
 .btn-ghost:hover,
@@ -132,4 +145,113 @@ a.prose-link {
 .prose-link:hover,
 a.prose-link:hover {
   color: var(--gold-text);
+}
+
+/* App language: closing CTA bands are charcoal feature cards inside the page width
+   (like the app's Academy card), not full-bleed black bands. */
+.cta-band,
+.academy-cta,
+.cp-final-cta,
+.corporate-cta,
+.healthcare-cta,
+.service-cta-section,
+.trainers-cta,
+.trainer-cta,
+.cp-exclusive-offer,
+.product-contact {
+  box-sizing: border-box;
+  width: calc(100% - 2 * var(--gutter, 24px));
+  max-width: var(--page-max-width, 1200px);
+  margin: var(--section-gap, 96px) auto;
+  padding: 56px 48px;
+  border-radius: 32px;
+  background: var(--ink, #1c1a18);
+  color: var(--ground, #f5f0e6);
+}
+
+@media (max-width: 720px) {
+  .cta-band,
+  .academy-cta,
+  .cp-final-cta,
+  .corporate-cta,
+  .healthcare-cta,
+  .service-cta-section,
+  .trainers-cta,
+  .trainer-cta,
+  .cp-exclusive-offer,
+  .product-contact {
+    width: calc(100% - 32px);
+    margin: 56px auto;
+    padding: 32px 24px;
+    border-radius: 24px;
+  }
+}
+
+.lane-stripe {
+  display: inline-block;
+  flex: none;
+  width: 14px;
+  height: 22px;
+  background: var(--lane, var(--lane-pilates));
+  clip-path: polygon(8px 0, 14px 0, 5px 100%, 0 100%);
+  vertical-align: -4px;
+}
+
+.lane-stripe-sm {
+  width: 11px;
+  height: 18px;
+  clip-path: polygon(6px 0, 11px 0, 4px 100%, 0 100%);
+}
+
+.kit-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.kit-title .lane-stripe {
+  margin-top: 0.35em;
+}
+
+.kit-title-text {
+  min-width: 0;
+}
+
+.lane-pilates { --lane: var(--lane-pilates); }
+.lane-yoga { --lane: var(--lane-yoga); }
+.lane-strength { --lane: var(--lane-strength); }
+
+.home-chev {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  color: var(--muted, #5c574f);
+}
+
+/* Glass (app tokens). Only for chrome that floats over content:
+   navbar, sticky bars, menus, sheets, banners. Never on cards or the footer. */
+:root {
+  --glass-bar-bg: rgba(255, 255, 255, 0.6);
+  --glass-bar-border: rgba(255, 255, 255, 0.75);
+  --glass-bar-shadow: 0 10px 30px rgba(28, 26, 24, 0.16);
+  --glass-sheet-bg: rgba(250, 247, 240, 0.84);
+  --glass-sheet-border: rgba(255, 255, 255, 0.8);
+  --glass-blur: blur(24px) saturate(180%);
+  --glass-blur-sheet: blur(28px) saturate(180%);
+}
+
+/* Kit base rules (lowest specificity, so page styles still win):
+   - bold is medium (500), the kit's heaviest weight
+   - form controls use Poppins, not the browser's Arial
+   - plain links without a class are gold-text, never browser blue */
+:where(b, strong) {
+  font-weight: 500;
+}
+
+:where(button, input, select, textarea) {
+  font-family: inherit;
+}
+
+:where(main, footer, .chatbot-window) a:where(:not([class])) {
+  color: var(--gold-text, #7a6400);
 }

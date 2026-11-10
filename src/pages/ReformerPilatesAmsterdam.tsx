@@ -12,6 +12,7 @@ import { BASE_URL, formatOpeningClock, studioHoursFor } from '../data/business';
 import { MEMBERSHIP, formatEur } from '../data/pricing';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import '../styles/ServicePage.css';
+import { MediumTail } from '../components/MediumTail';
 
 const FAQ_KEYS = [
   'what',
@@ -73,7 +74,10 @@ export const ReformerPilatesAmsterdam = () => {
         <Reveal className="service-hero">
           <div className="service-hero-content">
             <p className="kicker">{t('hero.kicker')}</p>
-            <h1>{t('hero.title')}</h1>
+            <h1 className="kit-title">
+              <span className="lane-stripe lane-pilates" aria-hidden="true" />
+              <MediumTail text={t('hero.title')} />
+            </h1>
             <p>{t('hero.lead')}</p>
             <div className="service-hero-badges">
               <span className="service-badge">{t('hero.badgeMax')}</span>
@@ -102,7 +106,7 @@ export const ReformerPilatesAmsterdam = () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>{t('intro.title')}</h2>
+            <h2><MediumTail text={t('intro.title')} /></h2>
             <p>{t('intro.p1')}</p>
             <p>
               <Trans
@@ -129,7 +133,7 @@ export const ReformerPilatesAmsterdam = () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>{t('where.title')}</h2>
+            <h2><MediumTail text={t('where.title')} /></h2>
             <p>{t('where.p1')}</p>
             <p>{t('where.p2')}</p>
             <p>
@@ -146,7 +150,7 @@ export const ReformerPilatesAmsterdam = () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>{t('firstVisit.title')}</h2>
+            <h2><MediumTail text={t('firstVisit.title')} /></h2>
             <p>{t('firstVisit.lead')}</p>
             <div className="service-benefits-grid">
               <div className="service-benefit-card">
@@ -171,7 +175,7 @@ export const ReformerPilatesAmsterdam = () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>{t('forWhom.title')}</h2>
+            <h2><MediumTail text={t('forWhom.title')} /></h2>
             <div className="service-benefits-grid">
               <div className="service-benefit-card">
                 <h3>{t('forWhom.beginnersTitle')}</h3>
@@ -210,7 +214,7 @@ export const ReformerPilatesAmsterdam = () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>{t('why.title')}</h2>
+            <h2><MediumTail text={t('why.title')} /></h2>
             <div className="service-benefits-grid">
               <div className="service-benefit-card">
                 <h3>{t('why.groupsTitle')}</h3>
@@ -234,7 +238,7 @@ export const ReformerPilatesAmsterdam = () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>{t('faqTitle')}</h2>
+            <h2><MediumTail text={t('faqTitle')} /></h2>
             <div className="service-faq-list">
               {faqs.map((faq) => (
                 <div key={faq.question} className="service-faq-item">
@@ -247,7 +251,7 @@ export const ReformerPilatesAmsterdam = () => {
         </Reveal>
 
         <Reveal className="service-cta-section">
-          <h2>{t('cta.title')}</h2>
+          <h2><MediumTail text={t('cta.title')} /></h2>
           <p>{t('cta.text')}</p>
           <div className="service-cta-buttons">
             <Link to={href('/schedule/')} className="service-cta-btn-primary">

@@ -6,6 +6,7 @@ import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/Corporate.css';
+import { MediumTail } from '../components/MediumTail';
 import { studioAddressLine } from '../data/business';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
 
@@ -50,7 +51,7 @@ export const Corporate= () => {
       <div className="corporate-page">
         <section className="corporate-hero">
           <div className="corporate-hero-content">
-            <h1>{t('hero.title')}</h1>
+            <h1><MediumTail text={t('hero.title')} /></h1>
             <p className="hero-subtitle">{t('hero.subtitle')}</p>
             <p className="hero-description">{t('hero.description')}</p>
           </div>
@@ -58,7 +59,7 @@ export const Corporate= () => {
 
         <section className="corporate-pilates-rehab">
           <div className="corporate-container">
-            <h2>{t('why.title')}</h2>
+            <h2><MediumTail text={t('why.title')} /></h2>
             <p className="rehab-intro">{t('why.intro')}</p>
             <div className="rehab-grid">
               <div className="rehab-card">
@@ -79,7 +80,7 @@ export const Corporate= () => {
 
         <section className="corporate-who">
           <div className="corporate-container">
-            <h2>{t('formats.title')}</h2>
+            <h2><MediumTail text={t('formats.title')} /></h2>
             <div className="who-grid">
               <div className="who-card">
                 <span className="who-icon">{t('formats.studioTag')}</span>
@@ -97,7 +98,7 @@ export const Corporate= () => {
 
         <section className="corporate-offer">
           <div className="corporate-container">
-            <h2>{t('tax.title')}</h2>
+            <h2><MediumTail text={t('tax.title')} /></h2>
             <div className="offer-grid">
               <div className="offer-card">
                 <h3>{t('tax.vrijeTitle')}</h3>
@@ -118,7 +119,7 @@ export const Corporate= () => {
 
         <section className="corporate-how">
           <div className="corporate-container">
-            <h2>{t('how.title')}</h2>
+            <h2><MediumTail text={t('how.title')} /></h2>
             <div className="how-steps">
               <div className="how-step">
                 <span className="step-number">1</span>
@@ -141,7 +142,7 @@ export const Corporate= () => {
 
         <section className="corporate-cta">
           <div className="corporate-container">
-            <h2>{t('cta.title')}</h2>
+            <h2><MediumTail text={t('cta.title')} /></h2>
             <p>{t('cta.text')}</p>
             <div className="cta-buttons">
               <a

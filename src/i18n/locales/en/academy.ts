@@ -134,6 +134,11 @@ export const enAcademy = {
     title: 'Course Requirements',
     text: 'No prior Pilates or teaching experience is required to enroll. During the program, participants complete assigned homework and pass the mandatory exercise assessment with a lead trainer.',
   },
+  learn: {
+    heading: 'What you learn.',
+    total: 'Total',
+    totalValue: '300 hours',
+  },
   breakdown: {
     title: 'Training Breakdown (300 Hours Total)',
     studioAccess:

@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { studioAddressLine } from '../data/business';
+import { MediumTail } from './MediumTail';
 
 export const EquipmentContact= () => {
   const { t } = useTranslation('equipment');
@@ -8,7 +9,7 @@ export const EquipmentContact= () => {
     <section id="product-contact" className="product-contact">
       <div className="product-contact-inner">
         <div className="product-contact-text">
-          <h2>{t('contact.title')}</h2>
+          <h2><MediumTail text={t('contact.title')} /></h2>
           <p className="product-contact-subtitle">{t('contact.subtitle')}</p>
           <p className="product-contact-address">
             {studioAddressLine} Oud-Zuid

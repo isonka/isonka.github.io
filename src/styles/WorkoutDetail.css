@@ -17,115 +17,146 @@
   padding: 12px 16px;
   font-size: 0.95rem;
   line-height: 1.5;
-  color: #333;
-  background: #f7f5ef;
-  border-left: 3px solid var(--gold-text, #c9a800);
+  color: var(--ink, #1c1a18);
+  background: var(--ground-stone, #ebe4d6);
+  border-left: 3px solid var(--gold-text, var(--accent, #e5c100));
 }
 
 .workout-canonical-note a {
-  color: #111;
-  font-weight: 700;
+  color: var(--ink, #1c1a18);
+  font-weight: 500;
 }
 
 .workout-hero {
   position: relative;
-  height: 500px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  max-width: calc(var(--page-max-width, 1200px) + 48px);
+  margin: 16px auto 0;
+  padding: 0 24px;
+  height: auto;
+  background: none;
+  display: block;
 }
 
-.workout-hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.workout-hero-photo {
+  display: block;
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 32px;
 }
 
-.workout-hero-content {
-  text-align: center;
-  color: white;
-  padding: 20px;
-  max-width: 800px;
+.workout-hero-sheet {
+  position: relative;
   z-index: 1;
+  max-width: 640px;
+  margin: -88px 0 0 40px;
+  padding: 40px 40px 32px;
+  background: var(--ground, #f5f0e6);
+  border-radius: 32px;
+  text-align: left;
+  color: var(--ink, #1c1a18);
 }
 
 .workout-hero h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin: 0 0 20px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  color: #ffd700;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 300;
+  margin: 0 0 12px;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  color: var(--ink, #1c1a18);
+  text-shadow: none;
 }
 
 .workout-tagline {
-  font-size: 1.5rem;
-  margin: 0 0 30px;
-  line-height: 1.6;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+  margin: 0 0 24px;
+  line-height: 28px;
+  color: var(--muted, #5c574f);
+  text-shadow: none;
+  max-width: 42em;
 }
 
 .workout-content {
-  max-width: 1200px;
+  max-width: var(--page-max-width, 1200px);
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 48px 24px 56px;
+  box-sizing: border-box;
 }
 
-.workout-intro {
-  text-align: center;
-  margin-bottom: 80px;
+.workout-intro,
+.benefits-section,
+.for-whom-section,
+.class-options-section,
+.equipment-gallery-section,
+.equipment-section,
+.trainers-section,
+.faq-section {
+  margin-bottom: 56px;
+  text-align: left;
 }
 
-.workout-intro h2 {
-  font-size: 2.5rem;
-  color: #222;
-  margin-bottom: 24px;
+.workout-intro h2,
+.benefits-section h2,
+.for-whom-section h2,
+.class-options-section h2,
+.equipment-gallery-section h2,
+.equipment-section h2,
+.trainers-section h2,
+.faq-section h2 {
+  text-align: left;
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--ink, #1c1a18);
+  margin: 0 0 28px;
+}
+
+.workout-intro h2 b,
+.benefits-section h2 b,
+.for-whom-section h2 b,
+.class-options-section h2 b,
+.equipment-gallery-section h2 b,
+.equipment-section h2 b,
+.trainers-section h2 b,
+.faq-section h2 b {
+  line-height: inherit;
 }
 
 .workout-intro .lead {
-  font-size: 1.25rem;
-  line-height: 1.8;
-  color: #555;
-  max-width: 900px;
-  margin: 0 auto;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--muted, #5c574f);
+  max-width: 62ch;
+  margin: 0;
 }
 
-.benefits-section {
-  margin-bottom: 80px;
-}
-
-.benefits-section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #222;
-  margin-bottom: 48px;
-}
-
-.benefits-grid {
+.workout-detail-page .benefits-grid,
+.for-whom-grid,
+.equipment-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
 }
 
-.benefit-card {
-  background: #f8f8f8;
-  padding: 32px;
-  border-radius: var(--radius-lg);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.workout-detail-page .benefit-card,
+.for-whom-card,
+.equipment-gallery-item,
+.class-option-card {
+  background: #fff;
+  border: 1px solid var(--line, #ddd5c6);
+  border-radius: 24px;
+  padding: 24px;
+  text-align: left;
+  box-shadow: none;
 }
 
-.benefit-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+.workout-detail-page .benefit-card:hover,
+.for-whom-card:hover,
+.class-option-card:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--line, #ddd5c6);
 }
 
 .benefit-icon {
@@ -133,16 +164,22 @@
   margin-bottom: 16px;
 }
 
-.benefit-card h3 {
-  font-size: 1.5rem;
-  color: #222;
-  margin-bottom: 12px;
+.workout-detail-page .benefit-card h3,
+.for-whom-card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0;
+  color: var(--ink, #1c1a18);
 }
 
-.benefit-card p {
-  color: #666;
-  line-height: 1.6;
+.workout-detail-page .benefit-card p,
+.for-whom-card p {
   margin: 0;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--muted, #5c574f);
 }
 
 .expect-section {
@@ -152,8 +189,9 @@
 .expect-section h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: #222;
+  color: var(--ink, #1c1a18);
   margin-bottom: 48px;
+  font-weight: 300;
 }
 
 .expect-content {
@@ -165,7 +203,7 @@
 
 .expect-text h3 {
   font-size: 1.8rem;
-  color: #222;
+  color: var(--ink, #1c1a18);
   margin-bottom: 24px;
 }
 
@@ -180,7 +218,7 @@
   padding-left: 30px;
   position: relative;
   line-height: 1.6;
-  color: #555;
+  color: var(--muted, #5c574f);
 }
 
 .expect-list li::before {
@@ -188,12 +226,12 @@
   position: absolute;
   left: 0;
   color: #ffd700;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 1.2rem;
 }
 
 .expect-list strong {
-  color: #222;
+  color: var(--ink, #1c1a18);
   display: block;
   margin-bottom: 4px;
 }
@@ -201,125 +239,68 @@
 .expect-image img {
   width: 100%;
   border-radius: var(--radius-lg);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: none;
 }
 
 .expect-note {
   margin-top: 24px;
   padding: 20px;
-  background: #fff3cd;
+  background: var(--ground, #f5f0e6);
   border-left: 4px solid #ffd700;
   border-radius: var(--radius-md);
   line-height: 1.8;
-  color: #555;
+  color: var(--muted, #5c574f);
 }
 
-.for-whom-section {
-  margin-bottom: 80px;
-}
-
-.for-whom-section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #222;
-  margin-bottom: 48px;
-}
-
-.for-whom-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-}
-
-.for-whom-card {
-  background: white;
-  border: 2px solid #f0f0f0;
-  padding: 28px;
-  border-radius: var(--radius-lg);
-  transition: border-color 0.3s ease, transform 0.3s ease;
-}
-
-.for-whom-card:hover {
-  border-color: #ffd700;
-  transform: translateY(-4px);
-}
-
-.for-whom-card h3 {
-  font-size: 1.3rem;
-  color: #222;
-  margin-bottom: 12px;
-}
-
-.for-whom-card p {
-  color: #666;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.class-options-section {
-  margin-bottom: 80px;
-}
-
-.class-options-section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #222;
-  margin-bottom: 48px;
-}
 
 .class-options-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 40px;
-  max-width: 900px;
-  margin: 0 auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
 }
 
 .class-option-card {
-  background: white;
-  border: 2px solid #e0e0e0;
-  border-radius: var(--radius-lg);
-  padding: 40px;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 }
 
 .class-option-card.featured {
-  border-color: #ffd700;
-  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.2);
-}
-
-.class-option-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--line, #ddd5c6);
+  box-shadow: none;
 }
 
 .featured-badge {
-  position: absolute;
-  top: -12px;
-  right: 20px;
-  background: #ffd700;
-  color: #222;
-  padding: 6px 16px;
-  border-radius: var(--radius-pill);
-  font-size: 0.85rem;
-  font-weight: 700;
+  align-self: flex-start;
+  margin: 0 0 12px;
+  background: var(--gold, #ffd700);
+  color: var(--ink, #1c1a18);
+  padding: 0 12px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius-pill, 999px);
+  font-size: 13px;
+  font-weight: 500;
 }
 
 .class-option-card h3 {
-  font-size: 1.8rem;
-  color: #222;
-  margin-bottom: 8px;
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--ink, #1c1a18);
 }
 
 .class-size {
-  color: #888;
+  color: var(--muted, #5c574f);
   font-size: 0.95rem;
   margin-bottom: 16px;
 }
 
 .class-option-card > p {
-  color: #666;
+  color: var(--muted, #5c574f);
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -331,87 +312,96 @@
 }
 
 .class-features li {
-  padding: 8px 0;
-  color: #555;
-  position: relative;
-  padding-left: 24px;
+  padding: 10px 0;
+  color: var(--muted, #5c574f);
+  border-top: 1px solid var(--line, #ddd5c6);
 }
 
-.class-features li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: #ffd700;
-  font-weight: bold;
-}
-
-.class-option-btn {
-  display: block;
-  width: 100%;
-  padding: 14px;
-  background: linear-gradient(135deg, #ffd700 0%, #e5c100 100%);
-  color: #222;
-  text-align: center;
-  border-radius: var(--radius-pill);
-  text-decoration: none;
-  font-weight: 700;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.class-option-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
-}
-
+.class-option-btn,
 .workout-detail-page .buy-button {
-  display: block;
-  width: 100%;
-  padding: 14px;
-  background: linear-gradient(135deg, #ffd700 0%, #e5c100 100%);
-  color: #222;
-  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  height: 44px;
+  margin-top: auto;
+  padding: 0 22px;
+  background: var(--gold, #ffd700);
+  color: var(--ink, #1c1a18);
+  border-radius: var(--radius-pill, 999px);
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1.1rem;
-  border-radius: var(--radius-pill);
-  margin-top: 20px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  box-shadow: none;
 }
 
+.class-option-btn:hover,
 .workout-detail-page .buy-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+  background: var(--accent, #e5c100);
+  transform: none;
+  box-shadow: none;
 }
 
 .workout-detail-page .buy-button a,
 .workout-detail-page .buy-button healcode-widget,
 .workout-detail-page .buy-button .healcode-pricing-option-text-link {
-  display: block !important;
-  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
   height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
   color: inherit !important;
   text-decoration: none !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: 1 !important;
   cursor: pointer !important;
 }
 
-.equipment-section {
-  margin-bottom: 80px;
-  background: #f8f8f8;
-  padding: 60px 40px;
-  border-radius: var(--radius-lg);
+.equipment-gallery-item {
+  padding: 0;
+  overflow: hidden;
 }
 
-.equipment-section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #222;
-  margin-bottom: 16px;
+.equipment-gallery-item img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.equipment-gallery-copy {
+  padding: 16px 20px 20px;
+}
+
+.equipment-gallery-copy h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink, #1c1a18);
+}
+
+.equipment-gallery-copy p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--muted, #5c574f);
+}
+
+.equipment-section {
+  background: #fff;
+  border: 1px solid var(--line, #ddd5c6);
+  border-radius: 24px;
+  padding: 24px;
 }
 
 .section-subtitle {
   text-align: center;
   font-size: 1.1rem;
-  color: #666;
+  color: var(--muted, #5c574f);
   margin-bottom: 40px;
   max-width: 700px;
   margin-left: auto;
@@ -425,12 +415,12 @@
 
 .equipment-info h3 {
   font-size: 1.8rem;
-  color: #222;
+  color: var(--ink, #1c1a18);
   margin-bottom: 16px;
 }
 
 .equipment-info p {
-  color: #555;
+  color: var(--muted, #5c574f);
   line-height: 1.8;
   margin-bottom: 20px;
 }
@@ -443,90 +433,79 @@
 
 .equipment-info ul li {
   padding: 8px 0;
-  color: #555;
+  color: var(--muted, #5c574f);
 }
 
 .learn-more-link {
-  color: #ffd700;
+  color: var(--gold-text, #7a6400);
   text-decoration: none;
-  font-weight: 700;
-  transition: color 0.2s ease;
+  font-weight: 500;
 }
 
 .learn-more-link:hover {
-  color: #e5c100;
-}
-
-.trainers-section {
-  margin-bottom: 80px;
-}
-
-.trainers-section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #222;
-  margin-bottom: 48px;
+  color: var(--ink, #1c1a18);
 }
 
 .trainers-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-  max-width: 1000px;
-  margin: 0 auto;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px 28px;
 }
 
 .trainer-mini-card {
-  background: white;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+  overflow: visible;
 }
 
 .trainer-mini-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: none;
+  box-shadow: none;
 }
 
-.trainer-mini-card img {
+.trainer-mini-media {
+  display: block;
+  position: relative;
+  overflow: hidden;
   width: 100%;
-  height: 280px;
+  aspect-ratio: 4 / 5;
+  border-radius: 24px;
+  background: var(--placeholder, #d6c9af);
+}
+
+.trainer-mini-media img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-.trainer-mini-card h3 {
-  font-size: 1.4rem;
-  color: #222;
-  margin: 20px 20px 8px;
+.trainer-mini-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 0;
+  padding: 0 4px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  color: var(--ink, #1c1a18);
 }
 
-.trainer-cert {
-  color: #ffd700;
-  font-size: 0.9rem;
-  font-weight: 700;
-  margin: 0 20px 12px;
-}
-
-.trainer-mini-card p {
-  color: #666;
-  padding: 0 20px;
-  margin-bottom: 16px;
-  line-height: 1.6;
-}
-
-.trainer-link {
-  display: inline-block;
-  color: #ffd700;
-  text-decoration: none;
-  font-weight: 700;
-  padding-bottom: 20px;
-  transition: color 0.2s ease;
-}
-
-.trainer-link:hover {
-  color: #e5c100;
+.trainer-mini-meta {
+  margin: 2px 0 0;
+  padding: 0 4px;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--muted, #5c574f);
 }
 
 .how-it-works {
@@ -536,8 +515,9 @@
 .how-it-works h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: #222;
+  color: var(--ink, #1c1a18);
   margin-bottom: 48px;
+  font-weight: 300;
 }
 
 .how-grid {
@@ -547,7 +527,7 @@
 }
 
 .how-card {
-  background: #f8f8f8;
+  background: var(--ground-stone, #ebe4d6);
   padding: 32px;
   border-radius: var(--radius-lg);
   text-align: center;
@@ -556,10 +536,10 @@
 .how-number {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #ffd700 0%, #e5c100 100%);
-  color: #222;
+  background: var(--gold, #ffd700);
+  color: var(--ink, #1c1a18);
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 500;
   border-radius: var(--radius-circle);
   display: flex;
   align-items: center;
@@ -569,12 +549,12 @@
 
 .how-card h3 {
   font-size: 1.4rem;
-  color: #222;
+  color: var(--ink, #1c1a18);
   margin-bottom: 12px;
 }
 
 .how-card p {
-  color: #666;
+  color: var(--muted, #5c574f);
   line-height: 1.6;
   margin: 0;
 }
@@ -586,8 +566,9 @@
 .safety-section h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: #222;
+  color: var(--ink, #1c1a18);
   margin-bottom: 48px;
+  font-weight: 300;
 }
 
 .safety-content {
@@ -598,19 +579,19 @@
 
 .safety-card {
   background: white;
-  border: 2px solid #e0e0e0;
+  border: 2px solid var(--line, #ddd5c6);
   border-radius: var(--radius-lg);
   padding: 32px;
 }
 
 .safety-card.safe {
-  border-color: #4caf50;
-  background: #f1f8f4;
+  border-color: var(--yoga-text, #4f6b4c);
+  background: var(--ground-stone, #ebe4d6);
 }
 
 .safety-card.warning {
-  border-color: #ff9800;
-  background: #fff8f0;
+  border-color: var(--strength, #ff5a2e);
+  background: var(--ground, #f5f0e6);
 }
 
 .safety-card h3 {
@@ -619,11 +600,11 @@
 }
 
 .safety-card.safe h3 {
-  color: #4caf50;
+  color: var(--yoga-text, #4f6b4c);
 }
 
 .safety-card.warning h3 {
-  color: #ff9800;
+  color: var(--strength, #ff5a2e);
 }
 
 .safety-card ul {
@@ -636,7 +617,7 @@
   padding: 8px 0;
   padding-left: 24px;
   position: relative;
-  color: #555;
+  color: var(--muted, #5c574f);
   line-height: 1.6;
 }
 
@@ -644,23 +625,23 @@
   content: "✓";
   position: absolute;
   left: 0;
-  color: #4caf50;
-  font-weight: bold;
+  color: var(--yoga-text, #4f6b4c);
+  font-weight: 500;
 }
 
 .safety-card.warning ul li::before {
   content: "✗";
   position: absolute;
   left: 0;
-  color: #ff9800;
-  font-weight: bold;
+  color: var(--strength, #ff5a2e);
+  font-weight: 500;
 }
 
 .safety-note {
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px solid #e0e0e0;
-  color: #666;
+  border-top: 1px solid var(--line, #ddd5c6);
+  color: var(--muted, #5c574f);
   font-size: 0.95rem;
   font-style: italic;
 }
@@ -669,44 +650,48 @@
   margin-bottom: 80px;
 }
 
-.faq-section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #222;
-  margin-bottom: 48px;
-}
-
 .faq-list {
-  max-width: 800px;
-  margin: 0 auto;
+  background: #fff;
+  border: 1px solid var(--line, #ddd5c6);
+  border-radius: 24px;
+  overflow: hidden;
 }
 
 .faq-item {
-  background: white;
-  border: 1px solid #e0e0e0;
-  border-radius: var(--radius-md);
-  padding: 28px;
-  margin-bottom: 16px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--line, #ddd5c6);
+  border-radius: 0;
+  padding: 20px 24px;
+  margin: 0;
+}
+
+.faq-item:last-child {
+  border-bottom: 0;
 }
 
 .faq-item h3 {
   font-size: 1.3rem;
-  color: #222;
+  color: var(--ink, #1c1a18);
   margin-bottom: 12px;
 }
 
 .faq-item p {
-  color: #666;
+  color: var(--muted, #5c574f);
   line-height: 1.7;
   margin: 0;
 }
 
 .final-cta {
-  text-align: center;
-  background: #111;
-  padding: 80px 24px;
-  border-radius: 0;
-  color: white;
+  text-align: left;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 48px 32px;
+  border-radius: 24px;
+  box-sizing: border-box;
+  background: var(--ink, #1c1a18);
+  color: var(--ground, #f5f0e6);
 }
 
 .final-cta h2 {
@@ -714,6 +699,7 @@
   margin-bottom: 12px;
   color: #fff;
   letter-spacing: -0.01em;
+  font-weight: 300;
 }
 
 .final-cta p {
@@ -724,138 +710,108 @@
 
 .cta-buttons {
   display: flex;
-  gap: 20px;
-  justify-content: center;
+  gap: 12px;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
 .cta-button {
-  display: inline-block;
-  padding: 16px 40px;
-  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 22px;
+  border-radius: var(--radius-pill, 999px);
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
 .cta-button.primary {
-  background: #ffd700;
-  color: #222;
+  background: var(--gold, #ffd700);
+  color: var(--ink, #1c1a18);
+  border: 0;
 }
 
 .cta-button.primary:hover {
-  background: #e5c100;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+  background: var(--accent, #e5c100);
 }
 
 .cta-button.secondary {
   background: transparent;
-  color: white;
-  border: 2px solid #ffd700;
+  color: var(--ground, #f5f0e6);
+  border: 1px solid var(--ground, #f5f0e6);
 }
 
 .cta-button.secondary:hover {
-  background: #ffd700;
-  color: #222;
-  transform: translateY(-2px);
+  background: rgba(245, 240, 230, 0.08);
+  color: var(--ground, #f5f0e6);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
+  .workout-detail-page .benefits-grid,
+  .for-whom-grid,
+  .equipment-gallery-grid,
+  .trainers-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
   .workout-hero {
-    height: 400px;
+    margin: 0;
+    padding: 0;
   }
 
-  .workout-hero h1 {
-    font-size: 2.5rem;
+  .workout-hero-photo {
+    height: 320px;
+    border-radius: 0;
   }
 
-  .workout-tagline {
-    font-size: 1.2rem;
+  .workout-hero-sheet {
+    max-width: none;
+    margin: -36px 0 0;
+    padding: 28px 20px 8px;
+    border-radius: 32px 32px 0 0;
   }
 
   .workout-content {
-    padding: 40px 16px;
+    padding: 28px 16px 56px;
   }
 
-  .workout-intro h2,
-  .benefits-section h2,
-  .expect-section h2,
-  .for-whom-section h2,
-  .class-options-section h2,
-  .equipment-section h2,
-  .trainers-section h2,
-  .how-it-works h2,
-  .safety-section h2,
-  .faq-section h2,
-  .final-cta h2 {
-    font-size: 2rem;
-  }
-
-  .workout-intro .lead {
-    font-size: 1.1rem;
-  }
-
-  .benefits-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .expect-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .for-whom-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .class-options-grid {
+  .workout-detail-page .benefits-grid,
+  .for-whom-grid,
+  .equipment-gallery-grid,
+  .class-options-grid,
+  .expect-content,
+  .how-grid,
+  .safety-content {
     grid-template-columns: 1fr;
   }
 
   .trainers-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 12px;
   }
 
-  .how-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .safety-content {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .equipment-section {
-    padding: 40px 20px;
-  }
-
-  .final-cta {
-    padding: 60px 20px;
-  }
-
-  .cta-buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
+  .class-option-btn,
+  .workout-detail-page .buy-button,
   .cta-button {
     width: 100%;
   }
-}
 
-@media (max-width: 480px) {
-  .workout-hero h1 {
-    font-size: 2rem;
-  }
-
-  .workout-tagline {
-    font-size: 1rem;
-  }
-
-  .benefit-card {
-    padding: 24px;
+  .final-cta {
+    padding: 32px 20px;
   }
 }
 
+
+/* App language: notes are rounded cards, no gold left rule; no shadows on images */
+.workout-canonical-note p,
+.expect-note {
+  border-left: 0;
+  border: 1px solid var(--line, #ddd5c6);
+  border-radius: 16px;
+  background: var(--ground-raised, #ffffff);
+}

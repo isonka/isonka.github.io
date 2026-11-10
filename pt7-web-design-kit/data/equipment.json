@@ -1,0 +1,49 @@
+{
+  "source": "https://www.pt7.nl/equipment/",
+  "retrieved": "2026-11-07",
+  "brand": "Sole Pilates",
+  "dealer": "Official Sole Pilates dealer in the Netherlands",
+  "priceBasis": "EUR, excl. VAT, customs and shipping; imported from Türkiye; final price on enquiry",
+  "tryAtStudio": true,
+  "contact": {
+    "email": "info@pt7.nl",
+    "whatsapp": "https://wa.me/31685162693"
+  },
+  "products": [
+    {
+      "id": "reformer",
+      "name": "Pilates Reformer",
+      "price": 1900,
+      "description": "Sliding carriage, springs and straps. Full-body work.",
+      "badge": "Most popular"
+    },
+    {
+      "id": "tower-reformer",
+      "name": "Tower Reformer",
+      "price": 2300,
+      "description": "Reformer plus tower for vertical spring work.",
+      "badge": null
+    },
+    {
+      "id": "combo-cadillac",
+      "name": "Combo Cadillac",
+      "price": 2700,
+      "description": "Overhead bars and springs. Advanced stretch and strength.",
+      "badge": null
+    },
+    {
+      "id": "wunda-chair",
+      "name": "Wunda Chair",
+      "price": 1200,
+      "description": "Compact. Balance, strength, functional movement.",
+      "badge": null
+    },
+    {
+      "id": "ladder-barrel",
+      "name": "Ladder Barrel",
+      "price": 1200,
+      "description": "For home or studio. Not used in our classes.",
+      "badge": null
+    }
+  ]
+}

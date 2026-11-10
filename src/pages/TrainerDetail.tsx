@@ -11,6 +11,8 @@ import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import { trackPageView } from '../utils/gtmTracking';
 import { NotFound } from './NotFound';
 import '../styles/Trainer.css';
+import { MediumTail } from '../components/MediumTail';
+import { laneFromText } from '../lib/lanes';
 
 type RelatedLinkKey = 'reformer' | 'academyTraining' | 'prenatal' | 'strength' | 'academyBecome';
 
@@ -102,7 +104,10 @@ export const TrainerDetail= () => {
           </div>
           <div className="trainer-hero-text">
             <p className="trainer-kicker trainer-reveal" style={{ transitionDelay: '80ms' }}>{t('detail.kicker')}</p>
-            <h1 className="trainer-reveal" style={{ transitionDelay: '140ms' }}>{trainer.displayName}</h1>
+            <h1 className="trainer-reveal kit-title" style={{ transitionDelay: '140ms' }}>
+              <span className={`lane-stripe lane-stripe-sm lane-${laneFromText(trainer.specialties[0] ?? '')}`} aria-hidden="true" />
+              {trainer.displayName}
+            </h1>
             <p className="trainer-title trainer-reveal" style={{ transitionDelay: '220ms' }}>{role}</p>
             <p className="trainer-meta trainer-reveal" style={{ transitionDelay: '300ms' }}>
               {trainer.languages.join(' · ')}
@@ -126,7 +131,7 @@ export const TrainerDetail= () => {
           </Reveal>
 
           <Reveal className="trainer-qualifications">
-            <h2 className="trainer-reveal">{t('detail.qualifications')}</h2>
+            <h2 className="trainer-reveal"><MediumTail text={t('detail.qualifications')} /></h2>
             <ul>
               {trainer.qualifications.map((q, i) => (
                 <li
@@ -142,7 +147,7 @@ export const TrainerDetail= () => {
 
           {relatedLinks.length > 0 && (
             <Reveal className="trainer-related">
-              <h2 className="trainer-reveal">{t('detail.related')}</h2>
+              <h2 className="trainer-reveal"><MediumTail text={t('detail.related')} /></h2>
               <ul>
                 {relatedLinks.map((link, i) => (
                   <li
@@ -159,7 +164,7 @@ export const TrainerDetail= () => {
         </div>
 
         <Reveal className="trainer-cta">
-          <h2 className="trainer-reveal">{t('detail.ctaTitle')}</h2>
+          <h2 className="trainer-reveal"><MediumTail text={t('detail.ctaTitle')} /></h2>
           <p className="trainer-reveal" style={{ transitionDelay: '80ms' }}>{trainer.ctaText}</p>
           <div className="trainer-cta-buttons trainer-reveal" style={{ transitionDelay: '160ms' }}>
             <Link to={href('/schedule/')} className="trainer-btn-primary">{t('detail.book')}</Link>

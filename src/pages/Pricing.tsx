@@ -23,6 +23,7 @@ import { BLACK_FRIDAY_BONUS } from '../data/blackFriday';
 import { formatOpeningClock, studioHoursFor, studioStreet } from '../data/business';
 import { useLocale } from '../i18n/useLocale';
 import '../styles/Pricing.css';
+import { MediumTail } from '../components/MediumTail';
 import { localeHref } from '../i18n/locale';
 
 const PRICING_URL_EN = 'https://www.pt7.nl/pricing/';
@@ -105,7 +106,6 @@ export const Pricing= () => {
   const locale = useLocale();
   const isNl = locale === 'nl';
   const [instructorTier, setInstructorTier] = useState<keyof typeof PRIVATE>('master');
-  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const canonical = isNl ? PRICING_URL_NL : PRICING_URL_EN;
   const buyNow = t('labels.buyNow');
   const summaryValues = {
@@ -122,27 +122,11 @@ export const Pricing= () => {
     coupleFrom: formatEur(COUPLE.single),
   };
 
-  const toggleFaq = (index: number) => {
-    setOpenFaqIndex(openFaqIndex === index ? null : index);
-  };
-
   useEffect(() => {
     trackPageView(isNl ? '/pricing/nl/' : '/pricing/', t('seo.analyticsTitle'));
     trackPricingView();
     void ensureHealcodeLoaded();
   }, [isNl, t]);
-
-  useEffect(() => {
-    const faqContents = document.querySelectorAll('.faq-content');
-    faqContents.forEach((content) => {
-      const element = content as HTMLElement;
-      if (element.parentElement?.classList.contains('active')) {
-        element.style.maxHeight = element.scrollHeight + 50 + 'px';
-      } else {
-        element.style.maxHeight = '0';
-      }
-    });
-  }, [openFaqIndex]);
 
   const pricingVisible = [
     {
@@ -203,7 +187,7 @@ export const Pricing= () => {
       <div className="pricing-page">
         <header className="pricing-hero">
           <p className="pricing-kicker">{t('hero.kicker')}</p>
-          <h1>{t('hero.title')}</h1>
+          <h1><MediumTail text={t('hero.title')} /></h1>
           <p className="pricing-lead">
             <Trans
               ns="pricing"
@@ -246,7 +230,7 @@ export const Pricing= () => {
 
         <section className="pricing-content" id="membership">
             <p className="pricing-kicker">{t('membership.kicker')}</p>
-            <h2 className="pricing-section-title">{t('membership.title')}</h2>
+            <h2 className="pricing-section-title"><MediumTail text={t('membership.title')} /></h2>
             <p className="pricing-subtitle">{t('membership.subtitle')}</p>
 
             <div className="packages-grid">
@@ -304,11 +288,12 @@ export const Pricing= () => {
                 <div className="price-display">
                   <span className="package-name">{t('membership.annualName')}</span>
                   <p className="total-price">
-                    {t('membership.annualTotalNote', { yearTotal: formatEur(MEMBERSHIP.annual.yearTotal) })}
+                    {formatEur(MEMBERSHIP.annual.yearTotal)}/{t('membership.yearUnit')}
                   </p>
                   <h4 className="price-per-class">{formatEur(MEMBERSHIP.annual.perMonth)} <span className="per-person">{t('labels.perMonth')}</span></h4>
                 </div>
                 <p className="validity">{t('labels.allDaysOneClass')}</p>
+                <p className="validity">{t('membership.annualFreeze')}</p>
                 <p className="package-fineprint">
                   {t('membership.annualFineprint')}
                 </p>
@@ -322,7 +307,7 @@ export const Pricing= () => {
 
         <section className="pricing-content" id="group-classes">
             <p className="pricing-kicker">{t('group.kicker')}</p>
-            <h2 className="pricing-section-title">{t('group.title')}</h2>
+            <h2 className="pricing-section-title"><MediumTail text={t('group.title')} /></h2>
             <p className="pricing-subtitle">{t('group.subtitle', { groupMax: String(GROUP_MAX), minutes: String(CLASS_MINUTES) })}</p>
 
             <div className="packages-grid">
@@ -361,7 +346,7 @@ export const Pricing= () => {
 
         <section className="pricing-content" id="private-classes">
             <p className="pricing-kicker">{t('private.kicker')}</p>
-            <h2 className="pricing-section-title">{t('private.title')}</h2>
+            <h2 className="pricing-section-title"><MediumTail text={t('private.title')} /></h2>
             <p className="pricing-subtitle">{t('private.subtitle', { minutes: String(CLASS_MINUTES), privateFrom: formatEur(PRIVATE.junior.single) })}</p>
 
             <div className="instructor-tabs" role="tablist" aria-label={t('private.tabsAria')}>
@@ -517,7 +502,7 @@ export const Pricing= () => {
 
         <section className="pricing-content" id="couple-classes">
             <p className="pricing-kicker">{t('couple.kicker')}</p>
-            <h2 className="pricing-section-title">{t('couple.title')}</h2>
+            <h2 className="pricing-section-title"><MediumTail text={t('couple.title')} /></h2>
             <p className="pricing-subtitle">{t('couple.subtitle', { minutes: String(CLASS_MINUTES) })}</p>
 
             <div className="packages-grid">
@@ -588,17 +573,12 @@ export const Pricing= () => {
         <div className="faq-section">
           <div className="faq-container">
             <p className="pricing-kicker">{t('faq.kicker')}</p>
-            <h2>{t('faq.title')}</h2>
+            <h2><MediumTail text={t('faq.title')} /></h2>
 
-            {pricingVisible.map((faq, index) => (
-              <div key={faq.question} className={`faq-item ${openFaqIndex === index ? 'active' : ''}`}>
-                <div className="faq-header" onClick={() => toggleFaq(index)}>
-                  <h3>{faq.question}</h3>
-                  <span className="faq-icon">{openFaqIndex === index ? '−' : '+'}</span>
-                </div>
-                <div className="faq-content">
-                  <p>{faq.answer}</p>
-                </div>
+            {pricingVisible.map((faq) => (
+              <div key={faq.question} className="faq-item">
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
               </div>
             ))}
           </div>
@@ -606,7 +586,7 @@ export const Pricing= () => {
 
         <div className="contact-cta">
           <p className="pricing-kicker pricing-kicker-on-dark">{t('contact.kicker')}</p>
-          <h2>{t('contact.title')}</h2>
+          <h2><MediumTail text={t('contact.title')} /></h2>
           <p>{t('contact.text')}</p>
           <div className="cta-buttons">
             <a href="mailto:info@pt7.nl" className="cta-button primary">{t('contact.emailUs')}</a>

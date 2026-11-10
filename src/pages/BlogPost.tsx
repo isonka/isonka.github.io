@@ -11,6 +11,7 @@ import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import { trackBlogPostView, trackBlogPostRead, trackPageView } from '../utils/gtmTracking';
 import { NotFound } from './NotFound';
 import '../styles/BlogPost.css';
+import { MediumTail } from '../components/MediumTail';
 import { blogSeoTitle } from '../data/blog';
 
 export const BlogPost= () => {
@@ -108,7 +109,7 @@ export const BlogPost= () => {
               <span aria-hidden="true"> · </span>
               <span>{t('post.byAuthor', { author: post.author })}</span>
             </p>
-            <h1>{post.title}</h1>
+            <h1><MediumTail text={post.title} /></h1>
             {post.tags.length > 0 ? (
               <p className="blog-post-topics">
                 {post.tags.join(' · ')}
@@ -181,7 +182,7 @@ export const BlogPost= () => {
       </div>
 
       <section className="cta-band blog-post-cta-band">
-        <h2>{t('post.ctaTitle')}</h2>
+        <h2><MediumTail text={t('post.ctaTitle')} /></h2>
         <p>{t('post.ctaText')}</p>
         <div className="blog-post-cta-actions">
           <Link to={href('/schedule/')} className="btn-gold">

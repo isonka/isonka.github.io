@@ -13,6 +13,7 @@ import { isPrerender } from '../utils/prerender';
 import { useLocale } from '../i18n/useLocale';
 import { business, formatOpeningClock, studioHoursFor } from '../data/business';
 import '../styles/Schedule.css';
+import { MediumTail } from '../components/MediumTail';
 import { localeHref } from '../i18n/locale';
 
 const SCHEDULE_URL_EN = 'https://www.pt7.nl/schedule/';
@@ -41,7 +42,6 @@ export const Schedule= () => {
   const [activeTab, setActiveTab] = useState('group');
   const [widgetsLoading, setWidgetsLoading] = useState(true);
   const [widgetsError, setWidgetsError] = useState(false);
-  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const canonical = isNl ? SCHEDULE_URL_NL : SCHEDULE_URL_EN;
   const schedulePath = isNl ? '/schedule/nl/' : '/schedule/';
   const pricingHref = isNl ? '/pricing/nl/' : '/pricing/';
@@ -104,7 +104,7 @@ export const Schedule= () => {
         <section className="schedule-hero">
           <div className="schedule-hero-content">
             <p className="schedule-kicker">{t('hero.kicker')}</p>
-            <h1>{t('hero.title')}</h1>
+            <h1><MediumTail text={t('hero.title')} /></h1>
             <p>{t('hero.lead')}</p>
             <p className="location-highlight">{t('hero.location')}</p>
           </div>
@@ -155,7 +155,7 @@ export const Schedule= () => {
                 />
               </div>
 
-              <h2>{t('group.title')}</h2>
+              <h2><MediumTail text={t('group.title')} /></h2>
               <p className="subtitle">{t('group.subtitle')}</p>
 
               <div className="info-banner">
@@ -210,7 +210,7 @@ export const Schedule= () => {
                 />
               </div>
 
-              <h2>{t('private.title')}</h2>
+              <h2><MediumTail text={t('private.title')} /></h2>
               <p className="subtitle">
                 <Trans
                   ns="schedule"
@@ -276,38 +276,22 @@ export const Schedule= () => {
         <section className="schedule-faq" aria-labelledby="schedule-faq-heading">
           <div className="schedule-faq-inner">
             <p className="schedule-kicker">{t('faq.kicker')}</p>
-            <h2 id="schedule-faq-heading">{t('faq.title')}</h2>
+            <h2 id="schedule-faq-heading"><MediumTail text={t('faq.title')} /></h2>
             <div className="schedule-faq-list">
-              {FAQ_KEYS.map((key, i) => (
+              {FAQ_KEYS.map((key) => (
                 <div key={key} className="schedule-faq-item">
-                  <button
-                    type="button"
-                    className={`schedule-faq-question ${openFaqIndex === i ? 'active' : ''}`}
-                    onClick={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
-                    aria-expanded={openFaqIndex === i}
-                    aria-controls={`schedule-faq-answer-${i}`}
-                    id={`schedule-faq-question-${i}`}
-                  >
-                    {t(`faq.${key}.question`)}
-                  </button>
-                  <div
-                    id={`schedule-faq-answer-${i}`}
-                    role="region"
-                    aria-labelledby={`schedule-faq-question-${i}`}
-                    className={`schedule-faq-answer ${openFaqIndex === i ? 'open' : ''}`}
-                  >
-                    <p>
-                      <Trans
-                        ns="schedule"
-                        i18nKey={`faq.${key}.answer`}
-                        values={hoursValues}
-                        components={{
-                          private: <Link to={localeHref('/private-pilates-amsterdam/', locale)} />,
-                          prenatal: <Link to={localeHref('/prenatal-pilates-amsterdam/', locale)} />,
-                        }}
-                      />
-                    </p>
-                  </div>
+                  <h3>{t(`faq.${key}.question`)}</h3>
+                  <p>
+                    <Trans
+                      ns="schedule"
+                      i18nKey={`faq.${key}.answer`}
+                      values={hoursValues}
+                      components={{
+                        private: <Link to={localeHref('/private-pilates-amsterdam/', locale)} />,
+                        prenatal: <Link to={localeHref('/prenatal-pilates-amsterdam/', locale)} />,
+                      }}
+                    />
+                  </p>
                 </div>
               ))}
             </div>
@@ -317,7 +301,7 @@ export const Schedule= () => {
         <section className="cta-section" aria-labelledby="schedule-cta-heading">
           <div className="cta-section-inner">
             <p className="schedule-kicker schedule-kicker-on-dark">{t('cta.kicker')}</p>
-            <h2 id="schedule-cta-heading">{t('cta.title')}</h2>
+            <h2 id="schedule-cta-heading"><MediumTail text={t('cta.title')} /></h2>
             <p>{t('cta.text')}</p>
             <Link to={pricingHref} className="cta-button">
               {t('cta.button')}

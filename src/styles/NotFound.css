@@ -14,16 +14,16 @@
 
 .not-found h1 {
   font-size: clamp(2rem, 5vw, 3.4rem);
-  font-weight: 700;
+  font-weight: 300;
   margin: 0 0 16px;
   line-height: 1.08;
   letter-spacing: -0.03em;
-  color: var(--ink, #111);
+  color: var(--ink, var(--ink, #1c1a18));
 }
 
 .not-found-lead {
   font-size: 1.05rem;
-  color: #555;
+  color: var(--muted, #5c574f);
   margin: 0 0 32px;
   line-height: 1.7;
 }
@@ -38,19 +38,19 @@
 a.not-found-ghost {
   display: inline-block;
   background: transparent;
-  color: var(--ink, #111);
-  border: 1px solid var(--pebble, #d5d3d4);
+  color: var(--ink, var(--ink, #1c1a18));
+  border: 1px solid var(--pebble, var(--line, #ddd5c6));
   border-radius: var(--radius-pill);
   padding: 15px 22px 16px;
   font-size: 17px;
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none;
   line-height: 1;
 }
 
 a.not-found-ghost:hover {
-  border-color: var(--ink, #111);
-  color: var(--ink, #111);
+  border-color: var(--ink, var(--ink, #1c1a18));
+  color: var(--ink, var(--ink, #1c1a18));
 }
 
 @media (max-width: 640px) {

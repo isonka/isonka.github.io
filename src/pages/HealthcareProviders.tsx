@@ -6,6 +6,7 @@ import { StructuredData } from '../components/StructuredData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/HealthcareProviders.css';
+import { MediumTail } from '../components/MediumTail';
 import { BASE_URL, studioAddressLine } from '../data/business';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
 
@@ -52,7 +53,7 @@ export const HealthcareProviders= () => {
       <div className="healthcare-page">
         <section className="healthcare-hero">
           <div className="healthcare-hero-content">
-            <h1>{t('hero.title')}</h1>
+            <h1><MediumTail text={t('hero.title')} /></h1>
             <p className="hero-subtitle">{t('hero.subtitle')}</p>
             <p className="hero-description">{t('hero.description')}</p>
           </div>
@@ -60,7 +61,7 @@ export const HealthcareProviders= () => {
 
         <section className="healthcare-pilates-rehab">
           <div className="healthcare-container">
-            <h2>{t('why.title')}</h2>
+            <h2><MediumTail text={t('why.title')} /></h2>
             <p className="rehab-intro">{t('why.intro')}</p>
             <div className="rehab-grid">
               <div className="rehab-card">
@@ -81,7 +82,7 @@ export const HealthcareProviders= () => {
 
         <section className="healthcare-who">
           <div className="healthcare-container">
-            <h2>{t('who.title')}</h2>
+            <h2><MediumTail text={t('who.title')} /></h2>
             <div className="who-grid">
               <div className="who-card">
                 <span className="who-icon">{t('who.physioTag')}</span>
@@ -104,7 +105,7 @@ export const HealthcareProviders= () => {
 
         <section className="healthcare-how">
           <div className="healthcare-container">
-            <h2>{t('how.title')}</h2>
+            <h2><MediumTail text={t('how.title')} /></h2>
             <div className="how-steps">
               <div className="how-step">
                 <span className="step-number">1</span>
@@ -127,7 +128,7 @@ export const HealthcareProviders= () => {
 
         <section className="healthcare-offer">
           <div className="healthcare-container">
-            <h2>{t('offer.title')}</h2>
+            <h2><MediumTail text={t('offer.title')} /></h2>
             <div className="offer-grid">
               <div className="offer-card">
                 <h3>{t('offer.equipmentTitle')}</h3>
@@ -151,7 +152,7 @@ export const HealthcareProviders= () => {
 
         <section className="healthcare-benefits">
           <div className="healthcare-container">
-            <h2>{t('benefits.title')}</h2>
+            <h2><MediumTail text={t('benefits.title')} /></h2>
             <ul className="benefits-list">
               {BENEFIT_KEYS.map((key) => (
                 <li key={key}>{t(`benefits.${key}`)}</li>
@@ -162,7 +163,7 @@ export const HealthcareProviders= () => {
 
         <section className="healthcare-cta">
           <div className="healthcare-container">
-            <h2>{t('cta.title')}</h2>
+            <h2><MediumTail text={t('cta.title')} /></h2>
             <p>{t('cta.text')}</p>
             <div className="cta-buttons">
               <a

@@ -7,7 +7,7 @@
 .privacy-prose h2 {
   margin: 2rem 0 0.75rem;
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.02em;
 }
 
@@ -15,7 +15,7 @@
 .privacy-prose li {
   font-size: 1.05rem;
   line-height: 1.7;
-  color: #333;
+  color: var(--ink, #1c1a18);
 }
 
 .privacy-prose ul {
@@ -28,6 +28,6 @@
 }
 
 .privacy-prose a {
-  color: #111;
+  color: var(--ink, #1c1a18);
   font-weight: 500;
 }

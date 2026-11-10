@@ -48,19 +48,26 @@ export const enHome = {
   },
   about: {
     kicker: 'About',
-    title: 'Reformer Pilates & Strength Training Studio at Museumplein',
-    p1: 'Reformer Pilates & strength training in Amsterdam at our Museumplein studio in Oud-Zuid. With 15+ years of expertise, PT7 offers a boutique fitness experience built around attention and results. Located at {{studioStreet}} across from Stedelijk Museum, our studio combines professional Reformers and classical Pilates apparatus with Nike strength equipment, TRX, and Concept2 machines in one space.',
-    p2: "We offer one-on-one private sessions where you receive 100% of your instructor's attention. We also offer intimate small group classes (maximum 5 people) for those who enjoy training with friends. Each program is customized to build strength, improve flexibility, or achieve your wellness goals.",
-    p3: 'Our expert instructors design a personalized roadmap for your success, adapting every session to your progress and celebrating each milestone with you.',
+    title: 'Small studio, real attention.',
+    note: 'I opened PT7 in 2010 so people could train with a coach who knows their name. Groups stay at five, and every session builds on the last.',
+    facts: {
+      years: { value: '15+', label: 'years of coaching' },
+      group: { value: '5', label: 'people max per group class' },
+      private: { value: '1:1', label: 'private and prenatal sessions' },
+    },
+    seoLine: 'Reformer Pilates, strength training and private sessions at {{studioStreet}}, Museumplein, Oud-Zuid Amsterdam.',
+    linksLabel: 'Start here',
     links:
-      'Start here: <reformer>Reformer Pilates Amsterdam Zuid</reformer> · <private>Private Pilates</private> · <prenatal>Prenatal Pilates</prenatal> · <trx>TRX</trx> · <strength>Strength Training</strength>',
+      '<reformer>Reformer Pilates Amsterdam Zuid</reformer><private>Private Pilates</private><prenatal>Prenatal Pilates</prenatal><trx>TRX</trx><strength>Strength Training</strength>',
     ownerName: 'Elif Arzu Ogan',
-    signatureRole: 'Owner & Head Instructor, PT7',
-    imageAlt: 'PT7 Museumplein Location - Small Group Pilates Studio',
+    signatureRole: 'Owner & head instructor',
+    imageAlt: 'Elif Arzu Ogan coaching at the PT7 Reformer Pilates studio, Museumplein Amsterdam',
   },
   workouts: {
     heading: 'Pilates & Training Programs Amsterdam',
     sub: 'Explore our variety of training programs',
+    lanePilates: 'Pilates',
+    laneStrength: 'Strength',
     reformerPilates: {
       title: 'Reformer & Trapeze Table Pilates',
       description: 'Full-body workout focusing on core strength, flexibility, and posture',

@@ -1,18 +1,18 @@
 :root {
   --primary-color: #ffd700;
-  --text-color: #111;
-  --background-light: #fff;
-  --background-dark: #111;
+  --text-color: #1c1a18;
+  --background-light: #f5f0e6;
+  --background-dark: #1c1a18;
   --accent-color: #e5c100;
   --transition: all 0.3s ease;
 
-  --radius-sm: 0px;
-  --radius-md: 0px;
-  --radius-lg: 0px;
-  --radius-xl: 0px;
-  --radius-pill: 1000px;
+  --radius-sm: 14px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
   --radius-circle: 50%;
-  --radius-media: 14px;
+  --radius-media: 24px;
 }
 
 * {
@@ -27,18 +27,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 18px;
-  line-height: 1.61;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
   color: var(--text-color);
-  background-color: #fffdf4;
+  background-color: var(--ground, #f5f0e6);
   overflow-x: clip;
   max-width: 100%;
 }
 
 h1, h2, h3, h4 {
-  font-weight: 700;
-  line-height: 1.05;
+  font-weight: 300;
+  line-height: 1.12;
   letter-spacing: -0.02em;
+}
+
+h1 b, h2 b, h3 b, h4 b,
+h1 strong, h2 strong, h3 strong, h4 strong {
+  font-weight: 500;
 }
 
 html {

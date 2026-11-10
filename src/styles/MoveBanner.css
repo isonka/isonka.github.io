@@ -8,7 +8,7 @@
 .move-banner {
   position: relative;
   z-index: 2;
-  background-color: #111;
+  background-color: var(--ink, #1c1a18);
   color: #fff;
   padding: 12px 20px;
   width: 100%;
@@ -36,7 +36,7 @@
 
 .move-banner-text strong {
   color: var(--gold, #ffd700);
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .move-banner-short {
@@ -45,10 +45,10 @@
 
 .move-banner-cta {
   background: var(--gold, #ffd700);
-  color: var(--ink, #111);
+  color: var(--ink, var(--ink, #1c1a18));
   padding: 7px 16px;
   border-radius: var(--radius-pill);
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.85rem;
   white-space: nowrap;
   flex-shrink: 0;

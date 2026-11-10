@@ -7,6 +7,7 @@ import { Breadcrumbs } from '../components/Breadcrumbs';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/ClassPassOffer.css';
+import { MediumTail } from '../components/MediumTail';
 
 const FAQ_KEYS = ['occasional', 'commit', 'claim', 'experience'] as const;
 const BENEFIT_KEYS = ['booking', 'coaching', 'tracking', 'results', 'community', 'value'] as const;
@@ -57,7 +58,7 @@ export const ClassPassOffer = () => {
         </section>
 
         <section className="cp-comparison" id="offer">
-          <h2>{t('comparison.title')}</h2>
+          <h2><MediumTail text={t('comparison.title')} /></h2>
           <p className="section-subtitle">{t('comparison.subtitle')}</p>
 
           <div className="comparison-grid">
@@ -143,7 +144,7 @@ export const ClassPassOffer = () => {
         <section className="cp-exclusive-offer">
           <div className="offer-container">
             <span className="offer-badge">{t('offer.badge')}</span>
-            <h2>{t('offer.title')}</h2>
+            <h2><MediumTail text={t('offer.title')} /></h2>
             <p className="offer-description">
               <Trans t={t} i18nKey="offer.description" components={{ strong: <strong /> }} />
             </p>
@@ -167,7 +168,7 @@ export const ClassPassOffer = () => {
         </section>
 
         <section className="cp-benefits">
-          <h2>{t('benefits.title')}</h2>
+          <h2><MediumTail text={t('benefits.title')} /></h2>
           <div className="benefits-grid">
             {BENEFIT_KEYS.map((key) => (
               <div key={key} className="benefit-card">
@@ -180,7 +181,7 @@ export const ClassPassOffer = () => {
         </section>
 
         <section className="cp-testimonials">
-          <h2>{t('heard.title')}</h2>
+          <h2><MediumTail text={t('heard.title')} /></h2>
           <div className="testimonials-grid">
             {HEARD_KEYS.map((key) => (
               <div key={key} className="testimonial-card">
@@ -191,7 +192,7 @@ export const ClassPassOffer = () => {
         </section>
 
         <section className="cp-faq">
-          <h2>{t('faqTitle')}</h2>
+          <h2><MediumTail text={t('faqTitle')} /></h2>
           <div className="faq-grid">
             {classPassFaqs.map((faq) => (
               <div key={faq.question} className="faq-item">
@@ -203,7 +204,7 @@ export const ClassPassOffer = () => {
         </section>
 
         <section className="cp-final-cta">
-          <h2>{t('final.title')}</h2>
+          <h2><MediumTail text={t('final.title')} /></h2>
           <p>{t('final.text')}</p>
           <div className="cta-buttons">
             <Link to={href('/pricing/')} className="cp-cta-button primary">{t('final.pricing')}</Link>

@@ -2,7 +2,7 @@
   position: relative;
   min-height: 100vh;
   isolation: isolate;
-  background: #fffdf4;
+  background: var(--ground, #f5f0e6);
 }
 
 .instructors-silk-wrap,
@@ -28,7 +28,7 @@
     radial-gradient(ellipse 90% 60% at 95% 80%, rgba(229, 193, 0, 0.24), transparent 50%),
     radial-gradient(ellipse 60% 50% at 45% 40%, rgba(255, 215, 0, 0.16), transparent 58%),
     radial-gradient(ellipse 45% 40% at 72% 22%, rgba(230, 200, 80, 0.12), transparent 52%),
-    #fffdf4;
+    var(--ground, #f5f0e6);
   background-size: 190% 190%, 180% 180%, 220% 220%, 160% 160%, 100% 100%;
 }
 

@@ -21,6 +21,8 @@ import { useLocale } from '../i18n/useLocale';
 import { isPrerender } from '../utils/prerender';
 import '../styles/Home.css';
 import { localeHref } from '../i18n/locale';
+import { MediumTail } from '../components/MediumTail';
+import { laneFromText } from '../lib/lanes';
 
 const HOME_HREFLANG = [
   { hreflang: 'en', href: 'https://www.pt7.nl/' },
@@ -100,24 +102,24 @@ const reviewsData = [
 
 function TrainerTile({
   trainer,
+  extra,
 }: {
   trainer: (typeof trainers)[number];
+  extra?: boolean;
 }) {
   const { t } = useTranslation('home');
   const locale = useLocale();
   const { ref, inView } = useInViewOnce<HTMLAnchorElement>();
   const slug = trainer.to.replace(/^\/trainer\//, '').replace(/\/$/, '');
   const focus = PHOTO_FOCUS[slug] ?? '50% 24%';
+  const specialties = t(`trainers.${trainer.id}.specialties`);
 
   return (
     <Link
       ref={ref}
       to={localeHref(trainer.to, locale)}
-      className={`home-person${inView ? ' is-inview' : ''}`}
+      className={`home-person${extra ? ' home-person-extra' : ''}${inView ? ' is-inview' : ''}`}
     >
-      <span className="home-person-role">
-        {t(`trainers.${trainer.id}.specialties`)}
-      </span>
       <div className="home-person-media">
         <img
           src={inView ? trainer.src : undefined}
@@ -125,11 +127,17 @@ function TrainerTile({
           loading="lazy"
           decoding="async"
           width="280"
-          height="400"
+          height="350"
           style={{ objectPosition: focus }}
         />
       </div>
-      <span className="home-person-name">{trainer.name}</span>
+      <span className="home-person-name">
+        <span className={`lane-stripe lane-stripe-sm lane-${laneFromText(specialties)}`} aria-hidden="true" />
+        <span className="home-person-copy">
+          <span className="home-person-title">{trainer.name}</span>
+          <span className="home-person-role">{specialties}</span>
+        </span>
+      </span>
     </Link>
   );
 }
@@ -304,7 +312,7 @@ export const Home= () => {
             <p className="home-hero-brand brand-mark">
               PT<span className="brand-mark-accent">7</span>
             </p>
-            <h1 className="home-hero-title">{t('hero.title')}</h1>
+            <h1 className="home-hero-title"><MediumTail text={t('hero.title')} /></h1>
             <p className="home-hero-line">{t('hero.studioLine')}</p>
             <div className="home-hero-ratings">
               <a href="https://maps.app.goo.gl/wrhyzYbov9eiGQJw5" target="_blank" rel="noopener noreferrer">
@@ -329,17 +337,52 @@ export const Home= () => {
         </section>
       )}
 
+      <section id="workouts" className="home-section home-works">
+        <div className="home-works-label">
+          <div className="home-head">
+            <h2 className="home-kicker home-kicker-heading">
+              <MediumTail text={t('workouts.heading')} />
+            </h2>
+            <p className="home-lane-legend">
+              {t('workouts.lanePilates')}
+              <span className="lane-stripe lane-stripe-sm lane-pilates" aria-hidden="true" />
+              <span aria-hidden="true">·</span>
+              {t('workouts.laneStrength')}
+              <span className="lane-stripe lane-stripe-sm lane-strength" aria-hidden="true" />
+            </p>
+          </div>
+          <p className="home-sub">{t('workouts.sub')}</p>
+        </div>
+        <WorkoutGallery items={workoutItems} />
+      </section>
+
       <section id="about" className="home-section home-manifesto">
         <p className="home-kicker">{t('about.kicker')}</p>
         <h2 className="home-display">
-          <ManifestoLine>{t('about.title')}</ManifestoLine>
+          <ManifestoLine>
+            <MediumTail text={t('about.title')} />
+          </ManifestoLine>
         </h2>
         <div className="home-manifesto-layout">
           <div className="home-prose">
-            <p>{t('about.p1')}</p>
-            <p>{t('about.p2')}</p>
-            <p>{t('about.p3')}</p>
-            <p className="home-prose-links">
+            <blockquote className="home-founder-note">
+              <p>{t('about.note')}</p>
+              <footer className="home-signature">
+                <strong>{t('about.ownerName')}</strong>
+                <span>{t('about.signatureRole')}</span>
+              </footer>
+            </blockquote>
+            <ul className="home-about-facts">
+              {(['years', 'group', 'private'] as const).map((key) => (
+                <li key={key} className="home-about-fact">
+                  <span className="home-about-fact-value">{t(`about.facts.${key}.value`)}</span>
+                  <span className="home-about-fact-label">{t(`about.facts.${key}.label`)}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="home-about-seo">{t('about.seoLine')}</p>
+            <nav className="home-prose-links" aria-label={t('about.linksLabel')}>
+              <span className="home-prose-links-label">{t('about.linksLabel')}</span>
               <Trans
                 ns="home"
                 i18nKey="about.links"
@@ -351,12 +394,7 @@ export const Home= () => {
                   strength: <Link to={localeHref('/strength-training-amsterdam/', locale)} />,
                 }}
               />
-            </p>
-            <p className="home-signature">
-              <strong>{t('about.ownerName')}</strong>
-              <br />
-              {t('about.signatureRole')}
-            </p>
+            </nav>
           </div>
           <div className="home-bleed-frame" ref={aboutImage.ref}>
             <img
@@ -371,21 +409,15 @@ export const Home= () => {
         </div>
       </section>
 
-      <section id="workouts" className="home-section home-works">
-        <div className="home-works-label">
-          <h2 className="home-kicker home-kicker-heading">{t('workouts.heading')}</h2>
-          <p className="home-sub">{t('workouts.sub')}</p>
-        </div>
-        <WorkoutGallery items={workoutItems} />
-      </section>
-
       <section id="trainers" className="home-section home-team">
         <p className="home-kicker">{t('trainers.kicker')}</p>
-        <h2 className="home-section-title">{t('trainers.title')}</h2>
+        <h2 className="home-section-title">
+          <MediumTail text={t('trainers.title')} />
+        </h2>
         <p className="home-sub">{t('trainers.sub')}</p>
         <div className="home-team-grid">
-          {trainers.map((trainer) => (
-            <TrainerTile key={trainer.to} trainer={trainer} />
+          {trainers.map((trainer, index) => (
+            <TrainerTile key={trainer.to} trainer={trainer} extra={index >= 4} />
           ))}
         </div>
         <p className="home-footnote">
@@ -402,7 +434,9 @@ export const Home= () => {
 
       <section id="reviews" className="home-section home-reviews">
         <p className="home-kicker">{t('reviews.kicker')}</p>
-        <h2 className="home-section-title">{t('reviews.title')}</h2>
+        <h2 className="home-section-title">
+          <MediumTail text={t('reviews.title')} />
+        </h2>
         <p className="home-sub">{t('reviews.sub')}</p>
         <div className="home-quotes">
           {REVIEW_KEYS.map((key) => (
@@ -431,7 +465,9 @@ export const Home= () => {
 
       <section id="faq" className="home-section home-faq" aria-labelledby="home-faq-heading">
         <p className="home-kicker">{t('faqSection.kicker')}</p>
-        <h2 id="home-faq-heading" className="home-section-title">{t('faqSection.title')}</h2>
+        <h2 id="home-faq-heading" className="home-section-title">
+          <MediumTail text={t('faqSection.title')} />
+        </h2>
         <div className="home-faq-list">
           {homeFaqs.map((faq) => (
             <div key={faq.question} className="home-faq-item">
@@ -445,7 +481,9 @@ export const Home= () => {
       <section id="contact" className="home-contact">
         <div className="home-contact-inner">
           <p className="home-kicker home-kicker-on-dark">{t('contact.kicker')}</p>
-          <h2 className="home-contact-title">{t('contact.title')}</h2>
+          <h2 className="home-contact-title">
+            <MediumTail text={t('contact.title')} />
+          </h2>
           <p className="home-contact-address">{t('contact.address')}</p>
           <p className="home-contact-meta">{t('contact.meta')}</p>
 
@@ -462,9 +500,24 @@ export const Home= () => {
                 {t('contact.emailUs')}
               </a>
               <div className="home-contact-socials">
-                <a href="https://www.instagram.com/pt7amsterdam" target="_blank" rel="noopener noreferrer" aria-label={t('contact.instagram')}>{t('contact.instagram')}</a>
-                <a href="https://www.facebook.com/ptstudio7" target="_blank" rel="noopener noreferrer" aria-label={t('contact.facebook')}>{t('contact.facebook')}</a>
-                <a href="https://www.linkedin.com/company/pt7" target="_blank" rel="noopener noreferrer" aria-label={t('contact.linkedin')}>{t('contact.linkedin')}</a>
+                <a href="https://www.instagram.com/pt7amsterdam" target="_blank" rel="noopener noreferrer" aria-label={t('contact.instagram')}>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                    <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.4" cy="6.6" r="0.9" fill="currentColor" stroke="none" />
+                  </svg>
+                </a>
+                <a href="https://www.facebook.com/ptstudio7" target="_blank" rel="noopener noreferrer" aria-label={t('contact.facebook')}>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M14 21v-8h3l.5-3H14V8.2c0-.8.4-1.2 1.3-1.2H18V4h-2.8C12.4 4 11 5.5 11 8v2H9v3h2v8" />
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/pt7" target="_blank" rel="noopener noreferrer" aria-label={t('contact.linkedin')}>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
+                    <rect x="3.5" y="3.5" width="17" height="17" rx="3" />
+                    <path d="M8 11v6M8 8h.01M12 17v-3.5a2 2 0 0 1 4 0V17" />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>

@@ -6,7 +6,7 @@
   background: transparent;
   padding: 56px 24px 32px;
   text-align: left;
-  color: #111;
+  color: var(--ink, #1c1a18);
 }
 
 .healthcare-hero-content {
@@ -18,15 +18,15 @@
 .healthcare-hero h1 {
   font-size: clamp(2rem, 5vw, 3.2rem);
   margin: 0 0 12px;
-  color: #111;
-  font-weight: 700;
+  color: var(--ink, #1c1a18);
+  font-weight: 300;
   letter-spacing: -0.03em;
 }
 
 .healthcare-hero .hero-subtitle {
   font-size: 1.15rem;
   margin: 0 0 16px;
-  color: #444;
+  color: var(--ink, #1c1a18);
   font-weight: 500;
   letter-spacing: -0.01em;
   text-transform: none;
@@ -35,7 +35,7 @@
 .healthcare-hero .hero-description {
   font-size: 1.05rem;
   line-height: 1.7;
-  color: #555;
+  color: var(--muted, #5c574f);
   max-width: 40em;
 }
 
@@ -55,14 +55,15 @@
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #222;
+  color: var(--ink, #1c1a18);
+  font-weight: 300;
 }
 
 .rehab-intro {
   text-align: center;
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #555;
+  color: var(--muted, #5c574f);
   max-width: 700px;
   margin: 0 auto 40px;
 }
@@ -74,10 +75,10 @@
 }
 
 .rehab-card {
-  background: #f8f8f8;
+  background: var(--ground-stone, #ebe4d6);
   padding: 24px;
   border-radius: var(--radius-lg);
-  border: 1px solid #eee;
+  border: 1px solid var(--line, #ddd5c6);
   overflow: visible;
   height: auto;
   min-height: 0;
@@ -86,7 +87,7 @@
 .rehab-card h3 {
   font-size: 1.1rem;
   margin-bottom: 12px;
-  color: #222;
+  color: var(--ink, #1c1a18);
   overflow: visible;
   white-space: normal;
   overflow-wrap: break-word;
@@ -96,7 +97,7 @@
 .rehab-card p {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #555;
+  color: var(--muted, #5c574f);
 }
 
 .healthcare-who {
@@ -112,7 +113,8 @@
   text-align: center;
   font-size: 2rem;
   margin-bottom: 40px;
-  color: #222;
+  color: var(--ink, #1c1a18);
+  font-weight: 300;
 }
 
 .who-grid {
@@ -122,37 +124,37 @@
 }
 
 .who-card {
-  background: #f8f8f8;
+  background: var(--ground-stone, #ebe4d6);
   padding: 28px;
   border-radius: var(--radius-lg);
-  border: 1px solid #eee;
+  border: 1px solid var(--line, #ddd5c6);
   transition: box-shadow 0.2s ease;
 }
 
 .who-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
 }
 
 .who-icon {
   display: block;
   font-size: 0.85rem;
-  font-weight: 700;
-  color: #bfa100;
+  font-weight: 500;
+  color: var(--gold-text, #7a6400);
   margin-bottom: 8px;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.5px;
 }
 
 .who-card h3 {
   font-size: 1.25rem;
   margin-bottom: 12px;
-  color: #222;
+  color: var(--ink, #1c1a18);
 }
 
 .who-card p {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #555;
+  color: var(--muted, #5c574f);
 }
 
 .healthcare-how {
@@ -177,9 +179,9 @@
   justify-content: center;
   width: 48px;
   height: 48px;
-  background: #bfa100;
+  background: var(--accent, #e5c100);
   color: #fff;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.25rem;
   border-radius: var(--radius-circle);
   margin-bottom: 16px;
@@ -188,15 +190,15 @@
 .step-title {
   display: block;
   font-size: 1.1rem;
-  font-weight: 700;
-  color: #222;
+  font-weight: 500;
+  color: var(--ink, #1c1a18);
   margin-bottom: 8px;
 }
 
 .how-step p {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #555;
+  color: var(--muted, #5c574f);
 }
 
 .healthcare-offer {
@@ -211,10 +213,10 @@
 }
 
 .offer-card {
-  background: #f8f8f8;
+  background: var(--ground-stone, #ebe4d6);
   padding: 24px;
   border-radius: var(--radius-lg);
-  border: 1px solid #eee;
+  border: 1px solid var(--line, #ddd5c6);
   overflow: visible;
   height: auto;
 }
@@ -222,7 +224,7 @@
 .offer-card h3 {
   font-size: 1.15rem;
   margin-bottom: 10px;
-  color: #222;
+  color: var(--ink, #1c1a18);
   white-space: normal;
   overflow-wrap: break-word;
   line-height: 1.35;
@@ -231,12 +233,12 @@
 .offer-card p {
   font-size: 0.9rem;
   line-height: 1.6;
-  color: #555;
+  color: var(--muted, #5c574f);
 }
 
 .healthcare-benefits {
   padding: 60px 20px;
-  background: #fafafa;
+  background: var(--ground-stone, #ebe4d6);
 }
 
 .benefits-list {
@@ -252,21 +254,26 @@
   margin-bottom: 16px;
   font-size: 1rem;
   line-height: 1.6;
-  color: #333;
+  color: var(--ink, #1c1a18);
 }
 
 .benefits-list li::before {
   content: '✓';
   position: absolute;
   left: 0;
-  color: #bfa100;
-  font-weight: 700;
+  color: var(--gold-text, #7a6400);
+  font-weight: 500;
   font-size: 1.1rem;
 }
 
 .healthcare-cta {
-  padding: 80px 24px;
-  background: #111;
+  width: calc(100% - 48px);
+  max-width: var(--page-max-width, 1200px);
+  margin: 56px auto 0;
+  padding: 48px 32px;
+  border-radius: 24px;
+  box-sizing: border-box;
+  background: var(--ink, #1c1a18);
   text-align: center;
   color: #fff;
 }
@@ -274,6 +281,7 @@
 .healthcare-cta h2 {
   color: #fff;
   margin-bottom: 12px;
+  font-weight: 300;
 }
 
 .healthcare-cta p {
@@ -294,7 +302,7 @@
   display: inline-block;
   padding: 14px 28px;
   border-radius: var(--radius-pill);
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1rem;
   text-decoration: none;
   transition: all 0.2s ease;
@@ -302,11 +310,11 @@
 
 .healthcare-cta .cta-button.primary {
   background: #ffd700;
-  color: #222;
+  color: var(--ink, #1c1a18);
 }
 
 .healthcare-cta .cta-button.primary:hover {
-  background: #ffb800;
+  background: var(--accent, #e5c100);
   transform: translateY(-2px);
 }
 
@@ -318,25 +326,25 @@
 
 .healthcare-cta .cta-button.secondary:hover {
   background: #ffd700;
-  color: #222;
+  color: var(--ink, #1c1a18);
   transform: translateY(-2px);
 }
 
 .cta-note {
   font-size: 0.9rem !important;
-  color: #999 !important;
+  color: var(--muted, #5c574f) !important;
   margin-bottom: 0 !important;
 }
 
 .healthcare-back {
   padding: 24px 20px;
   background: #fff;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--line, #ddd5c6);
 }
 
 .healthcare-pilates-rehab a,
 .healthcare-back a {
-  color: #bfa100;
+  color: var(--gold-text, #7a6400);
   font-weight: 500;
   text-decoration: none;
   border-bottom: none;
@@ -345,25 +353,26 @@
 
 .healthcare-pilates-rehab a:hover,
 .healthcare-back a:hover {
-  color: #9e8500;
+  color: var(--gold-text, #7a6400);
 }
 
 .back-link {
   display: inline-block;
-  color: #555;
+  color: var(--muted, #5c574f);
   text-decoration: none;
   font-size: 0.95rem;
   transition: color 0.2s ease;
 }
 
 .back-link:hover {
-  color: #bfa100;
+  color: var(--gold-text, #7a6400);
 }
 
 @media (max-width: 600px) {
   .healthcare-hero h1 {
     font-size: 2rem;
-  }
+  font-weight: 300;
+}
 
   .healthcare-hero .hero-subtitle {
     font-size: 1.25rem;
@@ -376,4 +385,21 @@
   .healthcare-cta h2 {
     font-size: 1.5rem;
   }
+}
+
+/* App language: one cream page with white cards, no full-width bands. */
+.healthcare-who,
+.healthcare-offer,
+.healthcare-benefits,
+.healthcare-back {
+  background: transparent;
+}
+
+.rehab-card,
+.who-card,
+.offer-card {
+  background: var(--ground-raised, #ffffff);
+  border: 1px solid var(--line, #ddd5c6);
+  border-radius: 24px;
+  box-shadow: none;
 }

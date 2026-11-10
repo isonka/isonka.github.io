@@ -4,6 +4,7 @@ import { useLocale } from '../i18n/useLocale';
 import { trackPageView } from '../utils/gtmTracking';
 import { isPrerender } from '../utils/prerender';
 import '../styles/AcademyPractice.css';
+import { MediumTail } from '../components/MediumTail';
 
 const WIDGET_SRC = 'https://brandedweb.mindbodyonline.com/embed/widget.js';
 const AUTH_COOKIE = 'pt7-academy-practice';
@@ -110,7 +111,7 @@ export const AcademyPractice = () => {
       <div className="academy-practice-page">
         <div className="academy-practice-container">
           <p className="academy-practice-kicker">{text.kicker}</p>
-          <h1>{text.heading}</h1>
+          <h1><MediumTail text={text.heading} /></h1>
           {authed ? (
             <>
               <p className="academy-practice-lead">{text.lead}</p>

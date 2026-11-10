@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PT7 web kit</title>
+<style>
+/* PT7 web kit — same language as the PT7 app, scaled for the browser.
+   Brand colours are identical to the app (tokens/tokens.json).
+   Web-only: responsive type scale, page grid, sticky glass nav, hero frame.
+   Day (cream) is default. Evening (charcoal) via [data-theme="evening"] on any element. */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root {
+  /* Colour (same as app) */
+  --pt7-ground: #f5f0e6;
+  --pt7-ground-raised: #ffffff;
+  --pt7-ground-stone: #ebe4d6;
+  --pt7-line: #ddd5c6;
+  --pt7-ink: #1c1a18;
+  --pt7-ink-muted: #5c574f;
+  --pt7-gold: #ffd700;
+  --pt7-gold-deep: #e5c100;
+  --pt7-gold-text: #7a6400;
+  --pt7-on-accent: #1c1a18;
+  --pt7-strength: #ff5a2e;
+  --pt7-strength-text: #c2361a;
+  --pt7-yoga: #8fae8b;
+  --pt7-yoga-text: #4f6b4c;
+  --pt7-placeholder: #d6c9af;
+  --pt7-handle: #c9c0af;
+  --pt7-charcoal: #1c1a18;
+  --pt7-charcoal-ink: #f5f0e6;
+  --pt7-charcoal-muted: #a8a39a;
+  --pt7-charcoal-line: #3d3a36;
+  --pt7-focus-ring: #1c1a18;
+
+  /* Lane colours (7-stripe) */
+  --pt7-lane-pilates: var(--pt7-gold);
+  --pt7-lane-yoga: var(--pt7-yoga);
+  --pt7-lane-strength: var(--pt7-strength);
+
+  /* Glass (floating chrome only: nav, mobile tab bar, sheets) */
+  --pt7-glass-bg: rgba(255,255,255,0.55);
+  --pt7-glass-border: rgba(255,255,255,0.7);
+  --pt7-glass-shadow: 0 8px 24px rgba(28,26,24,0.12);
+  --pt7-glass-bar-bg: rgba(255,255,255,0.6);
+  --pt7-glass-bar-shadow: 0 10px 30px rgba(28,26,24,0.16);
+  --pt7-glass-sheet-bg: rgba(250,247,240,0.84);
+  --pt7-glass-blur: blur(24px) saturate(180%);
+  --pt7-scrim: rgba(28,26,24,0.32);
+
+  /* Radius (same as app) */
+  --pt7-r-pill: 999px;
+  --pt7-r-thumb: 14px;
+  --pt7-r-input: 16px;
+  --pt7-r-card: 24px;
+  --pt7-r-sheet: 32px;
+  --pt7-r-modal: 36px;
+
+  /* Spacing */
+  --pt7-s1: 4px; --pt7-s2: 8px; --pt7-s3: 12px; --pt7-s4: 16px;
+  --pt7-s5: 20px; --pt7-s6: 24px; --pt7-s8: 32px; --pt7-s10: 40px;
+  --pt7-s12: 48px; --pt7-s16: 64px; --pt7-s24: 96px;
+  --pt7-gutter: 24px;          /* 16px under 720px */
+  --pt7-section: 96px;         /* gap between page sections; 56px under 720px */
+  --pt7-max: 1200px;           /* content width */
+
+  /* Sizes */
+  --pt7-hit: 44px; --pt7-btn-lg: 52px; --pt7-btn-md: 44px; --pt7-btn-sm: 36px;
+  --pt7-nav-h: 64px;
+
+  /* Type (web scale; mobile values = app scale) */
+  --pt7-font: Poppins, system-ui, sans-serif;
+  --pt7-display-size: 72px; --pt7-display-lh: 76px; --pt7-display-ls: -2px;
+  --pt7-heading-size: 44px; --pt7-heading-lh: 50px; --pt7-heading-ls: -1px;
+  --pt7-title-size: 22px;   --pt7-title-lh: 30px;
+  --pt7-lead-size: 18px;    --pt7-lead-lh: 28px;
+  --pt7-body-size: 16px;    --pt7-body-lh: 24px;
+  --pt7-meta-size: 13px;    --pt7-meta-lh: 18px;
+}
+@media (max-width: 1024px) {
+  :root { --pt7-display-size: 56px; --pt7-display-lh: 60px; --pt7-display-ls: -1.6px;
+          --pt7-heading-size: 36px; --pt7-heading-lh: 42px; --pt7-heading-ls: -0.8px; }
+}
+@media (max-width: 720px) {
+  :root { --pt7-gutter: 16px; --pt7-section: 56px;
+          --pt7-display-size: 40px; --pt7-display-lh: 42px; --pt7-display-ls: -1.2px;
+          --pt7-heading-size: 30px; --pt7-heading-lh: 34px; --pt7-heading-ls: -0.6px;
+          --pt7-title-size: 20px; --pt7-title-lh: 28px;
+          --pt7-lead-size: 17px; --pt7-lead-lh: 26px; --pt7-body-lh: 22px; }
+}
+[data-theme="evening"] {
+  --pt7-ground: #1c1a18; --pt7-ground-raised: #292623; --pt7-ground-stone: #24211e;
+  --pt7-line: #3d3a36; --pt7-ink: #f5f0e6; --pt7-ink-muted: #a8a39a;
+  --pt7-gold-text: #ffd700; --pt7-strength-text: #ff5a2e; --pt7-focus-ring: #ffd700;
+  color: var(--pt7-ink); background: var(--pt7-ground);
+}
+
+/* ---------- Base ---------- */
+.pt7 { margin: 0; background: var(--pt7-ground); color: var(--pt7-ink); font: 400 var(--pt7-body-size)/var(--pt7-body-lh) var(--pt7-font); -webkit-font-smoothing: antialiased; }
+.pt7 *, .pt7 *::before, .pt7 *::after { box-sizing: border-box; }
+:where(.pt7) a { color: var(--pt7-gold-text); }
+.pt7 :focus-visible { outline: 2px solid var(--pt7-focus-ring); outline-offset: 2px; }
+.pt7-wrap { max-width: calc(var(--pt7-max) + 2 * var(--pt7-gutter)); margin: 0 auto; padding: 0 var(--pt7-gutter); }
+.pt7-section { padding: var(--pt7-section) 0 0; }
+
+/* ---------- Type ---------- */
+.pt7-display { margin: 0; font-weight: 300; font-size: var(--pt7-display-size); line-height: var(--pt7-display-lh); letter-spacing: var(--pt7-display-ls); text-wrap: balance; }
+.pt7-heading { margin: 0; font-weight: 300; font-size: var(--pt7-heading-size); line-height: var(--pt7-heading-lh); letter-spacing: var(--pt7-heading-ls); text-wrap: balance; }
+.pt7-display b, .pt7-heading b { font-weight: 500; }
+.pt7-title { margin: 0; font-weight: 400; font-size: var(--pt7-title-size); line-height: var(--pt7-title-lh); }
+.pt7-lead { margin: 0; font-size: var(--pt7-lead-size); line-height: var(--pt7-lead-lh); color: var(--pt7-ink-muted); max-width: 52ch; }
+.pt7-meta { font-size: var(--pt7-meta-size); line-height: var(--pt7-meta-lh); color: var(--pt7-ink-muted); }
+.pt7-eyebrow { margin: 0; font-size: 13px; line-height: 18px; font-weight: 500; letter-spacing: 0.04em; color: var(--pt7-gold-text); }
+.pt7-label { font-size: 13px; line-height: 18px; font-weight: 500; color: var(--pt7-ink-muted); }
+.pt7-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: var(--pt7-s6); }
+
+/* ---------- 7-stripe ---------- */
+.pt7-stripe { display: inline-block; flex: none; width: 14px; height: 22px; background: var(--lane, var(--pt7-gold)); clip-path: polygon(8px 0, 14px 0, 5px 100%, 0 100%); }
+.pt7-stripe--sm { width: 11px; height: 18px; clip-path: polygon(6px 0, 11px 0, 4px 100%, 0 100%); }
+.pt7-stripe--lg { width: 40px; height: 64px; clip-path: polygon(24px 0, 40px 0, 14px 100%, 0 100%); }
+.lane-pilates { --lane: var(--pt7-lane-pilates); }
+.lane-yoga { --lane: var(--pt7-lane-yoga); }
+.lane-strength { --lane: var(--pt7-lane-strength); }
+
+/* ---------- Buttons (pills) ---------- */
+.pt7-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: var(--pt7-btn-md); padding: 0 22px; border: 0; border-radius: var(--pt7-r-pill); font: 500 15px/20px var(--pt7-font); text-decoration: none; cursor: pointer; white-space: nowrap; transition: background .15s, border-color .15s; }
+.pt7 .pt7-btn--primary, .pt7-btn--primary { background: var(--pt7-gold); color: var(--pt7-on-accent); }
+.pt7-btn--primary:hover { background: var(--pt7-gold-deep); }
+.pt7 .pt7-btn--outline, .pt7-btn--outline { background: transparent; color: var(--pt7-ink); box-shadow: inset 0 0 0 1px var(--pt7-ink); }
+.pt7-btn--outline:hover { background: var(--pt7-ground-stone); }
+.pt7 .pt7-btn--quiet, .pt7-btn--quiet { background: var(--pt7-ground-stone); color: var(--pt7-ink); }
+.pt7 .pt7-btn--ink, .pt7-btn--ink { background: var(--pt7-ink); color: var(--pt7-ground); }
+.pt7 .pt7-btn--text, .pt7-btn--text { background: none; color: var(--pt7-gold-text); padding: 0 8px; }
+.pt7 .pt7-btn--glass, .pt7-btn--glass { background: var(--pt7-glass-bg); color: var(--pt7-charcoal); border: 1px solid var(--pt7-glass-border); box-shadow: var(--pt7-glass-shadow); -webkit-backdrop-filter: var(--pt7-glass-blur); backdrop-filter: var(--pt7-glass-blur); }
+.pt7-btn--lg { height: var(--pt7-btn-lg); padding: 0 28px; }
+.pt7-btn--sm { height: var(--pt7-btn-sm); padding: 0 16px; }
+.pt7-btn--round { width: var(--pt7-hit); padding: 0; }
+.pt7-btn[disabled] { opacity: .4; cursor: default; }
+.pt7-btns { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* ---------- Chips, badges, status ---------- */
+.pt7-chip { display: inline-flex; align-items: center; gap: 6px; height: 40px; padding: 0 16px; border-radius: var(--pt7-r-pill); background: var(--pt7-ground-raised); box-shadow: inset 0 0 0 1px var(--pt7-line); color: var(--pt7-ink); font: 400 15px/20px var(--pt7-font); text-decoration: none; cursor: pointer; border: 0; }
+.pt7-chip[aria-pressed="true"] { background: var(--pt7-ink); color: var(--pt7-ground); box-shadow: none; font-weight: 500; }
+.pt7-badge { display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: var(--pt7-r-pill); background: var(--pt7-gold); color: var(--pt7-on-accent); font: 500 12px/16px var(--pt7-font); white-space: nowrap; }
+.pt7-badge--stone { background: var(--pt7-ground-stone); color: var(--pt7-ink); }
+.pt7-badge--ink { background: var(--pt7-ink); color: var(--pt7-gold); }
+
+/* ---------- Segmented control ---------- */
+.pt7-seg { display: inline-flex; padding: 4px; gap: 4px; border-radius: var(--pt7-r-pill); background: var(--pt7-ground-stone); }
+.pt7-seg button { height: 40px; padding: 0 20px; border: 0; border-radius: var(--pt7-r-pill); background: transparent; color: var(--pt7-ink-muted); font: 400 15px/20px var(--pt7-font); cursor: pointer; }
+.pt7-seg button[aria-selected="true"] { background: var(--pt7-ground-raised); color: var(--pt7-ink); font-weight: 500; box-shadow: inset 0 0 0 1px var(--pt7-line); }
+
+/* ---------- Cards ---------- */
+.pt7-card { background: var(--pt7-ground-raised); border: 1px solid var(--pt7-line); border-radius: var(--pt7-r-card); overflow: hidden; }
+.pt7-card--pad { padding: var(--pt7-s6); }
+.pt7-card--feature { background: var(--pt7-charcoal); color: var(--pt7-charcoal-ink); border: 0; padding: var(--pt7-s8); }
+.pt7-card--feature .pt7-lead, .pt7-card--feature .pt7-meta { color: var(--pt7-charcoal-muted); }
+.pt7-card--gold { background: var(--pt7-gold); color: var(--pt7-on-accent); border: 0; padding: var(--pt7-s6); }
+.pt7-card--gold .pt7-eyebrow, .pt7-card--gold .pt7-meta { color: var(--pt7-on-accent); }
+.pt7-photo { background: var(--pt7-placeholder); border-radius: var(--pt7-r-card); display: flex; align-items: center; justify-content: center; padding: 16px; text-align: center; color: var(--pt7-ink-muted); font-size: 13px; line-height: 18px; overflow: hidden; }
+.pt7-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+/* List card: rows divided by hairlines */
+.pt7-list { background: var(--pt7-ground-raised); border: 1px solid var(--pt7-line); border-radius: var(--pt7-r-card); overflow: hidden; margin: 0; padding: 0; list-style: none; }
+.pt7-row { display: flex; align-items: center; gap: 12px; padding: 14px 16px 14px 20px; min-height: 64px; color: var(--pt7-ink); text-decoration: none; }
+.pt7-row + .pt7-row, .pt7-list > li + li > .pt7-row { border-top: 1px solid var(--pt7-line); }
+.pt7-row__main { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; }
+.pt7-row__time { width: 48px; flex: none; font-weight: 500; font-size: 15px; }
+.pt7-row__end { display: flex; align-items: center; gap: 12px; flex: none; text-align: right; }
+a.pt7-row:hover { background: var(--pt7-ground); }
+.pt7-chev { flex: none; width: 16px; height: 16px; color: var(--pt7-ink-muted); }
+
+/* Coach card */
+.pt7-coach { display: flex; flex-direction: column; gap: 10px; color: var(--pt7-ink); text-decoration: none; }
+.pt7-coach .pt7-photo { aspect-ratio: 4 / 5; }
+.pt7-coach__name { display: flex; align-items: center; gap: 8px; padding: 0 4px; }
+
+/* Stat tile + row of stats (stays 3-up on phones) */
+.pt7-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.pt7-stat { background: var(--pt7-ground-raised); border: 1px solid var(--pt7-line); border-radius: var(--pt7-r-card); padding: 20px; }
+.pt7-stat__n { font-weight: 300; font-size: 36px; line-height: 40px; letter-spacing: -0.8px; }
+.pt7-stat--dark { background: var(--pt7-ground-raised); border: 0; }
+[data-theme="evening"] .pt7-stat, .pt7-card--feature .pt7-stat { background: #292623; border: 0; }
+@media (max-width: 720px) { .pt7-stat { padding: 16px; } .pt7-stat__n { font-size: 30px; line-height: 34px; } .pt7-hide-sm { display: none !important; } }
+
+/* ---------- Glass nav (web) ---------- */
+.pt7-nav { position: sticky; top: 16px; z-index: 20; margin: 16px auto 0; max-width: calc(var(--pt7-max) + 2 * var(--pt7-gutter)); padding: 0 var(--pt7-gutter); }
+.pt7-nav__bar { height: var(--pt7-nav-h); padding: 0 10px 0 20px; border-radius: var(--pt7-r-pill); display: flex; align-items: center; gap: 24px; background: var(--pt7-glass-bar-bg); border: 1px solid var(--pt7-glass-border); box-shadow: var(--pt7-glass-bar-shadow); -webkit-backdrop-filter: var(--pt7-glass-blur); backdrop-filter: var(--pt7-glass-blur); }
+.pt7-nav__logo { display: flex; align-items: center; height: 44px; }
+.pt7-nav__links { display: flex; gap: 4px; margin: 0 auto; padding: 0; list-style: none; }
+.pt7-nav__links a { display: inline-flex; align-items: center; height: 40px; padding: 0 14px; border-radius: var(--pt7-r-pill); color: var(--pt7-charcoal); text-decoration: none; font-size: 15px; }
+.pt7-nav__links a:hover { background: rgba(255,255,255,0.6); }
+.pt7-nav__links a[aria-current="page"] { background: var(--pt7-gold); font-weight: 500; }
+.pt7-nav__end { display: flex; gap: 8px; align-items: center; }
+.pt7-nav__menu { display: none; }
+
+/* Mobile tab bar (web, under 720px) — same capsule as the app, 5 items */
+.pt7-tabbar { display: none; }
+@media (max-width: 960px) {
+  .pt7-nav__links { display: none; }
+  .pt7-nav__menu { display: inline-flex; }
+  .pt7-nav__bar { justify-content: space-between; }
+}
+@media (max-width: 720px) {
+  .pt7-nav { top: 12px; margin-top: 12px; }
+  .pt7-nav__bar { height: 56px; padding: 0 6px 0 16px; }
+  .pt7-nav__login { display: none; }
+  .pt7-tabbar { display: grid; grid-template-columns: repeat(5, 1fr); position: fixed; left: 16px; right: 16px; bottom: 20px; z-index: 20; height: 64px; padding: 6px; border-radius: var(--pt7-r-pill); background: var(--pt7-glass-bar-bg); border: 1px solid var(--pt7-glass-border); box-shadow: var(--pt7-glass-bar-shadow); -webkit-backdrop-filter: var(--pt7-glass-blur); backdrop-filter: var(--pt7-glass-blur); }
+  .pt7-tabbar a { border-radius: var(--pt7-r-pill); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; color: var(--pt7-charcoal); text-decoration: none; font-size: 12px; line-height: 15px; }
+  .pt7-tabbar a[aria-current="page"] { background: var(--pt7-gold); font-weight: 500; }
+  .pt7-has-tabbar { padding-bottom: 120px; }
+}
+
+/* ---------- Hero: rounded photo frame + overlapping content sheet ---------- */
+.pt7-hero { position: relative; max-width: calc(var(--pt7-max) + 2 * var(--pt7-gutter)); margin: calc(-1 * var(--pt7-nav-h) - 16px) auto 0; padding: 0 var(--pt7-gutter); }
+.pt7-hero__media { height: 640px; border-radius: var(--pt7-r-sheet); }
+.pt7-hero__sheet { position: relative; margin: -200px 0 0 40px; max-width: 620px; background: var(--pt7-ground); border-radius: var(--pt7-r-sheet); padding: 40px 40px 36px; display: flex; flex-direction: column; gap: 16px; }
+@media (max-width: 720px) {
+  .pt7-hero { padding: 0; margin-top: calc(-1 * 56px - 12px); }
+  .pt7-hero__media { height: 440px; border-radius: 0; }
+  .pt7-hero__sheet { margin: -36px 0 0; max-width: none; border-radius: var(--pt7-r-sheet) var(--pt7-r-sheet) 0 0; padding: 28px 20px 0; gap: 10px; }
+  .pt7-hero__sheet .pt7-btns { padding-top: 6px; }
+  .pt7-hero__sheet .pt7-btn--lg { flex: 1 1 auto; }
+}
+
+/* ---------- Grids ---------- */
+.pt7-grid { display: grid; gap: var(--pt7-s4); }
+.pt7-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.pt7-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.pt7-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pt7-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--pt7-s6); align-items: start; }
+@media (max-width: 960px) { .pt7-grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .pt7-grid--3 { grid-template-columns: 1fr; } .pt7-split { grid-template-columns: 1fr; } }
+@media (max-width: 720px) { .pt7-grid--2 { grid-template-columns: 1fr; } .pt7-grid { gap: 12px; } }
+
+/* ---------- Forms ---------- */
+.pt7-field { display: flex; flex-direction: column; gap: 6px; }
+.pt7-input { height: 52px; padding: 0 16px; border: 1px solid var(--pt7-line); border-radius: var(--pt7-r-input); background: var(--pt7-ground-raised); color: var(--pt7-ink); font: 400 16px/22px var(--pt7-font); }
+
+/* ---------- Footer ---------- */
+.pt7-footer { margin-top: var(--pt7-section); background: var(--pt7-ground-stone); border-radius: var(--pt7-r-sheet) var(--pt7-r-sheet) 0 0; padding: 56px 0 40px; }
+
+.kit-sec{padding-top:72px}
+.kit-sec>h2{margin-bottom:8px}
+.kit-sec>.pt7-lead{margin-bottom:24px}
+.sws{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+.sw{background:#fff;border:1px solid var(--pt7-line);border-radius:24px;padding:12px;display:flex;flex-direction:column;gap:2px;font-size:14px}
+.sw span{height:64px;border-radius:16px;margin-bottom:8px;box-shadow:inset 0 0 0 1px rgba(28,26,24,.08)}
+.sw code{font-size:12px;color:var(--pt7-ink-muted)} .sw small{font-size:12px;color:var(--pt7-ink-muted)}
+.tbl{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--pt7-line);border-radius:24px;overflow:hidden;display:block}
+.tbl-wrap{border:1px solid var(--pt7-line);border-radius:24px;overflow:auto;background:#fff}
+.tbl-wrap table{width:100%;border-collapse:collapse;min-width:560px}
+.tbl-wrap th,.tbl-wrap td{text-align:left;vertical-align:middle;padding:14px 20px;border-top:1px solid var(--pt7-line);font-size:15px}
+.tbl-wrap tr:first-child th,.tbl-wrap tr:first-child td{border-top:0}
+.tbl-wrap thead th{font-size:13px;font-weight:500;color:var(--pt7-ink-muted);background:var(--pt7-ground)}
+.tbl-wrap tbody th{font-weight:500;white-space:nowrap}
+.demo{background:#fff;border:1px solid var(--pt7-line);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:16px}
+.demo h3{margin:0;font-size:13px;font-weight:500;color:var(--pt7-ink-muted)}
+.radii{display:flex;flex-wrap:wrap;gap:12px}
+.radii div{width:104px;height:72px;background:var(--pt7-ground-stone);display:flex;align-items:flex-end;padding:10px;font-size:12px;color:var(--pt7-ink-muted)}
+.navdemo{background:var(--pt7-placeholder);border-radius:24px;padding:24px 16px 72px;position:relative}
+.navdemo .pt7-nav{position:static;margin:0;padding:0}
+.navdemo .pt7-tabbar{display:grid;position:static;margin-top:16px;max-width:390px;grid-template-columns:repeat(5,1fr);height:64px;padding:6px;border-radius:999px;background:var(--pt7-glass-bar-bg);border:1px solid var(--pt7-glass-border);box-shadow:var(--pt7-glass-bar-shadow)}
+.navdemo .pt7-tabbar a{border-radius:999px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:12px;color:#1c1a18;text-decoration:none}
+.navdemo .pt7-tabbar a[aria-current]{background:#ffd700;font-weight:500}
+.rules li+li{margin-top:8px}
+</style></head>
+<body class="pt7">
+<main class="pt7-wrap" style="padding-top:56px;padding-bottom:96px">
+
+<header style="display:flex;flex-direction:column;gap:14px;max-width:760px">
+  <svg height="30" style="width:auto;aspect-ratio:480/392;align-self:flex-start" viewBox="325 322 480 392" role="img" aria-label="PT7"><g fill="none" stroke="#1c1a18" stroke-width="11"><path d="M343 594V335H392C458 335 482 368 482 402C482 432 466 450 430 463"></path><path d="M503 368H671M588 368V571"></path></g><path d="M663 466H788C744 540 690 620 703 705" fill="none" stroke="#e5c100" stroke-width="11"></path></svg>
+  <p class="pt7-eyebrow">Website design kit · same language as the app</p>
+  <h1 class="pt7-display">One PT7, on the web and in your <b>pocket.</b></h1>
+  <p class="pt7-lead">The website now speaks the app's language: pill buttons, rounded white cards on cream, glass only on floating chrome, the 7-stripe for lane colour. Same tokens as the app; only the type scale and layout grow for big screens.</p>
+  <div class="pt7-btns"><a class="pt7-btn pt7-btn--primary pt7-btn--lg" href="homepage.html">Open the reference homepage</a><a class="pt7-btn pt7-btn--outline pt7-btn--lg" href="#components">Components</a></div>
+</header>
+
+<section class="kit-sec"><h2 class="pt7-heading">What <b>changes.</b></h2><p class="pt7-lead">Old web kit (square) → new web kit (app language).</p>
+<div class="tbl-wrap"><table><thead><tr><th></th><th>Before</th><th>Now</th></tr></thead><tbody><tr><th>Corners</th><td class="pt7-meta">Square everywhere</td><td>Pills for buttons, chips and nav · 24 cards · 32 hero and sheets · 16 inputs</td></tr><tr><th>Navigation</th><td class="pt7-meta">Plain top bar</td><td>Floating glass capsule, sticky. Under 720px a glass tab bar at the bottom, like the app</td></tr><tr><th>Hero</th><td class="pt7-meta">Full-width text and line art</td><td>Rounded photo frame with a cream content sheet overlapping it</td></tr><tr><th>Sections</th><td class="pt7-meta">Full-width bands, hairline lists</td><td>White list cards and rounded tiles on cream; one charcoal feature card</td></tr><tr><th>Lane colour</th><td class="pt7-meta">Stripe beside names</td><td>Same 7-stripe, app sizes 14×22 and 11×18</td></tr><tr><th>Type</th><td class="pt7-meta">Poppins, 84px display</td><td>Poppins, 72px display on desktop, the app scale on phones</td></tr><tr><th>Glass</th><td class="pt7-meta">None</td><td>Only on floating chrome: nav, tab bar, sheets. Never on cards</td></tr></tbody></table></div></section>
+
+<section class="kit-sec"><h2 class="pt7-heading"><b>Colour.</b></h2><p class="pt7-lead">Identical to the app. Gold is a fill, never text on cream: gold as text is gold-text. Roughly 75% cream and white, 20% ink, 5% gold.</p>
+<div class="sws"><div class="sw"><span style="background:#f5f0e6"></span><b>ground</b><code>#f5f0e6</code><small>Page</small></div><div class="sw"><span style="background:#ffffff"></span><b>ground-raised</b><code>#ffffff</code><small>Cards, lists</small></div><div class="sw"><span style="background:#ebe4d6"></span><b>ground-stone</b><code>#ebe4d6</code><small>Quiet fills, segmented, footer</small></div><div class="sw"><span style="background:#ddd5c6"></span><b>line</b><code>#ddd5c6</code><small>Hairlines</small></div><div class="sw"><span style="background:#1c1a18"></span><b>ink</b><code>#1c1a18</code><small>Text, charcoal blocks</small></div><div class="sw"><span style="background:#5c574f"></span><b>ink-muted</b><code>#5c574f</code><small>Secondary text</small></div><div class="sw"><span style="background:#ffd700"></span><b>gold</b><code>#ffd700</code><small>Fills: buttons, badges, active</small></div><div class="sw"><span style="background:#7a6400"></span><b>gold-text</b><code>#7a6400</code><small>Gold as text</small></div><div class="sw"><span style="background:#8fae8b"></span><b>yoga</b><code>#8fae8b</code><small>Yoga stripe</small></div><div class="sw"><span style="background:#ff5a2e"></span><b>strength</b><code>#ff5a2e</code><small>Strength stripe</small></div><div class="sw"><span style="background:#d6c9af"></span><b>placeholder</b><code>#d6c9af</code><small>Photo slots</small></div></div></section>
+
+<section class="kit-sec"><h2 class="pt7-heading"><b>Type.</b></h2><p class="pt7-lead">Poppins only. Headlines light with the last word medium, sentence case, ending with a full stop. Phone sizes are exactly the app's.</p>
+<div class="tbl-wrap"><table><thead><tr><th>Style</th><th>Sample</th><th>Desktop</th><th>Tablet ≤1024</th><th>Phone ≤720</th></tr></thead><tbody><tr><th>Display</th><td><div class="pt7-display" style="font-size:min(var(--pt7-display-size),48px);line-height:1.05">New here? Start with <b>three.</b></div></td><td class="pt7-meta">72 / 76</td><td class="pt7-meta">56 / 60</td><td class="pt7-meta">40 / 42</td></tr><tr><th>Heading</th><td><div class="pt7-heading" style="">Meet your <b>coaches.</b></div></td><td class="pt7-meta">44 / 50</td><td class="pt7-meta">36 / 42</td><td class="pt7-meta">30 / 34</td></tr><tr><th>Title</th><td><div class="pt7-title" style="">From the studio</div></td><td class="pt7-meta">22 / 30</td><td class="pt7-meta">22 / 30</td><td class="pt7-meta">20 / 28</td></tr><tr><th>Lead</th><td><div class="pt7-lead" style="">Up to five per class, one coach beside you.</div></td><td class="pt7-meta">18 / 28</td><td class="pt7-meta">18 / 28</td><td class="pt7-meta">17 / 26</td></tr><tr><th>Body</th><td><div class="" style="">Springs, straps and a coach who corrects you.</div></td><td class="pt7-meta">16 / 24</td><td class="pt7-meta">16 / 24</td><td class="pt7-meta">16 / 22</td></tr><tr><th>Meta</th><td><div class="pt7-meta" style="">45 min · Gökben · 3 spots left</div></td><td class="pt7-meta">13 / 18</td><td class="pt7-meta">13 / 18</td><td class="pt7-meta">13 / 18</td></tr><tr><th>Eyebrow</th><td><div class="pt7-eyebrow" style="">Pilates · Yoga · Strength</div></td><td class="pt7-meta">13 / 18 · 500</td><td class="pt7-meta">13 / 18</td><td class="pt7-meta">13 / 18</td></tr></tbody></table></div></section>
+
+<section class="kit-sec"><h2 class="pt7-heading">Shape and <b>space.</b></h2><p class="pt7-lead">Content 1200 wide, gutters 24 (16 on phones). Sections 96 apart (56 on phones). Cards gap 16 (12 on phones).</p>
+<div class="radii"><div style="border-radius:999px">pill · 999</div><div style="border-radius:14px">thumb · 14</div><div style="border-radius:16px">input · 16</div><div style="border-radius:24px">card · 24</div><div style="border-radius:32px">hero, sheet · 32</div><div style="border-radius:36px">modal · 36</div></div></section>
+
+<section class="kit-sec" id="components"><h2 class="pt7-heading"><b>Components.</b></h2><p class="pt7-lead">Live samples from pt7-web.css. Class names in the zip.</p>
+<div class="pt7-grid pt7-grid--2">
+  <div class="demo"><h3>Buttons · .pt7-btn</h3>
+    <div class="pt7-btns"><a class="pt7-btn pt7-btn--primary pt7-btn--lg" href="#">Primary lg</a><a class="pt7-btn pt7-btn--outline pt7-btn--lg" href="#">Outline</a></div>
+    <div class="pt7-btns"><a class="pt7-btn pt7-btn--primary" href="#">Primary</a><a class="pt7-btn pt7-btn--quiet" href="#">Quiet</a><a class="pt7-btn pt7-btn--ink" href="#">Ink</a><a class="pt7-btn pt7-btn--text" href="#">Text</a></div>
+    <div class="pt7-btns"><a class="pt7-btn pt7-btn--primary pt7-btn--sm" href="#">Book</a><a class="pt7-btn pt7-btn--outline pt7-btn--sm" href="#">Waitlist</a><span class="pt7-btn pt7-btn--quiet pt7-btn--sm" style="cursor:default">✓ Booked</span></div>
+  </div>
+  <div class="demo"><h3>Chips, badges, segmented</h3>
+    <div class="pt7-btns"><button class="pt7-chip" aria-pressed="true">All</button><button class="pt7-chip" aria-pressed="false">Pilates</button><button class="pt7-chip" aria-pressed="false">Yoga</button><button class="pt7-chip" aria-pressed="false">Strength</button></div>
+    <div class="pt7-btns"><span class="pt7-badge">Most popular</span><span class="pt7-badge">Best value</span><span class="pt7-badge pt7-badge--stone">Open</span><span class="pt7-badge pt7-badge--ink">New</span></div>
+    <div class="pt7-seg" role="tablist" aria-label="Demo"><button role="tab" aria-selected="true">Classes</button><button role="tab" aria-selected="false">Private sessions</button></div>
+  </div>
+  <div class="demo"><h3>Schedule list · .pt7-list .pt7-row</h3>
+    <ul class="pt7-list">
+      <li><div class="pt7-row"><span class="pt7-row__time">07:00</span><span class="pt7-stripe lane-pilates" aria-hidden="true"></span><span class="pt7-row__main"><span>Reformer</span><span class="pt7-meta">45 min · Gökben · 3 spots left</span></span><a class="pt7-btn pt7-btn--primary pt7-btn--sm" href="#">Book</a></div></li>
+      <li><div class="pt7-row"><span class="pt7-row__time">09:00</span><span class="pt7-stripe lane-yoga" aria-hidden="true"></span><span class="pt7-row__main"><span>Yoga</span><span class="pt7-meta">60 min · [Coach]</span></span><span class="pt7-btn pt7-btn--quiet pt7-btn--sm">✓ Booked</span></div></li>
+      <li><div class="pt7-row"><span class="pt7-row__time">18:00</span><span class="pt7-stripe lane-strength" aria-hidden="true"></span><span class="pt7-row__main"><span>Strength</span><span class="pt7-meta">45 min · Göknur · Full</span></span><a class="pt7-btn pt7-btn--outline pt7-btn--sm" href="#">Waitlist</a></div></li>
+    </ul>
+  </div>
+  <div class="demo"><h3>Price list · link rows with chevron</h3>
+    <ul class="pt7-list">
+      <li><a class="pt7-row" href="#"><span class="pt7-row__main"><span style="display:flex;gap:8px;align-items:center"><span style="font-weight:500">Unlimited</span><span class="pt7-badge">Most popular</span></span><span class="pt7-meta">3-month commitment</span></span><span class="pt7-row__end"><span><span style="font-size:22px;font-weight:300">€350</span> <span class="pt7-meta">/ month</span></span><svg class="pt7-chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 3l5 5-5 5"></path></svg></span></a></li>
+      <li><div class="pt7-row"><span class="pt7-row__main"><span style="font-weight:500">10 classes</span><span class="pt7-meta">Valid 10 weeks</span></span><span class="pt7-row__end"><span style="display:flex;flex-direction:column"><span>€300</span><span class="pt7-meta">€30 a class</span></span><a class="pt7-btn pt7-btn--primary pt7-btn--sm" href="#">Buy</a></span></div></li>
+    </ul>
+  </div>
+  <div class="demo"><h3>Feature card (charcoal) · gold card · stats</h3>
+    <div class="pt7-card pt7-card--feature" style="padding:24px;display:flex;flex-direction:column;gap:10px"><p class="pt7-title">Become a Reformer <b style="font-weight:500">teacher.</b></p><p class="pt7-meta">300-hour teacher training, PMA ITTAP approved.</p><a class="pt7-btn pt7-btn--primary" href="#" style="align-self:flex-start">Learn more</a></div>
+    <div class="pt7-card pt7-card--gold"><p class="pt7-eyebrow">Intro offer</p><p class="pt7-title" style="margin-top:4px">3 group classes for <b>€50.</b></p></div>
+    <div class="pt7-stats"><div class="pt7-stat"><div class="pt7-stat__n">45</div><div class="pt7-meta">minutes</div></div><div class="pt7-stat"><div class="pt7-stat__n">≤5</div><div class="pt7-meta">per class</div></div><div class="pt7-stat"><div class="pt7-stat__n">1</div><div class="pt7-meta">coach</div></div></div>
+  </div>
+  <div class="demo"><h3>Coach card · 7-stripe · form</h3>
+    <div class="pt7-grid pt7-grid--2" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+      <a class="pt7-coach" href="#"><div class="pt7-photo">[Photo: coach, 4:5]</div><div class="pt7-coach__name"><span class="pt7-stripe pt7-stripe--sm lane-pilates" aria-hidden="true"></span><span style="display:flex;flex-direction:column"><span>Elif Arzu Ogan</span><span class="pt7-meta">Master coach</span></span></div></a>
+      <div style="display:flex;flex-direction:column;gap:12px"><div style="display:flex;gap:10px;align-items:center"><span class="pt7-stripe lane-pilates"></span><span class="pt7-stripe lane-yoga"></span><span class="pt7-stripe lane-strength"></span><span class="pt7-meta">14×22</span></div>
+        <label class="pt7-field"><span class="pt7-label">Email</span><input class="pt7-input" type="email" placeholder="you@example.com"></label></div>
+    </div>
+  </div>
+</div>
+<div class="demo" style="margin-top:16px"><h3>Glass chrome · .pt7-nav (desktop) and .pt7-tabbar (phones ≤720)</h3>
+  <div class="navdemo">
+    <nav class="pt7-nav" aria-label="Demo"><div class="pt7-nav__bar"><span class="pt7-nav__logo"><svg height="30" style="width:auto;aspect-ratio:480/392;align-self:flex-start" viewBox="325 322 480 392" role="img" aria-label="PT7"><g fill="none" stroke="#1c1a18" stroke-width="11"><path d="M343 594V335H392C458 335 482 368 482 402C482 432 466 450 430 463"></path><path d="M503 368H671M588 368V571"></path></g><path d="M663 466H788C744 540 690 620 703 705" fill="none" stroke="#e5c100" stroke-width="11"></path></svg></span><ul class="pt7-nav__links"><li><a href="#">Classes</a></li><li><a href="#" aria-current="page">Schedule</a></li><li><a href="#">Prices</a></li><li><a href="#">Coaches</a></li><li><a href="#">Academy</a></li></ul><div class="pt7-nav__end"><a class="pt7-btn pt7-btn--primary" href="#">Book a class</a></div></div></nav>
+    <div class="pt7-tabbar"><a href="#" aria-current="page">Home</a><a href="#">Schedule</a><a href="#">Prices</a><a href="#">Shop</a><a href="#">Academy</a></div>
+  </div>
+</div></section>
+
+<section class="kit-sec"><h2 class="pt7-heading">Rules for the <b>web.</b></h2>
+<div class="pt7-split"><ul class="pt7-list" style="padding:20px 24px 20px 44px;list-style:disc"><li class="rules">Breakpoints 1024 (tablet type), 960 (nav collapses, grids 2-up), 720 (phone: app type scale, bottom tab bar, single column).</li><li>No horizontal scrolling inside sections. The app's coach rail becomes a 2-column grid on phone web.</li><li>Hero = rounded photo + overlapping cream sheet. On phones it becomes the app hero: edge-to-edge photo, sheet with 32 top corners, −36 overlap.</li><li>One charcoal feature card per page (Academy or a campaign).</li><li>Copy in brackets is live data from Mindbody or the admin panel.</li></ul>
+<ul class="pt7-list" style="padding:20px 24px 20px 44px;list-style:disc"><li>Buttons are pills, sentence case. Gold pressed → gold-deep.</li><li>Glass only on floating chrome. Never on cards.</li><li>Lane colours stay three: Pilates gold, Yoga sage, Strength/TRX orange.</li><li>Line icons 1.5–1.8 stroke. No emoji, no all caps.</li><li>Touch targets ≥44. Text contrast ≥4.5:1.</li></ul></div></section>
+
+</main></body></html>

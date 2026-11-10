@@ -34,16 +34,16 @@
 .screen-kicker {
   margin: 0;
   font-size: clamp(1rem, 2vw, 1.6rem);
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: none;
   color: var(--gold, #ffd700);
 }
 
 .screen-display-title {
   margin: 0;
   font-size: clamp(2.2rem, 5vw, 4.2rem);
-  font-weight: 700;
+  font-weight: 300;
   letter-spacing: -0.04em;
   line-height: 1;
 }
@@ -67,14 +67,14 @@
 
 .screen-pack {
   font-size: clamp(4.5rem, 12vw, 9rem);
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.06em;
   line-height: 0.85;
 }
 
 .screen-plus {
   font-size: clamp(2.4rem, 5vw, 4.2rem);
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.04em;
   line-height: 1;
   color: var(--gold, #ffd700);
@@ -82,9 +82,9 @@
 
 .screen-free {
   font-size: clamp(1rem, 2vw, 1.5rem);
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: none;
   color: rgba(255, 255, 255, 0.72);
 }
 
@@ -149,7 +149,7 @@
 .screen-scope-nl {
   margin: 0;
   font-size: clamp(1rem, 2.1vw, 1.7rem);
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.04em;
 }
 

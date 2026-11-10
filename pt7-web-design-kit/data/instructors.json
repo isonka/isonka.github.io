@@ -1,0 +1,154 @@
+{
+  "source": "https://www.pt7.nl/instructors/",
+  "retrieved": "2026-11-07",
+  "note": "level = private price tier (see pricing.json). lane = 7-stripe colour.",
+  "instructors": [
+    {
+      "id": "elif-arzu-ogan",
+      "name": "Elif Arzu Ogan",
+      "level": "master",
+      "role": "Owner & head instructor",
+      "lane": "pilates",
+      "specialties": [
+        "Personal training",
+        "Holistic health"
+      ],
+      "certifications": [
+        "Senior Polestar Pilates",
+        "PMA-registered",
+        "Miha BodyTec EMS Advance Trainer",
+        "TRX & strength"
+      ],
+      "languages": [
+        "English",
+        "Turkish"
+      ],
+      "bio": "15+ years; founded PT7 in 2010."
+    },
+    {
+      "id": "goknur-dipli",
+      "name": "Göknur Dipli",
+      "level": "senior",
+      "role": "Senior Polestar Pilates instructor",
+      "lane": "pilates",
+      "specialties": [
+        "Pilates",
+        "Strength",
+        "Prenatal"
+      ],
+      "certifications": [
+        "Senior Polestar Pilates",
+        "Miha BodyTec EMS Advance Trainer"
+      ],
+      "languages": [
+        "English",
+        "Turkish"
+      ],
+      "bio": "Functional training background; guidance and motivation."
+    },
+    {
+      "id": "gokben-oztekin",
+      "name": "Gökben Öztekin",
+      "level": "senior",
+      "role": "Pilates instructor",
+      "lane": "pilates",
+      "specialties": [
+        "Pilates"
+      ],
+      "certifications": [
+        "BASI Pilates"
+      ],
+      "languages": [
+        "English",
+        "Turkish"
+      ],
+      "bio": "Strength, flexibility and well-being in a welcoming setting."
+    },
+    {
+      "id": "gulce-koc",
+      "name": "Gülce Koç",
+      "level": "junior",
+      "role": "Reformer instructor",
+      "lane": "pilates",
+      "specialties": [
+        "Reformer"
+      ],
+      "certifications": [],
+      "languages": [
+        "English",
+        "Turkish"
+      ],
+      "bio": "Trained in Turkey, Germany and the Netherlands."
+    },
+    {
+      "id": "lal-avgen",
+      "name": "Lal Avgen",
+      "level": "junior",
+      "role": "Reformer instructor",
+      "lane": "pilates",
+      "specialties": [
+        "Reformer"
+      ],
+      "certifications": [],
+      "languages": [
+        "English",
+        "Turkish"
+      ],
+      "bio": "Football and volleyball background; Pilates since 2022."
+    },
+    {
+      "id": "nisan-atalay",
+      "name": "Nisan Atalay",
+      "level": "junior",
+      "role": "Reformer instructor",
+      "lane": "pilates",
+      "specialties": [
+        "Reformer",
+        "Mobility",
+        "Balance"
+      ],
+      "certifications": [],
+      "languages": [
+        "English",
+        "Turkish",
+        "Dutch"
+      ],
+      "bio": "Mindful movement for long-term well-being."
+    },
+    {
+      "id": "kelly-tin",
+      "name": "Kelly Tin",
+      "level": "junior",
+      "role": "Reformer instructor",
+      "lane": "strength",
+      "specialties": [
+        "Reformer",
+        "Strength",
+        "HIIT"
+      ],
+      "certifications": [],
+      "languages": [
+        "English",
+        "Dutch"
+      ],
+      "bio": "Pilates made her calmer, stronger and more aware of posture."
+    },
+    {
+      "id": "gamze-karadag",
+      "name": "E. Gamze Karadağ",
+      "level": "junior",
+      "role": "Reformer instructor",
+      "lane": "yoga",
+      "specialties": [
+        "Reformer",
+        "Yoga"
+      ],
+      "certifications": [],
+      "languages": [
+        "English",
+        "Turkish"
+      ],
+      "bio": "7+ years of yoga; from studio member to instructor."
+    }
+  ]
+}

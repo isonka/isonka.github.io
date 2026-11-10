@@ -7,6 +7,7 @@ import { trackPageView } from '../utils/gtmTracking';
 import { openCookieSettings } from '../utils/consentTracking';
 import '../styles/ServicePage.css';
 import '../styles/Privacy.css';
+import { MediumTail } from '../components/MediumTail';
 import { studioAddressLine } from '../data/business';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
 
@@ -38,7 +39,7 @@ export const Privacy= () => {
       <div className="service-page privacy-page">
         <section className="service-hero is-in">
           <div className="service-hero-content">
-            <h1>{t('title')}</h1>
+            <h1><MediumTail text={t('title')} /></h1>
             <p>{t('updated', { address: studioAddressLine })}</p>
           </div>
         </section>

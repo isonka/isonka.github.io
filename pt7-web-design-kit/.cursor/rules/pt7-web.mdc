@@ -1,0 +1,17 @@
+---
+description: PT7 website design kit (same language as the PT7 app). Use for any UI on pt7.nl.
+globs: ["**/*.html", "**/*.css", "**/*.tsx", "**/*.jsx", "**/*.vue", "**/*.astro", "**/*.liquid", "**/*.php"]
+alwaysApply: true
+---
+Follow `design/CLAUDE.md` and `design/docs/components.md`.
+
+- Link `design/css/pt7-web.css`; build with its classes (`pt7-btn`, `pt7-list`, `pt7-row`, `pt7-card`, `pt7-stripe`, `pt7-nav`, `pt7-hero`…). Don't invent colours, radii or sizes; use the `--pt7-*` variables.
+- Poppins only. Headlines light with the last word in `<b>` (medium), sentence case, full stop.
+- Gold #ffd700 is a fill, never text on cream; gold text = #7a6400.
+- Everything rounded: pills (buttons, chips, nav), 24 cards, 32 hero/sheets, 16 inputs.
+- Glass only on floating chrome (nav, phone tab bar, sheets). Never on cards.
+- Lane colour via the 7-stripe only: Pilates gold, Yoga sage, Strength/TRX orange.
+- No horizontal scroll inside sections; no all caps; no emoji; touch targets ≥44.
+- Breakpoints 1024 / 960 / 720. Check pages at 1440 and 390.
+- Bracketed copy like [Coach] or [price] is data from Mindbody/admin panel. Never hard-code.
+- Reference: `design/reference/homepage.html`.

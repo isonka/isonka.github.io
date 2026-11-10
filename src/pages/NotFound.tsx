@@ -7,6 +7,7 @@ import { useLocale } from '../i18n/useLocale';
 import { trackPageView } from '../utils/gtmTracking';
 import { isPrerender } from '../utils/prerender';
 import '../styles/NotFound.css';
+import { MediumTail } from '../components/MediumTail';
 
 export const NotFound = () => {
   const { t } = useTranslation('notFound');
@@ -35,7 +36,7 @@ export const NotFound = () => {
       <section className="not-found">
         <div className="not-found-inner">
           <p className="kicker">404</p>
-          <h1>{t('title')}</h1>
+          <h1><MediumTail text={t('title')} /></h1>
           <p className="not-found-lead">{t('lead')}</p>
           <div className="not-found-actions">
             <Link to={homePath(locale)} className="btn-ink">

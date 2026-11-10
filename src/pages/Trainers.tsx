@@ -12,6 +12,8 @@ import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import { trackPageView } from '../utils/gtmTracking';
 import { useInViewOnce } from '../hooks/useInViewOnce';
 import '../styles/Trainers.css';
+import { MediumTail } from '../components/MediumTail';
+import { laneFromText } from '../lib/lanes';
 
 const InstructorRow = ({
   instructor,
@@ -48,6 +50,7 @@ const InstructorRow = ({
       </div>
       <div className="instructor-row-info">
         <h2 className="instructor-name instructor-reveal" style={{ transitionDelay: 'calc(var(--row-delay) + 80ms)' }}>
+          <span className={`lane-stripe lane-stripe-sm lane-${laneFromText(instructor.specialties[0] ?? '')}`} aria-hidden="true" />
           {instructor.name}
         </h2>
         <p className="instructor-role instructor-reveal" style={{ transitionDelay: 'calc(var(--row-delay) + 160ms)' }}>
@@ -110,7 +113,7 @@ export const Trainers= () => {
           <section className="instructors-stack" aria-labelledby="instructors-heading">
             <header className="instructors-header">
               <p className="instructors-kicker">{t('kicker')}</p>
-              <h1 id="instructors-heading">{t('title')}</h1>
+              <h1 id="instructors-heading"><MediumTail text={t('title')} /></h1>
               <p>{t('lead')}</p>
             </header>
 
@@ -129,7 +132,7 @@ export const Trainers= () => {
           <section className="trainers-growing-banner">
             <div className="growing-banner-inner">
               <div className="growing-banner-text">
-                <h2>{t('growing.title')}</h2>
+                <h2><MediumTail text={t('growing.title')} /></h2>
                 <p>{t('growing.text')}</p>
               </div>
               <Link to={href('/academy/')} className="growing-banner-link">
@@ -140,7 +143,7 @@ export const Trainers= () => {
         )}
 
         <section className="trainers-cta">
-          <h2>{t('cta.title')}</h2>
+          <h2><MediumTail text={t('cta.title')} /></h2>
           <p>{t('cta.text')}</p>
           <div className="trainers-cta-buttons">
             <Link to={href('/schedule/')} className="trainers-btn-primary">{t('cta.book')}</Link>

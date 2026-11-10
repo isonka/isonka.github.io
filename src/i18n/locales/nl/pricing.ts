@@ -87,7 +87,8 @@ export const nlPricing: DeepStringify<EnPricing> = {
     unlimited3Fineprint:
       '3 maanden verplichting • Opzeggen kan na 3 maanden • Wordt automatisch verlengd tenzij opgezegd',
     annualName: 'Jaarlijks onbeperkt',
-    annualTotalNote: '{{yearTotal}}/jaar • Inclusief 4 weken pauzeoptie',
+    yearUnit: 'jaar',
+    annualFreeze: 'Inclusief 4 weken pauzeoptie',
     annualFineprint:
       '12 maanden verplichting • Opzeggen kan na 12 maanden • Wordt automatisch verlengd tenzij opgezegd',
   },

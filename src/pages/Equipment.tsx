@@ -10,6 +10,7 @@ import { homePath } from '../i18n/locale';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/Equipment.css';
+import { MediumTail } from '../components/MediumTail';
 
 const CARD_COPY = {
   reformer: 'reformer',
@@ -85,12 +86,12 @@ export const Equipment= () => {
       <div className="equipment-page">
         <header className="equipment-hero">
           <p className="kicker">{t('hero.kicker')}</p>
-          <h1>{t('hero.title')}</h1>
+          <h1><MediumTail text={t('hero.title')} /></h1>
           <p className="equipment-hero-line">{t('hero.line')}</p>
         </header>
 
         <section className="equipment-dealer" aria-labelledby="equipment-dealer-heading">
-          <h2 id="equipment-dealer-heading">{t('dealer.title')}</h2>
+          <h2 id="equipment-dealer-heading"><MediumTail text={t('dealer.title')} /></h2>
           <p>{t('dealer.text')}</p>
           {isNl ? null : <p lang="nl">{t('dealer.dutchNote')}</p>}
           <p>
@@ -137,7 +138,7 @@ export const Equipment= () => {
         </div>
 
         <section className="cta-band equipment-cta-band">
-          <h2>{t('help.title')}</h2>
+          <h2><MediumTail text={t('help.title')} /></h2>
           <p>{t('help.text')}</p>
           <div className="equipment-cta-actions">
             <a

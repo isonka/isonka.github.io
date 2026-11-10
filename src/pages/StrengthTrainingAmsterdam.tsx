@@ -10,6 +10,7 @@ import { BASE_URL } from '../data/business';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/ServicePage.css';
+import { MediumTail } from '../components/MediumTail';
 
 const FAQ_KEYS = ['equipment', 'pilates', 'experience', 'bulk', 'back', 'gym'] as const;
 const WHY_KEYS = ['equipment', 'guidance', 'group', 'pilates', 'goals', 'privacy'] as const;
@@ -62,7 +63,10 @@ export const StrengthTrainingAmsterdam = () => {
         <Reveal className="service-hero">
           <div className="service-hero-content">
             <p className="kicker">{t('hero.kicker')}</p>
-            <h1>{t('hero.title')}</h1>
+            <h1 className="kit-title">
+              <span className="lane-stripe lane-strength" aria-hidden="true" />
+              <MediumTail text={t('hero.title')} />
+            </h1>
             <p>{t('hero.lead')}</p>
             <div className="service-hero-badges">
               <span className="service-badge">{t('hero.badgeNike')}</span>
@@ -86,7 +90,7 @@ export const StrengthTrainingAmsterdam = () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>{t('intro.title')}</h2>
+            <h2><MediumTail text={t('intro.title')} /></h2>
             <p>{t('intro.p1')}</p>
             <p>{t('intro.p2')}</p>
             <p>
@@ -109,7 +113,7 @@ export const StrengthTrainingAmsterdam = () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>{t('why.title')}</h2>
+            <h2><MediumTail text={t('why.title')} /></h2>
             <div className="service-benefits-grid">
               {WHY_KEYS.map((key) => (
                 <div key={key} className="service-benefit-card">
@@ -123,7 +127,7 @@ export const StrengthTrainingAmsterdam = () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>{t('faqTitle')}</h2>
+            <h2><MediumTail text={t('faqTitle')} /></h2>
             <div className="service-faq-list">
               {faqs.map((faq) => (
                 <div key={faq.question} className="service-faq-item">
@@ -136,7 +140,7 @@ export const StrengthTrainingAmsterdam = () => {
         </Reveal>
 
         <Reveal className="service-cta-section">
-          <h2>{t('cta.title')}</h2>
+          <h2><MediumTail text={t('cta.title')} /></h2>
           <p>{t('cta.text')}</p>
           <div className="service-cta-buttons">
             <Link to={href('/schedule/')} className="service-cta-btn-primary">{t('cta.book')}</Link>

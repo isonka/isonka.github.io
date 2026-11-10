@@ -26,16 +26,16 @@
 
 .service-hero h1 {
   font-size: clamp(2rem, 5vw, 3.4rem);
-  font-weight: 700;
+  font-weight: 300;
   margin: 0 0 16px;
   line-height: 1.08;
   letter-spacing: -0.03em;
-  color: #111;
+  color: var(--ink, #1c1a18);
 }
 
 .service-hero p {
   font-size: 1.05rem;
-  color: #555;
+  color: var(--muted, #5c574f);
   margin: 0 0 28px;
   line-height: 1.7;
 }
@@ -48,33 +48,46 @@
 }
 
 .service-badge {
-  color: #666;
+  color: var(--muted, #5c574f);
   font-size: 0.78rem;
   font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-transform: none;
 }
 
 .service-badge:not(:last-child)::after {
   content: '·';
   margin-left: 14px;
-  color: #c9a800;
+  color: var(--gold-text, #7a6400);
+}
+
+.service-hero h1 {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.service-hero h1 .lane-stripe {
+  margin-top: 0.35em;
 }
 
 .service-hero-btn {
-  display: inline-block;
-  background: #111;
-  color: #fff;
-  padding: 16px 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 22px;
+  background: var(--gold, #ffd700);
+  color: var(--ink, #1c1a18);
   border-radius: var(--radius-pill);
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 15px;
   text-decoration: none;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition: background 0.15s ease;
 }
 
 .service-hero-btn:hover {
-  background: #333;
+  background: var(--accent, #e5c100);
 }
 
 .service-section {
@@ -102,20 +115,20 @@
 
 .service-section h2 {
   font-size: clamp(1.45rem, 3vw, 2rem);
-  font-weight: 700;
+  font-weight: 300;
   margin: 0 0 20px;
   letter-spacing: -0.02em;
-  color: #111;
+  color: var(--ink, #1c1a18);
 }
 
 .service-section p {
-  color: #444;
+  color: var(--ink, #1c1a18);
   line-height: 1.75;
   margin: 0 0 16px;
 }
 
 .service-section a {
-  color: #111;
+  color: var(--ink, #1c1a18);
   font-weight: 500;
   text-decoration: none;
   border-bottom: none;
@@ -123,7 +136,7 @@
 }
 
 .service-section a:hover {
-  color: #c9a800;
+  color: var(--gold-text, #7a6400);
 }
 
 .service-section a.service-trainer-card,
@@ -140,28 +153,32 @@
 }
 
 .service-benefit-card {
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  padding: 0;
+  background: #fff;
+  border: 1px solid var(--line, #ddd5c6);
+  border-radius: 24px;
+  padding: 24px;
   box-shadow: none;
 }
 
 .service-benefit-card h3 {
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 500;
   margin: 0 0 10px;
-  color: #111;
+  color: var(--ink, #1c1a18);
 }
 
 .service-benefit-card p {
   font-size: 0.95rem;
   margin: 0;
-  color: #555;
+  color: var(--muted, #5c574f);
 }
 
 .service-faq-list {
   margin-top: 24px;
+  background: #fff;
+  border: 1px solid var(--line, #ddd5c6);
+  border-radius: 24px;
+  padding: 8px 24px;
 }
 
 .service-faq-item {
@@ -173,43 +190,19 @@
   border-bottom: none;
 }
 
-.service-faq-question {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 0;
-  text-align: left;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #111;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
+.service-faq-item h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--ink, #1c1a18);
 }
 
-.service-faq-question::after {
-  content: '+';
-  color: #c9a800;
-  font-size: 1.35rem;
-  line-height: 1;
-  flex-shrink: 0;
-}
-
-.service-faq-question.active::after {
-  content: '−';
-}
-
-.service-faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-
-.service-faq-answer.open {
-  max-height: 480px;
-  margin-top: 12px;
+.service-faq-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted, #5c574f);
+  line-height: 1.7;
 }
 
 .service-quote {
@@ -224,28 +217,26 @@
   margin: 0 0 12px;
   font-size: 1.05rem;
   line-height: 1.7;
-  color: #333;
+  color: var(--ink, #1c1a18);
   font-style: italic;
 }
 
 .service-quote footer {
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
-  color: #666;
-}
-
-.service-faq-answer p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.7;
+  color: var(--muted, #5c574f);
 }
 
 .service-cta-section {
   text-align: center;
-  padding: 80px 24px;
-  background: #111;
+  width: calc(100% - 48px);
+  max-width: var(--page-max-width, 1200px);
+  margin: 56px auto 0;
+  padding: 48px 32px;
+  border-radius: 24px;
+  box-sizing: border-box;
+  background: var(--ink, #1c1a18);
   color: #fff;
   opacity: 0;
   transform: translate3d(0, 16px, 0);
@@ -261,7 +252,7 @@
 
 .service-cta-section h2 {
   font-size: clamp(1.5rem, 3vw, 2.2rem);
-  font-weight: 700;
+  font-weight: 300;
   margin: 0 0 12px;
   letter-spacing: -0.01em;
   color: #fff;
@@ -284,17 +275,17 @@
 .service-cta-btn-primary {
   display: inline-block;
   background: #fff;
-  color: #111;
+  color: var(--ink, #1c1a18);
   padding: 16px 40px;
   border-radius: var(--radius-pill);
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1rem;
   text-decoration: none;
   transition: background 0.2s ease;
 }
 
 .service-cta-btn-primary:hover {
-  background: #f5f5f5;
+  background: var(--ground-stone, #ebe4d6);
 }
 
 .service-cta-btn-secondary {
@@ -304,7 +295,7 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 16px 40px;
   border-radius: var(--radius-pill);
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1rem;
   text-decoration: none;
   transition: border-color 0.2s ease;
@@ -327,7 +318,7 @@
   gap: 14px;
   background: transparent;
   border: none;
-  border-radius: 0;
+  border-radius: 24px;
   padding: 8px 0;
   flex: 1;
   min-width: 220px;
@@ -351,15 +342,15 @@
 
 .service-trainer-card h3 {
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: 500;
   margin: 0 0 4px;
-  color: #111;
+  color: var(--ink, #1c1a18);
 }
 
 .service-trainer-card p {
   font-size: 0.8rem;
   margin: 0;
-  color: #666;
+  color: var(--muted, #5c574f);
 }
 
 @media (max-width: 600px) {
@@ -369,7 +360,8 @@
 
   .service-hero h1 {
     font-size: 1.7rem;
-  }
+  font-weight: 300;
+}
 
   .service-section {
     padding: 40px 20px;
@@ -420,7 +412,7 @@
   overflow: hidden;
   border-radius: var(--radius-media, 14px);
   aspect-ratio: 3 / 2;
-  background: #f0f0f0;
+  background: var(--line, #ddd5c6);
 }
 
 .service-trust-media img {
@@ -433,8 +425,8 @@
 .service-trust-price {
   margin: 0 0 20px;
   font-size: 1.15rem;
-  font-weight: 700;
-  color: #111;
+  font-weight: 500;
+  color: var(--ink, #1c1a18);
   line-height: 1.4;
 }
 
@@ -448,27 +440,27 @@
   margin: 0 0 10px;
   font-size: 1.05rem;
   line-height: 1.55;
-  color: #333;
+  color: var(--ink, #1c1a18);
   font-weight: 500;
 }
 
 .service-trust-quote cite {
   font-style: normal;
   font-size: 0.85rem;
-  color: #555;
-  font-weight: 700;
+  color: var(--muted, #5c574f);
+  font-weight: 500;
 }
 
 .service-trust-link {
-  color: #111;
-  font-weight: 700;
+  color: var(--ink, #1c1a18);
+  font-weight: 500;
   text-decoration: none;
   border-bottom: 1px solid rgba(17, 17, 17, 0.35);
 }
 
 .service-trust-link:hover {
-  color: var(--gold-text, #c9a800);
-  border-bottom-color: var(--gold-text, #c9a800);
+  color: var(--gold-text, var(--gold-text, #7a6400));
+  border-bottom-color: var(--gold-text, var(--accent, #e5c100));
 }
 
 .service-trust--proof {
@@ -510,7 +502,7 @@
 }
 
 .service-map .contact-map-transit {
-  color: #444;
+  color: var(--ink, #1c1a18);
   line-height: 1.75;
 }
 
@@ -522,7 +514,7 @@
 }
 
 .service-map .contact-map-consent .contact-map-consent-kicker {
-  color: #c9a800;
+  color: var(--gold-text, #7a6400);
 }
 
 .service-map .contact-map-consent .contact-map-consent-note {
@@ -533,4 +525,13 @@
 
 .service-map .contact-map-consent-actions a {
   color: #ffd700;
+}
+
+/* Client quotes: white card like the app, not a gold left rule */
+.service-quote {
+  padding: 20px 24px;
+  border: 1px solid var(--line, #ddd5c6);
+  border-left: 1px solid var(--line, #ddd5c6);
+  border-radius: 24px;
+  background: var(--ground-raised, #ffffff);
 }

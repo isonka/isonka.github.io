@@ -10,6 +10,7 @@ import { OPENING_OFFER } from '../data/openingOffer';
 import { localeHref } from '../i18n/locale';
 import { useLocale } from '../i18n/useLocale';
 import '../styles/OpeningOffer.css';
+import { MediumTail } from '../components/MediumTail';
 
 const OFFER_URL_EN = `https://www.pt7.nl${OPENING_OFFER.path}`;
 const OFFER_URL_NL = `https://www.pt7.nl${OPENING_OFFER.pathNl}`;
@@ -75,7 +76,7 @@ export const OpeningOffer = () => {
           <div className="oo-hero-content">
             <p className="oo-brand">{t('hero.brand')}</p>
             <p className="oo-kicker oo-kicker-on-dark">{t('hero.kicker')}</p>
-            <h1>{t('hero.title')}</h1>
+            <h1><MediumTail text={t('hero.title')} /></h1>
             <p className="oo-hero-lead">{t('hero.lead')}</p>
             <div className="oo-hero-actions">
               <Link to={scheduleHref} className="oo-btn oo-btn-gold">
@@ -91,7 +92,7 @@ export const OpeningOffer = () => {
         <Reveal className="oo-section oo-section-ink">
           <div className="oo-container">
             <p className="oo-kicker oo-kicker-on-dark">{t('dates.kicker')}</p>
-            <h2>{t('dates.title')}</h2>
+            <h2><MediumTail text={t('dates.title')} /></h2>
             <ol className="oo-dates">
               {DATE_KEYS.map((key) => (
                 <li key={key} className="oo-date-row">
@@ -105,7 +106,7 @@ export const OpeningOffer = () => {
 
         <Reveal className="oo-section">
           <div className="oo-container">
-            <h2>{t('faq.title')}</h2>
+            <h2><MediumTail text={t('faq.title')} /></h2>
             <div className="oo-faq-list">
               {faqs.map((faq) => (
                 <div key={faq.question} className="oo-faq-item">
@@ -119,7 +120,7 @@ export const OpeningOffer = () => {
 
         <Reveal className="oo-close">
           <div className="oo-container oo-close-inner">
-            <h2>{t('close.title')}</h2>
+            <h2><MediumTail text={t('close.title')} /></h2>
             <p>{t('close.text')}</p>
             <div className="oo-hero-actions">
               <Link to={scheduleHref} className="oo-btn oo-btn-gold">

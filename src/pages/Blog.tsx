@@ -9,6 +9,7 @@ import { dateLocale } from '../i18n/locale';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/Blog.css';
+import { MediumTail } from '../components/MediumTail';
 
 export const Blog= () => {
   const { t } = useTranslation('blog');
@@ -49,7 +50,7 @@ export const Blog= () => {
       <div className="blog-page">
         <header className="blog-hero">
           <p className="kicker">{t('kicker')}</p>
-          <h1>{t('title')}</h1>
+          <h1><MediumTail text={t('title')} /></h1>
           <p className="blog-hero-line">{t('lead')}</p>
         </header>
 
@@ -93,7 +94,7 @@ export const Blog= () => {
         </section>
 
         <section className="cta-band blog-cta-band">
-          <h2>{t('cta.title')}</h2>
+          <h2><MediumTail text={t('cta.title')} /></h2>
           <p>{t('cta.text')}</p>
           <div className="blog-cta-actions">
             <Link to={href('/schedule/')} className="btn-gold">

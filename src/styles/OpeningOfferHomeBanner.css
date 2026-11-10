@@ -1,7 +1,7 @@
 .oo-home-banner {
   width: 100%;
   box-sizing: border-box;
-  background: var(--ink, #111);
+  background: var(--ink, var(--ink, #1c1a18));
   color: rgba(255, 255, 255, 0.85);
   padding: 10px 24px;
 }
@@ -16,12 +16,12 @@
 
 .oo-home-banner-line strong {
   color: #fff;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .oo-home-banner-link {
   color: var(--gold, #ffd700);
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: underline;
   text-underline-offset: 2px;
   white-space: nowrap;

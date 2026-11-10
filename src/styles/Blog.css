@@ -6,7 +6,7 @@
 
 .blog-hero {
   background: transparent;
-  color: var(--ink, #111);
+  color: var(--ink, var(--ink, #1c1a18));
   text-align: left;
   padding: 56px 24px 8px;
   max-width: 1100px;
@@ -16,10 +16,10 @@
 .blog-hero h1 {
   font-size: clamp(2rem, 4.5vw, 3.2rem);
   margin: 0 0 12px;
-  font-weight: 700;
+  font-weight: 300;
   letter-spacing: -0.03em;
   line-height: 1.08;
-  color: var(--ink, #111);
+  color: var(--ink, var(--ink, #1c1a18));
 }
 
 .blog-hero-line {
@@ -27,7 +27,7 @@
   max-width: 36em;
   font-size: 1.05rem;
   line-height: 1.65;
-  color: #555;
+  color: var(--muted, #5c574f);
 }
 
 .blog-content {
@@ -51,14 +51,20 @@
 }
 
 .blog-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-decoration: none;
   color: inherit;
-  transition: opacity 0.2s ease;
+  background: #fff;
+  border: 1px solid var(--line, #ddd5c6);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: background 0.15s ease;
 }
 
 .blog-link:hover {
-  opacity: 0.92;
+  background: var(--ground, #f5f0e6);
 }
 
 .blog-media {
@@ -66,10 +72,11 @@
   overflow: hidden;
   width: 100%;
   aspect-ratio: 16 / 10;
-  background: #f0f0f0;
-  border-radius: var(--radius-media, 14px);
-  margin-bottom: 14px;
+  background: var(--line, #ddd5c6);
+  border-radius: 0;
+  margin-bottom: 0;
 }
+
 
 .blog-media img {
   width: 100%;
@@ -78,30 +85,45 @@
   display: block;
 }
 
+.blog-meta,
+.blog-note,
+.blog-title,
+.blog-excerpt,
+.blog-more {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .blog-meta {
-  margin: 0 0 6px;
-  font-size: 0.8rem;
-  line-height: 1.4;
-  color: #888;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--muted, #5c574f);
+}
+
+.blog-more {
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
 .blog-note {
   display: block;
   margin: 0 0 6px;
-  font-size: 0.68rem;
+  font-size: 13px;
   font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gold-text, #c9a800);
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: var(--gold-text, var(--gold-text, #7a6400));
 }
 
 .blog-title {
   margin: 0 0 8px;
   font-size: clamp(1.15rem, 2vw, 1.4rem);
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.02em;
   line-height: 1.35;
-  color: var(--ink, #111);
+  color: var(--ink, var(--ink, #1c1a18));
   overflow: visible;
   white-space: normal;
   overflow-wrap: break-word;
@@ -113,7 +135,7 @@
   margin: 0 0 10px;
   font-size: 0.95rem;
   line-height: 1.55;
-  color: #555;
+  color: var(--muted, #5c574f);
 }
 
 .blog-more {
@@ -123,7 +145,7 @@
 .blog-cta-band h2 {
   margin: 0 0 12px;
   font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 700;
+  font-weight: 300;
   letter-spacing: -0.02em;
   color: #fff;
 }
@@ -151,5 +173,6 @@
 
   .blog-hero h1 {
     font-size: 2rem;
-  }
+  font-weight: 300;
+}
 }

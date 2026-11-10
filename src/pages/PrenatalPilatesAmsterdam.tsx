@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { SEOHead } from '../components/SEOHead';
 import { StructuredData } from '../components/StructuredData';
@@ -8,6 +8,7 @@ import { Reveal } from '../components/Reveal';
 import { ServiceTrustBand } from '../components/ServiceTrustBand';
 import { trackPageView } from '../utils/gtmTracking';
 import '../styles/ServicePage.css';
+import { MediumTail } from '../components/MediumTail';
 import { BASE_URL } from '../data/business';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
 
@@ -28,7 +29,6 @@ export const PrenatalPilatesAmsterdam= () => {
   const { t } = useTranslation('prenatal');
   const page = useLocalizedPage('/prenatal-pilates-amsterdam/');
   const { href } = page;
-  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   useEffect(() => {
     trackPageView(page.path, t('seo.analyticsTitle'));
@@ -75,7 +75,10 @@ export const PrenatalPilatesAmsterdam= () => {
         <Reveal className="service-hero">
           <div className="service-hero-content">
             <p className="kicker">{t('hero.kicker')}</p>
-            <h1>{t('hero.title')}</h1>
+            <h1 className="kit-title">
+              <span className="lane-stripe lane-pilates" aria-hidden="true" />
+              <MediumTail text={t('hero.title')} />
+            </h1>
             <p>{t('hero.lead')}</p>
             <div className="service-hero-badges">
               <span className="service-badge">{t('hero.badgePrivate')}</span>
@@ -99,7 +102,7 @@ export const PrenatalPilatesAmsterdam= () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>{t('why.title')}</h2>
+            <h2><MediumTail text={t('why.title')} /></h2>
             <p>{t('why.p1')}</p>
             <p>{t('why.p2')}</p>
             <p>
@@ -116,7 +119,7 @@ export const PrenatalPilatesAmsterdam= () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>{t('who.title')}</h2>
+            <h2><MediumTail text={t('who.title')} /></h2>
             <p>{t('who.p1')}</p>
             <p>{t('who.p2')}</p>
             <div className="service-benefits-grid">
@@ -134,7 +137,7 @@ export const PrenatalPilatesAmsterdam= () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>{t('session.title')}</h2>
+            <h2><MediumTail text={t('session.title')} /></h2>
             <p>{t('session.intro')}</p>
             <div className="service-benefits-grid">
               <div className="service-benefit-card">
@@ -159,7 +162,7 @@ export const PrenatalPilatesAmsterdam= () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>{t('clients.title')}</h2>
+            <h2><MediumTail text={t('clients.title')} /></h2>
             <blockquote className="service-quote">
               <p>{t('clients.quote')}</p>
               <footer>Lot Canter Cremers</footer>
@@ -170,7 +173,7 @@ export const PrenatalPilatesAmsterdam= () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>{t('specialists.title')}</h2>
+            <h2><MediumTail text={t('specialists.title')} /></h2>
             <p>
               <Trans t={t} i18nKey="specialists.intro" components={{ pricing: <Link to={href('/pricing/')} /> }} />
             </p>
@@ -209,7 +212,7 @@ export const PrenatalPilatesAmsterdam= () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>{t('related.title')}</h2>
+            <h2><MediumTail text={t('related.title')} /></h2>
             <p>
               <Trans
                 t={t}
@@ -226,25 +229,12 @@ export const PrenatalPilatesAmsterdam= () => {
 
         <Reveal className="service-section">
           <div className="service-container">
-            <h2>{t('faqTitle')}</h2>
+            <h2><MediumTail text={t('faqTitle')} /></h2>
             <div className="service-faq-list">
-              {faqs.map((faq, i) => (
-                <div key={i} className="service-faq-item">
-                  <button
-                    type="button"
-                    className={`service-faq-question ${openFaqIndex === i ? 'active' : ''}`}
-                    onClick={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
-                    aria-expanded={openFaqIndex === i}
-                    aria-controls={`prenatal-faq-answer-${i}`}
-                  >
-                    {faq.question}
-                  </button>
-                  <div
-                    id={`prenatal-faq-answer-${i}`}
-                    className={`service-faq-answer ${openFaqIndex === i ? 'open' : ''}`}
-                  >
-                    <p>{faq.answer}</p>
-                  </div>
+              {faqs.map((faq) => (
+                <div key={faq.question} className="service-faq-item">
+                  <h3>{faq.question}</h3>
+                  <p>{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -252,7 +242,7 @@ export const PrenatalPilatesAmsterdam= () => {
         </Reveal>
 
         <Reveal className="service-cta-section">
-          <h2>{t('cta.title')}</h2>
+          <h2><MediumTail text={t('cta.title')} /></h2>
           <p>{t('cta.text')}</p>
           <div className="service-cta-buttons">
             <Link to={href('/schedule/')} className="service-cta-btn-primary">{t('cta.book')}</Link>

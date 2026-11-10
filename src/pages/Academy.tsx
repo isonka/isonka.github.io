@@ -41,6 +41,7 @@ import { ensureHealcodeLoaded } from '../utils/healcode';
 import { localeHref } from '../i18n/locale';
 import { useLocale } from '../i18n/useLocale';
 import '../styles/Academy.css';
+import { MediumTail } from '../components/MediumTail';
 
 const academyHreflang = [
   { hreflang: 'en', href: ACADEMY_URL_EN },
@@ -185,8 +186,11 @@ export const Academy= () => {
         <section className="academy-courses">
           <div className="academy-container">
             <div className="ittap-accreditation">
+              <header className="academy-hero-card">
               <p className="ittap-accreditation-eyebrow">{t('proof.eyebrow')}</p>
-              <h1 className="academy-page-title">{t('hero.title')}</h1>
+              <h1 className="academy-page-title">
+                <MediumTail text={t('hero.title')} />
+              </h1>
               <p className="academy-pma-subtitle">{t('hero.subtitle')}</p>
               {isNl && (
                 <p className="academy-lang-note">
@@ -229,6 +233,28 @@ export const Academy= () => {
                 <p className="academy-offer-note">{t('offer.note')}</p>
               </div>
 
+              </header>
+
+              <section className="academy-learn" aria-labelledby="academy-learn-heading">
+                <div className="academy-learn-list">
+                  <h2 id="academy-learn-heading" className="academy-learn-heading">
+                    <MediumTail text={t('learn.heading')} />
+                  </h2>
+                  <ul className="academy-list-card">
+                    {trainingBreakdown.map((item) => (
+                      <li key={item.label} className="academy-list-row">
+                        <span>{isNl ? item.labelNl : item.label}</span>
+                        <span className="academy-list-row-end">{isNl ? item.hoursNl : item.hours}</span>
+                      </li>
+                    ))}
+                    <li className="academy-list-row academy-list-row--total">
+                      <span>{t('learn.total')}</span>
+                      <span className="academy-list-row-end">{t('learn.totalValue')}</span>
+                    </li>
+                  </ul>
+                  <p className="academy-learn-note">{t('breakdown.studioAccess')}</p>
+                </div>
+                <div className="academy-learn-aside">
               <div className="academy-proof">
                 <div className="academy-proof-media">
                   <img
@@ -288,6 +314,9 @@ export const Academy= () => {
                   </a>
                 </div>
               </div>
+                </div>
+              </section>
+
               <p>
                 <Trans
                   ns="academy"
@@ -322,7 +351,7 @@ export const Academy= () => {
 
             <section className="academy-audience" aria-labelledby="academy-audience-heading">
               <p className="academy-kicker">{t('audience.kicker')}</p>
-              <h2 id="academy-audience-heading">{t('audience.heading')}</h2>
+              <h2 id="academy-audience-heading"><MediumTail text={t('audience.heading')} /></h2>
               <p>{t('audience.intro')}</p>
               <div className="benefits-grid academy-audience-grid">
                 <div className="benefit-card">
@@ -483,19 +512,6 @@ export const Academy= () => {
                 <p>{t('requirements.text')}</p>
               </div>
 
-              <div className="academy-course-section">
-                <h3>{t('breakdown.title')}</h3>
-                <div className="hours-breakdown-grid">
-                  {trainingBreakdown.map((item) => (
-                    <div key={item.label} className="hours-breakdown-item">
-                      <span className="hours-breakdown-hours">{isNl ? item.hoursNl : item.hours}</span>
-                      <span className="hours-breakdown-label">{isNl ? item.labelNl : item.label}</span>
-                    </div>
-                  ))}
-                </div>
-                <p>{t('breakdown.studioAccess')}</p>
-              </div>
-
               <div className="academy-course-section academy-course-section--certification">
                 <h3>{t('certification.title')}</h3>
                 <p>{t('certification.intro')}</p>
@@ -537,7 +553,7 @@ export const Academy= () => {
         <section className="academy-benefits">
           <div className="academy-container">
             <p className="academy-kicker">{t('why.kicker')}</p>
-            <h2>{t('why.heading')}</h2>
+            <h2><MediumTail text={t('why.heading')} /></h2>
             <div className="benefits-grid">
               <div className="benefit-card">
                 <h3>{t('why.notShortcut.title')}</h3>
@@ -579,7 +595,7 @@ export const Academy= () => {
         <section className="academy-benefits">
           <div className="academy-container">
             <p className="academy-kicker">FAQ</p>
-            <h2>{t('faqSection.heading')}</h2>
+            <h2><MediumTail text={t('faqSection.heading')} /></h2>
             <div className="benefits-grid">
               {academyFaqs.map((faq) => (
                 <div key={faq.question} className="benefit-card">
@@ -603,7 +619,7 @@ export const Academy= () => {
         <section className="academy-cta">
           <div className="academy-container">
             <p className="academy-kicker home-kicker-on-dark">{t('bottomCta.kicker')}</p>
-            <h2>{t('bottomCta.heading')}</h2>
+            <h2><MediumTail text={t('bottomCta.heading')} /></h2>
             <p>{t('bottomCta.text')}</p>
             <div className="cta-buttons">
               <AcademyEnrollButtons course="reformer" location="bottom_cta" variant="cta" />
