@@ -5,7 +5,7 @@ export const post: BlogPost = {
   id: '14',
   slug: 'pma-ittap-accreditation-reformer-course-amsterdam',
   title: 'PMA ITTAP Accreditation: Global Recognition for Reformer Teacher Training',
-  seoTitle: 'PMA ITTAP Accreditation Explained | PT7 Academy',
+  seoTitle: 'What Is PMA ITTAP? Pilates Accreditation Explained | PT7',
   excerpt: 'Learn how PMA ITTAP accreditation gives international recognition at the program level, and how PT7 Academy\'s 300-hour Reformer course in Amsterdam builds real teaching credibility.',
   content: `
       <p>If you're researching Pilates teacher training in Amsterdam, you've probably seen terms like <strong>PMA</strong>, <strong>ITTAP</strong>, and “accredited.” But what do these labels actually mean for your education, your confidence, and your future teaching career?</p>
@@ -82,7 +82,7 @@ export const post: BlogPost = {
   date: '2026-07-29',
   image: '/assets/images/reformer_1.webp',
   tags: ['PMA ITTAP', 'Pilates Teacher Training', 'PT7 Academy', 'Reformer Instructor Course'],
-  metaDescription: 'What PMA ITTAP accreditation means for Pilates teacher training, and how PT7 Academy\'s 300-hour Reformer course in Amsterdam meets it.',
+  metaDescription: 'What is ITTAP? The PMA accreditation framework for Pilates teacher-training programs, what it means, and how PT7 Academy\'s 300-hour Reformer course fits.',
   keywords: [
     'pma ittap pilates',
     'ittap accreditation pilates',

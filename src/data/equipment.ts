@@ -69,8 +69,8 @@ export const equipmentProducts: EquipmentProduct[] = [
     name: 'Pilates Reformer',
     priceEur: 1900,
     seo: {
-      title: 'Reformer Pilates Equipment at PT7 Amsterdam | In-Studio',
-      description: `The Reformer used in small-group and private classes at PT7, ${studioStreet}, Museumplein. Specs of the in-studio apparatus and how to book a class.`,
+      title: 'Pilates Reformer Machine: Specs & Dimensions | PT7',
+      description: `Pilates Reformer machine used in PT7 classes: solid beech frame, adjustable footbar, jump board and box, 240 x 69 x 35 cm. Try it at our Amsterdam studio.`,
       keywords: 'pilates reformer equipment, reformer pilates amsterdam, pilates apparatus museumplein, tower reformer studio',
     },
     images: [
