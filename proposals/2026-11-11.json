@@ -1,0 +1,20 @@
+{ "changes": [
+ { "page": "/schedule/", "action": "rewrite-snippet", "kind": "snippet",
+   "before": { "title": "Pilates Classes Amsterdam Zuid | Book Online | PT7", "description": "Live class schedule at Museumplein, Amsterdam Zuid: Reformer Pilates, TRX and strength in small groups (max 5) or privates at Van Baerlestraat 76C. Book online." },
+   "after": { "title": "Pilates Classes Near Museumplein, Amsterdam | PT7", "description": "Pilates classes near Museumplein, Amsterdam Zuid: Reformer, TRX and strength in small groups (max 5) or privates at Van Baerlestraat 76C. Book online." },
+   "hypothesis": "Leading with 'pilates classes near Museumplein' matches the near-me intent of queries like 'pilates classes near me' (pos 7.3) and 'pilates near me' (pos 6.5) that currently get 0 clicks.",
+   "files": ["src/i18n/locales/en/schedule.ts"] },
+ { "page": "/blog/pma-ittap-accreditation-reformer-course-amsterdam/", "action": "rewrite-snippet", "kind": "snippet",
+   "before": { "title": "PMA ITTAP Accreditation Explained | PT7 Academy", "description": "What PMA ITTAP accreditation means for Pilates teacher training, and how PT7 Academy's 300-hour Reformer course in Amsterdam meets it." },
+   "after": { "title": "What Is PMA ITTAP? Pilates Accreditation Explained | PT7", "description": "What is ITTAP? The PMA accreditation framework for Pilates teacher-training programs, what it means, and how PT7 Academy's 300-hour Reformer course fits." },
+   "hypothesis": "A question-style title answering 'ittap' (pos 3.3, 50 impressions, 0 clicks) and 'ittap pilates' should lift CTR.",
+   "files": ["src/data/blog/posts/pma-ittap-accreditation-reformer-course-amsterdam.ts"] },
+ { "page": "/equipment/reformer/", "action": "rewrite-snippet", "kind": "snippet",
+   "before": { "title": "Reformer Pilates Equipment at PT7 Amsterdam | In-Studio", "description": "The Reformer used in small-group and private classes at PT7, Van Baerlestraat 76C, Museumplein. Specs of the in-studio apparatus and how to book a class." },
+   "after": { "title": "Pilates Reformer Machine: Specs & Dimensions | PT7", "description": "Pilates Reformer machine used in PT7 classes: solid beech frame, adjustable footbar, jump board and box, 240 x 69 x 35 cm. Try it at our Amsterdam studio." },
+   "hypothesis": "Queries 'reformer pilates machine' (pos 7.3), 'reformer equipment' and 'pilates reformer machine' want specs; the new snippet leads with the machine and its concrete specs.",
+   "files": ["src/data/equipment.ts"] },
+ { "page": "/trx-training-amsterdam/", "action": "strengthen", "kind": "content",
+   "hypothesis": "No uncovered queries. Added one contextual link 'TRX suspension training in Amsterdam' from /blog/pilates-prices-amsterdam-2026-complete-guide/. Skipped /academy/ and /equipment/ (no fitting sentence).",
+   "files": ["src/data/blog/posts/pilates-prices-amsterdam-2026-complete-guide.ts"] }
+] }
