@@ -134,7 +134,7 @@ export const post: BlogPost = {
 
       <p>Our clients at PT7 report that consistent Pilates has reduced their physiotherapy visits, improved their sleep, eliminated chronic pain issues, and given them a level of body awareness they never had before. When viewed as an investment in strength, control, and preventive healthcare rather than "just exercise," the perspective shifts significantly.</p>
 
-      <p><em>Looking for a tailored Pilates session designed around your specific needs and goals? Private Reformer sessions at PT7 Museumplein start at €70, with one-on-one attention from expert instructors. <a href="/pricing/">View our private session packages</a> or <a href="/schedule/">book your first session</a>.</em></p>
+      <p><em>Looking for a tailored Pilates session designed around your specific needs and goals? Private Reformer sessions at PT7 Museumplein start at €70, with one-on-one attention from expert instructors. <a href="/pricing/">View our private session packages</a> or <a href="/schedule/">book your first session</a>. Prefer a different format? PT7 also offers <a href="/trx-training-amsterdam/">TRX suspension training in Amsterdam</a> in small groups.</em></p>
 
       <h2>Frequently asked questions</h2>
       <h3>How much does a Pilates group class cost in Amsterdam?</h3>
