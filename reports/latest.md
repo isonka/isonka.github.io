@@ -1,57 +1,55 @@
-# Weekly SEO report — 2026-11-09
+# Weekly SEO report — 2026-11-11
 
-Search Console data through **2026-11-06** · 3 weekly snapshot(s) · GA4 on
+Search Console data through **2026-11-08** · 4 weekly snapshot(s) · GA4 on
 
 ## KPIs
 
 | | Last 7d | vs prev | Last 28d | vs prev |
 |---|---|---|---|---|
-| Clicks | 67 | -28% | 303 | +25% |
-| Impressions | 2616 | +1% | 9023 | +38% |
-| Non-brand clicks | 11 | -42% | 42 | +91% |
-| Organic sessions (GA4) | 91 | +7% | 310 | +13% |
-| Organic key events (GA4) | 14 | +0% | 48 | +60% |
-| Non-brand share | 36.7% | | 33.1% | (goal ≥30% at 6 months) |
+| Clicks | 66 | -33% | 309 | +27% |
+| Impressions | 2553 | -5% | 9371 | +47% |
+| Non-brand clicks | 8 | -56% | 40 | +74% |
+| Organic sessions (GA4) | 92 | +2% | 319 | +21% |
+| Organic key events (GA4) | 15 | -12% | 49 | +44% |
+| Non-brand share | 26.7% | | 31.3% | (goal ≥30% at 6 months) |
 
-Brand queries (28d): "pt7" 388 impr / "pt studio 7" 451 impr
+Brand queries (28d): "pt7" 450 impr / "pt studio 7" 424 impr
 
 ## Experiments
 
 | Page | Kind | Live since | Verdict | Evidence |
 |---|---|---|---|---|
-| /reformer-pilates-amsterdam/nl/ | content | 2026-11-09 | **pending** | 0/21 days of data |
-| /reformer-pilates-amsterdam/ | content (agent) | 2026-11-09 | **pending** | 0/21 days of data |
-| /pricing/nl/ | content | 2026-11-09 | **pending** | 0/21 days of data |
-| /pricing/ | content | 2026-11-09 | **pending** | 0/21 days of data |
-| /nl/ | content | 2026-11-09 | **pending** | 0/21 days of data |
-| / | content | 2026-11-09 | **pending** | 0/21 days of data |
-| /instructors/ | snippet (agent) | 2026-11-02 | **pending** | 0/21 days of data |
-| /equipment/wunda-chair/nl/ | content | 2026-11-02 | **pending** | 0/21 days of data |
-| /equipment/wunda-chair/ | content | 2026-11-02 | **pending** | 0/21 days of data |
-| /equipment/tower-reformer/nl/ | content | 2026-11-02 | **pending** | 0/21 days of data |
-| /equipment/tower-reformer/ | content | 2026-11-02 | **pending** | 0/21 days of data |
-| /equipment/reformer/nl/ | content | 2026-11-02 | **pending** | 0/21 days of data |
-| /equipment/reformer/ | content | 2026-11-02 | **pending** | 0/21 days of data |
-| /equipment/nl/ | content | 2026-11-02 | **pending** | 0/21 days of data |
-| /equipment/nl/ | snippet | 2026-11-02 | **pending** | 0/21 days of data |
+| /workouts/functional-training/nl/ | content | 2026-11-11 | **pending** | 0/21 days of data |
+| /workouts/functional-training/ | content | 2026-11-11 | **pending** | 0/21 days of data |
+| /workouts/cardio/nl/ | content | 2026-11-11 | **pending** | 0/21 days of data |
+| /workouts/cardio/ | content | 2026-11-11 | **pending** | 0/21 days of data |
+| /pricing/nl/ | content | 2026-11-11 | **pending** | 0/21 days of data |
+| /pricing/ | content | 2026-11-11 | **pending** | 0/21 days of data |
+| /nl/ | content | 2026-11-11 | **pending** | 0/21 days of data |
+| /equipment/wunda-chair/nl/ | content | 2026-11-11 | **pending** | 0/21 days of data |
+| /equipment/wunda-chair/ | content | 2026-11-11 | **pending** | 0/21 days of data |
+| /equipment/tower-reformer/nl/ | content | 2026-11-11 | **pending** | 0/21 days of data |
+| /equipment/tower-reformer/ | content | 2026-11-11 | **pending** | 0/21 days of data |
+| /equipment/reformer/nl/ | content | 2026-11-11 | **pending** | 0/21 days of data |
+| /equipment/reformer/ | content | 2026-11-11 | **pending** | 0/21 days of data |
+| /equipment/nl/ | content | 2026-11-11 | **pending** | 0/21 days of data |
+| /equipment/ladder-barrel/nl/ | content | 2026-11-11 | **pending** | 0/21 days of data |
 
 ## Planned actions
 
-- **strengthen** `/academy/`: snippet outperforms its position; cover —; links from /blog/pilates-prices-amsterdam-2026-complete-guide/, /schedule/, /equipment/
-- **strengthen** `/academy/nl/`: snippet outperforms its position; cover —; links from /equipment/nl/, /blog/pilates-prices-amsterdam-2026-complete-guide/nl/, /blog/prenatal-pilates-supporting-body-through-every-trimester/nl/
+- **strengthen** `/trx-training-amsterdam/`: target page with striking-distance queries; cover —; links from /blog/pilates-prices-amsterdam-2026-complete-guide/, /academy/, /equipment/
+- **strengthen** `/schedule/nl/`: snippet outperforms its position; cover —; links from /equipment/nl/, /academy/nl/, /equipment/reformer/nl/
 - **rewrite-snippet** `/schedule/`: CTR is 0.49× what its positions predict (site-calibrated); ~2 clicks/28d missed
 - **rewrite-snippet** `/blog/pma-ittap-accreditation-reformer-course-amsterdam/`: CTR is 0× what its positions predict (site-calibrated); ~2 clicks/28d missed
-- **rewrite-snippet** `/equipment/reformer/`: CTR is 0.37× what its positions predict (site-calibrated); ~2 clicks/28d missed
+- **rewrite-snippet** `/equipment/reformer/`: CTR is 0.39× what its positions predict (site-calibrated); ~2 clicks/28d missed
 
-<details><summary>16 deferred (budget / one per page)</summary>
+<details><summary>14 deferred (budget / one per page)</summary>
 
-- strengthen `/trx-training-amsterdam/`
-- strengthen `/schedule/nl/`
-- rewrite-snippet `/pricing/`
 - rewrite-snippet `/intro/`
+- rewrite-snippet `/pricing/`
 - fix-snippet-hygiene `/blog/prenatal-pilates-supporting-body-through-every-trimester/nl/`
-- fix-snippet-hygiene `/equipment/cadillac/nl/`
 - fix-snippet-hygiene `/equipment/reformer/nl/`
+- fix-snippet-hygiene `/equipment/cadillac/nl/`
 - fix-snippet-hygiene `/instructors/nl/`
 - fix-snippet-hygiene `/equipment/ladder-barrel/nl/`
 - fix-snippet-hygiene `/corporate/nl/`
@@ -59,8 +57,8 @@ Brand queries (28d): "pt7" 388 impr / "pt studio 7" 451 impr
 - fix-snippet-hygiene `/equipment/tower-reformer/nl/`
 - fix-snippet-hygiene `/trainer/kelly/nl/`
 - fix-snippet-hygiene `/blog/nl/`
-- fix-snippet-hygiene `/workouts/cardio/nl/`
 - fix-snippet-hygiene `/trainer/lal/nl/`
+- fix-snippet-hygiene `/workouts/cardio/nl/`
 
 </details>
 
@@ -68,19 +66,19 @@ Brand queries (28d): "pt7" 388 impr / "pt studio 7" 451 impr
 
 | Keyword | Intended page | Impr | Clicks | Pos | Prev pos | Top page |
 |---|---|---|---|---|---|---|
-| reformer pilates amsterdam zuid | /reformer-pilates-amsterdam/ | 32 | 0 | 4.7 | 3 | ⚠ / |
-| reformer pilates amsterdam | /reformer-pilates-amsterdam/ | 99 | 4 | 10.4 | 6.1 | ⚠ / |
-| pilates amsterdam zuid | /reformer-pilates-amsterdam/ | 56 | 1 | 6.7 | 5 | ⚠ / |
-| pilates oud-zuid | /reformer-pilates-amsterdam/ | 82 | 0 | 4.9 | 6.1 | ⚠ /nl/ |
-| trx amsterdam | /trx-training-amsterdam/ | 57 | 1 | 9.8 | 10.2 | ✓ |
-| pilates equipment | /equipment/ | 65 | 0 | 11.6 | 8.2 | ✓ |
+| reformer pilates amsterdam zuid | /reformer-pilates-amsterdam/ | 31 | 0 | 4.8 | 2.8 | ⚠ / |
+| reformer pilates amsterdam | /reformer-pilates-amsterdam/ | 96 | 4 | 9.6 | 6.5 | ⚠ / |
+| pilates amsterdam zuid | /reformer-pilates-amsterdam/ | 54 | 0 | 6.9 | 4.7 | ⚠ / |
+| pilates oud-zuid | /reformer-pilates-amsterdam/ | 85 | 0 | 4.8 | 5.8 | ⚠ /nl/ |
+| trx amsterdam | /trx-training-amsterdam/ | 62 | 1 | 9.7 | 9.6 | ✓ |
+| pilates equipment | /equipment/ | 64 | 0 | 11.7 | 7.9 | ✓ |
 | reformer kopen | /equipment/ | 51 | 0 | 12.5 | – | ⚠ /equipment/nl/ |
 | private pilates amsterdam | /private-pilates-amsterdam/ | 0 | 0 | – | – | – |
-| prive pilates les | /private-pilates-amsterdam/nl/ | 1 | 0 | 7 | – | ✓ |
+| prive pilates les | /private-pilates-amsterdam/nl/ | 2 | 0 | 6.5 | – | ✓ |
 | personal training amsterdam zuid | /strength-training-amsterdam/ | 1 | 0 | 29 | – | ⚠ / |
 | pilates docentenopleiding | /academy/nl/ | 0 | 0 | – | – | – |
 | pilates instructor course amsterdam | /academy/ | 6 | 0 | 4.3 | 11.2 | ⚠ / |
-| prenatal pilates amsterdam | /prenatal-pilates-amsterdam/ | 2 | 0 | 6.5 | 5.7 | ⚠ /prenatal-pilates-amsterdam/nl/ |
+| prenatal pilates amsterdam | /prenatal-pilates-amsterdam/ | 2 | 0 | 6.5 | 5 | ⚠ /prenatal-pilates-amsterdam/nl/ |
 
 ## For a human
 
