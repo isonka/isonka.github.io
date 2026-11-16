@@ -1,8 +1,8 @@
 export const enIntro = {
   seo: {
-    title: 'Intro pack: {{classes}} group classes for {{price}} | PT7 Pilates Amsterdam',
+    title: 'Pilates Intro Offer Amsterdam | {{classes}} Classes for {{price}} | PT7',
     description:
-      'New clients at PT7 Museumplein: {{classes}} small-group classes for {{price}}. Max {{groupMax}} people, {{minutes}} minutes. Valid {{weeks}} weeks. Buy online.',
+      'New to PT7? Try Reformer, TRX and strength: {{classes}} small-group classes for {{price}} at Museumplein. Max {{groupMax}} people, {{minutes}} minutes, valid {{weeks}} weeks. Buy online.',
     keywords:
       'intro pilates amsterdam, pilates intro pack amsterdam, proefles pilates amsterdam, new client pilates amsterdam, reformer pilates trial museumplein',
     ogTitle: '{{classes}} group classes for {{price}} | PT7 Pilates',

@@ -1,8 +1,8 @@
 export const enPricing = {
   seo: {
-    title: 'Pilates Prices Amsterdam Oud-Zuid | From €50 Intro | PT7',
+    title: 'Pilates Membership & Prices Amsterdam | From €50 | PT7',
     description:
-      'Pilates prices at Museumplein, Amsterdam Zuid: intro pack of 3 group classes for €50, then from {{groupPrice}}/class (max {{groupMax}}). Memberships and privates.',
+      'Pilates prices and memberships at Museumplein, Amsterdam Zuid: 3-class intro pack for €50, unlimited options, small groups (max {{groupMax}}) and privates.',
     keywords:
       'pilates class prices amsterdam, pilates prices amsterdam, Pilates prijzen Amsterdam, Pilates abonnement Amsterdam, Pilates prices Museumplein, reformer pilates prive amsterdam, kleine groep pilates amsterdam, private Pilates kosten, small group Pilates pricing, proefles Pilates Amsterdam, strippenkaart Pilates',
     ogTitle: 'Pilates Prices Amsterdam Oud-Zuid | From €50 Intro | PT7',

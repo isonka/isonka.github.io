@@ -26,16 +26,16 @@ const fixedPageMeta = {
     description: 'Special offer for ClassPass members. Save money and get priority booking when you join PT7 directly. Same great Pilates classes, better value.',
   },
   '/pricing/': {
-    title: 'Pilates Prices Amsterdam Oud-Zuid | From €50 Intro | PT7',
-    description: 'Pilates prices at Museumplein (Amsterdam Zuid): intro pack 3 group classes for €50, then from €28/class (max 5). Memberships, privates, Reformer, TRX & strength. Book online.',
+    title: 'Pilates Membership & Prices Amsterdam | From €50 | PT7',
+    description: 'Pilates prices and memberships at Museumplein, Amsterdam Zuid: 3-class intro pack for €50, unlimited options, small groups (max 5) and privates.',
   },
   '/pricing/nl/': {
     title: 'Hoeveel kost pilates Amsterdam Oud-Zuid | PT7',
     description: 'Pilates prijzen aan het Museumplein (Amsterdam Zuid): introductiepakket 3 groepslessen voor €50, daarna vanaf €28/les (max. 5). Abonnementen, privé, Reformer, TRX & kracht. Online boeken.',
   },
   '/intro/': {
-    title: 'Intro pack: 3 group classes for €50 | PT7 Pilates Amsterdam',
-    description: 'New clients at PT7 Museumplein: 3 small-group classes for €50. Max 5 people, 45 minutes. Valid 3 weeks. Buy online.',
+    title: 'Pilates Intro Offer Amsterdam | 3 Classes for €50 | PT7',
+    description: 'New to PT7? Try Reformer, TRX and strength: 3 small-group classes for €50 at Museumplein. Max 5 people, 45 minutes, valid 3 weeks. Buy online.',
   },
   '/intro/nl/': {
     title: 'Introductiepakket: 3 groepslessen voor €50 | PT7 Pilates Amsterdam',
@@ -54,8 +54,8 @@ const fixedPageMeta = {
     description: 'Physiotherapists and healthcare providers: refer your clients to PT7 for post-rehab Pilates and functional training. Small groups, expert instructors.',
   },
   '/corporate/': {
-    title: 'Corporate Pilates Amsterdam | Bedrijfsfitness | PT7 Pilates',
-    description: 'Corporate Pilates and bedrijfsfitness Amsterdam for teams. Boutique Reformer at Museumplein or on-site mat sessions. Tax-friendly WKR options.',
+    title: 'Corporate Pilates Amsterdam | Team Sessions | PT7',
+    description: 'Corporate Pilates in Amsterdam for teams: Reformer sessions at Museumplein or on-site mat classes at your office. Small groups (max 5), WKR options.',
   },
   '/privacy/': {
     title: 'Privacy Policy | PT7 Pilates Amsterdam',
