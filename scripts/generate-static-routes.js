@@ -30,7 +30,7 @@ const fixedPageMeta = {
     description: 'Pilates prices at Museumplein (Amsterdam Zuid): intro pack 3 group classes for €50, then from €28/class (max 5). Memberships, privates, Reformer, TRX & strength. Book online.',
   },
   '/pricing/nl/': {
-    title: 'Hoeveel kost pilates Amsterdam Oud-Zuid | PT7',
+    title: 'Pilates prijzen & abonnement Amsterdam | 3 lessen €50 | PT7',
     description: 'Pilates prijzen aan het Museumplein (Amsterdam Zuid): introductiepakket 3 groepslessen voor €50, daarna vanaf €28/les (max. 5). Abonnementen, privé, Reformer, TRX & kracht. Online boeken.',
   },
   '/intro/': {

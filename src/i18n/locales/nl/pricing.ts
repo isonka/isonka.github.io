@@ -3,12 +3,12 @@ import type { EnPricing } from '../en/pricing';
 
 export const nlPricing: DeepStringify<EnPricing> = {
   seo: {
-    title: 'Hoeveel kost pilates Amsterdam Oud-Zuid | PT7',
+    title: 'Pilates prijzen & abonnement Amsterdam | 3 lessen €50 | PT7',
     description:
       'Pilates prijzen aan het Museumplein, Amsterdam Zuid: 3 groepslessen voor €50, daarna vanaf {{groupPrice}}/les (max. {{groupMax}}). Abonnementen en privé.',
     keywords:
       'pilates lesprijzen amsterdam, pilates prijzen amsterdam, Pilates prijzen Amsterdam, Pilates abonnement Amsterdam, Pilates prijzen Museumplein, reformer pilates prive amsterdam, kleine groep pilates amsterdam, private Pilates kosten, proefles Pilates Amsterdam, strippenkaart Pilates',
-    ogTitle: 'Hoeveel kost pilates Amsterdam Oud-Zuid | PT7',
+    ogTitle: 'Pilates prijzen & abonnement Amsterdam | 3 lessen €50 | PT7',
     ogDescription:
       'Introductiepakket 3 lessen voor €50. Kleine groepen (max. {{groupMax}}) vanaf {{groupPrice}}/les aan het Museumplein. Abonnementen en privésessies — online boeken.',
     analyticsTitle: 'Pilates prijzen Amsterdam Zuid | PT7 Pilates',
