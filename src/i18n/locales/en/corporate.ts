@@ -1,8 +1,8 @@
 export const enCorporate = {
   seo: {
-    title: 'Corporate Pilates Amsterdam | Bedrijfsfitness | PT7 Pilates',
+    title: 'Corporate Pilates Amsterdam | Team Sessions | PT7',
     description:
-      'Corporate Pilates and bedrijfsfitness in Amsterdam: Reformer sessions at Museumplein or on-site mat classes for teams. Tax-friendly WKR options.',
+      'Corporate Pilates in Amsterdam for teams: Reformer sessions at Museumplein or on-site mat classes at your office. Small groups (max 5), WKR options.',
     keywords:
       'corporate Pilates Amsterdam, bedrijfsfitness Amsterdam, corporate wellness Amsterdam, team Pilates Amsterdam, office Pilates Amsterdam, WKR pilates, bedrijfssport Amsterdam, Reformer Pilates teams',
     ogTitle: 'Corporate Pilates Amsterdam | For Business | PT7 Pilates',

@@ -53,9 +53,9 @@ const FIXED_PAGES: Route[] = [
     prerender: true,
     sitemap: { lastmod: '2026-09-25', changefreq: 'monthly', priority: '0.8' },
     meta: {
-      title: 'Intro pack: 3 group classes for €50 | PT7 Pilates Amsterdam',
+      title: 'Pilates Intro Offer Amsterdam | 3 Classes for €50 | PT7',
       description:
-        'New clients at PT7 Museumplein: 3 small-group classes for €50. Max 5 people, 45 minutes. Valid 3 weeks. Buy online.',
+        'New to PT7? Try Reformer, TRX and strength: 3 small-group classes for €50 at Museumplein. Max 5 people, 45 minutes, valid 3 weeks. Buy online.',
     },
   },
   {
