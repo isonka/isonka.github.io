@@ -1,11 +1,11 @@
 export const enHome = {
   seo: {
-    title: 'Pilates Studio Amsterdam Zuid | PT7 (PT Studio 7)',
+    title: 'PT7 Pilates Amsterdam | Reformer Classes Near Museumplein',
     description:
       'PT7 (formerly PT Studio 7): Reformer Pilates studio at {{studioStreet}}, Museumplein, Amsterdam Zuid. Max 5 per class. Intro: 3 classes for €50.',
     keywords:
       'PT7, PT7 Pilates, Pilates Amsterdam, pilates classes Amsterdam, pilates classes near me, Reformer Pilates Amsterdam, one-on-one training Amsterdam, Pilates Museumplein, private Pilates Amsterdam, small group Pilates, Pilates studio Van Baerlestraat, TRX training Amsterdam, prenatal Pilates Amsterdam',
-    ogTitle: 'Pilates Studio Amsterdam Zuid | PT7 (PT Studio 7)',
+    ogTitle: 'PT7 Pilates Amsterdam | Reformer Classes Near Museumplein',
     ogDescription:
       'PT7 boutique studio at Museumplein: Reformer Pilates, small groups (max 5), and private sessions in Amsterdam Oud-Zuid. Book online.',
     analyticsTitle: 'Home - PT7 Pilates Amsterdam',
