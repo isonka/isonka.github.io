@@ -1,0 +1,47 @@
+{ "changes": [
+  {
+    "page": "/intro/",
+    "action": "rewrite-snippet",
+    "kind": "snippet",
+    "before": {
+      "title": "Intro pack: 3 group classes for €50 | PT7 Pilates Amsterdam",
+      "description": "New clients at PT7 Museumplein: 3 small-group classes for €50. Max 5 people, 45 minutes. Valid 3 weeks. Buy online."
+    },
+    "after": {
+      "title": "Pilates Intro Offer Amsterdam | 3 Classes for €50 | PT7",
+      "description": "New to PT7? Try Reformer, TRX and strength: 3 small-group classes for €50 at Museumplein. Max 5 people, 45 minutes, valid 3 weeks. Buy online."
+    },
+    "hypothesis": "Leading with 'Pilates Intro Offer Amsterdam' matches the 'reformer pilates intro offer' query wording and names the formats on offer, which should lift CTR over the generic 'Intro pack' title.",
+    "files": ["src/i18n/locales/en/intro.ts", "site/routes.ts", "scripts/generate-static-routes.js"]
+  },
+  {
+    "page": "/pricing/",
+    "action": "rewrite-snippet",
+    "kind": "snippet",
+    "before": {
+      "title": "Pilates Prices Amsterdam Oud-Zuid | From €50 Intro | PT7",
+      "description": "Pilates prices at Museumplein, Amsterdam Zuid: intro pack of 3 group classes for €50, then from €28/class (max 5). Memberships and privates."
+    },
+    "after": {
+      "title": "Pilates Membership & Prices Amsterdam | From €50 | PT7",
+      "description": "Pilates prices and memberships at Museumplein, Amsterdam Zuid: 3-class intro pack for €50, unlimited options, small groups (max 5) and privates."
+    },
+    "hypothesis": "Queries like 'pilates membership' and 'unlimited pilates' rank on this page, so naming memberships and unlimited options in the snippet should earn more clicks than the per-class price framing.",
+    "files": ["src/i18n/locales/en/pricing.ts", "scripts/generate-static-routes.js"]
+  },
+  {
+    "page": "/corporate/",
+    "action": "rewrite-snippet",
+    "kind": "snippet",
+    "before": {
+      "title": "Corporate Pilates Amsterdam | Bedrijfsfitness | PT7 Pilates",
+      "description": "Corporate Pilates and bedrijfsfitness in Amsterdam: Reformer sessions at Museumplein or on-site mat classes for teams. Tax-friendly WKR options."
+    },
+    "after": {
+      "title": "Corporate Pilates Amsterdam | Team Sessions | PT7",
+      "description": "Corporate Pilates in Amsterdam for teams: Reformer sessions at Museumplein or on-site mat classes at your office. Small groups (max 5), WKR options."
+    },
+    "hypothesis": "English-language queries ('pilates business', 'office pilates', 'team building pilates') get a snippet in plain English with the office/team angle and small-group detail instead of the Dutch 'bedrijfsfitness' term.",
+    "files": ["src/i18n/locales/en/corporate.ts", "scripts/generate-static-routes.js"]
+  }
+] }
