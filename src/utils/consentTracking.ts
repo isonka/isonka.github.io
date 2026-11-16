@@ -129,10 +129,10 @@ function gtmOwnsPageViews(): boolean {
   return getStoredConsent()?.marketing === true;
 }
 
-export function sendGaPageView(pagePath: string, pageTitle: string) {
+export function sendGaPageView(pagePath: string, pageTitle: string, { landing = false } = {}) {
   const gtag = getGtag();
   if (!window.__pt7GaReady || !gtag) return;
-  if (gtmOwnsPageViews()) return;
+  if (!landing && gtmOwnsPageViews()) return;
 
   const now = Date.now();
   if (lastGaPageKey === pagePath && now - lastGaPageAt < 2000) return;
@@ -196,12 +196,16 @@ function configureGa() {
   gtag('config', GA_ID, { send_page_view: false });
   loaded.ga = true;
   window.__pt7GaReady = true;
-  if (!gtmOwnsPageViews()) {
-    sendGaPageView(
-      `${window.location.pathname}${window.location.search}`,
-      document.title,
-    );
-  }
+  // Always record the page GA wakes up on. GTM sends page_view only on SPA
+  // history changes, not on its own load, so with marketing consent the
+  // landing page was never recorded: search sessions showed up as "(not set)"
+  // or as starting on the next page (/schedule). If the GTM container ever
+  // gets an initial page_view tag, remove `landing: true` to avoid doubles.
+  sendGaPageView(
+    `${window.location.pathname}${window.location.search}`,
+    document.title,
+    { landing: true },
+  );
 }
 
 function configureAds() {
