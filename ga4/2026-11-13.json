@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-13",
+  "rows": [
+    {
+      "date": "2026-11-13",
+      "landingPage": "(not set)",
+      "sessions": 9,
+      "engagedSessions": 5,
+      "keyEvents": 3
+    },
+    {
+      "date": "2026-11-13",
+      "landingPage": "/schedule",
+      "sessions": 3,
+      "engagedSessions": 3,
+      "keyEvents": 0
+    }
+  ]
+}

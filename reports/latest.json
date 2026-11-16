@@ -1,92 +1,92 @@
 {
-  "generatedAt": "2026-11-11T08:53:09.192Z",
-  "runDate": "2026-11-11",
-  "dataThrough": "2026-11-08",
+  "generatedAt": "2026-11-16T13:26:11.501Z",
+  "runDate": "2026-11-16",
+  "dataThrough": "2026-11-13",
   "sources": {
-    "gscDays": 132,
-    "ga4Days": 132,
-    "snapshots": 4
+    "gscDays": 137,
+    "ga4Days": 137,
+    "snapshots": 5
   },
   "windows": {
     "cur": {
-      "start": "2026-10-12",
-      "end": "2026-11-08"
+      "start": "2026-10-17",
+      "end": "2026-11-13"
     },
     "prev": {
-      "start": "2026-09-14",
-      "end": "2026-10-11"
+      "start": "2026-09-19",
+      "end": "2026-10-16"
     },
     "week": {
-      "start": "2026-11-02",
-      "end": "2026-11-08"
+      "start": "2026-11-07",
+      "end": "2026-11-13"
     },
     "prevWeek": {
-      "start": "2026-10-26",
-      "end": "2026-11-01"
+      "start": "2026-10-31",
+      "end": "2026-11-06"
     }
   },
-  "siteCtrCalibration": 0.168,
+  "siteCtrCalibration": 0.176,
   "kpis": {
     "week": {
-      "clicks": 66,
-      "impressions": 2553,
-      "position": 12.2,
-      "nonbrandClicks": 8,
-      "brandClicks": 22,
-      "nonbrandShare": 0.267,
-      "organicSessions": 92,
-      "organicKeyEvents": 15
+      "clicks": 59,
+      "impressions": 2405,
+      "position": 11.6,
+      "nonbrandClicks": 7,
+      "brandClicks": 16,
+      "nonbrandShare": 0.304,
+      "organicSessions": 74,
+      "organicKeyEvents": 10
     },
     "prevWeek": {
-      "clicks": 99,
-      "impressions": 2689,
-      "position": 10.8,
-      "nonbrandClicks": 18,
-      "brandClicks": 24,
-      "nonbrandShare": 0.429,
-      "organicSessions": 90,
-      "organicKeyEvents": 17
+      "clicks": 67,
+      "impressions": 2616,
+      "position": 12.2,
+      "nonbrandClicks": 11,
+      "brandClicks": 19,
+      "nonbrandShare": 0.367,
+      "organicSessions": 91,
+      "organicKeyEvents": 14
     },
     "cur28": {
-      "clicks": 309,
-      "impressions": 9371,
-      "position": 10.3,
-      "nonbrandClicks": 40,
-      "brandClicks": 88,
-      "nonbrandShare": 0.313,
-      "organicSessions": 319,
-      "organicKeyEvents": 49
+      "clicks": 292,
+      "impressions": 9791,
+      "position": 10.9,
+      "nonbrandClicks": 43,
+      "brandClicks": 79,
+      "nonbrandShare": 0.352,
+      "organicSessions": 333,
+      "organicKeyEvents": 47
     },
     "prev28": {
-      "clicks": 243,
-      "impressions": 6374,
-      "position": 7,
-      "nonbrandClicks": 23,
-      "brandClicks": 64,
-      "nonbrandShare": 0.264,
-      "organicSessions": 264,
-      "organicKeyEvents": 34
+      "clicks": 245,
+      "impressions": 6280,
+      "position": 6.7,
+      "nonbrandClicks": 18,
+      "brandClicks": 71,
+      "nonbrandShare": 0.202,
+      "organicSessions": 227,
+      "organicKeyEvents": 32
     }
   },
   "brand": {
     "cur28": {
       "ptStudio7": {
-        "clicks": 48,
-        "impressions": 424
+        "clicks": 41,
+        "impressions": 372
       },
       "pt7": {
-        "clicks": 40,
-        "impressions": 450
+        "clicks": 38,
+        "impressions": 623
       }
     },
     "prev28": {
       "ptStudio7": {
-        "clicks": 42,
-        "impressions": 393
+        "clicks": 45,
+        "impressions": 430
       },
       "pt7": {
-        "clicks": 22,
-        "impressions": 134
+        "clicks": 26,
+        "impressions": 171
       }
     },
     "crossover": false
@@ -95,90 +95,90 @@
     {
       "keyword": "reformer pilates amsterdam zuid",
       "page": "/reformer-pilates-amsterdam/",
-      "impressions": 31,
+      "impressions": 35,
       "clicks": 0,
-      "position": 4.8,
+      "position": 5.5,
       "intendedPagePosition": 5,
       "topPage": "/",
       "queries": 1,
-      "positionPrev": 2.8,
-      "impressionsPrev": 12,
+      "positionPrev": 1.8,
+      "impressionsPrev": 13,
       "wrongPage": true
     },
     {
       "keyword": "reformer pilates amsterdam",
       "page": "/reformer-pilates-amsterdam/",
-      "impressions": 96,
-      "clicks": 4,
-      "position": 9.6,
-      "intendedPagePosition": 29.4,
+      "impressions": 85,
+      "clicks": 7,
+      "position": 8.3,
+      "intendedPagePosition": 23,
       "topPage": "/",
       "queries": 7,
-      "positionPrev": 6.5,
-      "impressionsPrev": 72,
+      "positionPrev": 8.6,
+      "impressionsPrev": 78,
       "wrongPage": true
     },
     {
       "keyword": "pilates amsterdam zuid",
       "page": "/reformer-pilates-amsterdam/",
-      "impressions": 54,
+      "impressions": 60,
       "clicks": 0,
-      "position": 6.9,
-      "intendedPagePosition": 11.6,
+      "position": 8.4,
+      "intendedPagePosition": 13,
       "topPage": "/",
       "queries": 2,
-      "positionPrev": 4.7,
-      "impressionsPrev": 32,
+      "positionPrev": 3.7,
+      "impressionsPrev": 29,
       "wrongPage": true
     },
     {
       "keyword": "pilates oud-zuid",
       "page": "/reformer-pilates-amsterdam/",
-      "impressions": 85,
+      "impressions": 88,
       "clicks": 0,
-      "position": 4.8,
+      "position": 5.3,
       "intendedPagePosition": null,
       "topPage": "/nl/",
       "queries": 1,
-      "positionPrev": 5.8,
-      "impressionsPrev": 45,
+      "positionPrev": 5.2,
+      "impressionsPrev": 53,
       "wrongPage": true
     },
     {
       "keyword": "trx amsterdam",
       "page": "/trx-training-amsterdam/",
-      "impressions": 62,
+      "impressions": 57,
       "clicks": 1,
-      "position": 9.7,
-      "intendedPagePosition": 4.8,
+      "position": 9,
+      "intendedPagePosition": 4.6,
       "topPage": "/trx-training-amsterdam/",
       "queries": 1,
-      "positionPrev": 9.6,
-      "impressionsPrev": 59,
+      "positionPrev": 8.7,
+      "impressionsPrev": 47,
       "wrongPage": false
     },
     {
       "keyword": "pilates equipment",
       "page": "/equipment/",
-      "impressions": 64,
+      "impressions": 66,
       "clicks": 0,
-      "position": 11.7,
-      "intendedPagePosition": 9.3,
+      "position": 12.3,
+      "intendedPagePosition": 10,
       "topPage": "/equipment/",
-      "queries": 8,
-      "positionPrev": 7.9,
-      "impressionsPrev": 141,
+      "queries": 11,
+      "positionPrev": 7.5,
+      "impressionsPrev": 125,
       "wrongPage": false
     },
     {
       "keyword": "reformer kopen",
       "page": "/equipment/",
-      "impressions": 51,
+      "impressions": 67,
       "clicks": 0,
-      "position": 12.5,
+      "position": 15,
       "intendedPagePosition": 10,
       "topPage": "/equipment/nl/",
-      "queries": 6,
+      "queries": 7,
       "positionPrev": null,
       "impressionsPrev": 0,
       "wrongPage": true
@@ -212,15 +212,15 @@
     {
       "keyword": "personal training amsterdam zuid",
       "page": "/strength-training-amsterdam/",
-      "impressions": 1,
+      "impressions": 0,
       "clicks": 0,
-      "position": 29,
+      "position": null,
       "intendedPagePosition": null,
-      "topPage": "/",
-      "queries": 1,
-      "positionPrev": null,
-      "impressionsPrev": 0,
-      "wrongPage": true
+      "topPage": null,
+      "queries": 0,
+      "positionPrev": 29,
+      "impressionsPrev": 1,
+      "wrongPage": false
     },
     {
       "keyword": "pilates docentenopleiding",
@@ -238,15 +238,15 @@
     {
       "keyword": "pilates instructor course amsterdam",
       "page": "/academy/",
-      "impressions": 6,
+      "impressions": 5,
       "clicks": 0,
-      "position": 4.3,
-      "intendedPagePosition": 5.3,
-      "topPage": "/",
+      "position": 4,
+      "intendedPagePosition": 4.5,
+      "topPage": "/academy/",
       "queries": 1,
-      "positionPrev": 11.2,
+      "positionPrev": 8.2,
       "impressionsPrev": 5,
-      "wrongPage": true
+      "wrongPage": false
     },
     {
       "keyword": "prenatal pilates amsterdam",
@@ -258,7 +258,7 @@
       "topPage": "/prenatal-pilates-amsterdam/nl/",
       "queries": 1,
       "positionPrev": 5,
-      "impressionsPrev": 4,
+      "impressionsPrev": 2,
       "wrongPage": true
     }
   ],
@@ -294,8 +294,8 @@
         ],
         "proposedOn": "2026-10-30"
       },
-      "afterDays": 0,
-      "age": 9,
+      "afterDays": 5,
+      "age": 14,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -304,7 +304,7 @@
         },
         "after": {
           "start": "2026-11-09",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -339,8 +339,8 @@
         ],
         "proposedOn": "2026-10-30"
       },
-      "afterDays": 0,
-      "age": 9,
+      "afterDays": 5,
+      "age": 14,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -349,7 +349,7 @@
         },
         "after": {
           "start": "2026-11-09",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -367,8 +367,8 @@
         "description": "Official Sole Pilates dealer in the Netherlands. Reformer from €1,900. Customs duty, shipping, and VAT (BTW) are not included. Contact us for the final price."
       },
       "proposal": null,
-      "afterDays": 0,
-      "age": 9,
+      "afterDays": 5,
+      "age": 14,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -377,7 +377,7 @@
         },
         "after": {
           "start": "2026-11-09",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -420,7 +420,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 9,
+      "age": 14,
       "verdict": "superseded",
       "windows": {
         "before": {
@@ -463,7 +463,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 9,
+      "age": 14,
       "verdict": "superseded",
       "windows": {
         "before": {
@@ -506,7 +506,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 9,
+      "age": 14,
       "verdict": "superseded",
       "windows": {
         "before": {
@@ -550,7 +550,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 9,
+      "age": 14,
       "verdict": "superseded",
       "windows": {
         "before": {
@@ -594,7 +594,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 9,
+      "age": 14,
       "verdict": "superseded",
       "windows": {
         "before": {
@@ -621,8 +621,8 @@
         "description": "Officieel Sole Pilates-dealer in Nederland. Reformer vanaf € 1.900. Douanekosten, verzending en BTW zijn niet inbegrepen. Neem contact op voor de definitieve prijs."
       },
       "proposal": null,
-      "afterDays": 0,
-      "age": 9,
+      "afterDays": 5,
+      "age": 14,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -631,7 +631,7 @@
         },
         "after": {
           "start": "2026-11-09",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -674,7 +674,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 9,
+      "age": 14,
       "verdict": "superseded",
       "windows": {
         "before": {
@@ -717,7 +717,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 9,
+      "age": 14,
       "verdict": "superseded",
       "windows": {
         "before": {
@@ -760,7 +760,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 9,
+      "age": 14,
       "verdict": "superseded",
       "windows": {
         "before": {
@@ -803,7 +803,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 9,
+      "age": 14,
       "verdict": "superseded",
       "windows": {
         "before": {
@@ -846,7 +846,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 9,
+      "age": 14,
       "verdict": "superseded",
       "windows": {
         "before": {
@@ -889,7 +889,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 9,
+      "age": 14,
       "verdict": "superseded",
       "windows": {
         "before": {
@@ -932,7 +932,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 9,
+      "age": 14,
       "verdict": "superseded",
       "windows": {
         "before": {
@@ -977,8 +977,8 @@
         ],
         "proposedOn": "2026-10-30"
       },
-      "afterDays": 0,
-      "age": 9,
+      "afterDays": 5,
+      "age": 14,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -987,7 +987,7 @@
         },
         "after": {
           "start": "2026-11-09",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -1028,7 +1028,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 2,
+      "age": 7,
       "verdict": "superseded",
       "windows": {
         "before": {
@@ -1078,7 +1078,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 2,
+      "age": 7,
       "verdict": "superseded",
       "windows": {
         "before": {
@@ -1130,7 +1130,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 2,
+      "age": 7,
       "verdict": "superseded",
       "windows": {
         "before": {
@@ -1182,7 +1182,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 2,
+      "age": 7,
       "verdict": "superseded",
       "windows": {
         "before": {
@@ -1243,7 +1243,7 @@
         "proposedOn": "2026-11-02"
       },
       "afterDays": 0,
-      "age": 2,
+      "age": 7,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -1252,7 +1252,7 @@
         },
         "after": {
           "start": "2026-11-16",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -1295,7 +1295,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 2,
+      "age": 7,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -1304,7 +1304,7 @@
         },
         "after": {
           "start": "2026-11-16",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -1345,7 +1345,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -1354,7 +1354,7 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -1399,7 +1399,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -1408,7 +1408,7 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -1453,7 +1453,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -1462,7 +1462,7 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -1505,7 +1505,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -1514,7 +1514,7 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -1549,7 +1549,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -1558,7 +1558,7 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -1593,7 +1593,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -1602,7 +1602,7 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -1637,7 +1637,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -1646,7 +1646,7 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -1681,7 +1681,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -1690,7 +1690,7 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -1733,7 +1733,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -1742,7 +1742,7 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -1777,7 +1777,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -1786,7 +1786,7 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -1821,7 +1821,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -1830,7 +1830,7 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -1865,7 +1865,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -1874,7 +1874,7 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -1909,7 +1909,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -1918,7 +1918,7 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -1953,7 +1953,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -1962,7 +1962,7 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -1997,7 +1997,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -2006,7 +2006,7 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -2047,7 +2047,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -2056,7 +2056,7 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -2099,7 +2099,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -2108,7 +2108,7 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -2151,7 +2151,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -2160,7 +2160,7 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -2203,7 +2203,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -2212,7 +2212,7 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -2255,7 +2255,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -2264,7 +2264,7 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -2309,7 +2309,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -2318,7 +2318,7 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
         }
       }
     },
@@ -2363,7 +2363,7 @@
       },
       "proposal": null,
       "afterDays": 0,
-      "age": 0,
+      "age": 5,
       "verdict": "pending",
       "windows": {
         "before": {
@@ -2372,7 +2372,200 @@
         },
         "after": {
           "start": "2026-11-18",
-          "end": "2026-11-08"
+          "end": "2026-11-13"
+        }
+      }
+    },
+    {
+      "page": "/blog/pilates-prices-amsterdam-2026-complete-guide/",
+      "prevSnapshot": "2026-11-11",
+      "detectedOn": "2026-11-16",
+      "kind": "content",
+      "before": {
+        "h1": [
+          "Pilates Prices Amsterdam 2026: Complete Cost Comparison Guide"
+        ],
+        "h2": [
+          "Key Findings: Amsterdam Pilates Prices at a Glance",
+          "Pilates Pricing by Studio Type",
+          "Membership vs. Class Packages: Which is Better?",
+          "Hidden Costs to Consider",
+          "Tips to Get the Best Value",
+          "The Real Question: Is Pilates Worth the Investment?",
+          "Frequently asked questions",
+          "Recent posts",
+          "About PT7",
+          "Experience it yourself"
+        ],
+        "words": 930,
+        "contentLinks": 7
+      },
+      "after": {
+        "h1": [
+          "Pilates Prices Amsterdam 2026: Complete Cost Comparison Guide"
+        ],
+        "h2": [
+          "Key Findings: Amsterdam Pilates Prices at a Glance",
+          "Pilates Pricing by Studio Type",
+          "Membership vs. Class Packages: Which is Better?",
+          "Hidden Costs to Consider",
+          "Tips to Get the Best Value",
+          "The Real Question: Is Pilates Worth the Investment?",
+          "Frequently asked questions",
+          "Recent posts",
+          "About PT7",
+          "Experience it yourself"
+        ],
+        "words": 945,
+        "contentLinks": 8
+      },
+      "proposal": null,
+      "afterDays": 0,
+      "age": 0,
+      "verdict": "pending",
+      "windows": {
+        "before": {
+          "start": "2026-10-14",
+          "end": "2026-11-10"
+        },
+        "after": {
+          "start": "2026-11-23",
+          "end": "2026-11-13"
+        }
+      }
+    },
+    {
+      "page": "/blog/pma-ittap-accreditation-reformer-course-amsterdam/",
+      "prevSnapshot": "2026-11-11",
+      "detectedOn": "2026-11-16",
+      "kind": "snippet",
+      "before": {
+        "title": "PMA ITTAP Accreditation Explained | PT7 Academy",
+        "description": "What PMA ITTAP accreditation means for Pilates teacher training, and how PT7 Academy's 300-hour Reformer course in Amsterdam meets it."
+      },
+      "after": {
+        "title": "What Is PMA ITTAP? Pilates Accreditation Explained | PT7",
+        "description": "What is ITTAP? The PMA accreditation framework for Pilates teacher-training programs, what it means, and how PT7 Academy's 300-hour Reformer course fits."
+      },
+      "proposal": {
+        "page": "/blog/pma-ittap-accreditation-reformer-course-amsterdam/",
+        "action": "rewrite-snippet",
+        "kind": "snippet",
+        "before": {
+          "title": "PMA ITTAP Accreditation Explained | PT7 Academy",
+          "description": "What PMA ITTAP accreditation means for Pilates teacher training, and how PT7 Academy's 300-hour Reformer course in Amsterdam meets it."
+        },
+        "after": {
+          "title": "What Is PMA ITTAP? Pilates Accreditation Explained | PT7",
+          "description": "What is ITTAP? The PMA accreditation framework for Pilates teacher-training programs, what it means, and how PT7 Academy's 300-hour Reformer course fits."
+        },
+        "hypothesis": "A question-style title answering 'ittap' (pos 3.3, 50 impressions, 0 clicks) and 'ittap pilates' should lift CTR.",
+        "files": [
+          "src/data/blog/posts/pma-ittap-accreditation-reformer-course-amsterdam.ts"
+        ],
+        "proposedOn": "2026-11-11"
+      },
+      "afterDays": 0,
+      "age": 0,
+      "verdict": "pending",
+      "windows": {
+        "before": {
+          "start": "2026-10-14",
+          "end": "2026-11-10"
+        },
+        "after": {
+          "start": "2026-11-23",
+          "end": "2026-11-13"
+        }
+      }
+    },
+    {
+      "page": "/equipment/reformer/",
+      "prevSnapshot": "2026-11-11",
+      "detectedOn": "2026-11-16",
+      "kind": "snippet",
+      "before": {
+        "title": "Reformer Pilates Equipment at PT7 Amsterdam | In-Studio",
+        "description": "The Reformer used in small-group and private classes at PT7, Van Baerlestraat 76C, Museumplein. Specs of the in-studio apparatus and how to book a class."
+      },
+      "after": {
+        "title": "Pilates Reformer Machine: Specs & Dimensions | PT7",
+        "description": "Pilates Reformer machine used in PT7 classes: solid beech frame, adjustable footbar, jump board and box, 240 x 69 x 35 cm. Try it at our Amsterdam studio."
+      },
+      "proposal": {
+        "page": "/equipment/reformer/",
+        "action": "rewrite-snippet",
+        "kind": "snippet",
+        "before": {
+          "title": "Reformer Pilates Equipment at PT7 Amsterdam | In-Studio",
+          "description": "The Reformer used in small-group and private classes at PT7, Van Baerlestraat 76C, Museumplein. Specs of the in-studio apparatus and how to book a class."
+        },
+        "after": {
+          "title": "Pilates Reformer Machine: Specs & Dimensions | PT7",
+          "description": "Pilates Reformer machine used in PT7 classes: solid beech frame, adjustable footbar, jump board and box, 240 x 69 x 35 cm. Try it at our Amsterdam studio."
+        },
+        "hypothesis": "Queries 'reformer pilates machine' (pos 7.3), 'reformer equipment' and 'pilates reformer machine' want specs; the new snippet leads with the machine and its concrete specs.",
+        "files": [
+          "src/data/equipment.ts"
+        ],
+        "proposedOn": "2026-11-11"
+      },
+      "afterDays": 0,
+      "age": 0,
+      "verdict": "pending",
+      "windows": {
+        "before": {
+          "start": "2026-10-14",
+          "end": "2026-11-10"
+        },
+        "after": {
+          "start": "2026-11-23",
+          "end": "2026-11-13"
+        }
+      }
+    },
+    {
+      "page": "/schedule/",
+      "prevSnapshot": "2026-11-11",
+      "detectedOn": "2026-11-16",
+      "kind": "snippet",
+      "before": {
+        "title": "Pilates Classes Amsterdam Zuid | Book Online | PT7",
+        "description": "Live class schedule at Museumplein, Amsterdam Zuid: Reformer Pilates, TRX and strength in small groups (max 5) or privates at Van Baerlestraat 76C. Book online."
+      },
+      "after": {
+        "title": "Pilates Classes Near Museumplein, Amsterdam | PT7",
+        "description": "Pilates classes near Museumplein, Amsterdam Zuid: Reformer, TRX and strength in small groups (max 5) or privates at Van Baerlestraat 76C. Book online."
+      },
+      "proposal": {
+        "page": "/schedule/",
+        "action": "rewrite-snippet",
+        "kind": "snippet",
+        "before": {
+          "title": "Pilates Classes Amsterdam Zuid | Book Online | PT7",
+          "description": "Live class schedule at Museumplein, Amsterdam Zuid: Reformer Pilates, TRX and strength in small groups (max 5) or privates at Van Baerlestraat 76C. Book online."
+        },
+        "after": {
+          "title": "Pilates Classes Near Museumplein, Amsterdam | PT7",
+          "description": "Pilates classes near Museumplein, Amsterdam Zuid: Reformer, TRX and strength in small groups (max 5) or privates at Van Baerlestraat 76C. Book online."
+        },
+        "hypothesis": "Leading with 'pilates classes near Museumplein' matches the near-me intent of queries like 'pilates classes near me' (pos 7.3) and 'pilates near me' (pos 6.5) that currently get 0 clicks.",
+        "files": [
+          "src/i18n/locales/en/schedule.ts"
+        ],
+        "proposedOn": "2026-11-11"
+      },
+      "afterDays": 0,
+      "age": 0,
+      "verdict": "pending",
+      "windows": {
+        "before": {
+          "start": "2026-10-14",
+          "end": "2026-11-10"
+        },
+        "after": {
+          "start": "2026-11-23",
+          "end": "2026-11-13"
         }
       }
     }
@@ -2388,11 +2581,11 @@
       "keepSnippet": true,
       "uncoveredQueries": [],
       "addInternalLinksFrom": [
-        "/blog/pilates-prices-amsterdam-2026-complete-guide/",
         "/academy/",
-        "/equipment/"
+        "/equipment/",
+        "/blog/pma-ittap-accreditation-reformer-course-amsterdam/"
       ],
-      "currentInboundContentLinks": 5
+      "currentInboundContentLinks": 6
     },
     {
       "type": "strengthen",
@@ -2412,202 +2605,146 @@
     {
       "type": "rewrite-snippet",
       "budget": "snippet",
-      "priority": 52.1,
-      "page": "/schedule/",
+      "priority": 51.2,
+      "page": "/intro/",
       "current": {
-        "title": "Pilates Classes Amsterdam Zuid | Book Online | PT7",
-        "description": "Live class schedule at Museumplein, Amsterdam Zuid: Reformer Pilates, TRX and strength in small groups (max 5) or privates at Van Baerlestraat 76C. Book online."
+        "title": "Intro pack: 3 group classes for €50 | PT7 Pilates Amsterdam",
+        "description": "New clients at PT7 Museumplein: 3 small-group classes for €50. Max 5 people, 45 minutes. Valid 3 weeks. Buy online."
       },
-      "why": "CTR is 0.49× what its positions predict (site-calibrated); ~2 clicks/28d missed",
+      "why": "CTR is 0× what its positions predict (site-calibrated); ~1 clicks/28d missed",
       "topQueries": [
         {
-          "query": "pt studio",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 7,
-          "position": 40,
-          "ctr": 0
-        },
-        {
-          "query": "pilates amsterdam",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 7,
-          "position": 28.9,
-          "ctr": 0
-        },
-        {
-          "query": "pilates classes near me",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 6,
-          "position": 7.3,
-          "ctr": 0
-        },
-        {
-          "query": "pilates near me",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 4,
-          "position": 6.5,
-          "ctr": 0
-        },
-        {
-          "query": "pt near me",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 2,
-          "position": 15.5,
-          "ctr": 0
-        },
-        {
-          "query": "pt amsterdam",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 2,
-          "position": 44,
-          "ctr": 0
-        }
-      ],
-      "hygiene": [],
-      "doNotReuse": []
-    },
-    {
-      "type": "rewrite-snippet",
-      "budget": "snippet",
-      "priority": 51.9,
-      "page": "/blog/pma-ittap-accreditation-reformer-course-amsterdam/",
-      "current": {
-        "title": "PMA ITTAP Accreditation Explained | PT7 Academy",
-        "description": "What PMA ITTAP accreditation means for Pilates teacher training, and how PT7 Academy's 300-hour Reformer course in Amsterdam meets it."
-      },
-      "why": "CTR is 0× what its positions predict (site-calibrated); ~2 clicks/28d missed",
-      "topQueries": [
-        {
-          "query": "ittap",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 50,
-          "position": 3.3,
-          "ctr": 0
-        },
-        {
-          "query": "ittap pilates",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 18,
-          "position": 5.8,
-          "ctr": 0
-        },
-        {
-          "query": "are pma’s certification programs recognized or accredited by employers worldwide?",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 15,
-          "position": 4.5,
-          "ctr": 0
-        },
-        {
-          "query": "pma ittap",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 9,
-          "position": 5.9,
-          "ctr": 0
-        },
-        {
-          "query": "ittap pilates certification",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 3,
-          "position": 8.3,
-          "ctr": 0
-        },
-        {
-          "query": "itap teacher training meaning",
+          "query": "pilates 3",
           "brand": false,
           "clicks": 0,
           "impressions": 1,
-          "position": 75,
-          "ctr": 0
-        },
-        {
-          "query": "pma pilates",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 1,
-          "position": 8,
-          "ctr": 0
-        },
-        {
-          "query": "pma pilates school approval program",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 1,
-          "position": 28,
-          "ctr": 0
-        }
-      ],
-      "hygiene": [],
-      "doNotReuse": []
-    },
-    {
-      "type": "rewrite-snippet",
-      "budget": "snippet",
-      "priority": 51.6,
-      "page": "/equipment/reformer/",
-      "current": {
-        "title": "Reformer Pilates Equipment at PT7 Amsterdam | In-Studio",
-        "description": "The Reformer used in small-group and private classes at PT7, Van Baerlestraat 76C, Museumplein. Specs of the in-studio apparatus and how to book a class."
-      },
-      "why": "CTR is 0.39× what its positions predict (site-calibrated); ~2 clicks/28d missed",
-      "topQueries": [
-        {
-          "query": "reformer pilates machine",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 9,
-          "position": 7.3,
-          "ctr": 0
-        },
-        {
-          "query": "reformer equipment",
-          "brand": false,
-          "clicks": 1,
-          "impressions": 8,
-          "position": 7.6,
-          "ctr": 0.125
-        },
-        {
-          "query": "pilates reformer machine",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 4,
           "position": 10,
           "ctr": 0
         },
         {
-          "query": "reformer apparatus",
+          "query": "reformer pilates intro offer",
           "brand": false,
           "clicks": 0,
-          "impressions": 3,
-          "position": 9,
+          "impressions": 1,
+          "position": 5,
           "ctr": 0
-        },
+        }
+      ],
+      "hygiene": [],
+      "doNotReuse": []
+    },
+    {
+      "type": "rewrite-snippet",
+      "budget": "snippet",
+      "priority": 50.9,
+      "page": "/pricing/",
+      "current": {
+        "title": "Pilates Prices Amsterdam Oud-Zuid | From €50 Intro | PT7",
+        "description": "Pilates prices at Museumplein, Amsterdam Zuid: intro pack of 3 group classes for €50, then from €28/class (max 5). Memberships and privates."
+      },
+      "why": "CTR is 0× what its positions predict (site-calibrated); ~1 clicks/28d missed",
+      "topQueries": [
         {
-          "query": "pilates equipment",
+          "query": "how much do pilates classes cost and are there any affordable options in netherlands?",
           "brand": false,
           "clicks": 0,
           "impressions": 2,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pilates membership",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 11,
+          "ctr": 0
+        },
+        {
+          "query": "pilates oud zuid",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 37,
+          "ctr": 0
+        },
+        {
+          "query": "unlimited pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
           "position": 7,
           "ctr": 0
         },
         {
-          "query": "pilates reformer",
+          "query": "7 prices",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 4,
+          "ctr": 0
+        }
+      ],
+      "hygiene": [],
+      "doNotReuse": []
+    },
+    {
+      "type": "rewrite-snippet",
+      "budget": "snippet",
+      "priority": 50.8,
+      "page": "/corporate/",
+      "current": {
+        "title": "Corporate Pilates Amsterdam | Bedrijfsfitness | PT7 Pilates",
+        "description": "Corporate Pilates and bedrijfsfitness in Amsterdam: Reformer sessions at Museumplein or on-site mat classes for teams. Tax-friendly WKR options."
+      },
+      "why": "CTR is 0× what its positions predict (site-calibrated); ~1 clicks/28d missed",
+      "topQueries": [
+        {
+          "query": "비지니스피티",
           "brand": false,
           "clicks": 0,
           "impressions": 2,
-          "position": 4,
+          "position": 47.5,
+          "ctr": 0
+        },
+        {
+          "query": "pilates business",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 24.5,
+          "ctr": 0
+        },
+        {
+          "query": "personal training pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 64,
+          "ctr": 0
+        },
+        {
+          "query": "pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 5,
+          "ctr": 0
+        },
+        {
+          "query": "team building pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "office pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 12,
           "ctr": 0
         }
       ],
@@ -2617,43 +2754,43 @@
   ],
   "deferred": [
     {
-      "type": "rewrite-snippet",
-      "page": "/intro/",
-      "priority": 50.9
-    },
-    {
-      "type": "rewrite-snippet",
-      "page": "/pricing/",
-      "priority": 50.9
-    },
-    {
       "type": "fix-snippet-hygiene",
       "page": "/blog/prenatal-pilates-supporting-body-through-every-trimester/nl/",
-      "priority": 31.9
+      "priority": 32.4
     },
     {
       "type": "fix-snippet-hygiene",
       "page": "/equipment/reformer/nl/",
-      "priority": 30.9
+      "priority": 31.3
     },
     {
       "type": "fix-snippet-hygiene",
       "page": "/equipment/cadillac/nl/",
-      "priority": 30.9
+      "priority": 31
     },
     {
       "type": "fix-snippet-hygiene",
       "page": "/instructors/nl/",
-      "priority": 30.5
-    },
-    {
-      "type": "fix-snippet-hygiene",
-      "page": "/equipment/ladder-barrel/nl/",
-      "priority": 30.2
+      "priority": 30.6
     },
     {
       "type": "fix-snippet-hygiene",
       "page": "/corporate/nl/",
+      "priority": 30.3
+    },
+    {
+      "type": "fix-snippet-hygiene",
+      "page": "/equipment/ladder-barrel/nl/",
+      "priority": 30.3
+    },
+    {
+      "type": "fix-snippet-hygiene",
+      "page": "/trainer/kelly/nl/",
+      "priority": 30.2
+    },
+    {
+      "type": "fix-snippet-hygiene",
+      "page": "/equipment/tower-reformer/nl/",
       "priority": 30.1
     },
     {
@@ -2663,23 +2800,13 @@
     },
     {
       "type": "fix-snippet-hygiene",
-      "page": "/equipment/tower-reformer/nl/",
-      "priority": 30.1
-    },
-    {
-      "type": "fix-snippet-hygiene",
-      "page": "/trainer/kelly/nl/",
+      "page": "/trainer/lal/nl/",
       "priority": 30.1
     },
     {
       "type": "fix-snippet-hygiene",
       "page": "/blog/nl/",
-      "priority": 30
-    },
-    {
-      "type": "fix-snippet-hygiene",
-      "page": "/trainer/lal/nl/",
-      "priority": 30
+      "priority": 30.1
     },
     {
       "type": "fix-snippet-hygiene",
@@ -2694,14 +2821,14 @@
       "data": {
         "keyword": "reformer pilates amsterdam zuid",
         "page": "/reformer-pilates-amsterdam/",
-        "impressions": 31,
+        "impressions": 35,
         "clicks": 0,
-        "position": 4.8,
+        "position": 5.5,
         "intendedPagePosition": 5,
         "topPage": "/",
         "queries": 1,
-        "positionPrev": 2.8,
-        "impressionsPrev": 12,
+        "positionPrev": 1.8,
+        "impressionsPrev": 13,
         "wrongPage": true
       }
     },
@@ -2711,14 +2838,14 @@
       "data": {
         "keyword": "reformer pilates amsterdam",
         "page": "/reformer-pilates-amsterdam/",
-        "impressions": 96,
-        "clicks": 4,
-        "position": 9.6,
-        "intendedPagePosition": 29.4,
+        "impressions": 85,
+        "clicks": 7,
+        "position": 8.3,
+        "intendedPagePosition": 23,
         "topPage": "/",
         "queries": 7,
-        "positionPrev": 6.5,
-        "impressionsPrev": 72,
+        "positionPrev": 8.6,
+        "impressionsPrev": 78,
         "wrongPage": true
       }
     },
@@ -2728,14 +2855,14 @@
       "data": {
         "keyword": "pilates amsterdam zuid",
         "page": "/reformer-pilates-amsterdam/",
-        "impressions": 54,
+        "impressions": 60,
         "clicks": 0,
-        "position": 6.9,
-        "intendedPagePosition": 11.6,
+        "position": 8.4,
+        "intendedPagePosition": 13,
         "topPage": "/",
         "queries": 2,
-        "positionPrev": 4.7,
-        "impressionsPrev": 32,
+        "positionPrev": 3.7,
+        "impressionsPrev": 29,
         "wrongPage": true
       }
     },
@@ -2745,14 +2872,14 @@
       "data": {
         "keyword": "pilates oud-zuid",
         "page": "/reformer-pilates-amsterdam/",
-        "impressions": 85,
+        "impressions": 88,
         "clicks": 0,
-        "position": 4.8,
+        "position": 5.3,
         "intendedPagePosition": null,
         "topPage": "/nl/",
         "queries": 1,
-        "positionPrev": 5.8,
-        "impressionsPrev": 45,
+        "positionPrev": 5.2,
+        "impressionsPrev": 53,
         "wrongPage": true
       }
     },
@@ -2762,12 +2889,12 @@
       "data": {
         "keyword": "reformer kopen",
         "page": "/equipment/",
-        "impressions": 51,
+        "impressions": 67,
         "clicks": 0,
-        "position": 12.5,
+        "position": 15,
         "intendedPagePosition": 10,
         "topPage": "/equipment/nl/",
-        "queries": 6,
+        "queries": 7,
         "positionPrev": null,
         "impressionsPrev": 0,
         "wrongPage": true
@@ -2775,36 +2902,36 @@
     },
     {
       "type": "cannibalization",
-      "note": "\"reformer pilates\" splits impressions across /, /reformer-pilates-amsterdam/",
+      "note": "\"pilates apparaat\" splits impressions across /equipment/nl/, /equipment/reformer/nl/",
       "data": {
-        "query": "reformer pilates",
-        "impressions": 138,
+        "query": "pilates apparaat",
+        "impressions": 130,
         "pages": [
           {
-            "page": "/",
-            "share": 0.35
+            "page": "/equipment/nl/",
+            "share": 0.65
           },
           {
-            "page": "/reformer-pilates-amsterdam/",
-            "share": 0.65
+            "page": "/equipment/reformer/nl/",
+            "share": 0.32
           }
         ]
       }
     },
     {
       "type": "cannibalization",
-      "note": "\"pilates apparaat\" splits impressions across /equipment/nl/, /equipment/reformer/nl/",
+      "note": "\"reformer pilates\" splits impressions across /, /reformer-pilates-amsterdam/",
       "data": {
-        "query": "pilates apparaat",
-        "impressions": 100,
+        "query": "reformer pilates",
+        "impressions": 110,
         "pages": [
           {
-            "page": "/equipment/nl/",
-            "share": 0.67
+            "page": "/",
+            "share": 0.39
           },
           {
-            "page": "/equipment/reformer/nl/",
-            "share": 0.29
+            "page": "/reformer-pilates-amsterdam/",
+            "share": 0.61
           }
         ]
       }
@@ -2814,15 +2941,33 @@
       "note": "\"pilates oud zuid\" splits impressions across /, /nl/",
       "data": {
         "query": "pilates oud zuid",
-        "impressions": 85,
+        "impressions": 88,
         "pages": [
           {
             "page": "/",
-            "share": 0.4
+            "share": 0.38
           },
           {
             "page": "/nl/",
-            "share": 0.47
+            "share": 0.45
+          }
+        ]
+      }
+    },
+    {
+      "type": "cannibalization",
+      "note": "\"pilates op apparaten\" splits impressions across /equipment/nl/, /equipment/reformer/nl/",
+      "data": {
+        "query": "pilates op apparaten",
+        "impressions": 67,
+        "pages": [
+          {
+            "page": "/equipment/nl/",
+            "share": 0.6
+          },
+          {
+            "page": "/equipment/reformer/nl/",
+            "share": 0.4
           }
         ]
       }
@@ -2832,33 +2977,15 @@
       "note": "\"pt studio\" splits impressions across /, /nl/",
       "data": {
         "query": "pt studio",
-        "impressions": 73,
+        "impressions": 59,
         "pages": [
           {
             "page": "/",
-            "share": 0.36
+            "share": 0.34
           },
           {
             "page": "/nl/",
-            "share": 0.45
-          }
-        ]
-      }
-    },
-    {
-      "type": "cannibalization",
-      "note": "\"trx amsterdam\" splits impressions across /workouts/trx/, /trx-training-amsterdam/",
-      "data": {
-        "query": "trx amsterdam",
-        "impressions": 62,
-        "pages": [
-          {
-            "page": "/workouts/trx/",
-            "share": 0.27
-          },
-          {
-            "page": "/trx-training-amsterdam/",
-            "share": 0.45
+            "share": 0.46
           }
         ]
       }
@@ -2981,152 +3108,144 @@
       "frozen": false,
       "snippetLocked": true,
       "contentLocked": true,
-      "snippet": "ok",
-      "ctrVsExpected": 0.62,
+      "snippet": "weak",
+      "ctrVsExpected": 0.57,
       "gsc": {
-        "clicks": 147,
-        "impressions": 2589,
-        "position": 5,
-        "nonbrandClicks": 15,
-        "nonbrandImpressions": 1156,
-        "clicksPrev": 135,
-        "impressionsPrev": 2619
+        "clicks": 130,
+        "impressions": 2426,
+        "position": 4.8,
+        "nonbrandClicks": 14,
+        "nonbrandImpressions": 1040,
+        "clicksPrev": 140,
+        "impressionsPrev": 2577
       },
       "ga4": {
-        "sessions": 12,
-        "engagementRate": 0.75,
+        "sessions": 19,
+        "engagementRate": 0.47368421052631576,
         "keyEvents": 2
       },
       "expectedClicksAtSiteRate": 24.4,
-      "scoredClicks": 15,
+      "scoredClicks": 14,
       "topQueries": [
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 19,
+          "impressions": 245,
+          "position": 3.9,
+          "ctr": 0.0776
+        },
         {
           "query": "pt",
           "brand": false,
           "clicks": 0,
-          "impressions": 220,
-          "position": 4.4,
-          "ctr": 0
-        },
-        {
-          "query": "pt7",
-          "brand": true,
-          "clicks": 20,
-          "impressions": 158,
-          "position": 4.1,
-          "ctr": 0.1266
-        },
-        {
-          "query": "reformer pilates",
-          "brand": false,
-          "clicks": 1,
-          "impressions": 47,
-          "position": 2.6,
-          "ctr": 0.0213
-        },
-        {
-          "query": "pilates studio amsterdam",
-          "brand": false,
-          "clicks": 1,
-          "impressions": 45,
-          "position": 6.3,
-          "ctr": 0.0222
-        },
-        {
-          "query": "pilates amsterdam",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 44,
-          "position": 9.2,
+          "impressions": 229,
+          "position": 4.6,
           "ctr": 0
         },
         {
           "query": "pilates",
           "brand": false,
           "clicks": 1,
-          "impressions": 42,
+          "impressions": 49,
           "position": 3.7,
-          "ctr": 0.0238
+          "ctr": 0.0204
+        },
+        {
+          "query": "reformer pilates",
+          "brand": false,
+          "clicks": 1,
+          "impressions": 43,
+          "position": 1.9,
+          "ctr": 0.0233
         },
         {
           "query": "pt studio 7",
           "brand": true,
-          "clicks": 26,
-          "impressions": 41,
-          "position": 1.6,
-          "ctr": 0.6341
-        },
-        {
-          "query": "pilates classes near me",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 38,
-          "position": 6.2,
-          "ctr": 0
+          "clicks": 24,
+          "impressions": 40,
+          "position": 1.9,
+          "ctr": 0.6
         },
         {
           "query": "pilatus",
           "brand": false,
           "clicks": 0,
           "impressions": 36,
-          "position": 3.1,
+          "position": 2.9,
+          "ctr": 0
+        },
+        {
+          "query": "pt 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 36,
+          "position": 5,
           "ctr": 0
         },
         {
           "query": "pilates oud zuid",
           "brand": false,
           "clicks": 0,
-          "impressions": 34,
-          "position": 1.4,
+          "impressions": 33,
+          "position": 1.3,
+          "ctr": 0
+        },
+        {
+          "query": "pilates amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 29,
+          "position": 11.9,
+          "ctr": 0
+        },
+        {
+          "query": "pilates studio amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 26,
+          "position": 6.8,
           "ctr": 0
         }
       ],
       "striking": [
         {
           "query": "pt",
-          "impressions": 220,
+          "impressions": 229,
           "clicks": 0,
-          "position": 4.4,
+          "position": 4.6,
           "inTitle": false,
           "inHeadings": false
         },
         {
-          "query": "pilates studio amsterdam",
-          "impressions": 45,
-          "clicks": 1,
-          "position": 6.3,
+          "query": "pilates amsterdam",
+          "impressions": 29,
+          "clicks": 0,
+          "position": 11.9,
           "inTitle": true,
           "inHeadings": true
         },
         {
-          "query": "pilates amsterdam",
-          "impressions": 44,
+          "query": "pilates studio amsterdam",
+          "impressions": 26,
           "clicks": 0,
-          "position": 9.2,
+          "position": 6.8,
           "inTitle": true,
           "inHeadings": true
         },
         {
           "query": "pilates classes near me",
-          "impressions": 38,
+          "impressions": 25,
           "clicks": 0,
-          "position": 6.2,
-          "inTitle": false,
-          "inHeadings": false
-        },
-        {
-          "query": "reformer pilates amsterdam",
-          "impressions": 27,
-          "clicks": 1,
-          "position": 7.3,
+          "position": 4,
           "inTitle": false,
           "inHeadings": false
         },
         {
           "query": "pt studio",
-          "impressions": 26,
+          "impressions": 20,
           "clicks": 0,
-          "position": 7.5,
+          "position": 8.1,
           "inTitle": true,
           "inHeadings": true
         }
@@ -3155,71 +3274,95 @@
       "snippetLocked": false,
       "contentLocked": true,
       "snippet": "strong",
-      "ctrVsExpected": 3,
+      "ctrVsExpected": 2.04,
       "gsc": {
-        "clicks": 19,
-        "impressions": 340,
-        "position": 6.9,
+        "clicks": 22,
+        "impressions": 435,
+        "position": 6.8,
         "nonbrandClicks": 4,
-        "nonbrandImpressions": 84,
-        "clicksPrev": 2,
-        "impressionsPrev": 37
+        "nonbrandImpressions": 113,
+        "clicksPrev": 1,
+        "impressionsPrev": 31
       },
       "ga4": {
-        "sessions": 11,
+        "sessions": 10,
         "engagementRate": 1,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 1.3,
+      "expectedClicksAtSiteRate": 2,
       "scoredClicks": 4,
       "topQueries": [
         {
           "query": "pilates teacher training amsterdam",
           "brand": false,
           "clicks": 1,
-          "impressions": 24,
-          "position": 21.8,
-          "ctr": 0.0417
+          "impressions": 31,
+          "position": 20.9,
+          "ctr": 0.0323
         },
         {
           "query": "pilates instructor training",
           "brand": false,
           "clicks": 1,
-          "impressions": 14,
-          "position": 6.6,
-          "ctr": 0.0714
+          "impressions": 17,
+          "position": 7.5,
+          "ctr": 0.0588
+        },
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 9,
+          "position": 3.7,
+          "ctr": 0
         },
         {
           "query": "reformer pilates teacher training",
           "brand": false,
           "clicks": 0,
-          "impressions": 5,
-          "position": 5.2,
-          "ctr": 0
-        },
-        {
-          "query": "pt7 studio",
-          "brand": true,
-          "clicks": 0,
-          "impressions": 5,
-          "position": 1,
+          "impressions": 9,
+          "position": 5.3,
           "ctr": 0
         },
         {
           "query": "reformer pilates instructor course",
           "brand": false,
           "clicks": 0,
-          "impressions": 5,
-          "position": 6.4,
+          "impressions": 8,
+          "position": 6.6,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 6,
+          "position": 1,
           "ctr": 0
         },
         {
           "query": "pilates teacher training",
           "brand": false,
           "clicks": 1,
+          "impressions": 5,
+          "position": 13.4,
+          "ctr": 0.2
+        },
+        {
+          "query": "pilates instructor course",
+          "brand": false,
+          "clicks": 0,
           "impressions": 4,
-          "position": 14.3,
-          "ctr": 0.25
+          "position": 9,
+          "ctr": 0
+        },
+        {
+          "query": "pilates instructor course amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 4.5,
+          "ctr": 0
         },
         {
           "query": "reformer teacher training",
@@ -3227,30 +3370,6 @@
           "clicks": 0,
           "impressions": 4,
           "position": 5.8,
-          "ctr": 0
-        },
-        {
-          "query": "pt7",
-          "brand": true,
-          "clicks": 0,
-          "impressions": 3,
-          "position": 4,
-          "ctr": 0
-        },
-        {
-          "query": "pilates instructor training amsterdam",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 3,
-          "position": 5.3,
-          "ctr": 0
-        },
-        {
-          "query": "pilates instructor course amsterdam",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 3,
-          "position": 5.3,
           "ctr": 0
         }
       ],
@@ -3287,103 +3406,103 @@
       "snippetLocked": false,
       "contentLocked": true,
       "snippet": "strong",
-      "ctrVsExpected": 2.74,
+      "ctrVsExpected": 2.35,
       "gsc": {
-        "clicks": 11,
-        "impressions": 242,
-        "position": 24.9,
-        "nonbrandClicks": 3,
-        "nonbrandImpressions": 92,
-        "clicksPrev": 4,
-        "impressionsPrev": 72
+        "clicks": 13,
+        "impressions": 302,
+        "position": 24,
+        "nonbrandClicks": 4,
+        "nonbrandImpressions": 112,
+        "clicksPrev": 1,
+        "impressionsPrev": 42
       },
       "ga4": {
         "sessions": 0,
         "engagementRate": null,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 1.1,
-      "scoredClicks": 3,
+      "expectedClicksAtSiteRate": 1.7,
+      "scoredClicks": 4,
       "topQueries": [
-        {
-          "query": "opleiding pilates reformer",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 18,
-          "position": 75.9,
-          "ctr": 0
-        },
         {
           "query": "pilates opleiding reformer",
           "brand": false,
           "clicks": 0,
-          "impressions": 18,
-          "position": 69.3,
-          "ctr": 0
-        },
-        {
-          "query": "reformer pilates opleiding",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 15,
-          "position": 72.9,
+          "impressions": 23,
+          "position": 74.6,
           "ctr": 0
         },
         {
           "query": "pt7",
           "brand": true,
           "clicks": 0,
-          "impressions": 15,
-          "position": 5.1,
+          "impressions": 23,
+          "position": 4.7,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates opleiding",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 21,
+          "position": 77,
+          "ctr": 0
+        },
+        {
+          "query": "opleiding pilates reformer",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 20,
+          "position": 77.7,
           "ctr": 0
         },
         {
           "query": "reformer training",
           "brand": false,
           "clicks": 0,
-          "impressions": 8,
-          "position": 7.1,
-          "ctr": 0
-        },
-        {
-          "query": "pilates teacher training amsterdam",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 6,
-          "position": 45.8,
+          "impressions": 12,
+          "position": 8.2,
           "ctr": 0
         },
         {
           "query": "pt studio 7",
           "brand": true,
           "clicks": 0,
-          "impressions": 6,
-          "position": 1.5,
+          "impressions": 10,
+          "position": 1.3,
           "ctr": 0
         },
         {
           "query": "pt7 amsterdam",
           "brand": true,
           "clicks": 0,
-          "impressions": 5,
-          "position": 4.4,
-          "ctr": 0
-        },
-        {
-          "query": "pt7 studio",
-          "brand": true,
-          "clicks": 0,
-          "impressions": 4,
-          "position": 1,
+          "impressions": 9,
+          "position": 5.7,
           "ctr": 0
         },
         {
           "query": "reformer pilates opleiding amsterdam",
           "brand": false,
-          "clicks": 2,
-          "impressions": 3,
-          "position": 5.3,
-          "ctr": 0.6667
+          "clicks": 3,
+          "impressions": 6,
+          "position": 4.8,
+          "ctr": 0.5
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 6,
+          "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pilates teacher training amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 5,
+          "position": 31.6,
+          "ctr": 0
         }
       ],
       "striking": [],
@@ -3422,27 +3541,27 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 69,
-        "position": 6,
+        "impressions": 56,
+        "position": 5.9,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 0,
         "clicksPrev": 2,
-        "impressionsPrev": 109
+        "impressionsPrev": 108
       },
       "ga4": {
         "sessions": 0,
         "engagementRate": null,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 0,
+      "expectedClicksAtSiteRate": 0.1,
       "scoredClicks": 0,
       "topQueries": [
         {
           "query": "pt7",
           "brand": true,
           "clicks": 0,
-          "impressions": 8,
-          "position": 7.8,
+          "impressions": 5,
+          "position": 6.4,
           "ctr": 0
         }
       ],
@@ -3469,27 +3588,27 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 2,
-        "impressions": 190,
-        "position": 6.8,
+        "impressions": 151,
+        "position": 6.6,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 13,
-        "clicksPrev": 4,
-        "impressionsPrev": 255
+        "nonbrandImpressions": 8,
+        "clicksPrev": 3,
+        "impressionsPrev": 241
       },
       "ga4": {
         "sessions": 0,
         "engagementRate": null,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 0.2,
+      "expectedClicksAtSiteRate": 0.1,
       "scoredClicks": 0,
       "topQueries": [
         {
           "query": "career change pilates instructor",
           "brand": false,
           "clicks": 0,
-          "impressions": 8,
-          "position": 6,
+          "impressions": 4,
+          "position": 6.5,
           "ctr": 0
         },
         {
@@ -3498,14 +3617,6 @@
           "clicks": 0,
           "impressions": 2,
           "position": 20.5,
-          "ctr": 0
-        },
-        {
-          "query": "reformer",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 1,
-          "position": 1,
           "ctr": 0
         },
         {
@@ -3594,8 +3705,8 @@
       "ctrVsExpected": null,
       "gsc": {
         "clicks": 0,
-        "impressions": 45,
-        "position": 6.2,
+        "impressions": 51,
+        "position": 6.3,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 0,
         "clicksPrev": 0,
@@ -3641,8 +3752,8 @@
       "ctrVsExpected": null,
       "gsc": {
         "clicks": 0,
-        "impressions": 16,
-        "position": 6.3,
+        "impressions": 24,
+        "position": 5.8,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 0,
         "clicksPrev": 0,
@@ -3688,8 +3799,8 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 4,
-        "position": 9.8,
+        "impressions": 5,
+        "position": 10,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 1,
         "clicksPrev": 0,
@@ -3735,8 +3846,8 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 9,
-        "position": 7.6,
+        "impressions": 10,
+        "position": 6.9,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 1,
         "clicksPrev": 0,
@@ -3784,10 +3895,10 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 1,
-        "impressions": 61,
-        "position": 11.6,
+        "impressions": 71,
+        "position": 11.3,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 27,
+        "nonbrandImpressions": 30,
         "clicksPrev": 0,
         "impressionsPrev": 0
       },
@@ -3803,8 +3914,8 @@
           "query": "pilates voor mannen",
           "brand": false,
           "clicks": 0,
-          "impressions": 21,
-          "position": 17,
+          "impressions": 23,
+          "position": 16.6,
           "ctr": 0
         },
         {
@@ -3816,28 +3927,28 @@
           "ctr": 0
         },
         {
+          "query": "pilates mannen",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 10.5,
+          "ctr": 0
+        },
+        {
           "query": "mannen pilates",
           "brand": false,
           "clicks": 0,
           "impressions": 2,
           "position": 8,
           "ctr": 0
-        },
-        {
-          "query": "pilates mannen",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 1,
-          "position": 10,
-          "ctr": 0
         }
       ],
       "striking": [
         {
           "query": "pilates voor mannen",
-          "impressions": 21,
+          "impressions": 23,
           "clicks": 0,
-          "position": 17,
+          "position": 16.6,
           "inTitle": true,
           "inHeadings": true
         }
@@ -3855,38 +3966,46 @@
           "Pilates Prices Amsterdam 2026: Complete Cost Comparison Guide"
         ],
         "lang": "en",
-        "words": 930,
+        "words": 945,
         "status": 200
       },
       "indexable": true,
       "frozen": false,
       "snippetLocked": true,
-      "contentLocked": false,
+      "contentLocked": true,
       "snippet": "weak",
       "ctrVsExpected": 0,
       "gsc": {
-        "clicks": 9,
-        "impressions": 466,
-        "position": 5.3,
+        "clicks": 8,
+        "impressions": 483,
+        "position": 5.4,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 81,
-        "clicksPrev": 2,
-        "impressionsPrev": 433
+        "nonbrandImpressions": 97,
+        "clicksPrev": 3,
+        "impressionsPrev": 369
       },
       "ga4": {
         "sessions": 0,
         "engagementRate": null,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 2.2,
+      "expectedClicksAtSiteRate": 2.6,
       "scoredClicks": 0,
       "topQueries": [
         {
           "query": "how much do pilates classes cost and are there any affordable options in netherlands?",
           "brand": false,
           "clicks": 0,
-          "impressions": 28,
+          "impressions": 25,
           "position": 1.3,
+          "ctr": 0
+        },
+        {
+          "query": "pilates price",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 5,
+          "position": 7.2,
           "ctr": 0
         },
         {
@@ -3898,11 +4017,11 @@
           "ctr": 0
         },
         {
-          "query": "pilates price",
+          "query": "pilates collective club alternatives",
           "brand": false,
           "clicks": 0,
-          "impressions": 3,
-          "position": 7.7,
+          "impressions": 4,
+          "position": 9,
           "ctr": 0
         },
         {
@@ -3922,11 +4041,11 @@
           "ctr": 0
         },
         {
-          "query": "reformer pilates prices",
+          "query": "pilates s",
           "brand": false,
           "clicks": 0,
-          "impressions": 2,
-          "position": 11.5,
+          "impressions": 3,
+          "position": 24.3,
           "ctr": 0
         },
         {
@@ -3951,14 +4070,6 @@
           "clicks": 0,
           "impressions": 2,
           "position": 7,
-          "ctr": 0
-        },
-        {
-          "query": "pilates collective club alternatives",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 2,
-          "position": 8,
           "ctr": 0
         }
       ],
@@ -3986,11 +4097,11 @@
       "snippet": "low-data",
       "ctrVsExpected": 0,
       "gsc": {
-        "clicks": 2,
-        "impressions": 211,
-        "position": 6.1,
+        "clicks": 3,
+        "impressions": 249,
+        "position": 6.2,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 26,
+        "nonbrandImpressions": 31,
         "clicksPrev": 0,
         "impressionsPrev": 0
       },
@@ -3999,7 +4110,7 @@
         "engagementRate": null,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 0.2,
+      "expectedClicksAtSiteRate": 0.3,
       "scoredClicks": 0,
       "topQueries": [
         {
@@ -4019,6 +4130,14 @@
           "ctr": 0
         },
         {
+          "query": "kosten pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 11,
+          "ctr": 0
+        },
+        {
           "query": "pilates amsterdam",
           "brand": false,
           "clicks": 0,
@@ -4027,26 +4146,26 @@
           "ctr": 0
         },
         {
-          "query": "kosten pilates",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 3,
-          "position": 10.3,
-          "ctr": 0
-        },
-        {
           "query": "pilates kosten",
           "brand": false,
           "clicks": 0,
-          "impressions": 2,
-          "position": 7.5,
+          "impressions": 3,
+          "position": 8,
           "ctr": 0
         },
         {
           "query": "wat kost pilates les",
           "brand": false,
           "clicks": 0,
-          "impressions": 1,
+          "impressions": 2,
+          "position": 3.5,
+          "ctr": 0
+        },
+        {
+          "query": "hoeveel kost pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
           "position": 6,
           "ctr": 0
         },
@@ -4073,14 +4192,6 @@
           "impressions": 1,
           "position": 7,
           "ctr": 0
-        },
-        {
-          "query": "wat kost pilates per maand",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 1,
-          "position": 1,
-          "ctr": 0
         }
       ],
       "striking": [],
@@ -4091,8 +4202,8 @@
     "/blog/pma-ittap-accreditation-reformer-course-amsterdam/": {
       "page": "/blog/pma-ittap-accreditation-reformer-course-amsterdam/",
       "live": {
-        "title": "PMA ITTAP Accreditation Explained | PT7 Academy",
-        "description": "What PMA ITTAP accreditation means for Pilates teacher training, and how PT7 Academy's 300-hour Reformer course in Amsterdam meets it.",
+        "title": "What Is PMA ITTAP? Pilates Accreditation Explained | PT7",
+        "description": "What is ITTAP? The PMA accreditation framework for Pilates teacher-training programs, what it means, and how PT7 Academy's 300-hour Reformer course fits.",
         "h1": [
           "PMA ITTAP Accreditation: Global Recognition for Reformer Teacher Training"
         ],
@@ -4102,16 +4213,16 @@
       },
       "indexable": true,
       "frozen": false,
-      "snippetLocked": false,
+      "snippetLocked": true,
       "contentLocked": false,
       "snippet": "weak",
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 1,
-        "impressions": 213,
-        "position": 4.9,
+        "impressions": 254,
+        "position": 4.7,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 99,
+        "nonbrandImpressions": 119,
         "clicksPrev": 0,
         "impressionsPrev": 0
       },
@@ -4120,15 +4231,23 @@
         "engagementRate": null,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 1.9,
+      "expectedClicksAtSiteRate": 2.5,
       "scoredClicks": 0,
       "topQueries": [
         {
           "query": "ittap",
           "brand": false,
           "clicks": 0,
-          "impressions": 50,
+          "impressions": 61,
           "position": 3.3,
+          "ctr": 0
+        },
+        {
+          "query": "are pma’s certification programs recognized or accredited by employers worldwide?",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 24,
+          "position": 4.7,
           "ctr": 0
         },
         {
@@ -4137,14 +4256,6 @@
           "clicks": 0,
           "impressions": 18,
           "position": 5.8,
-          "ctr": 0
-        },
-        {
-          "query": "are pma’s certification programs recognized or accredited by employers worldwide?",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 15,
-          "position": 4.5,
           "ctr": 0
         },
         {
@@ -4194,9 +4305,26 @@
           "impressions": 1,
           "position": 40,
           "ctr": 0
+        },
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 7,
+          "ctr": 0
         }
       ],
-      "striking": [],
+      "striking": [
+        {
+          "query": "are pma’s certification programs recognized or accredited by employers worldwide?",
+          "impressions": 24,
+          "clicks": 0,
+          "position": 4.7,
+          "inTitle": false,
+          "inHeadings": false
+        }
+      ],
       "inboundContentLinks": [
         "/blog/",
         "/blog/switching-careers-into-pilates-7-questions/"
@@ -4222,8 +4350,8 @@
       "ctrVsExpected": null,
       "gsc": {
         "clicks": 0,
-        "impressions": 14,
-        "position": 3.9,
+        "impressions": 19,
+        "position": 4.6,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 0,
         "clicksPrev": 0,
@@ -4263,12 +4391,12 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 69,
-        "position": 8.1,
+        "impressions": 87,
+        "position": 10.4,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 28,
+        "nonbrandImpressions": 35,
         "clicksPrev": 0,
-        "impressionsPrev": 3
+        "impressionsPrev": 2
       },
       "ga4": {
         "sessions": 0,
@@ -4282,8 +4410,8 @@
           "query": "prenatal pilates",
           "brand": false,
           "clicks": 0,
-          "impressions": 19,
-          "position": 8.8,
+          "impressions": 25,
+          "position": 9.2,
           "ctr": 0
         },
         {
@@ -4333,9 +4461,26 @@
           "impressions": 1,
           "position": 8,
           "ctr": 0
+        },
+        {
+          "query": "perinatal pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 19,
+          "ctr": 0
         }
       ],
-      "striking": [],
+      "striking": [
+        {
+          "query": "prenatal pilates",
+          "impressions": 25,
+          "clicks": 0,
+          "position": 9.2,
+          "inTitle": true,
+          "inHeadings": true
+        }
+      ],
       "inboundContentLinks": [
         "/blog/",
         "/prenatal-pilates-amsterdam/"
@@ -4361,10 +4506,10 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 188,
-        "position": 33.7,
+        "impressions": 240,
+        "position": 35.1,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 144,
+        "nonbrandImpressions": 191,
         "clicksPrev": 0,
         "impressionsPrev": 0
       },
@@ -4373,87 +4518,87 @@
         "engagementRate": null,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 0.1,
+      "expectedClicksAtSiteRate": 0.2,
       "scoredClicks": 0,
       "topQueries": [
         {
           "query": "pilates zwangere vrouwen",
           "brand": false,
           "clicks": 0,
-          "impressions": 26,
-          "position": 57.8,
+          "impressions": 34,
+          "position": 56.8,
           "ctr": 0
         },
         {
           "query": "zwanger pilates",
           "brand": false,
           "clicks": 0,
-          "impressions": 24,
-          "position": 34.3,
+          "impressions": 31,
+          "position": 35.2,
           "ctr": 0
         },
         {
           "query": "pilates tijdens zwangerschap",
           "brand": false,
           "clicks": 0,
-          "impressions": 13,
-          "position": 43.9,
-          "ctr": 0
-        },
-        {
-          "query": "pilates en zwangerschap",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 13,
-          "position": 43.5,
-          "ctr": 0
-        },
-        {
-          "query": "zwanger en pilates",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 13,
-          "position": 53.2,
+          "impressions": 17,
+          "position": 44.1,
           "ctr": 0
         },
         {
           "query": "kan je pilates doen als je zwanger bent",
           "brand": false,
           "clicks": 0,
-          "impressions": 12,
-          "position": 29.6,
+          "impressions": 17,
+          "position": 28.2,
+          "ctr": 0
+        },
+        {
+          "query": "pilates en zwangerschap",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 16,
+          "position": 45.3,
+          "ctr": 0
+        },
+        {
+          "query": "zwanger en pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 16,
+          "position": 53.1,
           "ctr": 0
         },
         {
           "query": "pilates zwanger",
           "brand": false,
           "clicks": 0,
-          "impressions": 10,
-          "position": 43.1,
+          "impressions": 13,
+          "position": 42.8,
           "ctr": 0
         },
         {
           "query": "pilates zwangerschap",
           "brand": false,
           "clicks": 0,
-          "impressions": 8,
-          "position": 36.6,
+          "impressions": 12,
+          "position": 40,
           "ctr": 0
         },
         {
-          "query": "prenatal pilates",
+          "query": "pilates voor zwangere vrouwen",
           "brand": false,
           "clicks": 0,
-          "impressions": 7,
-          "position": 6.1,
+          "impressions": 12,
+          "position": 58.8,
           "ctr": 0
         },
         {
           "query": "pilates als je zwanger bent",
           "brand": false,
           "clicks": 0,
-          "impressions": 7,
-          "position": 28,
+          "impressions": 11,
+          "position": 28.5,
           "ctr": 0
         }
       ],
@@ -4483,15 +4628,15 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 1,
-        "position": 20,
+        "impressions": 6,
+        "position": 22.8,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 0,
         "clicksPrev": 0,
         "impressionsPrev": 0
       },
       "ga4": {
-        "sessions": 5,
+        "sessions": 4,
         "engagementRate": 1,
         "keyEvents": 2
       },
@@ -4502,8 +4647,16 @@
           "query": "pt7",
           "brand": true,
           "clicks": 0,
+          "impressions": 4,
+          "position": 18.5,
+          "ctr": 0
+        },
+        {
+          "query": "pt 7",
+          "brand": true,
+          "clicks": 0,
           "impressions": 1,
-          "position": 20,
+          "position": 60,
           "ctr": 0
         }
       ],
@@ -4540,11 +4693,11 @@
       "snippetLocked": false,
       "contentLocked": false,
       "snippet": "low-data",
-      "ctrVsExpected": null,
+      "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 7,
-        "position": 6.7,
+        "impressions": 10,
+        "position": 6.5,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 0,
         "clicksPrev": 0,
@@ -4557,7 +4710,16 @@
       },
       "expectedClicksAtSiteRate": 0,
       "scoredClicks": 0,
-      "topQueries": [],
+      "topQueries": [
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 8,
+          "ctr": 0
+        }
+      ],
       "striking": [],
       "inboundContentLinks": [
         "/blog/career-change-banker-to-pilates-instructor/nl/",
@@ -4591,12 +4753,12 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 67,
-        "position": 5.9,
+        "impressions": 72,
+        "position": 5.7,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 3,
         "clicksPrev": 0,
-        "impressionsPrev": 0
+        "impressionsPrev": 1
       },
       "ga4": {
         "sessions": 1,
@@ -4664,8 +4826,8 @@
       "ctrVsExpected": null,
       "gsc": {
         "clicks": 0,
-        "impressions": 28,
-        "position": 6.3,
+        "impressions": 31,
+        "position": 6.4,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 0,
         "clicksPrev": 0,
@@ -4708,12 +4870,12 @@
       "frozen": false,
       "snippetLocked": false,
       "contentLocked": false,
-      "snippet": "low-data",
+      "snippet": "weak",
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 39,
-        "position": 8.8,
+        "impressions": 50,
+        "position": 7.6,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 8,
         "clicksPrev": 0,
@@ -4724,15 +4886,15 @@
         "engagementRate": null,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 0.5,
+      "expectedClicksAtSiteRate": 0.8,
       "scoredClicks": 0,
       "topQueries": [
         {
           "query": "pt7",
           "brand": true,
           "clicks": 0,
-          "impressions": 7,
-          "position": 1.3,
+          "impressions": 14,
+          "position": 1.4,
           "ctr": 0
         },
         {
@@ -4817,10 +4979,10 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 1,
-        "impressions": 13,
-        "position": 17.9,
+        "impressions": 27,
+        "position": 11.3,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 4,
+        "nonbrandImpressions": 5,
         "clicksPrev": 0,
         "impressionsPrev": 0
       },
@@ -4829,7 +4991,7 @@
         "engagementRate": 1,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 0,
+      "expectedClicksAtSiteRate": 0.1,
       "scoredClicks": 0,
       "topQueries": [
         {
@@ -4846,6 +5008,22 @@
           "clicks": 0,
           "impressions": 1,
           "position": 5,
+          "ctr": 0
+        },
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 9,
+          "ctr": 0
+        },
+        {
+          "query": "event",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
           "ctr": 0
         }
       ],
@@ -4963,68 +5141,76 @@
       "snippet": "weak",
       "ctrVsExpected": 0,
       "gsc": {
-        "clicks": 2,
-        "impressions": 241,
-        "position": 6.9,
+        "clicks": 4,
+        "impressions": 264,
+        "position": 7.5,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 139,
-        "clicksPrev": 5,
-        "impressionsPrev": 259
+        "nonbrandImpressions": 158,
+        "clicksPrev": 4,
+        "impressionsPrev": 239
       },
       "ga4": {
         "sessions": 0,
         "engagementRate": null,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 2,
+      "expectedClicksAtSiteRate": 1.5,
       "scoredClicks": 0,
       "topQueries": [
-        {
-          "query": "pilates equipment",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 41,
-          "position": 8.3,
-          "ctr": 0
-        },
         {
           "query": "evaluate the exercise equipment company sole on reformer",
           "brand": false,
           "clicks": 0,
-          "impressions": 38,
-          "position": 3,
+          "impressions": 47,
+          "position": 3.8,
           "ctr": 0
         },
         {
-          "query": "pt7 studio",
-          "brand": true,
+          "query": "pilates equipment",
+          "brand": false,
           "clicks": 0,
-          "impressions": 9,
-          "position": 1,
-          "ctr": 0
-        },
-        {
-          "query": "pt studio 7",
-          "brand": true,
-          "clicks": 0,
-          "impressions": 8,
-          "position": 1.4,
+          "impressions": 37,
+          "position": 8.4,
           "ctr": 0
         },
         {
           "query": "pilates reformer machine",
           "brand": false,
           "clicks": 0,
-          "impressions": 6,
-          "position": 10.3,
+          "impressions": 7,
+          "position": 10.9,
           "ctr": 0
         },
         {
           "query": "pilates reformer equipment",
           "brand": false,
           "clicks": 0,
+          "impressions": 5,
+          "position": 17.4,
+          "ctr": 0
+        },
+        {
+          "query": "pilates store",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 5,
+          "position": 5.4,
+          "ctr": 0
+        },
+        {
+          "query": "sole pilates",
+          "brand": false,
+          "clicks": 0,
           "impressions": 4,
-          "position": 15.8,
+          "position": 5.3,
+          "ctr": 0
+        },
+        {
+          "query": "pt studio 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 1,
           "ctr": 0
         },
         {
@@ -5050,22 +5236,14 @@
           "impressions": 3,
           "position": 6.7,
           "ctr": 0
-        },
-        {
-          "query": "sole pilates",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 3,
-          "position": 4.3,
-          "ctr": 0
         }
       ],
       "striking": [
         {
           "query": "pilates equipment",
-          "impressions": 41,
+          "impressions": 37,
           "clicks": 0,
-          "position": 8.3,
+          "position": 8.4,
           "inTitle": true,
           "inHeadings": true
         }
@@ -5089,47 +5267,39 @@
       "snippetLocked": false,
       "contentLocked": true,
       "snippet": "low-data",
-      "ctrVsExpected": 5.6,
+      "ctrVsExpected": 4.92,
       "gsc": {
         "clicks": 6,
-        "impressions": 89,
-        "position": 9.5,
+        "impressions": 92,
+        "position": 9.6,
         "nonbrandClicks": 3,
-        "nonbrandImpressions": 65,
-        "clicksPrev": 2,
-        "impressionsPrev": 89
+        "nonbrandImpressions": 69,
+        "clicksPrev": 1,
+        "impressionsPrev": 86
       },
       "ga4": {
         "sessions": 1,
         "engagementRate": 1,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 0.5,
+      "expectedClicksAtSiteRate": 0.6,
       "scoredClicks": 3,
       "topQueries": [
         {
           "query": "cadillac pilates",
           "brand": false,
           "clicks": 0,
-          "impressions": 26,
-          "position": 6.6,
+          "impressions": 30,
+          "position": 6,
           "ctr": 0
         },
         {
           "query": "pilates cadillac",
           "brand": false,
           "clicks": 1,
-          "impressions": 23,
-          "position": 19,
-          "ctr": 0.0435
-        },
-        {
-          "query": "cadillac pilates amsterdam",
-          "brand": false,
-          "clicks": 1,
-          "impressions": 5,
-          "position": 7,
-          "ctr": 0.2
+          "impressions": 25,
+          "position": 19.8,
+          "ctr": 0.04
         },
         {
           "query": "cadillac reformer",
@@ -5186,22 +5356,30 @@
           "impressions": 1,
           "position": 8,
           "ctr": 0
+        },
+        {
+          "query": "cadillac pilates amsterdam",
+          "brand": false,
+          "clicks": 1,
+          "impressions": 1,
+          "position": 1,
+          "ctr": 1
         }
       ],
       "striking": [
         {
           "query": "cadillac pilates",
-          "impressions": 26,
+          "impressions": 30,
           "clicks": 0,
-          "position": 6.6,
+          "position": 6,
           "inTitle": true,
           "inHeadings": false
         },
         {
           "query": "pilates cadillac",
-          "impressions": 23,
+          "impressions": 25,
           "clicks": 1,
-          "position": 19,
+          "position": 19.8,
           "inTitle": true,
           "inHeadings": false
         }
@@ -5227,13 +5405,13 @@
       "snippetLocked": false,
       "contentLocked": true,
       "snippet": "low-data",
-      "ctrVsExpected": 2.34,
+      "ctrVsExpected": 3.84,
       "gsc": {
-        "clicks": 3,
-        "impressions": 85,
-        "position": 12.2,
-        "nonbrandClicks": 1,
-        "nonbrandImpressions": 70,
+        "clicks": 5,
+        "impressions": 95,
+        "position": 11.4,
+        "nonbrandClicks": 2,
+        "nonbrandImpressions": 75,
         "clicksPrev": 0,
         "impressionsPrev": 0
       },
@@ -5242,24 +5420,24 @@
         "engagementRate": null,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 0.4,
-      "scoredClicks": 1,
+      "expectedClicksAtSiteRate": 0.5,
+      "scoredClicks": 2,
       "topQueries": [
         {
           "query": "pilates cadillac",
           "brand": false,
           "clicks": 0,
-          "impressions": 26,
-          "position": 26.2,
+          "impressions": 27,
+          "position": 25.7,
           "ctr": 0
         },
         {
           "query": "cadillac pilates amsterdam",
           "brand": false,
-          "clicks": 1,
-          "impressions": 20,
-          "position": 4.3,
-          "ctr": 0.05
+          "clicks": 2,
+          "impressions": 24,
+          "position": 4.1,
+          "ctr": 0.0833
         },
         {
           "query": "cadillac pilates",
@@ -5297,9 +5475,9 @@
       "striking": [
         {
           "query": "cadillac pilates amsterdam",
-          "impressions": 20,
-          "clicks": 1,
-          "position": 4.3,
+          "impressions": 24,
+          "clicks": 2,
+          "position": 4.1,
           "inTitle": true,
           "inHeadings": false
         }
@@ -5328,12 +5506,12 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 45,
-        "position": 23.1,
+        "impressions": 56,
+        "position": 24.3,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 40,
+        "nonbrandImpressions": 50,
         "clicksPrev": 0,
-        "impressionsPrev": 3
+        "impressionsPrev": 1
       },
       "ga4": {
         "sessions": 0,
@@ -5347,8 +5525,8 @@
           "query": "ladder barrel",
           "brand": false,
           "clicks": 0,
-          "impressions": 39,
-          "position": 25.2,
+          "impressions": 49,
+          "position": 25.8,
           "ctr": 0
         },
         {
@@ -5385,10 +5563,10 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 3,
-        "impressions": 22,
-        "position": 22.5,
+        "impressions": 25,
+        "position": 24.6,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 9,
+        "nonbrandImpressions": 12,
         "clicksPrev": 0,
         "impressionsPrev": 0
       },
@@ -5404,8 +5582,8 @@
           "query": "ladder barrel",
           "brand": false,
           "clicks": 0,
-          "impressions": 8,
-          "position": 47.5,
+          "impressions": 11,
+          "position": 45.3,
           "ctr": 0
         },
         {
@@ -5439,13 +5617,13 @@
       "snippetLocked": true,
       "contentLocked": true,
       "snippet": "low-data",
-      "ctrVsExpected": 4.47,
+      "ctrVsExpected": 3.5,
       "gsc": {
-        "clicks": 3,
-        "impressions": 420,
-        "position": 33.6,
+        "clicks": 5,
+        "impressions": 537,
+        "position": 33.8,
         "nonbrandClicks": 2,
-        "nonbrandImpressions": 359,
+        "nonbrandImpressions": 466,
         "clicksPrev": 0,
         "impressionsPrev": 0
       },
@@ -5454,96 +5632,104 @@
         "engagementRate": null,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 0.4,
+      "expectedClicksAtSiteRate": 0.6,
       "scoredClicks": 2,
       "topQueries": [
         {
           "query": "pilates apparaat",
           "brand": false,
           "clicks": 0,
-          "impressions": 67,
-          "position": 47.5,
+          "impressions": 85,
+          "position": 48.4,
           "ctr": 0
         },
         {
           "query": "pilates machine",
           "brand": false,
           "clicks": 0,
-          "impressions": 55,
-          "position": 53,
+          "impressions": 64,
+          "position": 53.5,
           "ctr": 0
         },
         {
           "query": "pilates reformer",
           "brand": false,
           "clicks": 0,
-          "impressions": 33,
-          "position": 44.8,
+          "impressions": 54,
+          "position": 40.8,
           "ctr": 0
         },
         {
           "query": "pilates op apparaten",
           "brand": false,
           "clicks": 0,
-          "impressions": 30,
-          "position": 36.3,
+          "impressions": 40,
+          "position": 34.9,
           "ctr": 0
         },
         {
           "query": "reformer kopen",
           "brand": false,
           "clicks": 0,
-          "impressions": 27,
-          "position": 13.5,
+          "impressions": 31,
+          "position": 13.8,
           "ctr": 0
         },
         {
           "query": "reformer pilates leasen",
           "brand": false,
           "clicks": 0,
-          "impressions": 25,
-          "position": 32.2,
-          "ctr": 0
-        },
-        {
-          "query": "pilates reformer leasen",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 19,
-          "position": 25.5,
+          "impressions": 26,
+          "position": 32.3,
           "ctr": 0
         },
         {
           "query": "reformer pilates apparaat",
           "brand": false,
           "clicks": 0,
-          "impressions": 19,
-          "position": 49.6,
+          "impressions": 24,
+          "position": 48.1,
           "ctr": 0
         },
         {
           "query": "reformer leasen",
           "brand": false,
           "clicks": 0,
-          "impressions": 16,
-          "position": 25.3,
+          "impressions": 23,
+          "position": 25.6,
           "ctr": 0
         },
         {
-          "query": "pilates kopen",
+          "query": "pilates toestel kopen",
           "brand": false,
           "clicks": 0,
-          "impressions": 16,
-          "position": 10.6,
+          "impressions": 22,
+          "position": 55.3,
+          "ctr": 0
+        },
+        {
+          "query": "pilates reformer leasen",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 21,
+          "position": 25.9,
           "ctr": 0
         }
       ],
       "striking": [
         {
           "query": "reformer kopen",
-          "impressions": 27,
+          "impressions": 31,
           "clicks": 0,
-          "position": 13.5,
+          "position": 13.8,
+          "inTitle": true,
+          "inHeadings": false
+        },
+        {
+          "query": "pilates kopen",
+          "impressions": 20,
+          "clicks": 0,
+          "position": 10.8,
           "inTitle": true,
           "inHeadings": false
         }
@@ -5553,8 +5739,8 @@
     "/equipment/reformer/": {
       "page": "/equipment/reformer/",
       "live": {
-        "title": "Reformer Pilates Equipment at PT7 Amsterdam | In-Studio",
-        "description": "The Reformer used in small-group and private classes at PT7, Van Baerlestraat 76C, Museumplein. Specs of the in-studio apparatus and how to book a class.",
+        "title": "Pilates Reformer Machine: Specs & Dimensions | PT7",
+        "description": "Pilates Reformer machine used in PT7 classes: solid beech frame, adjustable footbar, jump board and box, 240 x 69 x 35 cm. Try it at our Amsterdam studio.",
         "h1": [
           "Pilates Reformer at PT 7 Amsterdam"
         ],
@@ -5564,18 +5750,18 @@
       },
       "indexable": true,
       "frozen": false,
-      "snippetLocked": false,
+      "snippetLocked": true,
       "contentLocked": true,
       "snippet": "weak",
-      "ctrVsExpected": 0.39,
+      "ctrVsExpected": 0.38,
       "gsc": {
         "clicks": 1,
         "impressions": 139,
-        "position": 5.7,
+        "position": 5.4,
         "nonbrandClicks": 1,
-        "nonbrandImpressions": 38,
+        "nonbrandImpressions": 32,
         "clicksPrev": 3,
-        "impressionsPrev": 345
+        "impressionsPrev": 329
       },
       "ga4": {
         "sessions": 0,
@@ -5586,7 +5772,7 @@
       "scoredClicks": 1,
       "topQueries": [
         {
-          "query": "pt7 studio",
+          "query": "pt studio 7",
           "brand": true,
           "clicks": 0,
           "impressions": 21,
@@ -5594,35 +5780,35 @@
           "ctr": 0
         },
         {
-          "query": "pt studio 7",
+          "query": "pt7 studio",
           "brand": true,
           "clicks": 0,
-          "impressions": 19,
-          "position": 1.1,
+          "impressions": 16,
+          "position": 1,
           "ctr": 0
         },
         {
-          "query": "reformer pilates machine",
-          "brand": false,
+          "query": "pt7",
+          "brand": true,
           "clicks": 0,
-          "impressions": 9,
-          "position": 7.3,
+          "impressions": 13,
+          "position": 1.8,
           "ctr": 0
         },
         {
           "query": "reformer equipment",
           "brand": false,
           "clicks": 1,
-          "impressions": 8,
-          "position": 7.6,
-          "ctr": 0.125
+          "impressions": 6,
+          "position": 8.5,
+          "ctr": 0.1667
         },
         {
-          "query": "pt7",
-          "brand": true,
+          "query": "reformer pilates machine",
+          "brand": false,
           "clicks": 0,
-          "impressions": 8,
-          "position": 1.5,
+          "impressions": 5,
+          "position": 7.6,
           "ctr": 0
         },
         {
@@ -5642,6 +5828,14 @@
           "ctr": 0
         },
         {
+          "query": "pilates reformer",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 6.8,
+          "ctr": 0
+        },
+        {
           "query": "reformer apparatus",
           "brand": false,
           "clicks": 0,
@@ -5655,14 +5849,6 @@
           "clicks": 0,
           "impressions": 2,
           "position": 7,
-          "ctr": 0
-        },
-        {
-          "query": "pilates reformer",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 2,
-          "position": 4,
           "ctr": 0
         }
       ],
@@ -5691,10 +5877,10 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 93,
-        "position": 43.6,
+        "impressions": 129,
+        "position": 41.6,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 87,
+        "nonbrandImpressions": 117,
         "clicksPrev": 0,
         "impressionsPrev": 0
       },
@@ -5703,55 +5889,79 @@
         "engagementRate": null,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 0.1,
+      "expectedClicksAtSiteRate": 0.2,
       "scoredClicks": 0,
       "topQueries": [
         {
           "query": "pilates apparaat",
           "brand": false,
           "clicks": 0,
-          "impressions": 29,
-          "position": 43.2,
+          "impressions": 41,
+          "position": 41.7,
           "ctr": 0
         },
         {
           "query": "pilates op apparaten",
           "brand": false,
           "clicks": 0,
-          "impressions": 22,
-          "position": 44.1,
+          "impressions": 27,
+          "position": 43.2,
           "ctr": 0
         },
         {
           "query": "pilates reformers",
           "brand": false,
           "clicks": 0,
-          "impressions": 15,
-          "position": 48.1,
+          "impressions": 20,
+          "position": 46.2,
           "ctr": 0
         },
         {
           "query": "reformer pilates apparaat",
           "brand": false,
           "clicks": 0,
-          "impressions": 12,
-          "position": 68.8,
+          "impressions": 15,
+          "position": 67.1,
           "ctr": 0
         },
         {
           "query": "reformer pilates equipment",
           "brand": false,
           "clicks": 0,
-          "impressions": 2,
-          "position": 43,
+          "impressions": 3,
+          "position": 37.3,
           "ctr": 0
         },
         {
           "query": "reformer pilates machine",
           "brand": false,
           "clicks": 0,
+          "impressions": 3,
+          "position": 12.3,
+          "ctr": 0
+        },
+        {
+          "query": "pilates reformer",
+          "brand": false,
+          "clicks": 0,
           "impressions": 2,
-          "position": 16.5,
+          "position": 7,
+          "ctr": 0
+        },
+        {
+          "query": "pilates reformer kopen",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 89,
+          "ctr": 0
+        },
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 2,
           "ctr": 0
         },
         {
@@ -5760,30 +5970,6 @@
           "clicks": 0,
           "impressions": 1,
           "position": 18,
-          "ctr": 0
-        },
-        {
-          "query": "reformer pilates toestellen",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 1,
-          "position": 41,
-          "ctr": 0
-        },
-        {
-          "query": "pilates apparaten",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 1,
-          "position": 15,
-          "ctr": 0
-        },
-        {
-          "query": "pilates met apparaten",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 1,
-          "position": 54,
           "ctr": 0
         }
       ],
@@ -5811,13 +5997,13 @@
       "snippet": "low-data",
       "ctrVsExpected": 0,
       "gsc": {
-        "clicks": 3,
-        "impressions": 76,
-        "position": 8.8,
+        "clicks": 1,
+        "impressions": 67,
+        "position": 9.3,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 42,
-        "clicksPrev": 0,
-        "impressionsPrev": 118
+        "clicksPrev": 2,
+        "impressionsPrev": 119
       },
       "ga4": {
         "sessions": 0,
@@ -5847,8 +6033,8 @@
           "query": "tower pilates reformer",
           "brand": false,
           "clicks": 0,
-          "impressions": 5,
-          "position": 11.2,
+          "impressions": 6,
+          "position": 9.7,
           "ctr": 0
         },
         {
@@ -5860,27 +6046,19 @@
           "ctr": 0
         },
         {
+          "query": "reformer tower pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 6.3,
+          "ctr": 0
+        },
+        {
           "query": "pilates reformer tower",
           "brand": false,
           "clicks": 0,
-          "impressions": 3,
-          "position": 8.7,
-          "ctr": 0
-        },
-        {
-          "query": "pt7 studio",
-          "brand": true,
-          "clicks": 0,
-          "impressions": 3,
-          "position": 1,
-          "ctr": 0
-        },
-        {
-          "query": "pilates reformer and tower",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 3,
-          "position": 15,
+          "impressions": 4,
+          "position": 10,
           "ctr": 0
         },
         {
@@ -5892,19 +6070,27 @@
           "ctr": 0
         },
         {
-          "query": "reformer tower pilates",
+          "query": "tower reformer pilates",
           "brand": false,
           "clicks": 0,
           "impressions": 3,
-          "position": 8,
+          "position": 6.3,
           "ctr": 0
         },
         {
-          "query": "pilates reformer with tower",
+          "query": "reformer pilates tower",
           "brand": false,
           "clicks": 0,
           "impressions": 2,
-          "position": 34.5,
+          "position": 7.5,
+          "ctr": 0
+        },
+        {
+          "query": "what is tower reformer",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
           "ctr": 0
         }
       ],
@@ -5933,10 +6119,10 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 11,
-        "position": 14.7,
+        "impressions": 13,
+        "position": 13.5,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 4,
+        "nonbrandImpressions": 5,
         "clicksPrev": 0,
         "impressionsPrev": 0
       },
@@ -5952,8 +6138,8 @@
           "query": "tower reformer",
           "brand": false,
           "clicks": 0,
-          "impressions": 2,
-          "position": 3.5,
+          "impressions": 3,
+          "position": 6,
           "ctr": 0
         },
         {
@@ -5998,12 +6184,12 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 1,
-        "impressions": 16,
-        "position": 6.9,
+        "impressions": 18,
+        "position": 7.1,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 7,
         "clicksPrev": 1,
-        "impressionsPrev": 11
+        "impressionsPrev": 9
       },
       "ga4": {
         "sessions": 0,
@@ -6100,24 +6286,32 @@
       "snippetLocked": false,
       "contentLocked": false,
       "snippet": "low-data",
-      "ctrVsExpected": 13.27,
+      "ctrVsExpected": 5.81,
       "gsc": {
         "clicks": 3,
-        "impressions": 46,
-        "position": 14.4,
+        "impressions": 45,
+        "position": 12.2,
         "nonbrandClicks": 1,
-        "nonbrandImpressions": 8,
-        "clicksPrev": 0,
-        "impressionsPrev": 72
+        "nonbrandImpressions": 10,
+        "clicksPrev": 1,
+        "impressionsPrev": 65
       },
       "ga4": {
         "sessions": 0,
         "engagementRate": null,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 0.1,
+      "expectedClicksAtSiteRate": 0.2,
       "scoredClicks": 1,
       "topQueries": [
+        {
+          "query": "who offers pilates-based physical therapy?",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 4.5,
+          "ctr": 0
+        },
         {
           "query": "medical pilates",
           "brand": false,
@@ -6127,19 +6321,19 @@
           "ctr": 0
         },
         {
-          "query": "who offers pilates-based physical therapy?",
+          "query": "clinical pilates",
           "brand": false,
           "clicks": 0,
           "impressions": 2,
-          "position": 2,
+          "position": 9.5,
           "ctr": 0
         },
         {
-          "query": "sanctuary 7 pilates",
-          "brand": false,
+          "query": "pt7",
+          "brand": true,
           "clicks": 0,
-          "impressions": 1,
-          "position": 40,
+          "impressions": 2,
+          "position": 1.5,
           "ctr": 0
         },
         {
@@ -6156,14 +6350,6 @@
           "clicks": 0,
           "impressions": 1,
           "position": 221,
-          "ctr": 0
-        },
-        {
-          "query": "clinical pilates",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 1,
-          "position": 9,
           "ctr": 0
         }
       ],
@@ -6240,46 +6426,46 @@
       "snippetLocked": true,
       "contentLocked": false,
       "snippet": "weak",
-      "ctrVsExpected": 0.29,
+      "ctrVsExpected": 0.27,
       "gsc": {
-        "clicks": 5,
-        "impressions": 188,
-        "position": 3.6,
+        "clicks": 4,
+        "impressions": 205,
+        "position": 3.5,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 6,
-        "clicksPrev": 13,
-        "impressionsPrev": 233
+        "nonbrandImpressions": 12,
+        "clicksPrev": 14,
+        "impressionsPrev": 249
       },
       "ga4": {
-        "sessions": 5,
+        "sessions": 4,
         "engagementRate": 1,
         "keyEvents": 3
       },
-      "expectedClicksAtSiteRate": 3.5,
+      "expectedClicksAtSiteRate": 3.7,
       "scoredClicks": 1,
       "topQueries": [
         {
           "query": "pt studio 7",
           "brand": true,
           "clicks": 0,
-          "impressions": 37,
-          "position": 1.4,
+          "impressions": 34,
+          "position": 1.3,
           "ctr": 0
         },
         {
           "query": "pt7 studio",
           "brand": true,
           "clicks": 1,
-          "impressions": 24,
-          "position": 1,
-          "ctr": 0.0417
+          "impressions": 20,
+          "position": 1.5,
+          "ctr": 0.05
         },
         {
           "query": "pt7",
           "brand": true,
           "clicks": 0,
-          "impressions": 12,
-          "position": 2.7,
+          "impressions": 19,
+          "position": 2.3,
           "ctr": 0
         },
         {
@@ -6291,19 +6477,19 @@
           "ctr": 0
         },
         {
-          "query": "pilates instructor",
+          "query": "kelly tin",
           "brand": false,
           "clicks": 0,
-          "impressions": 3,
-          "position": 3.3,
+          "impressions": 5,
+          "position": 4.4,
           "ctr": 0
         },
         {
-          "query": "studio 7 rockanje",
+          "query": "pilates instructor",
           "brand": false,
           "clicks": 0,
-          "impressions": 2,
-          "position": 53.5,
+          "impressions": 4,
+          "position": 2.8,
           "ctr": 0
         },
         {
@@ -6328,6 +6514,14 @@
           "clicks": 0,
           "impressions": 1,
           "position": 2,
+          "ctr": 0
+        },
+        {
+          "query": "pilates teachers",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 6,
           "ctr": 0
         }
       ],
@@ -6363,8 +6557,8 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 1,
-        "impressions": 52,
-        "position": 5.8,
+        "impressions": 63,
+        "position": 5.9,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 1,
         "clicksPrev": 0,
@@ -6382,8 +6576,8 @@
           "query": "pt7 amsterdam",
           "brand": true,
           "clicks": 0,
-          "impressions": 7,
-          "position": 3.7,
+          "impressions": 11,
+          "position": 4.5,
           "ctr": 0
         },
         {
@@ -6435,27 +6629,35 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 61,
-        "position": 6.8,
+        "impressions": 80,
+        "position": 5.2,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 2,
         "clicksPrev": 0,
-        "impressionsPrev": 0
+        "impressionsPrev": 1
       },
       "ga4": {
         "sessions": 0,
         "engagementRate": null,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 0.9,
+      "expectedClicksAtSiteRate": 1.2,
       "scoredClicks": 0,
       "topQueries": [
         {
           "query": "pt studio 7",
           "brand": true,
           "clicks": 0,
-          "impressions": 10,
+          "impressions": 12,
           "position": 1,
+          "ctr": 0
+        },
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 7,
+          "position": 3.3,
           "ctr": 0
         },
         {
@@ -6464,14 +6666,6 @@
           "clicks": 0,
           "impressions": 7,
           "position": 1,
-          "ctr": 0
-        },
-        {
-          "query": "pt7",
-          "brand": true,
-          "clicks": 0,
-          "impressions": 3,
-          "position": 5.7,
           "ctr": 0
         },
         {
@@ -6524,8 +6718,8 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 13,
-        "position": 21.3,
+        "impressions": 15,
+        "position": 23.8,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 0,
         "clicksPrev": 0,
@@ -6543,16 +6737,16 @@
           "query": "pt7",
           "brand": true,
           "clicks": 0,
-          "impressions": 4,
-          "position": 49.3,
+          "impressions": 5,
+          "position": 50.2,
           "ctr": 0
         },
         {
           "query": "pt 7",
           "brand": true,
           "clicks": 0,
-          "impressions": 2,
-          "position": 18.5,
+          "impressions": 3,
+          "position": 21,
           "ctr": 0
         }
       ],
@@ -6578,102 +6772,102 @@
       "snippetLocked": false,
       "contentLocked": true,
       "snippet": "strong",
-      "ctrVsExpected": 5.32,
+      "ctrVsExpected": 4.3,
       "gsc": {
-        "clicks": 43,
-        "impressions": 510,
-        "position": 5.5,
+        "clicks": 42,
+        "impressions": 508,
+        "position": 5.4,
         "nonbrandClicks": 2,
-        "nonbrandImpressions": 148,
-        "clicksPrev": 32,
-        "impressionsPrev": 308
+        "nonbrandImpressions": 131,
+        "clicksPrev": 34,
+        "impressionsPrev": 375
       },
       "ga4": {
-        "sessions": 1,
+        "sessions": 2,
         "engagementRate": 1,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 3.6,
-      "scoredClicks": 19,
+      "expectedClicksAtSiteRate": 4.2,
+      "scoredClicks": 18,
       "topQueries": [
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 11,
+          "impressions": 41,
+          "position": 1.5,
+          "ctr": 0.2683
+        },
         {
           "query": "pilates oud zuid",
           "brand": false,
           "clicks": 0,
           "impressions": 40,
-          "position": 6.3,
+          "position": 6.8,
           "ctr": 0
         },
         {
           "query": "pt studio",
           "brand": false,
           "clicks": 0,
-          "impressions": 33,
-          "position": 6.1,
+          "impressions": 27,
+          "position": 5.9,
           "ctr": 0
         },
         {
-          "query": "pt7",
+          "query": "pt7 amsterdam",
           "brand": true,
-          "clicks": 12,
-          "impressions": 31,
-          "position": 1.5,
-          "ctr": 0.3871
+          "clicks": 3,
+          "impressions": 15,
+          "position": 1.7,
+          "ctr": 0.2
         },
         {
           "query": "studio 7",
           "brand": false,
           "clicks": 0,
-          "impressions": 20,
-          "position": 6.9,
+          "impressions": 13,
+          "position": 7.5,
           "ctr": 0
         },
         {
           "query": "pt studio 7",
           "brand": true,
           "clicks": 2,
-          "impressions": 10,
-          "position": 1.5,
-          "ctr": 0.2
-        },
-        {
-          "query": "pt7 amsterdam",
-          "brand": true,
-          "clicks": 3,
-          "impressions": 10,
-          "position": 1.7,
-          "ctr": 0.3
+          "impressions": 12,
+          "position": 1.4,
+          "ctr": 0.1667
         },
         {
           "query": "pilates zuid",
           "brand": false,
           "clicks": 0,
-          "impressions": 6,
-          "position": 8.8,
-          "ctr": 0
-        },
-        {
-          "query": "studio 79 amsterdam",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 5,
-          "position": 28.6,
+          "impressions": 7,
+          "position": 8.7,
           "ctr": 0
         },
         {
           "query": "reformer pilates amsterdam zuid",
           "brand": false,
           "clicks": 0,
-          "impressions": 5,
-          "position": 8.4,
+          "impressions": 6,
+          "position": 8.7,
           "ctr": 0
         },
         {
           "query": "pilates amsterdam",
           "brand": false,
           "clicks": 0,
-          "impressions": 3,
-          "position": 12,
+          "impressions": 4,
+          "position": 37.3,
+          "ctr": 0
+        },
+        {
+          "query": "pilates amsterdam zuidoost",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 8.3,
           "ctr": 0
         }
       ],
@@ -6682,23 +6876,15 @@
           "query": "pilates oud zuid",
           "impressions": 40,
           "clicks": 0,
-          "position": 6.3,
+          "position": 6.8,
           "inTitle": false,
           "inHeadings": false
         },
         {
           "query": "pt studio",
-          "impressions": 33,
+          "impressions": 27,
           "clicks": 0,
-          "position": 6.1,
-          "inTitle": true,
-          "inHeadings": true
-        },
-        {
-          "query": "studio 7",
-          "impressions": 20,
-          "clicks": 0,
-          "position": 6.9,
+          "position": 5.9,
           "inTitle": true,
           "inHeadings": true
         }
@@ -6728,42 +6914,42 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 34,
-        "position": 5.2,
+        "impressions": 21,
+        "position": 6.8,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 2,
         "clicksPrev": 0,
-        "impressionsPrev": 4
+        "impressionsPrev": 20
       },
       "ga4": {
-        "sessions": 2,
-        "engagementRate": 1,
+        "sessions": 0,
+        "engagementRate": null,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 0.4,
+      "expectedClicksAtSiteRate": 0.2,
       "scoredClicks": 0,
       "topQueries": [
         {
           "query": "pt7",
           "brand": true,
           "clicks": 0,
-          "impressions": 9,
-          "position": 4.3,
+          "impressions": 5,
+          "position": 4.2,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 amsterdam",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 8,
           "ctr": 0
         },
         {
           "query": "pt studio 7",
           "brand": true,
           "clicks": 0,
-          "impressions": 3,
-          "position": 1.7,
-          "ctr": 0
-        },
-        {
-          "query": "pt7 studio",
-          "brand": true,
-          "clicks": 0,
-          "impressions": 2,
+          "impressions": 1,
           "position": 1,
           "ctr": 0
         },
@@ -6806,9 +6992,9 @@
       "snippet": "low-data",
       "ctrVsExpected": 0,
       "gsc": {
-        "clicks": 0,
-        "impressions": 3,
-        "position": 4.7,
+        "clicks": 1,
+        "impressions": 4,
+        "position": 4.5,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 0,
         "clicksPrev": 0,
@@ -6851,15 +7037,15 @@
       "snippetLocked": false,
       "contentLocked": false,
       "snippet": "low-data",
-      "ctrVsExpected": 6.02,
+      "ctrVsExpected": 5.75,
       "gsc": {
         "clicks": 3,
         "impressions": 61,
         "position": 7,
         "nonbrandClicks": 2,
         "nonbrandImpressions": 23,
-        "clicksPrev": 6,
-        "impressionsPrev": 99
+        "clicksPrev": 1,
+        "impressionsPrev": 51
       },
       "ga4": {
         "sessions": 0,
@@ -7022,16 +7208,16 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 74,
-        "position": 5,
+        "impressions": 71,
+        "position": 4.6,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 7,
-        "clicksPrev": 5,
-        "impressionsPrev": 111
+        "nonbrandImpressions": 6,
+        "clicksPrev": 2,
+        "impressionsPrev": 70
       },
       "ga4": {
-        "sessions": 26,
-        "engagementRate": 1,
+        "sessions": 29,
+        "engagementRate": 0.9655172413793104,
         "keyEvents": 0
       },
       "expectedClicksAtSiteRate": 0.9,
@@ -7054,14 +7240,6 @@
           "ctr": 0
         },
         {
-          "query": "pt7",
-          "brand": true,
-          "clicks": 0,
-          "impressions": 4,
-          "position": 3.5,
-          "ctr": 0
-        },
-        {
           "query": "how much do pilates classes cost and are there any affordable options in netherlands?",
           "brand": false,
           "clicks": 0,
@@ -7070,11 +7248,11 @@
           "ctr": 0
         },
         {
-          "query": "pt room costi",
-          "brand": false,
+          "query": "pt7",
+          "brand": true,
           "clicks": 0,
-          "impressions": 1,
-          "position": 40,
+          "impressions": 2,
+          "position": 1,
           "ctr": 0
         },
         {
@@ -7115,6 +7293,14 @@
           "clicks": 0,
           "impressions": 1,
           "position": 2,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 amsterdam",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
           "ctr": 0
         }
       ],
@@ -7169,30 +7355,38 @@
       "snippetLocked": false,
       "contentLocked": true,
       "snippet": "low-data",
-      "ctrVsExpected": 0,
+      "ctrVsExpected": 1.49,
       "gsc": {
-        "clicks": 1,
-        "impressions": 152,
-        "position": 10.7,
+        "clicks": 2,
+        "impressions": 188,
+        "position": 10,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 43,
+        "nonbrandImpressions": 51,
         "clicksPrev": 1,
-        "impressionsPrev": 184
+        "impressionsPrev": 168
       },
       "ga4": {
-        "sessions": 4,
+        "sessions": 5,
         "engagementRate": 1,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 0.4,
-      "scoredClicks": 0,
+      "expectedClicksAtSiteRate": 0.7,
+      "scoredClicks": 1,
       "topQueries": [
         {
           "query": "pilates oud zuid",
           "brand": false,
           "clicks": 0,
-          "impressions": 9,
-          "position": 7.3,
+          "impressions": 13,
+          "position": 7.8,
+          "ctr": 0
+        },
+        {
+          "query": "pilates abonnement",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 6,
+          "position": 5.5,
           "ctr": 0
         },
         {
@@ -7220,12 +7414,12 @@
           "ctr": 0
         },
         {
-          "query": "pilates abonnement",
-          "brand": false,
-          "clicks": 0,
+          "query": "pt7",
+          "brand": true,
+          "clicks": 1,
           "impressions": 4,
-          "position": 5,
-          "ctr": 0
+          "position": 1.3,
+          "ctr": 0.25
         },
         {
           "query": "pilates prijs per les",
@@ -7233,6 +7427,14 @@
           "clicks": 0,
           "impressions": 3,
           "position": 8.3,
+          "ctr": 0
+        },
+        {
+          "query": "pilates abonnement amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 11.7,
           "ctr": 0
         },
         {
@@ -7249,22 +7451,6 @@
           "clicks": 0,
           "impressions": 2,
           "position": 24,
-          "ctr": 0
-        },
-        {
-          "query": "reformer pilates kosten",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 2,
-          "position": 49,
-          "ctr": 0
-        },
-        {
-          "query": "pilates abonnement amsterdam",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 1,
-          "position": 12,
           "ctr": 0
         }
       ],
@@ -7322,12 +7508,12 @@
       "ctrVsExpected": null,
       "gsc": {
         "clicks": 0,
-        "impressions": 22,
-        "position": 12.4,
+        "impressions": 23,
+        "position": 12.2,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 0,
         "clicksPrev": 0,
-        "impressionsPrev": 13
+        "impressionsPrev": 5
       },
       "ga4": {
         "sessions": 0,
@@ -7397,13 +7583,13 @@
       "snippet": "low-data",
       "ctrVsExpected": 0,
       "gsc": {
-        "clicks": 1,
-        "impressions": 26,
-        "position": 9,
+        "clicks": 0,
+        "impressions": 22,
+        "position": 9.6,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 3,
-        "clicksPrev": 0,
-        "impressionsPrev": 17
+        "clicksPrev": 1,
+        "impressionsPrev": 19
       },
       "ga4": {
         "sessions": 0,
@@ -7479,11 +7665,11 @@
       "snippetLocked": false,
       "contentLocked": false,
       "snippet": "low-data",
-      "ctrVsExpected": 45.75,
+      "ctrVsExpected": 43.68,
       "gsc": {
         "clicks": 2,
-        "impressions": 8,
-        "position": 7.5,
+        "impressions": 10,
+        "position": 6.6,
         "nonbrandClicks": 1,
         "nonbrandImpressions": 5,
         "clicksPrev": 0,
@@ -7549,27 +7735,27 @@
       "snippet": "low-data",
       "ctrVsExpected": 0,
       "gsc": {
-        "clicks": 4,
-        "impressions": 511,
-        "position": 13.1,
+        "clicks": 2,
+        "impressions": 412,
+        "position": 13.3,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 207,
-        "clicksPrev": 2,
-        "impressionsPrev": 68
+        "nonbrandImpressions": 165,
+        "clicksPrev": 4,
+        "impressionsPrev": 174
       },
       "ga4": {
-        "sessions": 5,
+        "sessions": 6,
         "engagementRate": 1,
         "keyEvents": 5
       },
-      "expectedClicksAtSiteRate": 0.6,
+      "expectedClicksAtSiteRate": 0.5,
       "scoredClicks": 0,
       "topQueries": [
         {
           "query": "reformer pilates",
           "brand": false,
           "clicks": 0,
-          "impressions": 89,
+          "impressions": 66,
           "position": 10.8,
           "ctr": 0
         },
@@ -7577,24 +7763,24 @@
           "query": "pt studio 7",
           "brand": true,
           "clicks": 1,
-          "impressions": 32,
-          "position": 1.3,
-          "ctr": 0.0313
-        },
-        {
-          "query": "pt7 studio",
-          "brand": true,
-          "clicks": 0,
           "impressions": 25,
-          "position": 1,
-          "ctr": 0
+          "position": 1.3,
+          "ctr": 0.04
         },
         {
           "query": "reformer pilates classes",
           "brand": false,
           "clicks": 0,
-          "impressions": 21,
-          "position": 25.5,
+          "impressions": 20,
+          "position": 31.9,
+          "ctr": 0
+        },
+        {
+          "query": "pt7 studio",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 18,
+          "position": 1,
           "ctr": 0
         },
         {
@@ -7606,11 +7792,11 @@
           "ctr": 0
         },
         {
-          "query": "reformer pilates amsterdam",
+          "query": "pilates amsterdam zuid",
           "brand": false,
           "clicks": 0,
           "impressions": 7,
-          "position": 32.1,
+          "position": 15.3,
           "ctr": 0
         },
         {
@@ -7622,34 +7808,34 @@
           "ctr": 0
         },
         {
-          "query": "reform pilates",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 6,
-          "position": 8.8,
-          "ctr": 0
-        },
-        {
           "query": "reformer pilates studio",
           "brand": false,
           "clicks": 0,
-          "impressions": 6,
-          "position": 86.7,
+          "impressions": 5,
+          "position": 85.2,
           "ctr": 0
         },
         {
-          "query": "pilates amsterdam zuid",
+          "query": "reform pilates",
           "brand": false,
           "clicks": 0,
-          "impressions": 6,
-          "position": 13.8,
+          "impressions": 5,
+          "position": 9.4,
+          "ctr": 0
+        },
+        {
+          "query": "pilates studio amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 4,
+          "position": 61.5,
           "ctr": 0
         }
       ],
       "striking": [
         {
           "query": "reformer pilates",
-          "impressions": 89,
+          "impressions": 66,
           "clicks": 0,
           "position": 10.8,
           "inTitle": true,
@@ -7697,20 +7883,20 @@
       "snippet": "low-data",
       "ctrVsExpected": 0,
       "gsc": {
-        "clicks": 1,
-        "impressions": 199,
-        "position": 18.9,
+        "clicks": 2,
+        "impressions": 231,
+        "position": 18,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 66,
+        "nonbrandImpressions": 74,
         "clicksPrev": 0,
         "impressionsPrev": 0
       },
       "ga4": {
-        "sessions": 1,
+        "sessions": 2,
         "engagementRate": 1,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 0.5,
+      "expectedClicksAtSiteRate": 0.6,
       "scoredClicks": 0,
       "topQueries": [
         {
@@ -7719,6 +7905,14 @@
           "clicks": 0,
           "impressions": 14,
           "position": 71.6,
+          "ctr": 0
+        },
+        {
+          "query": "reformer pilates amsterdam zuid",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 12,
+          "position": 9.3,
           "ctr": 0
         },
         {
@@ -7738,11 +7932,11 @@
           "ctr": 0
         },
         {
-          "query": "reformer pilates amsterdam zuid",
-          "brand": false,
+          "query": "pt studio 7",
+          "brand": true,
           "clicks": 0,
-          "impressions": 8,
-          "position": 9.4,
+          "impressions": 7,
+          "position": 1.4,
           "ctr": 0
         },
         {
@@ -7754,27 +7948,19 @@
           "ctr": 0
         },
         {
-          "query": "pt studio 7",
+          "query": "pt7 amsterdam",
           "brand": true,
           "clicks": 0,
           "impressions": 6,
-          "position": 1.5,
+          "position": 8,
           "ctr": 0
         },
         {
           "query": "reformer pilates amsterdam",
           "brand": false,
           "clicks": 0,
-          "impressions": 4,
-          "position": 23.5,
-          "ctr": 0
-        },
-        {
-          "query": "pt7 amsterdam",
-          "brand": true,
-          "clicks": 0,
-          "impressions": 4,
-          "position": 8.8,
+          "impressions": 5,
+          "position": 26.8,
           "ctr": 0
         },
         {
@@ -7786,11 +7972,11 @@
           "ctr": 0
         },
         {
-          "query": "pilat3s zuid",
-          "brand": false,
+          "query": "pt7 studio",
+          "brand": true,
           "clicks": 0,
           "impressions": 2,
-          "position": 11.5,
+          "position": 1,
           "ctr": 0
         }
       ],
@@ -7820,8 +8006,8 @@
     "/schedule/": {
       "page": "/schedule/",
       "live": {
-        "title": "Pilates Classes Amsterdam Zuid | Book Online | PT7",
-        "description": "Live class schedule at Museumplein, Amsterdam Zuid: Reformer Pilates, TRX and strength in small groups (max 5) or privates at Van Baerlestraat 76C. Book online.",
+        "title": "Pilates Classes Near Museumplein, Amsterdam | PT7",
+        "description": "Pilates classes near Museumplein, Amsterdam Zuid: Reformer, TRX and strength in small groups (max 5) or privates at Van Baerlestraat 76C. Book online.",
         "h1": [
           "Pilates classes in Amsterdam: book online"
         ],
@@ -7831,57 +8017,57 @@
       },
       "indexable": true,
       "frozen": false,
-      "snippetLocked": false,
+      "snippetLocked": true,
       "contentLocked": false,
       "snippet": "weak",
-      "ctrVsExpected": 0.49,
+      "ctrVsExpected": 0,
       "gsc": {
-        "clicks": 5,
-        "impressions": 246,
-        "position": 6.8,
+        "clicks": 1,
+        "impressions": 214,
+        "position": 5.9,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 40,
-        "clicksPrev": 2,
-        "impressionsPrev": 199
+        "nonbrandImpressions": 23,
+        "clicksPrev": 4,
+        "impressionsPrev": 187
       },
       "ga4": {
-        "sessions": 80,
+        "sessions": 84,
         "engagementRate": 1,
-        "keyEvents": 22
+        "keyEvents": 21
       },
-      "expectedClicksAtSiteRate": 4.1,
-      "scoredClicks": 2,
+      "expectedClicksAtSiteRate": 4,
+      "scoredClicks": 0,
       "topQueries": [
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 34,
+          "position": 1.9,
+          "ctr": 0
+        },
         {
           "query": "pt studio 7",
           "brand": true,
           "clicks": 0,
-          "impressions": 35,
+          "impressions": 33,
           "position": 1.5,
           "ctr": 0
-        },
-        {
-          "query": "pt7",
-          "brand": true,
-          "clicks": 2,
-          "impressions": 31,
-          "position": 2.2,
-          "ctr": 0.0645
         },
         {
           "query": "pt7 studio",
           "brand": true,
           "clicks": 0,
-          "impressions": 24,
+          "impressions": 18,
           "position": 1,
           "ctr": 0
         },
         {
-          "query": "pt studio",
+          "query": "pilates amsterdam",
           "brand": false,
           "clicks": 0,
-          "impressions": 7,
-          "position": 40,
+          "impressions": 8,
+          "position": 29.1,
           "ctr": 0
         },
         {
@@ -7893,35 +8079,11 @@
           "ctr": 0
         },
         {
-          "query": "pilates amsterdam",
+          "query": "pt studio",
           "brand": false,
           "clicks": 0,
-          "impressions": 7,
-          "position": 28.9,
-          "ctr": 0
-        },
-        {
-          "query": "pilates classes near me",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 6,
-          "position": 7.3,
-          "ctr": 0
-        },
-        {
-          "query": "pilates near me",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 4,
-          "position": 6.5,
-          "ctr": 0
-        },
-        {
-          "query": "pt near me",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 2,
-          "position": 15.5,
+          "impressions": 5,
+          "position": 42.2,
           "ctr": 0
         },
         {
@@ -7930,6 +8092,30 @@
           "clicks": 0,
           "impressions": 2,
           "position": 44,
+          "ctr": 0
+        },
+        {
+          "query": "studio 74 amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 64,
+          "ctr": 0
+        },
+        {
+          "query": "pilates classes near me",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 7,
+          "ctr": 0
+        },
+        {
+          "query": "pt 7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
           "ctr": 0
         }
       ],
@@ -7984,20 +8170,20 @@
       "snippetLocked": false,
       "contentLocked": false,
       "snippet": "strong",
-      "ctrVsExpected": 1.84,
+      "ctrVsExpected": 1.82,
       "gsc": {
-        "clicks": 7,
-        "impressions": 157,
-        "position": 6.3,
+        "clicks": 6,
+        "impressions": 138,
+        "position": 6.8,
         "nonbrandClicks": 4,
-        "nonbrandImpressions": 26,
-        "clicksPrev": 1,
-        "impressionsPrev": 47
+        "nonbrandImpressions": 25,
+        "clicksPrev": 2,
+        "impressionsPrev": 80
       },
       "ga4": {
-        "sessions": 10,
+        "sessions": 9,
         "engagementRate": 1,
-        "keyEvents": 4
+        "keyEvents": 2
       },
       "expectedClicksAtSiteRate": 2.2,
       "scoredClicks": 4,
@@ -8006,23 +8192,31 @@
           "query": "pt studio 7",
           "brand": true,
           "clicks": 0,
-          "impressions": 22,
-          "position": 1.2,
+          "impressions": 18,
+          "position": 1.1,
           "ctr": 0
         },
         {
           "query": "pt7 amsterdam",
           "brand": true,
           "clicks": 0,
-          "impressions": 10,
-          "position": 2.9,
+          "impressions": 15,
+          "position": 3.2,
+          "ctr": 0
+        },
+        {
+          "query": "pt7",
+          "brand": true,
+          "clicks": 0,
+          "impressions": 8,
+          "position": 1.5,
           "ctr": 0
         },
         {
           "query": "pt7 studio",
           "brand": true,
           "clicks": 0,
-          "impressions": 8,
+          "impressions": 6,
           "position": 1,
           "ctr": 0
         },
@@ -8035,27 +8229,19 @@
           "ctr": 0.6
         },
         {
-          "query": "pt7",
-          "brand": true,
+          "query": "pilates lessen amsterdam",
+          "brand": false,
           "clicks": 0,
-          "impressions": 5,
-          "position": 1.2,
+          "impressions": 4,
+          "position": 45.5,
           "ctr": 0
         },
         {
           "query": "pilateslessen",
           "brand": false,
           "clicks": 0,
-          "impressions": 4,
-          "position": 3.8,
-          "ctr": 0
-        },
-        {
-          "query": "pilates lessen amsterdam",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 4,
-          "position": 45.5,
+          "impressions": 3,
+          "position": 3.3,
           "ctr": 0
         },
         {
@@ -8138,10 +8324,10 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 58,
-        "position": 19.1,
+        "impressions": 68,
+        "position": 18.6,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 21,
+        "nonbrandImpressions": 24,
         "clicksPrev": 0,
         "impressionsPrev": 0
       },
@@ -8162,6 +8348,14 @@
           "ctr": 0
         },
         {
+          "query": "functional training amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 6,
+          "position": 50.2,
+          "ctr": 0
+        },
+        {
           "query": "strength personal training",
           "brand": false,
           "clicks": 0,
@@ -8170,11 +8364,19 @@
           "ctr": 0
         },
         {
-          "query": "functional training amsterdam",
-          "brand": false,
+          "query": "pt7 amsterdam",
+          "brand": true,
           "clicks": 0,
           "impressions": 4,
-          "position": 48.8,
+          "position": 6.5,
+          "ctr": 0
+        },
+        {
+          "query": "which boutique studios specialize in group strength training?",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 4,
           "ctr": 0
         },
         {
@@ -8183,22 +8385,6 @@
           "clicks": 0,
           "impressions": 2,
           "position": 1,
-          "ctr": 0
-        },
-        {
-          "query": "pt7 amsterdam",
-          "brand": true,
-          "clicks": 0,
-          "impressions": 2,
-          "position": 5.5,
-          "ctr": 0
-        },
-        {
-          "query": "which boutique studios specialize in group strength training?",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 2,
-          "position": 3.5,
           "ctr": 0
         },
         {
@@ -8260,10 +8446,10 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 61,
-        "position": 66.2,
+        "impressions": 67,
+        "position": 63.8,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 57,
+        "nonbrandImpressions": 61,
         "clicksPrev": 0,
         "impressionsPrev": 0
       },
@@ -8287,16 +8473,16 @@
           "query": "functional training amsterdam",
           "brand": false,
           "clicks": 0,
-          "impressions": 8,
-          "position": 56,
+          "impressions": 10,
+          "position": 56.1,
           "ctr": 0
         },
         {
           "query": "krachttraining amsterdam",
           "brand": false,
           "clicks": 0,
-          "impressions": 8,
-          "position": 69.8,
+          "impressions": 10,
+          "position": 67.7,
           "ctr": 0
         },
         {
@@ -8349,13 +8535,13 @@
       "snippet": "low-data",
       "ctrVsExpected": 0,
       "gsc": {
-        "clicks": 3,
-        "impressions": 83,
-        "position": 6.1,
+        "clicks": 1,
+        "impressions": 79,
+        "position": 6.6,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 29,
-        "clicksPrev": 0,
-        "impressionsPrev": 22
+        "clicksPrev": 3,
+        "impressionsPrev": 39
       },
       "ga4": {
         "sessions": 0,
@@ -8370,31 +8556,23 @@
           "brand": false,
           "clicks": 0,
           "impressions": 26,
-          "position": 6.2,
-          "ctr": 0
-        },
-        {
-          "query": "elif ilhan pilates studio",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 1,
-          "position": 14,
-          "ctr": 0
-        },
-        {
-          "query": "fiyat",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 1,
-          "position": 4,
+          "position": 6.7,
           "ctr": 0
         },
         {
           "query": "elif fitness",
           "brand": false,
           "clicks": 0,
+          "impressions": 2,
+          "position": 7.5,
+          "ctr": 0
+        },
+        {
+          "query": "elif pilates",
+          "brand": false,
+          "clicks": 0,
           "impressions": 1,
-          "position": 7,
+          "position": 11,
           "ctr": 0
         }
       ],
@@ -8403,7 +8581,7 @@
           "query": "elif arzu",
           "impressions": 26,
           "clicks": 0,
-          "position": 6.2,
+          "position": 6.7,
           "inTitle": true,
           "inHeadings": true
         }
@@ -8438,8 +8616,8 @@
       "ctrVsExpected": null,
       "gsc": {
         "clicks": 0,
-        "impressions": 12,
-        "position": 4.7,
+        "impressions": 17,
+        "position": 6.1,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 0,
         "clicksPrev": 0,
@@ -8484,10 +8662,10 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 28,
-        "position": 6.5,
+        "impressions": 34,
+        "position": 6.7,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 1,
+        "nonbrandImpressions": 4,
         "clicksPrev": 0,
         "impressionsPrev": 0
       },
@@ -8500,11 +8678,27 @@
       "scoredClicks": 0,
       "topQueries": [
         {
+          "query": "gamze karadağ",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 7,
+          "ctr": 0
+        },
+        {
           "query": "gamze pilates",
           "brand": false,
           "clicks": 0,
           "impressions": 1,
           "position": 9,
+          "ctr": 0
+        },
+        {
+          "query": "gamze karadag",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 5,
           "ctr": 0
         }
       ],
@@ -8536,8 +8730,8 @@
       "ctrVsExpected": null,
       "gsc": {
         "clicks": 0,
-        "impressions": 1,
-        "position": 8,
+        "impressions": 2,
+        "position": 9,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 0,
         "clicksPrev": 0,
@@ -8577,19 +8771,19 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 2,
-        "impressions": 22,
-        "position": 3.6,
+        "impressions": 24,
+        "position": 4.1,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 6,
-        "clicksPrev": 3,
-        "impressionsPrev": 28
+        "clicksPrev": 2,
+        "impressionsPrev": 27
       },
       "ga4": {
-        "sessions": 3,
+        "sessions": 2,
         "engagementRate": 1,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 0.2,
+      "expectedClicksAtSiteRate": 0.1,
       "scoredClicks": 0,
       "topQueries": [
         {
@@ -8604,16 +8798,8 @@
           "query": "pt studio 7",
           "brand": true,
           "clicks": 0,
-          "impressions": 2,
-          "position": 5.5,
-          "ctr": 0
-        },
-        {
-          "query": "pt7 studio",
-          "brand": true,
-          "clicks": 0,
           "impressions": 1,
-          "position": 1,
+          "position": 10,
           "ctr": 0
         }
       ],
@@ -8642,9 +8828,9 @@
       "snippet": "low-data",
       "ctrVsExpected": null,
       "gsc": {
-        "clicks": 0,
-        "impressions": 5,
-        "position": 2,
+        "clicks": 1,
+        "impressions": 7,
+        "position": 1.7,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 0,
         "clicksPrev": 0,
@@ -8683,13 +8869,13 @@
       "snippet": "low-data",
       "ctrVsExpected": 0,
       "gsc": {
-        "clicks": 2,
-        "impressions": 23,
-        "position": 4.4,
+        "clicks": 1,
+        "impressions": 25,
+        "position": 8,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 1,
+        "nonbrandImpressions": 3,
         "clicksPrev": 1,
-        "impressionsPrev": 49
+        "impressionsPrev": 47
       },
       "ga4": {
         "sessions": 1,
@@ -8699,6 +8885,14 @@
       "expectedClicksAtSiteRate": 0,
       "scoredClicks": 0,
       "topQueries": [
+        {
+          "query": "goknur kara",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 23,
+          "ctr": 0
+        },
         {
           "query": "goknur",
           "brand": false,
@@ -8782,13 +8976,13 @@
       "snippet": "low-data",
       "ctrVsExpected": 0,
       "gsc": {
-        "clicks": 2,
-        "impressions": 61,
+        "clicks": 0,
+        "impressions": 60,
         "position": 4.9,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 15,
-        "clicksPrev": 4,
-        "impressionsPrev": 85
+        "nonbrandImpressions": 13,
+        "clicksPrev": 6,
+        "impressionsPrev": 86
       },
       "ga4": {
         "sessions": 1,
@@ -8802,24 +8996,24 @@
           "query": "gulce",
           "brand": false,
           "clicks": 0,
-          "impressions": 7,
-          "position": 4.9,
-          "ctr": 0
-        },
-        {
-          "query": "gülce koç",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 4,
-          "position": 7,
+          "impressions": 8,
+          "position": 5.1,
           "ctr": 0
         },
         {
           "query": "gülce",
           "brand": false,
           "clicks": 0,
-          "impressions": 4,
-          "position": 2.8,
+          "impressions": 3,
+          "position": 2.3,
+          "ctr": 0
+        },
+        {
+          "query": "gülce koç",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 9.5,
           "ctr": 0
         }
       ],
@@ -8941,13 +9135,13 @@
       "snippetLocked": false,
       "contentLocked": false,
       "snippet": "low-data",
-      "ctrVsExpected": 6.69,
+      "ctrVsExpected": 6.83,
       "gsc": {
-        "clicks": 2,
-        "impressions": 7,
-        "position": 3.1,
-        "nonbrandClicks": 1,
-        "nonbrandImpressions": 6,
+        "clicks": 4,
+        "impressions": 18,
+        "position": 3.4,
+        "nonbrandClicks": 3,
+        "nonbrandImpressions": 14,
         "clicksPrev": 0,
         "impressionsPrev": 0
       },
@@ -8956,16 +9150,16 @@
         "engagementRate": null,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 0.1,
-      "scoredClicks": 1,
+      "expectedClicksAtSiteRate": 0.4,
+      "scoredClicks": 3,
       "topQueries": [
         {
           "query": "kelly tin",
           "brand": false,
-          "clicks": 1,
-          "impressions": 5,
-          "position": 2.4,
-          "ctr": 0.2
+          "clicks": 3,
+          "impressions": 12,
+          "position": 2.1,
+          "ctr": 0.25
         },
         {
           "query": "kelly pt",
@@ -8973,6 +9167,14 @@
           "clicks": 0,
           "impressions": 1,
           "position": 8,
+          "ctr": 0
+        },
+        {
+          "query": "kelly pilates",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 6,
           "ctr": 0
         }
       ],
@@ -9002,8 +9204,8 @@
       "ctrVsExpected": null,
       "gsc": {
         "clicks": 2,
-        "impressions": 3,
-        "position": 3,
+        "impressions": 5,
+        "position": 4.8,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 0,
         "clicksPrev": 0,
@@ -9042,13 +9244,13 @@
       "snippetLocked": false,
       "contentLocked": false,
       "snippet": "low-data",
-      "ctrVsExpected": null,
+      "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 3,
-        "position": 4,
+        "impressions": 6,
+        "position": 4.5,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 0,
+        "nonbrandImpressions": 1,
         "clicksPrev": 0,
         "impressionsPrev": 0
       },
@@ -9059,7 +9261,16 @@
       },
       "expectedClicksAtSiteRate": 0,
       "scoredClicks": 0,
-      "topQueries": [],
+      "topQueries": [
+        {
+          "query": "lal",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 11,
+          "ctr": 0
+        }
+      ],
       "striking": [],
       "inboundContentLinks": [
         "/instructors/nl/",
@@ -9085,13 +9296,13 @@
       "snippet": "low-data",
       "ctrVsExpected": null,
       "gsc": {
-        "clicks": 0,
-        "impressions": 17,
-        "position": 3.7,
+        "clicks": 1,
+        "impressions": 14,
+        "position": 3.8,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 0,
-        "clicksPrev": 8,
-        "impressionsPrev": 60
+        "clicksPrev": 4,
+        "impressionsPrev": 49
       },
       "ga4": {
         "sessions": 0,
@@ -9126,13 +9337,13 @@
       "snippetLocked": false,
       "contentLocked": false,
       "snippet": "low-data",
-      "ctrVsExpected": null,
+      "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 2,
-        "position": 3.5,
+        "impressions": 4,
+        "position": 3.8,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 0,
+        "nonbrandImpressions": 1,
         "clicksPrev": 0,
         "impressionsPrev": 0
       },
@@ -9143,7 +9354,16 @@
       },
       "expectedClicksAtSiteRate": 0,
       "scoredClicks": 0,
-      "topQueries": [],
+      "topQueries": [
+        {
+          "query": "nisan",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 1,
+          "ctr": 0
+        }
+      ],
       "striking": [],
       "inboundContentLinks": [
         "/instructors/nl/",
@@ -9170,12 +9390,12 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 2,
-        "impressions": 96,
-        "position": 8.4,
+        "impressions": 88,
+        "position": 8.1,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 52,
+        "nonbrandImpressions": 47,
         "clicksPrev": 2,
-        "impressionsPrev": 118
+        "impressionsPrev": 104
       },
       "ga4": {
         "sessions": 0,
@@ -9189,8 +9409,8 @@
           "query": "trx amsterdam",
           "brand": false,
           "clicks": 0,
-          "impressions": 28,
-          "position": 4.8,
+          "impressions": 23,
+          "position": 4.6,
           "ctr": 0
         },
         {
@@ -9199,14 +9419,6 @@
           "clicks": 0,
           "impressions": 21,
           "position": 17.2,
-          "ctr": 0
-        },
-        {
-          "query": "trx nederland",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 1,
-          "position": 60,
           "ctr": 0
         },
         {
@@ -9224,14 +9436,22 @@
           "impressions": 1,
           "position": 10,
           "ctr": 0
+        },
+        {
+          "query": "suspension stretching near me",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 12,
+          "ctr": 0
         }
       ],
       "striking": [
         {
           "query": "trx amsterdam",
-          "impressions": 28,
+          "impressions": 23,
           "clicks": 0,
-          "position": 4.8,
+          "position": 4.6,
           "inTitle": true,
           "inHeadings": true
         },
@@ -9246,6 +9466,7 @@
       ],
       "inboundContentLinks": [
         "/",
+        "/blog/pilates-prices-amsterdam-2026-complete-guide/",
         "/pricing/",
         "/reformer-pilates-amsterdam/",
         "/schedule/",
@@ -9272,10 +9493,10 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 14,
-        "position": 7.2,
+        "impressions": 21,
+        "position": 5.9,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 11,
+        "nonbrandImpressions": 16,
         "clicksPrev": 0,
         "impressionsPrev": 0
       },
@@ -9284,15 +9505,15 @@
         "engagementRate": null,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 0.2,
+      "expectedClicksAtSiteRate": 0.3,
       "scoredClicks": 0,
       "topQueries": [
         {
           "query": "trx amsterdam",
           "brand": false,
           "clicks": 0,
-          "impressions": 11,
-          "position": 8.2,
+          "impressions": 16,
+          "position": 6.9,
           "ctr": 0
         }
       ],
@@ -9325,51 +9546,51 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 49,
-        "position": 19.2,
+        "impressions": 34,
+        "position": 16.7,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 26,
+        "nonbrandImpressions": 15,
         "clicksPrev": 0,
-        "impressionsPrev": 52
+        "impressionsPrev": 61
       },
       "ga4": {
         "sessions": 0,
         "engagementRate": null,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 0.2,
+      "expectedClicksAtSiteRate": 0.1,
       "scoredClicks": 0,
       "topQueries": [
         {
           "query": "high intensity interval training amsterdam",
           "brand": false,
           "clicks": 0,
-          "impressions": 9,
-          "position": 30.3,
+          "impressions": 5,
+          "position": 28.4,
           "ctr": 0
         },
         {
           "query": "high intensity training amsterdam",
           "brand": false,
           "clicks": 0,
-          "impressions": 9,
-          "position": 29.8,
+          "impressions": 5,
+          "position": 28.2,
           "ctr": 0
         },
         {
           "query": "hiit workout amsterdam",
           "brand": false,
           "clicks": 0,
-          "impressions": 7,
-          "position": 36.6,
+          "impressions": 4,
+          "position": 37.8,
           "ctr": 0
         },
         {
           "query": "pt studio 7",
           "brand": true,
           "clicks": 0,
-          "impressions": 3,
-          "position": 1.3,
+          "impressions": 1,
+          "position": 1,
           "ctr": 0
         },
         {
@@ -9453,13 +9674,13 @@
       "snippet": "low-data",
       "ctrVsExpected": 0,
       "gsc": {
-        "clicks": 1,
-        "impressions": 50,
-        "position": 17.6,
+        "clicks": 0,
+        "impressions": 47,
+        "position": 18.8,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 18,
-        "clicksPrev": 2,
-        "impressionsPrev": 44
+        "nonbrandImpressions": 17,
+        "clicksPrev": 1,
+        "impressionsPrev": 40
       },
       "ga4": {
         "sessions": 0,
@@ -9473,24 +9694,8 @@
           "query": "functional training amsterdam",
           "brand": false,
           "clicks": 0,
-          "impressions": 16,
-          "position": 39,
-          "ctr": 0
-        },
-        {
-          "query": "nike strength studio",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 1,
-          "position": 6,
-          "ctr": 0
-        },
-        {
-          "query": "dumbbells in amsterdam",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 1,
-          "position": 11,
+          "impressions": 17,
+          "position": 39.4,
           "ctr": 0
         }
       ],
@@ -9520,8 +9725,8 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 9,
-        "position": 9.3,
+        "impressions": 12,
+        "position": 8.4,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 1,
         "clicksPrev": 0,
@@ -9561,12 +9766,12 @@
       "ctrVsExpected": null,
       "gsc": {
         "clicks": 0,
-        "impressions": 31,
-        "position": 5.9,
+        "impressions": 16,
+        "position": 5.1,
         "nonbrandClicks": 0,
         "nonbrandImpressions": 0,
         "clicksPrev": 1,
-        "impressionsPrev": 27
+        "impressionsPrev": 45
       },
       "ga4": {
         "sessions": 0,
@@ -9590,12 +9795,12 @@
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 39,
+        "impressions": 43,
         "position": 7.3,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 3,
+        "nonbrandImpressions": 7,
         "clicksPrev": 0,
-        "impressionsPrev": 97
+        "impressionsPrev": 85
       },
       "ga4": {
         "sessions": 0,
@@ -9609,16 +9814,16 @@
           "query": "how do premium reformer pilates classes improve core strength safely?",
           "brand": false,
           "clicks": 0,
-          "impressions": 2,
-          "position": 8.5,
+          "impressions": 3,
+          "position": 7,
           "ctr": 0
         },
         {
-          "query": "pt7 studio",
-          "brand": true,
+          "query": "how do premium reformer pilates classes improve core strength safely? in 2026",
+          "brand": false,
           "clicks": 0,
-          "impressions": 1,
-          "position": 1,
+          "impressions": 2,
+          "position": 4,
           "ctr": 0
         },
         {
@@ -9627,6 +9832,14 @@
           "clicks": 0,
           "impressions": 1,
           "position": 4,
+          "ctr": 0
+        },
+        {
+          "query": "how do premium reformer pilates classes improve core strength safely? review",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 9,
           "ctr": 0
         }
       ],
@@ -9640,47 +9853,39 @@
       "frozen": false,
       "snippetLocked": false,
       "contentLocked": false,
-      "snippet": "low-data",
+      "snippet": "weak",
       "ctrVsExpected": 0,
       "gsc": {
         "clicks": 0,
-        "impressions": 171,
-        "position": 14.2,
+        "impressions": 238,
+        "position": 14.8,
         "nonbrandClicks": 0,
-        "nonbrandImpressions": 123,
+        "nonbrandImpressions": 175,
         "clicksPrev": 0,
-        "impressionsPrev": 84
+        "impressionsPrev": 79
       },
       "ga4": {
         "sessions": 0,
         "engagementRate": null,
         "keyEvents": 0
       },
-      "expectedClicksAtSiteRate": 0.5,
+      "expectedClicksAtSiteRate": 0.9,
       "scoredClicks": 0,
       "topQueries": [
         {
           "query": "what is trx",
           "brand": false,
           "clicks": 0,
-          "impressions": 51,
-          "position": 8.5,
-          "ctr": 0
-        },
-        {
-          "query": "trx amsterdam",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 17,
-          "position": 19.9,
+          "impressions": 83,
+          "position": 8.4,
           "ctr": 0
         },
         {
           "query": "wat is trx training",
           "brand": false,
           "clicks": 0,
-          "impressions": 15,
-          "position": 55.1,
+          "impressions": 22,
+          "position": 59.3,
           "ctr": 0
         },
         {
@@ -9688,70 +9893,142 @@
           "brand": false,
           "clicks": 0,
           "impressions": 13,
-          "position": 7.2,
+          "position": 6.7,
+          "ctr": 0
+        },
+        {
+          "query": "trx amsterdam",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 13,
+          "position": 20.2,
           "ctr": 0
         },
         {
           "query": "what is trx?",
           "brand": false,
           "clicks": 0,
-          "impressions": 7,
-          "position": 9.4,
+          "impressions": 9,
+          "position": 8.2,
           "ctr": 0
         },
         {
           "query": "what is trx training",
           "brand": false,
           "clicks": 0,
-          "impressions": 4,
-          "position": 5.8,
+          "impressions": 7,
+          "position": 7.4,
           "ctr": 0
         },
         {
           "query": "whats trx",
           "brand": false,
           "clicks": 0,
-          "impressions": 3,
-          "position": 8.3,
-          "ctr": 0
-        },
-        {
-          "query": "trx training",
-          "brand": false,
-          "clicks": 0,
-          "impressions": 2,
-          "position": 25.5,
+          "impressions": 6,
+          "position": 6.2,
           "ctr": 0
         },
         {
           "query": "suspension training",
           "brand": false,
           "clicks": 0,
-          "impressions": 2,
-          "position": 50,
+          "impressions": 5,
+          "position": 51,
           "ctr": 0
         },
         {
-          "query": "trx training near me",
+          "query": "trx training",
           "brand": false,
           "clicks": 0,
-          "impressions": 1,
-          "position": 8,
+          "impressions": 3,
+          "position": 40,
+          "ctr": 0
+        },
+        {
+          "query": "trx meaning gym",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 9.5,
           "ctr": 0
         }
       ],
       "striking": [
         {
           "query": "what is trx",
-          "impressions": 51,
+          "impressions": 83,
           "clicks": 0,
-          "position": 8.5,
+          "position": 8.4,
           "inTitle": false,
           "inHeadings": false
         }
       ],
       "inboundContentLinks": [
         "/trx-training-amsterdam/"
+      ]
+    },
+    "/workouts/trx/nl/": {
+      "page": "/workouts/trx/nl/",
+      "live": null,
+      "indexable": null,
+      "frozen": false,
+      "snippetLocked": false,
+      "contentLocked": false,
+      "snippet": "low-data",
+      "ctrVsExpected": 0,
+      "gsc": {
+        "clicks": 0,
+        "impressions": 12,
+        "position": 15.9,
+        "nonbrandClicks": 0,
+        "nonbrandImpressions": 12,
+        "clicksPrev": 0,
+        "impressionsPrev": 0
+      },
+      "ga4": {
+        "sessions": 0,
+        "engagementRate": null,
+        "keyEvents": 0
+      },
+      "expectedClicksAtSiteRate": 0,
+      "scoredClicks": 0,
+      "topQueries": [
+        {
+          "query": "trx",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 6,
+          "position": 15,
+          "ctr": 0
+        },
+        {
+          "query": "wat is trx training",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 3,
+          "position": 22.7,
+          "ctr": 0
+        },
+        {
+          "query": "suspension trainer",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 2,
+          "position": 4,
+          "ctr": 0
+        },
+        {
+          "query": "trx training",
+          "brand": false,
+          "clicks": 0,
+          "impressions": 1,
+          "position": 25,
+          "ctr": 0
+        }
+      ],
+      "striking": [],
+      "inboundContentLinks": [
+        "/trx-training-amsterdam/nl/"
       ]
     }
   }
