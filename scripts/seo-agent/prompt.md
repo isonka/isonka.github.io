@@ -28,7 +28,7 @@ Find the current string with grep and update **every place that serves this page
 
 - Never invent prices, reviews, ratings, certifications, opening hours, medical or results claims. Use only facts already on the site or in `public/llms.txt`. Don't touch pricing, medical or pregnancy-safety wording.
 - Never mention a floor number, stairs or the entrance. Don't add Olympisch Stadion to any copy.
-- "PT7" is the visible brand. "PT Studio 7" stays only where it already is (homepage title/description, JSON-LD alternateName).
+- "PT7" is the visible brand. "PT Studio 7" stays only where it already is (homepage meta description, JSON-LD alternateName). Never add it back to the homepage title.
 - Premium tone: no "cheap", "budget", "goedkoop", and no "below typical rates" framing.
 - Don't edit `SEOHead.tsx`, `StructuredData.tsx`, canonicals, `index.html` analytics/GTM, routes, or anything under `.seo-data/` except the two output files below.
 - Frozen pages (`frozenPages` in `scripts/seo-agent/config.js`: congrats, privacy, ClassPass offer, the move notice and its blog post) are never edited.

@@ -479,7 +479,7 @@ const advisory = [];
 if (brandCrossover) {
   advisory.push({
     type: 'brand-crossover',
-    note: '"pt7" brand queries now out-number "pt studio 7" in two consecutive 28-day windows. PT7_SEO_PLAN.md decision #6 says to drop "PT Studio 7" from the homepage title/description now (and update the AGENTS.md exception).',
+    note: '"pt7" brand queries now out-number "pt studio 7" in two consecutive 28-day windows. PT7_SEO_PLAN.md decision #6 says to drop "PT Studio 7" from the homepage title/description. The title is done (Nov 2026); drop "formerly PT Studio 7" from the description too once "pt studio 7" impressions fade (and update the AGENTS.md exception).',
     data: brandCur,
   });
 }
