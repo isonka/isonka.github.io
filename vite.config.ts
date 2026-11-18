@@ -25,7 +25,10 @@ const traineeCsp = (): Plugin => ({
     order: 'post',
     handler(html, ctx) {
       if (!ctx.path.endsWith('/academy/trainee/index.html')) return html
-      return html.replace('<meta charset="UTF-8" />', `<meta charset="UTF-8" />\n    <meta http-equiv="Content-Security-Policy" content="${TRAINEE_CSP}" />`)
+      const anchor = '<meta charset="UTF-8" />'
+      // Never ship the trainee page without its policy: fail the build if the anchor line was changed
+      if (!html.includes(anchor)) throw new Error(`trainee-csp: ${anchor} not found in academy/trainee/index.html`)
+      return html.replace(anchor, `${anchor}\n    <meta http-equiv="Content-Security-Policy" content="${TRAINEE_CSP}" />`)
     },
   },
 })

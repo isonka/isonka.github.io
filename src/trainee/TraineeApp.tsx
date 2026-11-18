@@ -24,7 +24,9 @@ type View =
   | { kind: 'signedIn'; user: SiteUser };
 
 /** The API is up but website sign-in is switched off (SITE_SESSION_SECRET not set): nothing to offer yet. */
-const isOff = (err: unknown) => err instanceof ApiError && (err.status === 503 || err.code === 'Unavailable');
+const isOff = (err: unknown) => err instanceof ApiError && err.status === 503;
+/** The API could not be reached (network, or a host without /api). */
+const isUnreachable = (err: unknown) => err instanceof ApiError && err.code === 'Unavailable';
 
 export function TraineeApp() {
   const [view, setView] = useState<View>({ kind: 'loading' });
@@ -34,6 +36,12 @@ export function TraineeApp() {
     setMoved(true);
     setView(next);
   }, []);
+  // Stable, so the overview's data load runs once (it depends on these)
+  const ended = useCallback(() => go({ kind: 'signedOut', notice: s.signIn.ended }), [go]);
+  const passwordRequired = useCallback(
+    () => setView((v) => (v.kind === 'signedIn' ? { kind: 'signedIn', user: { ...v.user, mustChangePassword: true } } : v)),
+    [],
+  );
 
   const load = useCallback(() => {
     setView({ kind: 'loading' });
@@ -76,7 +84,7 @@ export function TraineeApp() {
             <PasswordForm
               focus={moved}
               onChanged={() => go({ kind: 'signedIn', user: { ...view.user, mustChangePassword: false } })}
-              onEnded={() => go({ kind: 'signedOut', notice: s.signIn.ended })}
+              onEnded={ended}
             />
           )}
           {view.kind === 'signedIn' && !view.user.mustChangePassword && (
@@ -84,8 +92,8 @@ export function TraineeApp() {
               focus={moved}
               user={view.user}
               onSignedOut={() => go({ kind: 'signedOut' })}
-              onEnded={() => go({ kind: 'signedOut', notice: s.signIn.ended })}
-              onPasswordRequired={() => go({ kind: 'signedIn', user: { ...view.user, mustChangePassword: true } })}
+              onEnded={ended}
+              onPasswordRequired={passwordRequired}
             />
           )}
         </div>
@@ -132,7 +140,7 @@ function SignInForm({ focus, notice, onSignedIn, onOff }: { focus: boolean; noti
     } catch (err) {
       if (isOff(err)) return onOff();
       const code = err instanceof ApiError ? err.code : '';
-      setError(s.signIn.errors[code] ?? s.signIn.errors.other);
+      setError(isUnreachable(err) ? s.unavailable : (s.signIn.errors[code] ?? s.signIn.errors.other)); // keeps the typed email
       setBusy(false);
     }
   };
