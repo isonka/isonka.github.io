@@ -80,28 +80,9 @@
     <link rel="dns-prefetch" href="https://widgets.mindbodyonline.com">
     <link rel="dns-prefetch" href="https://connect.facebook.net">
 
-    <!-- The home hero's first image, fetched before the page's script runs: exactly the one each screen shows
-         (src/pages/Home.tsx heroImages: phones up to 720px get the tall coach photo). Keep in sync with Home.tsx. -->
-    <link
-      rel="preload"
-      as="image"
-      type="image/webp"
-      media="(max-width: 720px)"
-      href="/assets/images/home-hero-mobile-600.webp"
-      imagesrcset="/assets/images/home-hero-mobile-600.webp 600w, /assets/images/home-hero-mobile-750.webp 750w, /assets/images/home-hero-mobile-900.webp 900w"
-      imagesizes="100vw"
-      fetchpriority="high"
-    >
-    <link
-      rel="preload"
-      as="image"
-      type="image/webp"
-      media="(min-width: 721px)"
-      href="/assets/images/home-hero-studio-1200.webp"
-      imagesrcset="/assets/images/home-hero-studio-800.webp 800w, /assets/images/home-hero-studio-1200.webp 1200w, /assets/images/home-hero-studio-1600.webp 1600w"
-      imagesizes="100vw"
-      fetchpriority="high"
-    >
+    <!-- No hero image preload here: this head is shared by every page, and the home page's prerendered HTML already
+         holds its hero <img fetchpriority="high"> for the browser to find (a preload made every page fetch a hero
+         photo it doesn't show, and cost Lighthouse ~300 ms, 2026-11-18). -->
 
     <link rel="preload" href="/fonts/poppins-latin-400.woff2" as="font" type="font/woff2" crossorigin>
     
