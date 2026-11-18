@@ -99,6 +99,17 @@ const FIXED_PAGES: Route[] = [
   { path: '/academy/', prerender: true, sitemap: { lastmod: '2026-10-27', changefreq: 'weekly', priority: '0.9' } },
   { path: '/academy/nl/', prerender: true, sitemap: { lastmod: '2026-10-27', changefreq: 'weekly', priority: '0.9' } },
   { path: '/academy/practice/', prerender: true, sitemap: null },
+  {
+    // Trainee area: signed-in pages from the PT7 Academy API; the static shell only shows "Loading"
+    path: '/academy/trainee/',
+    prerender: true,
+    sitemap: null,
+    meta: {
+      title: 'Trainee area | PT7 Academy',
+      description: 'Sign in to the PT7 Academy trainee area.',
+      robots: 'noindex, nofollow',
+    },
+  },
   { path: '/academy/practice/nl/', prerender: true, sitemap: null },
   { path: '/classpass-offer/', prerender: true, sitemap: null },
   { path: '/healthcare-providers/', prerender: true, sitemap: { lastmod: '2026-03-10', changefreq: 'monthly', priority: '0.7' } },
@@ -190,7 +201,7 @@ const nlPath = (path: string) => `${path}nl/`;
  * Dutch mirrors for fixed pages that do not list one explicitly. Redirect-only routes (canonical override)
  * have no mirror. The mirror reuses the English sitemap entry minus the image.
  */
-const NO_NL_MIRROR = new Set(['/screen/']);
+const NO_NL_MIRROR = new Set(['/screen/', '/academy/trainee/']);
 
 const FIXED_NL_MIRRORS: Route[] = FIXED_PAGES.filter(
   (route) =>

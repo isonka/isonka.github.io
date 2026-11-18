@@ -19,6 +19,7 @@ import type { EnPrivatePilates } from './locales/en/privatePilates';
 import type { EnReformer } from './locales/en/reformer';
 import type { EnSchedule } from './locales/en/schedule';
 import type { EnStrength } from './locales/en/strength';
+import type { EnTrainee } from './locales/en/trainee';
 import type { EnTrx } from './locales/en/trx';
 import type { EnWorkout } from './locales/en/workout';
 
@@ -48,6 +49,7 @@ declare module 'i18next' {
       healthcare: EnHealthcare;
       classpass: EnClasspass;
       prenatal: EnPrenatal;
+      trainee: EnTrainee;
     };
   }
 }

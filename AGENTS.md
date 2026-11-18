@@ -143,6 +143,7 @@ Deploy: merging to `main` triggers GitHub Actions; no separate `npm run deploy` 
 - **GitHub Pages**: `RedirectHandler` in `src/App.tsx` reads `sessionStorage` for `ghPagesRedirect` (SPA fallback from `404.html` pattern). Do not remove without a replacement strategy.  
 - **Vite**: `vite.config.ts` — `base: '/'` for root domain; change only if hosting path changes.  
 - **Code splitting**: Many pages are `lazy()` loaded in `App.tsx`; keep Suspense boundaries coherent when adding routes.  
+- **Trainee area** (`/academy/trainee/`, `src/pages/AcademyTrainee.tsx`, `src/lib/academyApi.ts`): signed-in pages for PT7 Academy trainees, with data from the PT7 Academy API at `/api` on the same address (Firebase Hosting forwards `/api/**` to it; on GitHub Pages it shows "not available"). The login is an HttpOnly `__session` cookie set by the API. Not indexed, not in the sitemap, no NL mirror, no analytics page views. Local development: run the API (pt7-academy repo) on port 4000; `npm run dev` forwards `/api` there (`PT7_API` to change it).  
 - **Type safety**: Run `tsc -b` via build; fix types in `src/` and strict data modules.
 
 ### Guardrails

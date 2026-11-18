@@ -1,0 +1,61 @@
+// The trainee area (/academy/trainee/): sign-in and the trainee's own progress, from the PT7 Academy API.
+export const enTrainee = {
+  seo: {
+    title: 'Trainee area | PT7 Academy',
+    description: 'Sign in to the PT7 Academy trainee area.',
+    keywords: 'PT7 Academy, trainee',
+  },
+  kicker: 'PT7 Academy',
+  loading: 'Loading…',
+  unavailable: 'The trainee area is not available right now. Please try again later.',
+  retry: 'Try again',
+  signIn: {
+    title: 'Trainee sign-in',
+    lead: 'Use the email address and password you received from the academy.',
+    email: 'Email',
+    password: 'Password',
+    submit: 'Sign in',
+    busy: 'Signing in…',
+    errors: {
+      InvalidCredentials: 'The email address or password is not correct.',
+      AccountLocked: 'Too many attempts. Your account is locked for a while; please try again later.',
+      TooManyRequests: 'Too many attempts. Please wait a moment and try again.',
+      NotATrainee: 'This sign-in is for trainees. Staff use the academy admin.',
+      other: 'Signing in did not work. Please try again.',
+    },
+  },
+  password: {
+    title: 'Choose a new password',
+    lead: 'Before you continue, replace the password you received with one of your own.',
+    current: 'Current password',
+    next: 'New password',
+    confirm: 'Repeat the new password',
+    rules: 'At least 12 characters, with an upper-case letter, a lower-case letter and a digit.',
+    mismatch: 'The two new passwords are not the same.',
+    submit: 'Save password',
+    busy: 'Saving…',
+    other: 'Saving the password did not work. Please try again.',
+  },
+  overview: {
+    greeting: 'Hello {{name}}',
+    signOut: 'Sign out',
+    notLinked: 'Your login is not linked to a trainee record yet. Please contact the academy.',
+    certificate: {
+      towards: 'Towards your certificate',
+      issued: 'Your certificate',
+      awarded: 'Congratulations! You have been awarded the {{credential}} ({{number}}).',
+      done: 'Done',
+      notYet: 'Not yet',
+    },
+    exams: {
+      title: 'Your exams',
+      empty: 'Your exam results will appear here once your evaluation is completed.',
+      attempt: 'Attempt {{n}}',
+      passed: 'Passed',
+      notPassed: 'Not passed',
+      score: 'Score {{score}}',
+    },
+  },
+} as const;
+
+export type EnTrainee = typeof enTrainee;

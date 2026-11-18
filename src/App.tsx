@@ -42,6 +42,7 @@ const Congrats = lazyPage(() => import('./pages/Congrats').then(m => ({ default:
 const Trainers = lazyPage(() => import('./pages/Trainers').then(m => ({ default: m.Trainers })), ['instructors']);
 const TrainerDetail = lazyPage(() => import('./pages/TrainerDetail').then(m => ({ default: m.TrainerDetail })), ['instructors', 'notFound']);
 const Academy = lazyPage(() => import('./pages/Academy').then(m => ({ default: m.Academy })), ['academy']);
+const AcademyTrainee = lazyPage(() => import('./pages/AcademyTrainee').then(m => ({ default: m.AcademyTrainee })), ['trainee']);
 const AcademyPractice = lazyPage(() => import('./pages/AcademyPractice').then(m => ({ default: m.AcademyPractice })));
 const Blog = lazyPage(() => import('./pages/Blog').then(m => ({ default: m.Blog })), ['blog']);
 const BlogPost = lazyPage(() => import('./pages/BlogPost').then(m => ({ default: m.BlogPost })), ['blog', 'notFound']);
@@ -197,6 +198,7 @@ function App() {
           <Route path="instructors/nl" element={<Trainers />} />
           <Route path="trainer/:slug" element={<TrainerDetail />} />
           <Route path="trainer/:slug/nl" element={<TrainerDetail />} />
+          <Route path="academy/trainee" element={<AcademyTrainee />} />
           <Route path="academy/practice" element={<AcademyPractice />} />
           <Route path="academy/practice/nl" element={<AcademyPractice />} />
           <Route path="academy" element={<Academy />} />
