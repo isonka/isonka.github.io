@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--
       The PT7 Academy trainee area: its own page, outside the site's single-page app, so none of the site's
-      third-party scripts (Google Tag Manager, Mindbody, the chatbot) run where trainees type their password or see
-      their data (owner, 2026-11-18). The build adds a strict Content-Security-Policy here (vite.config.ts).
+      third-party scripts (Google Tag Manager, Mindbody, the chatbot) are loaded by this page (owner, 2026-11-18).
+      Other pt7.nl pages share its address, so this doesn't shield it from them (pt7-academy docs/DECISIONS_LOG.md).
+      The build adds a strict Content-Security-Policy here (vite.trainee.config.ts).
       Not indexed, not in the sitemap, English only.
     -->
     <meta name="robots" content="noindex, nofollow" />
