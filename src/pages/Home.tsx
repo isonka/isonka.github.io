@@ -61,14 +61,31 @@ const WORKOUT_COPY = {
   cardio: 'cardio',
 } as const;
 
+const LANE_CARDS = [
+  {
+    id: 'pilates' as const,
+    to: '/reformer-pilates-amsterdam/',
+    src: '/assets/images/lane-reformer-1200.webp',
+    srcSet: '/assets/images/lane-reformer-800.webp 800w, /assets/images/lane-reformer-1200.webp 1200w',
+  },
+  {
+    id: 'strength' as const,
+    to: '/workouts/functional-training/',
+    src: '/assets/images/lane-strength-1200.webp',
+    srcSet: '/assets/images/lane-strength-800.webp 800w, /assets/images/lane-strength-1200.webp 1200w',
+  },
+];
+
 const heroImages = [
   {
-    src: '/assets/images/studio-800.webp',
+    src: '/assets/images/home-hero-studio-1200.webp',
     srcSet:
-      '/assets/images/studio-800.webp 800w, /assets/images/studio-1200.webp 1200w, /assets/images/studio.webp 1600w',
+      '/assets/images/home-hero-studio-800.webp 800w, /assets/images/home-hero-studio-1200.webp 1200w, /assets/images/home-hero-studio-1600.webp 1600w',
     width: 1600,
-    height: 1066,
+    height: 1067,
     altKey: 'heroImages.studio' as const,
+    /** Phones: tall frame, so show a coach at work instead of the empty room. */
+    mobileSrcSet: '/assets/images/home-hero-mobile-600.webp 600w, /assets/images/home-hero-mobile-900.webp 900w',
   },
   {
     src: '/assets/images/nike_strength_studio.webp',
@@ -147,6 +164,7 @@ export const Home= () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [secondHeroReady, setSecondHeroReady] = useState(false);
   const aboutImage = useInViewOnce<HTMLDivElement>();
+  const locationImage = useInViewOnce<HTMLElement>();
   const canonical = locale === 'nl' ? 'https://www.pt7.nl/nl/' : 'https://www.pt7.nl/';
   const academyHref = locale === 'nl' ? '/academy/nl/' : '/academy/';
   const pricingHref = locale === 'nl' ? '/pricing/nl/' : '/pricing/';
@@ -288,7 +306,7 @@ export const Home= () => {
           {heroImages.map((image, index) => {
             if (index > 0 && !secondHeroReady) return null;
             const isActive = index === currentImageIndex;
-            return (
+            const img = (
               <img
                 key={image.src}
                 src={image.src}
@@ -303,6 +321,13 @@ export const Home= () => {
                 decoding="async"
                 style={index === 0 ? { opacity: 1 } : undefined}
               />
+            );
+            if (!('mobileSrcSet' in image)) return img;
+            return (
+              <picture key={image.src}>
+                <source media="(max-width: 720px)" srcSet={image.mobileSrcSet} sizes="100vw" />
+                {img}
+              </picture>
             );
           })}
           <div className="home-hero-veil" />
@@ -351,7 +376,35 @@ export const Home= () => {
           </div>
           <p className="home-sub">{t('workouts.sub')}</p>
         </div>
-        <WorkoutGallery items={workoutItems} />
+        <div className="home-lanes">
+          {LANE_CARDS.map((lane) => {
+            const items = workoutItems.filter((w) => w.lane === lane.id);
+            return (
+              <article key={lane.id} className="home-lane">
+                <Link to={localeHref(lane.to, locale)} className="home-lane-media" tabIndex={-1} aria-hidden="true">
+                  <img
+                    src={lane.src}
+                    srcSet={lane.srcSet}
+                    sizes="(max-width: 720px) 100vw, 600px"
+                    alt=""
+                    width="1200"
+                    height="900"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </Link>
+                <div className="home-lane-head">
+                  <h3 className="home-lane-title">
+                    <span className={`lane-stripe lane-${lane.id}`} aria-hidden="true" />
+                    {t(`workouts.lanes.${lane.id}.title`)}
+                  </h3>
+                  <p className="home-lane-meta">{t(`workouts.lanes.${lane.id}.meta`)}</p>
+                </div>
+                <WorkoutGallery items={items} />
+              </article>
+            );
+          })}
+        </div>
       </section>
 
       <section id="about" className="home-section home-manifesto">
@@ -394,15 +447,31 @@ export const Home= () => {
               />
             </nav>
           </div>
-          <div className="home-bleed-frame" ref={aboutImage.ref}>
-            <img
-              src={aboutImage.inView ? '/assets/images/about-us-web.webp' : undefined}
-              alt={t('about.imageAlt')}
-              width="1200"
-              height="750"
-              loading="lazy"
-              decoding="async"
-            />
+          <div className="home-about-photos" ref={aboutImage.ref}>
+            <figure className="home-about-photo">
+              <img
+                src={aboutImage.inView ? '/assets/images/about-coaching-900.webp' : undefined}
+                srcSet={aboutImage.inView ? '/assets/images/about-coaching-600.webp 600w, /assets/images/about-coaching-900.webp 900w' : undefined}
+                sizes="(max-width: 960px) 50vw, 300px"
+                alt={t('about.imageAlt')}
+                width="900"
+                height="1125"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure className="home-about-photo">
+              <img
+                src={aboutImage.inView ? '/assets/images/about-group-900.webp' : undefined}
+                srcSet={aboutImage.inView ? '/assets/images/about-group-600.webp 600w, /assets/images/about-group-900.webp 900w' : undefined}
+                sizes="(max-width: 960px) 50vw, 300px"
+                alt={t('about.imageAlt2')}
+                width="900"
+                height="1125"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
           </div>
         </div>
       </section>
@@ -486,6 +555,18 @@ export const Home= () => {
           <p className="home-contact-meta">{t('contact.meta')}</p>
 
           <div className="home-contact-grid">
+            <figure className="home-contact-photo" ref={locationImage.ref}>
+              <img
+                src={locationImage.inView ? '/assets/images/location-museums-900.webp' : undefined}
+                srcSet={locationImage.inView ? '/assets/images/location-museums-600.webp 600w, /assets/images/location-museums-900.webp 900w' : undefined}
+                sizes="(max-width: 960px) 100vw, 360px"
+                alt={t('contact.photoAlt')}
+                width="900"
+                height="1125"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
             <ContactMap />
             <div className="home-contact-actions">
               <a href="tel:+31685162693" data-analytics="skip" className="home-btn home-btn-light" onClick={() => { trackPhoneClick(); trackFBPhoneClick(); }}>

@@ -18,6 +18,7 @@ export const nlPricing: DeepStringify<EnPricing> = {
     kicker: 'Prijzen',
     title: 'Pilateslesprijzen & abonnementen in Amsterdam',
     lead: 'Kleine groepen (max. {{groupMax}}) voor <reformer>Reformer pilates</reformer> en <trx>TRX</trx>, abonnementen en private sessies aan het Museumplein. Klaar om te boeken? <schedule>Bekijk het lesrooster</schedule>.',
+    imageAlt: 'De PT7 reformer pilatesstudio bij het Museumplein: reformers, towers en grote ramen',
   },
   summary: {
     group:

@@ -19,6 +19,7 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
       'De enige Nederlandse Reformer pilates instructeurscursus met wereldwijd erkende PMA ITTAP-accreditatie (Pilates Method Alliance). 300-uur docentenopleiding in Amsterdam. Volgende termijn maart–mei 2027. Weekendrooster. Lessen in het Engels. Vanaf €2.000 + BTW.',
   },
   hero: {
+    imageAlt: "Een PT7 Academy-trainer corrigeert de armpositie van een cursist op de reformer",
     title: 'Pilates docentenopleiding Amsterdam (Reformer)',
     subtitle: 'PMA ITTAP goedgekeurde Reformer docentenopleiding. Weekendrooster bij Museumplein.',
     languageNote: 'Alle lessen en trainingen worden in het Engels gegeven.',
@@ -251,7 +252,8 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
   },
   proof: {
     eyebrow: 'PT7 Academy · Museumplein, Amsterdam',
-    imageAlt: 'Reformer-instructeursopleiding van PT7 Academy in de studio aan het Museumplein',
+    imageAlt: "Een cursist bestudeert het cursusboek van PT7 Academy",
+    imageAlt2: "Cursisten volgen de reformer pilates-cursus op een tablet",
     lead: 'Reformer-docentenopleiding in het weekend, in de studio: colleges, oefenen en aantekeningen op de vloer.',
     guide: 'Gids voor carrièreswitchers',
     courseLead: 'Cursusleider',

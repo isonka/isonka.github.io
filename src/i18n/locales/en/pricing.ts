@@ -15,6 +15,7 @@ export const enPricing = {
     kicker: 'Pricing',
     title: 'Pilates class prices & memberships in Amsterdam',
     lead: 'Small groups (max {{groupMax}}) for <reformer>Reformer Pilates</reformer> and <trx>TRX</trx>, memberships, and private sessions at Museumplein. Ready to book? <schedule>View the class schedule</schedule>.',
+    imageAlt: 'The PT7 Reformer Pilates studio at Museumplein: Reformers, towers and big windows',
   },
   summary: {
     group:

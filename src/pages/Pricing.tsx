@@ -201,26 +201,39 @@ export const Pricing= () => {
             />
           </p>
         </header>
+        <section className="pricing-band" aria-label={t('offer.badge')}>
+          <div className="pricing-band-media">
+            <img
+              src="/assets/images/pricing-studio-1600.webp"
+              srcSet="/assets/images/pricing-studio-800.webp 800w, /assets/images/pricing-studio-1600.webp 1600w"
+              sizes="(max-width: 1248px) 100vw, 1200px"
+              alt={t('hero.imageAlt')}
+              width={1600}
+              height={900}
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <div className="special-offer-container">
+            <div className="special-offer">
+              <span className="offer-badge">{t('offer.badge')}</span>
+              <h3>{t('offer.title')}</h3>
+              <p>{t('offer.description', { classes: String(INTRO.classes), price: formatEur(INTRO.price) })}</p>
+              <p className="offer-details">
+                <Link to={isNl ? '/intro/nl/' : '/intro/'}>{t('offer.details')}</Link>
+              </p>
+              <span className="special-price">{formatEur(INTRO.price)}</span>
+              <StableHealcodeSlot
+                    className="buy-button healcode-pricing-option-text-link"
+                    html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100066" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
+                  />
+            </div>
+          </div>
+        </section>
         <div className="bf-pricing-banner" role="region" aria-label={t('blackFriday.badge')}>
           <p className="pricing-kicker pricing-kicker-on-dark">{t('blackFriday.badge')}</p>
           <p>{t('blackFriday.lead')}</p>
         </div>
-        <div className="special-offer-container">
-          <div className="special-offer">
-            <span className="offer-badge">{t('offer.badge')}</span>
-            <h3>{t('offer.title')}</h3>
-            <p>{t('offer.description', { classes: String(INTRO.classes), price: formatEur(INTRO.price) })}</p>
-            <p className="offer-details">
-              <Link to={isNl ? '/intro/nl/' : '/intro/'}>{t('offer.details')}</Link>
-            </p>
-            <span className="special-price">{formatEur(INTRO.price)}</span>
-            <StableHealcodeSlot
-                  className="buy-button healcode-pricing-option-text-link"
-                  html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="100066" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
-                />
-          </div>
-        </div>
-
         <nav className="pricing-jump" aria-label={t('nav.aria')}>
           <a href="#membership">{t('nav.membership')}</a>
           <a href="#group-classes">{t('nav.group')}</a>

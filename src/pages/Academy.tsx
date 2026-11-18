@@ -218,6 +218,19 @@ export const Academy= () => {
           <div className="academy-container">
             <div className="ittap-accreditation">
               <header className="academy-hero-card">
+              <div className="academy-hero-media">
+                <img
+                  src="/assets/images/academy-hero-1100.webp"
+                  srcSet="/assets/images/academy-hero-700.webp 700w, /assets/images/academy-hero-1100.webp 1100w"
+                  sizes="(max-width: 960px) 100vw, 480px"
+                  alt={t('hero.imageAlt')}
+                  width={1100}
+                  height={1375}
+                  fetchPriority="high"
+                  decoding="async"
+                />
+              </div>
+              <div className="academy-hero-body">
               <p className="ittap-accreditation-eyebrow">{t('proof.eyebrow')}</p>
               <h1 className="academy-page-title">
                 <MediumTail text={t('hero.title')} />
@@ -263,6 +276,7 @@ export const Academy= () => {
                 </div>
                 <p className="academy-offer-note">{t('offer.note')}</p>
               </div>
+              </div>
 
               </header>
 
@@ -287,12 +301,20 @@ export const Academy= () => {
                 </div>
                 <div className="academy-learn-aside">
               <div className="academy-proof">
-                <div className="academy-proof-media">
+                <div className="academy-proof-media academy-proof-media--duo">
                   <img
-                    src="/assets/images/academy-training.webp"
+                    src="/assets/images/academy-manual-500.webp"
                     alt={t('proof.imageAlt')}
-                    width={1600}
-                    height={1067}
+                    width={500}
+                    height={500}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <img
+                    src="/assets/images/academy-manual-tablet-500.webp"
+                    alt={t('proof.imageAlt2')}
+                    width={500}
+                    height={500}
                     loading="lazy"
                     decoding="async"
                   />

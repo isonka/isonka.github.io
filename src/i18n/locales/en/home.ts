@@ -61,9 +61,14 @@ export const enHome = {
       '<reformer>Reformer Pilates Amsterdam Zuid</reformer><private>Private Pilates</private><prenatal>Prenatal Pilates</prenatal><trx>TRX</trx><strength>Strength Training</strength>',
     ownerName: 'Elif Arzu Ogan',
     signatureRole: 'Owner & head instructor',
-    imageAlt: 'Elif Arzu Ogan coaching at the PT7 Reformer Pilates studio, Museumplein Amsterdam',
+    imageAlt: "A PT7 coach correcting a client's stretch by the window at the Reformer Pilates studio, Museumplein Amsterdam",
+    imageAlt2: 'A PT7 coach guiding a small group on the Reformers',
   },
   workouts: {
+    lanes: {
+      pilates: { title: 'Reformer Pilates', meta: 'Small groups and private sessions' },
+      strength: { title: 'Strength', meta: 'Private or duo sessions' },
+    },
     heading: 'Pilates & Training Programs Amsterdam',
     sub: 'Explore our variety of training programs',
     lanePilates: 'Pilates',
@@ -175,6 +180,7 @@ export const enHome = {
     },
   },
   contact: {
+    photoAlt: 'The view from PT7 over the Stedelijk Museum and the Museumplein area',
     kicker: 'Visit',
     title: 'Visit Our Studio',
     address: '{{studioAddress}} Oud-Zuid',

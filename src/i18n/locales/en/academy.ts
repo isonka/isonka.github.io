@@ -16,6 +16,7 @@ export const enAcademy = {
       'The only Dutch Reformer Pilates instructor course with globally recognized PMA ITTAP accreditation (Pilates Method Alliance). 300-hour teacher training in Amsterdam. Next term March–May 2027. Weekend schedule. Course fee from €2,000 + VAT.',
   },
   hero: {
+    imageAlt: "A PT7 Academy trainer correcting a trainee's arm position on the Reformer",
     title: 'Reformer Pilates instructor course Amsterdam',
     subtitle: 'PMA ITTAP approved Reformer teacher training. Weekend schedule at Museumplein.',
     languageNote: 'All lessons and training are conducted in English.',
@@ -249,7 +250,8 @@ export const enAcademy = {
   },
   proof: {
     eyebrow: 'PT7 Academy · Museumplein, Amsterdam',
-    imageAlt: 'PT7 Academy Reformer instructor training at the Museumplein studio',
+    imageAlt: "A trainee studying the PT7 Academy course manual",
+    imageAlt2: "Trainees following the Reformer Pilates course on a tablet",
     lead: 'Weekend Reformer teacher training in the studio: lectures, practice, and notebooks on the floor.',
     guide: 'Career-change guide',
     courseLead: 'Course lead',
