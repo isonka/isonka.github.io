@@ -27,8 +27,7 @@ export type PageNamespace =
   | 'corporate'
   | 'healthcare'
   | 'classpass'
-  | 'prenatal'
-  | 'trainee';
+  | 'prenatal';
 
 type Bundle = object;
 
@@ -54,7 +53,6 @@ const bundles: Record<'en' | 'nl', Record<PageNamespace, () => Promise<Bundle>>>
     healthcare: () => import('./locales/en/healthcare').then((m) => m.enHealthcare),
     classpass: () => import('./locales/en/classpass').then((m) => m.enClasspass),
     prenatal: () => import('./locales/en/prenatal').then((m) => m.enPrenatal),
-    trainee: () => import('./locales/en/trainee').then((m) => m.enTrainee),
   },
   nl: {
     pricing: () => import('./locales/nl/pricing').then((m) => m.nlPricing),
@@ -77,7 +75,6 @@ const bundles: Record<'en' | 'nl', Record<PageNamespace, () => Promise<Bundle>>>
     healthcare: () => import('./locales/nl/healthcare').then((m) => m.nlHealthcare),
     classpass: () => import('./locales/nl/classpass').then((m) => m.nlClasspass),
     prenatal: () => import('./locales/nl/prenatal').then((m) => m.nlPrenatal),
-    trainee: () => import('./locales/nl/trainee').then((m) => m.nlTrainee),
   },
 };
 

@@ -1,28 +1,27 @@
-// The trainee area (/academy/trainee/): sign-in and the trainee's own progress, from the PT7 Academy API.
-export const enTrainee = {
-  seo: {
-    title: 'Trainee area | PT7 Academy',
-    description: 'Sign in to the PT7 Academy trainee area.',
-    keywords: 'PT7 Academy, trainee',
-  },
+// The trainee area's text. English only (owner, 2026-11-18): the API's own texts (requirements, password rules) are
+// English too.
+export const s = {
   kicker: 'PT7 Academy',
+  title: 'Trainee area',
+  backToSite: 'PT7 website',
   loading: 'Loading…',
   unavailable: 'The trainee area is not available right now. Please try again later.',
   retry: 'Try again',
   signIn: {
-    title: 'Trainee sign-in',
+    title: 'Sign in',
     lead: 'Use the email address and password you received from the academy.',
     email: 'Email',
     password: 'Password',
     submit: 'Sign in',
     busy: 'Signing in…',
+    ended: 'Your session has ended. Please sign in again.',
     errors: {
       InvalidCredentials: 'The email address or password is not correct.',
       AccountLocked: 'Too many attempts. Your account is locked for a while; please try again later.',
       TooManyRequests: 'Too many attempts. Please wait a moment and try again.',
       NotATrainee: 'This sign-in is for trainees. Staff use the academy admin.',
       other: 'Signing in did not work. Please try again.',
-    },
+    } as Record<string, string>,
   },
   password: {
     title: 'Choose a new password',
@@ -37,25 +36,25 @@ export const enTrainee = {
     other: 'Saving the password did not work. Please try again.',
   },
   overview: {
-    greeting: 'Hello {{name}}',
+    greeting: (name: string) => `Hello ${name}`,
     signOut: 'Sign out',
+    signOutFailed: 'Signing out did not work. Please try again.',
     notLinked: 'Your login is not linked to a trainee record yet. Please contact the academy.',
     certificate: {
       towards: 'Towards your certificate',
       issued: 'Your certificate',
-      awarded: 'Congratulations! You have been awarded the {{credential}} ({{number}}).',
+      awarded: (credential: string, number: string) => `Congratulations! You have been awarded the ${credential} (${number}).`,
       done: 'Done',
       notYet: 'Not yet',
     },
     exams: {
       title: 'Your exams',
       empty: 'Your exam results will appear here once your evaluation is completed.',
-      attempt: 'Attempt {{n}}',
+      // As the API's own wording (packages/db rules/attempts.ts in pt7-academy)
+      attempt: (n: number) => (n <= 1 ? 'First attempt' : `Retake ${n - 1}`),
       passed: 'Passed',
       notPassed: 'Not passed',
-      score: 'Score {{score}}',
+      score: (score: number) => `Score ${score.toFixed(1)}`,
     },
   },
-} as const;
-
-export type EnTrainee = typeof enTrainee;
+};

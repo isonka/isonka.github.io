@@ -1,14 +1,47 @@
-import { defineConfig } from 'vite'
+import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
+import { fileURLToPath } from 'node:url'
+
+// The trainee area (academy/trainee/index.html) is its own page with no third-party scripts (owner, 2026-11-18). The
+// build gives it a strict Content-Security-Policy: only this site's own scripts, styles, fonts, images and /api
+// (`npm run dev` leaves it out: Vite's dev server needs inline scripts). frame-ancestors can't be set in a meta tag;
+// it goes into the hosting headers with the move to Firebase.
+const TRAINEE_CSP = [
+  "default-src 'none'",
+  "script-src 'self'",
+  "style-src 'self'",
+  "img-src 'self'",
+  "font-src 'self'",
+  "connect-src 'self'",
+  "base-uri 'none'",
+  "form-action 'self'",
+  "object-src 'none'",
+].join('; ')
+
+const traineeCsp = (): Plugin => ({
+  name: 'trainee-csp',
+  apply: 'build',
+  transformIndexHtml: {
+    order: 'post',
+    handler(html, ctx) {
+      if (!ctx.path.endsWith('/academy/trainee/index.html')) return html
+      return html.replace('<meta charset="UTF-8" />', `<meta charset="UTF-8" />\n    <meta http-equiv="Content-Security-Policy" content="${TRAINEE_CSP}" />`)
+    },
+  },
+})
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), traineeCsp()],
   base: '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     minify: 'esbuild',
     rollupOptions: {
+      input: {
+        main: fileURLToPath(new URL('./index.html', import.meta.url)),
+        trainee: fileURLToPath(new URL('./academy/trainee/index.html', import.meta.url)),
+      },
       output: {
         assetFileNames: 'assets/[name]-[hash][extname]',
         chunkFileNames: 'assets/[name]-[hash].js',
