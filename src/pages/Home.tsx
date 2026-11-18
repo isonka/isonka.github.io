@@ -85,7 +85,7 @@ const heroImages = [
     height: 1067,
     altKey: 'heroImages.studio' as const,
     /** Phones: tall frame, so show a coach at work instead of the empty room. */
-    mobileSrcSet: '/assets/images/home-hero-mobile-600.webp 600w, /assets/images/home-hero-mobile-900.webp 900w',
+    mobileSrcSet: '/assets/images/home-hero-mobile-600.webp 600w, /assets/images/home-hero-mobile-750.webp 750w, /assets/images/home-hero-mobile-900.webp 900w',
   },
   {
     src: '/assets/images/nike_strength_studio.webp',
@@ -165,6 +165,9 @@ export const Home= () => {
   const [secondHeroReady, setSecondHeroReady] = useState(false);
   const aboutImage = useInViewOnce<HTMLDivElement>();
   const locationImage = useInViewOnce<HTMLElement>();
+  // The lane photos load only once the lanes scroll into view (as the about and location photos): fetched early,
+  // they compete with the page's script on slow phones and delay the first screen (Lighthouse, 2026-11-18)
+  const laneImages = useInViewOnce<HTMLDivElement>();
   const canonical = locale === 'nl' ? 'https://www.pt7.nl/nl/' : 'https://www.pt7.nl/';
   const academyHref = locale === 'nl' ? '/academy/nl/' : '/academy/';
   const pricingHref = locale === 'nl' ? '/pricing/nl/' : '/pricing/';
@@ -376,15 +379,15 @@ export const Home= () => {
           </div>
           <p className="home-sub">{t('workouts.sub')}</p>
         </div>
-        <div className="home-lanes">
+        <div className="home-lanes" ref={laneImages.ref}>
           {LANE_CARDS.map((lane) => {
             const items = workoutItems.filter((w) => w.lane === lane.id);
             return (
               <article key={lane.id} className="home-lane">
                 <Link to={localeHref(lane.to, locale)} className="home-lane-media" tabIndex={-1} aria-hidden="true">
                   <img
-                    src={lane.src}
-                    srcSet={lane.srcSet}
+                    src={laneImages.inView ? lane.src : undefined}
+                    srcSet={laneImages.inView ? lane.srcSet : undefined}
                     sizes="(max-width: 720px) 100vw, 600px"
                     alt=""
                     width="1200"
