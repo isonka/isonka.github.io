@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      The PT7 Academy trainee area: its own page, outside the site's single-page app, so none of the site's
+      third-party scripts (Google Tag Manager, Mindbody, the chatbot) run where trainees type their password or see
+      their data (owner, 2026-11-18). The build adds a strict Content-Security-Policy here (vite.config.ts).
+      Not indexed, not in the sitemap, English only.
+    -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="referrer" content="same-origin" />
+    <title>Trainee area | PT7 Academy</title>
+    <meta name="description" content="Sign in to the PT7 Academy trainee area." />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  </head>
+  <body>
+    <div id="root">
+      <header class="trainee-top"><a href="/" class="trainee-brand">PT7</a></header>
+      <main class="trainee"><div class="trainee-inner"><p class="kicker">PT7 Academy</p><h1>Trainee area</h1><p>Loading…</p></div></main>
+    </div>
+    <noscript>The trainee area needs JavaScript.</noscript>
+    <script type="module" src="/src/trainee/main.tsx"></script>
+  </body>
+</html>
