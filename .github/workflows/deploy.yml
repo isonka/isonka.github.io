@@ -31,6 +31,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # Stops the build (and the deploy) on a high or critical advisory in what visitors' browsers run. Build and
+      # test tools are left out: Dependabot updates those (owner, 2026-11-18).
+      - name: Audit production dependencies
+        run: npm audit --omit=dev --audit-level=high
+
       - name: Lint
         run: npm run lint
 
