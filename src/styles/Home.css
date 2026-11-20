@@ -631,6 +631,15 @@ h2.home-kicker-heading {
   margin: 0 0 20px;
 }
 
+/* One pill per row on phones: whether both fit on one line depended on the font, so the row grew when Poppins
+   loaded and pushed the page down (Lighthouse CLS 0.11 in CI, 2026-11-21) */
+@media (max-width: 720px) {
+  .home-hero-ratings {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 .home-hero .home-hero-ratings a {
   background: #fff;
   border: 1px solid var(--line, #ddd5c6);
