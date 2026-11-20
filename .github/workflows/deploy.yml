@@ -115,10 +115,18 @@ jobs:
           sparse-checkout: tools/firebase-cli
           persist-credentials: false
 
-      # firebase-tools runs predeploy/postdeploy entries as shell commands; this config must never have any
+      # firebase-tools runs predeploy/postdeploy entries as shell commands; this config must never have any, and its
+      # hosting section must be inline (not loaded from a file, which could come from dist)
       - name: Check the Hosting config
         run: |
-          if grep -qE '"(pre|post)deploy"' firebase.json; then echo "firebase.json must not run commands"; exit 1; fi
+          node -e '
+            const c = JSON.parse(require("fs").readFileSync("firebase.json", "utf8"));
+            const hook = (v) => v !== null && typeof v === "object" &&
+              Object.entries(v).some(([k, x]) => /^(pre|post)deploy$/.test(k) || hook(x));
+            if (c.hosting === null || typeof c.hosting !== "object" || Array.isArray(c.hosting) || hook(c)) {
+              console.error("firebase.json: hosting must be one inline object, without predeploy/postdeploy");
+              process.exit(1);
+            }'
 
       - name: Download the build
         uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
@@ -152,6 +160,7 @@ jobs:
           SITE=https://pt7-academy.web.app
           get() { curl -sS --retry 3 --retry-all-errors -o /dev/null -D "$RUNNER_TEMP/headers" -w '%{http_code}' "$SITE$1"; }
           test "$(get /)" = 200
+          test "$(get /academy/trainee)" = 301 # the address without the slash only redirects
           test "$(get /academy/trainee/)" = 200
           tr -d '\r' < "$RUNNER_TEMP/headers" | grep -qi "^content-security-policy: frame-ancestors 'none'$"
           test "$(get /.well-known/api-catalog)" = 200
