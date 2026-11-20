@@ -23,12 +23,12 @@ jobs:
       pages: read # Setup Pages reads the site's settings; no sign-in token here
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
       # No caches in this job: the weekly SEO workflow runs agent-edited code on main's cache scope, so anything
       # restored here could have been written there (seo-weekly.yml)
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: '24'
 
@@ -74,7 +74,7 @@ jobs:
 
       - name: Setup Pages
         if: github.event_name != 'pull_request'
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@1f0c5cde4bc74cd7e1254d0cb4de8d49e9068c7d # v4.0.0
 
       # Since v4 this action leaves out dotfiles; v5 can keep them (include-hidden-files), and pt7.nl needs .well-known/
       - name: Upload artifact
@@ -88,7 +88,7 @@ jobs:
       # commit itself, never from this job (it runs install scripts, and firebase.json can hold commands).
       - name: Upload the build for Firebase Hosting
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: site
           path: ./dist
