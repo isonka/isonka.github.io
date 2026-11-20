@@ -1,0 +1,8 @@
+{
+  "name": "pt7-firebase-cli",
+  "private": true,
+  "description": "The Firebase CLI for the deploy-firebase job, locked so every dependency is fixed (installed with npm ci --ignore-scripts)",
+  "dependencies": {
+    "firebase-tools": "15.34.2"
+  }
+}

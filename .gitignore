@@ -30,5 +30,8 @@ dist-ssr
 *.sln
 *.sw?
 
+# Firebase CLI's local deploy cache
+.firebase
+
 # Weekly SEO agent history (lives on the seo-data branch)
 .seo-data

@@ -263,6 +263,24 @@ async function launchBrowser() {
   }
 }
 
+// Under load the headless browser sometimes times out on one random route (seen 2026-11-18), which failed the whole
+// build. Loading is retried; a route that still fails after the last attempt fails the build as before.
+const LOAD_ATTEMPTS = 3;
+
+async function loadRoute(page, url) {
+  for (let attempt = 1; ; attempt += 1) {
+    try {
+      await page.goto(url, { waitUntil: 'networkidle2' });
+      await page.waitForSelector('#root *', { timeout: 30000 });
+      return;
+    } catch (error) {
+      if (attempt >= LOAD_ATTEMPTS) throw error;
+      const message = error instanceof Error ? error.message : String(error);
+      console.warn(`↻ Retrying ${url} (attempt ${attempt + 1}/${LOAD_ATTEMPTS}): ${message}`);
+    }
+  }
+}
+
 async function prerenderRoutes() {
   const previewPort = await findAvailablePort();
   const server = await startPreviewServer(previewPort);
@@ -291,9 +309,7 @@ async function prerenderRoutes() {
 
     for (const route of routes) {
       try {
-        const url = `${baseUrl}${route}`;
-        await page.goto(url, { waitUntil: 'networkidle2' });
-        await page.waitForSelector('#root *', { timeout: 30000 });
+        await loadRoute(page, `${baseUrl}${route}`);
 
         await page.evaluate(() => {
           document.getElementById('root')?.setAttribute('data-prerendered', 'true');

@@ -18,3 +18,12 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+
+  # The Firebase CLI for the deploy job (locked; installed without install scripts). Updates wait two weeks.
+  - package-ecosystem: "npm"
+    directory: "/tools/firebase-cli"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 14
+    open-pull-requests-limit: 2

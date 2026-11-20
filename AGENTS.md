@@ -13,7 +13,7 @@ For day-to-day human setup, see [README.md](./README.md).
 | **What this is** | Marketing site for **PT7** (PT7 Pilates Amsterdam) — Reformer Pilates, TRX, strength training, small groups and privates. |
 | **Stack** | React 19, TypeScript, Vite 7, React Router 7. Static output in `dist/` after build. |
 | **Production site** | `https://www.pt7.nl` (canonical URLs and structured data assume this host). |
-| **Repo / hosting** | GitHub repo `isonka.github.io`; **GitHub Pages** deploy via [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml) on push to `main` (and manual `workflow_dispatch`). Pull requests run the same build plus Lighthouse, and do not deploy. |
+| **Repo / hosting** | GitHub repo `isonka.github.io`; [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml) deploys on push to `main` (and manual `workflow_dispatch`) to **GitHub Pages** (pt7.nl today) and to **Firebase Hosting** (`https://pt7-academy.web.app`, config in [`firebase.json`](./firebase.json); pt7.nl moves there later). Pull requests run the same build plus Lighthouse, and do not deploy. `firebase.json` must never hold `predeploy`/`postdeploy` commands (the deploy job refuses them); the CLI is locked in `tools/firebase-cli/`. |
 | **Node** | `>=22.12.0` (CI uses Node 24; see `package.json` and workflow). |
 | **Build** | `npm run build` runs TypeScript, Vite build, static route generation, and **Puppeteer prerender** for HTML snapshots (important for crawlers and first paint). |
 | **SEO strategy** | [`docs/seo-strategy.md`](./docs/seo-strategy.md) — goals, keyword map, technical checklist, content plan, 90-day roadmap. Tick items off there as they ship; change decisions there first. |
@@ -176,7 +176,8 @@ Any single change that spans areas should list touched files in the PR or automa
 | `scripts/generate-routes-manifest.js` | Builds `.routes-manifest.json` + `dist/sitemap.xml` from the manifest |
 | `scripts/generate-static-routes.js` | Static HTML shells for GitHub Pages |
 | `scripts/prerender-static-html.js` | Static HTML generation |
-| `.github/workflows/deploy.yml` | CI build, Lighthouse budgets, and GitHub Pages deploy |
+| `.github/workflows/deploy.yml` | CI build, Lighthouse budgets, GitHub Pages and Firebase Hosting deploys |
+| `firebase.json` | Firebase Hosting: `/api/**` to the PT7 Academy API, headers (trainee area: no framing) |
 | `scripts/seo-agent/` | Weekly SEO agent (collect, snapshot, evaluate, verify, Claude prompt) |
 
 ---
