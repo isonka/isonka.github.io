@@ -191,16 +191,6 @@ h2.home-kicker-heading {
   text-align: left;
 }
 
-.home-hero .home-hero-brand {
-  margin: 0 0 8px;
-  font-size: clamp(2rem, 5vw, 2.75rem);
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  line-height: 1;
-  color: var(--ink, #1c1a18);
-  text-shadow: none;
-}
-
 .home-hero .home-hero-title {
   margin: 0 0 12px;
   max-width: 16em;

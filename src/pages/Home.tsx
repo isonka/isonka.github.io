@@ -248,9 +248,6 @@ export const Home= () => {
         })}
         <div className="home-hero-veil" />
         <div className="home-hero-inner">
-          <p className="home-hero-brand brand-mark">
-            PT<span className="brand-mark-accent">7</span>
-          </p>
           <h1 className="home-hero-title"><MediumTail text={t('hero.title')} /></h1>
           <p className="home-hero-line">{t('hero.studioLine')}</p>
           <div className="home-hero-ratings">
