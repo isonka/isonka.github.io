@@ -22,7 +22,9 @@ Do at most the actions listed, one page each, and touch no other page except to 
 
 ## Where metadata lives
 
-Find the current string with grep and update **every place that serves this page's** title/description, and no other page's: usually `src/i18n/locales/{en,nl}/*.ts` or the page component, plus a `meta` block for the path in `site/routes.ts` and fallback meta in `scripts/generate-static-routes.js` if present. Blog posts are in `src/data/blog/`.
+Find the current string with grep and update **every place that serves this page's** title/description, and no other page's: usually `src/i18n/locales/{en,nl}/*.ts` or the page component, plus a `meta` block for the path in `site/routes.ts` and fallback meta in `scripts/generate-static-routes.js` if present.
+
+**Trainer, equipment and blog content is not in files.** Trainer profiles (`/trainer/…`), equipment pages (`/equipment/<item>/`) and blog posts (`/blog/<post>/`), with their titles, descriptions, bodies and FAQs, come from the PT7 Academy database at build time. Never edit `src/data/trainers*.ts`, `src/data/equipment*.ts`, anything under `src/data/blog/` or `src/data/generated/`: changes there never reach the site. For an action on such a page, change no file. Instead write the exact proposed text (title, description, or the new section or FAQ in HTML) in the summary under a heading **For the database**, and leave the action out of the proposals JSON. The index pages (`/instructors/`, `/equipment/`, `/blog/`) keep their copy in the i18n files as before.
 
 ## Hard rules
 
@@ -36,7 +38,7 @@ Find the current string with grep and update **every place that serves this page
 
 ## Validate
 
-Run `npm run lint` and `npm run build` (full build with prerender), fix anything you broke, then run `node scripts/seo-agent/verify.js` and fix every error it reports.
+Run `npm run lint` and `npm run build:site` (full build with prerender, from the content fetched before you started), fix anything you broke, then run `node scripts/seo-agent/verify.js` and fix every error it reports.
 
 ## Output (required, even if you skip everything)
 

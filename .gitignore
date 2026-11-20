@@ -30,6 +30,10 @@ dist-ssr
 *.sln
 *.sw?
 
+# Site content from the PT7 Academy API, fetched by every build (scripts/site-content.js)
+src/data/generated
+.site-content
+
 # Firebase CLI's local deploy cache
 .firebase
 

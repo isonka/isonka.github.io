@@ -53,8 +53,12 @@ jobs:
       - name: Install Chrome for prerender
         run: npx puppeteer browsers install chrome
 
+      # Trainers, equipment and blog posts come from the PT7 Academy API with the build key (every build needs it;
+      # a run without it, such as a pull request from a fork, fails here)
       - name: Build
         timeout-minutes: 12
+        env:
+          SITE_BUILD_KEY: ${{ secrets.SITE_BUILD_KEY }}
         run: |
           echo "▶ Build step started"
           npm run build

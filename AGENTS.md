@@ -56,7 +56,7 @@ The home route is implemented in **`src/pages/Home.tsx`**. SEO work here include
 |------|----------|
 | Per-page title, description, keywords, canonical, OG/Twitter | `src/components/SEOHead.tsx` — consumed on each page; passes **absolute** `canonical` (typically `https://www.pt7.nl/...`). |
 | JSON-LD | `src/components/StructuredData.tsx` + page-level usage. |
-| Route manifest | `site/routes.ts` — **single source of truth** for public URLs, prerender flags, sitemap entries. Detail pages (blog, trainers, equipment, workouts) are derived from `src/data/`, so never list them by hand. |
+| Route manifest | `site/routes.ts` — **single source of truth** for public URLs, prerender flags, sitemap entries. Detail pages (blog, trainers, equipment, workouts) are derived from the data modules, so never list them by hand. Trainers, equipment and blog posts come from the PT7 Academy API at build time (`scripts/site-content.js`, key `SITE_BUILD_KEY`, written to `src/data/generated/`, not committed); `src/data/trainers*.ts`, `equipment*.ts` and `blog/index.ts` only re-export it. |
 | Sitemap | Generated into `dist/sitemap.xml` by `scripts/generate-routes-manifest.js`. Edit `site/routes.ts`, not the XML. |
 | Static routes for prerender | `scripts/generate-static-routes.js` — reads the manifest; only holds fallback shell meta for fixed pages. |
 | Prerender | `scripts/prerender-static-html.js` — reads the manifest; uses Puppeteer, CI installs Chrome (see workflow). |
@@ -72,7 +72,7 @@ Core paths include: `/`, `/pricing/`, `/intro/`, `/schedule/`, `/equipment/`, `/
 
 1. Add route in `src/App.tsx` (and lazy import if following existing pattern).  
 2. Add `SEOHead` + any `StructuredData` on the page.  
-3. Add the path to `site/routes.ts` with sensible `changefreq` / `priority` — that one entry drives the static shell, the prerender snapshot, and `sitemap.xml`. New blog posts, trainers, equipment, and workouts need nothing here; they are derived from `src/data/`.  
+3. Add the path to `site/routes.ts` with sensible `changefreq` / `priority` — that one entry drives the static shell, the prerender snapshot, and `sitemap.xml`. New blog posts, trainers, equipment, and workouts need nothing here; they are derived from the data (trainers, equipment and blog posts are added in the PT7 Academy database, not in this repository).  
 4. Run `npm run build` locally if possible; fix TypeScript and prerender errors.  
 5. Align key claims with `public/llms.txt`.
 
@@ -100,8 +100,8 @@ Messaging, offers, partner pages (e.g. ClassPass), campaign landing copy, traine
 | Pricing copy and packages | `src/pages/Pricing.tsx`, `src/styles/Pricing.css` |
 | Schedule framing (widget is external) | `src/pages/Schedule.tsx` |
 | Equipment catalog | `src/pages/Equipment.tsx`, `src/pages/EquipmentDetail.tsx`, `src/data/workouts.ts` / related data |
-| Trainers list and detail | `src/pages/Trainers.tsx`, `src/pages/TrainerDetail.tsx`, `src/data/trainers.ts` |
-| Blog | `src/data/blogPosts.ts`, `src/pages/Blog.tsx`, `src/pages/BlogPost.tsx` |
+| Trainers list and detail | `src/pages/Trainers.tsx`, `src/pages/TrainerDetail.tsx`; content from the PT7 Academy database (`src/data/trainers.ts` re-exports it) |
+| Blog | `src/pages/Blog.tsx`, `src/pages/BlogPost.tsx`; posts from the PT7 Academy database (`src/data/blog/index.ts` re-exports them; the old `src/data/blog/posts/` files are unused and go after the owner's check) |
 | Workouts | `src/data/workouts.ts`, `src/data/workoutDetails.ts`, `src/pages/WorkoutDetail.tsx` |
 | Academy / healthcare / pregnancy / city SEO landers | Matching files under `src/pages/` and co-located CSS in `src/styles/` |
 | Footer / nav | `src/components/Footer.tsx`, `src/components/Navbar.tsx` |

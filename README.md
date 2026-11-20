@@ -32,6 +32,13 @@ cd ptstudio7-react
 npm install
 ```
 
+### Site content (trainers, equipment, blog)
+Trainers, equipment and blog posts come from the PT7 Academy API, the master copy. Every build fetches them with the
+build key (`SITE_BUILD_KEY`, from Secret Manager `site-build-key`); `src/data/generated/` is written, never committed.
+```bash
+SITE_BUILD_KEY=... npm run content   # fetch once (the dev server and build:site use what was fetched)
+```
+
 ### Development Server
 ```bash
 npm run dev
@@ -40,7 +47,7 @@ Opens at `http://localhost:5173`
 
 ### Build for Production
 ```bash
-npm run build
+SITE_BUILD_KEY=... npm run build   # fetches the content, then build:site
 ```
 Output in `dist/` folder
 
@@ -161,11 +168,9 @@ Simple footer with links and copyright
 ### Update Pricing
 Edit `src/pages/Pricing.tsx` - Update prices, packages, MindBody links
 
-### Update Trainers
-Edit `src/pages/Home.tsx` - Update trainer images and info in trainers section
-
-### Update Equipment
-Edit `src/pages/Equipment.tsx` - Add/remove equipment items
+### Trainers, equipment, blog posts
+They live in the PT7 Academy database (changed with Claude), not in this repository. After a change, run the deploy
+workflow (`workflow_dispatch` on `main`) so the site is rebuilt.
 
 ### Update Schedule Info
 Edit `src/pages/Schedule.tsx` - Update class duration, group size, etc.

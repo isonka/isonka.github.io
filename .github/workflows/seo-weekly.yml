@@ -82,6 +82,14 @@ jobs:
         if: env.ACTIONS != '0' && github.event.inputs.apply != 'false'
         run: npx puppeteer browsers install chrome
 
+      # The site's content from the PT7 Academy API, with the build key in this step only; the steps below build from
+      # it (build:site) and never see the key
+      - name: Fetch site content
+        if: env.ACTIONS != '0' && github.event.inputs.apply != 'false'
+        env:
+          SITE_BUILD_KEY: ${{ secrets.SITE_BUILD_KEY }}
+        run: npm run content
+
       - name: Apply plan with Claude
         if: env.ACTIONS != '0' && github.event.inputs.apply != 'false'
         env:
@@ -94,13 +102,13 @@ jobs:
           claude -p "$(cat "$RUNNER_TEMP/prompt.md")" \
             --max-turns 80 \
             --permission-mode acceptEdits \
-            --allowedTools "Read,Edit,Write,Glob,Grep,Bash(npm run lint),Bash(npm run build),Bash(npm run build:only),Bash(node scripts/seo-agent/verify.js),Bash(git log:*),Bash(git show:*),Bash(git diff:*),Bash(grep:*)"
+            --allowedTools "Read,Edit,Write,Glob,Grep,Bash(npm run lint),Bash(npm run build:site),Bash(npm run build:only),Bash(node scripts/seo-agent/verify.js),Bash(git log:*),Bash(git show:*),Bash(git diff:*),Bash(grep:*)"
 
       - name: Verify
         if: env.ACTIONS != '0' && github.event.inputs.apply != 'false'
         run: |
           npm run lint
-          npm run build
+          npm run build:site
           node scripts/seo-agent/verify.js
 
       - name: Save proposal
