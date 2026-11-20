@@ -13,7 +13,7 @@ A deterministic evaluator has already compared last weeks' Search Console + GA4 
 Do at most the actions listed, one page each, and touch no other page except to add the internal links named in a `strengthen` action.
 
 - **revert-snippet**: a title/description change measurably lowered position-adjusted CTR. Restore `restore.title` / `restore.description` **exactly**.
-- **rewrite-snippet**: the page ranks but its snippet under-performs its positions. Write a new title (≤ 60 characters) and meta description (120–155 characters) built around the page's real non-brand `topQueries`, in the page's language (`/…/nl/` pages are Dutch). Lead with the query the page should win, end the title with `| PT7`, and give a concrete reason to click (small groups max 5, intro offer, location, expertise) using only facts already on the page. Never reuse anything in `doNotReuse`. Borrow patterns from winning entries in `learnings`; avoid the patterns of losing ones.
+- **rewrite-snippet**: the page ranks but its snippet under-performs its positions. Write a new title (≤ 55 characters) and meta description (120–150 characters) built around the page's real non-brand `topQueries`, in the page's language (`/…/nl/` pages are Dutch). Lead with the query the page should win, end the title with `| PT7`, and give a concrete reason to click (small groups max 5, intro offer, location, expertise) using only facts already on the page. Never reuse anything in `doNotReuse`. Borrow patterns from winning entries in `learnings`; avoid the patterns of losing ones.
 - **fix-snippet-hygiene**: fix only the listed `issues` (length, bare URL, duplicate), and keep the primary keyword and meaning.
 - **strengthen**: the page works, so **do not change its title, description or H1** (`keepSnippet`). Instead:
   - For each relevant query in `uncoveredQueries`, add or extend a section or FAQ item that genuinely answers it (an H2/H3 that contains the query's wording where natural). If the page renders FAQ JSON-LD from the same data, add the item there so both stay in sync. About 80–200 new words in total; quality over volume.
@@ -42,7 +42,7 @@ Find the current string with Grep and update **every place that serves this page
 You have no shell, so you can't run the build, a script or git: you can read, search (Glob, Grep) and edit the allowed files. After you finish, a separate job runs `npm run lint`, `npm run build:site` (full build with prerender) and `node scripts/seo-agent/verify.js`. If any of them fails, no PR opens that week, so check your own work before you stop:
 - TypeScript and quotes stay valid (escape apostrophes in single-quoted strings; keep every key the other language file has).
 - Each proposed `after` title and description is exactly the text the page will serve, after `{{…}}` variables are filled in.
-- Titles are at most 60 characters, descriptions at most 160, and each page keeps exactly one H1.
+- Count characters: keep titles at most 55 characters and descriptions 120–150 (the check fails the whole week above 60 and 160), and each page keeps exactly one H1.
 - `.seo-data/proposals/{{RUN_DATE}}.json` is valid JSON: `changes` is a list, each item with a string `page` and `action`.
 - Re-read every file you changed: only the edits you meant are there.
 

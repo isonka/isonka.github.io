@@ -15,7 +15,8 @@ History (daily data, snapshots, reports, proposals) is committed to the **`seo-d
 
 The workflow runs as four jobs, so the agent never works with a write token or the build key, and nothing it edits
 runs near a secret (owner, 2026-11-20). **collect** (data, snapshot, evaluation, history push, the site content with
-the build key) runs no agent. **propose** runs Claude with its own token and nothing else: it may edit only the files in
+the build key) runs no agent. **propose** runs Claude (CLI pinned) with its own token and nothing else, confined to the working folder
+(`--restricted`): it may edit only the files in
 `editableFiles` (`config.js`) and its two proposal files, and has no shell, so it runs no build, script or git (it reads
 the git history from a file written before it starts). **check** has no secrets: it applies the agent's files and runs lint, the full build and `verify.js`, then
 hands the patch and the proposal files on as size-capped job outputs, never as an artifact. **open-pr** holds the write
