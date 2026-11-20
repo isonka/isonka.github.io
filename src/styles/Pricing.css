@@ -72,14 +72,21 @@
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 21 / 9;
+  aspect-ratio: 3 / 1;
   object-fit: cover;
+}
+
+/* The intro card sits on the photo above 960px: keep the photo taller than the card (narrow desktop windows) */
+@media (min-width: 961px) {
+  .pricing-band-media img {
+    min-height: 420px;
+  }
 }
 
 .pricing-band .special-offer-container {
   position: absolute;
   left: 56px;
-  bottom: 32px;
+  bottom: 24px;
   width: min(440px, calc(100% - 112px));
   max-width: none;
   margin: 0;
@@ -96,11 +103,15 @@
   }
 
   .pricing-band-media img {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 2 / 1;
   }
 }
 
 @media (max-width: 720px) {
+  .pricing-hero {
+    padding-top: 16px;
+  }
+
   .pricing-band {
     padding: 0 16px;
     margin-top: 20px;
@@ -111,7 +122,7 @@
   }
 
   .pricing-band-media img {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 5 / 2;
   }
 
   .pricing-band .special-offer-container {
@@ -562,41 +573,6 @@
   margin-bottom: 8px;
 }
 
-.bf-pricing-banner {
-  max-width: var(--page-max-width, 1200px);
-  width: calc(100% - 48px);
-  margin: 32px auto 0;
-  padding: 32px;
-  background: var(--ink, #1c1a18);
-  color: var(--ground, #f5f0e6);
-  border-radius: 32px;
-  box-sizing: border-box;
-}
-
-.bf-pricing-banner p:last-child {
-  margin: 0;
-  max-width: 42em;
-  font-size: 18px;
-  line-height: 28px;
-  color: #a8a39a;
-}
-
-.package-bonus {
-  display: inline-flex;
-  align-self: flex-start;
-  width: fit-content;
-  max-width: 100%;
-  margin: 0 0 12px;
-  padding: 7px 12px;
-  background: var(--gold, #ffd700);
-  color: var(--ink, #1c1a18);
-  border-radius: var(--radius-pill, 1000px);
-  font-size: 0.92rem;
-  font-weight: 500;
-  line-height: 1.2;
-  white-space: nowrap;
-}
-
 .package-fineprint {
   text-align: left;
   font-size: 0.85rem;
@@ -857,8 +833,7 @@
     width: 100%;
   }
 
-  .contact-cta,
-  .bf-pricing-banner {
+  .contact-cta {
     width: calc(100% - 32px);
     margin-top: 56px;
     padding: 28px 20px;
@@ -985,14 +960,6 @@
   color: var(--muted, #5c574f);
 }
 
-.pricing-page .package-card .package-bonus {
-  margin-top: 6px;
-  padding: 2px 10px;
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--ink, #1c1a18);
-}
-
 .pricing-page .package-card .buy-button {
   grid-column: 3;
   grid-row: 1 / span 8;
@@ -1082,23 +1049,13 @@
   }
 }
 
-/* Line the Black Friday card and the intro card up with the price lists */
-.pricing-page .bf-pricing-banner {
-  max-width: calc(var(--page-max-width, 1200px) - 48px);
-}
-
+/* Line the intro card up with the price lists */
 .pricing-page .special-offer-container {
   max-width: var(--page-max-width, 1200px);
   padding-top: 16px;
 }
 
 @media (max-width: 720px) {
-  .pricing-page .bf-pricing-banner {
-    width: calc(100% - 32px);
-    padding: 24px;
-    border-radius: 24px;
-  }
-
   .pricing-page .special-offer-container {
     padding-left: 16px;
     padding-right: 16px;

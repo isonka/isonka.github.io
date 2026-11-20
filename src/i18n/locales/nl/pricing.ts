@@ -33,14 +33,6 @@ export const nlPricing: DeepStringify<EnPricing> = {
       'Privésessies beginnen bij {{privateFrom}}, met de volle aandacht van je instructeur. Duo-sessies beginnen bij {{coupleFrom}} per persoon.',
     membershipRules:
       'Alle abonnementen staan maximaal één les per dag toe en worden automatisch verlengd tenzij opgezegd vóór de verlengingsdatum.',
-    blackFriday:
-      'Black Friday: een 5-lessenkaart inclusief 1 gratis les, een 10-lessenkaart inclusief 2 gratis lessen, en een 20-lessenkaart inclusief 4 gratis lessen. De prijs blijft gelijk. Groep, privé en duo.',
-  },
-  blackFriday: {
-    badge: 'Black Friday',
-    lead: 'Zelfde prijs, extra lessen. Een 5-lessenkaart inclusief 1 gratis les, een 10-lessenkaart inclusief 2, en een 20-lessenkaart inclusief 4. Groep, privé en duo.',
-    free_one: 'gratis les',
-    free_other: 'gratis lessen',
   },
   offer: {
     badge: 'Speciale aanbieding',

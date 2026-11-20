@@ -30,14 +30,6 @@ export const enPricing = {
       'Private sessions start at {{privateFrom}}, with the full attention of your instructor. Couple sessions start at {{coupleFrom}} per person.',
     membershipRules:
       'All memberships allow a maximum of one class per day and renew automatically unless cancelled before the renewal date.',
-    blackFriday:
-      'Black Friday: a 5-class pack includes 1 free class, a 10-class pack includes 2 free classes, and a 20-class pack includes 4 free classes. The charged price stays the same. Group, private, and couple packs.',
-  },
-  blackFriday: {
-    badge: 'Black Friday',
-    lead: 'Same price, extra classes. A 5-pack includes 1 free class, a 10-pack includes 2, and a 20-pack includes 4. Group, private, and couple.',
-    free_one: 'free class',
-    free_other: 'free classes',
   },
   offer: {
     badge: 'Special offer',

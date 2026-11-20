@@ -118,14 +118,14 @@ h2.home-kicker-heading {
   color: #fff;
 }
 
-.home-hero:not(.home-hero--bf) .home-btn-ghost {
+.home-hero .home-btn-ghost {
   background: transparent;
   color: var(--ink, #1c1a18);
   border-color: var(--ink, #1c1a18);
   backdrop-filter: none;
 }
 
-.home-hero:not(.home-hero--bf) .home-btn-ghost:hover {
+.home-hero .home-btn-ghost:hover {
   background: var(--ground-stone, #ebe4d6);
   color: var(--ink, #1c1a18);
 }
@@ -140,7 +140,7 @@ h2.home-kicker-heading {
   color: var(--ink, #1c1a18);
 }
 
-.home-hero:not(.home-hero--bf) {
+.home-hero {
   position: relative;
   max-width: calc(var(--page-max-width, 1200px) + 48px);
   margin: 8px auto 0;
@@ -153,13 +153,13 @@ h2.home-kicker-heading {
   background: transparent;
 }
 
-.home-hero:not(.home-hero--bf) .home-hero-bg {
+.home-hero .home-hero-bg {
   position: absolute;
   top: 0;
   left: 24px;
   right: 24px;
   width: calc(100% - 48px);
-  height: 560px;
+  height: 440px;
   border-radius: 32px;
   object-fit: cover;
   inset: auto;
@@ -174,16 +174,16 @@ h2.home-kicker-heading {
   opacity: 1;
 }
 
-.home-hero:not(.home-hero--bf) .home-hero-veil {
+.home-hero .home-hero-veil {
   display: none;
 }
 
-.home-hero:not(.home-hero--bf) .home-hero-inner {
+.home-hero .home-hero-inner {
   position: relative;
   z-index: 1;
   width: auto;
   max-width: 620px;
-  margin: 380px 0 0 40px;
+  margin: 200px 0 0 40px;
   padding: 40px 40px 32px;
   background: var(--ground, #f5f0e6);
   border-radius: 32px;
@@ -191,200 +191,7 @@ h2.home-kicker-heading {
   text-align: left;
 }
 
-.home-hero-campaign {
-  margin: 0 0 12px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--gold, #ffd700);
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
-}
-
-.home-hero--bf {
-  display: block;
-  align-items: stretch;
-  background: transparent;
-  min-height: 0;
-  overflow: visible;
-  border: 0;
-  max-width: calc(var(--page-max-width, 1200px) + 48px);
-  margin: 16px auto 0;
-  padding: 0 24px;
-  color: var(--ground, #f5f0e6);
-}
-
-.home-hero--bf .home-hero-inner {
-  max-width: none;
-  width: auto;
-  margin: 0;
-  padding: 48px;
-  background: var(--ink, #1c1a18);
-  border-radius: 32px;
-  color: var(--ground, #f5f0e6);
-}
-
-.home-hero--bf .home-hero-campaign,
-.home-hero--bf .home-hero-title,
-.home-hero--bf .home-hero-line {
-  text-shadow: none;
-}
-
-.home-hero--bf .home-hero-campaign {
-  margin: 0 0 12px;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  line-height: 18px;
-  text-transform: none;
-  color: #ffd700;
-}
-
-.home-hero--bf .home-hero-title {
-  max-width: 12em;
-  margin: 0 0 16px;
-  font-size: clamp(36px, 4.5vw, 56px);
-  font-weight: 300;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  color: var(--ground, #f5f0e6);
-}
-
-.bf-hero-gold {
-  display: block;
-  color: var(--gold, #ffd700);
-}
-
-.home-hero--bf .home-hero-line {
-  max-width: 36em;
-  margin: 0 0 24px;
-  font-size: 18px;
-  line-height: 28px;
-  color: #a8a39a;
-}
-
-.bf-hero {
-  display: grid;
-  gap: 28px;
-}
-
-.home-hero--bf .home-hero-actions {
-  flex-direction: row;
-  align-items: center;
-}
-
-.home-hero--bf .home-btn {
-  width: auto;
-  border-radius: var(--radius-pill, 999px);
-  height: 52px;
-  padding: 0 28px;
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.home-hero--bf .home-btn-ghost {
-  background: transparent;
-  border-color: rgba(255, 255, 255, 0.28);
-  backdrop-filter: none;
-}
-
-.bf-offers {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.bf-offers li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 16px 0;
-  border-top: 1px solid #3d3a36;
-}
-
-.bf-offers li:last-child {
-  border-bottom: 1px solid #3d3a36;
-}
-
-.bf-offer-name {
-  margin: 0 0 4px;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.3;
-}
-
-.bf-offer-free {
-  margin-left: 8px;
-  color: #ffd700;
-}
-
-.bf-offer-detail {
-  margin: 0;
-  font-size: 13px;
-  line-height: 18px;
-  color: #a8a39a;
-}
-
-.bf-offer-popular {
-  color: #ffd700;
-}
-
-.bf-offer-rate {
-  margin: 0;
-  text-align: right;
-  flex-shrink: 0;
-}
-
-.bf-offer-now {
-  display: block;
-  font-size: 22px;
-  font-weight: 300;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-}
-
-.bf-offer-was {
-  display: block;
-  margin-top: 4px;
-  font-size: 13px;
-  line-height: 18px;
-  color: #a8a39a;
-}
-
-.bf-offer-was s {
-  text-decoration: line-through;
-}
-
-.bf-hero-note {
-  margin: 0;
-  max-width: 42em;
-  font-size: 13px;
-  line-height: 18px;
-  color: #a8a39a;
-}
-
-@media (min-width: 900px) {
-  .home-hero--bf .home-hero-inner {
-    padding: 40px 28px;
-  }
-
-  .bf-hero {
-    grid-template-columns: minmax(280px, 0.92fr) minmax(320px, 1.08fr);
-    column-gap: 72px;
-    row-gap: 36px;
-    align-items: start;
-  }
-
-  .bf-offers {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-    align-self: center;
-  }
-}
-
-.home-hero:not(.home-hero--bf) .home-hero-brand {
+.home-hero .home-hero-brand {
   margin: 0 0 8px;
   font-size: clamp(2rem, 5vw, 2.75rem);
   font-weight: 400;
@@ -394,7 +201,7 @@ h2.home-kicker-heading {
   text-shadow: none;
 }
 
-.home-hero:not(.home-hero--bf) .home-hero-title {
+.home-hero .home-hero-title {
   margin: 0 0 12px;
   max-width: 16em;
   font-size: clamp(32px, 4vw, 44px);
@@ -405,7 +212,7 @@ h2.home-kicker-heading {
   text-shadow: none;
 }
 
-.home-hero:not(.home-hero--bf) .home-hero-line {
+.home-hero .home-hero-line {
   margin: 0 0 20px;
   max-width: 36em;
   font-size: 18px;
@@ -834,7 +641,7 @@ h2.home-kicker-heading {
   margin: 0 0 20px;
 }
 
-.home-hero:not(.home-hero--bf) .home-hero-ratings a {
+.home-hero .home-hero-ratings a {
   background: #fff;
   border: 1px solid var(--line, #ddd5c6);
   backdrop-filter: none;
@@ -951,51 +758,6 @@ h2.home-kicker-heading {
   border-color: #ffd700;
 }
 
-.home-hero--bf ~ .home-contact .home-contact-inner {
-  background: #fff;
-  color: var(--ink, #1c1a18);
-  border: 1px solid var(--line, #ddd5c6);
-}
-
-.home-hero--bf ~ .home-contact .home-contact-title,
-.home-hero--bf ~ .home-contact .home-signature {
-  color: var(--ink, #1c1a18);
-}
-
-.home-hero--bf ~ .home-contact .home-kicker-on-dark {
-  color: var(--gold-text, #7a6400);
-}
-
-.home-hero--bf ~ .home-contact .home-contact-address {
-  color: var(--ink, #1c1a18);
-}
-
-.home-hero--bf ~ .home-contact .home-contact-meta,
-.home-hero--bf ~ .home-contact .home-contact-grid .contact-map-transit,
-.home-hero--bf ~ .home-contact .home-contact-socials a {
-  color: var(--ink, #1c1a18);
-  border-color: var(--line, #ddd5c6);
-}
-
-.home-hero--bf ~ .home-contact .home-contact-actions {
-  background: var(--ground, #f5f0e6);
-}
-
-.home-hero--bf ~ .home-contact .home-btn-ghost {
-  color: var(--ink, #1c1a18);
-  border-color: var(--ink, #1c1a18);
-}
-
-.home-hero--bf ~ .home-contact .home-btn-ghost:hover {
-  background: var(--ground-stone, #ebe4d6);
-  color: var(--ink, #1c1a18);
-}
-
-.home-hero--bf ~ .home-contact .home-contact-socials a:hover {
-  color: var(--gold-text, #7a6400);
-  border-color: var(--gold-text, #7a6400);
-}
-
 .home-faq-list {
   margin-top: 24px;
   background: #fff;
@@ -1043,18 +805,15 @@ h2.home-kicker-heading {
     grid-template-columns: 1fr;
   }
 
-  .home-hero:not(.home-hero--bf) .home-hero-bg {
-    height: 480px;
+  .home-hero .home-hero-bg {
+    height: 380px;
   }
 
-  .home-hero:not(.home-hero--bf) .home-hero-inner {
-    margin: 300px 0 0 16px;
+  .home-hero .home-hero-inner {
+    margin: 180px 0 0 16px;
     padding: 28px 24px 24px;
   }
 
-  .home-hero--bf .home-hero-inner {
-    padding: 32px 24px;
-  }
 
   .home-bleed-frame {
     max-width: none;
@@ -1116,28 +875,25 @@ h2.home-kicker-heading {
     padding: 56px 16px 56px;
   }
 
-  .home-hero:not(.home-hero--bf) {
+  .home-hero {
     padding: 0;
   }
 
-  .home-hero:not(.home-hero--bf) .home-hero-bg {
+  .home-hero .home-hero-bg {
     left: 0;
     right: 0;
     width: 100%;
-    height: 440px;
+    height: 260px;
     border-radius: 0;
   }
 
-  .home-hero:not(.home-hero--bf) .home-hero-inner {
-    margin: 404px 0 0;
+  .home-hero .home-hero-inner {
+    margin: 210px 0 0;
     max-width: none;
     border-radius: 32px 32px 0 0;
     padding: 28px 20px 8px;
   }
 
-  .home-hero--bf {
-    padding: 0 16px;
-  }
 
   .oo-home-banner,
   .academy-urgency-banner {

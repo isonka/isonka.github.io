@@ -19,7 +19,6 @@ import {
   packTotal,
   savePercent,
 } from '../data/pricing';
-import { BLACK_FRIDAY_BONUS } from '../data/blackFriday';
 import { formatOpeningClock, studioHoursFor, studioStreet } from '../data/business';
 import { useLocale } from '../i18n/useLocale';
 import '../styles/Pricing.css';
@@ -38,15 +37,7 @@ const PRICING_HREFLANG = [
 const weekdayHours = formatOpeningClock(studioHoursFor('Monday'));
 const weekendHours = formatOpeningClock(studioHoursFor('Saturday'));
 
-const SUMMARY_KEYS = ['blackFriday', 'group', 'intro', 'monthly', 'unlimited', 'private', 'membershipRules'] as const;
-
-function PackBonus({ pack }: { pack: keyof typeof BLACK_FRIDAY_BONUS }) {
-  const { t } = useTranslation('pricing');
-  const free = BLACK_FRIDAY_BONUS[pack];
-  return (
-    <p className="package-bonus">{`+${free} ${t('blackFriday.free', { count: free })}`}</p>
-  );
-}
+const SUMMARY_KEYS = ['group', 'intro', 'monthly', 'unlimited', 'private', 'membershipRules'] as const;
 
 function ClassOffer({
   name,
@@ -56,7 +47,6 @@ function ClassOffer({
   save,
   unit = 'class',
   serviceId,
-  bonus,
   badge,
   featured = false,
 }: {
@@ -67,7 +57,6 @@ function ClassOffer({
   save?: number;
   unit?: 'class' | 'person';
   serviceId: string;
-  bonus?: keyof typeof BLACK_FRIDAY_BONUS;
   badge?: string;
   featured?: boolean;
 }) {
@@ -92,7 +81,6 @@ function ClassOffer({
           ? t('labels.packMeta', { amount: formatEur(total), count: weeks })
           : t('labels.validShort', { count: weeks })}
       </p>
-      {bonus ? <PackBonus pack={bonus} /> : null}
       <StableHealcodeSlot
         className="buy-button healcode-pricing-option-text-link"
         html={`<healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="123605" data-mb-site-id="5741736" data-service-id="${serviceId}" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="${buyNow}"></healcode-widget>`}
@@ -230,10 +218,6 @@ export const Pricing= () => {
             </div>
           </div>
         </section>
-        <div className="bf-pricing-banner" role="region" aria-label={t('blackFriday.badge')}>
-          <p className="pricing-kicker pricing-kicker-on-dark">{t('blackFriday.badge')}</p>
-          <p>{t('blackFriday.lead')}</p>
-        </div>
         <nav className="pricing-jump" aria-label={t('nav.aria')}>
           <a href="#membership">{t('nav.membership')}</a>
           <a href="#group-classes">{t('nav.group')}</a>
@@ -332,7 +316,6 @@ export const Pricing= () => {
                 weeks={5}
                 save={savePercent(GROUP.single, GROUP.pack5.perClass)}
                 serviceId="100003"
-                bonus={5}
               />
               <ClassOffer
                 name={t('labels.classPack', { count: 10 })}
@@ -341,7 +324,6 @@ export const Pricing= () => {
                 weeks={10}
                 save={savePercent(GROUP.single, GROUP.pack10.perClass)}
                 serviceId="100004"
-                bonus={10}
                 badge={t('labels.mostPopular')}
                 featured
               />
@@ -352,7 +334,6 @@ export const Pricing= () => {
                 weeks={20}
                 save={savePercent(GROUP.single, GROUP.pack20.perClass)}
                 serviceId="100005"
-                bonus={20}
               />
             </div>
         </section>
@@ -408,7 +389,6 @@ export const Pricing= () => {
                 weeks={5}
                 save={savePercent(PRIVATE.junior.single, PRIVATE.junior.pack5)}
                 serviceId="100053"
-                bonus={5}
               />
               <ClassOffer
                 name={t('labels.classPack', { count: 10 })}
@@ -417,7 +397,6 @@ export const Pricing= () => {
                 weeks={10}
                 save={savePercent(PRIVATE.junior.single, PRIVATE.junior.pack10)}
                 serviceId="100054"
-                bonus={10}
               />
               <ClassOffer
                 name={t('labels.classPack', { count: 20 })}
@@ -426,7 +405,6 @@ export const Pricing= () => {
                 weeks={20}
                 save={savePercent(PRIVATE.junior.single, PRIVATE.junior.pack20)}
                 serviceId="100055"
-                bonus={20}
               />
             </div>
             </div>
@@ -446,7 +424,6 @@ export const Pricing= () => {
                 weeks={5}
                 save={savePercent(PRIVATE.senior.single, PRIVATE.senior.pack5)}
                 serviceId="100013"
-                bonus={5}
               />
               <ClassOffer
                 name={t('labels.classPack', { count: 10 })}
@@ -455,7 +432,6 @@ export const Pricing= () => {
                 weeks={10}
                 save={savePercent(PRIVATE.senior.single, PRIVATE.senior.pack10)}
                 serviceId="100014"
-                bonus={10}
                 badge={t('labels.mostPopular')}
                 featured
               />
@@ -466,7 +442,6 @@ export const Pricing= () => {
                 weeks={20}
                 save={savePercent(PRIVATE.senior.single, PRIVATE.senior.pack20)}
                 serviceId="100015"
-                bonus={20}
               />
             </div>
             </div>
@@ -488,7 +463,6 @@ export const Pricing= () => {
                 weeks={5}
                 save={savePercent(PRIVATE.master.single, PRIVATE.master.pack5)}
                 serviceId="100049"
-                bonus={5}
               />
               <ClassOffer
                 name={t('labels.classPack', { count: 10 })}
@@ -497,7 +471,6 @@ export const Pricing= () => {
                 weeks={10}
                 save={savePercent(PRIVATE.master.single, PRIVATE.master.pack10)}
                 serviceId="100050"
-                bonus={10}
               />
               <ClassOffer
                 name={t('labels.classPack', { count: 20 })}
@@ -506,7 +479,6 @@ export const Pricing= () => {
                 weeks={20}
                 save={savePercent(PRIVATE.master.single, PRIVATE.master.pack20)}
                 serviceId="100051"
-                bonus={20}
               />
             </div>
             </div>
@@ -528,7 +500,6 @@ export const Pricing= () => {
                 save={savePercent(COUPLE.single, COUPLE.pack5.perClass)}
                 unit="person"
                 serviceId="100034"
-                bonus={5}
               />
               <ClassOffer
                 name={t('labels.classPack', { count: 10 })}
@@ -538,7 +509,6 @@ export const Pricing= () => {
                 save={savePercent(COUPLE.single, COUPLE.pack10.perClass)}
                 unit="person"
                 serviceId="100035"
-                bonus={10}
                 badge={t('labels.bestValue')}
                 featured
               />
@@ -550,7 +520,6 @@ export const Pricing= () => {
                 save={savePercent(COUPLE.single, COUPLE.pack20.perClass)}
                 unit="person"
                 serviceId="100036"
-                bonus={20}
               />
             </div>
         </section>
