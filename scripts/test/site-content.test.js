@@ -40,6 +40,8 @@ test('slugs and image file names', () => {
   for (const ok of ['elif', 'pilates-for-men', 'reformer-2026']) assert.match(ok, rules.SLUG);
   for (const bad of ['../x', 'a/b', 'A', 'a--b', '-a', 'a"<', '']) assert.doesNotMatch(bad, rules.SLUG);
   assert.match('/assets/images/studio.webp', rules.SITE_IMAGE);
-  assert.doesNotMatch('/assets/images/../x.webp', /^\/assets\/images\/[A-Za-z0-9_-][A-Za-z0-9._-]*$/);
+  for (const bad of ['/assets/images/..', '/assets/images/../x.webp', '/assets/images/.x.webp', '/api/content-images/1']) {
+    assert.doesNotMatch(bad, rules.SITE_IMAGE);
+  }
   assert.deepEqual(rules.IMAGE_TYPES['image/png'], ['.png']);
 });

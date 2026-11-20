@@ -30,7 +30,7 @@ const IMAGE_TYPES = { 'image/webp': ['.webp'], 'image/jpeg': ['.jpg', '.jpeg'], 
 // Slugs become paths, file names, sitemap entries and canonical addresses
 const SLUG = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
-const SITE_IMAGE = /^\/assets\/images\/[A-Za-z0-9._-]+$/;
+const SITE_IMAGE = /^\/assets\/images\/[A-Za-z0-9_-][A-Za-z0-9._-]*$/;
 // Ids and classes the posts use (reference anchors, the site's blog styles); others are dropped, so a post can't
 // overwrite page variables through an id or dress up as other page elements
 const BLOG_CLASSES = [
