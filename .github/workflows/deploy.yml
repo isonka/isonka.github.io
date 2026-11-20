@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy (GitHub Pages and Firebase Hosting)
 
 on:
   push:
@@ -6,10 +6,10 @@ on:
   pull_request:
   workflow_dispatch:
 
+# Each job asks for what it needs. The build job runs install scripts, so it never gets a sign-in token (id-token):
+# on main, such a token could be swapped for the Firebase Hosting deploy account.
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages-${{ github.ref }}
@@ -75,10 +75,83 @@ jobs:
         with:
           path: ./dist
 
+      # The same build for Firebase Hosting (deploy-firebase below)
+      - name: Upload the build for Firebase Hosting
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: |
+            ./dist
+            ./firebase.json
+          include-hidden-files: false
+          retention-days: 1
+
+  # pt7.nl moves from GitHub Pages to Firebase Hosting (pt7-academy project, milestone 1 step 3). Until the domain moves,
+  # every push to main deploys to both: GitHub Pages (pt7.nl) and Firebase Hosting (https://pt7-academy.web.app).
+  # Keyless sign-in to GCP (Workload Identity Federation, limited to this repository's main branch) as an account that
+  # may only publish Hosting releases (pt7-academy docs/DEPLOY_GCP.md, "The website on Firebase Hosting"). This job
+  # holds the token, so it builds nothing and runs no install scripts: it deploys the build job's output as is.
+  deploy-firebase:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      id-token: write # the keyless sign-in to GCP, in this job only
+    concurrency:
+      group: firebase-hosting
+      cancel-in-progress: false
+    env:
+      PROJECT_ID: pt7-academy
+      WORKLOAD_IDENTITY_PROVIDER: projects/344238205966/locations/global/workloadIdentityPools/github/providers/website
+      DEPLOY_ACCOUNT: website-deploy@pt7-academy.iam.gserviceaccount.com
+      FIREBASE_TOOLS: firebase-tools@15.34.2
+    steps:
+      - name: Download the build
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: ./site
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      # Installed outside the site folder, without install scripts, at a fixed version
+      - name: Install the Firebase CLI
+        run: |
+          mkdir -p "$RUNNER_TEMP/firebase-cli"
+          npm install --prefix "$RUNNER_TEMP/firebase-cli" --ignore-scripts --no-audit --no-fund "$FIREBASE_TOOLS"
+          echo "$RUNNER_TEMP/firebase-cli/node_modules/.bin" >> "$GITHUB_PATH"
+
+      - uses: google-github-actions/auth@v3
+        with:
+          workload_identity_provider: ${{ env.WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ env.DEPLOY_ACCOUNT }}
+
+      - name: Deploy to Firebase Hosting
+        working-directory: ./site
+        run: firebase deploy --only hosting --project "$PROJECT_ID" --non-interactive --message "$GITHUB_SHA"
+
+      # The new release must serve the home page, the trainee area with its headers, and the API behind it
+      - name: Check the live site
+        run: |
+          SITE=https://pt7-academy.web.app
+          curl -fsS -o /dev/null --retry 3 --retry-all-errors "$SITE/"
+          curl -fsS -D - -o /dev/null --retry 3 --retry-all-errors "$SITE/academy/trainee/" \
+            | tr -d '\r' | grep -qi "^content-security-policy: frame-ancestors 'none'$"
+          curl -fsS -o /dev/null --retry 3 --retry-all-errors "$SITE/api/health"
+          echo "ok"
+
   deploy:
     if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write # GitHub Pages' own sign-in; this job runs only GitHub's deploy-pages action
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
