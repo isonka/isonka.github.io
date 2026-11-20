@@ -1,0 +1,8 @@
+{
+  "name": "pt7-lhci",
+  "private": true,
+  "description": "Lighthouse CI for the build job's Lighthouse step, locked so every dependency is fixed and kept apart from the site's own dependencies (installed with npm ci --ignore-scripts by the lighthouse script)",
+  "dependencies": {
+    "@lhci/cli": "0.15.1"
+  }
+}

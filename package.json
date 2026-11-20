@@ -23,7 +23,7 @@
     "seo:weekly": "npm run seo:collect && npm run seo:snapshot && npm run seo:evaluate",
     "seo:test": "node --test scripts/seo-agent/test/evaluate.test.js",
     "preview": "vite preview",
-    "lighthouse": "lhci collect --config=lighthouserc.mobile.json && lhci assert --config=lighthouserc.mobile.json && lhci collect --config=lighthouserc.desktop.json && lhci assert --config=lighthouserc.desktop.json",
+    "lighthouse": "npm ci --prefix tools/lhci --ignore-scripts --no-audit --no-fund && tools/lhci/node_modules/.bin/lhci collect --config=lighthouserc.mobile.json && tools/lhci/node_modules/.bin/lhci assert --config=lighthouserc.mobile.json && tools/lhci/node_modules/.bin/lhci collect --config=lighthouserc.desktop.json && tools/lhci/node_modules/.bin/lhci assert --config=lighthouserc.desktop.json",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "content": "node scripts/site-content.js fetch",
@@ -38,7 +38,6 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
-    "@lhci/cli": "0.15.1",
     "@types/node": "^24.6.0",
     "@types/react": "^19.1.16",
     "@types/react-dom": "^19.1.9",
