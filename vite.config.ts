@@ -7,6 +7,7 @@ import path from 'node:path'
 // .site-content/images/, and the build copies them into dist/assets/images/. The dev server serves them from there
 // at the same addresses, for any name that isn't one of the site's own files in public/.
 const CONTENT_IMAGES = path.resolve('.site-content/images')
+const PUBLIC_IMAGES = path.resolve('public/assets/images')
 const contentImages = (): Plugin => ({
   name: 'content-images',
   apply: 'serve',
@@ -14,6 +15,7 @@ const contentImages = (): Plugin => ({
     server.middlewares.use('/assets/images', (req, res, next) => {
       const name = decodeURIComponent((req.url || '').split('?')[0]).replace(/^\//, '')
       if (!/^[A-Za-z0-9_-][A-Za-z0-9._-]*$/.test(name)) return next()
+      if (fs.existsSync(path.join(PUBLIC_IMAGES, name))) return next() // the site's own file wins, as in the build
       const file = path.join(CONTENT_IMAGES, name)
       if (!fs.existsSync(file)) return next()
       res.setHeader('Content-Type', name.endsWith('.png') ? 'image/png' : name.endsWith('.webp') ? 'image/webp' : 'image/jpeg')

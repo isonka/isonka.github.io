@@ -101,7 +101,7 @@ Messaging, offers, partner pages (e.g. ClassPass), campaign landing copy, traine
 | Schedule framing (widget is external) | `src/pages/Schedule.tsx` |
 | Equipment catalog | `src/pages/Equipment.tsx`, `src/pages/EquipmentDetail.tsx`, `src/data/workouts.ts` / related data |
 | Trainers list and detail | `src/pages/Trainers.tsx`, `src/pages/TrainerDetail.tsx`; content from the PT7 Academy database (`src/data/trainers.ts` re-exports it) |
-| Blog | `src/pages/Blog.tsx`, `src/pages/BlogPost.tsx`; posts from the PT7 Academy database (`src/data/blog/index.ts` re-exports them); their images too: `public/assets/images/` keeps only the images other pages also use (for example the trainer photos on the home page), and the dev server serves the rest from `.site-content/images/` (`npm run content`) |
+| Blog | `src/pages/Blog.tsx`, `src/pages/BlogPost.tsx`; posts from the PT7 Academy database (`src/data/blog/index.ts` re-exports them); their images too: `public/assets/images/` keeps only the images other pages also use (for example the trainer photos on the home page), and the dev server serves the rest from `.site-content/images/` (`npm run content`). A kept image (a trainer photo, for example) can't be replaced in the database under the same file name: the build fails when the two differ, so give the new photo a new name (or replace both) |
 | Workouts | `src/data/workouts.ts`, `src/data/workoutDetails.ts`, `src/pages/WorkoutDetail.tsx` |
 | Academy / healthcare / pregnancy / city SEO landers | Matching files under `src/pages/` and co-located CSS in `src/styles/` |
 | Footer / nav | `src/components/Footer.tsx`, `src/components/Navbar.tsx` |
