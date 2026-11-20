@@ -35,7 +35,10 @@ test('only known ids, classes and targets', () => {
   assert.equal(clean('<p id="pt7Config" class="blog-callout navbar">a</p>'), '<p class="blog-callout">a</p>');
   assert.equal(clean('<a href="/x/" target="_top">x</a>'), '<a href="/x/">x</a>');
   assert.equal(clean('<a href="/api/site-auth/logout">x</a>'), '<a>x</a>');
-  assert.equal(clean('<a href="/API/x">x</a>'), '<a>x</a>');
+  for (const href of ['/API/x', '\\api/x', '/./api/x', '/x/../api/x', '/%61pi/x', 'https://www.pt7.nl/api/x', 'https://pt7.nl/api/x', 'https://pt7-academy.web.app/API/x']) {
+    assert.equal(clean(`<a href="${href}">x</a>`), '<a>x</a>', href);
+  }
+  assert.equal(clean('<a href="/apidocs/">x</a>'), '<a href="/apidocs/">x</a>');
 });
 
 test('slugs and image file names', () => {

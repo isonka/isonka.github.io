@@ -31,6 +31,18 @@ const IMAGE_TYPES = { 'image/webp': ['.webp'], 'image/jpeg': ['.jpg', '.jpeg'], 
 const SLUG = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
 const SITE_IMAGE = /^\/assets\/images\/[A-Za-z0-9_-][A-Za-z0-9._-]*$/;
+// Whether a link leads into this site's API (on any of its addresses), read the way a browser reads it (`\api`,
+// `/./api`, `%61pi` included)
+const SITE_HOSTS = ['www.pt7.nl', 'pt7.nl', 'pt7-academy.web.app', 'pt7-academy.firebaseapp.com'];
+function intoApi(href) {
+  try {
+    const url = new URL(href, `${SITE_URL}/`);
+    return SITE_HOSTS.includes(url.hostname) && /^\/api(\/|$)/i.test(decodeURIComponent(url.pathname));
+  } catch {
+    return true; // not a usable address: drop it
+  }
+}
+
 // Ids and classes the posts use (reference anchors, the site's blog styles); others are dropped, so a post can't
 // overwrite page variables through an id or dress up as other page elements
 const BLOG_CLASSES = [
@@ -57,7 +69,7 @@ const BLOG_HTML = {
       const kept = { ...attribs };
       if ('id' in kept && !BLOG_IDS.includes(kept.id)) delete kept.id;
       if ('target' in kept && kept.target !== '_blank') delete kept.target;
-      if (typeof kept.href === 'string' && /^\s*\/+api(\/|$)/i.test(kept.href)) delete kept.href;
+      if (typeof kept.href === 'string' && intoApi(kept.href)) delete kept.href;
       return { tagName, attribs: kept };
     },
   },
