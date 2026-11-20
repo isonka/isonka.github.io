@@ -27,3 +27,13 @@ updates:
     cooldown:
       default-days: 14
     open-pull-requests-limit: 2
+
+  # Lighthouse CI for the build job's Lighthouse step (locked; installed without install scripts). Updates wait two
+  # weeks.
+  - package-ecosystem: "npm"
+    directory: "/tools/lhci"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 14
+    open-pull-requests-limit: 2
