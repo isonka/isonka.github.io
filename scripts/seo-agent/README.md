@@ -6,23 +6,25 @@ Every Monday, `.github/workflows/seo-weekly.yml` runs this loop and opens a PR f
 collect.js   Search Console (page + page×query, daily) and GA4 organic landing pages
 snapshot.js  title / description / H1 / headings / content links of every sitemap URL, live
 evaluate.js  diff snapshots → each change becomes an experiment; score it; plan actions
-Claude Code  carries out the plan (prompt.md), within AGENTS.md rules
+Claude Code  carries out the plan (prompt.md), within AGENTS.md rules; edits only, no build
 verify.js    the built pages serve exactly the proposed text; lengths ok; no guardrail breaches
 PR           one PR per week: what changed, why, with the numbers
 ```
 
 History (daily data, snapshots, reports, proposals) is committed to the **`seo-data`** branch, not `main`.
 
-The workflow runs as three jobs, so Claude never works with a write token or the build key. **collect** (data,
-snapshot, evaluation, history push, the site content with the build key) runs no agent. **propose** (Claude, lint,
-build, verify.js) has a read-only token that is not kept on disk, and no secret but Claude's own token. It hands over
-the patch and the two proposal files as size-capped job outputs, never as an artifact. **open-pr** holds the write
+The workflow runs as four jobs, so the agent never works with a write token or the build key, and nothing it edits
+runs near a secret (owner, 2026-11-20). **collect** (data, snapshot, evaluation, history push, the site content with
+the build key) runs no agent. **propose** runs Claude with its own token and nothing else: it may edit only the files in
+`editableFiles` (`config.js`) and its two proposal files, and has no shell, so it runs no build, script or git (it reads
+the git history from a file written before it starts). **check** has no secrets: it applies the agent's files and runs lint, the full build and `verify.js`, then
+hands the patch and the proposal files on as size-capped job outputs, never as an artifact. **open-pr** holds the write
 token and runs none of this repository's code. It checks the proposal's shape and accepts the patch only if it modifies
-existing files the agent may change (`editableFiles` in `config.js`, which `verify.js` also checks: locale files, page
-components, the workout data, route meta, static-route fallback meta). New, deleted or renamed files, mode changes and
-binary files are refused. A PR that touches code files besides the locale files says so at the top. To let the agent
-edit another place, widen `editableFiles` and the workflow's `allowed` together. No job restores a cache: the propose
-job runs agent-edited code on `main`'s cache scope, so the deploy workflow restores none either.
+existing files in `editableFiles`. New, deleted or renamed files, mode changes and binary files are refused. A PR that
+touches anything besides the locale files says so at the top, so review those as code. To let the agent edit another
+place, change `editableFiles`, the workflow's `allowed` and propose's `Edit(...)` rules together. No job restores a
+cache: check runs agent-edited code on `main`'s cache scope, so the deploy workflow restores none either. Because the
+agent can't build, a mistake it makes fails that week's run (the run log says why) instead of being fixed by it.
 
 ## How it decides
 

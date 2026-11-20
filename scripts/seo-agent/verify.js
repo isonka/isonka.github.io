@@ -41,6 +41,16 @@ for (let i = 0; i < entries.length; i++) {
 const summary = execFileSync('git', ['diff', 'HEAD', '--summary'], { cwd: projectRoot, encoding: 'utf8' }).trim();
 if (summary) errors.push(`file modes changed, which the workflow refuses: ${summary.replace(/\s+/g, ' ')}`);
 
+// The workflow's open-pr job refuses a proposal file that doesn't parse or has the wrong shape (evaluate.js reads it
+// every week), so it fails here first
+if (!proposal && fs.existsSync(file)) errors.push(`${path.basename(file)}: not valid JSON`);
+if (proposal) {
+  const ok = Array.isArray(proposal.changes) && proposal.changes.every(
+    (c) => c && typeof c === 'object' && typeof c.page === 'string' && typeof c.action === 'string',
+  );
+  if (!ok) errors.push(`${path.basename(file)}: "changes" must be a list of objects, each with a string "page" and "action"`);
+}
+
 if (!proposal) {
   if (errors.length) {
     console.error(`✗ SEO agent changes failed verification:\n  - ${errors.join('\n  - ')}`);
@@ -53,7 +63,7 @@ if (!proposal) {
 const report = readJson(path.join(dirs.reports, 'latest.json'), { actions: [] });
 const planned = new Set(report.actions.map((a) => a.page));
 
-for (const c of proposal.changes || []) {
+for (const c of (Array.isArray(proposal.changes) ? proposal.changes : []).filter((x) => x && typeof x === 'object')) {
   if (!planned.has(c.page)) errors.push(`${c.page}: not in this week's action plan`);
   if (config.frozenPages.includes(c.page)) errors.push(`${c.page}: frozen page`);
   if (c.kind !== 'snippet') continue;

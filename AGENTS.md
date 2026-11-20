@@ -149,7 +149,7 @@ Deploy: merging to `main` triggers GitHub Actions; no separate `npm run deploy` 
 ### Guardrails
 
 - Do not commit secrets; analytics IDs in `index.html` are public by nature but still treat config as intentional.  
-- Puppeteer in CI: workflow caches browser; if build fails on prerender, check Chrome install step and route list.  
+- Puppeteer in CI: the workflow installs Chrome on every run (no caches: see `.github/workflows/seo-weekly.yml`); if build fails on prerender, check the Chrome install step and route list.  
 - Respect `.nvmrc` / `engines` when advising Node version.
 
 ---
