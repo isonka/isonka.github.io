@@ -24,7 +24,20 @@ const OUT_DIR = path.join(root, 'src/data/generated');
 const OUT_IMAGES = path.join(root, '.site-content/images');
 const DIST_IMAGES = path.join(root, 'dist/assets/images');
 const LANGS = ['en', 'nl'];
-const IMAGE_TYPES = { 'image/webp': '.webp', 'image/jpeg': '.jpg', 'image/png': '.png' };
+// The file name's extension must match the type: Hosting serves a file by its extension (an "image" named x.html or
+// x.svg would be a page on this site)
+const IMAGE_TYPES = { 'image/webp': ['.webp'], 'image/jpeg': ['.jpg', '.jpeg'], 'image/png': ['.png'] };
+// Slugs become paths, file names, sitemap entries and canonical addresses
+const SLUG = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+const DATE = /^\d{4}-\d{2}-\d{2}$/;
+const SITE_IMAGE = /^\/assets\/images\/[A-Za-z0-9._-]+$/;
+// Ids and classes the posts use (reference anchors, the site's blog styles); others are dropped, so a post can't
+// overwrite page variables through an id or dress up as other page elements
+const BLOG_CLASSES = [
+  'accreditation-logos', 'blog-callout', 'blog-compare-grid', 'blog-compare-no', 'blog-compare-yes', 'blog-figure',
+  'blog-refs', 'blog-table', 'blog-table--prose', 'blog-table-wrap', 'ittap-logo', 'pma-logo',
+];
+const BLOG_IDS = Array.from({ length: 30 }, (_, i) => `ref-${i + 1}`);
 
 // Exactly what the blog posts use today; anything else is dropped (and logged)
 const BLOG_HTML = {
@@ -37,6 +50,18 @@ const BLOG_HTML = {
     a: ['href', 'target', 'rel'],
     img: ['src', 'alt', 'width', 'height', 'loading', 'decoding'],
   },
+  allowedClasses: { '*': BLOG_CLASSES },
+  // Only the reference anchors' ids, and only target="_blank"
+  transformTags: {
+    '*': (tagName, attribs) => {
+      const kept = { ...attribs };
+      if ('id' in kept && !BLOG_IDS.includes(kept.id)) delete kept.id;
+      if ('target' in kept && kept.target !== '_blank') delete kept.target;
+      return { tagName, attribs: kept };
+    },
+  },
+  // Images only from the site's own image folder (not /api/..., which the browser would call with the trainee cookie)
+  exclusiveFilter: (frame) => frame.tag === 'img' && !SITE_IMAGE.test(frame.attribs.src || ''),
   allowedSchemes: ['https', 'mailto', 'tel'],
   allowedSchemesByTag: { img: [] }, // images only from this site (relative paths)
   allowProtocolRelative: false,
@@ -49,8 +74,23 @@ function fail(message) {
   process.exit(1);
 }
 
+// Two more tries after a network error, a 429 or a 5xx, a few seconds apart
+async function request(url, options = {}) {
+  for (let attempt = 1; ; attempt += 1) {
+    try {
+      const response = await fetch(url, options);
+      if (attempt < 3 && (response.status === 429 || response.status >= 500)) throw new Error(`HTTP ${response.status}`);
+      return response;
+    } catch (error) {
+      if (attempt >= 3) throw error;
+      console.warn(`↻ ${url.replace(API_URL, '')}: ${error.message}; trying again`);
+      await new Promise((resolve) => setTimeout(resolve, 3000 * attempt));
+    }
+  }
+}
+
 async function getJson(pathname, key) {
-  const response = await fetch(`${API_URL}${pathname}`, { headers: { 'X-PT7-Build-Key': key } });
+  const response = await request(`${API_URL}${pathname}`, { headers: { 'X-PT7-Build-Key': key } });
   if (!response.ok) fail(`${pathname} answered ${response.status}`);
   const body = await response.json();
   return body && typeof body === 'object' && 'data' in body ? body.data : body;
@@ -63,12 +103,13 @@ async function sitePath(url) {
   if (typeof url !== 'string' || !/^\/api\/content-images\/[0-9a-f]{24}$/.test(url)) fail(`unexpected image url ${url}`);
   const known = images.get(url);
   if (known) return known;
-  const response = await fetch(`${API_URL}${url}`);
+  const response = await request(`${API_URL}${url}`);
   if (!response.ok) fail(`${url} answered ${response.status}`);
   const type = (response.headers.get('content-type') || '').split(';')[0].trim();
   if (!IMAGE_TYPES[type]) fail(`${url} has an unexpected type ${type}`);
   const name = /filename="([^"]+)"/.exec(response.headers.get('content-disposition') || '')?.[1];
-  if (!name || !/^[A-Za-z0-9._-]+$/.test(name) || name.startsWith('.')) fail(`${url} has no usable file name`);
+  if (!name || !/^[A-Za-z0-9_-][A-Za-z0-9._-]*$/.test(name)) fail(`${url} has no usable file name`);
+  if (!IMAGE_TYPES[type].includes(path.extname(name).toLowerCase())) fail(`${url}: ${name} doesn't match its type ${type}`);
   const file = path.join(OUT_IMAGES, name);
   const data = Buffer.from(await response.arrayBuffer());
   if (fs.existsSync(file) && !fs.readFileSync(file).equals(data)) fail(`two different images are named ${name}`);
@@ -90,11 +131,12 @@ async function blogHtml(html, slug) {
   out = out.split(`href="${SITE_URL}/`).join('href="/');
   const clean = sanitizeHtml(out, BLOG_HTML);
   if (clean !== sanitizeHtml(clean, BLOG_HTML)) fail(`blog ${slug}: HTML is not stable under the filter`);
-  const dropped = [...new Set([...out.matchAll(/<([a-zA-Z][a-zA-Z0-9]*)/g)].map((m) => m[1].toLowerCase()))].filter(
-    (tag) => !BLOG_HTML.allowedTags.includes(tag),
-  );
-  if (dropped.length) console.warn(`⚠ blog ${slug}: the HTML filter removed <${dropped.join('>, <')}>`);
+  if (clean !== out) console.warn(`⚠ blog ${slug}: the HTML filter changed the post (a tag, attribute, class or link it doesn't allow)`);
   return clean;
+}
+
+function checkItem(kind, item) {
+  if (typeof item?.slug !== 'string' || !SLUG.test(item.slug)) fail(`${kind}: unusable slug ${JSON.stringify(item?.slug)}`);
 }
 
 async function trainer(t) {
@@ -141,9 +183,14 @@ async function fetchContent() {
     if (!Array.isArray(site?.trainers) || !Array.isArray(site?.equipment) || !Array.isArray(site?.blog)) fail(`unexpected answer for ${lang}`);
     if (!site.trainers.length || !site.equipment.length || !site.blog.length) fail(`empty content for ${lang}`);
     content[lang] = { trainers: [], equipment: [], blog: [] };
-    for (const t of site.trainers) content[lang].trainers.push(await trainer(t));
-    for (const e of site.equipment) content[lang].equipment.push(await equipment(e));
-    for (const p of site.blog) content[lang].blog.push(await post(p));
+    for (const t of site.trainers) checkItem('trainer', t), content[lang].trainers.push(await trainer(t));
+    for (const e of site.equipment) checkItem('equipment', e), content[lang].equipment.push(await equipment(e));
+    for (const p of site.blog) {
+      checkItem('blog post', p);
+      const shaped = await post(p);
+      if (!DATE.test(shaped.date) || (shaped.dateModified && !DATE.test(shaped.dateModified))) fail(`blog ${p.slug}: unusable date`);
+      content[lang].blog.push(shaped);
+    }
   }
   const slugs = (lang, kind) => content[lang][kind].map((x) => x.slug).join(',');
   for (const kind of ['trainers', 'equipment', 'blog']) {
@@ -166,11 +213,24 @@ function copyImages() {
   if (!fs.existsSync(OUT_IMAGES)) fail('no images fetched (run `node scripts/site-content.js fetch` first)');
   fs.mkdirSync(DIST_IMAGES, { recursive: true });
   const names = fs.readdirSync(OUT_IMAGES);
-  for (const name of names) fs.copyFileSync(path.join(OUT_IMAGES, name), path.join(DIST_IMAGES, name));
+  for (const name of names) {
+    const from = path.join(OUT_IMAGES, name);
+    const to = path.join(DIST_IMAGES, name);
+    // A content image must not silently replace a different site image of the same name (from public/)
+    if (fs.existsSync(to) && !fs.readFileSync(to).equals(fs.readFileSync(from))) {
+      fail(`${name} from the database differs from the site's own ${IMAGE_DIR}/${name}: rename one of them`);
+    }
+    fs.copyFileSync(from, to);
+  }
   console.log(`✓ ${names.length} content images copied into dist${IMAGE_DIR}/`);
 }
 
-const command = process.argv[2];
-if (command === 'fetch') await fetchContent();
-else if (command === 'copy-images') copyImages();
-else fail('usage: node scripts/site-content.js fetch | copy-images');
+// The blog filter, slug and image rules, for scripts/test/site-content.test.js
+export const rules = { BLOG_HTML, SLUG, SITE_IMAGE, IMAGE_TYPES };
+
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  const command = process.argv[2];
+  if (command === 'fetch') await fetchContent();
+  else if (command === 'copy-images') copyImages();
+  else fail('usage: node scripts/site-content.js fetch | copy-images');
+}

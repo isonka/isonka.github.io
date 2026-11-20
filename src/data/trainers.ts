@@ -26,5 +26,5 @@ export interface TrainerProfile {
   ctaText: string;
 }
 
-// In the site's order; shapes checked by the fetch script
+// In the site's order; the fetch script checks slugs and dates, the rest follows the API's shapes
 export const trainerProfiles = trainers as TrainerProfile[];

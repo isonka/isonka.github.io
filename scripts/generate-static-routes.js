@@ -184,6 +184,10 @@ if (staleMetaKeys.length) {
 
 const indexHtml = fs.readFileSync(path.join(distDir, 'index.html'), 'utf-8');
 
+// Titles and descriptions can come from the PT7 Academy database (blog posts): escaped, so text can't become markup
+const esc = (value) =>
+  String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
 console.log('Generating static route files for GitHub Pages...\n');
 
 const shellRoutes = shellPaths.filter((route) => route !== '/');
@@ -198,15 +202,15 @@ for (const route of shellRoutes) {
 
   html = html.replace(
     /<link rel="canonical" href="[^"]*" \/>/,
-    `<link rel="canonical" href="${canonicalUrl}" />`,
+      () => `<link rel="canonical" href="${esc(canonicalUrl)}" />`,
   );
   html = html.replace(
     /<meta property="og:url" content="[^"]*" \/>/,
-    `<meta property="og:url" content="${canonicalUrl}" />`,
+      () => `<meta property="og:url" content="${esc(canonicalUrl)}" />`,
   );
   html = html.replace(
     /<meta name="twitter:url" content="[^"]*" \/>/,
-    `<meta name="twitter:url" content="${canonicalUrl}" />`,
+      () => `<meta name="twitter:url" content="${esc(canonicalUrl)}" />`,
   );
 
   // Redirect shells: drop the homepage's hreflang and fallback body, and redirect non-JS crawlers.
@@ -214,40 +218,41 @@ for (const route of shellRoutes) {
     html = html.replace(/\s*<link rel="alternate" hreflang="[^"]*" href="[^"]*" \/>/g, '');
     html = html.replace(
       /<link rel="canonical" href="[^"]*" \/>/,
-      (tag) => `${tag}\n    <meta http-equiv="refresh" content="0; url=${canonicalUrl}" />`,
+      (tag) => `${tag}\n    <meta http-equiv="refresh" content="0; url=${esc(canonicalUrl)}" />`,
     );
     html = html.replace(
       /<main id="static-fallback"[\s\S]*?<\/main>/,
-      `<main id="static-fallback"><p>This page has moved to <a href="${canonicalUrl}">${canonicalUrl}</a>.</p></main>`,
+      () => `<main id="static-fallback"><p>This page has moved to <a href="${esc(canonicalUrl)}">${esc(canonicalUrl)}</a>.</p></main>`,
     );
   }
 
   if (meta) {
-    html = html.replace(/<title>[^<]*<\/title>/, `<title>${meta.title}</title>`);
+    html = html.replace(/<title>[^<]*<\/title>/,
+      () => `<title>${esc(meta.title)}</title>`);
     html = html.replace(
       /<meta name="description" content="[^"]*" \/>/,
-      `<meta name="description" content="${meta.description}" />`,
+      () => `<meta name="description" content="${esc(meta.description)}" />`,
     );
     html = html.replace(
       /<meta property="og:title" content="[^"]*" \/>/,
-      `<meta property="og:title" content="${meta.title}" />`,
+      () => `<meta property="og:title" content="${esc(meta.title)}" />`,
     );
     html = html.replace(
       /<meta property="og:description" content="[^"]*" \/>/,
-      `<meta property="og:description" content="${meta.description}" />`,
+      () => `<meta property="og:description" content="${esc(meta.description)}" />`,
     );
     html = html.replace(
       /<meta name="twitter:title" content="[^"]*" \/>/,
-      `<meta name="twitter:title" content="${meta.title}" />`,
+      () => `<meta name="twitter:title" content="${esc(meta.title)}" />`,
     );
     html = html.replace(
       /<meta name="twitter:description" content="[^"]*" \/>/,
-      `<meta name="twitter:description" content="${meta.description}" />`,
+      () => `<meta name="twitter:description" content="${esc(meta.description)}" />`,
     );
     if (meta.robots) {
       html = html.replace(
         /<meta name="robots" content="[^"]*" \/>/,
-        `<meta name="robots" content="${meta.robots}" />`,
+      () => `<meta name="robots" content="${esc(meta.robots)}" />`,
       );
     }
   }

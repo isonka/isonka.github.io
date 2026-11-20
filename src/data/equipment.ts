@@ -44,5 +44,5 @@ export function formatEquipmentPrice(amount: number, locale: string): string {
   }).format(amount);
 }
 
-// In the site's order; shapes checked by the fetch script
+// In the site's order; the fetch script checks slugs and dates, the rest follows the API's shapes
 export const equipmentProducts = equipment as EquipmentProduct[];

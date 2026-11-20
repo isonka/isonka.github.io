@@ -42,6 +42,10 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      # What the build lets through from the database (blog HTML filter, slugs, image names)
+      - name: Test the site content rules
+        run: npm run content:test
+
       - name: Cache Puppeteer browser
         uses: actions/cache@v4
         with:
@@ -53,15 +57,18 @@ jobs:
       - name: Install Chrome for prerender
         run: npx puppeteer browsers install chrome
 
-      # Trainers, equipment and blog posts come from the PT7 Academy API with the build key (every build needs it;
-      # a run without it, such as a pull request from a fork, fails here)
-      - name: Build
-        timeout-minutes: 12
+      # Trainers, equipment and blog posts come from the PT7 Academy API with the build key, in this step only (every
+      # build needs it; a run without it, such as a pull request from a fork, fails here)
+      - name: Fetch site content
         env:
           SITE_BUILD_KEY: ${{ secrets.SITE_BUILD_KEY }}
+        run: npm run content
+
+      - name: Build
+        timeout-minutes: 12
         run: |
           echo "▶ Build step started"
-          npm run build
+          npm run build:site
           echo "✅ Build step finished"
 
       - name: Lighthouse

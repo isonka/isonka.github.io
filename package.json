@@ -26,7 +26,8 @@
     "lighthouse": "npx --yes @lhci/cli@0.15.1 collect --config=lighthouserc.mobile.json && npx --yes @lhci/cli@0.15.1 assert --config=lighthouserc.mobile.json && npx --yes @lhci/cli@0.15.1 collect --config=lighthouserc.desktop.json && npx --yes @lhci/cli@0.15.1 assert --config=lighthouserc.desktop.json",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "content": "node scripts/site-content.js fetch"
+    "content": "node scripts/site-content.js fetch",
+    "content:test": "node --test scripts/test/site-content.test.js"
   },
   "dependencies": {
     "i18next": "^25.4.2",
