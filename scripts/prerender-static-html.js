@@ -158,6 +158,8 @@ const FORBIDDEN_SNIPPETS = [
   { needle: 'Booking calendar could not load', reason: 'MindBody widget error state' },
   { needle: 'pt7-consent-panel', reason: 'cookie consent dialog' },
   { needle: 'Unexpected Application Error', reason: 'router error boundary' },
+  { needle: 'id="static-fallback"', reason: 'index.html fallback instead of the rendered page' },
+  { needle: 'class="route-fallback"', reason: 'route loading spinner' },
 ];
 
 function pinSmallestSrcsetCandidate(html) {
@@ -271,7 +273,17 @@ async function loadRoute(page, url) {
   for (let attempt = 1; ; attempt += 1) {
     try {
       await page.goto(url, { waitUntil: 'networkidle2' });
-      await page.waitForSelector('#root *', { timeout: 30000 });
+      // Wait for the page React rendered, not just any element in #root: index.html's #static-fallback (with its
+      // own h1) sits inside #root, so '#root *' matched before React ran. On the slower CI runner the home page
+      // was then saved as that fallback; it failed to hydrate and re-rendered, shifting the layout (Lighthouse
+      // CLS 0.11, 2026-11-21).
+      await page.waitForFunction(
+        () =>
+          !document.getElementById('static-fallback') &&
+          !document.querySelector('.route-fallback') &&
+          document.querySelector('main.main-content h1'),
+        { timeout: 30000 },
+      );
       return;
     } catch (error) {
       if (attempt >= LOAD_ATTEMPTS) throw error;

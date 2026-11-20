@@ -72,6 +72,21 @@ jobs:
           echo "Chrome: $CHROME_PATH"
           npm run lighthouse
 
+      - name: Lighthouse details (on failure)
+        if: failure()
+        run: |
+          for f in .lighthouseci/lhr-*.json; do
+            [ -f "$f" ] || continue
+            node -e '
+              const r = require(process.argv[1]);
+              const a = r.audits;
+              console.log(r.configSettings.formFactor, r.finalDisplayedUrl, "CLS", a["cumulative-layout-shift"].numericValue, "LCP", a["largest-contentful-paint"].numericValue);
+              for (const i of a["layout-shifts"]?.details?.items ?? []) {
+                console.log("  shift", i.score, i.node?.selector, (i.subItems?.items ?? []).map((s) => s.cause).join(", "));
+              }
+            ' "$PWD/$f"
+          done
+
       - name: Setup Pages
         if: github.event_name != 'pull_request'
         uses: actions/configure-pages@1f0c5cde4bc74cd7e1254d0cb4de8d49e9068c7d # v4.0.0
