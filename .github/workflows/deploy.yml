@@ -160,7 +160,7 @@ jobs:
           SITE=https://pt7-academy.web.app
           get() { curl -sS --retry 3 --retry-all-errors -o /dev/null -D "$RUNNER_TEMP/headers" -w '%{http_code}' "$SITE$1"; }
           test "$(get /)" = 200
-          test "$(get /academy/trainee)" = 301 # the address without the slash only redirects
+          [[ "$(get /academy/trainee)" =~ ^30[18]$ ]] # the address without the slash only redirects
           test "$(get /academy/trainee/)" = 200
           tr -d '\r' < "$RUNNER_TEMP/headers" | grep -qi "^content-security-policy: frame-ancestors 'none'$"
           test "$(get /.well-known/api-catalog)" = 200
@@ -180,4 +180,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
