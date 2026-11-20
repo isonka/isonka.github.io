@@ -105,9 +105,10 @@ jobs:
         uses: actions/configure-pages@v4
       
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: './dist'
+          include-hidden-files: true # keeps .well-known/ (see .github/workflows/deploy.yml for the real workflow)
       
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4

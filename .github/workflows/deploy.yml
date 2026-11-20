@@ -83,11 +83,13 @@ jobs:
         if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v4
 
+      # Since v4 this action leaves out dotfiles; v5 can keep them (include-hidden-files), and pt7.nl needs .well-known/
       - name: Upload artifact
         if: github.event_name != 'pull_request'
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: ./dist
+          include-hidden-files: true # .well-known/
 
       # The same build for Firebase Hosting (deploy-firebase below). Only dist: the Hosting config comes from the
       # commit itself, never from this job (it runs install scripts, and firebase.json can hold commands).
