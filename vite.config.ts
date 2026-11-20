@@ -1,8 +1,29 @@
-import { defineConfig } from 'vite'
+import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
+import fs from 'node:fs'
+import path from 'node:path'
+
+// Content images (trainers, equipment, blog) come from the PT7 Academy API: `npm run content` downloads them into
+// .site-content/images/, and the build copies them into dist/assets/images/. The dev server serves them from there
+// at the same addresses, for any name that isn't one of the site's own files in public/.
+const CONTENT_IMAGES = path.resolve('.site-content/images')
+const contentImages = (): Plugin => ({
+  name: 'content-images',
+  apply: 'serve',
+  configureServer(server) {
+    server.middlewares.use('/assets/images', (req, res, next) => {
+      const name = decodeURIComponent((req.url || '').split('?')[0]).replace(/^\//, '')
+      if (!/^[A-Za-z0-9_-][A-Za-z0-9._-]*$/.test(name)) return next()
+      const file = path.join(CONTENT_IMAGES, name)
+      if (!fs.existsSync(file)) return next()
+      res.setHeader('Content-Type', name.endsWith('.png') ? 'image/png' : name.endsWith('.webp') ? 'image/webp' : 'image/jpeg')
+      fs.createReadStream(file).pipe(res)
+    })
+  },
+})
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), contentImages()],
   base: '/',
   build: {
     outDir: 'dist',
