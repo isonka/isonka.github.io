@@ -18,6 +18,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read # Setup Pages reads the site's settings; no sign-in token here
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -75,23 +78,24 @@ jobs:
         with:
           path: ./dist
 
-      # The same build for Firebase Hosting (deploy-firebase below)
+      # The same build for Firebase Hosting (deploy-firebase below). Only dist: the Hosting config comes from the
+      # commit itself, never from this job (it runs install scripts, and firebase.json can hold commands).
       - name: Upload the build for Firebase Hosting
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@v4
         with:
           name: site
-          path: |
-            ./dist
-            ./firebase.json
-          include-hidden-files: false
-          retention-days: 1
+          path: ./dist
+          include-hidden-files: true # .well-known/
+          retention-days: 7
 
   # pt7.nl moves from GitHub Pages to Firebase Hosting (pt7-academy project, milestone 1 step 3). Until the domain moves,
   # every push to main deploys to both: GitHub Pages (pt7.nl) and Firebase Hosting (https://pt7-academy.web.app).
-  # Keyless sign-in to GCP (Workload Identity Federation, limited to this repository's main branch) as an account that
-  # may only publish Hosting releases (pt7-academy docs/DEPLOY_GCP.md, "The website on Firebase Hosting"). This job
-  # holds the token, so it builds nothing and runs no install scripts: it deploys the build job's output as is.
+  # Keyless sign-in to GCP (Workload Identity Federation, limited to this repository, main and this file) as an account
+  # that may only publish Hosting releases (pt7-academy docs/DEPLOY_GCP.md, "The website on Firebase Hosting").
+  # This job holds the token, so it builds nothing and runs no install scripts: firebase.json and the CLI's lockfile
+  # come from the commit, the CLI is installed from that lockfile, and only dist comes from the build job. Actions
+  # here are pinned to commits.
   deploy-firebase:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: build
@@ -100,49 +104,58 @@ jobs:
     permissions:
       contents: read
       id-token: write # the keyless sign-in to GCP, in this job only
-    concurrency:
-      group: firebase-hosting
-      cancel-in-progress: false
     env:
       PROJECT_ID: pt7-academy
       WORKLOAD_IDENTITY_PROVIDER: projects/344238205966/locations/global/workloadIdentityPools/github/providers/website
       DEPLOY_ACCOUNT: website-deploy@pt7-academy.iam.gserviceaccount.com
-      FIREBASE_TOOLS: firebase-tools@15.34.2
     steps:
+      # Root files (firebase.json among them) and tools/firebase-cli only
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          sparse-checkout: tools/firebase-cli
+          persist-credentials: false
+
+      # firebase-tools runs predeploy/postdeploy entries as shell commands; this config must never have any
+      - name: Check the Hosting config
+        run: |
+          if grep -qE '"(pre|post)deploy"' firebase.json; then echo "firebase.json must not run commands"; exit 1; fi
+
       - name: Download the build
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
           name: site
-          path: ./site
+          path: ./dist
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: '24'
 
-      # Installed outside the site folder, without install scripts, at a fixed version
+      # Every dependency fixed by the lockfile (resolved to versions at least two weeks old), no install scripts
       - name: Install the Firebase CLI
         run: |
-          mkdir -p "$RUNNER_TEMP/firebase-cli"
-          npm install --prefix "$RUNNER_TEMP/firebase-cli" --ignore-scripts --no-audit --no-fund "$FIREBASE_TOOLS"
-          echo "$RUNNER_TEMP/firebase-cli/node_modules/.bin" >> "$GITHUB_PATH"
+          npm ci --prefix tools/firebase-cli --ignore-scripts --no-audit --no-fund
+          echo "$GITHUB_WORKSPACE/tools/firebase-cli/node_modules/.bin" >> "$GITHUB_PATH"
 
-      - uses: google-github-actions/auth@v3
+      - uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093 # v3.0.0
         with:
           workload_identity_provider: ${{ env.WORKLOAD_IDENTITY_PROVIDER }}
           service_account: ${{ env.DEPLOY_ACCOUNT }}
 
       - name: Deploy to Firebase Hosting
-        working-directory: ./site
         run: firebase deploy --only hosting --project "$PROJECT_ID" --non-interactive --message "$GITHUB_SHA"
 
       # The new release must serve the home page, the trainee area with its headers, and the API behind it
       - name: Check the live site
+        shell: bash
         run: |
+          set -euo pipefail
           SITE=https://pt7-academy.web.app
-          curl -fsS -o /dev/null --retry 3 --retry-all-errors "$SITE/"
-          curl -fsS -D - -o /dev/null --retry 3 --retry-all-errors "$SITE/academy/trainee/" \
-            | tr -d '\r' | grep -qi "^content-security-policy: frame-ancestors 'none'$"
-          curl -fsS -o /dev/null --retry 3 --retry-all-errors "$SITE/api/health"
+          get() { curl -sS --retry 3 --retry-all-errors -o /dev/null -D "$RUNNER_TEMP/headers" -w '%{http_code}' "$SITE$1"; }
+          test "$(get /)" = 200
+          test "$(get /academy/trainee/)" = 200
+          tr -d '\r' < "$RUNNER_TEMP/headers" | grep -qi "^content-security-policy: frame-ancestors 'none'$"
+          test "$(get /.well-known/api-catalog)" = 200
+          test "$(get /api/health)" = 200
           echo "ok"
 
   deploy:
