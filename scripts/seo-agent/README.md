@@ -13,6 +13,13 @@ PR           one PR per week: what changed, why, with the numbers
 
 History (daily data, snapshots, reports, proposals) is committed to the **`seo-data`** branch, not `main`.
 
+The workflow runs as three jobs, so Claude never works with a write token. **collect** (data, snapshot,
+evaluation, history push) runs no agent. **propose** (Claude, lint, build, verify.js) has a read-only token that is not
+kept on disk and hands over a patch plus the two proposal files. **open-pr** holds the write token and runs none of this
+repository's code. It accepts the patch only if it modifies existing files in the places the agent may edit
+(`src/i18n/locales/{en,nl}/`, `src/pages/`, `site/routes.ts`, `scripts/generate-static-routes.js`): no new, deleted or
+renamed files, no mode changes, nothing binary. To let the agent edit another place, widen `allowed` in that job.
+
 ## How it decides
 
 - **Any title/description change** (by a human or the agent) is detected from weekly snapshots and evaluated as an experiment. The before window is the 28 days before the change. The after window is 28 days, starting 7 days after detection so Google can recrawl.

@@ -4,6 +4,13 @@ name: Weekly SEO agent
 # → let Claude carry out the budgeted plan → verify → open a PR for review.
 # History (daily data, snapshots, reports, proposals) lives on the `seo-data`
 # branch, so main only ever changes through reviewed PRs.
+#
+# Three jobs, so the job where Claude reads outside data and runs the build never holds a write token:
+#   collect  data, snapshot, evaluation; pushes the history to seo-data (no agent here)
+#   propose  Claude, lint, build, verify; read-only token, not kept on disk; hands over a patch + the proposal files
+#   open-pr  write token; never installs or runs this repository's code. Takes the patch only if it modifies
+#            existing text files in the places the agent may edit (no new, deleted or renamed files, no mode changes,
+#            nothing binary), saves the proposal to seo-data and opens the PR
 
 on:
   schedule:
@@ -16,26 +23,29 @@ on:
         default: true
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 concurrency:
   group: seo-agent
   cancel-in-progress: false
 
 jobs:
-  seo:
+  collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 30
+    permissions:
+      contents: write # push the history to seo-data
     env:
       SEO_DATA_DIR: .seo-data
       GSC_SITE_URL: ${{ vars.GSC_SITE_URL }}
       GA4_PROPERTY_ID: ${{ vars.GA4_PROPERTY_ID }}
+    outputs:
+      run-date: ${{ steps.date.outputs.run-date }}
+      actions: ${{ steps.evaluate.outputs.actions }}
+      seo-data-sha: ${{ steps.save.outputs.sha }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # the agent reads git history for content regressions
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -44,6 +54,7 @@ jobs:
           cache: npm
 
       - name: Check out history branch
+        id: date
         run: |
           git config user.name "pt7-seo-agent"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -52,7 +63,9 @@ jobs:
           else
             git worktree add --orphan -b seo-data .seo-data
           fi
-          echo "RUN_DATE=$(date -u +%F)" >> "$GITHUB_ENV"
+          RUN_DATE="$(date -u +%F)"
+          echo "RUN_DATE=$RUN_DATE" >> "$GITHUB_ENV"
+          echo "run-date=$RUN_DATE" >> "$GITHUB_OUTPUT"
 
       - name: Install dependencies
         run: npm ci
@@ -66,32 +79,65 @@ jobs:
         run: npm run seo:snapshot
 
       - name: Evaluate
+        id: evaluate
         run: |
           npm run seo:evaluate
           cat .seo-data/reports/latest.md >> "$GITHUB_STEP_SUMMARY"
-          echo "ACTIONS=$(node -p 'require("./.seo-data/reports/latest.json").actions.length')" >> "$GITHUB_ENV"
+          echo "actions=$(node -p 'require("./.seo-data/reports/latest.json").actions.length')" >> "$GITHUB_OUTPUT"
 
       - name: Save history
+        id: save
         working-directory: .seo-data
         run: |
           git add -A
           git diff --cached --quiet || git commit -q -m "data: $RUN_DATE"
           git push -q origin seo-data
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  propose:
+    needs: collect
+    if: needs.collect.outputs.actions != '0' && github.event.inputs.apply != 'false'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: read
+    env:
+      SEO_DATA_DIR: .seo-data
+      RUN_DATE: ${{ needs.collect.outputs.run-date }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          fetch-depth: 0 # the agent reads git history for content regressions
+          persist-credentials: false
+
+      - name: Check out this run's history
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          ref: ${{ needs.collect.outputs.seo-data-sha }}
+          path: .seo-data
+          persist-credentials: false
+
+      # No npm cache here: this job runs code the agent may have edited, so it saves nothing other runs restore
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Install Chrome for prerender
-        if: env.ACTIONS != '0' && github.event.inputs.apply != 'false'
         run: npx puppeteer browsers install chrome
 
       # The site's content from the PT7 Academy API, with the build key in this step only; the steps below build from
       # it (build:site) and never see the key
       - name: Fetch site content
-        if: env.ACTIONS != '0' && github.event.inputs.apply != 'false'
         env:
           SITE_BUILD_KEY: ${{ secrets.SITE_BUILD_KEY }}
         run: npm run content
 
       - name: Apply plan with Claude
-        if: env.ACTIONS != '0' && github.event.inputs.apply != 'false'
         env:
           # Runs on the claude.ai subscription (token from `claude setup-token`),
           # so usage counts against the plan's limits instead of API billing.
@@ -105,17 +151,89 @@ jobs:
             --allowedTools "Read,Edit,Write,Glob,Grep,Bash(npm run lint),Bash(npm run build:site),Bash(npm run build:only),Bash(node scripts/seo-agent/verify.js),Bash(git log:*),Bash(git show:*),Bash(git diff:*),Bash(grep:*)"
 
       - name: Verify
-        if: env.ACTIONS != '0' && github.event.inputs.apply != 'false'
         run: |
           npm run lint
           npm run build:site
           node scripts/seo-agent/verify.js
 
-      - name: Save proposal
-        if: env.ACTIONS != '0' && github.event.inputs.apply != 'false'
-        working-directory: .seo-data
+      # Only the edits to tracked and new files (build output, fetched content and .seo-data are ignored) and the two
+      # proposal files the prompt asks for go to the next job
+      - name: Hand over the proposal
         run: |
+          mkdir -p "$RUNNER_TEMP/proposal"
           git add -A
+          git diff --cached > "$RUNNER_TEMP/proposal/changes.patch"
+          for ext in json md; do
+            f=".seo-data/proposals/$RUN_DATE.$ext"
+            if [ -f "$f" ]; then cp "$f" "$RUNNER_TEMP/proposal/proposal.$ext"; fi
+          done
+          ls -l "$RUNNER_TEMP/proposal"
+
+      - name: Upload the proposal
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: seo-proposal
+          path: ${{ runner.temp }}/proposal
+          retention-days: 7
+
+  open-pr:
+    needs: [collect, propose]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write # the PR branch and the proposal on seo-data
+      pull-requests: write
+    env:
+      RUN_DATE: ${{ needs.collect.outputs.run-date }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - name: Download the proposal
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: seo-proposal
+          path: ${{ runner.temp }}/proposal
+
+      # The agent only changes text: existing translation files, page components, the route meta and the static
+      # routes' fallback meta. Anything else stops the run before a PR is opened.
+      - name: Check and apply the changes
+        run: |
+          patch="$RUNNER_TEMP/proposal/changes.patch"
+          if [ ! -s "$patch" ]; then echo "No site changes in this proposal."; exit 0; fi
+          git apply --index "$patch"
+          if [ -n "$(git diff --cached --summary)" ]; then
+            echo "::error::The proposal creates, deletes or renames files or changes a file mode:"
+            git diff --cached --summary
+            exit 1
+          fi
+          allowed='^(src/i18n/locales/(en|nl)/[A-Za-z0-9_-]+\.ts|src/pages/[A-Za-z0-9_/-]+\.tsx|site/routes\.ts|scripts/generate-static-routes\.js)$'
+          bad=0
+          while IFS=$'\t' read -r status path; do
+            if [ "$status" != M ] || ! [[ "$path" =~ $allowed ]]; then
+              echo "::error::Not a file the SEO agent may change: $status $path"
+              bad=1
+            fi
+          done < <(git diff --cached --name-status)
+          if [ "$(git diff --cached --numstat | awk '$1 == "-" || $2 == "-"' | wc -l)" -ne 0 ]; then
+            echo "::error::The proposal changes a binary file"
+            bad=1
+          fi
+          exit "$bad"
+
+      - name: Save proposal
+        run: |
+          git config user.name "pt7-seo-agent"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin seo-data:refs/remotes/origin/seo-data
+          git worktree add -B seo-data .seo-data origin/seo-data
+          mkdir -p .seo-data/proposals
+          for ext in json md; do
+            f="$RUNNER_TEMP/proposal/proposal.$ext"
+            if [ -f "$f" ]; then cp "$f" ".seo-data/proposals/$RUN_DATE.$ext"; fi
+          done
+          cd .seo-data
+          git add proposals
           git diff --cached --quiet || git commit -q -m "proposal: $RUN_DATE"
           git push -q origin seo-data
           {
@@ -126,8 +244,7 @@ jobs:
           } > "$RUNNER_TEMP/pr-body.md"
 
       - name: Open PR
-        if: env.ACTIONS != '0' && github.event.inputs.apply != 'false'
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
           branch: seo-agent/${{ env.RUN_DATE }}
           title: 'SEO agent: week of ${{ env.RUN_DATE }}'
