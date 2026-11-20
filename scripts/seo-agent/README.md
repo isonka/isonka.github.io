@@ -13,12 +13,16 @@ PR           one PR per week: what changed, why, with the numbers
 
 History (daily data, snapshots, reports, proposals) is committed to the **`seo-data`** branch, not `main`.
 
-The workflow runs as three jobs, so Claude never works with a write token. **collect** (data, snapshot,
-evaluation, history push) runs no agent. **propose** (Claude, lint, build, verify.js) has a read-only token that is not
-kept on disk and hands over a patch plus the two proposal files. **open-pr** holds the write token and runs none of this
-repository's code. It accepts the patch only if it modifies existing files in the places the agent may edit
-(`src/i18n/locales/{en,nl}/`, `src/pages/`, `site/routes.ts`, `scripts/generate-static-routes.js`): no new, deleted or
-renamed files, no mode changes, nothing binary. To let the agent edit another place, widen `allowed` in that job.
+The workflow runs as three jobs, so Claude never works with a write token or the build key. **collect** (data,
+snapshot, evaluation, history push, the site content with the build key) runs no agent. **propose** (Claude, lint,
+build, verify.js) has a read-only token that is not kept on disk, and no secret but Claude's own token. It hands over
+the patch and the two proposal files as size-capped job outputs, never as an artifact. **open-pr** holds the write
+token and runs none of this repository's code. It checks the proposal's shape and accepts the patch only if it modifies
+existing files the agent may change (`editableFiles` in `config.js`, which `verify.js` also checks: locale files, page
+components, the workout data, route meta, static-route fallback meta). New, deleted or renamed files, mode changes and
+binary files are refused. A PR that touches code files besides the locale files says so at the top. To let the agent
+edit another place, widen `editableFiles` and the workflow's `allowed` together. No job restores a cache: the propose
+job runs agent-edited code on `main`'s cache scope, so the deploy workflow restores none either.
 
 ## How it decides
 
@@ -43,7 +47,7 @@ Tune all thresholds, the target keywords and the frozen pages in `config.js`.
 4. **GitHub repo → Settings → Secrets and variables → Actions**
    - Secrets: `GOOGLE_SERVICE_ACCOUNT_JSON` (the whole key file), `CLAUDE_CODE_OAUTH_TOKEN` (run `claude setup-token` locally, logged in with your claude.ai Pro/Max account; it uses your subscription, no API billing)
    - Variables: `GSC_SITE_URL` (`sc-domain:pt7.nl` for a Domain property, or `https://www.pt7.nl/`), `GA4_PROPERTY_ID`
-5. **Settings → Actions → General → Workflow permissions**: "Read and write", and tick "Allow GitHub Actions to create and approve pull requests".
+5. **Settings → Actions → General → Workflow permissions**: tick "Allow GitHub Actions to create and approve pull requests". Each job asks for the permissions it needs, so the default can stay "Read repository contents".
 6. Commit `PT7_SEO_PLAN.md`: the agent follows its decisions, and CI only sees committed files.
 7. First run: Actions → *Weekly SEO agent* → Run workflow with **apply off**. It backfills 120 days of data and posts the report in the run summary.
 

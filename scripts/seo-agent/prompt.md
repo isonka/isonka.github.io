@@ -33,6 +33,7 @@ Find the current string with grep and update **every place that serves this page
 - "PT7" is the visible brand. "PT Studio 7" stays only where it already is (homepage title/description, JSON-LD alternateName).
 - Premium tone: no "cheap", "budget", "goedkoop", and no "below typical rates" framing.
 - Don't edit `SEOHead.tsx`, `StructuredData.tsx`, canonicals, `index.html` analytics/GTM, routes, or anything under `.seo-data/` except the two output files below.
+- Change only existing files, and only these: `src/i18n/locales/{en,nl}/*.ts`, page components in `src/pages/`, `src/data/workouts.ts`, `src/data/workoutDetails.ts`, `src/data/workoutDetails.nl.ts`, `site/routes.ts` (meta blocks) and `scripts/generate-static-routes.js` (fallback meta). Never create, delete or rename a file (the two output files below are the only new ones). `verify.js` reports anything else, and the workflow refuses the whole week's changes if it gets through. If an action needs another file, skip it and explain.
 - Frozen pages (`frozenPages` in `scripts/seo-agent/config.js`: congrats, privacy, ClassPass offer, the move notice and its blog post) are never edited.
 - If an action can't be done safely within these rules, skip it and explain why.
 

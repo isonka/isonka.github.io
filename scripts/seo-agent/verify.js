@@ -27,6 +27,20 @@ for (const line of touched.split('\n').filter(Boolean)) {
   errors.push(`${line.slice(3)}: content comes from the database; propose it under "For the database" instead`);
 }
 
+// Only existing files in the agent's places may change (config.editableFiles); the workflow refuses anything else
+const status = execFileSync('git', ['status', '--porcelain=v1', '-z', '--untracked-files=all'], { cwd: projectRoot, encoding: 'utf8' });
+const entries = status.split('\0').filter(Boolean);
+for (let i = 0; i < entries.length; i++) {
+  const code = entries[i].slice(0, 2);
+  const file = entries[i].slice(3);
+  if (code[0] === 'R' || code[0] === 'C') i++; // the next entry is the old name
+  if (CONTENT_FILES.some((f) => file === f || file.startsWith(`${f}/`))) continue; // reported above
+  if (!/^(M[ M]| M)$/.test(code)) errors.push(`${file}: only changes to existing files are allowed (git status ${code.trim()})`);
+  else if (!config.editableFiles.test(file)) errors.push(`${file}: not a file the SEO agent may change (config.editableFiles)`);
+}
+const summary = execFileSync('git', ['diff', 'HEAD', '--summary'], { cwd: projectRoot, encoding: 'utf8' }).trim();
+if (summary) errors.push(`file modes changed, which the workflow refuses: ${summary.replace(/\s+/g, ' ')}`);
+
 if (!proposal) {
   if (errors.length) {
     console.error(`✗ SEO agent changes failed verification:\n  - ${errors.join('\n  - ')}`);

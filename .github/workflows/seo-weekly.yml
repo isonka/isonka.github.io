@@ -6,11 +6,15 @@ name: Weekly SEO agent
 # branch, so main only ever changes through reviewed PRs.
 #
 # Three jobs, so the job where Claude reads outside data and runs the build never holds a write token:
-#   collect  data, snapshot, evaluation; pushes the history to seo-data (no agent here)
-#   propose  Claude, lint, build, verify; read-only token, not kept on disk; hands over a patch + the proposal files
-#   open-pr  write token; never installs or runs this repository's code. Takes the patch only if it modifies
-#            existing text files in the places the agent may edit (no new, deleted or renamed files, no mode changes,
-#            nothing binary), saves the proposal to seo-data and opens the PR
+#   collect  data, snapshot, evaluation, the site content (build key); pushes the history to seo-data. No agent here.
+#   propose  Claude, lint, build, verify. Read-only token, not kept on disk; no secret but Claude's own token. Hands
+#            over the patch and the two proposal files as size-capped job outputs (never an artifact: unpacking a zip
+#            the agent's job could have shaped is not safe in a job with a write token).
+#   open-pr  write token; never installs or runs this repository's code. Takes the patch only if it modifies existing
+#            files the agent may change (scripts/seo-agent/config.js, editableFiles): no new, deleted or renamed files,
+#            no mode changes, nothing binary. Saves the proposal to seo-data and opens the PR.
+# No job here restores or saves a cache: propose runs agent-edited code on main's cache scope, and the deploy workflow
+# restores nothing from it either.
 
 on:
   schedule:
@@ -32,7 +36,7 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60 # the first run backfills 120 days
     permissions:
       contents: write # push the history to seo-data
     env:
@@ -45,13 +49,12 @@ jobs:
       seo-data-sha: ${{ steps.save.outputs.sha }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: '24'
-          cache: npm
 
       - name: Check out history branch
         id: date
@@ -94,6 +97,25 @@ jobs:
           git push -q origin seo-data
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
+      # The site's content from the PT7 Academy API, here so the build key never enters the job the agent runs in
+      - name: Fetch site content
+        if: steps.evaluate.outputs.actions != '0' && github.event.inputs.apply != 'false'
+        env:
+          SITE_BUILD_KEY: ${{ secrets.SITE_BUILD_KEY }}
+        run: npm run content
+
+      - name: Hand over the site content
+        if: steps.evaluate.outputs.actions != '0' && github.event.inputs.apply != 'false'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: site-content
+          path: |
+            src/data/generated
+            .site-content
+          include-hidden-files: true # .site-content/
+          if-no-files-found: error
+          retention-days: 1
+
   propose:
     needs: collect
     if: needs.collect.outputs.actions != '0' && github.event.inputs.apply != 'false'
@@ -104,6 +126,10 @@ jobs:
     env:
       SEO_DATA_DIR: .seo-data
       RUN_DATE: ${{ needs.collect.outputs.run-date }}
+    outputs:
+      patch: ${{ steps.handover.outputs.patch }}
+      proposal-json: ${{ steps.handover.outputs.proposal-json }}
+      proposal-md: ${{ steps.handover.outputs.proposal-md }}
     steps:
       - name: Checkout
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
@@ -118,7 +144,6 @@ jobs:
           path: .seo-data
           persist-credentials: false
 
-      # No npm cache here: this job runs code the agent may have edited, so it saves nothing other runs restore
       - name: Setup Node.js
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
@@ -130,12 +155,10 @@ jobs:
       - name: Install Chrome for prerender
         run: npx puppeteer browsers install chrome
 
-      # The site's content from the PT7 Academy API, with the build key in this step only; the steps below build from
-      # it (build:site) and never see the key
-      - name: Fetch site content
-        env:
-          SITE_BUILD_KEY: ${{ secrets.SITE_BUILD_KEY }}
-        run: npm run content
+      - name: Get the site content
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: site-content
 
       - name: Apply plan with Claude
         env:
@@ -156,25 +179,24 @@ jobs:
           npm run build:site
           node scripts/seo-agent/verify.js
 
-      # Only the edits to tracked and new files (build output, fetched content and .seo-data are ignored) and the two
-      # proposal files the prompt asks for go to the next job
+      # The edits to tracked and new files (build output, fetched content and .seo-data are ignored) and the two
+      # proposal files the prompt asks for, base64 and capped (an environment value over 128 KB can't reach a step)
       - name: Hand over the proposal
+        id: handover
         run: |
-          mkdir -p "$RUNNER_TEMP/proposal"
           git add -A
-          git diff --cached > "$RUNNER_TEMP/proposal/changes.patch"
+          hand() {
+            local value
+            value="$(base64 -w0 < "$2")"
+            if [ "${#value}" -gt 100000 ]; then echo "::error::$2 is too large to hand over"; exit 1; fi
+            echo "$1=$value" >> "$GITHUB_OUTPUT"
+          }
+          git diff --cached > "$RUNNER_TEMP/changes.patch"
+          hand patch "$RUNNER_TEMP/changes.patch"
           for ext in json md; do
             f=".seo-data/proposals/$RUN_DATE.$ext"
-            if [ -f "$f" ]; then cp "$f" "$RUNNER_TEMP/proposal/proposal.$ext"; fi
+            if [ -f "$f" ]; then hand "proposal-$ext" "$f"; fi
           done
-          ls -l "$RUNNER_TEMP/proposal"
-
-      - name: Upload the proposal
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
-        with:
-          name: seo-proposal
-          path: ${{ runner.temp }}/proposal
-          retention-days: 7
 
   open-pr:
     needs: [collect, propose]
@@ -189,14 +211,27 @@ jobs:
       - name: Checkout
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
-      - name: Download the proposal
-        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
-        with:
-          name: seo-proposal
-          path: ${{ runner.temp }}/proposal
+      # Everything from propose is untrusted: decoded as data, checked before use, never run
+      - name: Take over the proposal
+        env:
+          PATCH_B64: ${{ needs.propose.outputs.patch }}
+          JSON_B64: ${{ needs.propose.outputs.proposal-json }}
+          MD_B64: ${{ needs.propose.outputs.proposal-md }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/proposal"
+          printf '%s' "$PATCH_B64" | base64 -d > "$RUNNER_TEMP/proposal/changes.patch"
+          if [ -n "$JSON_B64" ]; then
+            printf '%s' "$JSON_B64" | base64 -d > "$RUNNER_TEMP/proposal/proposal.json"
+            # evaluate.js reads it every week: a list of changes, each naming a page and an action
+            jq -e '(.changes | type == "array") and (.changes | all(type == "object" and (.page | type == "string") and (.action | type == "string")))' \
+              "$RUNNER_TEMP/proposal/proposal.json" > /dev/null || { echo "::error::proposal.json has the wrong shape"; exit 1; }
+          fi
+          if [ -n "$MD_B64" ]; then
+            printf '%s' "$MD_B64" | base64 -d > "$RUNNER_TEMP/proposal/proposal.md"
+          fi
 
-      # The agent only changes text: existing translation files, page components, the route meta and the static
-      # routes' fallback meta. Anything else stops the run before a PR is opened.
+      # The agent changes only existing files in its places (scripts/seo-agent/config.js, editableFiles: keep `allowed`
+      # the same). Anything else stops the run before a PR is opened.
       - name: Check and apply the changes
         run: |
           patch="$RUNNER_TEMP/proposal/changes.patch"
@@ -207,7 +242,7 @@ jobs:
             git diff --cached --summary
             exit 1
           fi
-          allowed='^(src/i18n/locales/(en|nl)/[A-Za-z0-9_-]+\.ts|src/pages/[A-Za-z0-9_/-]+\.tsx|site/routes\.ts|scripts/generate-static-routes\.js)$'
+          allowed='^(src/i18n/locales/(en|nl)/[A-Za-z0-9_-]+\.ts|src/pages/[A-Za-z0-9_/-]+\.tsx|src/data/(workouts|workoutDetails|workoutDetails\.nl)\.ts|site/routes\.ts|scripts/generate-static-routes\.js)$'
           bad=0
           while IFS=$'\t' read -r status path; do
             if [ "$status" != M ] || ! [[ "$path" =~ $allowed ]]; then
@@ -232,12 +267,20 @@ jobs:
             f="$RUNNER_TEMP/proposal/proposal.$ext"
             if [ -f "$f" ]; then cp "$f" ".seo-data/proposals/$RUN_DATE.$ext"; fi
           done
+          code="$(git diff --cached --name-only | grep -v '^src/i18n/locales/' || true)"
           cd .seo-data
           git add proposals
           git diff --cached --quiet || git commit -q -m "proposal: $RUN_DATE"
           git push -q origin seo-data
           {
-            cat "proposals/$RUN_DATE.md" 2>/dev/null || echo "_The agent wrote no summary._"
+            if [ -n "$code" ]; then
+              echo "> [!WARNING]"
+              echo "> Besides translation text, this PR changes code files. Review them as code:"
+              printf '> - `%s`\n' $code
+              echo
+            fi
+            # The agent's summary, with @ defused so it can't mention or notify anyone
+            if [ -f "proposals/$RUN_DATE.md" ]; then sed 's/@/@\xe2\x80\x8b/g' "proposals/$RUN_DATE.md"; else echo "_The agent wrote no summary._"; fi
             echo; echo "---"; echo
             cat reports/latest.md
             echo; echo "🤖 Generated with [Claude Code](https://claude.com/claude-code)"
