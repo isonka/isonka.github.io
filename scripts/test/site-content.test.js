@@ -34,6 +34,8 @@ test('drops dangerous links and images from elsewhere', () => {
 test('only known ids, classes and targets', () => {
   assert.equal(clean('<p id="pt7Config" class="blog-callout navbar">a</p>'), '<p class="blog-callout">a</p>');
   assert.equal(clean('<a href="/x/" target="_top">x</a>'), '<a href="/x/">x</a>');
+  assert.equal(clean('<a href="/api/site-auth/logout">x</a>'), '<a>x</a>');
+  assert.equal(clean('<a href="/API/x">x</a>'), '<a>x</a>');
 });
 
 test('slugs and image file names', () => {

@@ -51,12 +51,13 @@ const BLOG_HTML = {
     img: ['src', 'alt', 'width', 'height', 'loading', 'decoding'],
   },
   allowedClasses: { '*': BLOG_CLASSES },
-  // Only the reference anchors' ids, and only target="_blank"
+  // Only the reference anchors' ids, only target="_blank", and no links into the API
   transformTags: {
     '*': (tagName, attribs) => {
       const kept = { ...attribs };
       if ('id' in kept && !BLOG_IDS.includes(kept.id)) delete kept.id;
       if ('target' in kept && kept.target !== '_blank') delete kept.target;
+      if (typeof kept.href === 'string' && /^\s*\/+api(\/|$)/i.test(kept.href)) delete kept.href;
       return { tagName, attribs: kept };
     },
   },
