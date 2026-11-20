@@ -1,47 +1,17 @@
 import type { BlogPost } from './types.ts';
-import { post as pt7MovesToOlympischStadion } from './posts/pt-7-moves-to-olympisch-stadion.ts';
-import { post as switchingCareersIntoPilates7Questions } from './posts/switching-careers-into-pilates-7-questions.ts';
-import { post as groupPilatesClassSizeAttentionAmsterdam } from './posts/group-pilates-class-size-attention-amsterdam.ts';
-import { post as careerChangeBankerToPilatesInstructor } from './posts/career-change-banker-to-pilates-instructor.ts';
-import { post as pmaIttapAccreditationReformerCourseAmsterdam } from './posts/pma-ittap-accreditation-reformer-course-amsterdam.ts';
-import { post as pilatesPricesAmsterdam2026CompleteGuide } from './posts/pilates-prices-amsterdam-2026-complete-guide.ts';
-import { post as prenatalPilatesSupportingBodyThroughEveryTrimester } from './posts/prenatal-pilates-supporting-body-through-every-trimester.ts';
-import { post as pilatesForMenStrengthFlexibilityAthleticPerformance } from './posts/pilates-for-men-strength-flexibility-athletic-performance.ts';
-import { post as pt7MovesToOlympischStadionNl } from './posts/nl/pt-7-moves-to-olympisch-stadion.ts';
-import { post as switchingCareersIntoPilates7QuestionsNl } from './posts/nl/switching-careers-into-pilates-7-questions.ts';
-import { post as groupPilatesClassSizeAttentionAmsterdamNl } from './posts/nl/group-pilates-class-size-attention-amsterdam.ts';
-import { post as careerChangeBankerToPilatesInstructorNl } from './posts/nl/career-change-banker-to-pilates-instructor.ts';
-import { post as pmaIttapAccreditationReformerCourseAmsterdamNl } from './posts/nl/pma-ittap-accreditation-reformer-course-amsterdam.ts';
-import { post as pilatesPricesAmsterdam2026CompleteGuideNl } from './posts/nl/pilates-prices-amsterdam-2026-complete-guide.ts';
-import { post as prenatalPilatesSupportingBodyThroughEveryTrimesterNl } from './posts/nl/prenatal-pilates-supporting-body-through-every-trimester.ts';
-import { post as pilatesForMenStrengthFlexibilityAthleticPerformanceNl } from './posts/nl/pilates-for-men-strength-flexibility-athletic-performance.ts';
+// Blog posts come from the PT7 Academy API, written by the build (scripts/site-content.js, not committed)
+import postsEn from '../generated/blog.en.json' with { type: 'json' };
+import postsNl from '../generated/blog.nl.json' with { type: 'json' };
 
 export type { BlogPost };
 
 type BlogLocale = 'en' | 'nl';
 
-export const blogPosts: BlogPost[] = [
-  pt7MovesToOlympischStadion,
-  switchingCareersIntoPilates7Questions,
-  groupPilatesClassSizeAttentionAmsterdam,
-  careerChangeBankerToPilatesInstructor,
-  pmaIttapAccreditationReformerCourseAmsterdam,
-  pilatesPricesAmsterdam2026CompleteGuide,
-  prenatalPilatesSupportingBodyThroughEveryTrimester,
-  pilatesForMenStrengthFlexibilityAthleticPerformance,
-];
+/** In the site's order; the fetch script checks slugs and dates, the rest follows the API's shapes. */
+export const blogPosts = postsEn as BlogPost[];
 
-/** Dutch translations, in the same order as `blogPosts`. Each spreads its English post and overrides the copy. */
-export const blogPostsNl: BlogPost[] = [
-  pt7MovesToOlympischStadionNl,
-  switchingCareersIntoPilates7QuestionsNl,
-  groupPilatesClassSizeAttentionAmsterdamNl,
-  careerChangeBankerToPilatesInstructorNl,
-  pmaIttapAccreditationReformerCourseAmsterdamNl,
-  pilatesPricesAmsterdam2026CompleteGuideNl,
-  prenatalPilatesSupportingBodyThroughEveryTrimesterNl,
-  pilatesForMenStrengthFlexibilityAthleticPerformanceNl,
-];
+/** Dutch translations, in the same order as `blogPosts`. */
+export const blogPostsNl = postsNl as BlogPost[];
 
 export const blogPostsFor = (locale: BlogLocale): BlogPost[] => (locale === 'nl' ? blogPostsNl : blogPosts);
 

@@ -9,8 +9,9 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && vite build --config vite.trainee.config.ts && node scripts/copy-spa-404.js && npm run routes:manifest && node scripts/generate-static-routes.js && node scripts/prerender-static-html.js",
-    "build:only": "tsc -b && vite build && vite build --config vite.trainee.config.ts && node scripts/copy-spa-404.js",
+    "build": "npm run content && npm run build:site",
+    "build:site": "tsc -b && vite build && vite build --config vite.trainee.config.ts && node scripts/site-content.js copy-images && node scripts/copy-spa-404.js && npm run routes:manifest && node scripts/generate-static-routes.js && node scripts/prerender-static-html.js",
+    "build:only": "tsc -b && vite build && vite build --config vite.trainee.config.ts && node scripts/site-content.js copy-images && node scripts/copy-spa-404.js",
     "routes:manifest": "node --experimental-strip-types --disable-warning=ExperimentalWarning scripts/generate-routes-manifest.js",
     "lint": "eslint .",
     "fonts": "node scripts/fetch-fonts.js",
@@ -24,7 +25,9 @@
     "preview": "vite preview",
     "lighthouse": "npx --yes @lhci/cli@0.15.1 collect --config=lighthouserc.mobile.json && npx --yes @lhci/cli@0.15.1 assert --config=lighthouserc.mobile.json && npx --yes @lhci/cli@0.15.1 collect --config=lighthouserc.desktop.json && npx --yes @lhci/cli@0.15.1 assert --config=lighthouserc.desktop.json",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "content": "node scripts/site-content.js fetch",
+    "content:test": "node --test scripts/test/site-content.test.js"
   },
   "dependencies": {
     "i18next": "^25.4.2",
@@ -45,6 +48,7 @@
     "gh-pages": "^6.3.0",
     "globals": "^16.4.0",
     "puppeteer": "^25.0.0",
+    "sanitize-html": "2.18.1",
     "sharp": "^0.35.4",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.45.0",

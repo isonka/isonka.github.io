@@ -17,7 +17,21 @@ const file = path.join(dirs.proposals, `${runDate}.json`);
 const proposal = readJson(file);
 const errors = [];
 
+// Trainer, equipment and blog content comes from the PT7 Academy database (owner, 2026-11-20): the agent proposes
+// those changes in its summary and never edits these files (edits there never reach the site)
+const CONTENT_FILES = [
+  'src/data/trainers.ts', 'src/data/trainers.nl.ts', 'src/data/equipment.ts', 'src/data/equipment.nl.ts', 'src/data/blog',
+];
+const touched = execFileSync('git', ['status', '--porcelain', '--', ...CONTENT_FILES], { cwd: projectRoot, encoding: 'utf8' });
+for (const line of touched.split('\n').filter(Boolean)) {
+  errors.push(`${line.slice(3)}: content comes from the database; propose it under "For the database" instead`);
+}
+
 if (!proposal) {
+  if (errors.length) {
+    console.error(`✗ SEO agent changes failed verification:\n  - ${errors.join('\n  - ')}`);
+    process.exit(1);
+  }
   console.log(`No proposal file for ${runDate}; nothing to verify.`);
   process.exit(0);
 }
