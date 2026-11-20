@@ -102,6 +102,11 @@ export const config = {
     '/blog/pt-7-moves-to-olympisch-stadion/',
     '/blog/pt-7-moves-to-olympisch-stadion/nl/',
   ],
+
+  // The only files the agent may change (existing files only, never new ones). The workflow's open-pr job refuses any
+  // other change with its own copy of this list (`allowed` in .github/workflows/seo-weekly.yml): keep both the same.
+  editableFiles:
+    /^(src\/i18n\/locales\/(en|nl)\/[A-Za-z0-9_-]+\.ts|src\/pages\/[A-Za-z0-9_/-]+\.tsx|src\/data\/(workouts|workoutDetails|workoutDetails\.nl)\.ts|site\/routes\.ts|scripts\/generate-static-routes\.js)$/,
 };
 
 export const dirs = {

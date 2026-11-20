@@ -6,12 +6,26 @@ Every Monday, `.github/workflows/seo-weekly.yml` runs this loop and opens a PR f
 collect.js   Search Console (page + page×query, daily) and GA4 organic landing pages
 snapshot.js  title / description / H1 / headings / content links of every sitemap URL, live
 evaluate.js  diff snapshots → each change becomes an experiment; score it; plan actions
-Claude Code  carries out the plan (prompt.md), within AGENTS.md rules
+Claude Code  carries out the plan (prompt.md), within AGENTS.md rules; edits only, no build
 verify.js    the built pages serve exactly the proposed text; lengths ok; no guardrail breaches
 PR           one PR per week: what changed, why, with the numbers
 ```
 
 History (daily data, snapshots, reports, proposals) is committed to the **`seo-data`** branch, not `main`.
+
+The workflow runs as four jobs, so the agent never works with a write token or the build key, and nothing it edits
+runs near a secret (owner, 2026-11-20). **collect** (data, snapshot, evaluation, history push, the site content with
+the build key) runs no agent. **propose** runs Claude (CLI pinned) with its own token and nothing else, confined to the working folder
+(`--restricted`): it may edit only the files in
+`editableFiles` (`config.js`) and its two proposal files, and has no shell, so it runs no build, script or git (it reads
+the git history from a file written before it starts). **check** has no secrets: it applies the agent's files and runs lint, the full build and `verify.js`, then
+hands the patch and the proposal files on as size-capped job outputs, never as an artifact. **open-pr** holds the write
+token and runs none of this repository's code. It checks the proposal's shape and accepts the patch only if it modifies
+existing files in `editableFiles`. New, deleted or renamed files, mode changes and binary files are refused. A PR that
+touches anything besides the locale files says so at the top, so review those as code. To let the agent edit another
+place, change `editableFiles`, the workflow's `allowed` and propose's `Edit(...)` rules together. No job restores a
+cache: check runs agent-edited code on `main`'s cache scope, so the deploy workflow restores none either. Because the
+agent can't build, a mistake it makes fails that week's run (the run log says why) instead of being fixed by it.
 
 ## How it decides
 
@@ -36,7 +50,7 @@ Tune all thresholds, the target keywords and the frozen pages in `config.js`.
 4. **GitHub repo → Settings → Secrets and variables → Actions**
    - Secrets: `GOOGLE_SERVICE_ACCOUNT_JSON` (the whole key file), `CLAUDE_CODE_OAUTH_TOKEN` (run `claude setup-token` locally, logged in with your claude.ai Pro/Max account; it uses your subscription, no API billing)
    - Variables: `GSC_SITE_URL` (`sc-domain:pt7.nl` for a Domain property, or `https://www.pt7.nl/`), `GA4_PROPERTY_ID`
-5. **Settings → Actions → General → Workflow permissions**: "Read and write", and tick "Allow GitHub Actions to create and approve pull requests".
+5. **Settings → Actions → General → Workflow permissions**: tick "Allow GitHub Actions to create and approve pull requests". Each job asks for the permissions it needs, so the default can stay "Read repository contents".
 6. Commit `PT7_SEO_PLAN.md`: the agent follows its decisions, and CI only sees committed files.
 7. First run: Actions → *Weekly SEO agent* → Run workflow with **apply off**. It backfills 120 days of data and posts the report in the run summary.
 

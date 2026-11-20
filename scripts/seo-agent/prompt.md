@@ -13,16 +13,16 @@ A deterministic evaluator has already compared last weeks' Search Console + GA4 
 Do at most the actions listed, one page each, and touch no other page except to add the internal links named in a `strengthen` action.
 
 - **revert-snippet**: a title/description change measurably lowered position-adjusted CTR. Restore `restore.title` / `restore.description` **exactly**.
-- **rewrite-snippet**: the page ranks but its snippet under-performs its positions. Write a new title (≤ 60 characters) and meta description (120–155 characters) built around the page's real non-brand `topQueries`, in the page's language (`/…/nl/` pages are Dutch). Lead with the query the page should win, end the title with `| PT7`, and give a concrete reason to click (small groups max 5, intro offer, location, expertise) using only facts already on the page. Never reuse anything in `doNotReuse`. Borrow patterns from winning entries in `learnings`; avoid the patterns of losing ones.
+- **rewrite-snippet**: the page ranks but its snippet under-performs its positions. Write a new title (≤ 55 characters) and meta description (120–150 characters) built around the page's real non-brand `topQueries`, in the page's language (`/…/nl/` pages are Dutch). Lead with the query the page should win, end the title with `| PT7`, and give a concrete reason to click (small groups max 5, intro offer, location, expertise) using only facts already on the page. Never reuse anything in `doNotReuse`. Borrow patterns from winning entries in `learnings`; avoid the patterns of losing ones.
 - **fix-snippet-hygiene**: fix only the listed `issues` (length, bare URL, duplicate), and keep the primary keyword and meaning.
 - **strengthen**: the page works, so **do not change its title, description or H1** (`keepSnippet`). Instead:
   - For each relevant query in `uncoveredQueries`, add or extend a section or FAQ item that genuinely answers it (an H2/H3 that contains the query's wording where natural). If the page renders FAQ JSON-LD from the same data, add the item there so both stay in sync. About 80–200 new words in total; quality over volume.
   - From each page in `addInternalLinksFrom`, add **one** contextual link to this page with a descriptive anchor, **but only where it is topically natural**. Skip a source that has no fitting sentence, and say so. Use trailing-slash paths; on NL pages go through `localeHref()` so links stay on NL mirrors.
-- **review-content-regression**: impressions/position dropped after the page's content changed between `changedBetween[0]` and `[1]`. Use `git log --since/--until` and `git show` on the page's source files to find what changed. If a section, FAQ or internal link was removed or weakened, restore it. If the cause isn't clear, change nothing and explain.
+- **review-content-regression**: impressions/position dropped after the page's content changed between `changedBetween[0]` and `[1]`. Find what changed in the page's source files in `.seo-data/git/log.txt` (commits of the last 120 days with their files) and `.seo-data/git/log-with-diffs.txt` (the same with diffs; search it with Grep, it is large). If a section, FAQ or internal link was removed or weakened, restore it. If the cause isn't clear, change nothing and explain.
 
 ## Where metadata lives
 
-Find the current string with grep and update **every place that serves this page's** title/description, and no other page's: usually `src/i18n/locales/{en,nl}/*.ts` or the page component, plus a `meta` block for the path in `site/routes.ts` and fallback meta in `scripts/generate-static-routes.js` if present.
+Find the current string with Grep and update **every place that serves this page's** title/description, and no other page's: usually `src/i18n/locales/{en,nl}/*.ts` or the page component, plus a `meta` block for the path in `site/routes.ts` and fallback meta in `scripts/generate-static-routes.js` if present.
 
 **Trainer, equipment and blog content is not in files.** Trainer profiles (`/trainer/…`), equipment pages (`/equipment/<item>/`) and blog posts (`/blog/<post>/`), with their titles, descriptions, bodies and FAQs, come from the PT7 Academy database at build time. Never edit `src/data/trainers*.ts`, `src/data/equipment*.ts`, anything under `src/data/blog/` or `src/data/generated/`: changes there never reach the site. For an action on such a page, change no file. Instead write the exact proposed text (title, description, or the new section or FAQ in HTML) in the summary under a heading **For the database**, and leave the action out of the proposals JSON. The index pages (`/instructors/`, `/equipment/`, `/blog/`) keep their copy in the i18n files as before.
 
@@ -33,12 +33,18 @@ Find the current string with grep and update **every place that serves this page
 - "PT7" is the visible brand. "PT Studio 7" stays only where it already is (homepage title/description, JSON-LD alternateName).
 - Premium tone: no "cheap", "budget", "goedkoop", and no "below typical rates" framing.
 - Don't edit `SEOHead.tsx`, `StructuredData.tsx`, canonicals, `index.html` analytics/GTM, routes, or anything under `.seo-data/` except the two output files below.
+- Change only existing files, and only these: `src/i18n/locales/{en,nl}/*.ts`, page components in `src/pages/`, `src/data/workouts.ts`, `src/data/workoutDetails.ts`, `src/data/workoutDetails.nl.ts`, `site/routes.ts` (meta blocks) and `scripts/generate-static-routes.js` (fallback meta). Never create, delete or rename a file (the two output files below are the only new ones). Edits anywhere else are denied, and the workflow refuses the whole week's changes if one gets through. If an action needs another file, skip it and explain.
 - Frozen pages (`frozenPages` in `scripts/seo-agent/config.js`: congrats, privacy, ClassPass offer, the move notice and its blog post) are never edited.
 - If an action can't be done safely within these rules, skip it and explain why.
 
 ## Validate
 
-Run `npm run lint` and `npm run build:site` (full build with prerender, from the content fetched before you started), fix anything you broke, then run `node scripts/seo-agent/verify.js` and fix every error it reports.
+You have no shell, so you can't run the build, a script or git: you can read, search (Glob, Grep) and edit the allowed files. After you finish, a separate job runs `npm run lint`, `npm run build:site` (full build with prerender) and `node scripts/seo-agent/verify.js`. If any of them fails, no PR opens that week, so check your own work before you stop:
+- TypeScript and quotes stay valid (escape apostrophes in single-quoted strings; keep every key the other language file has).
+- Each proposed `after` title and description is exactly the text the page will serve, after `{{…}}` variables are filled in.
+- Count characters: keep titles at most 55 characters and descriptions 120–150 (the check fails the whole week above 60 and 160), and each page keeps exactly one H1.
+- `.seo-data/proposals/{{RUN_DATE}}.json` is valid JSON: `changes` is a list, each item with a string `page` and `action`.
+- Re-read every file you changed: only the edits you meant are there.
 
 ## Output (required, even if you skip everything)
 

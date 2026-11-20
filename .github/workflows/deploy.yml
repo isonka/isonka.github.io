@@ -25,11 +25,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # No caches in this job: the weekly SEO workflow runs agent-edited code on main's cache scope, so anything
+      # restored here could have been written there (seo-weekly.yml)
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '24'
-          cache: npm
 
       - name: Install dependencies
         run: npm ci
@@ -45,14 +46,6 @@ jobs:
       # What the build lets through from the database (blog HTML filter, slugs, image names)
       - name: Test the site content rules
         run: npm run content:test
-
-      - name: Cache Puppeteer browser
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/puppeteer
-          key: ${{ runner.os }}-puppeteer-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-puppeteer-
 
       - name: Install Chrome for prerender
         run: npx puppeteer browsers install chrome
