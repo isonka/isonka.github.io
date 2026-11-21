@@ -5,7 +5,8 @@
     "ignore": [
       "CNAME",
       "**/.DS_Store",
-      "**/.gitkeep"
+      "**/.gitkeep",
+      "screen/screen_display.mp4"
     ],
     "rewrites": [
       {
