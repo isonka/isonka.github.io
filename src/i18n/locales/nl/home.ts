@@ -3,12 +3,12 @@ import type { EnHome } from '../en/home';
 
 export const nlHome: DeepStringify<EnHome> = {
   seo: {
-    title: 'PT7 (PT Studio 7) | Pilates & Krachttraining Amsterdam Zuid',
+    title: 'PT7 Pilates Amsterdam | Reformer lessen bij Museumplein',
     description:
       'PT7 (voorheen PT Studio 7): boutique pilates- en krachtstudio aan de {{studioStreet}}, Museumplein, Amsterdam Zuid. Max. 5 per les. Intro: 3 lessen €50.',
     keywords:
       'PT7, PT7 Pilates, pilates Amsterdam, pilateslessen Amsterdam, pilates bij mij in de buurt, Reformer pilates Amsterdam, one-on-one training Amsterdam, pilates Museumplein, private pilates Amsterdam, small group pilates, pilatesstudio Van Baerlestraat, TRX Amsterdam, prenatale pilates Amsterdam',
-    ogTitle: 'PT7 (PT Studio 7) | Pilates & Krachttraining Amsterdam Zuid',
+    ogTitle: 'PT7 Pilates Amsterdam | Reformer lessen bij Museumplein',
     ogDescription:
       'PT7 boutique studio aan het Museumplein: Reformer pilates, kleine groepen (max. 5) en private sessies in Amsterdam Oud-Zuid. Online boeken.',
     analyticsTitle: 'Home - PT7 Pilates Amsterdam',
