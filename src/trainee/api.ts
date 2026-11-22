@@ -1,7 +1,9 @@
-// The PT7 Academy API, for the trainee pages (/academy/trainee/). The site and the API share one address: Firebase
-// Hosting sends /api/** to the API, and `npm run dev` forwards /api to a local API (vite.config.ts). The login is an
-// HttpOnly cookie (`__session`) the browser sends by itself; this code never sees it.
-// Every answer is { success, data } or { success: false, error }.
+import { dropProofIfSent, keepProof, readProof } from './proof';
+
+// The PT7 Academy API, for the trainee pages (academy.pt7.nl). The pages and the API share one address: Firebase
+// Hosting sends /api/** to the API, and `npm run dev` forwards /api to a local API (vite.config.ts). A login is an
+// HttpOnly cookie (`__session`) the browser sends by itself, which this code never sees, plus a proof it sends as a
+// header (proof.ts). Every answer is { success, data } or { success: false, error }.
 
 export class ApiError extends Error {
   readonly status: number;
@@ -17,13 +19,16 @@ export class ApiError extends Error {
 
 type Body = { success?: boolean; data?: unknown; error?: unknown; message?: unknown };
 
-async function call<T>(method: 'GET' | 'POST', path: string, body?: unknown): Promise<T> {
+async function call<T>(method: 'GET' | 'POST', path: string, body?: unknown, proof: string | null = readProof()): Promise<T> {
+  const headers: Record<string, string> = { Accept: 'application/json' };
+  if (body !== undefined) headers['Content-Type'] = 'application/json';
+  if (proof !== null) headers['X-Session-Proof'] = proof;
   let res: Response;
   try {
     res = await fetch(`/api${path}`, {
       method,
       credentials: 'same-origin',
-      headers: body === undefined ? { Accept: 'application/json' } : { Accept: 'application/json', 'Content-Type': 'application/json' },
+      headers,
       body: body === undefined ? undefined : JSON.stringify(body),
     });
   } catch {
@@ -73,11 +78,31 @@ export interface MyExam {
 
 // --- Sign-in (/api/site-auth) and the own password (/api/account/password) ---
 
-export const getSession = () => apiGet<{ user: SiteUser } | null>('/site-auth/session');
-export const signIn = (email: string, password: string) => apiPost<{ user: SiteUser }>('/site-auth/login', { email, password });
-export const signOut = () => apiPost<void>('/site-auth/logout');
-export const changePassword = (currentPassword: string, newPassword: string) =>
-  apiPost<void>('/account/password', { currentPassword, newPassword });
+/** Only a real "nobody is signed in" drops the proof: an error or a 429 says nothing about the login. */
+export async function getSession(): Promise<{ user: SiteUser } | null> {
+  const sent = readProof();
+  const session = await call<{ user: SiteUser } | null>('GET', '/site-auth/session', undefined, sent);
+  if (session === null) dropProofIfSent(sent);
+  return session;
+}
+
+export async function signIn(email: string, password: string): Promise<{ user: SiteUser }> {
+  const { user, proof } = await apiPost<{ user: SiteUser; proof: string }>('/site-auth/login', { email, password });
+  keepProof(proof);
+  return { user };
+}
+
+export async function signOut(): Promise<void> {
+  const sent = readProof();
+  await call<void>('POST', '/site-auth/logout', {}, sent);
+  dropProofIfSent(sent);
+}
+
+/** The API ends every other login and returns a new proof for this one. */
+export async function changePassword(currentPassword: string, newPassword: string): Promise<void> {
+  const { proof } = await apiPost<{ proof: string }>('/account/password', { currentPassword, newPassword });
+  keepProof(proof);
+}
 
 // --- The trainee's own data ---
 

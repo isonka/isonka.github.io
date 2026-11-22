@@ -58,7 +58,7 @@ export default defineConfig({
     headers: {
       'Cache-Control': 'no-cache',
     },
-    // The trainee area (academy/trainee/, built separately by vite.trainee.config.ts; the dev server serves it too)
+    // The trainee area (academy/trainee/, built into dist-academy/ by vite.trainee.config.ts; the dev server serves it)
     // calls the PT7 Academy API on the same address (/api). In development, forward it to a local API (pt7-academy:
     // `npm run dev -w api`, port 4000) or set PT7_API to another one (localhost or https only). The Host header stays
     // localhost:5173, which the API accepts as the website's own origin during development.

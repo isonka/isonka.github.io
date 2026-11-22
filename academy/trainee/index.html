@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--
-      The PT7 Academy trainee area: its own page, outside the site's single-page app, so none of the site's
-      third-party scripts (Google Tag Manager, Mindbody, the chatbot) are loaded by this page (owner, 2026-11-18).
-      Other pt7.nl pages share its address, so this doesn't shield it from them (pt7-academy docs/DECISIONS_LOG.md).
+      The PT7 Academy trainee area (academy.pt7.nl): its own page and build, outside the site's single-page app, so
+      none of the site's third-party scripts (Google Tag Manager, Mindbody, the chatbot) are loaded or published with
+      it (owner, 2026-11-18 and 2026-11-21; pt7-academy docs/DECISIONS_LOG.md).
       The build adds a strict Content-Security-Policy here (vite.trainee.config.ts).
       Not indexed, not in the sitemap, English only.
     -->
@@ -18,10 +18,10 @@
   </head>
   <body>
     <div id="root">
-      <header class="trainee-top"><a href="/" class="trainee-brand">PT7</a></header>
+      <header class="trainee-top"><a href="https://pt7.nl/" class="trainee-brand">PT7</a></header>
       <main class="trainee"><div class="trainee-inner"><p class="kicker">PT7 Academy</p><h1>Trainee area</h1><p>Loading…</p></div></main>
     </div>
     <noscript>The trainee area needs JavaScript.</noscript>
-    <script type="module" src="/src/trainee/main.tsx"></script>
+    <script type="module" src="../../src/trainee/main.tsx"></script>
   </body>
 </html>

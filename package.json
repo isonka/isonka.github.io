@@ -27,7 +27,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "content": "node scripts/site-content.js fetch",
-    "content:test": "node --test scripts/test/site-content.test.js"
+    "content:test": "node --test scripts/test/site-content.test.js",
+    "trainee:test": "node --experimental-strip-types --disable-warning=ExperimentalWarning --test scripts/test/trainee-proof.test.js"
   },
   "dependencies": {
     "i18next": "^25.4.2",
