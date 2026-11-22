@@ -114,6 +114,16 @@ jobs:
           include-hidden-files: true # .well-known/
           retention-days: 7
 
+      # The trainee area's own files, for its own Hosting site (academy.pt7.nl)
+      - name: Upload the trainee area for Firebase Hosting
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: academy
+          path: ./dist-academy
+          if-no-files-found: error
+          retention-days: 7
+
   # pt7.nl moves from GitHub Pages to Firebase Hosting (pt7-academy project, milestone 1 step 3). Until the domain moves,
   # every push to main deploys to both: GitHub Pages (pt7.nl) and Firebase Hosting (https://pt7-academy.web.app).
   # Keyless sign-in to GCP (Workload Identity Federation, limited to this repository, main and this file) as an account
@@ -140,17 +150,25 @@ jobs:
           sparse-checkout: tools/firebase-cli
           persist-credentials: false
 
-      # firebase-tools runs predeploy/postdeploy entries as shell commands; this config must never have any, and its
-      # hosting section must be inline (not loaded from a file, which could come from dist)
+      # firebase-tools runs predeploy/postdeploy entries as shell commands; these configs must never have any, and their
+      # hosting section must be inline (not loaded from a file, which could come from dist). The trainee site's config
+      # must publish only the trainee files, to its own site.
       - name: Check the Hosting config
         run: |
           node -e '
-            const c = JSON.parse(require("fs").readFileSync("firebase.json", "utf8"));
+            const fs = require("fs");
             const hook = (v) => v !== null && typeof v === "object" &&
               Object.entries(v).some(([k, x]) => /^(pre|post)deploy$/.test(k) || hook(x));
-            if (c.hosting === null || typeof c.hosting !== "object" || Array.isArray(c.hosting) || hook(c)) {
-              console.error("firebase.json: hosting must be one inline object, without predeploy/postdeploy");
-              process.exit(1);
+            const fail = (message) => { console.error(message); process.exit(1); };
+            for (const file of ["firebase.json", "firebase.academy.json"]) {
+              const c = JSON.parse(fs.readFileSync(file, "utf8"));
+              if (c.hosting === null || typeof c.hosting !== "object" || Array.isArray(c.hosting) || hook(c)) {
+                fail(file + ": hosting must be one inline object, without predeploy/postdeploy");
+              }
+            }
+            const academy = JSON.parse(fs.readFileSync("firebase.academy.json", "utf8")).hosting;
+            if (academy.site !== "pt7-academy-trainee" || academy.public !== "dist-academy") {
+              fail("firebase.academy.json: must publish dist-academy to the site pt7-academy-trainee");
             }'
 
       - name: Download the build
@@ -188,6 +206,39 @@ jobs:
           test "$(get /)" = 200
           test "$(get /academy/trainee/)" = 404
           test "$(get /.well-known/api-catalog)" = 200
+          test "$(get /api/health)" = 200
+          echo "ok"
+
+      # The trainee area's own Hosting site. Off until that site exists: the repository variable ACADEMY_HOSTING=on
+      # switches these three steps on (pt7-academy docs/DEPLOY_GCP.md, "The trainee area on academy.pt7.nl"). They run
+      # after the public site is deployed and checked, so a failure here can't hold it back.
+      - name: Download the trainee area
+        if: vars.ACADEMY_HOSTING == 'on'
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: academy
+          path: ./dist-academy
+
+      - name: Deploy the trainee area
+        if: vars.ACADEMY_HOSTING == 'on'
+        run: firebase deploy --config firebase.academy.json --only hosting --project "$PROJECT_ID" --non-interactive --message "$GITHUB_SHA"
+
+      # Its page must carry the framing ban and no-cache, the API must answer behind it, and none of the public site's
+      # pages may be there
+      - name: Check the trainee area
+        if: vars.ACADEMY_HOSTING == 'on'
+        shell: bash
+        run: |
+          set -euo pipefail
+          SITE=https://pt7-academy-trainee.web.app
+          get() { curl -sS --retry 3 --retry-all-errors -o /dev/null -D "$RUNNER_TEMP/headers" -w '%{http_code}' "$SITE$1"; }
+          has() { tr -d '\r' < "$RUNNER_TEMP/headers" | grep -qi "^$1$"; }
+          test "$(get /)" = 200
+          has "content-security-policy: frame-ancestors 'none'"
+          has "x-frame-options: DENY"
+          has "cache-control: no-cache"
+          test "$(get /academy/)" = 404
+          test "$(get /robots.txt)" = 404
           test "$(get /api/health)" = 200
           echo "ok"
 
