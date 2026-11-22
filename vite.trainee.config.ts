@@ -1,14 +1,20 @@
 import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
+import { cpSync, readdirSync, statSync } from 'node:fs'
+import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-// The trainee area (academy/trainee/index.html): its own page with no third-party scripts (owner, 2026-11-18), built
-// in a separate step after the main site (`npm run build`), so the main site's output stays exactly as before (one
-// shared build split the shared stylesheet out of the home page and cost Lighthouse time, 2026-11-18).
+// The trainee area (academy/trainee/index.html, published at academy.pt7.nl): its own page with no third-party scripts
+// (owner, 2026-11-18), built after the main site (`npm run build`) into its own folder, dist-academy/. That folder holds
+// only the trainee files, so a Hosting site published from it can't serve Tag Manager or Mindbody pages on the trainee
+// address (owner, 2026-11-21). The main site's output in dist/ no longer contains this page.
 // The build gives the page a strict Content-Security-Policy: only this site's own scripts, styles, fonts, images and
 // /api (`npm run dev` leaves it out: Vite's dev server needs inline scripts). frame-ancestors can't be set in a meta
-// tag; it goes into the hosting headers (`frame-ancestors 'none'`) with the move to Firebase.
-const PAGE = 'academy/trainee/index.html'
+// tag; it goes into the trainee site's hosting headers (`frame-ancestors 'none'`).
+const here = (file: string) => fileURLToPath(new URL(file, import.meta.url))
+const ROOT = here('./academy/trainee')
+const OUT = here('./dist-academy')
+const PAGE = 'index.html'
 
 const TRAINEE_CSP = [
   "default-src 'none'",
@@ -31,7 +37,7 @@ const traineeCsp = (): Plugin => {
     transformIndexHtml: {
       order: 'post',
       handler(html, ctx) {
-        if (!ctx.path.endsWith(`/${PAGE}`)) throw new Error(`trainee-csp: unexpected page ${ctx.path}`)
+        if (ctx.path !== `/${PAGE}`) throw new Error(`trainee-csp: unexpected page ${ctx.path}`)
         const anchor = '<meta charset="UTF-8" />'
         if (!html.includes(anchor)) throw new Error(`trainee-csp: ${anchor} not found in ${PAGE}`)
         applied = true
@@ -44,16 +50,41 @@ const traineeCsp = (): Plugin => {
   }
 }
 
+// Everything the trainee site may publish. The build fails on any other file.
+const ALLOWED = /^(index\.html|favicon-32x32\.png|assets\/trainee-[\w-]+\.(js|css)|fonts\/[\w-]+\.(woff2|ttf))$/
+
+// Copies the few public files the page uses (no publicDir: that would publish all of the main site's), then checks
+// the folder
+const onlyTraineeFiles = (): Plugin => ({
+  name: 'trainee-files',
+  apply: 'build',
+  closeBundle() {
+    cpSync(here('./public/favicon-32x32.png'), path.join(OUT, 'favicon-32x32.png'))
+    cpSync(here('./public/fonts'), path.join(OUT, 'fonts'), {
+      recursive: true,
+      filter: (source) => path.basename(source) !== '.gitkeep',
+    })
+    const files = readdirSync(OUT, { recursive: true, encoding: 'utf8' })
+      .filter((file) => statSync(path.join(OUT, file)).isFile())
+      .map((file) => file.split(path.sep).join('/'))
+    const stray = files.filter((file) => !ALLOWED.test(file))
+    if (stray.length) throw new Error(`trainee-files: not a trainee file: ${stray.join(', ')}`)
+    if (!files.includes(PAGE)) throw new Error(`trainee-files: ${PAGE} is missing`)
+  },
+})
+
 export default defineConfig({
-  plugins: [react(), traineeCsp()],
+  plugins: [react(), traineeCsp(), onlyTraineeFiles()],
+  root: ROOT,
   base: '/',
+  publicDir: false,
   build: {
-    outDir: 'dist',
-    emptyOutDir: false, // the main site's build is already there
+    outDir: OUT,
+    emptyOutDir: true,
     assetsDir: 'assets',
     minify: 'esbuild',
     rollupOptions: {
-      input: fileURLToPath(new URL(`./${PAGE}`, import.meta.url)),
+      input: path.join(ROOT, PAGE),
       output: {
         assetFileNames: 'assets/trainee-[name]-[hash][extname]',
         chunkFileNames: 'assets/trainee-[name]-[hash].js',

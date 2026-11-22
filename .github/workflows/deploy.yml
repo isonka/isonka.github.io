@@ -47,6 +47,10 @@ jobs:
       - name: Test the site content rules
         run: npm run content:test
 
+      # The per-login proof the trainee area's session depends on
+      - name: Test the trainee session proof
+        run: npm run trainee:test
+
       - name: Install Chrome for prerender
         run: npx puppeteer browsers install chrome
 
@@ -173,17 +177,16 @@ jobs:
       - name: Deploy to Firebase Hosting
         run: firebase deploy --only hosting --project "$PROJECT_ID" --non-interactive --message "$GITHUB_SHA"
 
-      # The new release must serve the home page, the trainee area with its headers, and the API behind it
+      # The new release must serve the home page and the API behind it, and no longer the trainee area (it moves to its
+      # own address, academy.pt7.nl)
       - name: Check the live site
         shell: bash
         run: |
           set -euo pipefail
           SITE=https://pt7-academy.web.app
-          get() { curl -sS --retry 3 --retry-all-errors -o /dev/null -D "$RUNNER_TEMP/headers" -w '%{http_code}' "$SITE$1"; }
+          get() { curl -sS --retry 3 --retry-all-errors -o /dev/null -w '%{http_code}' "$SITE$1"; }
           test "$(get /)" = 200
-          [[ "$(get /academy/trainee)" =~ ^30[18]$ ]] # the address without the slash only redirects
-          test "$(get /academy/trainee/)" = 200
-          tr -d '\r' < "$RUNNER_TEMP/headers" | grep -qi "^content-security-policy: frame-ancestors 'none'$"
+          test "$(get /academy/trainee/)" = 404
           test "$(get /.well-known/api-catalog)" = 200
           test "$(get /api/health)" = 200
           echo "ok"

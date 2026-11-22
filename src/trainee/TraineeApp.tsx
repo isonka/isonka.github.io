@@ -55,7 +55,7 @@ export function TraineeApp() {
   return (
     <>
       <header className="trainee-top">
-        <a href="/" className="trainee-brand" aria-label={s.backToSite}>
+        <a href="https://pt7.nl/" className="trainee-brand" aria-label={s.backToSite}>
           PT7
         </a>
       </header>
