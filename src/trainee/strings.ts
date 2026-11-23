@@ -64,7 +64,7 @@ export const s = {
     title: 'Your logbook',
     hoursSigned: 'Hours signed off',
     studioLeft: 'Free studio time left',
-    days: (n: number) => `${n} days`,
+    days: (n: number) => (n === 1 ? '1 day' : `${n} days`),
     noStartDate: 'No start date yet',
     qtt: (name: string) => `QTT ${name}`,
     ofHours: (done: string, required: number) => `${done} / ${required} h`,
@@ -76,8 +76,7 @@ export const s = {
     noEntries: 'No entries yet.',
     stale: 'This page could not refresh, so it may be out of date. A change you just saved is stored: reload the page before entering it again.',
     notLinked: 'Your login is not linked to a trainee record yet. Please contact the academy.',
-    saveFailed: 'We could not confirm that this was saved. Please try again; it will not be stored twice.',
-    actionFailed: 'That did not work. Please reload the page and try again.',
+    saveFailed: 'We could not confirm that this was saved. Check the list below: if it is not there, send the same values again.',
     fromRecording: 'From a recording',
     status: {
       pending: 'Waiting for sign-off',

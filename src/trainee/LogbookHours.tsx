@@ -151,7 +151,9 @@ export function CategoryLog({
     try {
       await createEntry({ ...bodyOf(v), kind: 'hours', category: category.key, clientRef: attempt.current.ref });
     } catch (err) {
-      return saveErrorText(err, handlers);
+      const message = saveErrorText(err, handlers);
+      if (message === s.logbook.saveFailed) onChange(); // the outcome is unknown: the list shows whether it arrived
+      return message;
     }
     attempt.current = null;
     setAdding(false);
@@ -185,7 +187,16 @@ export function CategoryLog({
       </div>
       {category.staffOnly && <p className="trainee-hint">{s.logbook.recordedByAcademy}</p>}
       {adding && (
-        <HoursForm category={category} initial={emptyValues()} submitLabel={s.logbook.form.send} onSubmit={create} onCancel={() => setAdding(false)} />
+        <HoursForm
+          category={category}
+          initial={emptyValues()}
+          submitLabel={s.logbook.form.send}
+          onSubmit={create}
+          onCancel={() => {
+            attempt.current = null; // a later identical entry is a new one
+            setAdding(false);
+          }}
+        />
       )}
 
       {rows.length === 0 ? (
