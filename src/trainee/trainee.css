@@ -877,6 +877,11 @@ body {
   color: var(--ground);
 }
 
+/* A list that is also a card keeps the card's padding */
+.trainee-card.trainee-entries {
+  padding: var(--card-padding);
+}
+
 .trainee-recording {
   display: flex;
   flex-direction: column;
