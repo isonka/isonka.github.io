@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useId, useRef, useState, useSyncExternalStore, type FormEvent } from 'react';
+import { useCallback, useEffect, useId, useMemo, useRef, useState, useSyncExternalStore, type FormEvent } from 'react';
 import {
   ApiError,
   changePassword,
@@ -13,7 +13,9 @@ import {
   type SessionHandlers,
   type SiteUser,
 } from './api';
+import { LibraryScreen } from './LibraryScreen';
 import { LogbookScreen } from './LogbookScreen';
+import { currentHash, routeOf, subscribeToRoute } from './route';
 import { s } from './strings';
 
 // The trainee area: sign in, replace the first password, then the trainee's own progress. All data comes from the
@@ -243,13 +245,6 @@ function PasswordForm({ focus, onChanged, onEnded }: { focus: boolean; onChanged
 
 const dateText = (iso: string) => new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 
-// The section is in the address (#logbook), so a reload and the browser's back button keep it.
-const subscribeToHash = (onChange: () => void) => {
-  window.addEventListener('hashchange', onChange);
-  return () => window.removeEventListener('hashchange', onChange);
-};
-const currentSection = () => (window.location.hash === '#logbook' ? 'logbook' : 'overview');
-
 function SignedIn({
   focus,
   user,
@@ -261,7 +256,8 @@ function SignedIn({
   user: SiteUser;
   onSignedOut: () => void;
 }) {
-  const section = useSyncExternalStore(subscribeToHash, currentSection);
+  const { section, param } = routeOf(useSyncExternalStore(subscribeToRoute, currentHash));
+  const handlers = useMemo(() => ({ onEnded, onPasswordRequired }), [onEnded, onPasswordRequired]);
   const [leaving, setLeaving] = useState(false);
   const [leaveError, setLeaveError] = useState(false);
 
@@ -298,13 +294,14 @@ function SignedIn({
         <a href="#logbook" aria-current={section === 'logbook' ? 'page' : undefined}>
           {s.nav.logbook}
         </a>
+        <a href="#library" aria-current={section === 'library' ? 'page' : undefined}>
+          {s.nav.library}
+        </a>
       </nav>
 
-      {section === 'logbook' ? (
-        <LogbookScreen onEnded={onEnded} onPasswordRequired={onPasswordRequired} />
-      ) : (
-        <Overview onEnded={onEnded} onPasswordRequired={onPasswordRequired} />
-      )}
+      {section === 'overview' && <Overview {...handlers} />}
+      {section === 'logbook' && <LogbookScreen {...handlers} />}
+      {section === 'library' && <LibraryScreen slug={param} handlers={handlers} />}
     </div>
   );
 }

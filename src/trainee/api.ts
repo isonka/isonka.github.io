@@ -152,6 +152,29 @@ export interface Logbook {
   entries: LogEntry[];
 }
 
+export interface MovementSummary {
+  slug: string;
+  level: number;
+  number: number;
+  name: string;
+  variationCount: number;
+  coverPhotoId: string | null;
+}
+
+export interface MovementDetail {
+  slug: string;
+  level: number;
+  number: number;
+  name: string;
+  setup: string;
+  regression: string;
+  progression: string;
+  modification: string;
+  contraindication: string;
+  variations: { name: string; howToPerform: string }[];
+  photos: { fileId: string; caption: string }[];
+}
+
 // --- Sign-in (/api/site-auth) and the own password (/api/account/password) ---
 
 /** Only a real "nobody is signed in" drops the proof: an error or a 429 says nothing about the login. */
@@ -189,6 +212,23 @@ export const getLogbook = () => apiGet<Logbook>('/logbook/mine');
 export const createEntry = (body: Record<string, unknown>) => apiPost<LogEntry>('/logbook/entries', body);
 export const updateEntry = (id: string, body: Record<string, unknown>) =>
   call<LogEntry>('PATCH', `/logbook/entries/${encodeURIComponent(id)}`, body);
+
+export const getMovements = () => apiGet<MovementSummary[]>('/movements');
+export const getMovement = (slug: string) => apiGet<MovementDetail>(`/movements/${encodeURIComponent(slug)}`);
+
+/** A library photo, with the login's proof. Only a JPEG from the API is accepted. */
+export async function getPhoto(fileId: string, signal: AbortSignal): Promise<Blob> {
+  const proof = readProof();
+  const res = await fetch(`/api/movement-photos/${encodeURIComponent(fileId)}`, {
+    credentials: 'same-origin',
+    headers: proof === null ? {} : { 'X-Session-Proof': proof },
+    signal,
+  });
+  if (!res.ok) throw new ApiError(res.status, 'Photo');
+  const blob = await res.blob();
+  if (blob.type !== 'image/jpeg') throw new ApiError(res.status, 'Photo');
+  return blob;
+}
 
 /** Sent with a new entry: if the answer gets lost and the trainee tries again, the API keeps one copy. */
 export function newClientRef(): string {
