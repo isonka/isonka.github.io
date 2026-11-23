@@ -5,6 +5,8 @@ import { s } from './strings';
 
 // Homework and the exercise check-in: each item is asked for once and signed by the QTT.
 
+const ALREADY_ASKED = 'This is already signed off or waiting for sign-off'; // the API's message
+
 /** The most telling entry for an item: signed, else waiting, else the latest sent back. */
 const pick = (entries: LogEntry[]) =>
   entries.find((e) => e.status === 'approved') ?? entries.find((e) => e.status === 'pending') ?? entries[entries.length - 1];
@@ -33,8 +35,9 @@ function ItemAction({
       await createEntry({ ...body, date: localDay() });
       onChange();
     } catch (err) {
-      // Already there (e.g. an earlier try whose answer got lost): the reload shows it
-      if (err instanceof ApiError && err.status === 409) onChange();
+      // Already there (e.g. an earlier try whose answer got lost): the reload shows it. The API's other 409s are its
+      // caps on waiting and stored entries, which the trainee needs to read.
+      if (err instanceof ApiError && err.code === ALREADY_ASKED) onChange();
       else setError(saveErrorText(err, handlers));
     }
     setBusy(false);
