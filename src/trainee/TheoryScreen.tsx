@@ -67,7 +67,8 @@ export function TheoryScreen({ id, handlers }: { id: string; handlers: SessionHa
   const [loadError, setLoadError] = useState<'none' | 'notFound' | 'failed'>('none');
   const [busy, setBusy] = useState(false);
   const [actionError, setActionError] = useState('');
-  const [notSaved, setNotSaved] = useState(false);
+  const [unsaved, setUnsaved] = useState<number[]>([]); // questions whose latest choice did not reach the server
+  const failedSaves = useRef(new Set<number>());
   const latest = useRef(0); // a slow older answer must not replace a newer one
   const choices = useRef(0); // a load that started before a choice must not undo it on screen
   const saving = useRef<Promise<void>>(Promise.resolve()); // answers go to the server one at a time, in order
@@ -125,14 +126,18 @@ export function TheoryScreen({ id, handlers }: { id: string; handlers: SessionHa
       try {
         await saveTheoryAnswer(id, index, answer);
         confirmed.current.set(index, answer);
-        if (versions.current.get(index) === version) setNotSaved(false);
+        if (versions.current.get(index) === version) {
+          failedSaves.current.delete(index);
+          setUnsaved([...failedSaves.current].sort((a, b) => a - b));
+        }
       } catch (err) {
         if (handleSessionError(err, { onEnded, onPasswordRequired })) return;
         if (err instanceof ApiError && err.status === 409) {
           void load(); // time is up: the exam was handed in
         } else if (versions.current.get(index) === version) {
           show(confirmed.current.get(index) ?? null);
-          setNotSaved(true);
+          failedSaves.current.add(index);
+          setUnsaved([...failedSaves.current].sort((a, b) => a - b));
         }
       }
     });
@@ -142,8 +147,16 @@ export function TheoryScreen({ id, handlers }: { id: string; handlers: SessionHa
     setBusy(true);
     setActionError('');
     await saving.current;
+    // Handing in is final: never with an answer the trainee chose that the server doesn't have
+    if (failedSaves.current.size > 0) {
+      setActionError(s.theory.handInBlocked);
+      setBusy(false);
+      return;
+    }
     try {
-      setView(await submitTheory(id));
+      const result = await submitTheory(id);
+      latest.current++; // a read still under way must not bring the running exam back
+      setView(result);
     } catch (err) {
       if (!handleSessionError(err, { onEnded, onPasswordRequired })) {
         if (err instanceof ApiError && err.status === 409) void load();
@@ -190,7 +203,7 @@ export function TheoryScreen({ id, handlers }: { id: string; handlers: SessionHa
         key={view._id}
         view={view}
         busy={busy}
-        notSaved={notSaved}
+        unsaved={unsaved}
         actionError={actionError}
         onChoose={choose}
         onHandIn={() => void handIn()}
@@ -263,7 +276,7 @@ function Result({ view, back }: { view: TheoryView; back: React.ReactNode }) {
 function Running({
   view,
   busy,
-  notSaved,
+  unsaved,
   actionError,
   onChoose,
   onHandIn,
@@ -271,7 +284,7 @@ function Running({
 }: {
   view: TheoryView;
   busy: boolean;
-  notSaved: boolean;
+  unsaved: number[];
   actionError: string;
   onChoose: (index: number, answer: number) => void;
   onHandIn: () => void;
@@ -398,7 +411,7 @@ function Running({
         </p>
         <div className="trainee-card trainee-options" role="radiogroup" aria-labelledby="trainee-question-text">
           {q.options.map((option, j) => (
-            <button key={j} type="button" role="radio" aria-checked={q.answer === j} onClick={() => onChoose(current, j)}>
+            <button key={j} type="button" role="radio" aria-checked={q.answer === j} disabled={busy} onClick={() => onChoose(current, j)}>
               <span className="trainee-letter" aria-hidden="true">
                 {LETTERS[j] ?? j + 1}
               </span>
@@ -406,9 +419,9 @@ function Running({
             </button>
           ))}
         </div>
-        {notSaved && (
+        {unsaved.length > 0 && (
           <p className="trainee-error" role="alert">
-            {s.theory.notSaved}
+            {s.theory.notSaved(unsaved.map((i) => i + 1))}
           </p>
         )}
       </section>

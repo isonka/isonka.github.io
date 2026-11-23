@@ -68,8 +68,12 @@ export const s = {
     handInTitle: 'Hand in the exam?',
     notAnswered: (n: number) => (n === 1 ? '1 question is not answered yet.' : `${n} questions are not answered yet.`),
     handInFinal: "You can't change your answers afterwards.",
-    handInFailed: 'The exam could not be handed in. Your answers are saved; please try again.',
-    notSaved: "Your answer wasn't saved. Check your connection and choose it again.",
+    handInFailed: 'The exam could not be handed in. Please try again.',
+    handInBlocked: 'Not handed in yet. Cancel, then choose the unsaved answer again.',
+    notSaved: (questions: number[]) =>
+      questions.length === 1
+        ? `Your answer to question ${questions[0]} wasn't saved. Check your connection and choose it again.`
+        : `Your answers to questions ${questions.join(', ')} weren't saved. Check your connection and choose them again.`,
     handedIn: 'Handed in',
     scoreOf: (correct: number, n: number, passMark: number) => `${correct} of ${n} correct · pass mark ${passMark}%`,
     noCorrectAnswers: 'The correct answers are not shown. Your trainer can go through the exam with you.',
