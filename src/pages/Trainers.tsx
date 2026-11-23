@@ -7,6 +7,7 @@ import { Breadcrumbs } from '../components/Breadcrumbs';
 import { PHOTO_FOCUS } from '../data/photoFocus';
 import { BASE_URL } from '../data/business';
 import { trainersFor } from '../data/localized';
+import { trainerRole } from '../data/trainerRoles';
 import type { TrainerProfile } from '../data/trainers';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import { trackPageView } from '../utils/gtmTracking';
@@ -25,9 +26,9 @@ const InstructorRow = ({
   eager: boolean;
 }) => {
   const { t } = useTranslation('instructors');
-  const { href } = useLocalizedPage('/instructors/');
+  const { href, locale } = useLocalizedPage('/instructors/');
   const { ref, inView } = useInViewOnce<HTMLAnchorElement>();
-  const role = instructor.heroTitle.replace(/\n/g, ' · ');
+  const role = trainerRole(instructor.slug, locale);
   const bio = instructor.bio[0];
 
   return (

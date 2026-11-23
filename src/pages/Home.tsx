@@ -12,6 +12,7 @@ import { WorkoutGallery } from '../components/WorkoutCard';
 import { ManifestoLine } from '../components/ManifestoLine';
 import { ContactMap } from '../components/ContactMap';
 import { PHOTO_FOCUS } from '../data/photoFocus';
+import { trainerRole } from '../data/trainerRoles';
 import { useInViewOnce } from '../hooks/useInViewOnce';
 import { SilkBackground } from '../components/SilkBackground';
 import { homePath } from '../i18n/locale';
@@ -128,7 +129,7 @@ function TrainerTile({
         <span className={`lane-stripe lane-stripe-sm lane-${laneFromText(specialties)}`} aria-hidden="true" />
         <span className="home-person-copy">
           <span className="home-person-title">{trainer.name}</span>
-          <span className="home-person-role">{specialties}</span>
+          <span className="home-person-role">{trainerRole(trainer.id, locale)}</span>
         </span>
       </span>
     </Link>
