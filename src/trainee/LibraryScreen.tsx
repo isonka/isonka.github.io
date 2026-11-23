@@ -89,7 +89,11 @@ function Series({ slug, handlers }: { slug: string; handlers: SessionHandlers })
   const load = useCallback(() => {
     setError('none');
     getMovement(slug)
-      .then(setMovement)
+      .then((answer) => {
+        // A hand-made address such as #library/offline or #library/. reaches another library route
+        if (answer?.slug === slug) setMovement(answer);
+        else setError('notFound');
+      })
       .catch((err: unknown) => {
         if (handleSessionError(err, { onEnded, onPasswordRequired })) return;
         setError(err instanceof ApiError && err.status === 404 ? 'notFound' : 'failed');
