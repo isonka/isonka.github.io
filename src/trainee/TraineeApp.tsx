@@ -1,17 +1,29 @@
-import { useCallback, useEffect, useId, useRef, useState, type FormEvent } from 'react';
+import { useCallback, useEffect, useId, useMemo, useRef, useState, useSyncExternalStore, type FormEvent } from 'react';
 import {
   ApiError,
   changePassword,
+  getAssessments,
   getCertificate,
   getExams,
   getSession,
+  getTheoryAttempts,
+  handleSessionError,
   signIn,
   signOut,
+  type Assessment,
   type CertificateStatus,
   type MyExam,
+  type SessionHandlers,
   type SiteUser,
+  type TheoryAttempt,
 } from './api';
+import { ExamReportScreen } from './ExamReportScreen';
+import { AssessmentResults, TheoryRow, ToDo } from './ExamSummaries';
+import { LibraryScreen } from './LibraryScreen';
+import { LogbookScreen } from './LogbookScreen';
+import { currentHash, examHref, routeOf, subscribeToRoute } from './route';
 import { s } from './strings';
+import { TheoryScreen } from './TheoryScreen';
 
 // The trainee area: sign in, replace the first password, then the trainee's own progress. All data comes from the
 // PT7 Academy API in the browser (same address, /api); the static page holds nothing personal. The session is checked
@@ -88,7 +100,7 @@ export function TraineeApp() {
             />
           )}
           {view.kind === 'signedIn' && !view.user.mustChangePassword && (
-            <Overview
+            <SignedIn
               focus={moved}
               user={view.user}
               onSignedOut={() => go({ kind: 'signedOut' })}
@@ -240,40 +252,21 @@ function PasswordForm({ focus, onChanged, onEnded }: { focus: boolean; onChanged
 
 const dateText = (iso: string) => new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 
-function Overview({
+function SignedIn({
   focus,
   user,
   onSignedOut,
   onEnded,
   onPasswordRequired,
-}: {
+}: SessionHandlers & {
   focus: boolean;
   user: SiteUser;
   onSignedOut: () => void;
-  onEnded: () => void;
-  onPasswordRequired: () => void;
 }) {
-  const [certificate, setCertificate] = useState<CertificateStatus | null>(null);
-  const [exams, setExams] = useState<{ linked: boolean; exams: MyExam[] } | null>(null);
-  const [failed, setFailed] = useState(false);
+  const { section, param } = routeOf(useSyncExternalStore(subscribeToRoute, currentHash));
+  const handlers = useMemo(() => ({ onEnded, onPasswordRequired }), [onEnded, onPasswordRequired]);
   const [leaving, setLeaving] = useState(false);
   const [leaveError, setLeaveError] = useState(false);
-
-  const load = useCallback(() => {
-    setFailed(false);
-    Promise.all([getCertificate(), getExams()])
-      .then(([c, e]) => {
-        setCertificate(c);
-        setExams(e);
-      })
-      .catch((err) => {
-        if (err instanceof ApiError && err.status === 401) return onEnded(); // revoked or expired meanwhile
-        if (err instanceof ApiError && err.code === 'Password change required') return onPasswordRequired();
-        setFailed(true);
-      });
-  }, [onEnded, onPasswordRequired]);
-
-  useEffect(load, [load]);
 
   // Only show "signed out" once the API has removed the cookie (the page can't: it is HttpOnly)
   const leave = () => {
@@ -301,6 +294,53 @@ function Overview({
         </p>
       )}
 
+      <nav className="trainee-nav" aria-label={s.nav.label}>
+        <a href="#overview" aria-current={section === 'overview' ? 'page' : undefined}>
+          {s.nav.overview}
+        </a>
+        <a href="#logbook" aria-current={section === 'logbook' ? 'page' : undefined}>
+          {s.nav.logbook}
+        </a>
+        <a href="#library" aria-current={section === 'library' ? 'page' : undefined}>
+          {s.nav.library}
+        </a>
+      </nav>
+
+      {section === 'overview' && <Overview {...handlers} />}
+      {section === 'logbook' && <LogbookScreen {...handlers} />}
+      {section === 'library' && <LibraryScreen slug={param} handlers={handlers} />}
+      {section === 'theory' && param && <TheoryScreen key={param} id={param} handlers={handlers} />}
+      {section === 'exam' && param && <ExamReportScreen key={param} id={param} handlers={handlers} />}
+    </div>
+  );
+}
+
+function Overview({ onEnded, onPasswordRequired }: SessionHandlers) {
+  const [certificate, setCertificate] = useState<CertificateStatus | null>(null);
+  const [exams, setExams] = useState<{ linked: boolean; exams: MyExam[] } | null>(null);
+  const [theory, setTheory] = useState<TheoryAttempt[]>([]);
+  const [assessments, setAssessments] = useState<Assessment[]>([]);
+  const [failed, setFailed] = useState(false);
+
+  const load = useCallback(() => {
+    setFailed(false);
+    Promise.all([getCertificate(), getExams(), getTheoryAttempts(), getAssessments()])
+      .then(([c, e, t, a]) => {
+        setCertificate(c);
+        setExams(e);
+        setTheory(t);
+        setAssessments(a);
+      })
+      .catch((err) => {
+        if (handleSessionError(err, { onEnded, onPasswordRequired })) return; // revoked, expired or password due meanwhile
+        setFailed(true);
+      });
+  }, [onEnded, onPasswordRequired]);
+
+  useEffect(load, [load]);
+
+  return (
+    <>
       {failed && (
         <div className="trainee-card">
           <p>{s.unavailable}</p>
@@ -311,6 +351,7 @@ function Overview({
       )}
       {!failed && exams === null && <p role="status">{s.loading}</p>}
       {exams && !exams.linked && <p className="trainee-card">{s.overview.notLinked}</p>}
+      <ToDo attempts={theory} />
 
       {certificate && (
         <section className={`trainee-card${certificate.certificate ? ' trainee-card-done' : ''}`}>
@@ -337,13 +378,16 @@ function Overview({
       {exams?.linked && (
         <section className="trainee-card">
           <h3>{s.overview.exams.title}</h3>
+          <TheoryRow attempts={theory} />
           {exams.exams.length === 0 ? (
-            <p>{s.overview.exams.empty}</p>
+            theory.length === 0 && <p>{s.overview.exams.empty}</p>
           ) : (
             <ul className="trainee-exams">
               {exams.exams.map((exam) => (
                 <li key={exam._id}>
-                  <span className="trainee-exam-name">{exam.rubricName}</span>
+                  <a className="trainee-exam-name trainee-exam-link" href={examHref(exam._id)}>
+                    {exam.rubricName}
+                  </a>
                   <span className="trainee-exam-meta">
                     {dateText(exam.examDate)} · {s.overview.exams.attempt(exam.attempt)}
                   </span>
@@ -357,6 +401,7 @@ function Overview({
           )}
         </section>
       )}
-    </div>
+      <AssessmentResults list={assessments} />
+    </>
   );
 }

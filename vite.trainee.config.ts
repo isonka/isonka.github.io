@@ -20,7 +20,7 @@ const TRAINEE_CSP = [
   "default-src 'none'",
   "script-src 'self'",
   "style-src 'self'",
-  "img-src 'self'",
+  "img-src 'self' blob:", // library photos need the login's proof header, so they are fetched and shown from a blob:
   "font-src 'self'",
   "connect-src 'self'",
   "base-uri 'none'",
