@@ -898,6 +898,16 @@ body {
   overflow-wrap: anywhere;
 }
 
+/* Titles start as Drive file names, which can be one long word */
+.trainee-recording .trainee-entry > div:first-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.trainee-wrap {
+  overflow-wrap: anywhere;
+}
+
 .trainee-watch {
   display: inline-flex;
   align-items: center;

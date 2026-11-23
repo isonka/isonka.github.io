@@ -136,7 +136,8 @@ function RecordingCard({ recording: r, handlers, onChange }: { recording: MyReco
       onChange(); // the outcome is unknown: the list shows whether it arrived
       return s.observations.saveFailed;
     }
-    if (err instanceof ApiError && err.status === 409) onChange();
+    // Already sent, or signed meanwhile: the reload shows the entry as it is now
+    if (err instanceof ApiError && (err.status === 409 || err.status === 403)) onChange();
     return message;
   };
 
@@ -188,7 +189,7 @@ function RecordingCard({ recording: r, handlers, onChange }: { recording: MyReco
           </button>
         )}
       </div>
-      {open && (
+      {open && (canReflect || canEdit) && (
         <ReflectionForm initial={valuesOf(r)} submitLabel={entry ? s.logbook.form.save : s.logbook.form.send} onSubmit={save} onCancel={() => setOpen(false)} />
       )}
     </li>
@@ -243,7 +244,7 @@ export function ObservationsScreen({ handlers }: { handlers: SessionHandlers }) 
         </p>
       )}
       {data.cohort && (
-        <p className={data.watchAs ? 'trainee-card' : 'trainee-card trainee-card-done'}>
+        <p className={`trainee-card trainee-wrap${data.watchAs ? '' : ' trainee-card-done'}`}>
           {data.watchAs ? s.observations.watchAs(data.watchAs) : s.observations.noGoogle}
         </p>
       )}
