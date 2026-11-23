@@ -258,11 +258,246 @@ body {
   color: var(--muted);
 }
 
+.trainee-nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 0 0 24px;
+}
+
+.trainee-nav a {
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.trainee-nav a[aria-current='page'] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--ground);
+}
+
+.trainee-tight {
+  margin: 0;
+}
+
+.trainee-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--element-gap);
+}
+
+.trainee-stats .trainee-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.trainee-stats strong {
+  font-size: 24px;
+  color: var(--ink);
+}
+
+.trainee-stat-label,
+.trainee-log-meta,
+.trainee-entry-meta {
+  font-size: var(--text-caption);
+  color: var(--muted);
+}
+
+.trainee-log-picker {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0 0 var(--element-gap);
+}
+
+.trainee-log-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px;
+  text-align: left;
+  font: inherit;
+  color: var(--ink);
+  background: var(--ground-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-media);
+  cursor: pointer;
+}
+
+.trainee-log-card[aria-pressed='true'] {
+  border: 2px solid var(--ink);
+  padding: 13px;
+}
+
+.trainee-log-name {
+  font-weight: var(--font-weight-medium);
+}
+
+.trainee-log-hours {
+  font-size: var(--text-caption);
+}
+
+.trainee-progress {
+  display: block;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--ground-stone);
+  overflow: hidden;
+}
+
+.trainee-progress span {
+  display: block;
+  height: 100%;
+  background: var(--gold);
+}
+
+.trainee-log-detail {
+  scroll-margin-top: 16px;
+}
+
+.trainee-log-detail:focus {
+  outline: none;
+}
+
+.trainee-entry-form {
+  max-width: none;
+  padding: 16px;
+  margin: 0 0 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-input);
+}
+
+.trainee-entry-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.trainee-form select,
+.trainee-form textarea {
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-input);
+  font: inherit;
+  font-size: 16px;
+  background: var(--canvas);
+  color: var(--ink);
+}
+
+.trainee-form select {
+  height: 44px;
+}
+
+.trainee-form select:focus-visible,
+.trainee-form textarea:focus-visible,
+.trainee-log-card:focus-visible,
+.trainee-link:focus-visible,
+.trainee-nav a:focus-visible {
+  outline: 2px solid var(--gold-text);
+  outline-offset: 1px;
+}
+
+.trainee-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.trainee-entries {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.trainee-entries > li {
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
+
+.trainee-entries > li:first-child {
+  border-top: none;
+}
+
+.trainee-entry {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.trainee-entry > div:first-child,
+.trainee-entry-side {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.trainee-entry-side {
+  align-items: flex-end;
+  text-align: right;
+  flex: none;
+  max-width: 55%;
+}
+
+.trainee-entry-main {
+  font-weight: var(--font-weight-medium);
+  color: var(--ink);
+}
+
+.trainee-status {
+  font-size: var(--text-caption);
+  color: var(--muted);
+}
+
+.trainee-status.approved {
+  color: var(--ink);
+  font-weight: var(--font-weight-medium);
+}
+
+.trainee-status.rejected {
+  color: var(--trainee-error);
+}
+
+.trainee-link {
+  padding: 4px 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: var(--text-caption);
+  color: var(--ink);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.trainee-link[disabled] {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.trainee-exercise {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.trainee-exercise-mode {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
 @media (max-width: 520px) {
   .trainee-exams li {
     grid-template-columns: 1fr auto;
     grid-template-areas:
       'name badge'
       'meta score';
+  }
+
+  .trainee-log-picker {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

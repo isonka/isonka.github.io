@@ -19,7 +19,7 @@ export class ApiError extends Error {
 
 type Body = { success?: boolean; data?: unknown; error?: unknown; message?: unknown };
 
-async function call<T>(method: 'GET' | 'POST', path: string, body?: unknown, proof: string | null = readProof()): Promise<T> {
+async function call<T>(method: 'GET' | 'POST' | 'PATCH', path: string, body?: unknown, proof: string | null = readProof()): Promise<T> {
   const headers: Record<string, string> = { Accept: 'application/json' };
   if (body !== undefined) headers['Content-Type'] = 'application/json';
   if (proof !== null) headers['X-Session-Proof'] = proof;
@@ -45,6 +45,25 @@ async function call<T>(method: 'GET' | 'POST', path: string, body?: unknown, pro
 
 export const apiGet = <T>(path: string) => call<T>('GET', path);
 export const apiPost = <T>(path: string, body: unknown = {}) => call<T>('POST', path, body);
+
+export interface SessionHandlers {
+  onEnded: () => void;
+  onPasswordRequired: () => void;
+}
+
+/** True when the error was about the login itself (ended, or a password change is due) and has been handled. */
+export function handleSessionError(err: unknown, handlers: SessionHandlers): boolean {
+  if (!(err instanceof ApiError)) return false;
+  if (err.status === 401) {
+    handlers.onEnded();
+    return true;
+  }
+  if (err.code === 'Password change required') {
+    handlers.onPasswordRequired();
+    return true;
+  }
+  return false;
+}
 
 // --- Shapes the trainee pages use (as the API answers them) ---
 
@@ -74,6 +93,63 @@ export interface MyExam {
   rubricName: string;
   attempt: number;
   passed: boolean;
+}
+
+export type EntryStatus = 'pending' | 'approved' | 'rejected';
+export type ItemStatus = EntryStatus | 'none';
+export type HourField = 'startTime' | 'apparatus' | 'sessionType' | 'clientName';
+
+export interface LogCategory {
+  key: string;
+  name: string;
+  required: number;
+  fields: HourField[];
+  staffOnly: boolean;
+  approved: number;
+  pending: number;
+}
+
+export interface LogEntry {
+  _id: string;
+  kind: 'hours' | 'homework' | 'exercise';
+  category?: string;
+  homework?: string;
+  movement: string | null;
+  mode?: 'performing' | 'teaching';
+  date: string; // yyyy-MM-dd
+  startTime?: string;
+  hours?: number;
+  apparatus?: string;
+  sessionType?: 'PT' | 'Group';
+  clientName?: string;
+  notes: string;
+  status: EntryStatus;
+  signedByName?: string;
+  rejectionReason?: string;
+  recording: string | null;
+}
+
+export interface Logbook {
+  programme: { name: string; institution: string; qttName: string; totalHours: number };
+  trainee: {
+    name: string;
+    courseStart: string | null;
+    courseEnd: string | null;
+    studioAccess: { until: string | null; daysLeft: number | null };
+  };
+  summary: {
+    categories: LogCategory[];
+    countedHours: number;
+    totalRequired: number;
+    pendingCount: number;
+    homework: { key: string; name: string; status: ItemStatus }[];
+    exercises: {
+      movement: { _id: string; level: number; number: number; name: string };
+      performing: ItemStatus;
+      teaching: ItemStatus;
+    }[];
+  };
+  entries: LogEntry[];
 }
 
 // --- Sign-in (/api/site-auth) and the own password (/api/account/password) ---
@@ -109,3 +185,13 @@ export async function changePassword(currentPassword: string, newPassword: strin
 /** null when the login isn't linked to a trainee record yet. */
 export const getCertificate = () => apiGet<CertificateStatus | null>('/certificate/mine');
 export const getExams = () => apiGet<{ linked: boolean; exams: MyExam[] }>('/exams/mine');
+export const getLogbook = () => apiGet<Logbook>('/logbook/mine');
+export const createEntry = (body: Record<string, unknown>) => apiPost<LogEntry>('/logbook/entries', body);
+export const updateEntry = (id: string, body: Record<string, unknown>) =>
+  call<LogEntry>('PATCH', `/logbook/entries/${encodeURIComponent(id)}`, body);
+
+/** Sent with a new entry: if the answer gets lost and the trainee tries again, the API keeps one copy. */
+export function newClientRef(): string {
+  const bytes = crypto.getRandomValues(new Uint8Array(12));
+  return `w${Array.from(bytes, (b) => b.toString(16).padStart(2, '0')).join('')}`;
+}

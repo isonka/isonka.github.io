@@ -1,16 +1,19 @@
-import { useCallback, useEffect, useId, useRef, useState, type FormEvent } from 'react';
+import { useCallback, useEffect, useId, useRef, useState, useSyncExternalStore, type FormEvent } from 'react';
 import {
   ApiError,
   changePassword,
   getCertificate,
   getExams,
   getSession,
+  handleSessionError,
   signIn,
   signOut,
   type CertificateStatus,
   type MyExam,
+  type SessionHandlers,
   type SiteUser,
 } from './api';
+import { LogbookScreen } from './LogbookScreen';
 import { s } from './strings';
 
 // The trainee area: sign in, replace the first password, then the trainee's own progress. All data comes from the
@@ -88,7 +91,7 @@ export function TraineeApp() {
             />
           )}
           {view.kind === 'signedIn' && !view.user.mustChangePassword && (
-            <Overview
+            <SignedIn
               focus={moved}
               user={view.user}
               onSignedOut={() => go({ kind: 'signedOut' })}
@@ -240,40 +243,27 @@ function PasswordForm({ focus, onChanged, onEnded }: { focus: boolean; onChanged
 
 const dateText = (iso: string) => new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 
-function Overview({
+// The section is in the address (#logbook), so a reload and the browser's back button keep it.
+const subscribeToHash = (onChange: () => void) => {
+  window.addEventListener('hashchange', onChange);
+  return () => window.removeEventListener('hashchange', onChange);
+};
+const currentSection = () => (window.location.hash === '#logbook' ? 'logbook' : 'overview');
+
+function SignedIn({
   focus,
   user,
   onSignedOut,
   onEnded,
   onPasswordRequired,
-}: {
+}: SessionHandlers & {
   focus: boolean;
   user: SiteUser;
   onSignedOut: () => void;
-  onEnded: () => void;
-  onPasswordRequired: () => void;
 }) {
-  const [certificate, setCertificate] = useState<CertificateStatus | null>(null);
-  const [exams, setExams] = useState<{ linked: boolean; exams: MyExam[] } | null>(null);
-  const [failed, setFailed] = useState(false);
+  const section = useSyncExternalStore(subscribeToHash, currentSection);
   const [leaving, setLeaving] = useState(false);
   const [leaveError, setLeaveError] = useState(false);
-
-  const load = useCallback(() => {
-    setFailed(false);
-    Promise.all([getCertificate(), getExams()])
-      .then(([c, e]) => {
-        setCertificate(c);
-        setExams(e);
-      })
-      .catch((err) => {
-        if (err instanceof ApiError && err.status === 401) return onEnded(); // revoked or expired meanwhile
-        if (err instanceof ApiError && err.code === 'Password change required') return onPasswordRequired();
-        setFailed(true);
-      });
-  }, [onEnded, onPasswordRequired]);
-
-  useEffect(load, [load]);
 
   // Only show "signed out" once the API has removed the cookie (the page can't: it is HttpOnly)
   const leave = () => {
@@ -301,6 +291,46 @@ function Overview({
         </p>
       )}
 
+      <nav className="trainee-nav" aria-label={s.nav.label}>
+        <a href="#overview" aria-current={section === 'overview' ? 'page' : undefined}>
+          {s.nav.overview}
+        </a>
+        <a href="#logbook" aria-current={section === 'logbook' ? 'page' : undefined}>
+          {s.nav.logbook}
+        </a>
+      </nav>
+
+      {section === 'logbook' ? (
+        <LogbookScreen onEnded={onEnded} onPasswordRequired={onPasswordRequired} />
+      ) : (
+        <Overview onEnded={onEnded} onPasswordRequired={onPasswordRequired} />
+      )}
+    </div>
+  );
+}
+
+function Overview({ onEnded, onPasswordRequired }: SessionHandlers) {
+  const [certificate, setCertificate] = useState<CertificateStatus | null>(null);
+  const [exams, setExams] = useState<{ linked: boolean; exams: MyExam[] } | null>(null);
+  const [failed, setFailed] = useState(false);
+
+  const load = useCallback(() => {
+    setFailed(false);
+    Promise.all([getCertificate(), getExams()])
+      .then(([c, e]) => {
+        setCertificate(c);
+        setExams(e);
+      })
+      .catch((err) => {
+        if (handleSessionError(err, { onEnded, onPasswordRequired })) return; // revoked, expired or password due meanwhile
+        setFailed(true);
+      });
+  }, [onEnded, onPasswordRequired]);
+
+  useEffect(load, [load]);
+
+  return (
+    <>
       {failed && (
         <div className="trainee-card">
           <p>{s.unavailable}</p>
@@ -357,6 +387,6 @@ function Overview({
           )}
         </section>
       )}
-    </div>
+    </>
   );
 }
