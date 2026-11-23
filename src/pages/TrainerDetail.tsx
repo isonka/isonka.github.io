@@ -7,6 +7,7 @@ import { StructuredData } from '../components/StructuredData';
 import { Reveal } from '../components/Reveal';
 import { PHOTO_FOCUS } from '../data/photoFocus';
 import { trainersFor } from '../data/localized';
+import { trainerRole } from '../data/trainerRoles';
 import { useLocalizedPage } from '../i18n/useLocalizedPage';
 import { trackPageView } from '../utils/gtmTracking';
 import { NotFound } from './NotFound';
@@ -55,7 +56,8 @@ export const TrainerDetail= () => {
     to: href(RELATED_LINK_PATHS[key]),
     label: t(`detail.links.${key}`),
   }));
-  const role = trainer.heroTitle.replace(/\n/g, ' · ');
+  const jobTitle = trainerRole(trainer.slug, page.locale);
+  const role = [jobTitle, ...trainer.title.split('\n')].join(' · ');
 
   return (
     <>
@@ -72,7 +74,7 @@ export const TrainerDetail= () => {
         data={{
           person: {
             name: trainer.name,
-            jobTitle: trainer.structuredData.jobTitle,
+            jobTitle,
             image: trainer.image,
             description: trainer.structuredData.description,
             worksFor: 'PT7 Pilates',
@@ -94,7 +96,7 @@ export const TrainerDetail= () => {
           <div className="trainer-hero-photo">
             <img
               src={trainer.image}
-              alt={`${trainer.name} - ${trainer.structuredData.jobTitle}`}
+              alt={`${trainer.name} - ${jobTitle}`}
               width={200}
               height={200}
               loading="eager"

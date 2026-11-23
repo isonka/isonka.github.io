@@ -167,7 +167,7 @@ const EQUIPMENT_OVERRIDES: Record<string, Partial<SitemapEntry>> = {
 
 const TRAINER_SITEMAP: SitemapEntry = { lastmod: '2026-03-10', changefreq: 'monthly', priority: '0.7' };
 const TRAINER_OVERRIDES: Record<string, Partial<SitemapEntry>> = {
-  elif: { image: image('elif.webp', 'Elif Arzu Ogan - Owner & Head Instructor PT7') },
+  elif: { image: image('elif.webp', 'Elif Arzu Ogan - Owner & Master Instructor PT7') },
   kelly: {
     lastmod: '2026-10-24',
     image: image('kelly.webp', 'Kelly Tin - Reformer Pilates Instructor PT7'),

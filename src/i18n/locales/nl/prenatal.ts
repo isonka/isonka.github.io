@@ -125,9 +125,9 @@ export const nlPrenatal: DeepStringify<EnPrenatal> = {
     title: 'Maak kennis met je prenatale specialisten',
     intro: 'Boek bij instructeurs met ervaring in prenatale en postnatale Reformer-coaching. Bekijk de privépakketten op onze <pricing>prijzenpagina</pricing>.',
     elifAlt: 'Elif Arzu Ogan, instructeur prenatale pilates',
-    elifRole: 'Eigenaar & hoofdinstructeur · prenatale specialist',
+    elifRole: 'Eigenaar & master-instructeur · prenatale specialist',
     goknurAlt: 'Göknur Dipli, instructeur prenatale pilates',
-    goknurRole: 'Senior-instructeur · prenataal & kracht',
+    goknurRole: 'Senior instructeur & mentor · prenataal & kracht',
   },
   related: {
     title: 'Gerelateerde pagina’s',

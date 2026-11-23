@@ -103,7 +103,7 @@ export const nlPricing: DeepStringify<EnPricing> = {
     juniorInfoLabel: 'Junior instructeurs:',
     seniorInfoLabel: 'Senior instructeurs:',
     masterInfoLabel: 'Master-instructeur:',
-    masterRole: 'eigenaar & hoofdinstructeur met 15+ jaar ervaring',
+    masterRole: 'eigenaar met 15+ jaar ervaring',
   },
   couple: {
     kicker: 'Duo',

@@ -100,7 +100,7 @@ export const enPricing = {
     juniorInfoLabel: 'Junior Instructors:',
     seniorInfoLabel: 'Senior Instructors:',
     masterInfoLabel: 'Master Instructor:',
-    masterRole: 'Owner & Head Instructor with 15+ years experience',
+    masterRole: 'Owner with 15+ years experience',
   },
   couple: {
     kicker: 'Couple',

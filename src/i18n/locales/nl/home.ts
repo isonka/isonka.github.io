@@ -50,7 +50,7 @@ export const nlHome: DeepStringify<EnHome> = {
     links:
       '<reformer>Reformer pilates Amsterdam Zuid</reformer><private>Private pilates</private><prenatal>Prenatale pilates</prenatal><trx>TRX</trx><strength>Krachttraining</strength>',
     ownerName: 'Elif Arzu Ogan',
-    signatureRole: 'Eigenaar & hoofdinstructeur',
+    signatureRole: 'Eigenaar & master-instructeur',
     imageAlt: 'Een PT7-coach corrigeert de stretch van een klant bij het raam in de reformer pilatesstudio, Museumplein Amsterdam',
     imageAlt2: 'Een PT7-coach begeleidt een kleine groep op de reformers',
   },

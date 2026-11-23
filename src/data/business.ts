@@ -86,7 +86,7 @@ export const business = {
     name: 'Elif Arzu Ogan',
     givenName: 'Elif',
     familyName: 'Ogan',
-    jobTitle: 'Owner & Head Trainer',
+    jobTitle: 'Owner & Master Instructor',
     description:
       'Certified Pilates instructor with 15+ years of experience, specializing in Reformer Pilates, functional training, and pregnancy Pilates.',
     image: `${BASE_URL}/assets/images/elif.webp`,

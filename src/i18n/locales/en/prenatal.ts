@@ -122,9 +122,9 @@ export const enPrenatal = {
     title: 'Meet your prenatal specialists',
     intro: 'Book with instructors experienced in prenatal and postnatal Reformer coaching. See private packages on our <pricing>Pricing page</pricing>.',
     elifAlt: 'Elif Arzu Ogan, prenatal Pilates instructor',
-    elifRole: 'Owner & head instructor · prenatal specialist',
+    elifRole: 'Owner & Master Instructor · prenatal specialist',
     goknurAlt: 'Göknur Dipli, prenatal Pilates instructor',
-    goknurRole: 'Senior instructor · prenatal & strength',
+    goknurRole: 'Senior Instructor & Mentor · prenatal & strength',
   },
   related: {
     title: 'Related studio pages',

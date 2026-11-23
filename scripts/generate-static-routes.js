@@ -142,8 +142,8 @@ const fixedPageMeta = {
     description: 'Professional Pilates Ladder Barrel for sale. Specs and ordering for home or studio use. Sold by PT7; not used in our client training sessions.',
   },
   '/trainer/elif/': {
-    title: 'Elif Arzu Ogan | Owner & Head Instructor | PT7 Pilates',
-    description: 'Elif Arzu Ogan, owner and head instructor at PT7 Amsterdam. 15+ years of Pilates expertise at Museumplein. Book a session with Elif.',
+    title: 'Elif Arzu Ogan | Owner & Master Instructor | PT7 Pilates',
+    description: 'Elif Arzu Ogan, owner and master instructor at PT7 Amsterdam. 15+ years of Pilates expertise at Museumplein. Book a session with Elif.',
   },
   '/trainer/gokben/': {
     title: 'Gökben Öztekin | Pilates Instructor | PT7 Pilates Amsterdam',

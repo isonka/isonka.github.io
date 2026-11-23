@@ -47,7 +47,7 @@ export const enHome = {
     links:
       '<reformer>Reformer Pilates Amsterdam Zuid</reformer><private>Private Pilates</private><prenatal>Prenatal Pilates</prenatal><trx>TRX</trx><strength>Strength Training</strength>',
     ownerName: 'Elif Arzu Ogan',
-    signatureRole: 'Owner & head instructor',
+    signatureRole: 'Owner & Master Instructor',
     imageAlt: "A PT7 coach correcting a client's stretch by the window at the Reformer Pilates studio, Museumplein Amsterdam",
     imageAlt2: 'A PT7 coach guiding a small group on the Reformers',
   },
