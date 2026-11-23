@@ -2,21 +2,28 @@ import { useCallback, useEffect, useId, useMemo, useRef, useState, useSyncExtern
 import {
   ApiError,
   changePassword,
+  getAssessments,
   getCertificate,
   getExams,
   getSession,
+  getTheoryAttempts,
   handleSessionError,
   signIn,
   signOut,
+  type Assessment,
   type CertificateStatus,
   type MyExam,
   type SessionHandlers,
   type SiteUser,
+  type TheoryAttempt,
 } from './api';
+import { ExamReportScreen } from './ExamReportScreen';
+import { AssessmentResults, TheoryRow, ToDo } from './ExamSummaries';
 import { LibraryScreen } from './LibraryScreen';
 import { LogbookScreen } from './LogbookScreen';
-import { currentHash, routeOf, subscribeToRoute } from './route';
+import { currentHash, examHref, routeOf, subscribeToRoute } from './route';
 import { s } from './strings';
+import { TheoryScreen } from './TheoryScreen';
 
 // The trainee area: sign in, replace the first password, then the trainee's own progress. All data comes from the
 // PT7 Academy API in the browser (same address, /api); the static page holds nothing personal. The session is checked
@@ -302,6 +309,8 @@ function SignedIn({
       {section === 'overview' && <Overview {...handlers} />}
       {section === 'logbook' && <LogbookScreen {...handlers} />}
       {section === 'library' && <LibraryScreen slug={param} handlers={handlers} />}
+      {section === 'theory' && param && <TheoryScreen key={param} id={param} handlers={handlers} />}
+      {section === 'exam' && param && <ExamReportScreen key={param} id={param} handlers={handlers} />}
     </div>
   );
 }
@@ -309,14 +318,18 @@ function SignedIn({
 function Overview({ onEnded, onPasswordRequired }: SessionHandlers) {
   const [certificate, setCertificate] = useState<CertificateStatus | null>(null);
   const [exams, setExams] = useState<{ linked: boolean; exams: MyExam[] } | null>(null);
+  const [theory, setTheory] = useState<TheoryAttempt[]>([]);
+  const [assessments, setAssessments] = useState<Assessment[]>([]);
   const [failed, setFailed] = useState(false);
 
   const load = useCallback(() => {
     setFailed(false);
-    Promise.all([getCertificate(), getExams()])
-      .then(([c, e]) => {
+    Promise.all([getCertificate(), getExams(), getTheoryAttempts(), getAssessments()])
+      .then(([c, e, t, a]) => {
         setCertificate(c);
         setExams(e);
+        setTheory(t);
+        setAssessments(a);
       })
       .catch((err) => {
         if (handleSessionError(err, { onEnded, onPasswordRequired })) return; // revoked, expired or password due meanwhile
@@ -338,6 +351,7 @@ function Overview({ onEnded, onPasswordRequired }: SessionHandlers) {
       )}
       {!failed && exams === null && <p role="status">{s.loading}</p>}
       {exams && !exams.linked && <p className="trainee-card">{s.overview.notLinked}</p>}
+      <ToDo attempts={theory} />
 
       {certificate && (
         <section className={`trainee-card${certificate.certificate ? ' trainee-card-done' : ''}`}>
@@ -364,13 +378,16 @@ function Overview({ onEnded, onPasswordRequired }: SessionHandlers) {
       {exams?.linked && (
         <section className="trainee-card">
           <h3>{s.overview.exams.title}</h3>
+          <TheoryRow attempts={theory} />
           {exams.exams.length === 0 ? (
-            <p>{s.overview.exams.empty}</p>
+            theory.length === 0 && <p>{s.overview.exams.empty}</p>
           ) : (
             <ul className="trainee-exams">
               {exams.exams.map((exam) => (
                 <li key={exam._id}>
-                  <span className="trainee-exam-name">{exam.rubricName}</span>
+                  <a className="trainee-exam-name trainee-exam-link" href={examHref(exam._id)}>
+                    {exam.rubricName}
+                  </a>
                   <span className="trainee-exam-meta">
                     {dateText(exam.examDate)} · {s.overview.exams.attempt(exam.attempt)}
                   </span>
@@ -384,6 +401,7 @@ function Overview({ onEnded, onPasswordRequired }: SessionHandlers) {
           )}
         </section>
       )}
+      <AssessmentResults list={assessments} />
     </>
   );
 }

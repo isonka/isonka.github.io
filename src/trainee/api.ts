@@ -19,7 +19,7 @@ export class ApiError extends Error {
 
 type Body = { success?: boolean; data?: unknown; error?: unknown; message?: unknown };
 
-async function call<T>(method: 'GET' | 'POST' | 'PATCH', path: string, body?: unknown, proof: string | null = readProof()): Promise<T> {
+async function call<T>(method: 'GET' | 'POST' | 'PATCH' | 'PUT', path: string, body?: unknown, proof: string | null = readProof()): Promise<T> {
   const headers: Record<string, string> = { Accept: 'application/json' };
   if (body !== undefined) headers['Content-Type'] = 'application/json';
   if (proof !== null) headers['X-Session-Proof'] = proof;
@@ -175,6 +175,63 @@ export interface MovementDetail {
   photos: { fileId: string; caption: string }[];
 }
 
+export interface TheoryAttempt {
+  _id: string;
+  attempt: number;
+  status: 'open' | 'in_progress' | 'submitted';
+  name: string;
+  questionCount: number;
+  timeLimitMinutes: number;
+  passMark: number;
+  deadline: string | null;
+  score: number | null;
+  correctCount: number | null;
+  passed: boolean | null;
+}
+
+/** Questions only while the exam runs, and never the correct answers (the API's rule). */
+export interface TheoryView extends TheoryAttempt {
+  questions: { text: string; options: string[]; answer: number | null }[];
+}
+
+export interface Assessment {
+  _id: string;
+  date: string; // yyyy-MM-dd
+  assessorName: string;
+  feedback: string;
+  passed: boolean | null;
+  items: {
+    movement: string;
+    label: string;
+    performing: 'passed' | 'needs_work' | null;
+    teaching: 'passed' | 'needs_work' | null;
+    note: string;
+  }[];
+}
+
+export type ReportCell = string | number;
+export interface ReportTable {
+  title: string;
+  head: ReportCell[];
+  rows: ReportCell[][];
+}
+
+export interface ExamReport {
+  _id: string;
+  examDate: string;
+  rubricName: string;
+  courseLevel: string;
+  overallScore: number;
+  passMark: number;
+  passed: boolean;
+  attempt: number;
+  report: {
+    summary: ReportTable; // rows: [section, weight, score]; the last row is the overall score
+    sections: { title: string; tables: ReportTable[]; comments: string }[];
+    finalComments: string;
+  };
+}
+
 // --- Sign-in (/api/site-auth) and the own password (/api/account/password) ---
 
 /** Only a real "nobody is signed in" drops the proof: an error or a 429 says nothing about the login. */
@@ -229,6 +286,15 @@ export async function getPhoto(fileId: string, signal: AbortSignal): Promise<Blo
   if (blob.type !== 'image/jpeg') throw new ApiError(res.status, 'Photo');
   return blob;
 }
+
+export const getTheoryAttempts = () => apiGet<TheoryAttempt[]>('/theory/mine');
+const attemptPath = (id: string) => `/theory/attempts/${encodeURIComponent(id)}`;
+export const getTheoryAttempt = (id: string) => apiGet<TheoryView>(attemptPath(id));
+export const startTheory = (id: string) => apiPost<TheoryView>(`${attemptPath(id)}/start`);
+export const submitTheory = (id: string) => apiPost<TheoryView>(`${attemptPath(id)}/submit`);
+export const saveTheoryAnswer = (id: string, index: number, answer: number) => call<void>('PUT', `${attemptPath(id)}/answer`, { index, answer });
+export const getAssessments = () => apiGet<Assessment[]>('/assessments/mine');
+export const getExamReport = (id: string) => apiGet<ExamReport>(`/exams/${encodeURIComponent(id)}/report`);
 
 /** Sent with a new entry: if the answer gets lost and the trainee tries again, the API keeps one copy. */
 export function newClientRef(): string {
