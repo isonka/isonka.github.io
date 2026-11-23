@@ -1,9 +1,9 @@
 // Where the trainee is, kept in the address after the # (#logbook, #library/some-series, #theory/an-id), so a reload and
 // the browser's back button keep it. The static page needs no server routes for this.
 
-export type Section = 'overview' | 'logbook' | 'library' | 'theory' | 'exam';
+export type Section = 'overview' | 'logbook' | 'library' | 'observations' | 'theory' | 'exam';
 
-const SECTIONS: readonly string[] = ['logbook', 'library', 'theory', 'exam'];
+const SECTIONS: readonly string[] = ['logbook', 'library', 'observations', 'theory', 'exam'];
 
 export interface Route {
   section: Section;

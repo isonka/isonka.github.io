@@ -877,6 +877,33 @@ body {
   color: var(--ground);
 }
 
+.trainee-recording {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.trainee-recording .trainee-entry > .trainee-status {
+  flex: none;
+  max-width: 45%;
+  text-align: right;
+}
+
+.trainee-recording .trainee-error {
+  overflow-wrap: anywhere;
+}
+
+.trainee-watch {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.trainee-watch:focus-visible {
+  outline: 2px solid var(--gold-text);
+  outline-offset: 2px;
+}
+
 @media (max-width: 520px) {
   .trainee-exams li {
     grid-template-columns: 1fr auto;
