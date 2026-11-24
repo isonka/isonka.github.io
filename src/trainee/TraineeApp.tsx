@@ -21,6 +21,7 @@ import { ExamReportScreen } from './ExamReportScreen';
 import { AssessmentResults, TheoryRow, ToDo } from './ExamSummaries';
 import { LibraryScreen } from './LibraryScreen';
 import { LogbookScreen } from './LogbookScreen';
+import { ObservationsScreen } from './ObservationsScreen';
 import { currentHash, examHref, routeOf, subscribeToRoute } from './route';
 import { s } from './strings';
 import { TheoryScreen } from './TheoryScreen';
@@ -304,11 +305,15 @@ function SignedIn({
         <a href="#library" aria-current={section === 'library' ? 'page' : undefined}>
           {s.nav.library}
         </a>
+        <a href="#observations" aria-current={section === 'observations' ? 'page' : undefined}>
+          {s.nav.observations}
+        </a>
       </nav>
 
       {section === 'overview' && <Overview {...handlers} />}
       {section === 'logbook' && <LogbookScreen {...handlers} />}
       {section === 'library' && <LibraryScreen slug={param} handlers={handlers} />}
+      {section === 'observations' && <ObservationsScreen handlers={handlers} />}
       {section === 'theory' && param && <TheoryScreen key={param} id={param} handlers={handlers} />}
       {section === 'exam' && param && <ExamReportScreen key={param} id={param} handlers={handlers} />}
     </div>

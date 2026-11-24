@@ -216,6 +216,25 @@ export interface ReportTable {
   rows: ReportCell[][];
 }
 
+export interface MyRecording {
+  _id: string;
+  title: string;
+  recordedAt: string;
+  durationMinutes: number | null; // null while Drive is still processing the video
+  creditHours: number;
+  canWatch: boolean; // the video is shared with their Google account
+  playerUrl: string | null;
+  reflection: (LogEntry & { reflection: { cues: string; modifications: string; corrections: string } | null }) | null;
+}
+
+export interface MyRecordings {
+  active: boolean; // within their observation year
+  hasStartDate: boolean;
+  until: string | null; // when their year ends
+  watchAs: string | null; // the Google account videos are shared with
+  recordings: MyRecording[];
+}
+
 export interface ExamReport {
   _id: string;
   examDate: string;
@@ -295,6 +314,10 @@ export const submitTheory = (id: string) => apiPost<TheoryView>(`${attemptPath(i
 export const saveTheoryAnswer = (id: string, index: number, answer: number) => call<void>('PUT', `${attemptPath(id)}/answer`, { index, answer });
 export const getAssessments = () => apiGet<Assessment[]>('/assessments/mine');
 export const getExamReport = (id: string) => apiGet<ExamReport>(`/exams/${encodeURIComponent(id)}/report`);
+export const getRecordings = () => apiGet<MyRecordings>('/recordings/mine');
+const reflectionPath = (id: string) => `/recordings/${encodeURIComponent(id)}/reflection`;
+export const sendReflection = (id: string, body: Record<string, unknown>) => apiPost<LogEntry>(reflectionPath(id), body);
+export const updateReflection = (id: string, body: Record<string, unknown>) => call<LogEntry>('PUT', reflectionPath(id), body);
 
 /** Sent with a new entry: if the answer gets lost and the trainee tries again, the API keeps one copy. */
 export function newClientRef(): string {

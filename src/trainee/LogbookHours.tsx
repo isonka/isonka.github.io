@@ -225,7 +225,7 @@ export function CategoryLog({
                 <div className="trainee-entry-side">
                   <span className={`trainee-status ${e.status}`}>{e.status === 'approved' ? s.logbook.signedBy(e.signedByName) : s.logbook.status[e.status]}</span>
                   {e.recording ? (
-                    <span className="trainee-entry-meta">{s.logbook.fromRecording}</span>
+                    <a className="trainee-link" href="#observations">{s.logbook.fromRecording}</a>
                   ) : (
                     e.status !== 'approved' && (
                       <button type="button" className="trainee-link" onClick={() => setEditing(e._id)}>

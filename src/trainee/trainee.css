@@ -877,6 +877,48 @@ body {
   color: var(--ground);
 }
 
+/* A list that is also a card keeps the card's padding */
+.trainee-card.trainee-entries {
+  padding: var(--card-padding);
+}
+
+.trainee-recording {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.trainee-recording .trainee-entry > .trainee-status {
+  flex: none;
+  max-width: 45%;
+  text-align: right;
+}
+
+.trainee-recording .trainee-error {
+  overflow-wrap: anywhere;
+}
+
+/* Titles start as Drive file names, which can be one long word */
+.trainee-recording .trainee-entry > div:first-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.trainee-wrap {
+  overflow-wrap: anywhere;
+}
+
+.trainee-watch {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.trainee-watch:focus-visible {
+  outline: 2px solid var(--gold-text);
+  outline-offset: 2px;
+}
+
 @media (max-width: 520px) {
   .trainee-exams li {
     grid-template-columns: 1fr auto;
