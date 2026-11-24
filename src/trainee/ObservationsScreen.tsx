@@ -13,14 +13,15 @@ import {
 import { hoursText, saveErrorText } from './logbookText';
 import { s } from './strings';
 
-// Observation recordings: the published videos of the trainee's cohort. Watch opens Google Drive's player in a new tab
+// Observation recordings: every class recorded at the academy, for a trainee in their year. Watch opens Google Drive's player in a new tab
 // (no embed, so this page keeps its no-third-party rule). A written reflection becomes observation hours waiting for a
 // signature; the API decides the hours from the video's length.
 
 const dateText = (iso: string) => new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
 
 /** Only ever links to Google Drive, whatever the answer holds. */
-function watchUrl(url: string): string | null {
+function watchUrl(url: string | null): string | null {
+  if (!url) return null;
   try {
     const parsed = new URL(url);
     return parsed.protocol === 'https:' && parsed.hostname === 'drive.google.com' ? parsed.href : null;
@@ -121,13 +122,13 @@ function ReflectionForm({
   );
 }
 
-function RecordingCard({ recording: r, handlers, onChange }: { recording: MyRecording; handlers: SessionHandlers; onChange: () => void }) {
+function RecordingCard({ recording: r, data, handlers, onChange }: { recording: MyRecording; data: MyRecordings; handlers: SessionHandlers; onChange: () => void }) {
   const [open, setOpen] = useState(false);
   // Sending the same text again reuses the ref, so a save whose answer got lost isn't refused as a second reflection
   const attempt = useRef<{ values: string; ref: string } | null>(null);
   const url = watchUrl(r.playerUrl);
   const entry = r.reflection;
-  const canReflect = r.creditHours > 0 && !entry;
+  const canReflect = r.canWatch && r.creditHours > 0 && !entry;
   const canEdit = entry !== null && entry.status !== 'approved';
 
   const failureText = (err: unknown) => {
@@ -176,6 +177,8 @@ function RecordingCard({ recording: r, handlers, onChange }: { recording: MyReco
         </span>
       </div>
       {entry?.status === 'rejected' && entry.rejectionReason && <p className="trainee-error">{entry.rejectionReason}</p>}
+      {!r.canWatch && (entry || !data.active) && <p className="trainee-hint trainee-tight">{s.observations.notAvailable}</p>}
+      {!r.canWatch && !entry && data.active && data.watchAs && <p className="trainee-hint trainee-tight">{s.observations.sharing}</p>}
       <div className="trainee-actions">
         {url && (
           <a className="btn-ink trainee-watch" href={url} target="_blank" rel="noopener noreferrer">
@@ -234,30 +237,34 @@ export function ObservationsScreen({ handlers }: { handlers: SessionHandlers }) 
     return <p role="status">{s.loading}</p>;
   }
 
+  const until = data.until ? dateText(data.until) : '';
+  const notice = !data.hasStartDate
+    ? s.observations.noStartDate
+    : !data.active
+      ? s.observations.yearEnded(until)
+      : data.watchAs
+        ? `${s.observations.watchAs(data.watchAs)} ${s.observations.until(until)}`
+        : s.observations.noGoogle;
+
   return (
     <div>
       <h3>{s.observations.title}</h3>
-      <p className="trainee-lead">{data.cohort ? s.observations.lead(data.cohort.name) : s.observations.noCohort}</p>
+      <p className="trainee-lead">{s.observations.lead}</p>
       {error !== 'none' && (
         <p className="trainee-error" role="alert">
           {s.observations.stale}
         </p>
       )}
-      {data.cohort && (
-        <p className={`trainee-card trainee-wrap${data.watchAs ? '' : ' trainee-card-done'}`}>
-          {data.watchAs ? s.observations.watchAs(data.watchAs) : s.observations.noGoogle}
-        </p>
+      <p className={`trainee-card trainee-wrap${data.active && data.watchAs ? '' : ' trainee-card-done'}`}>{notice}</p>
+      {data.recordings.length === 0 ? (
+        data.active && <p className="trainee-card">{s.observations.none}</p>
+      ) : (
+        <ul className="trainee-card trainee-entries">
+          {data.recordings.map((r) => (
+            <RecordingCard key={r._id} recording={r} data={data} handlers={handlers} onChange={load} />
+          ))}
+        </ul>
       )}
-      {data.cohort &&
-        (data.recordings.length === 0 ? (
-          <p className="trainee-card">{s.observations.none}</p>
-        ) : (
-          <ul className="trainee-card trainee-entries">
-            {data.recordings.map((r) => (
-              <RecordingCard key={r._id} recording={r} handlers={handlers} onChange={load} />
-            ))}
-          </ul>
-        ))}
     </div>
   );
 }

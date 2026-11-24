@@ -222,13 +222,16 @@ export interface MyRecording {
   recordedAt: string;
   durationMinutes: number | null; // null while Drive is still processing the video
   creditHours: number;
-  playerUrl: string;
+  canWatch: boolean; // the video is shared with their Google account
+  playerUrl: string | null;
   reflection: (LogEntry & { reflection: { cues: string; modifications: string; corrections: string } | null }) | null;
 }
 
 export interface MyRecordings {
-  cohort: { _id: string; name: string } | null;
-  watchAs: string | null; // the Google account the cohort's folder is shared with
+  active: boolean; // within their observation year
+  hasStartDate: boolean;
+  until: string | null; // when their year ends
+  watchAs: string | null; // the Google account videos are shared with
   recordings: MyRecording[];
 }
 
