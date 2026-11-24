@@ -120,6 +120,7 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
     bulletTheory: '1 theoretisch meerkeuze-examen',
     bulletPractical: '1 praktijkexamen',
     bulletExercise: 'Verplichte oefeningsevaluatie, beoordeeld door een lead trainer',
+    examDates: 'Examendata Lente 2027: 5–6 juni 2027.',
     retakeNote:
       'Het eerste examenpoging voor beide examens is gratis. Herkansingen zijn tegen meerprijs.',
     mandatoryNote:
