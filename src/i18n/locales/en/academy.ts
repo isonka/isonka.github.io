@@ -77,6 +77,7 @@ export const enAcademy = {
     installmentsLabel: 'Installments',
     installmentsNote: '+ VAT per installment',
     paymentNote: 'Choose pay in full or 3 installments at MindBody checkout below.',
+    refundNote: 'By enrolling you accept the <terms>PT7 Academy Terms & Conditions</terms>, including cancellation and refunds.',
     curriculumTitle: 'Curriculum Overview',
     curriculumText:
       'This PMA ITTAP approved program combines theoretical knowledge with practical application to ensure a deep understanding of Pilates principles and teaching methodology.',
@@ -236,6 +237,11 @@ export const enAcademy = {
       question: 'How much does the course cost?',
       answer:
         'The course fee is EUR 2,000 plus VAT. Enroll via MindBody to pay in full, or choose Enroll with 3 Installments (3 × EUR 667 + VAT). Using the studio for observation, self practice, and teaching practice is free of charge for 1 year from the course start date.',
+    },
+    refund: {
+      question: 'Can I get a refund?',
+      answer:
+        'If you enroll online, by email or by phone as a consumer, you can withdraw within 14 days of our enrollment confirmation for a full refund. After that: cancel 30 days or more before the first lecture weekend and you get everything back minus the EUR 100 + VAT Administration Fee; 10 to 29 days before, everything minus EUR 500 + VAT (Administration Fee and Deposit). Less than 10 days before or after the course has started, there is no refund and the full course fee remains due, but the amount stays available as credit for another PT7 Academy course starting within 12 months of your original start date. Full terms: www.pt7.nl/academy/terms/',
     },
     assessments: {
       question: 'What assessments are included?',

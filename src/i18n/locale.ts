@@ -16,6 +16,9 @@ export function homePath(locale: Locale): string {
 /** Paths without a Dutch mirror (redirect-only routes). Every other page is served at `${path}nl/` too. */
 const UNMIRRORED_PATHS = ['/pregnancy-pilates-amsterdam'];
 
+/** Pages published in English only: both locales link to the English page. */
+const ENGLISH_ONLY_PATHS = ['/academy/terms'];
+
 function basePathOf(pathname: string): string {
   return pathname.replace(/\/nl\/?$/, '').replace(/\/$/, '') || '/';
 }
@@ -26,6 +29,7 @@ export function localizedPath(pathname: string, locale: Locale): string {
   if (base === '/' || UNMIRRORED_PATHS.includes(base)) {
     return homePath(locale);
   }
+  if (ENGLISH_ONLY_PATHS.includes(base)) return `${base}/`;
 
   return locale === 'nl' ? `${base}/nl/` : `${base}/`;
 }
@@ -36,7 +40,7 @@ export function localeHref(path: string, locale: Locale): string {
   const base = basePathOf(pathname);
   let href = pathname;
   if (base === '/') href = homePath(locale);
-  else if (locale === 'nl' && !UNMIRRORED_PATHS.includes(base)) href = `${base}/nl/`;
+  else if (locale === 'nl' && !UNMIRRORED_PATHS.includes(base) && !ENGLISH_ONLY_PATHS.includes(base)) href = `${base}/nl/`;
   return hash ? `${href}#${hash}` : href;
 }
 

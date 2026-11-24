@@ -39,6 +39,7 @@ import {
 } from '../utils/gtmTracking';
 import { ensureHealcodeLoaded } from '../utils/healcode';
 import { localeHref } from '../i18n/locale';
+import { ACADEMY_TERMS_PATH } from '../data/business';
 import { useLocale } from '../i18n/useLocale';
 import '../styles/Academy.css';
 import { MediumTail } from '../components/MediumTail';
@@ -160,6 +161,7 @@ export const Academy= () => {
     { question: t('faq.ittap.question'), answer: t('faq.ittap.answer') },
     { question: t('faq.international.question'), answer: t('faq.international.answer') },
     { question: t('faq.cost.question'), answer: t('faq.cost.answer') },
+    { question: t('faq.refund.question'), answer: t('faq.refund.answer') },
     { question: t('faq.assessments.question'), answer: t('faq.assessments.answer') },
     { question: t('faq.exerciseAssessment.question'), answer: t('faq.exerciseAssessment.answer') },
   ];
@@ -515,6 +517,9 @@ export const Academy= () => {
                     </div>
                   </div>
                   <p className="payment-note">{t('courseCard.paymentNote')}</p>
+                  <p className="payment-note">
+                    <Trans t={t} i18nKey="courseCard.refundNote" components={{ terms: <Link to={ACADEMY_TERMS_PATH} /> }} />
+                  </p>
                 </div>
                 <div className="academy-enroll-action">
                   <div className="academy-enroll-buttons">
@@ -724,6 +729,9 @@ export const Academy= () => {
                 {t('bottomCta.call', { phone: '+31 685 162693' })}
               </a>
             </div>
+            <p className="academy-cta-terms">
+              <Trans t={t} i18nKey="courseCard.refundNote" components={{ terms: <Link to={ACADEMY_TERMS_PATH} /> }} />
+            </p>
           </div>
         </section>
 

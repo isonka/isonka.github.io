@@ -4,6 +4,9 @@ export const BASE_URL = 'https://www.pt7.nl';
 export const EQUIPMENT_RETURN_POLICY_PATH = '/equipment-return-policy/';
 export const EQUIPMENT_RETURN_POLICY_URL = `${BASE_URL}${EQUIPMENT_RETURN_POLICY_PATH}`;
 
+/** PT7 Academy Terms & Conditions (English only). */
+export const ACADEMY_TERMS_PATH = '/academy/terms/';
+
 export const SCHEMA_IDS = {
   organization: `${BASE_URL}/#organization`,
   localBusiness: `${BASE_URL}/#localbusiness`,

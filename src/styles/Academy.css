@@ -1867,3 +1867,15 @@ button.cta-btn {
     padding: 28px 20px;
   }
 }
+
+/* Terms line under the bottom CTA buttons */
+.academy-cta .academy-cta-terms {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.academy-cta .academy-cta-terms a {
+  color: inherit;
+  text-decoration: underline;
+}

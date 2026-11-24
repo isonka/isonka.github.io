@@ -42,6 +42,7 @@ const Congrats = lazyPage(() => import('./pages/Congrats').then(m => ({ default:
 const Trainers = lazyPage(() => import('./pages/Trainers').then(m => ({ default: m.Trainers })), ['instructors']);
 const TrainerDetail = lazyPage(() => import('./pages/TrainerDetail').then(m => ({ default: m.TrainerDetail })), ['instructors', 'notFound']);
 const Academy = lazyPage(() => import('./pages/Academy').then(m => ({ default: m.Academy })), ['academy']);
+const AcademyTerms = lazyPage(() => import('./pages/AcademyTerms').then(m => ({ default: m.AcademyTerms })));
 const AcademyPractice = lazyPage(() => import('./pages/AcademyPractice').then(m => ({ default: m.AcademyPractice })));
 const Blog = lazyPage(() => import('./pages/Blog').then(m => ({ default: m.Blog })), ['blog']);
 const BlogPost = lazyPage(() => import('./pages/BlogPost').then(m => ({ default: m.BlogPost })), ['blog', 'notFound']);
@@ -199,6 +200,7 @@ function App() {
           <Route path="trainer/:slug/nl" element={<TrainerDetail />} />
           <Route path="academy/practice" element={<AcademyPractice />} />
           <Route path="academy/practice/nl" element={<AcademyPractice />} />
+          <Route path="academy/terms" element={<AcademyTerms />} />
           <Route path="academy" element={<Academy />} />
           <Route path="academy/nl" element={<Academy />} />
           <Route path="pilates-instructor-course-amsterdam" element={<Navigate to="/academy/" replace />} />

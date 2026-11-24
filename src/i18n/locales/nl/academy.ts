@@ -80,6 +80,7 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
     installmentsLabel: 'Termijnen',
     installmentsNote: '+ BTW per termijn',
     paymentNote: 'Kies bij MindBody checkout voor betaling in één keer of 3 termijnen.',
+    refundNote: 'Met je inschrijving ga je akkoord met de <terms>PT7 Academy Terms & Conditions</terms> (Engels), inclusief annulering en terugbetaling.',
     curriculumTitle: 'Curriculumoverzicht',
     curriculumText:
       'Dit PMA ITTAP goedgekeurde programma combineert theoretische kennis met praktische toepassing voor een diep begrip van pilatesprincipes en lesgeefmethodologie.',
@@ -238,6 +239,11 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
       question: 'Wat kost de cursus?',
       answer:
         'De cursusprijs is EUR 2.000 plus BTW. Schrijf je in via MindBody om in één keer te betalen, of kies ‘Inschrijven in 3 termijnen’ (3 × EUR 667 + BTW). Gebruik van de studio voor observatie, zelfpraktijk en lespraktijk is kosteloos gedurende 1 jaar vanaf de startdatum van de cursus.',
+    },
+    refund: {
+      question: 'Kan ik mijn cursusgeld terugkrijgen?',
+      answer:
+        'Schrijf je je als consument online, per e-mail of telefonisch in, dan kun je binnen 14 dagen na onze inschrijvingsbevestiging kosteloos herroepen en krijg je alles terug. Daarna: annuleer je 30 dagen of meer voor het eerste college-weekend, dan krijg je alles terug min de Administration Fee van EUR 100 + BTW; 10 tot 29 dagen ervoor alles min EUR 500 + BTW (Administration Fee en Deposit). Minder dan 10 dagen ervoor of na de start van de cursus is er geen terugbetaling en blijft het volledige cursusgeld verschuldigd, maar het bedrag blijft beschikbaar als tegoed voor een andere PT7 Academy-cursus die binnen 12 maanden na je oorspronkelijke startdatum begint. Volledige voorwaarden (Engels): www.pt7.nl/academy/terms/',
     },
     assessments: {
       question: 'Welke assessments zijn inbegrepen?',

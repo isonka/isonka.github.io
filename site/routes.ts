@@ -98,6 +98,16 @@ const FIXED_PAGES: Route[] = [
   { path: '/instructors/', prerender: true, sitemap: { lastmod: '2026-03-10', changefreq: 'monthly', priority: '0.8' } },
   { path: '/academy/', prerender: true, sitemap: { lastmod: '2026-10-27', changefreq: 'weekly', priority: '0.9' } },
   { path: '/academy/nl/', prerender: true, sitemap: { lastmod: '2026-10-27', changefreq: 'weekly', priority: '0.9' } },
+  {
+    path: '/academy/terms/',
+    prerender: true,
+    sitemap: { lastmod: '2026-11-24', changefreq: 'yearly', priority: '0.3' },
+    meta: {
+      title: 'Academy Terms & Conditions | PT7 Pilates Amsterdam',
+      description:
+        'Terms for PT7 Academy courses: enrollment, payment, 14-day cooling-off period, cancellation and refunds, missed weekends, exams and changes by PT7.',
+    },
+  },
   { path: '/academy/practice/', prerender: true, sitemap: null },
   { path: '/academy/practice/nl/', prerender: true, sitemap: null },
   { path: '/classpass-offer/', prerender: true, sitemap: null },
@@ -190,7 +200,7 @@ const nlPath = (path: string) => `${path}nl/`;
  * Dutch mirrors for fixed pages that do not list one explicitly. Redirect-only routes (canonical override)
  * have no mirror. The mirror reuses the English sitemap entry minus the image.
  */
-const NO_NL_MIRROR = new Set(['/screen/']);
+const NO_NL_MIRROR = new Set(['/screen/', '/academy/terms/']);
 
 const FIXED_NL_MIRRORS: Route[] = FIXED_PAGES.filter(
   (route) =>
