@@ -61,7 +61,8 @@ export const AcademyTerms = () => {
             </li>
             <li>
               The Administration Fee covers enrollment, intake and your course materials (digital manual and
-              academy.pt7.nl access). After the 14-day cooling-off period (section 2) it is non-refundable.
+              academy.pt7.nl access). It is non-refundable, except when you withdraw within the 14-day
+              cooling-off period before you have attended a lecture day (section 2).
             </li>
             <li>
               The balance is paid either in full or in installments, as agreed at enrollment.
@@ -72,14 +73,29 @@ export const AcademyTerms = () => {
 
           <h2>2. 14-day cooling-off period</h2>
           <p>
-            If you enroll online, by email or by phone as a consumer, you have 14 days from our enrollment confirmation
-            to withdraw without giving a reason. You then receive a full refund, including the Administration Fee.
+            This applies if you enroll as a private person (not as a business) online, by email or by phone. You can
+            change your mind within 14 days, without giving a reason. The 14 days start the day after we confirm your
+            enrollment by email.
+          </p>
+          <ul>
+            <li>
+              <strong>You have not attended a lecture day yet:</strong> you get a full refund of everything you paid,
+              including the Administration Fee.
+            </li>
+            <li>
+              <strong>You have attended one or more lecture days:</strong> you pay for the lecture days held plus the
+              €100 + VAT Administration Fee, and get the rest back. For example, if you withdraw after 1 of the 8
+              lecture days, you pay €250 + VAT for that day plus the Administration Fee: €350 + VAT in total.
+            </li>
+          </ul>
+          <p>
+            If the course starts within your 14 days, we ask you at enrollment to confirm that you want to start
+            straight away.
           </p>
           <p>
-            If the course starts within those 14 days, you can ask us at enrollment to start your training. If you then
-            withdraw, you pay for the lecture days already held.
+            To withdraw, email {email} before the 14 days are over, with your name, the course and its start date. We
+            refund you within 14 days, at no cost to you. After the 14 days, section 3 applies.
           </p>
-          <p>To withdraw, email {email} with your name, the course and its start date.</p>
 
           <h2>3. Cancellation by the student</h2>
           <p>After the cooling-off period, these terms apply:</p>
