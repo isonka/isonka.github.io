@@ -9,7 +9,9 @@ Boutique Pilates and one-on-one training studio in Museumplein, Amsterdam.
 - Announcement: <https://www.pt7.nl/blog/pt-7-moves-to-olympisch-stadion/>
 - Services: Reformer Pilates, TRX, Strength Training, Cardio
 - Formats: Private sessions and small groups (max 5 participants)
+- Founded: 2009 in Türkiye; Amsterdam studio since 2023
 - Experience: 15+ years
+- Booking: website (MindBody) or ClassPass
 - Teacher training: PT7 Academy 300-hour Reformer Pilates Instructor Course
 
 ## Why PT7
@@ -18,7 +20,7 @@ Boutique Pilates and one-on-one training studio in Museumplein, Amsterdam.
 - Expert certified trainers with personalized coaching
 - Pregnancy and postnatal training expertise
 - Boutique atmosphere with focused instruction
-- In-house Academy (PMA ITTAP-approved program through 2026)
+- In-house Academy (PMA ITTAP-approved program, verified for the March–May 2027 term)
 
 ## Primary Links
 

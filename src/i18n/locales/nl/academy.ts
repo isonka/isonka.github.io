@@ -228,7 +228,7 @@ export const nlAcademy: DeepStringify<EnAcademy> = {
     ittap: {
       question: 'Wat is ITTAP en wat is de rol van PMA?',
       answer:
-        'ITTAP (International Teacher Training Accreditation for Pilates) is het accreditatiesysteem van de Pilates Method Alliance (PMA) voor docentenopleidingen. PMA beoordeelt en keurt programma\'s goed die voldoen aan haar standaarden voor curriculum, assessment en onderwijskwaliteit. De Reformer Pilates Instructeurscursus van PT7 Academy heeft ITTAP-goedkeuring tot 2026.',
+        'ITTAP (International Teacher Training Accreditation for Pilates) is het accreditatiesysteem van de Pilates Method Alliance (PMA) voor docentenopleidingen. PMA beoordeelt en keurt programma\'s goed die voldoen aan haar standaarden voor curriculum, assessment en onderwijskwaliteit. De Reformer Pilates Instructeurscursus van PT7 Academy heeft ITTAP-goedkeuring, en PMA heeft die bevestigd voor de termijn maart–mei 2027.',
     },
     international: {
       question: 'Wordt het certificaat internationaal erkend?',

@@ -180,6 +180,7 @@ Any single change that spans areas should list touched files in the PR or automa
 | `firebase.json` | Firebase Hosting: `/api/**` to the PT7 Academy API, headers |
 | `firebase.academy.json` | The trainee area's own Hosting site (`academy.pt7.nl`): only `dist-academy/`, `/api/**`, no framing, `no-cache` on its page |
 | `scripts/seo-agent/` | Weekly SEO agent (collect, snapshot, evaluate, verify, Claude prompt) |
+| `scripts/indexnow.js` | After each deploy to main, sends the pages that changed to IndexNow (Bing; ChatGPT search draws on it). Key file `public/dc2b01d8ef475dec6b1f09faa373d839.txt`: never delete or rename it |
 
 ---
 

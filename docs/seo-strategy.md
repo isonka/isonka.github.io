@@ -103,7 +103,7 @@ For a studio, the map pack beats the organic ten blue links. Most "pilates amste
 
 Google Business Profile:
 
-- [ ] Settle the name once: "PT7 - Pilates & Strength Training Amsterdam Zuid" was the plan. Use exactly that on GBP, USC, ClassPass, Instagram, Facebook, LinkedIn and the site footer. Keep "PT Studio 7" only as an alias in schema `alternateName`.
+- [ ] Settle the name once: "PT7 - Pilates & Strength Training Amsterdam Zuid" was the plan. Use exactly that on GBP, ClassPass, MindBody, Instagram, Facebook, LinkedIn and the site footer. Keep "PT Studio 7" only as an alias in schema `alternateName`.
 - [ ] Primary category: Pilates studio. Secondary: Personal trainer, Physical fitness program, Training centre (for the Academy).
 - [ ] Services list: one entry per lander (Reformer Pilates, Private Pilates, Prenatal, TRX, Strength, Instructor Course, Equipment sales) each linking to its page.
 - [ ] Reviews: 33 at 4.8 today. Target 75 in 90 days. You have \~20 private students at 1.5 sessions/week and sold-out Academy cohorts: ask every graduate and every private client in person, then WhatsApp the short link. Ask for Dutch-language reviews that mention "reformer" or "opleiding". Reply to every review within 48 hours.
@@ -113,7 +113,7 @@ Google Business Profile:
 
 Second location: create the Olympisch Stadion GBP the day you have a signed lease and keys, mark it "opening soon", and give it its own page on the site. Do not merge the two profiles when you move; keep the Van Baerlestraat one live until the last class, then mark it permanently closed and point the page to the new one with a 301.
 
-Citations (NAP consistency): Apple Maps, Bing Places, Yelp NL, Treatwell (Pilates is listed there), iamexpat.nl business directory, Oozo/Telefoonboek, ClassPass and USC venue pages. Same name, address, phone, URL everywhere.
+Citations (NAP consistency): Apple Maps, Bing Places, Yelp NL, Treatwell (Pilates is listed there), iamexpat.nl business directory, Oozo/Telefoonboek and the ClassPass venue page. Same name, address, phone, URL everywhere. PT7 left Urban Sports Club (confirmed 24 Nov 2026): ask USC to take down the old "PT Studio 7 - Museumplein" page, because assistants still quote it.
 
 ## ClassPass listing
 

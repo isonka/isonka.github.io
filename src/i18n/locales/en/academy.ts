@@ -226,7 +226,7 @@ export const enAcademy = {
     ittap: {
       question: 'What is ITTAP and how is PMA involved?',
       answer:
-        "ITTAP (International Teacher Training Accreditation for Pilates) is the Pilates Method Alliance (PMA) accreditation system for teacher training programs. PMA reviews and approves programs that meet its standards for curriculum, assessment, and educational quality. PT7 Academy's Reformer Pilates Instructor Course holds ITTAP approval through 2026.",
+        "ITTAP (International Teacher Training Accreditation for Pilates) is the Pilates Method Alliance (PMA) accreditation system for teacher training programs. PMA reviews and approves programs that meet its standards for curriculum, assessment, and educational quality. PT7 Academy's Reformer Pilates Instructor Course holds ITTAP approval, and PMA has verified it for the March–May 2027 term.",
     },
     international: {
       question: 'Is the certification recognized internationally?',

@@ -25,6 +25,8 @@ export const business = {
   description:
     "Boutique Reformer Pilates studio at Amsterdam Museumplein offering small group classes (max 5), private sessions, TRX, and strength training with 15+ years of expertise.",
   foundingDate: '2009',
+  /** Founded in Türkiye; the Amsterdam studio opened in 2023. */
+  foundingLocation: 'Türkiye',
   telephone: '+31685162693',
   email: 'info@pt7.nl',
   priceRange: '€€',
@@ -80,7 +82,7 @@ export const business = {
 
   rating: {
     value: '4.8',
-    count: '33',
+    count: '38',
     best: '5',
     worst: '1',
   },

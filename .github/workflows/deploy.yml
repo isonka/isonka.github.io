@@ -91,6 +91,22 @@ jobs:
             ' "$PWD/$f"
           done
 
+      # IndexNow (scripts/indexnow.js): the pages this build changes compared with the live pt7.nl, for the indexnow job
+      # to send once the deploy is live. It only reads dist and public pages, and never fails the build.
+      - name: List the pages this deploy changes (IndexNow)
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        continue-on-error: true
+        run: node scripts/indexnow.js changed dist indexnow-urls.txt
+
+      - name: Upload the IndexNow list
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        continue-on-error: true
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: indexnow
+          path: indexnow-urls.txt
+          retention-days: 7
+
       - name: Setup Pages
         if: github.event_name != 'pull_request'
         uses: actions/configure-pages@1f0c5cde4bc74cd7e1254d0cb4de8d49e9068c7d # v4.0.0
@@ -257,3 +273,35 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
+
+  # Tells Bing (and the other IndexNow search engines) which pt7.nl pages changed, once GitHub Pages serves them, so
+  # they are re-crawled in days. ChatGPT search draws on Bing's index. No secrets, no sign-in and no install scripts:
+  # the IndexNow key is public by design (public/<key>.txt). A failure here never affects the deploy.
+  # When pt7.nl moves to Firebase Hosting, make this job need deploy-firebase instead of deploy.
+  indexnow:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    continue-on-error: true
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          sparse-checkout: scripts/indexnow.js
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
+
+      - name: Download the IndexNow list
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: indexnow
+          path: .
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '24'
+
+      - name: Send the changed pages to IndexNow
+        run: node scripts/indexnow.js submit indexnow-urls.txt

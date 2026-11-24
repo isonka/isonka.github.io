@@ -171,6 +171,7 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
       image: business.images[0],
       description: business.description,
       foundingDate: business.foundingDate,
+      foundingLocation: { '@type': 'Place', name: business.foundingLocation },
       address: postalAddress,
       contactPoint: {
         '@type': 'ContactPoint',
