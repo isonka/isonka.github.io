@@ -50,7 +50,7 @@ export const s = {
     yearEnded: (date: string) => `Your observation year ended on ${date}. Your reflections stay here.`,
     sharing: 'Being shared with your Google account. Please try again in a few minutes.',
     notAvailable: 'No longer available to watch.',
-    watchAs: (email: string) => `Videos open in Google Drive. Sign in to Google with ${email} to watch them.`,
+    watchAs: (email: string) => `Videos play here when this browser is signed in to Google with ${email}.`,
     noGoogle: 'The academy has not added your Google account yet, so the videos will not open. Please contact the academy.',
     none: 'No recordings yet.',
     stale: 'This page could not refresh, so it may be out of date. Reload it to see what was saved before entering anything again.',
@@ -61,6 +61,10 @@ export const s = {
     tooShort: 'too short to count as hours',
     notSent: 'No reflection yet',
     watch: 'Watch',
+    closeVideo: 'Close video',
+    openInDrive: 'Open in Drive',
+    playerHelp: (email: string) =>
+      `Not playing? Sign in to Google in this browser with ${email}. On an iPhone or in Safari, use Open in Drive.`,
     newTab: 'opens in a new tab',
     write: 'Write reflection',
     form: {

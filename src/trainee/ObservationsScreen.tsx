@@ -13,21 +13,20 @@ import {
 import { hoursText, saveErrorText } from './logbookText';
 import { s } from './strings';
 
-// Observation recordings: every class recorded at the academy, for a trainee in their year. Watch opens Google Drive's player in a new tab
-// (no embed, so this page keeps its no-third-party rule). A written reflection becomes observation hours waiting for a
-// signature; the API decides the hours from the video's length.
+// Observation recordings: every class recorded at the academy, for a trainee in their year. Watch plays the video on this
+// page in Google Drive's own player (owner, 2026-11-24), the only frame the page's policy allows: Drive still checks the
+// trainee's Google account and keeps downloads off. Safari and iPhones block Drive's sign-in inside another site, so
+// Open in Drive is always next to it. No third-party script runs in this page. A written reflection becomes
+// observation hours waiting for a signature; the API decides the hours from the video's length.
 
 const dateText = (iso: string) => new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
 
-/** Only ever links to Google Drive, whatever the answer holds. */
-function watchUrl(url: string | null): string | null {
-  if (!url) return null;
-  try {
-    const parsed = new URL(url);
-    return parsed.protocol === 'https:' && parsed.hostname === 'drive.google.com' ? parsed.href : null;
-  } catch {
-    return null;
-  }
+/** Only ever a Drive video player, whatever the answer holds: the embedded player and the same video opened in Drive. */
+function driveVideo(url: string | null): { embed: string; open: string } | null {
+  const match = url?.match(/^https:\/\/drive\.google\.com\/file\/d\/([-\w]+)\/preview$/);
+  if (!match) return null;
+  const base = `https://drive.google.com/file/d/${match[1]}`;
+  return { embed: `${base}/preview`, open: `${base}/view` };
 }
 
 interface ReflectionValues {
@@ -124,9 +123,10 @@ function ReflectionForm({
 
 function RecordingCard({ recording: r, data, handlers, onChange }: { recording: MyRecording; data: MyRecordings; handlers: SessionHandlers; onChange: () => void }) {
   const [open, setOpen] = useState(false);
+  const [playing, setPlaying] = useState(false);
   // Sending the same text again reuses the ref, so a save whose answer got lost isn't refused as a second reflection
   const attempt = useRef<{ values: string; ref: string } | null>(null);
-  const url = watchUrl(r.playerUrl);
+  const video = r.canWatch ? driveVideo(r.playerUrl) : null;
   const entry = r.reflection;
   const canReflect = r.canWatch && r.creditHours > 0 && !entry;
   const canEdit = entry !== null && entry.status !== 'approved';
@@ -179,10 +179,22 @@ function RecordingCard({ recording: r, data, handlers, onChange }: { recording: 
       {entry?.status === 'rejected' && entry.rejectionReason && <p className="trainee-error">{entry.rejectionReason}</p>}
       {!r.canWatch && (entry || !data.active) && <p className="trainee-hint trainee-tight">{s.observations.notAvailable}</p>}
       {!r.canWatch && !entry && data.active && data.watchAs && <p className="trainee-hint trainee-tight">{s.observations.sharing}</p>}
+      {video && playing && (
+        <div className="trainee-player">
+          <iframe src={video.embed} title={r.title} allow="autoplay; fullscreen" allowFullScreen />
+        </div>
+      )}
+      {video && playing && data.watchAs && <p className="trainee-hint trainee-tight">{s.observations.playerHelp(data.watchAs)}</p>}
       <div className="trainee-actions">
-        {url && (
-          <a className="btn-ink trainee-watch" href={url} target="_blank" rel="noopener noreferrer">
-            {s.observations.watch}
+        {video && (
+          <button type="button" className="btn-ink" aria-expanded={playing} onClick={() => setPlaying((p) => !p)}>
+            {playing ? s.observations.closeVideo : s.observations.watch}
+            <span className="visually-hidden"> {r.title}</span>
+          </button>
+        )}
+        {video && (
+          <a className="trainee-secondary trainee-watch" href={video.open} target="_blank" rel="noopener noreferrer">
+            {s.observations.openInDrive}
             <span className="visually-hidden"> {r.title} ({s.observations.newTab})</span>
           </a>
         )}

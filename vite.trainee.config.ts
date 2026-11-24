@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url'
 // only the trainee files, so a Hosting site published from it can't serve Tag Manager or Mindbody pages on the trainee
 // address (owner, 2026-11-21). The main site's output in dist/ no longer contains this page.
 // The build gives the page a strict Content-Security-Policy: only this site's own scripts, styles, fonts, images and
-// /api (`npm run dev` leaves it out: Vite's dev server needs inline scripts). frame-ancestors can't be set in a meta
+// /api, and one frame: Google Drive's video player for observations (owner, 2026-11-24) (`npm run dev` leaves it out: Vite's dev server needs inline scripts). frame-ancestors can't be set in a meta
 // tag; it goes into the trainee site's hosting headers (`frame-ancestors 'none'`).
 const here = (file: string) => fileURLToPath(new URL(file, import.meta.url))
 const ROOT = here('./academy/trainee')
@@ -23,6 +23,7 @@ const TRAINEE_CSP = [
   "img-src 'self' blob:", // library photos need the login's proof header, so they are fetched and shown from a blob:
   "font-src 'self'",
   "connect-src 'self'",
+  'frame-src https://drive.google.com', // observation videos play in Drive's own player
   "base-uri 'none'",
   "form-action 'self'",
   "object-src 'none'",
