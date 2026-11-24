@@ -42,7 +42,7 @@ export const AcademyTerms = () => {
         <section className="service-hero is-in">
           <div className="service-hero-content">
             <h1><MediumTail text="PT7 Academy Terms & Conditions" /></h1>
-            <p>Last updated 24 November 2026</p>
+            <p>Last updated September 20, 2026</p>
           </div>
         </section>
 
