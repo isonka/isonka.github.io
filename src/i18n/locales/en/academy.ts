@@ -117,7 +117,7 @@ export const enAcademy = {
     bulletTheory: '1 Theoretical Multiple-Choice Exam',
     bulletPractical: '1 Practical Exam',
     bulletExercise: 'Mandatory exercise assessment, checked by a lead trainer',
-    examDates: 'Spring 2027 exam dates: 5–6 June 2027.',
+    examDates: 'Spring 2027 practical exam: 5–6 June 2027.',
     retakeNote:
       'The first attempt for both exams is free of charge. Any exam retakes are subject to an additional fee.',
     mandatoryNote:
