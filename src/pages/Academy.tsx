@@ -561,6 +561,9 @@ export const Academy= () => {
                   <li>{t('assessment.bulletPractical')}</li>
                   <li>{t('assessment.bulletExercise')}</li>
                 </ul>
+                <p>
+                  <strong>{t('assessment.examDates')}</strong>
+                </p>
                 <p>{t('assessment.retakeNote')}</p>
                 <p>{t('assessment.mandatoryNote')}</p>
               </div>
