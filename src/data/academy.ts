@@ -50,7 +50,7 @@ export const termSchedule2027 = [
   { dates: '3–4 April 2027', datesNl: '3–4 april 2027', module: 'Reformer 1', moduleNl: 'Reformer 1' },
   { dates: '24–25 April 2027', datesNl: '24–25 april 2027', module: 'Reformer 2', moduleNl: 'Reformer 2' },
   { dates: '15–16 May 2027', datesNl: '15–16 mei 2027', module: 'Reformer 3', moduleNl: 'Reformer 3' },
-  { dates: '5–6 June 2027', datesNl: '5–6 juni 2027', module: 'Exams', moduleNl: 'Examens' },
+  { dates: '5–6 June 2027', datesNl: '5–6 juni 2027', module: 'Practical Exam', moduleNl: 'Praktijkexamen' },
 ];
 
 export type AcademyScheduleItem = {
