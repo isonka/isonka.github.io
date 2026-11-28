@@ -31,7 +31,7 @@
     "trainee:test": "node --experimental-strip-types --disable-warning=ExperimentalWarning --test scripts/test/trainee-proof.test.js"
   },
   "dependencies": {
-    "i18next": "^25.4.2",
+    "i18next": "^27.2.7",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-i18next": "^15.7.3",
