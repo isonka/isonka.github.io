@@ -3,6 +3,6 @@
   "private": true,
   "description": "The Firebase CLI for the deploy-firebase job, locked so every dependency is fixed (installed with npm ci --ignore-scripts)",
   "dependencies": {
-    "firebase-tools": "15.35.0"
+    "firebase-tools": "15.36.0"
   }
 }
